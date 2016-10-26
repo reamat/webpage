@@ -1,2 +1,5 @@
-# webpage
-Webpage do projeto "Cálculo Numérico - Um Livro Colaborativo": http://www.ufrgs.br/numerico
+#Diretório: webpage
+
+Este diretório contém a webpage oficial do projeto:
+
+https://www.ufrgs.br/numerico
