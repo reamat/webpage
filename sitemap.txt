@@ -43,6 +43,7 @@ http://www.ufrgs.br/numerico/book_in_webpage/mainse53.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainse8.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainse31.html
 http://www.ufrgs.br/numerico/book_in_webpage/main52.html
+http://www.ufrgs.br/numerico/book_in_webpage/main71.html
 http://www.ufrgs.br/numerico/book_in_webpage/main48.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainli8.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainli17.html
@@ -55,6 +56,7 @@ http://www.ufrgs.br/numerico/book_in_webpage/mainse42.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainli6.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainse22.html
 http://www.ufrgs.br/numerico/book_in_webpage/main46.html
+http://www.ufrgs.br/numerico/book_in_webpage/main74.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainli1.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainch1.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainse49.html
@@ -62,7 +64,6 @@ http://www.ufrgs.br/numerico/book_in_webpage/mainse18.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainse28.html
 http://www.ufrgs.br/numerico/book_in_webpage/main32.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainse21.html
-http://www.ufrgs.br/numerico/book_in_webpage/main73.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainse48.html
 http://www.ufrgs.br/numerico/book_in_webpage/main43.html
 http://www.ufrgs.br/numerico/book_in_webpage/main29.html
@@ -75,7 +76,6 @@ http://www.ufrgs.br/numerico/book_in_webpage/mainch8.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainch5.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainli18.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainch2.html
-http://www.ufrgs.br/numerico/book_in_webpage/main68.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainch7.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainse35.html
 http://www.ufrgs.br/numerico/book_in_webpage/mainse6.html

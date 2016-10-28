@@ -34,4 +34,5 @@ cp $DIR_MASTER/main.epub ./book_in_webpage/
 #getting Slide
 cp $DIR_MASTER/slide.pdf ./book_in_webpage/
 
-
+#update sitemap
+python sitemapMaker.py

@@ -55,12 +55,13 @@ for index, f in enumerate (lfiles):
             #subsectionHead
             s=-1
             e=-1
-            s = text.find('<h4 class="subsectionHead">')
-            if (s != -1):
-                auxText = text[s:]
+            s = auxText.find('<h4 class="subsectionHead">')
+            while (s != -1):
+                auxText = auxText[s:]
                 s = auxText.find('</a>')+4
                 e = auxText.index('</h4>')
                 kw += ", " + auxText[s:e]
+                s = auxText.find('<h4 class="subsectionHead">',e)
         else:
             kw = []
     head1 = "<meta name='keywords' content='"
