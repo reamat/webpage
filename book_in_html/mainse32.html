@@ -1,118 +1,651 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
   "http://www.w3.org/TR/html4/loose.dtd">  
 <html xml:lang="pt" > 
-<head><title>Ajuste polinomial</title> 
+<head><title>Ajuste linear geral</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-10-27 18:33:00"> 
+<meta name="date" content="2016-10-28 15:09:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 </head><body 
 >
-   <!--l. 226--><div class="crosslinks"><p class="noindent"><a 
+   <!--l. 112--><div class="crosslinks"><p class="noindent"><a 
 href="mainse43.html#mainse45.html" >Voltar</a></p></div>
    <h3 class="sectionHead"><span class="titlemark">7.2   </span> <a 
- id="x70-1090007.2"></a>Ajuste polinomial</h3>
-<!--l. 228--><p class="noindent" >Dado um conjunto de <img 
-src="main3155x.png" alt="n  "  class="math" > pontos, desejamos encontrar o <span 
-class="ec-lmri-12">polin</span><span 
-class="ec-lmri-12">ômio </span>de
-grau <img 
-src="main3156x.png" alt="p  "  class="math" > que melhor se ajusta a esses pontos de tal forma a minimizar o
-resíduo, ou seja, encontrar a curva <img 
-src="main3157x.png" alt="f (x ) = a1 + a2x + ...+ ap+1xp  "  class="math" > tal que
-<div class="eqnarray">
+ id="x70-1090007.2"></a>Ajuste linear geral</h3>
+<a 
+ id="dx70-109001"></a>
+<!--l. 113--><p class="noindent" >O problem geral de ajuste linear consiste em dada uma família
+<img 
+src="main3158x.png" alt="f (x),f (x),...,f  (x)
+ 1     2         m  "  class="math" > de <img 
+src="main3159x.png" alt="m  "  class="math" > funções e <img 
+src="main3160x.png" alt="(x ,y ),(x ,y ),...(x ,y )
+  1  1   2  2       n  n  "  class="math" > um conjunto
+de <img 
+src="main3161x.png" alt="n  "  class="math" > pontos, calcular coeficientes <img 
+src="main3162x.png" alt="a1,a2,...,am  "  class="math" > tais que a função dada
+por
    <center class="math-display" >
 <img 
-src="main3158x.png" alt="                   N&sum;
-R (a1,...,ap+1)  =      (f (xj) &minus; yj)2
-                   j=1
-                   N&sum;
-               =      (a1 + a2xj + ...+  ap+1xpj &minus; yj)2
-                   j=1
-" class="math-display" ></center>
-</div>seja o menor possível.
-<!--l. 235--><p class="indent" >   O objetivo é encontrar as incógnitas <img 
-src="main3159x.png" alt="ai  "  class="math" > que minimizam a soma do quadrado
-do resíduo.
-<!--l. 237--><p class="indent" >   O mínimo de <img 
-src="main3160x.png" alt="R  "  class="math" > encontra-se quando a derivada primeira é igual a zero:
-<div class="eqnarray">
+src="main3163x.png" alt="       &sum;m
+f(x ) =    ajfj(x ) = a1f1(x) + a2f2 (x ) + ...+ amfm (x)
+       j=1  " class="math-display" ></center>
+minimiza o resíduo dado por
    <center class="math-display" >
+<img 
+src="main3164x.png" alt="     n
+R = &sum;   [f (x ) &minus; y ]2 .
+     i=1     i    i  " class="math-display" ></center>
+Aqui a minimização é feita por todas as possíveis escolhas dos coeficientes
+<img 
+src="main3165x.png" alt="a1,a2,...,am  "  class="math" >.
                                                                           
 
                                                                           
-<img 
-src="main3161x.png" alt="  &part;R        &part;  &sum;n
-  ---- =   ----   (a1 + a2xj + ...+ ap+1xpj &minus; yj)2 = 0
-  &part;a1      &part;a1 j=1
-     .     .
-     .. =   ..
--&part;R---     --&part;---&sum;n                        p     2
-&part;ap+1  =   &part;ap+1    (a1 + a2xj + ...+ ap+1x j &minus; yj) = 0
-                 j=1
-" class="math-display" ></center>
-</div>ou seja, <div class="eqnarray">
+<!--l. 119--><p class="indent" >   Com o objetivo de tornar a desenvolvimento mais claro, vamos escrever <img 
+src="main3166x.png" alt="R  "  class="math" >
+como a soma dos resíduos individuais:
    <center class="math-display" >
 <img 
-src="main3162x.png" alt="   n
- 2 &sum; (a  + a x  + ...+  a   xp&minus;  y ) &sdot; 1 =  0
-   j=1  1    2 j         p+1 j    j
+src="main3167x.png" alt="     &sum;n
+R =     Ri,    onde     Ri [f(xi) &minus; yi]2.
+     i=1
+" class="math-display" ></center>
+<!--l. 122--><p class="indent" >   Do fato que <img 
+src="main3168x.png" alt="        &sum;
+f(xi) =   mj=1ajfj(xi)  "  class="math" >, temos que cada resíduo pode ser escrito
+como
+   <center class="math-display" >
+<img 
+src="main3169x.png" alt="      &lfloor; m             &rfloor; 2
+R  =  &lceil;&sum;  a f (x ) &minus; y&rceil;  .
+  i    j=1 j j  i     i
+" class="math-display" ></center>
+<!--l. 125--><p class="indent" >   A fim de encontrar o ponto de mínimo, resolvemos o sistema oriundo de
+igualar a zero cada uma das derivadas parciais de <img 
+src="main3170x.png" alt="R  "  class="math" > em relação aos m
+coeficientes <img 
+src="main3171x.png" alt="aj  "  class="math" > e aplicamos a regra da cadeia
+<!--l. 127--><p class="indent" >   <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main3172x.png" alt="                          &lfloor;                &rfloor;
+ &part;R         n&sum;  &part;R      &sum;n   m&sum;
+ ---- =   2    ---i=  2   &lceil;    ajfj(xi) &minus; yi&rceil; f1(xi) = 0,
+ &part;a1        i=1 &part;a1     i=1  j=1
+            n           n &lfloor; m              &rfloor;
+ &part;R-- =   2 &sum;  &part;Ri-=  2&sum;  &lceil; &sum;  a f (x ) &minus; y &rceil; f (x) = 0,
+ &part;a2        i=1 &part;a2     i=1  j=1  j j  i    i   2  i
 
-                                     ... =   ...
-  n&sum;
-2   (a1 + a2xj + ...+  ap+1xpj &minus; yj) &sdot; xpj =  0
-  j=1
+       ...
+            n           n  &lfloor; m             &rfloor;
+-&part;R-- =   2 &sum;  &part;Ri--= 2 &sum;  &lceil;&sum;  a f (x ) &minus; y&rceil; f  (x) = 0.
+&part;am         i=1 &part;am      i=1  j=1 j j  i     i  m   i
 " class="math-display" ></center>
-</div>e isolando as incógnitas temos <div class="eqnarray">
+</div>Dividindo cada equação por 2 e escrevendo na forma matricial, obtemos
+<img 
+src="main3173x.png" alt="M  a = w  "  class="math" >, onde a matriz <img 
+src="main3174x.png" alt="M  "  class="math" > é dada por: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main3163x.png" alt="      &sum;n        &sum;N               &sum;N         &sum;
-    a1    1 + a2   xj + ...+  ap+1   xpj   =   Nj=1yj
-      j=1       j=1              j=1
-                                      .        .
-                                      ..      = ..
-  &sum;n   p     &sum;N  p+1            &sum;N   2p    &sum;N      p
-a1    xj + a2   xj   + ...+  ap+1    xj  =    j=1yjxj
-  j=1        j=1                j=1
+src="main3175x.png" alt="     &lfloor;                                                        &rfloor;
+          &sum;n       2     n&sum;                     n&sum;
+     ||    i=1f1(xi)     i=1f2(xi)f1(xi)  &sdot;&sdot;&sdot;  i=1fm (xi)f1(xi) ||
+     ||  n&sum;                  &sum;n       2          n&sum;              ||
+     ||  i=1 f1(xi)f2(xi)     i=1 f2(xi)     &sdot;&sdot;&sdot;  i=1fm (xi)f2(xi) ||
+     ||  n&sum;                n&sum;                     n&sum;              ||
+M  = ||  i=1 f1(xi)f3(xi)  i=1f2(xi)f3(xi)  &sdot;&sdot;&sdot;  i=1fm (xi)f3(xi) || .
+     ||        ..                ..          ..           ..       ||
+     ||        .                .           .          .       ||
+     &lceil;  n&sum;               &sum;n                       &sum;n       2   &rceil;
+       i=1f1(xi)fm (xi)  i=1f2(xi)fm(xi)  &sdot;&sdot;&sdot;     i=1 fm(xi)
 " class="math-display" ></center>
-</div>
-<!--l. 256--><p class="indent" >   Na forma matricial obtemos
+</div>E os vetores <img 
+src="main3176x.png" alt="a  "  class="math" > e <img 
+src="main3177x.png" alt="w  "  class="math" >, por: <div class="eqnarray">
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main3178x.png" alt="                          &lfloor;  &sum;n          &rfloor;
+    &lfloor;     &rfloor;               |     f1(xi)yi |
+                          ||  i=1n          ||
+    ||  a1 ||               ||  &sum;  f2(xi)yi ||
+    ||  a  ||               ||  i=1n          ||
+a = ||   2 ||     e     w = ||  &sum;  f3(xi)yi ||
+    ||  ...  ||               ||  i=1          ||
+    &lceil;     &rceil;               ||       ...      ||
+      am                  |&lceil;  n           |&rceil;
+                             &sum;  fm(xi)yi
+                             i=1
+" class="math-display" ></center>
+</div>Observamos agora que <img 
+src="main3179x.png" alt="M  = V T V  "  class="math" > e <img 
+src="main3180x.png" alt="w  = V Ty  "  class="math" >, onde a matriz <img 
+src="main3181x.png" alt="V  "  class="math" > é dada
+por:
+   <center class="math-display" >
+<img 
+src="main3182x.png" alt="    &lfloor;                              &rfloor;
+    |  f1(x1)  f2(x1)  &sdot;&sdot;&sdot;  fm(x1) |
+    ||                              ||
+    ||  f1(x2)  f2(x2)  &sdot;&sdot;&sdot;  fm(x2) ||
+    ||                              ||
+V = ||  f1(x3)  f2(x3)  &sdot;&sdot;&sdot;  fm(x3) ||
+    ||    ..       ..     ...     ..   ||
+    |&lceil;    .       .             .   |&rceil;
+       f (x  )  f (x  )  &sdot;&sdot;&sdot;  f (x )
+        1  n    2  n         m  n " class="math-display" ></center> e o
+vetor <img 
+src="main3183x.png" alt="y  "  class="math" >, por:
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main3184x.png" alt="    &lfloor;    &rfloor;
+    | y1 |
+    ||    ||
+    || y2 ||
+    ||    ||
+y = || y3 ||
+    ||  .. ||
+    |&lceil;  . |&rceil;
+      yn
+" class="math-display" ></center>
+<!--l. 186--><p class="indent" >   O problema de ajuste, agora, se reduz a resolver o sistema linear <img 
+src="main3185x.png" alt="M  a = w  "  class="math" >, ou
+<img 
+src="main3186x.png" alt="V TV a = V Ty  "  class="math" >. Este sistema linear tem solução única se a matriz <img 
+src="main3187x.png" alt="M  "  class="math" > for inversível.
+O teorema a seguir mostra que isto acontece sempre a matriz <img 
+src="main3188x.png" alt="V  "  class="math" > possui posto
+<img 
+src="main3189x.png" alt="m  "  class="math" >, ou seja, o número de linhas linearmente independentes for igual ao número de
+colunas.<span class="footnote-mark"><a 
+href="main71.html#fn1x10"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x70-109005f1"></a> 
+   <div class="newtheorem">
+<!--l. 189--><p class="noindent" ><span class="head">
+<a 
+ id="x70-109006r1"></a>
+<span 
+class="ec-lmbx-12">Teorema 7.2.1.</span>  </span><span 
+class="ec-lmri-12">A  matriz</span>  <img 
+src="main3190x.png" alt="M  = V TV  "  class="math" >  <span 
+class="ec-lmri-12">é  quadrada  de  ordem</span>  <img 
+src="main3191x.png" alt="m  "  class="math" >  <span 
+class="ec-lmri-12">e  </span><span 
+class="ec-lmri-12">é</span>
+<span 
+class="ec-lmri-12">invers</span><span 
+class="ec-lmri-12">ível sempre que o posto da matriz</span> <img 
+src="main3192x.png" alt="V  "  class="math" > <span 
+class="ec-lmri-12">é igual a n</span><span 
+class="ec-lmri-12">úmero de colunas</span> <img 
+src="main3193x.png" alt="m  "  class="math" ><span 
+class="ec-lmri-12">.</span>
+   </div>
+<!--l. 192--><p class="indent" >
+   <div class="proof">
+<!--l. 193--><p class="indent" >   <span class="head">
+<span 
+class="ec-lmri-12">Demonstra</span><span 
+class="ec-lmri-12">ç</span><span 
+class="ec-lmri-12">ão.</span> </span>Para provar que <img 
+src="main3194x.png" alt="M  "  class="math" > é inversível, precisamos mostrar que
+se <img 
+src="main3195x.png" alt="v  "  class="math" > é um vetor de ordem <img 
+src="main3196x.png" alt="m  "  class="math" > e <img 
+src="main3197x.png" alt="M v = 0  "  class="math" >, então <img 
+src="main3198x.png" alt="v =  0  "  class="math" >. Suponha, então,
+que <img 
+src="main3199x.png" alt="M  v = 0  "  class="math" >, isto é, <img 
+src="main3200x.png" alt=" T
+V  Vv =  0  "  class="math" >. Tomando o produto interno da expressão
+<img 
+src="main3201x.png" alt="V TV v = 0  "  class="math" > com <img 
+src="main3202x.png" alt="v  "  class="math" >, temos:
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main3203x.png" alt="    &#x27E8;  T     &#x27E9;                    2
+0 =  V  V v,v  = &#x27E8;V v,V v&#x27E9; = &#x2225;V v&#x2225;
+" class="math-display" ></center> Portato <img 
+src="main3204x.png" alt="M  v = 0  "  class="math" > implica obrigatoriamente <img 
+src="main3205x.png" alt="V v = 0  "  class="math" >. Como o posto de <img 
+src="main3206x.png" alt="V  "  class="math" >
+é igual ao número de colunas, <img 
+src="main3207x.png" alt="v  "  class="math" > precisar ser o vetor nulo.                    __
+   </div>
+   <div class="newtheorem">
+<!--l. 206--><p class="noindent" ><span class="head">
+<a 
+ id="x70-109007r1"></a>
+<span 
+class="ec-lmbx-12">Observa</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão 7.2.1.</span>  </span>Este problema é equivalente a resolver pelo métodos
+dos mínimos quadrados o seguinte sistema linear:
+   <center class="math-display" >
+<img 
+src="main3208x.png" alt="&lfloor;                              &rfloor;           &lfloor;    &rfloor;
+|  f1(x1)  f2(x1)  &sdot;&sdot;&sdot;  fm(x1) | &lfloor;     &rfloor;   | y1 |
+||                              || | a1  |   ||    ||
+||  f1(x2)  f2(x2)  &sdot;&sdot;&sdot;  fm(x2) || ||     ||   || y2 ||
+||                              || || a2  ||   ||    ||
+||  f1(x3)  f2(x3)  &sdot;&sdot;&sdot;  fm(x3) || ||  ..  || = || y3 ||
+||    ..       ..     ..      ..   || |  .  |   ||  .. ||
+|    .       .       .     .   | &lceil;     &rceil;   |  . |
+&lceil;  f (x  )  f (x  )  &sdot;&sdot;&sdot;  f (x ) &rceil;   am      &lceil; y  &rceil;
+    1  n    2  n         m  n                 n
+" class="math-display" ></center>
+   </div>
+   <div class="newtheorem">
+<!--l. 235--><p class="noindent" ><span class="head">
+                                                                          
+
+                                                                          
+<a 
+ id="x70-109008r1"></a>
+<span 
+class="ec-lmbx-12">Exemplo 7.2.1.</span>  </span>Usando esta técnica geral, encontre a reta que melhor aproxima
+o seguinte conjunto de dados:
+<div class="center" 
+>
+<!--l. 236--><p class="noindent" >
+<div class="tabular"> <table id="TBL-11" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-11-1g"><col 
+id="TBL-11-1"></colgroup><colgroup id="TBL-11-2g"><col 
+id="TBL-11-2"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-11-1-1"  
+class="td11"> <img 
+src="main3209x.png" alt="xi  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-11-1-2"  
+class="td11"> <img 
+src="main3210x.png" alt="yi  "  class="math" >   </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-11-2-1"  
+class="td11"><img 
+src="main3211x.png" alt="0,01  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-11-2-2"  
+class="td11"><img 
+src="main3212x.png" alt="1,99  "  class="math" > </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-11-3-1"  
+class="td11"><img 
+src="main3213x.png" alt="1,02  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-11-3-2"  
+class="td11"><img 
+src="main3214x.png" alt="4,55  "  class="math" > </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-11-4-1"  
+class="td11"><img 
+src="main3215x.png" alt="2,04  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-11-4-2"  
+class="td11"><img 
+src="main3216x.png" alt="7,20  "  class="math" > </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-11-5-1"  
+class="td11"><img 
+src="main3217x.png" alt="2,95  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-11-5-2"  
+class="td11"><img 
+src="main3218x.png" alt="9,51  "  class="math" > </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-11-6-1"  
+class="td11"><img 
+src="main3219x.png" alt="3,55  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-11-6-2"  
+class="td11"><img 
+src="main3220x.png" alt="10,82  "  class="math" ></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-11-7-1"  
+class="td11">     </td></tr></table></div></div>
+   </div>
+<!--l. 250--><p class="indent" >
+   <div class="proof">
+<!--l. 250--><p class="indent" >   <span class="head">
+<span 
+class="ec-lmbx-12">Solu</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão.</span> </span> Desejamos encontrar os valores de <img 
+src="main3221x.png" alt="a  "  class="math" > e <img 
+src="main3222x.png" alt="b  "  class="math" > tais que a função
+<img 
+src="main3223x.png" alt="f (x ) = ax + b  "  class="math" > melhor se ajusta aos pontos da tabela. Afim de usar o critério
+dos mínimos quadrados, escrevemos o problema na forma matricial dada
+por:
+   <center class="math-display" >
+<img 
+src="main3224x.png" alt="&lfloor;         &rfloor;         &lfloor;        &rfloor;
+
+|| 0,01  1 ||         ||  1,99  ||
+|| 1,02  1 || &lfloor;   &rfloor;   ||  4,55  ||
+||         ||   a     ||        ||
+|| 2,04  1 || |&lceil;   |&rceil; = ||   7,2  ||
+||         ||   b     ||        ||
+|| 2,95  1 ||         ||  9,51  ||
+&lceil;         &rceil;         &lceil;        &rceil;
+  3,55  1              10,82
+" class="math-display" ></center>
+<!--l. 277--><p class="indent" >   Multiplicamos agora ambos os lados pela transposta:
    <table 
-class="equation"><tr><td><a 
- id="x70-109005r3"></a>
+class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main3164x.png" alt="&lfloor;                           &rfloor; &lfloor;     &rfloor;   &lfloor;       &rfloor;
-  &sum;  1   &sum;  x    &sdot;&sdot;&sdot;   &sum; xp      a         &sum; y
-||            j            j || ||   1 ||   ||     j ||
-|| &sum; xj   &sum;  x2j        &sum; xpj+1|| ||  a2 ||   || &sum; xjyj||
-||   .            .       .  || ||  .  || = ||    .  ||
-||   ..             ..     ..  || ||  ..  ||   ||    ..  ||
-&lceil; &sum;  p  &sum;   p+1       &sum;   2p&rceil; &lceil;     &rceil;   &lceil; &sum;  p  &rceil;
-    xj     xj    &sdot;&sdot;&sdot;     xj     ap+1        xjyj
-" class="math-display" ></center></td><td class="equation-label">(7.3)</td></tr></table>
-<!--l. 276--><p class="nopar" >
-<!--l. 278--><p class="indent" >   Na forma matricial temos
-   <table 
-class="equation"><tr><td><a 
- id="x70-109006r4"></a>
+src="main3225x.png" alt="&lfloor;                            &rfloor;
+ 0,01  1,02  2,04  2,95  3,55
+|&lceil;                            |&rceil;
+   1     1    1     1     1
+" class="math-display" ></center></td></tr></table>
+<!--l. 283--><p class="nopar" >
+o que fornece: <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main3226x.png" alt="                                &lfloor;         &rfloor;
+
+                                || 0,01  1 ||
+&lfloor;                             &rfloor; || 1,02  1 || &lfloor;   &rfloor;
+  0,01  1,02  2,04   2,95  3,55   ||         ||   a
+|&lceil;                             |&rceil; || 2,04  1 || |&lceil;   |&rceil; =
+   1     1     1     1     1    ||         ||   b
+                                || 2,95  1 ||
+                                &lceil;         &rceil;
+                                  3,55  1
+                                           &lfloor;       &rfloor;
+                                           | 1,99  |
+                                           ||       ||
+          &lfloor;                              &rfloor; || 4,55  ||
+          | 0,01  1,02  2,04  2,95  3,55 | ||       ||
+          &lceil;                              &rceil; ||  7,2  ||
+              1     1     1     1    1     ||       ||
+                                           |&lceil; 9,51  |&rceil;
+                                             10,82
+" class="math-display" ></center>
+</div>Equivalente a
+   <center class="math-display" >
+<img 
+src="main3227x.png" alt="&lfloor;                &rfloor;&lfloor;    &rfloor;   &lfloor;         &rfloor;
+|  26,5071   9,57  ||  a |   | 85,8144 |
+&lceil;                &rceil;&lceil;    &rceil; = &lceil;         &rceil; .
+    9,57     5       b        34,07
+" class="math-display" ></center>
+<!--l. 340--><p class="indent" >   A solução desse sistema é <img 
+src="main3228x.png" alt="a = 2,5157653  "  class="math" > e <img 
+src="main3229x.png" alt="b = 1,9988251  "  class="math" >.
+<!--l. 342--><p class="indent" >   A tabela abaixo mostra os valores dados e os valores ajustados:
+<div class="center" 
+>
+<!--l. 343--><p class="noindent" >
+                                                                          
+
+                                                                          
+<div class="tabular"> <table id="TBL-12" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-12-1g"><col 
+id="TBL-12-1"></colgroup><colgroup id="TBL-12-2g"><col 
+id="TBL-12-2"></colgroup><colgroup id="TBL-12-3g"><col 
+id="TBL-12-3"></colgroup><colgroup id="TBL-12-4g"><col 
+id="TBL-12-4"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-12-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-12-1-1"  
+class="td11"> <img 
+src="main3230x.png" alt="xi  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-1-2"  
+class="td11"> <img 
+src="main3231x.png" alt="yi  "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-1-3"  
+class="td11"> <img 
+src="main3232x.png" alt="axi + b  "  class="math" >  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-1-4"  
+class="td11"><img 
+src="main3233x.png" alt="axi + b &minus; yi  "  class="math" > </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-12-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-12-2-1"  
+class="td11"><img 
+src="main3234x.png" alt="0,01  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-2-2"  
+class="td11"><img 
+src="main3235x.png" alt="1,99  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-2-3"  
+class="td11"><img 
+src="main3236x.png" alt="2,0239828  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-2-4"  
+class="td11"> <img 
+src="main3237x.png" alt="0,0339828  "  class="math" >  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-12-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-12-3-1"  
+class="td11"><img 
+src="main3238x.png" alt="1,02  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-3-2"  
+class="td11"><img 
+src="main3239x.png" alt="4,55  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-3-3"  
+class="td11"><img 
+src="main3240x.png" alt="4,5649057  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-3-4"  
+class="td11"> <img 
+src="main3241x.png" alt="0,0149057  "  class="math" >  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-12-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-12-4-1"  
+class="td11"><img 
+src="main3242x.png" alt="2,04  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-4-2"  
+class="td11"> <img 
+src="main3243x.png" alt="7,2  "  class="math" >  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-4-3"  
+class="td11"><img 
+src="main3244x.png" alt="7,1309863  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-4-4"  
+class="td11"><img 
+src="main3245x.png" alt="&minus;  0,0690137  "  class="math" ></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-12-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-12-5-1"  
+class="td11"><img 
+src="main3246x.png" alt="2,95  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-5-2"  
+class="td11"><img 
+src="main3247x.png" alt="9,51  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-5-3"  
+class="td11"><img 
+src="main3248x.png" alt="9,4203327  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-5-4"  
+class="td11"><img 
+src="main3249x.png" alt="&minus;  0,0896673  "  class="math" ></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-12-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-12-6-1"  
+class="td11"><img 
+src="main3250x.png" alt="3,55  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-6-2"  
+class="td11"><img 
+src="main3251x.png" alt="10,82  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-6-3"  
+class="td11"><img 
+src="main3252x.png" alt="10,929792  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-6-4"  
+class="td11"> <img 
+src="main3253x.png" alt="0,1097919  "  class="math" >  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-12-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-12-7-1"  
+class="td11">     </td></tr></table></div></div>
+                                                                       <img 
+src="main3254x.png" alt="&#x2662; "  class="math" >
+   </div>
+   <div class="newtheorem">
+<!--l. 360--><p class="noindent" ><span class="head">
+<a 
+ id="x70-109010r2"></a>
+<span 
+class="ec-lmbx-12">Exemplo 7.2.2.</span>  </span>Encontre a função <img 
+src="main3255x.png" alt="f(x) = a1 sen (&pi;x ) + a2 cos(&pi;x)  "  class="math" > que
+melhor se ajusta pelo critérios dos mínimos quadrados aos seguintes pontos
+dados:
+<div class="center" 
+>
+<!--l. 361--><p class="noindent" >
+<div class="tabular"> <table id="TBL-13" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-13-1g"><col 
+id="TBL-13-1"></colgroup><colgroup id="TBL-13-2g"><col 
+id="TBL-13-2"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-13-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-13-1-1"  
+class="td11"> <img 
+src="main3256x.png" alt="xi  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-13-1-2"  
+class="td11">  <img 
+src="main3257x.png" alt="yi  "  class="math" >   </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-13-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-13-2-1"  
+class="td11"> <img 
+src="main3258x.png" alt="0  "  class="math" >  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-13-2-2"  
+class="td11"><img 
+src="main3259x.png" alt="&minus; 153  "  class="math" ></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-13-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-13-3-1"  
+class="td11"><img 
+src="main3260x.png" alt="0,25 "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-13-3-2"  
+class="td11"> <img 
+src="main3261x.png" alt="64 "  class="math" ></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-13-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-13-4-1"  
+class="td11"><img 
+src="main3262x.png" alt="0,5  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-13-4-2"  
+class="td11"> <img 
+src="main3263x.png" alt="242  "  class="math" >  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-13-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-13-5-1"  
+class="td11"><img 
+src="main3264x.png" alt="0,75  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-13-5-2"  
+class="td11"> <img 
+src="main3265x.png" alt="284  "  class="math" >  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-13-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-13-6-1"  
+class="td11"><img 
+src="main3266x.png" alt="1,0  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-13-6-2"  
+class="td11"> <img 
+src="main3267x.png" alt="175  "  class="math" >  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-13-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-13-7-1"  
+class="td11">     </td></tr></table></div></div>
+   </div>
+<!--l. 376--><p class="indent" >
+   <div class="proof">
+<!--l. 376--><p class="indent" >   <span class="head">
+<span 
+class="ec-lmbx-12">Solu</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão.</span> </span> Começamos definindo a matriz <img 
+src="main3268x.png" alt="V  "  class="math" > e o vetor <img 
+src="main3269x.png" alt="y  "  class="math" >:
    <center class="math-display" >
                                                                           
 
                                                                           
 <img 
-src="main3165x.png" alt="         T        T
-M a := V  V a = V  y
-" class="math-display" ></center></td><td class="equation-label">(7.4)</td></tr></table>
-<!--l. 281--><p class="nopar" >
+src="main3270x.png" alt="     &lfloor;                        &rfloor;
+     |   sin(0)      cos(0)   |   &lfloor;                         &rfloor;
+     ||                        ||   |      0           1      |
+     || sin(0,25&pi;)  cos(0,25&pi;) ||   ||                         ||
+     ||                        ||   ||  0,7071068    0,7071068  ||
+V  = ||  sin (0,5&pi; )   cos(0,5&pi; ) || &asymp; ||      1           0      ||
+     || sin(0,75&pi;)  cos(0,75&pi;) ||   ||                         ||
+     ||                        ||   ||  0,7071068   &minus; 0,7071068 ||
+     ||   sin(&pi;)      cos(&pi;)   ||   |&lceil;                         |&rceil;
+     &lceil;                        &rceil;          0          &minus; 1.
+" class="math-display" ></center>
+<!--l. 396--><p class="indent" >
+   <center class="math-display" >
+<img 
+src="main3271x.png" alt="    &lfloor;        &rfloor;
+    |  &minus; 153 |
+    ||        ||
+    ||   64   ||
+    ||        ||
+y = ||  242   ||
+    ||        ||
+    |&lceil;  284   |&rceil;
+       175
+" class="math-display" ></center> Assim podemos calcular <img 
+src="main3272x.png" alt="V TV  "  class="math" > e <img 
+src="main3273x.png" alt="V Ty  "  class="math" >:
+   <center class="math-display" >
+<img 
+src="main3274x.png" alt="       &lfloor;       &rfloor;                  &lfloor;             &rfloor;
+VT T = |  2  0 |     e    V Ty =  |  488,07316  | .
+       &lceil;  0  3 &rceil;                  &lceil; &minus; 483,56349 &rceil;
+" class="math-display" ></center>
+<!--l. 418--><p class="indent" >   Finalmente o vetor de coeficientes, <img 
+src="main3275x.png" alt="a  "  class="math" >, é dado pela solução do sistema
+<img 
+src="main3276x.png" alt="V TV a = V Ty  "  class="math" >:
+   <center class="math-display" >
+<img 
+src="main3277x.png" alt="    &lfloor;              &rfloor;
+       244,03658
+a = |&lceil;              |&rceil;
+      &minus; 161,18783
+" class="math-display" ></center> E a função <img 
+src="main3278x.png" alt="f(x)  "  class="math" > procurada é dado por:
+   <center class="math-display" >
+<img 
+src="main3279x.png" alt="f(x ) = 244,03658 sen (&pi;x) &minus; 161,18783 cos(&pi;x).  " class="math-display" ></center> A
+tabela abaixo mostra os valores dados e os valores ajustados:
+<div class="center" 
+>
+<!--l. 428--><p class="noindent" >
+<div class="tabular"> <table id="TBL-14" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-14-1g"><col 
+id="TBL-14-1"></colgroup><colgroup id="TBL-14-2g"><col 
+id="TBL-14-2"></colgroup><colgroup id="TBL-14-3g"><col 
+id="TBL-14-3"></colgroup><colgroup id="TBL-14-4g"><col 
+id="TBL-14-4"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-14-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-14-1-1"  
+class="td11"><img 
+src="main3280x.png" alt="xi  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-1-2"  
+class="td11"><img 
+src="main3281x.png" alt="yi  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-1-3"  
+class="td11">  <img 
+src="main3282x.png" alt="f(xi)  "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-1-4"  
+class="td11"><img 
+src="main3283x.png" alt="f(xi) &minus; yi  "  class="math" ></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-14-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-14-2-1"  
+class="td11"> 0  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-2-2"  
+class="td11">-153</td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-2-3"  
+class="td11">- 161,18783</td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-2-4"  
+class="td11">-8,1878306</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-14-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-14-3-1"  
+class="td11">0,25</td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-3-2"  
+class="td11"> 64 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-3-3"  
+class="td11"> 58,582912 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-3-4"  
+class="td11">-5,4170876</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-14-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-14-4-1"  
+class="td11"> 0,5 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-4-2"  
+class="td11"> 242 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-4-3"  
+class="td11"> 244,03658 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-4-4"  
+class="td11"> 2,0365799 </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-14-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-14-5-1"  
+class="td11">0,75</td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-5-2"  
+class="td11"> 284 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-5-3"  
+class="td11"> 286,53693 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-5-4"  
+class="td11"> 2,5369286 </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-14-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-14-6-1"  
+class="td11"> 1  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-6-2"  
+class="td11"> 175 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-6-3"  
+class="td11"> 161,18783 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-14-6-4"  
+class="td11">-13,812169</td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-14-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-14-7-1"  
+class="td11">    </td></tr></table></div></div>
                                                                           
 
                                                                           
-   <!--l. 286--><div class="crosslinks"><p class="noindent"><a 
+                                                                       <img 
+src="main3284x.png" alt="&#x2662; "  class="math" >
+   </div>
+                                                                          
+
+                                                                          
+   <!--l. 509--><div class="crosslinks"><p class="noindent"><a 
 href="mainse43.html#mainse45.html" >Voltar</a></p></div>
-<!--l. 286--><p class="indent" >   <a 
+<!--l. 509--><p class="indent" >   <a 
  id="tailmainse32.html"></a>  
 </body></html> 

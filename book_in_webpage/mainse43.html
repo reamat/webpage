@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-10-27 18:33:00"> 
+<meta name="date" content="2016-10-28 15:09:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 <meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Métodos de Runge-Kutta, Métodos de Runge-Kutta - Quarta ordem'>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
@@ -48,20 +48,20 @@
 	</div>
 
    <!--l. 431--><div class="crosslinks"><p class="noindent"><a 
-href="mainli18.html# " >Voltar</a></p></div>
+href="# "  >Voltar</a></p></div>
    <h3 class="sectionHead"><span class="titlemark">9.5   </span> <a 
- id="x89-1500009.5"></a>Métodos de Runge-Kutta</h3>
+ id="x90-1500009.5"></a>Métodos de Runge-Kutta</h3>
 <a 
- id="dx89-150001"></a>
+ id="dx90-150001"></a>
 <!--l. 433--><p class="noindent" >Os métodos de Runge-Kutta consistem em iterações do tipo:
    <center class="math-display" >
 <img 
-src="main4301x.png" alt="y(k+1) = y (k) + w k + ...+ w  k
+src="main4390x.png" alt="y(k+1) = y (k) + w k + ...+ w  k
                 1 1          n n  " class="math-display" ></center>
 onde <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4302x.png" alt="k1  =  hf (y(k),t(k))
+src="main4391x.png" alt="k1  =  hf (y(k),t(k))
             (k)         (k)
 k2  =  hf (y   + &alpha;2,1k1,t   + &beta;2h )
 k3  =  hf (y(k) + &alpha;3,1k1 + &alpha;3,2k2,t(k) + &beta;3h)
@@ -75,43 +75,43 @@ k   =  hf (y(k) + &alpha;  k +  &alpha;  k  + ...&alpha;     k    ,t(k) + &beta;
                                                                           
 </div>
 <!--l. 444--><p class="indent" >   Os coeficientes são escolhidos de forma que a expansão em Taylor de <img 
-src="main4303x.png" alt="  (k+1)
+src="main4392x.png" alt="  (k+1)
 y   "  class="math" > e
 <img 
-src="main4304x.png" alt=" (k)
+src="main4393x.png" alt=" (k)
 y   + w1k1 +  ...+ wnkn  "  class="math" > coincidam até ordem <img 
-src="main4305x.png" alt="n + 1  "  class="math" >.
+src="main4394x.png" alt="n + 1  "  class="math" >.
    <div class="newtheorem">
 <!--l. 446--><p class="noindent" ><span class="head">
 <a 
- id="x89-150003r1"></a>
+ id="x90-150003r1"></a>
 <span 
 class="ec-lmbx-12">Exemplo 9.5.1.</span>  </span>O   método   de   Euler   melhorado   é   um   exemplo   de
 Runge-Kutta de segunda ordem
    <center class="math-display" >
 <img 
-src="main4306x.png" alt="y(n+1) = y(n) + k1-+-k2
+src="main4395x.png" alt="y(n+1) = y(n) + k1-+-k2
                   2
 " class="math-display" ></center> onde <img 
-src="main4307x.png" alt="          (n) (n)
+src="main4396x.png" alt="          (n) (n)
 k1 = hf (y  ,t  )  "  class="math" > e <img 
-src="main4308x.png" alt="          (n)      (n)
+src="main4397x.png" alt="          (n)      (n)
 k2 = hf (y   + k1,t  + h )  "  class="math" >
    </div>
 <!--l. 451--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">9.5.1   </span> <a 
- id="x89-1510009.5.1"></a>Métodos de Runge-Kutta - Quarta ordem</h4>
+ id="x90-1510009.5.1"></a>Métodos de Runge-Kutta - Quarta ordem</h4>
 <a 
- id="dx89-151001"></a>
+ id="dx90-151001"></a>
 <!--l. 453--><p class="noindent" >
    <center class="math-display" >
 <img 
-src="main4309x.png" alt=" (n+1)    (n)   k1 + 2k2 + 2k3 + k4
+src="main4398x.png" alt=" (n+1)    (n)   k1 + 2k2 + 2k3 + k4
 y     =  y   + ---------6---------  " class="math-display" ></center>
 onde <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4310x.png" alt="            (n) (n)
+src="main4399x.png" alt="            (n) (n)
 k1  =  hf (y  ,t  )
 k2  =  hf (y(n) + k1&#x2215;2,t(n) + h&#x2215;2)
             (n)        (n)
@@ -123,7 +123,7 @@ método de Simpson pode ajudar a compreender os estranhos coeficientes:
 <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4311x.png" alt="                      &int; t(n+1)
+src="main4400x.png" alt="                      &int; t(n+1)
 y(t(n+1)) &minus; y(t(n))  =    (n)  f (y (s),s)ds
                        t [ (          )      (                      )
                    &asymp;   h-f  y(t(n)),t(n)  + 4f  y(t(n) + h&#x2215;2),t(n) + h&#x2215;2
@@ -134,16 +134,16 @@ y(t(n+1)) &minus; y(t(n))  =    (n)  f (y (s),s)ds
                    &asymp;   --------6---------
 " class="math-display" ></center>
 </div>onde <img 
-src="main4312x.png" alt="k1   "  class="math" > e <img 
-src="main4313x.png" alt="k4   "  class="math" > representam as inclinações nos extremos e <img 
-src="main4314x.png" alt="k2   "  class="math" > e <img 
-src="main4315x.png" alt="k3   "  class="math" > são duas
+src="main4401x.png" alt="k1   "  class="math" > e <img 
+src="main4402x.png" alt="k4   "  class="math" > representam as inclinações nos extremos e <img 
+src="main4403x.png" alt="k2   "  class="math" > e <img 
+src="main4404x.png" alt="k3   "  class="math" > são duas
 aproximações diferentes para a inclinação no meio do intervalo.
                                                                           
 
                                                                           
    <!--l. 471--><div class="crosslinks"><p class="noindent"><a 
-href="mainli18.html# " >Voltar</a></p></div>
+href="# "  >Voltar</a></p></div>
 <!--l. 471--><p class="indent" >   <a 
  id="tailmainse43.html"></a>   
 <div class="panel panel-default">
@@ -153,10 +153,10 @@ href="mainli18.html# " >Voltar</a></p></div>
    	   <ul class="list-unstyled">
 				<li>Livro
 				<ul class="list-unstyled">
-	  				<li><a 	href="main.html">Versão HTML</a></li>
 	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf" target="_blank">Versão PDF</a></li>
-	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/slide.pdf" target="_blank">Versão Slides</a></li>
-	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.epub" target="_blank">Versão EPUB</a></li>
+	  				<li><a 	href="main.html">Versão HTML*</a></li>
+	  				<li><a href="main.epub" target="_blank">Versão EPUB*</a></li>		  			       
+	  				<li><a href="slide.pdf" target="_blank">Versão Slides*</a></li>
 	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
 	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
 				</ul>
@@ -185,8 +185,10 @@ href="mainli18.html# " >Voltar</a></p></div>
       		</li>
     			</ul>
     			</div>
-
   			</div>
+  			<p style="font-size: small;">* Os formatos HTML, EPUB e Slides podem estar desatualizados. Para ver a última atualização,
+  			veja o formato principal <a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf" target="_blank">PDF</a>.
+ 
      </div>
      <div class="panel-footer">
 	 <div class="row">
