@@ -28,25 +28,40 @@ for index, f in enumerate (lfiles):
     text = text.replace("iso-8859-1","utf-8")
     
     #include head
-    head_aux_file = open("head_aux.html", "r")
+    head_aux_file = open("head.html_aux", "r")
     head_include = head_aux_file.read()
     
     #get chapterHead or sectionHead to include in <meta> keywords
     s=-1
     e=-1
+    title = []
+    #chapterHead
     s = text.find('<h2 class="chapterHead">')
     if (s != -1):
         auxText = text[s:]
         s = auxText.find('</a>')+4
         e = auxText.index('</h2>')
         kw = auxText[s:e]
+        title = kw
     else:
+        #sectionHead
         s = text.find('<h3 class="sectionHead">')
         if (s != -1):
             auxText = text[s:]
             s = auxText.find('</a>')+4
             e = auxText.index('</h3>')
             kw = auxText[s:e]
+            title = kw
+            #subsectionHead
+            s=-1
+            e=-1
+            s = auxText.find('<h4 class="subsectionHead">')
+            while (s != -1):
+                auxText = auxText[s:]
+                s = auxText.find('</a>')+4
+                e = auxText.index('</h4>')
+                kw += ", " + auxText[s:e]
+                s = auxText.find('<h4 class="subsectionHead">',e)
         else:
             kw = []
     head1 = "<meta name='keywords' content='"
@@ -59,9 +74,17 @@ for index, f in enumerate (lfiles):
     text = text.replace("</head><body \n>", head_include)
 
     #include on bottom
-    bottom_aux_file = open("bottom_aux.html", "r")
+    bottom_aux_file = open("bottom.html_aux", "r")
     bottom_include = bottom_aux_file.read()
     text = text.replace("</body></html>", bottom_include)
+
+    #change title
+    if (len(title) != 0):
+        s = -1
+        e = -1
+        s = text.index('<title>')+7
+        e = text.index('</title>')
+        text = text.replace(text[s:e], title)
 
     ofile.write(text)
     ifile.close ()
