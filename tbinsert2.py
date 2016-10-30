@@ -97,9 +97,10 @@ ifile = open("./book_in_webpage/main.css",'r')
 bookfile = open("book.css",'r')
 ofile = open("./book_in_webpage/new_main.css",'w')
 
-for line in bookfile:
-    ofile.write (line)
 for line in ifile:
+    ofile.write (line)
+
+for line in bookfile:
     ofile.write (line)
 
 ifile.close ()
