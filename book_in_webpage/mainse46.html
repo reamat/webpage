@@ -1,15 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
   "http://www.w3.org/TR/html4/loose.dtd">  
 <html xml:lang="pt" > 
-<head><title>Exercícios finais</title> 
+<head><title>Método de Euler</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-10-30 17:05:00"> 
+<meta name="date" content="2016-11-01 19:26:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Exercícios finais'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Método de Euler'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -37,7 +37,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Cálculo Numérico - Um Livro Colaborativo</a>
+      <a class="navbar-brand" href="#">Cálculo Numérico<br>Um Livro Colaborativo</a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -61,853 +61,506 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-   <!--l. 530--><div class="crosslinks"><p class="noindent"><a 
+   <!--l. 32--><div class="crosslinks"><p class="noindent"><a 
 href="# "  >Índice</a></p></div>
-   <h3 class="sectionHead"><span class="titlemark">9.9   </span> <a 
- id="x94-1570009.9"></a>Exercícios finais</h3>
-   <div class="newtheorem">
-<!--l. 532--><p class="noindent" ><span class="head">
+   <h3 class="sectionHead"><span class="titlemark">10.1   </span> <a 
+ id="x94-15000010.1"></a>Método de Euler</h3>
 <a 
- id="x94-157001r1"></a>
-<span 
-class="ec-lmbx-12">E 9.9.1.</span>  </span>Considere o seguinte modelo para o crescimento de uma colônia de
-bactérias:
+ id="dx94-150001"></a>
+<!--l. 33--><p class="noindent" >Retornemos ao problema de valor inicial (<a 
+href="mainch10.html#x93-1490020">10.1<!--tex4ht:ref: PVI --></a>) dado por: <div class="subequations"><a 
+ id="x94-1500020"></a> <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4445x.png" alt="dy- = &alpha;y (A  &minus; y)
- dt  " class="math-display" ></center>
-onde <img 
-src="main4446x.png" alt="y  "  class="math" > indica a densidade de bactérias em unidades arbitrárias na colônia e <img 
-src="main4447x.png" alt="&alpha;  "  class="math" >
+src="main4157x.png" alt="y&prime;(t)  =   f(y(t),t)                           (10.3a)
+y(0)  =   y  (condição inicial)               (10.3b)
+           0
+" class="math-display" ></center>
+</div>
+</div>
+<!--l. 40--><p class="indent" >   O Método de Euler aplicado à solução desse problema consiste em aproximar
+a derivada <img 
+src="main4158x.png" alt=" &prime;
+y (t)  "  class="math" > por um esquema de primeira ordem do tipo
+   <center class="math-display" >
+<img 
+src="main4159x.png" alt=" &prime;      y(t + h ) &minus; y(t)
+y (t) = ---------------+ O (h), h &#x003E; 0.
+              h  " class="math-display" ></center>
+Aqui <img 
+src="main4160x.png" alt="h  "  class="math" > é o passo do método, que consideraremos uma constante. Assim temos
+(<a 
+href="#x94-1500020">10.3<!--tex4ht:ref: PVI_2 --></a>) se transforma em: <div class="eqnarray">
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main4161x.png" alt="y(t +-h)-&minus;-y(t)
+      h         =   f(y(t),t) + O(h )
+      y(t + h)  =   y(t) + hf (y(t),t) + O (h2).       (10.4)
+" class="math-display" ><a 
+ id="x94-150004r10.4"></a></center>
+</div>
+<!--l. 48--><p class="indent" >   Definimos, então, <img 
+src="main4162x.png" alt="t(k) = (k &minus; 1)h  "  class="math" > e <img 
+src="main4163x.png" alt="y (k)   "  class="math" > como a aproximação para <img 
+src="main4164x.png" alt="  (   )
+y  t(k) "  class="math" >
+produzida pelo Método de Euler. Assim, obtemos <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main4165x.png" alt=" (k+1)       (k)       (k) (k)
+y      =   y   + hf(y   ,t  ) (aproxima ção da EDO  ),    (10.5)
+  y(1)  =   y0 (condição inicial).                         (10.6)
+" class="math-display" ><a 
+ id="x94-150005r10.5"></a></center>
+</div>O problema (<a 
+href="#x94-150005r10.5">10.5<!--tex4ht:ref: PVI_EULER --></a>) consiste em um esquema iterativo, isto é, <img 
+src="main4166x.png" alt=" (1)
+y   "  class="math" > é a condição
+inicial; <img 
+src="main4167x.png" alt="  (2)
+y   "  class="math" > pode ser obtido de <img 
+src="main4168x.png" alt=" (1)
+y   "  class="math" >; <img 
+src="main4169x.png" alt="  (3)
+y   "  class="math" >, de <img 
+src="main4170x.png" alt=" (2)
+y   "  class="math" > e assim por diante,
+calculamos o termo <img 
+src="main4171x.png" alt="y(n)   "  class="math" > apartir do anterior <img 
+src="main4172x.png" alt="y(n&minus; 1)   "  class="math" >.
+   <div class="newtheorem">
+<!--l. 56--><p class="noindent" ><span class="head">
+<a 
+ id="x94-150006r1"></a>
+<span 
+class="ec-lmbx-12">Exemplo 10.1.1.</span>  </span>Retornemos ao o problema de valor inicial do exemplo (<a 
+href="mainch10.html#x93-1490050">10.2<!--tex4ht:ref: exemplo_y_2y --></a>):
+<div class="eqnarray">
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main4173x.png" alt=" &prime;
+y(t)  =  2y (t)
+y(0)  =  1
+" class="math-display" ></center>
+</div>
+   </div>
+<!--l. 62--><p class="indent" >   Cuja solução é <img 
+src="main4174x.png" alt="y(t) = e2t  "  class="math" >. O método de Euler aplicado a este problema
+produz o seguinte esquema: <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main4175x.png" alt=" (k+1)      (k)      (k)            (k)
+y       =  y   + 2hy    = (1 + 2h)y
+  y (1)  =  1,
+" class="math-display" ></center>
+</div>cuja solução é dada por
+   <center class="math-display" >
+<img 
+src="main4176x.png" alt=" (k)          k&minus; 1
+y   = (1 + 2h )  .  " class="math-display" ></center>
+                                                                          
+
+                                                                          
+Como <img 
+src="main4177x.png" alt="t = (k &minus; 1 )h  "  class="math" >, a solução aproximada pelo Método de Euler é
+   <center class="math-display" >
+<img 
+src="main4178x.png" alt="                      t
+y(t) &asymp; &#x02DC;y(t) = (1 + 2h )h.  " class="math-display" ></center>
+Observe que <img 
+src="main4179x.png" alt="&#x02DC;y(t) &frasl;= y(t)  "  class="math" >, mas se <img 
+src="main4180x.png" alt="h  "  class="math" > é pequeno, a aproximação é boa,
+pois
+   <center class="math-display" >
+<img 
+src="main4181x.png" alt="             t
+ lim  (1 + 2h )h = e2t.
+h&rarr;0+
+" class="math-display" ></center>
+<!--l. 74--><p class="indent" >   Vamos agora, analisar o desempenho do Método de Euler usando um exemplo
+mais complicado, porém ainda simples suficiente para que possamos obter a
+solução exata:
+   <div class="newtheorem">
+<!--l. 75--><p class="noindent" ><span class="head">
+<a 
+ id="x94-150009r2"></a>
+<span 
+class="ec-lmbx-12">Exemplo 10.1.2.</span>  </span> Considere o problema de valor inicial relacionado à equação
+logística<a 
+ id="dx94-150010"></a>: <div class="eqnarray">
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main4182x.png" alt=" &prime;
+y(t)  =  y (t)(1 &minus; y(t))
+y(0)  =  1&#x2215;2
+" class="math-display" ></center>
+</div>
+   </div>
+<!--l. 81--><p class="indent" >   Podemos obter a solução exata desta equação usando o método de separação
+de variáveis<a 
+ id="dx94-150012"></a> e o método das frações parciais<a 
+ id="dx94-150013"></a>. Para tal escrevemos:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main4183x.png" alt="    dy(t)
+--------------= dt
+y(t)(1 &minus; y (t))
+" class="math-display" ></center></td></tr></table>
+<!--l. 84--><p class="nopar" >
+O termo <img 
+src="main4184x.png" alt="   1
+y(1&minus;y)   "  class="math" > pode ser decomposto em frações parciais como <img 
+src="main4185x.png" alt="1    1
+y &minus; 1&minus;y  "  class="math" > e
+chegamos na seguinte equação diferencial:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main4186x.png" alt="(           )
+  1     1
+  --+  ------ dy = dt.
+  y    1 &minus; y
+" class="math-display" ></center></td></tr></table>
+<!--l. 88--><p class="nopar" >
+Integrando termo-a-termo, temos a seguinte equação algébrica relacionando <img 
+src="main4187x.png" alt="y(t)  "  class="math" >
 e <img 
-src="main4448x.png" alt="A  "  class="math" > são constantes positivas. Pergunta-se:
-      <ul class="itemize1">
-      <li class="itemize">Qual a solução quando a condição inicial <img 
-src="main4449x.png" alt="y(0)  "  class="math" > é igual a <img 
-src="main4450x.png" alt="0  "  class="math" > ou <img 
-src="main4451x.png" alt="A  "  class="math" >?
-      </li>
-      <li class="itemize">O que acontece quando a condição inicial <img 
-src="main4452x.png" alt="y(0)  "  class="math" > é um número entre <img 
-src="main4453x.png" alt="0  "  class="math" >
-      e <img 
-src="main4454x.png" alt="A  "  class="math" >?
-      </li>
-      <li class="itemize">O que acontece quando a condição inicial <img 
-src="main4455x.png" alt="y(0)  "  class="math" > é um número negativo?
+src="main4188x.png" alt="t  "  class="math" >:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main4189x.png" alt="ln (y ) &minus; ln(1 &minus; y) = t + C
+" class="math-display" ></center></td></tr></table>
+<!--l. 92--><p class="nopar" >
+Onde <img 
+src="main4190x.png" alt="C  "  class="math" > é a constante de integração, que é definida pela condição inicial,
+isto é, <img 
+src="main4191x.png" alt="y = 1&#x2215;2  "  class="math" > em <img 
+src="main4192x.png" alt="t = 0  "  class="math" >. Substituindo, temos <img 
+src="main4193x.png" alt="C =  0  "  class="math" >. O que resulta
+em:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main4194x.png" alt="  (      )
+    --y---
+ln   1 &minus; y  =  t
+" class="math-display" ></center></td></tr></table>
+<!--l. 96--><p class="nopar" >
+Equivalente a
+   <table 
+class="equation-star"><tr><td>
                                                                           
 
                                                                           
-      </li>
-      <li class="itemize">O que acontece quando a condição inicial <img 
-src="main4456x.png" alt="y(0)  "  class="math" > é um número positivo
-      maior que A?
-      </li>
-      <li class="itemize">Se <img 
-src="main4457x.png" alt="A =  10  "  class="math" > e <img 
-src="main4458x.png" alt="&alpha; = 1  "  class="math" > e <img 
-src="main4459x.png" alt="y (0) = 1  "  class="math" >, use métodos numéricos para obter
-      tempo necessário para que a população dobre?
-      </li>
-      <li class="itemize">Se <img 
-src="main4460x.png" alt="A =  10  "  class="math" > e <img 
-src="main4461x.png" alt="&alpha; = 1  "  class="math" > e <img 
-src="main4462x.png" alt="y (0) = 4  "  class="math" >, use métodos numéricos para obter
-      tempo necessário para que a população dobre?</li></ul>
-   </div>
-<!--l. 545--><p class="noindent" >
-   <div class="proof">
-<!--l. 545--><p class="indent" >   <span class="head">
-<span 
-class="ec-lmbx-12">Resposta.</span> </span> <span 
-class="ec-lmr-6">Os valores exatos para os itens e e f s</span><span 
-class="ec-lmr-6">ão:</span><img 
-src="main4463x.png" alt="1ln(9)
-10   4 "  class="math" >
-<span 
-class="ec-lmr-6">e</span> <img 
-src="main4464x.png" alt="-1ln(6)
-10  "  class="math" >
-                                                                       <img 
-src="main4465x.png" alt="&#x2662; "  class="math" >
-   </div>
-   <div class="newtheorem">
-<!--l. 551--><p class="noindent" ><span class="head">
-<a 
- id="x94-157002r2"></a>
-<span 
-class="ec-lmbx-12">E 9.9.2.</span>  </span>Considere o seguinte modelo para a evolução da velocidade de um
-objeto em queda (unidades no SI):
    <center class="math-display" >
 <img 
-src="main4466x.png" alt=" &prime;         2
-v =  g &minus; &alpha;v
+src="main4195x.png" alt="  y      t
+------= e
+1 &minus; y
+" class="math-display" ></center></td></tr></table>
+<!--l. 100--><p class="nopar" >
+e
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main4196x.png" alt="            t
+y = (1 &minus; y)e
+" class="math-display" ></center></td></tr></table>
+<!--l. 104--><p class="nopar" >
+Colocando o termo <img 
+src="main4197x.png" alt="y  "  class="math" > em evidência, encontramos:
+   <table 
+class="equation"><tr><td><a 
+ id="x94-150014r7"></a>
+   <center class="math-display" >
+<img 
+src="main4198x.png" alt="      t      t
+(1 + e )y = e
+" class="math-display" ></center></td><td class="equation-label">(10.7)</td></tr></table>
+<!--l. 108--><p class="nopar" >
+E, finalmente, encontramos a solução exata dada por <img 
+src="main4199x.png" alt="         t
+y(t) = 1e+et   "  class="math" >.
                                                                           
 
                                                                           
-" class="math-display" ></center> Sabendo que <img 
-src="main4467x.png" alt="g = 9,8  "  class="math" > e <img 
-src="main4468x.png" alt="&alpha; =  10&minus;2   "  class="math" >  e <img 
-src="main4469x.png" alt="v(0) = 0  "  class="math" >. Pede-se a velocidade ao
-tocar o solo, sabendo que a altura inicial era 100.
-   </div>
-<!--l. 556--><p class="noindent" >
-   <div class="proof">
-<!--l. 556--><p class="indent" >   <span class="head">
-<span 
-class="ec-lmbx-12">Resposta.</span> </span> <span 
-class="ec-lmr-6">O valor exato </span><span 
-class="ec-lmr-6">é</span> <img 
-src="main4470x.png" alt="&#x2218; -g[1&minus; e&minus;200&alpha;]
-   &alpha; "  class="math" >
-<span 
-class="ec-lmr-6">em</span> <img 
-src="main4471x.png" alt="t= &radic;1-tanh&minus;1(&#x2218;1-&minus; e&minus;200&alpha;)
-    g&alpha; "  class="math" >
-                                                                       <img 
-src="main4472x.png" alt="&#x2662; "  class="math" >
-   </div>
-   <div class="newtheorem">
-<!--l. 563--><p class="noindent" ><span class="head">
-<a 
- id="x94-157003r3"></a>
-<span 
-class="ec-lmbx-12">E 9.9.3.</span>  </span>Considere o seguinte modelo para o oscilador não-linear de Van der
-Pol:
+<!--l. 111--><p class="indent" >   Vejamos, agora, o esquema iterativo produzido pelo método de Euler:
+<div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4473x.png" alt="y &prime;&prime;(t) &minus; &alpha;(A &minus;  y(t)2)y&prime;(t) + w2 y(t) = 0
-                             0  " class="math-display" ></center>
-onde <img 
-src="main4474x.png" alt="A  "  class="math" >, <img 
-src="main4475x.png" alt="&alpha;  "  class="math" > e <img 
-src="main4476x.png" alt="w0   "  class="math" > são constantes positivas.
-      <ul class="itemize1">
-      <li class="itemize">Encontre a frequência e a amplitude de oscilações quando <img 
-src="main4477x.png" alt="w0 = 1  "  class="math" >,
-      <img 
-src="main4478x.png" alt="&alpha; = .1  "  class="math" > e <img 
-src="main4479x.png" alt="A =  10  "  class="math" >. (Teste diversas condições iniciais)
-      </li>
-      <li class="itemize">Estude a dependência da frequência e da amplitude com os parâmetros
-      <img 
-src="main4480x.png" alt="A  "  class="math" >, <img 
-src="main4481x.png" alt="&alpha;  "  class="math" > e <img 
-src="main4482x.png" alt="w0   "  class="math" >. (Teste diversas condições iniciais)
-                                                                          
-
-                                                                          
-      </li>
-      <li class="itemize">Que diferenças existem entre esse oscilador não-linear e o oscilador
-      linear?</li></ul>
-   </div>
-   <div class="newtheorem">
-<!--l. 573--><p class="noindent" ><span class="head">
-<a 
- id="x94-157004r4"></a>
-<span 
-class="ec-lmbx-12">E 9.9.4.</span>  </span>Considere o seguinte modelo para um oscilador não-linear: <div class="eqnarray">
-   <center class="math-display" >
-<img 
-src="main4483x.png" alt=" &prime;&prime;                  &prime;      2
-y (t) &minus; &alpha; (A &minus; z(t))y(t) + w0y(t) =   0
-                    Cz&prime;(t) + z(t) =   y(t)2
+src="main4200x.png" alt=" (k+1)      (k)     (k)      (k)
+y      =   y   + hy   (1 &minus; y  ),
+  y(1) =   1&#x2215;2.
 " class="math-display" ></center>
-</div>onde <img 
-src="main4484x.png" alt="A  "  class="math" >, <img 
-src="main4485x.png" alt="&alpha;  "  class="math" >, <img 
-src="main4486x.png" alt="w0   "  class="math" > e <img 
-src="main4487x.png" alt="C  "  class="math" > são constantes positivas.
-      <ul class="itemize1">
-      <li class="itemize">Encontre a frequência e a amplitude de oscilações quando <img 
-src="main4488x.png" alt="w0 = 1  "  class="math" >,
-      <img 
-src="main4489x.png" alt="&alpha; = .1  "  class="math" >, <img 
-src="main4490x.png" alt="A =  10  "  class="math" > e <img 
-src="main4491x.png" alt="C =  10  "  class="math" >. (Teste diversas condições iniciais)
-      </li>
-      <li class="itemize">Estude a dependência da frequência e da amplitude com os parâmetros
-      <img 
-src="main4492x.png" alt="A  "  class="math" >, <img 
-src="main4493x.png" alt="&alpha;  "  class="math" >, <img 
-src="main4494x.png" alt="w0   "  class="math" > e <img 
-src="main4495x.png" alt="C  "  class="math" >. (Teste diversas condições iniciais)</li></ul>
-   </div>
-   <div class="newtheorem">
-<!--l. 585--><p class="noindent" ><span class="head">
-<a 
- id="x94-157006r5"></a>
+</div>
+<!--l. 118--><p class="indent" >   Para fins de comparação, calculamos a solução de <a 
+href="#x94-150009r2">10.1.2<!--tex4ht:ref: ex_euler_1 --></a> e de (<span 
+class="ec-lmbx-12">??</span>) para alguns
+valores de <img 
+src="main4201x.png" alt="t  "  class="math" > e de passo <img 
+src="main4202x.png" alt="h  "  class="math" > e resumimos na Tabela&#x00A0;<a 
+href="#x94-1500161">10.1<!--tex4ht:ref: tab:log --></a>.
+   <div class="table">
                                                                           
 
                                                                           
+<!--l. 122--><p class="indent" >   <a 
+ id="x94-1500161"></a><hr class="float"><div class="float" 
+>
+                                                                          
+
+                                                                          
+ <div class="caption" 
+><span class="id">Tabela&#x00A0;10.1: </span><span  
+class="content">Tabela comparativa enter Método de Euler e solução exata
+para problema <a 
+href="#x94-150009r2">10.1.2<!--tex4ht:ref: ex_euler_1 --></a>.</span></div><!--tex4ht:label?: x94-1500161 -->
+<div class="tabular"> <table id="TBL-24" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-24-1g"><col 
+id="TBL-24-1"></colgroup><colgroup id="TBL-24-2g"><col 
+id="TBL-24-2"></colgroup><colgroup id="TBL-24-3g"><col 
+id="TBL-24-3"></colgroup><colgroup id="TBL-24-4g"><col 
+id="TBL-24-4"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-24-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-24-1-1"  
+class="td11"> <img 
+src="main4203x.png" alt="t  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-1-2"  
+class="td11">     <img 
+src="main4204x.png" alt="Exato  "  class="math" >        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-1-3"  
+class="td11"><img 
+src="main4205x.png" alt="Euler  h = 0,1  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-1-4"  
+class="td11"><img 
+src="main4206x.png" alt="Euler h =  0,01  "  class="math" ></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-24-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-24-2-1"  
+class="td11"> <img 
+src="main4207x.png" alt="0  "  class="math" >  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-2-2"  
+class="td11">      <img 
+src="main4208x.png" alt="1&#x2215;2  "  class="math" >          </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-2-3"  
+class="td11">     <img 
+src="main4209x.png" alt="0,5  "  class="math" >       </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-2-4"  
+class="td11">     <img 
+src="main4210x.png" alt="0,5  "  class="math" >        </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-24-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-24-3-1"  
+class="td11"><img 
+src="main4211x.png" alt="1&#x2215;2  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-3-2"  
+class="td11"><img 
+src="main4212x.png" alt="-e1&#x2215;2--
+1+e1&#x2215;2 &asymp; 0,6224593  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-3-3"  
+class="td11">  <img 
+src="main4213x.png" alt="0,6231476  "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-3-4"  
+class="td11">  <img 
+src="main4214x.png" alt="0,6225316  "  class="math" >    </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-24-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-24-4-1"  
+class="td11"> <img 
+src="main4215x.png" alt="1  "  class="math" >  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-4-2"  
+class="td11"> <img 
+src="main4216x.png" alt=" e
+1+e &asymp; 0,7310586  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-4-3"  
+class="td11">  <img 
+src="main4217x.png" alt="0,7334030  "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-4-4"  
+class="td11">  <img 
+src="main4218x.png" alt="0,7312946  "  class="math" >    </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-24-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-24-5-1"  
+class="td11"> <img 
+src="main4219x.png" alt="2  "  class="math" >  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-5-2"  
+class="td11"> <img 
+src="main4220x.png" alt="-e22 &asymp; 0,8807971
+1+e  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-5-3"  
+class="td11">  <img 
+src="main4221x.png" alt="0,8854273  "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-5-4"  
+class="td11">  <img 
+src="main4222x.png" alt="0,8812533  "  class="math" >    </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-24-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-24-6-1"  
+class="td11"> <img 
+src="main4223x.png" alt="3  "  class="math" >  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-6-2"  
+class="td11"> <img 
+src="main4224x.png" alt="-e3-
+1+e3 &asymp; 0,9525741  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-6-3"  
+class="td11">  <img 
+src="main4225x.png" alt="0,9564754  "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-24-6-4"  
+class="td11">  <img 
+src="main4226x.png" alt="0,9529609  "  class="math" >    </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-24-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-24-7-1"  
+class="td11">    </td></tr></table></div>
+                                                                          
+
+                                                                          
+   </div><hr class="endfloat" />
+   </div>
+<!--l. 135--><p class="indent" >   No exemplo a seguir, apresentamos um problema envolvendo uma equação
+não-autônoma<a 
+ id="dx94-150017"></a>, isto é, quando a função <img 
+src="main4227x.png" alt="f(y,t)  "  class="math" > depende explicitamente do
+tempo.
+   <div class="newtheorem">
+<!--l. 137--><p class="noindent" ><span class="head">
+<a 
+ id="x94-150018r3"></a>
 <span 
-class="ec-lmbx-12">E 9.9.5.</span>  </span>Considere o seguinte modelo para o controle de temperatura em um
-processo químico: <div class="eqnarray">
+class="ec-lmbx-12">Exemplo 10.1.3.</span>  </span>Resolva o problema de valor inicial <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4496x.png" alt="   &prime;
-CT  (t) + T (t)  =   &kappa;P (t) + Text
-        P &prime;(t)  =   &alpha;(Tset &minus; T (t))
+src="main4228x.png" alt="  y&prime;  =   &minus; y + t
+y(0)  =   1,
 " class="math-display" ></center>
-</div>onde <img 
-src="main4497x.png" alt="C  "  class="math" >, <img 
-src="main4498x.png" alt="&alpha;  "  class="math" > e <img 
-src="main4499x.png" alt="&kappa;  "  class="math" > são constantes positivas e <img 
-src="main4500x.png" alt="P (t)  "  class="math" > indica o potência do
-aquecedor. Sabendo que <img 
-src="main4501x.png" alt="Tset  "  class="math" > é a temperatura desejada, interprete o
-funcionamento esse sistema de controle.
-      <ul class="itemize1">
-      <li class="itemize">Calcule   a   solução   quando   a   temperatura   externa   <img 
-src="main4502x.png" alt="T   = 0
- ext  "  class="math" >,
-      <img 
-src="main4503x.png" alt="Tset = 1000  "  class="math" >, <img 
-src="main4504x.png" alt="C  = 10  "  class="math" >, <img 
-src="main4505x.png" alt="&kappa; = .1  "  class="math" > e <img 
-src="main4506x.png" alt="&alpha; = .1  "  class="math" >. Considere condições iniciais
-      nulas.
-      </li>
-      <li class="itemize">Quanto tempo demora o sistema para atingir a temperatura 900K?
-      </li>
-      <li class="itemize">Refaça os dois primeiros itens com <img 
-src="main4507x.png" alt="&alpha; = 0.2  "  class="math" > e <img 
-src="main4508x.png" alt="&alpha; = 1  "  class="math" >
-      </li>
-      <li class="itemize">Faça testes para verificar a influência de <img 
-src="main4509x.png" alt="Text  "  class="math" >, <img 
-src="main4510x.png" alt="&alpha;  "  class="math" > e <img 
-src="main4511x.png" alt="&kappa;  "  class="math" > na temperatura
-      final.</li></ul>
+</div>cuja solução exata é <img 
+src="main4229x.png" alt="y(t) = 2e&minus;t + t &minus; 1  "  class="math" >.
    </div>
-   <div class="newtheorem">
-<!--l. 599--><p class="noindent" ><span class="head">
-<a 
- id="x94-157008r6"></a>
+<!--l. 144--><p class="indent" >   O esquema recursivo de Euler fica: <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main4230x.png" alt=" (k+1 )                      (k)
+y      =   y(k) &minus; hy(k) + ht
+ y(0)  =   1
                                                                           
 
                                                                           
-<span 
-class="ec-lmbx-12">E 9.9.6.</span>  </span>Considere a equação do pêndulo dada por:
-   <center class="math-display" >
-<img 
-src="main4512x.png" alt="d2&#x03B8;(t)    g
----2--+  -sin(&#x03B8;(t)) = 0
- dt      l  " class="math-display" ></center>
-onde <img 
-src="main4513x.png" alt="g  "  class="math" > é o módulo da aceleração da gravidade e <img 
-src="main4514x.png" alt="l  "  class="math" > é o comprimento da
-haste.
-      <ul class="itemize1">
-      <li class="itemize">Mostre analiticamente que a energia total do sistema dada por
-      <center class="math-display" >
-      <img 
-src="main4515x.png" alt=" (      )2
-1- d&#x03B8;(t)      g-
-2    dt    &minus;  l cos(&#x03B8;(t))
-      " class="math-display" ></center> é mantida constante.
-      </li>
-      <li class="itemize">Resolva numericamente esta equação para <img 
-src="main4516x.png" alt="g = 9,8m &#x2215;s2   "  class="math" > e <img 
-src="main4517x.png" alt="l = 1m  "  class="math" > e
-      as seguintes condições iniciais:
-      <!--l. 607--><p class="noindent" >&#x00A0;     <img 
-src="main4518x.png" alt="&#x03B8;(0) = 0.5  "  class="math" > e <img 
-src="main4519x.png" alt="&#x03B8;&prime;(0) = 0  "  class="math" >.
-      <!--l. 608--><p class="noindent" >&#x00A0;     <img 
-src="main4520x.png" alt="&#x03B8;(0) = 1.0  "  class="math" > e <img 
-src="main4521x.png" alt=" &prime;
-&#x03B8;(0) = 0  "  class="math" >.
-      <!--l. 609--><p class="noindent" >&#x00A0;     <img 
-src="main4522x.png" alt="&#x03B8;(0) = 1.5  "  class="math" > e <img 
-src="main4523x.png" alt="&#x03B8;&prime;(0) = 0  "  class="math" >.
-      <!--l. 610--><p class="noindent" >&#x00A0;     <img 
-src="main4524x.png" alt="&#x03B8;(0) = 2.0  "  class="math" > e <img 
-src="main4525x.png" alt="&#x03B8;&prime;(0) = 0  "  class="math" >.
-                                                                          
-
-                                                                          
-      <!--l. 611--><p class="noindent" >&#x00A0;     <img 
-src="main4526x.png" alt="&#x03B8;(0) = 2.5  "  class="math" > e <img 
-src="main4527x.png" alt="&#x03B8;&prime;(0) = 0  "  class="math" >.
-      <!--l. 612--><p class="noindent" >&#x00A0;     <img 
-src="main4528x.png" alt="&#x03B8;(0) = 3.0  "  class="math" > e <img 
-src="main4529x.png" alt="&#x03B8;&prime;(0) = 0  "  class="math" >.</li></ul>
-<!--l. 614--><p class="noindent" >Em todos os casos, verifique se o método numérico reproduz a lei de conservação de
-energia e calcule período e amplitude.
-   </div>
-   <div class="newtheorem">
-<!--l. 617--><p class="noindent" ><span class="head">
-<a 
- id="x94-157009r7"></a>
-<span 
-class="ec-lmbx-12">E 9.9.7.</span>  </span>Considere o modelo simplificado de FitzHugh-Nagumo para o potencial
-elétrico sobre a membrana de um neurônio: <div class="eqnarray">
-   <center class="math-display" >
-<img 
-src="main4530x.png" alt="dV-             3
- dt   =  V  &minus; V  &#x2215;3 &minus; W +  I
-dW
-----  =  0.08(V +  0.7 &minus; 0.8W  )
- dt
 " class="math-display" ></center>
-</div>onde <img 
-src="main4531x.png" alt="I  "  class="math" > é a corrente de excitação.
-      <ul class="itemize1">
-      <li class="itemize">Encontre o único estado estacionário <img 
-src="main4532x.png" alt="(V0,W0 )  "  class="math" > com <img 
-src="main4533x.png" alt="I =  0  "  class="math" >.
-      </li>
-      <li class="itemize">Resolva  numericamente  o  sistema  com  condições  iniciais  dadas  por
-      <img 
-src="main4534x.png" alt="(V0,W0 )  "  class="math" > e
-      <!--l. 626--><p class="noindent" >&#x00A0;     <img 
-src="main4535x.png" alt="I = 0  "  class="math" >
-      <!--l. 627--><p class="noindent" >&#x00A0;     <img 
-src="main4536x.png" alt="I = 0.2  "  class="math" >
-                                                                          
-
-                                                                          
-      <!--l. 628--><p class="noindent" >&#x00A0;     <img 
-src="main4537x.png" alt="I = 0.4  "  class="math" >
-      <!--l. 629--><p class="noindent" >&#x00A0;     <img 
-src="main4538x.png" alt="I = 0.8  "  class="math" >
-      <!--l. 630--><p class="noindent" >&#x00A0;     <img 
-src="main4539x.png" alt="     &minus;t&#x2215;200
-I = e   "  class="math" ></li></ul>
-   </div>
-   <div class="newtheorem">
-<!--l. 635--><p class="noindent" ><span class="head">
-<a 
- id="x94-157011r8"></a>
-<span 
-class="ec-lmbx-12">E 9.9.8.</span>  </span>Considere o problema de valor inicial dado por <div class="eqnarray">
+</div>
+<!--l. 150--><p class="indent" >   Comparação
+   <table 
+class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main4540x.png" alt="du-(t)               &minus;t
-  dt   =   &minus; u(t) + e
- u(0)  =   0
-" class="math-display" ></center>
-</div>Resolva analiticamente este problema usando as técnicas elementares de equações
-diferenciais ordinárias. A seguir encontre aproximações numéricas usando os
-métodos de Euler, Euler modificado, Runge-Kutta Clássico e Adams-Bashforth de
-ordem 4 conforme pedido nos itens.
-      <ul class="itemize1">
-      <li class="itemize">Construa uma tabela apresentando valores com 7 algarismos significativos
-      para comparar a solução analítica com as aproximações numéricas
-      produzidas pelos métodos sugeridos. Construa também uma tabela para o
-      erro absoluto obtido por cada método numérico em relação à solução
-      analítica. Nesta última tabela, expresse o erro com 2 algarismos
-      significativos em formato científico. Dica: <img 
-src="main4541x.png" alt="         &prime;&prime;
-f ormat (e ,8)  "  class="math" > para a segunda
-      tabela.
-                                                                          
-
-                                                                          
-      <div class="center" 
->
-<!--l. 643--><p class="noindent" >
-<div class="tabular"> <table id="TBL-27" class="tabular" 
-cellspacing="0" cellpadding="0" rules="groups" 
-><colgroup id="TBL-27-1g"><col 
-id="TBL-27-1"></colgroup><colgroup id="TBL-27-2g"><col 
-id="TBL-27-2"></colgroup><colgroup id="TBL-27-3g"><col 
-id="TBL-27-3"></colgroup><colgroup id="TBL-27-4g"><col 
-id="TBL-27-4"></colgroup><colgroup id="TBL-27-5g"><col 
-id="TBL-27-5"></colgroup><colgroup id="TBL-27-6g"><col 
-id="TBL-27-6"></colgroup><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-27-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-27-1-1"  
-class="td11">                     </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-1-2"  
-class="td11">0.5</td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-1-3"  
-class="td11">1.0</td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-1-4"  
-class="td11">1.5</td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-1-5"  
-class="td11">2.0</td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-1-6"  
-class="td11">2.5</td></tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-27-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-27-2-1"  
-class="td11"> Analítico </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-2-2"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-2-3"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-2-4"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-2-5"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-2-6"  
-class="td11"></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-27-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-27-3-1"  
-class="td11">         Euler              </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-3-2"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-3-3"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-3-4"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-3-5"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-3-6"  
-class="td11">  </td></tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-27-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-27-4-1"  
-class="td11"> Euler modificado </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-4-2"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-4-3"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-4-4"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-4-5"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-4-6"  
-class="td11"></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-27-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-27-5-1"  
-class="td11">  Runge-Kutta Clássico   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-5-2"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-5-3"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-5-4"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-5-5"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-5-6"  
-class="td11">  </td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-27-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-27-6-1"  
-class="td11">Adams-Bashforth ordem 4</td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-6-2"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-6-3"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-6-4"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-6-5"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-27-6-6"  
-class="td11">  </td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-27-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-27-7-1"  
-class="td11">                      </td>
-</tr></table></div></div>
-      <div class="center" 
->
-<!--l. 661--><p class="noindent" >
-<div class="tabular"> <table id="TBL-28" class="tabular" 
-cellspacing="0" cellpadding="0" rules="groups" 
-><colgroup id="TBL-28-1g"><col 
-id="TBL-28-1"></colgroup><colgroup id="TBL-28-2g"><col 
-id="TBL-28-2"></colgroup><colgroup id="TBL-28-3g"><col 
-id="TBL-28-3"></colgroup><colgroup id="TBL-28-4g"><col 
-id="TBL-28-4"></colgroup><colgroup id="TBL-28-5g"><col 
-id="TBL-28-5"></colgroup><colgroup id="TBL-28-6g"><col 
-id="TBL-28-6"></colgroup><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-28-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-28-1-1"  
-class="td11">                     </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-1-2"  
-class="td11">0.5</td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-1-3"  
-class="td11">1.0</td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-1-4"  
-class="td11">1.5</td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-1-5"  
-class="td11">2.0</td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-1-6"  
-class="td11">2.5</td></tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-28-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-28-2-1"  
-class="td11"> Euler </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-2-2"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-2-3"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-2-4"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-2-5"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-2-6"  
-class="td11"></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-28-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-28-3-1"  
-class="td11">    Euler modificado      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-3-2"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-3-3"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-3-4"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-3-5"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-3-6"  
-class="td11">  </td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-28-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-28-4-1"  
-class="td11">  Runge-Kutta Clássico   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-4-2"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-4-3"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-4-4"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-4-5"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-4-6"  
-class="td11">  </td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-28-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-28-5-1"  
-class="td11">Adams-Bashforth ordem 4</td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-5-2"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-5-3"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-5-4"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-5-5"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-28-5-6"  
-class="td11">  </td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-28-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-28-6-1"  
-class="td11">                      </td>
-</tr></table></div></div>
-      </li>
-      <li class="itemize">Calcule o valor produzido por cada um desses método para <img 
-src="main4542x.png" alt="u (1 )  "  class="math" > com passo
-      <img 
-src="main4543x.png" alt="h = 0.1  "  class="math" >, <img 
-src="main4544x.png" alt="h = 0.05  "  class="math" >, <img 
-src="main4545x.png" alt="h = 0.01  "  class="math" >, <img 
-src="main4546x.png" alt="h = 0.005  "  class="math" > e <img 
-src="main4547x.png" alt="h = 0.001  "  class="math" >. Complete a
-      tabela com os valores para o erro absoluto encontrado.
-      <div class="center" 
->
-<!--l. 678--><p class="noindent" >
-<div class="tabular"> <table id="TBL-29" class="tabular" 
-cellspacing="0" cellpadding="0" rules="groups" 
-><colgroup id="TBL-29-1g"><col 
-id="TBL-29-1"></colgroup><colgroup id="TBL-29-2g"><col 
-id="TBL-29-2"></colgroup><colgroup id="TBL-29-3g"><col 
-id="TBL-29-3"></colgroup><colgroup id="TBL-29-4g"><col 
-id="TBL-29-4"></colgroup><colgroup id="TBL-29-5g"><col 
-id="TBL-29-5"></colgroup><colgroup id="TBL-29-6g"><col 
-id="TBL-29-6"></colgroup><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-29-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-29-1-1"  
-class="td11">                     </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-1-2"  
-class="td11">0.1</td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-1-3"  
-class="td11">0.05</td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-1-4"  
-class="td11">0.01</td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-1-5"  
-class="td11">0.005</td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-1-6"  
-class="td11">0.001</td></tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-29-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-29-2-1"  
-class="td11"> Euler </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-2-2"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-2-3"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-2-4"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-2-5"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-2-6"  
-class="td11"></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-29-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-29-3-1"  
-class="td11">    Euler modificado      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-3-2"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-3-3"  
-class="td11">   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-3-4"  
-class="td11">   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-3-5"  
-class="td11">    </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-3-6"  
-class="td11">    </td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-29-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-29-4-1"  
-class="td11">  Runge-Kutta Clássico   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-4-2"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-4-3"  
-class="td11">   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-4-4"  
-class="td11">   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-4-5"  
-class="td11">    </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-4-6"  
-class="td11">    </td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-29-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-29-5-1"  
-class="td11">Adams-Bashforth ordem 4</td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-5-2"  
-class="td11">  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-5-3"  
-class="td11">   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-5-4"  
-class="td11">   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-5-5"  
-class="td11">    </td><td  style="white-space:nowrap; text-align:center;" id="TBL-29-5-6"  
-class="td11">    </td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-29-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-29-6-1"  
-class="td11">                      </td>
-</tr></table></div></div>
-      </li></ul>
-   </div>
-<!--l. 699--><p class="noindent" >
-   <div class="proof">
-<!--l. 699--><p class="indent" >   <span class="head">
-                                                                          
-
-                                                                          
+src="main4231x.png" alt="|--|---------------------|---------------|----------------|
+|t |       Exato         |Euler  h =  0,1 |Euler  h = 0,01 |
+|--|---------------------|---------------|----------------|
+|0 |          1          |       1       |       1        |
+|--|---------------------|---------------|----------------|
+|1 |  2e&minus;1 &asymp; 0,7357589   |   0,6973569    |   0,7320647    |
+|--|---------------------|---------------|----------------|
+|2-|2e&minus;2-+-1-&asymp;-1,2706706-|---1,2431533----|---1,2679593----|
+|  |  &minus;3                 |               |                |
+|3-|2e---+-2-&asymp;-2,0995741-----2,0847823--------2,0980818-----
+|  |
+" class="math-display" ></center></td></tr></table>
+<!--l. 159--><p class="nopar" >
+<!--l. 161--><p class="indent" >   No exemplo <a 
+href="#x94-150022r4">10.1.4<!--tex4ht:ref: sys_edo --></a>, mostramos como o Método de Euler pode ser
+facilmente estendido para problemas envolvendo sistemas de equações
+diferenciais.<a 
+ id="dx94-150021"></a>.
+   <div class="newtheorem">
+<!--l. 162--><p class="noindent" ><span class="head">
+<a 
+ id="x94-150022r4"></a>
 <span 
-class="ec-lmbx-12">Resposta.</span> </span>
-<div class="center" 
->
-<!--l. 701--><p class="noindent" >
-<div class="tabular"> <table id="TBL-30" class="tabular" 
-cellspacing="0" cellpadding="0" rules="groups" 
-><colgroup id="TBL-30-1g"><col 
-id="TBL-30-1"></colgroup><colgroup id="TBL-30-2g"><col 
-id="TBL-30-2"></colgroup><colgroup id="TBL-30-3g"><col 
-id="TBL-30-3"></colgroup><colgroup id="TBL-30-4g"><col 
-id="TBL-30-4"></colgroup><colgroup id="TBL-30-5g"><col 
-id="TBL-30-5"></colgroup><colgroup id="TBL-30-6g"><col 
-id="TBL-30-6"></colgroup><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-30-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-30-1-1"  
-class="td11">                          </td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-1-2"  
-class="td11">   <span 
-class="ec-lmr-6">0.5    </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-1-3"  
-class="td11">   <span 
-class="ec-lmr-6">1.0    </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-1-4"  
-class="td11">   <span 
-class="ec-lmr-6">1.5    </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-1-5"  
-class="td11">   <span 
-class="ec-lmr-6">2.0    </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-1-6"  
-class="td11">   <span 
-class="ec-lmr-6">2.5    </span></td></tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-30-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-30-2-1"  
-class="td11"> <span 
-class="ec-lmr-6">Anal</span><span 
-class="ec-lmr-6">ítico </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-2-2"  
-class="td11"><span 
-class="ec-lmr-6">0.3032653</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-2-3"  
-class="td11"><span 
-class="ec-lmr-6">0.3678794</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-2-4"  
-class="td11"><span 
-class="ec-lmr-6">0.3346952</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-2-5"  
-class="td11"><span 
-class="ec-lmr-6">0.2706706</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-2-6"  
-class="td11"><span 
-class="ec-lmr-6">0.2052125</span></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-30-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-30-3-1"  
-class="td11">           <span 
-class="ec-lmr-6">Euler             </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-3-2"  
-class="td11"><span 
-class="ec-lmr-6">0.3315955</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-3-3"  
-class="td11"><span 
-class="ec-lmr-6">0.3969266</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-3-4"  
-class="td11"><span 
-class="ec-lmr-6">0.3563684</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-3-5"  
-class="td11"><span 
-class="ec-lmr-6">0.2844209</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-3-6"  
-class="td11"><span 
-class="ec-lmr-6">0.2128243</span></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-30-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-30-4-1"  
-class="td11">     <span 
-class="ec-lmr-6">Euler modificado      </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-4-2"  
-class="td11"><span 
-class="ec-lmr-6">0.3025634</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-4-3"  
-class="td11"><span 
-class="ec-lmr-6">0.3671929</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-4-4"  
-class="td11"><span 
-class="ec-lmr-6">0.3342207</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-4-5"  
-class="td11"><span 
-class="ec-lmr-6">0.2704083</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-4-6"  
-class="td11"><span 
-class="ec-lmr-6">0.2051058</span></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-30-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-30-5-1"  
-class="td11">  <span 
-class="ec-lmr-6">Runge-Kutta Cl</span><span 
-class="ec-lmr-6">ássico   </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-5-2"  
-class="td11"><span 
-class="ec-lmr-6">0.3032649</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-5-3"  
-class="td11"><span 
-class="ec-lmr-6">0.3678790</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-5-4"  
-class="td11"><span 
-class="ec-lmr-6">0.3346949</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-5-5"  
-class="td11"><span 
-class="ec-lmr-6">0.2706703</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-5-6"  
-class="td11"><span 
-class="ec-lmr-6">0.2052124</span></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-30-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-30-6-1"  
-class="td11"><span 
-class="ec-lmr-6">Adams-Bashforth ordem 4</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-6-2"  
-class="td11"><span 
-class="ec-lmr-6">0.3032421</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-6-3"  
-class="td11"><span 
-class="ec-lmr-6">0.3678319</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-6-4"  
-class="td11"><span 
-class="ec-lmr-6">0.3346486</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-6-5"  
-class="td11"><span 
-class="ec-lmr-6">0.2706329</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-30-6-6"  
-class="td11"><span 
-class="ec-lmr-6">0.2051848</span></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-30-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-30-7-1"  
-class="td11">                          </td></tr></table></div></div>
-<div class="center" 
->
-<!--l. 720--><p class="noindent" >
-<div class="tabular"> <table id="TBL-31" class="tabular" 
-cellspacing="0" cellpadding="0" rules="groups" 
-><colgroup id="TBL-31-1g"><col 
-id="TBL-31-1"></colgroup><colgroup id="TBL-31-2g"><col 
-id="TBL-31-2"></colgroup><colgroup id="TBL-31-3g"><col 
-id="TBL-31-3"></colgroup><colgroup id="TBL-31-4g"><col 
-id="TBL-31-4"></colgroup><colgroup id="TBL-31-5g"><col 
-id="TBL-31-5"></colgroup><colgroup id="TBL-31-6g"><col 
-id="TBL-31-6"></colgroup><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-31-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-31-1-1"  
-class="td11">                          </td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-1-2"  
-class="td11">  <span 
-class="ec-lmr-6">0.5   </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-1-3"  
-class="td11">  <span 
-class="ec-lmr-6">1.0   </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-1-4"  
-class="td11">  <span 
-class="ec-lmr-6">1.5   </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-1-5"  
-class="td11">  <span 
-class="ec-lmr-6">2.0   </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-1-6"  
-class="td11">  <span 
-class="ec-lmr-6">2.5   </span></td></tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-31-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-31-2-1"  
-class="td11"> <span 
-class="ec-lmr-6">Euler </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-2-2"  
-class="td11"><span 
-class="ec-lmr-6">2.8D-02</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-2-3"  
-class="td11"><span 
-class="ec-lmr-6">2.9D-02</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-2-4"  
-class="td11"><span 
-class="ec-lmr-6">2.2D-02</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-2-5"  
-class="td11"><span 
-class="ec-lmr-6">1.4D-02</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-2-6"  
-class="td11"><span 
-class="ec-lmr-6">7.6D-03</span></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-31-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-31-3-1"  
-class="td11">     <span 
-class="ec-lmr-6">Euler modificado      </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-3-2"  
-class="td11"><span 
-class="ec-lmr-6">7.0D-04</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-3-3"  
-class="td11"><span 
-class="ec-lmr-6">6.9D-04</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-3-4"  
-class="td11"><span 
-class="ec-lmr-6">4.7D-04</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-3-5"  
-class="td11"><span 
-class="ec-lmr-6">2.6D-04</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-3-6"  
-class="td11"><span 
-class="ec-lmr-6">1.1D-04</span></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-31-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-31-4-1"  
-class="td11">  <span 
-class="ec-lmr-6">Runge-Kutta Cl</span><span 
-class="ec-lmr-6">ássico   </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-4-2"  
-class="td11"><span 
-class="ec-lmr-6">4.6D-07</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-4-3"  
-class="td11"><span 
-class="ec-lmr-6">4.7D-07</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-4-4"  
-class="td11"><span 
-class="ec-lmr-6">3.5D-07</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-4-5"  
-class="td11"><span 
-class="ec-lmr-6">2.2D-07</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-4-6"  
-class="td11"><span 
-class="ec-lmr-6">1.2D-07</span></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-31-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-31-5-1"  
-class="td11"><span 
-class="ec-lmr-6">Adams-Bashforth ordem 4</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-5-2"  
-class="td11"><span 
-class="ec-lmr-6">2.3D-05</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-5-3"  
-class="td11"><span 
-class="ec-lmr-6">4.8D-05</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-5-4"  
-class="td11"><span 
-class="ec-lmr-6">4.7D-05</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-5-5"  
-class="td11"><span 
-class="ec-lmr-6">3.8D-05</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-31-5-6"  
-class="td11"><span 
-class="ec-lmr-6">2.8D-05</span></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-31-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-31-6-1"  
-class="td11">                          </td></tr></table></div></div>
-<div class="center" 
->
-<!--l. 736--><p class="noindent" >
-<div class="tabular"> <table id="TBL-32" class="tabular" 
-cellspacing="0" cellpadding="0" rules="groups" 
-><colgroup id="TBL-32-1g"><col 
-id="TBL-32-1"></colgroup><colgroup id="TBL-32-2g"><col 
-id="TBL-32-2"></colgroup><colgroup id="TBL-32-3g"><col 
-id="TBL-32-3"></colgroup><colgroup id="TBL-32-4g"><col 
-id="TBL-32-4"></colgroup><colgroup id="TBL-32-5g"><col 
-id="TBL-32-5"></colgroup><colgroup id="TBL-32-6g"><col 
-id="TBL-32-6"></colgroup><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-32-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-32-1-1"  
-class="td11">                          </td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-1-2"  
-class="td11">  <span 
-class="ec-lmr-6">0.1   </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-1-3"  
-class="td11">  <span 
-class="ec-lmr-6">0.05  </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-1-4"  
-class="td11">  <span 
-class="ec-lmr-6">0.01  </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-1-5"  
-class="td11"> <span 
-class="ec-lmr-6">0.005  </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-1-6"  
-class="td11"> <span 
-class="ec-lmr-6">0.001  </span></td></tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-32-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-32-2-1"  
-class="td11"> <span 
-class="ec-lmr-6">Euler </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-2-2"  
-class="td11"><span 
-class="ec-lmr-6">2.9D-02</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-2-3"  
-class="td11"><span 
-class="ec-lmr-6">5.6D-03</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-2-4"  
-class="td11"><span 
-class="ec-lmr-6">2.8D-03</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-2-5"  
-class="td11"><span 
-class="ec-lmr-6">5.5D-04</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-2-6"  
-class="td11"><span 
-class="ec-lmr-6">2.8D-04</span></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-32-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-32-3-1"  
-class="td11">     <span 
-class="ec-lmr-6">Euler modificado      </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-3-2"  
-class="td11"><span 
-class="ec-lmr-6">6.9D-04</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-3-3"  
-class="td11"><span 
-class="ec-lmr-6">2.5D-05</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-3-4"  
-class="td11"><span 
-class="ec-lmr-6">6.2D-06</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-3-5"  
-class="td11"><span 
-class="ec-lmr-6">2.5D-07</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-3-6"  
-class="td11"><span 
-class="ec-lmr-6">6.1D-08</span></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-32-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-32-4-1"  
-class="td11">  <span 
-class="ec-lmr-6">Runge-Kutta Cl</span><span 
-class="ec-lmr-6">ássico   </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-4-2"  
-class="td11"><span 
-class="ec-lmr-6">4.7D-07</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-4-3"  
-class="td11"><span 
-class="ec-lmr-6">6.9D-10</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-4-4"  
-class="td11"><span 
-class="ec-lmr-6">4.3D-11</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-4-5"  
-class="td11"><span 
-class="ec-lmr-6">6.8D-14</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-4-6"  
-class="td11"><span 
-class="ec-lmr-6">4.4D-15</span></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-32-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-32-5-1"  
-class="td11"><span 
-class="ec-lmr-6">Adams-Bashforth ordem 4</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-5-2"  
-class="td11"><span 
-class="ec-lmr-6">4.8D-05</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-5-3"  
-class="td11"><span 
-class="ec-lmr-6">9.0D-08</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-5-4"  
-class="td11"><span 
-class="ec-lmr-6">5.7D-09</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-5-5"  
-class="td11"><span 
-class="ec-lmr-6">9.2D-12</span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-32-5-6"  
-class="td11"><span 
-class="ec-lmr-6">5.8D-13</span></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-32-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-32-6-1"  
-class="td11">                          </td></tr></table></div></div>
-                                                                       <img 
-src="main4548x.png" alt="&#x2662; "  class="math" >
+class="ec-lmbx-12">Exemplo 10.1.4.</span>  </span> Escreva o processo iterativo de Euler para resolver
+numericamente o seguinte sistema de equações diferenciais <div class="eqnarray">
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main4232x.png" alt="   &prime;
+  x   =  &minus; y
+  y&prime;  =  x
+
+x(0)  =  1
+y(0)  =  0,
+" class="math-display" ></center>
+</div>cuja solução exata é <img 
+src="main4233x.png" alt="x(t) = cos(t)  "  class="math" > e <img 
+src="main4234x.png" alt="y (t) = sin(t)  "  class="math" >.
    </div>
+<!--l. 171--><p class="indent" >   Para aplicar o Método de Euler a um sistema, devemos encarar as diversas
+incógnitas do sistema como formando um vetor, neste caso, escrevemos:
+   <center class="math-display" >
+<img 
+src="main4235x.png" alt="       &lfloor;      &rfloor;
+
+z(t) = |&lceil; x(t) |&rceil;.
+         y(t)  " class="math-display" ></center> O
+sistema é igualmente escrito na forma vetorial: <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main4236x.png" alt="&lfloor;   (k+1) &rfloor;   &lfloor;   (k) &rfloor;    &lfloor;     (k) &rfloor;
+| x      | = | x    | + h|  &minus; y   | .
+&lceil; y (k+1) &rceil;   &lceil; y (k) &rceil;    &lceil;   x(k)  &rceil;
+" class="math-display" ></center>
+</div>Observe que este processo iterativo é equivalente a: <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main4237x.png" alt="x(k+1 ) =   x(k) &minus; hy (k)
+ (k+1 )      (k)      (k)
+y      =   y   + hx   .
+" class="math-display" ></center>
+</div>
+   <div class="newtheorem">
+<!--l. 183--><p class="noindent" ><span class="head">
+<a 
+ id="x94-150026r5"></a>
+<span 
+class="ec-lmbx-12">Exemplo 10.1.5.</span>  </span>Escreva o problema de valor inicial de segunda ordem dado por
+<div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main4238x.png" alt=" &prime;&prime;    &prime;
+y  + y + y  =   cos(t),
+      y (0 ) =   1,
+      y&prime;(0 ) =   0,
+" class="math-display" ></center>
+</div>como um problema envolvendo um sistema de primeira ordem.
+   </div>
+<!--l. 191--><p class="indent" >   A fim de transformar a equação diferencial dada em um sistema de equações
+de primeira ordem, introduzimos a substituição <img 
+src="main4239x.png" alt="w  = y&prime;  "  class="math" >, de forma que obteremos
+o sistema: <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main4240x.png" alt="    &prime;
+   y   =  w
+  w &prime;  =  &minus; w &minus; y + cos(t)
+
+ y(0)  =  1
+w (0)  =  0
+" class="math-display" ></center>
+</div>Portanto, o Método de Euler produz o seguinte processo iterativo: <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main4241x.png" alt="  (k+1)       (k)      (k)
+ y      =   y   + hw   ,
+w (k+1)  =   w(k) &minus; hw (k) &minus; hy (k) + hcos(t(k)),
+   y(1)  =   1,
+    (1)
+  w     =   0.
+" class="math-display" ></center>
+</div>
                                                                           
 
                                                                           
-                                                                          
-
-                                                                          
-   <!--l. 66--><div class="crosslinks"><p class="noindent"><a 
+   <!--l. 205--><div class="crosslinks"><p class="noindent"><a 
 href="# "  >Índice</a></p></div>
-<!--l. 66--><p class="indent" >   <a 
+<!--l. 205--><p class="indent" >   <a 
  id="tailmainse46.html"></a>  
 <div class="panel panel-default">
 	    <div class="panel-body">

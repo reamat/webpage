@@ -11,7 +11,10 @@
 <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700'
 	rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="./bootstrap-3.3.5-dist/css/bootstrap.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 <link href="index.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 
@@ -32,59 +35,70 @@
 		ga('send', 'pageview');
 	</script>
 
-	<div class="conteudo">
-		<div class="row">
-			<div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+<div class="row">
+	<div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
 
-				<div class="navbar navbar-default">
-					<div class="container-fluid">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html">Projeto</a></li>
-							<li><a href="./book_in_webpage/main.html">Livro</a></li>
-							<li><a href="colabore.html">Colabore</a></li>
-							<li><a
-								href="https://github.com/livroscolaborativos/CalculoNumerico"
-								target="_blank">Repositório</a></li>
-							<li><a href="organizadores.html">Organizadores</a></li>
-							<li><a href="derivados.html">Trabalhos Derivados</a></li>
-						</ul>
-					</div>
-				</div>
+	<nav class="navbar navbar-default">
+  		<div class="container-fluid">
+   	 <!-- Brand and toggle get grouped for better mobile display -->
+    	<div class="navbar-header">
+    		<a class="navbar-brand" href="index.html">Cálculo Numérico<br>Um Livro Colaborativo</a>
+    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+       	<span class="sr-only">Toggle navigation</span>
+       	<span class="icon-bar"></span>
+       	<span class="icon-bar"></span>
+      	<span class="icon-bar"></span>
+   	 </button>
+	  </div>
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+			<li class="active"><a href="index.html">Projeto</a></li>
+			<li><a href="./book_in_webpage/main.html">Livro</a></li>
+			<li><a href="colabore.html">Colabore</a></li>
+			<li><a
+				href="https://github.com/livroscolaborativos/CalculoNumerico"
+				target="_blank">Repositório</a></li>
+			<li><a href="organizadores.html">Organizadores</a></li>
+			<li><a href="derivados.html">Trabalhos Derivados</a></li>
+      </ul>
+    	</div><!-- /.navbar-collapse -->
+  		</div><!-- /.container-fluid -->
+	</nav>
 
-				<!-- A imagem de fundo do "jumbotron" foi obtida de woodleywonderworks
+<!-- A imagem de fundo do "jumbotron" foi obtida de woodleywonderworks
 e disponível no link https://www.flickr.com/photos/wwworks/5063710551/-->
-				<div class="imagem">
-					<div class="container-fluid">
+	<div class="imagem">
+		<div class="container-fluid">
 
 						<div class="jumbotron jumbotron-fluid">
 							<h1>Cálculo Numérico</h1>
 							<h2>Um Livro Colaborativo</h2>
 						</div>
-
-						<p style="text-align: right">
+						<p>
 							Imagem: <a
 								href="https://www.flickr.com/photos/wwworks/5063710551/"
 								target="_blank"> woodleywonderworks</a>
 						</p>
-					</div>
-				</div>
+		</div>
+	</div>
 
-
-				<!--presentation-->
-				<div class="presentation">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-6">
-								<h3>Sobre</h3>
-								<p>
-									<a href="./book_in_webpage/main.html"><strong>Cálculo Numérico 
-									- Um Livro Colaborativo</strong></a> é um
+				
+	<!--presentation-->
+	<div class="presentation">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6">
+					<h3>Sobre</h3>
+						<p>
+						<a href="./book_in_webpage/main.html"><strong>Cálculo Numérico 
+						- Um Livro Colaborativo</strong></a> é um
 									projeto de escrita colaborativa de material didático sobre
 									métodos numéricos em nível de um curso de graduação nas áreas
 									das ciências exatas e da terra.
-								</p>
-								<p>Nosso objetivo é de produzir um material de excelente
+						</p>
+						<p>Nosso objetivo é de produzir um material de excelente
 									qualidade e de acesso livre pela colaboração entre professores
 									e alunos de universidades, institutos de educação e demais
 									interessados na análise, estudo e aplicação de métodos
@@ -92,38 +106,38 @@ e disponível no link https://www.flickr.com/photos/wwworks/5063710551/-->
 								O sucesso do projeto depende da colaboração! Edite você mesmo o
 								livro, dê sugestões ou nos avise de erros e imprecisões. Toda a
 								colaboração é bem vinda. Veja mais <a href="colabore.html">aqui</a>.
-								<p>
-								<p>
-									Nós preparamos uma série de ações para ajudá-lo a participar.
-									Em primeiro lugar, o acesso irrestrito ao livro pode se dar
-									através deste sítio de internet. Disponibilizamos o livro na
-									versão original em <a
-										href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
-										target="_blank">PDF</a> e versões adaptadas em <a
-										href="./book_in_webpage/main.html">HTML*</a>, <a
-										href="./book_in_webpage/main.epub"
-										target="_blank">EPUB*</a> e <a
-										href="./book_in_webpage/slide.pdf"
-										target="_blank">slides*</a>. Além disso, o livro está escrito
-										em código <strong>LaTeX</strong> disponível em <a
-										href="https://github.com/livroscolaborativos/CalculoNumerico"
-										target="_blank">repositório GitHub</a> público.
-								</p>
-								<p>
-									Nada disso estaria completo sem uma licença apropriada à
-									colaboração. Por isso, escolhemos disponilizar o material do
-									livro sob licença <a
-										href="https://creativecommons.org/licenses/by-sa/3.0/"
-										target="_blank"> Creative Commons
-										Atribuição-CompartilhaIgual 3.0 Não Adaptada (<strong>CC-BY-SA
-											3.0</strong>)
-									</a>. Ou seja, você pode <strong>copiar</strong>, <strong>redistribuir</strong>,
-									<strong>alterar</strong> e construir um novo material para
-									qualquer uso, inclusive comercial. Leia a <a
-										href="https://creativecommons.org/licenses/by-sa/3.0/"
-										target="_blank">licença</a> para maiores informações.
-								</p>
-							</div>
+						</p>
+						<p>
+						Nós preparamos uma série de ações para ajudá-lo a participar.
+						Em primeiro lugar, o acesso irrestrito ao livro pode se dar
+						através deste sítio de internet. Disponibilizamos o livro na
+						versão original em <a
+						href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
+						target="_blank">PDF</a> e versões adaptadas em <a
+						href="./book_in_webpage/main.html">HTML*</a>, <a
+						href="./book_in_webpage/main.epub"
+						target="_blank">EPUB*</a> e <a
+						href="./book_in_webpage/slide.pdf"
+						target="_blank">slides*</a>. Além disso, o livro está escrito
+						em código <strong>LaTeX</strong> disponível em <a
+						href="https://github.com/livroscolaborativos/CalculoNumerico"
+						target="_blank">repositório GitHub</a> público.
+						</p>
+						<p>
+						Nada disso estaria completo sem uma licença apropriada à
+						colaboração. Por isso, escolhemos disponilizar o material do
+						livro sob licença <a
+						href="https://creativecommons.org/licenses/by-sa/3.0/"
+						target="_blank"> Creative Commons
+						Atribuição-CompartilhaIgual 3.0 Não Adaptada (<strong>CC-BY-SA
+						3.0</strong>)
+						</a>. Ou seja, você pode <strong>copiar</strong>, <strong>redistribuir</strong>,
+						<strong>alterar</strong> e construir um novo material para
+						qualquer uso, inclusive comercial. Leia a <a
+						href="https://creativecommons.org/licenses/by-sa/3.0/"
+						target="_blank">licença</a> para maiores informações.
+						</p>
+					</div>
 							<div class="col-md-6">
 								<h3>Acesse o Livro!</h3>
 								<div class="thumbnail">
@@ -148,17 +162,18 @@ e disponível no link https://www.flickr.com/photos/wwworks/5063710551/-->
 										href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
 										target="_blank">PDF</a> para obter a versão mais atualizada do livro.</p>
 							</div>
-						</div>
-					</div>
 				</div>
+			</div>
+		</div>
 
-				<div class="panel panel-default">
-					<div class="container-fluid">
-						<div class="panel-body">
-							<div class="row">
-								<div class="col-md-3">
-									<ul class="list-unstyled">
-										<li>Livro
+
+		<div class="panel panel-default">
+			<div class="container-fluid">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-3">
+							<ul class="list-unstyled">
+								<li>Livro
 											<ul class="list-unstyled">
 												<li><a
 													href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
@@ -205,24 +220,22 @@ e disponível no link https://www.flickr.com/photos/wwworks/5063710551/-->
 								</div>
 
 							</div>
-						</div>
+					</div>
 						<p style="font-size: small">* Os formatos HTML, EPUB e Slides podem estar desatualizados, veja o formato <a
 							href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
 							target="_blank">PDF</a> para obter a última atualização do livro.
 						</p>
-					</div>
-					<div class="panel-footer">
+				</div>
+				<div class="panel-footer">
 						<div class="container-fluid">
 							<img src="./favicon.ico" alt="UFRGS">UFRGS - IME - Cálculo
 							Numérico - Um Livro Colaborativo. Contato: <a
 								href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a>.
 						</div>
-					</div>
 				</div>
-				
-				
 			</div>
-		</div>
-	</div>
+				
+				
+</div></div>
 </body>
 </html>

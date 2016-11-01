@@ -1,15 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
   "http://www.w3.org/TR/html4/loose.dtd">  
 <html xml:lang="pt" > 
-<head><title>Funções</title> 
+<head><title>Métodos de passo múltiplo - Adams-Bashforth</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-10-30 17:05:00"> 
+<meta name="date" content="2016-11-01 19:26:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Funções'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Métodos de passo múltiplo - Adams-Bashforth'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -37,7 +37,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Cálculo Numérico - Um Livro Colaborativo</a>
+      <a class="navbar-brand" href="#">Cálculo Numérico<br>Um Livro Colaborativo</a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -61,127 +61,73 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-   <!--l. 452--><div class="crosslinks"><p class="noindent"><a 
+   <!--l. 477--><div class="crosslinks"><p class="noindent"><a 
 href="# "  >Índice</a></p></div>
-   <h3 class="sectionHead"><span class="titlemark">A.5   </span> <a 
- id="x100-174000A.5"></a>Funções</h3>
+   <h3 class="sectionHead"><span class="titlemark">10.6   </span> <a 
+ id="x101-16200010.6"></a>Métodos de passo múltiplo - Adams-Bashforth</h3>
 <a 
- id="dx100-174001"></a>
-<!--l. 454--><p class="noindent" >Além das muitas funções já pré-definidas no Scilab, o usuário podemos
-definir nossas próprias funções. Para tanto, existem duas instruções no
-Scilab:
-      <ul class="itemize1">
-      <li class="itemize"><span class="obeylines-h"><span class="verb"><span 
-class="ec-lmtt-12">deff</span></span></span>
-      </li>
-      <li class="itemize"><span class="obeylines-h"><span class="verb"><span 
-class="ec-lmtt-12">function</span></span></span></li></ul>
-<!--l. 460--><p class="indent" >   A instrução <span class="obeylines-h"><span class="verb"><span 
-class="ec-lmtt-12">deff</span></span></span> é apropriada para definirmos funções com poucas
-computações. Quando a função exige um grande quantidade de código para ser
-definida, a melhor opção é usar a instrução <span class="obeylines-h"><span class="verb"><span 
-class="ec-lmtt-12">function</span></span></span>. Veja os seguintes
-exemplos:
+ id="dx101-162001"></a>
+<!--l. 479--><p class="noindent" >O método de Adams-Bashforth consiste de um esquema recursivo do
+tipo:
+   <center class="math-display" >
+<img 
+src="main4397x.png" alt=" (n+1)    (n)  &sum;k       (n&minus;j) (n&minus;j)
+y     = y   +     wjf(y     ,t     )
+              j=0
+" class="math-display" ></center>
    <div class="newtheorem">
-<!--l. 462--><p class="noindent" ><span class="head">
+<!--l. 482--><p class="noindent" ><span class="head">
 <a 
- id="x100-174002r1"></a>
+ id="x101-162002r1"></a>
 <span 
-class="ec-lmbx-12">Exemplo A.5.1.</span>  </span>O seguinte código:
+class="ec-lmbx-12">Exemplo 10.6.1.</span>  </span>Adams-Bashforth de segunda ordem
+   <center class="math-display" >
+<img 
+src="main4398x.png" alt=" (n+1)    (n)  h-[   ( (n) (n))     ( (n&minus;1) (n&minus;1))]
+y      = y   + 2  3f  y   ,t    &minus; f  y     ,t
+" class="math-display" ></center>
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-90">
---&#x003E;deff(&#8217;y&#x00A0;=&#x00A0;f(x)&#8217;,&#x00A0;&#8217;y&#x00A0;=&#x00A0;x&#x00A0;+&#x00A0;sin(x)&#8217;)
-</div>
-<!--l. 466--><p class="nopar" >define, no Scilab, a função <img 
-src="main4568x.png" alt="f(x) = x + sen x  "  class="math" >.
-<!--l. 469--><p class="indent" >   Observe que <img 
-src="main4569x.png" alt="f (&pi;) = &pi;  "  class="math" >. Confirme isso computando:
-                                                                          
-
-                                                                          
-   <div class="verbatim" id="verbatim-91">
---&#x003E;f(%pi)
-</div>
-<!--l. 472--><p class="nopar" >no Scilab.
-<!--l. 475--><p class="indent" >   Alternativamente, definimos a mesma função com o código:
-                                                                          
-
-                                                                          
-   <div class="verbatim" id="verbatim-92">
-function&#x00A0;[y]&#x00A0;=&#x00A0;f(x)
-&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;y&#x00A0;=&#x00A0;x&#x00A0;+&#x00A0;sin(x)
-&#x00A0;<br />endfunction
-</div>
-<!--l. 480--><p class="nopar" >Verifique!
    </div>
    <div class="newtheorem">
-<!--l. 484--><p class="noindent" ><span class="head">
+<!--l. 485--><p class="noindent" ><span class="head">
 <a 
- id="x100-174003r2"></a>
+ id="x101-162003r2"></a>
 <span 
-class="ec-lmbx-12">Exemplo A.5.2.</span>  </span>O seguinte código Scilab:
-                                                                          
-
-                                                                          
-   <div class="verbatim" id="verbatim-93">
-function&#x00A0;[z]&#x00A0;=&#x00A0;h(x,y)
-&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;if&#x00A0;(x&#x00A0;&#x003C;&#x00A0;y)&#x00A0;then
-&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;z&#x00A0;=&#x00A0;y&#x00A0;-&#x00A0;x
-&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;else
-&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;z&#x00A0;=&#x00A0;x&#x00A0;-&#x00A0;y
-&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;end
-&#x00A0;<br />endfunction
-</div>
-<!--l. 494--><p class="nopar" >define a função:
+class="ec-lmbx-12">Exemplo 10.6.2.</span>  </span>Adams-Bashforth de terceira ordem
+   <center class="math-display" >
+<img 
+src="main4399x.png" alt=" (n+1)    (n)   h [    (  (n) (n))       ( (n&minus;1) (n&minus; 1))      ( (n&minus;2) (n&minus;2)) ]
+y     = y   +  ---23f  y   ,t   &minus;  16f  y    ,t      + 5f  y     ,t
+               12
+" class="math-display" ></center>
+   </div>
+   <div class="newtheorem">
+<!--l. 488--><p class="noindent" ><span class="head">
+<a 
+ id="x101-162004r3"></a>
+<span 
+class="ec-lmbx-12">Exemplo 10.6.3.</span>  </span>Adams-Bashforth de quarta ordem
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main4570x.png" alt="         (
-         |{ y &minus; x  ,x &#x003C;  y
-h(x,y) =
-         |( x &minus; y  ,x &ge;  y
+src="main4400x.png" alt=" (n+1)    (n)   h [    (  (n) (n))       ( (n&minus;1) (n&minus; 1))
+y     = y   +  24-55f  y   ,t   &minus;  59f  y    ,t
+            ( (n&minus;2) (n&minus;2))     (  (n&minus; 3)  (n&minus;3))]
+      + 37f  y     ,t      &minus;  9f y     ,t
 " class="math-display" ></center></td></tr></table>
-<!--l. 503--><p class="nopar" >
+<!--l. 494--><p class="nopar" >
    </div>
-   <div class="newtheorem">
-<!--l. 506--><p class="noindent" ><span class="head">
-<a 
- id="x100-174004r3"></a>
-<span 
-class="ec-lmbx-12">Exemplo A.5.3.</span>  </span>O seguinte código:
+<!--l. 496--><p class="indent" >   Os métodos de passo múltiplo evitam os múltiplos estágios do métodos de
+Runge-Kutta, mas exigem ser "iniciados"com suas condições iniciais.
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-94">
-function&#x00A0;[y]&#x00A0;=&#x00A0;J(x)
-&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;y(1,1)&#x00A0;=&#x00A0;2*x(1)
-&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;y(1,2)&#x00A0;=&#x00A0;2*x(2)
-&#x00A0;<br />
-&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;y(2,1)&#x00A0;=&#x00A0;-x(2)*sin(x(1)*x(2))
-&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;y(2,2)&#x00A0;=&#x00A0;-x(1)*sin(x(1)*x(2))
-&#x00A0;<br />endfunction
-</div>
-<!--l. 516--><p class="nopar" >define a matriz jacobiana <img 
-src="main4571x.png" alt="J(x1,x2) := &part;&part;(f(x1,f,x2))-
-              1 2   "  class="math" > da função:
-   <table 
-class="equation-star"><tr><td>
-   <center class="math-display" >
-<img 
-src="main4572x.png" alt="fff (x1,x2 ) = (x2 + x2, cos(x1x2)).
-              1   2
-" class="math-display" ></center></td></tr></table>
-<!--l. 520--><p class="nopar" >
-   </div>
-                                                                          
-
-                                                                          
-   <!--l. 523--><div class="crosslinks"><p class="noindent"><a 
+   <!--l. 498--><div class="crosslinks"><p class="noindent"><a 
 href="# "  >Índice</a></p></div>
-<!--l. 523--><p class="indent" >   <a 
+<!--l. 498--><p class="indent" >   <a 
  id="tailmainse51.html"></a>  
 <div class="panel panel-default">
 	    <div class="panel-body">

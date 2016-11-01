@@ -9,7 +9,10 @@
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="./bootstrap-3.3.5-dist/css/bootstrap.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 <link href="organizadores.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 
@@ -28,21 +31,35 @@
   <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
 
 
-<div class="navbar navbar-default">
- 	<div class="container-fluid">
-   	<div class="navbar-header">
-   		<a class="navbar-brand" href="index.html">Cálculo Numérico - Um Livro Colaborativo</a>
-   	</div>
-   	<ul class="nav navbar-nav">
-   	 	<li><a href="index.html">Projeto</a></li>
-    		<li><a href="./book_in_webpage/main.html">Livro</a></li>
-    		<li><a href="colabore.html">Colabore</a></li>
-    		<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
-    		<li class="active"><a href="organizadores.html">Organizadores</a></li>	
+<nav class="navbar navbar-default">
+  	<div class="container-fluid">
+   		 <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+    		<a class="navbar-brand" href="index.html">Cálculo Numérico<br>Um Livro Colaborativo</a>
+    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+       	<span class="sr-only">Toggle navigation</span>
+       	<span class="icon-bar"></span>
+       	<span class="icon-bar"></span>
+      	<span class="icon-bar"></span>
+   	 </button>
+	  </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+			<li><a href="index.html">Projeto</a></li>
+			<li><a href="./book_in_webpage/main.html">Livro</a></li>
+			<li><a href="colabore.html">Colabore</a></li>
+			<li><a
+				href="https://github.com/livroscolaborativos/CalculoNumerico"
+				target="_blank">Repositório</a></li>
+			<li class="active"><a href="organizadores.html">Organizadores</a></li>
 			<li><a href="derivados.html">Trabalhos Derivados</a></li>
-   	</ul>
-	</div>
-</div>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
 
 <!-- A imagem de fundo do "jumbotron" foi obtida de woodleywonderworks
 e disponível no link https://www.flickr.com/photos/wwworks/5063710551/-->  
@@ -55,7 +72,7 @@ e disponível no link https://www.flickr.com/photos/wwworks/5063710551/-->
     <h3>Organizadores</h3>
 </div>
 
-	<p style="text-align: right">
+	<p>
 		Imagem: <a href="https://www.flickr.com/photos/wwworks/5063710551/" target="_blank">
 	woodleywonderworks</a></p>		
 	</div>
@@ -74,7 +91,7 @@ e disponível no link https://www.flickr.com/photos/wwworks/5063710551/-->
 </div>
 </div>
 
-<div class="panel panel-default" style="margin-top:50px">
+	<div class="panel panel-default" style="margin-top:25px">
 					<div class="container-fluid">
 						<div class="panel-body">
 							<div class="row">

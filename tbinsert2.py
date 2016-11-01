@@ -6,7 +6,7 @@ from os import walk
 import numpy as np
 import string
 
-sdirname = "./tmp/"
+sdirname = "./.tmp/"
 
 lfiles = []
 for (dirpath, dirnames, filenames) in walk (sdirname):
@@ -19,7 +19,7 @@ print("Source files: ", lfiles)
 
 for index, f in enumerate (lfiles):
     print ("Changing %s file." % (f))
-    ifile = open("./tmp/"+f+".html", "r")
+    ifile = open(sdirname + f + ".html", "r")
     ofile = open("./book_in_webpage/"+f+".html", "w")
 
     text = ifile.read()

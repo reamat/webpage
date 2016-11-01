@@ -5,7 +5,13 @@ body{
 
 /*Navigation menu*/
 .nav a{
-    color: #f5f5f5;
+    color: #d6d6d6; /*f5f5f5;*/
+}
+
+.navbar-brand
+{
+	padding-top: 5px;
+	margin-bottom: 5px;
 }
 
 .panel {

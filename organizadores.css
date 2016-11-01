@@ -25,6 +25,9 @@ body{
 .imagem .container-fluid p{
 	margin-top: -30px;
 	text-align: right;
+	font-size: small;
+	margin-right: -15px;
+
 }
 
 .jumbotron h1{
@@ -52,6 +55,12 @@ body{
 .navbar {
 	margin-bottom: 0px;
 	background-color: transparent;
+}
+
+.navbar-brand
+{
+	padding-top: 5px;
+	margin-bottom: 5px;
 }
 
 .lista-organizadores li {
