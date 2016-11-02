@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="pt" > 
+<head><title>Estabilidade</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,3,notoc*,info --> 
+<meta name="src" content="main.tex"> 
+<meta name="date" content="2016-11-02 17:38:00"> 
+<link rel="stylesheet" type="text/css" href="main.css"> 
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Estabilidade'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="new_main.css"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61232881-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<div class="row">
+  <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+			<li class="active"><a href="main.html">Sumário</a></li>
+			<li><a href="../index.html">Projeto</a></li>
+			<li><a href="../colabore.html">Colabore</a></li>
+			<li><a
+				href="https://github.com/livroscolaborativos/CalculoNumerico"
+				target="_blank">Repositório</a></li>
+			<li><a href="../organizadores.html">Organizadores</a></li>
+			<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+   <!--l. 514-->
+   <h3 class="sectionHead"><span class="titlemark">10.8   </span> <a 
+ id="x103-16400010.8"></a>Estabilidade</h3>
+<a 
+ id="dx103-164001"></a>
+<!--l. 516--><p class="noindent" >Consideremos o seguinte problema de teste:
+   <center class="math-display" >
+<img 
+src="main4408x.png" alt="(
+|{    y&prime;  =  &minus; &alpha;y
+
+|(  y(0)  =  1  " class="math-display" ></center>
+cuja solução exata é dada por <img 
+src="main4409x.png" alt="y(t) = e&minus; &alpha;t  "  class="math" >.
+<!--l. 520--><p class="indent" >   Considere agora o método de Euler aplicado a este problema com passa
+<img 
+src="main4410x.png" alt="h  "  class="math" >:
+   <center class="math-display" >
+<img 
+src="main4411x.png" alt="(
+|{  y(k+1) =   y(k) &minus; &alpha;hy (k)
+
+|(    y(1) =   1  " class="math-display" ></center> A
+solução exata do esquema de Euler é dada por
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main4412x.png" alt=" (k+1)           k
+y     =  (1 &minus; &alpha;h )  " class="math-display" ></center> e,
+portanto,
+   <center class="math-display" >
+<img 
+src="main4413x.png" alt="&#x02DC;y(t) = y(k+1) = (1 &minus; &alpha;h )t&#x2215;h
+" class="math-display" ></center>
+<!--l. 527--><p class="indent" >   Fixamos um <img 
+src="main4414x.png" alt="&alpha; &#x003E; 0  "  class="math" >, de forma que <img 
+src="main4415x.png" alt="y(t) &rarr; 0  "  class="math" >. Mas observamos que
+<img 
+src="main4416x.png" alt="&#x02DC;y(t) &rarr;  0  "  class="math" > somente quando <img 
+src="main4417x.png" alt="|1 &minus; &alpha;h | &#x003C; 1  "  class="math" > e solução positivas somente quando
+<img 
+src="main4418x.png" alt="&alpha;h  &#x003C; 1  "  class="math" >.
+<!--l. 529--><p class="indent" >   <span 
+class="ec-lmbx-12">Conclus</span><span 
+class="ec-lmbx-12">ão: </span>Se o passo <img 
+src="main4419x.png" alt="h  "  class="math" > for muito grande, o método pode se tornar
+instável, produzindo solução espúrias.
+                                                                          
+
+                                                                          
+   <!--l. 531-->
+
+<p><a href=main.html#mainse53.html><br>Retorne ao Sumário<br></a></p>
+
+
+<!--l. 531--><p class="indent" >   <a 
+ id="tailmainse53.html"></a>  
+<div class="panel panel-default">
+	    <div class="panel-body">
+	    	<div class="row">
+	    	<div class="col-md-3">
+   	   <ul class="list-unstyled">
+				<li>Livro
+				<ul class="list-unstyled">
+	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf" target="_blank">Versão PDF</a></li>
+	  				<li><a 	href="main.html">Versão HTML*</a></li>
+	  				<li><a href="main.epub" target="_blank">Versão EPUB*</a></li>		  			       
+	  				<li><a href="slide.pdf" target="_blank">Versão Slides*</a></li>
+	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
+	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
+				</ul>
+      		</li>
+      		</ul>
+      		</div>
+      		<div class="col-md-3">
+      		<ul class="list-unstyled">
+      		<li>Projeto
+				<ul class="list-unstyled">
+	  				<li><a href="../index.html">Página Inicial</a></li>
+	  				<li><a href="../colabore.html">Colabore</a></li>
+	  				<li><a href="../organizadores.html">Organizadores</a></li>
+	  				<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+				</ul>
+      		</li>
+    			</ul>
+    			</div>
+	     		<div class="col-md-3">
+      		<ul class="list-unstyled">
+      		<li>IME - UFRGS
+				<ul class="list-unstyled">
+	  				<li><a href="http://www.ufrgs.br/mat" target="_blank">Página do IME</a></li>
+	  				<li><a href="http://www.ufrgs.br" target="_blank">Página da UFRGS</a></li>
+				</ul>
+      		</li>
+    			</ul>
+    			</div>
+  			</div>
+  			<p style="font-size: small;">* Os formatos HTML, EPUB e Slides podem estar desatualizados. Para ver a última atualização,
+  			veja o formato principal <a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf" target="_blank">PDF</a>.
+ 
+     </div>
+     <div class="panel-footer">
+	 <div class="row">
+				<img src="../favicon.ico" alt="UFRGS"> UFRGS - IME - Cálculo Numérico - Um Livro Colaborativo. 
+				Contato: <a href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a>.
+      </div>
+      </div>
+</div>
+
+</div></div>
+
+</body>
+</html>
+ 

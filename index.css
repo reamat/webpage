@@ -1,5 +1,6 @@
 body{
     font-family: 'Open Sans', sans-serif;
+    max-width: 100%;
 }
 
 /*Jumbotron 	#https://www.flickr.com/photos/wwworks/5063710551/ */	
@@ -16,35 +17,51 @@ body{
    margin-top: 10px;
    margin-left: -15px;
    margin-right: -15px;
+   
+   font-weight: 700;
 }
 
+
+
 .imagem .container-fluid{
-	margin: 0px;	
+	margin: 0px;
 }
 
 .imagem .container-fluid p{
 	margin-top: -30px;
 	text-align: right;
+	font-size: small;
+	margin-right: -15px;
 }
+
 
 .jumbotron h1{
 	display: block;
 	background-color: #ffffff;
-	opacity: 0.6;
+	opacity: 0.65;
 	text-align: center;
+	font-weight: 700;
 }
 
-.jumbotron h2{
+.jumbotron h3{
 	display: block;
 	background-color: #ffffff;
-	opacity: 0.6;
+	opacity: 0.65;
 	text-align: center;
+	font-weight: 700;
 }
 
 .navbar {
 	background-color: transparent;
 	margin: 0px;
 }
+
+.navbar-brand
+{
+	padding-top: 5px;
+	margin-bottom: 5px;
+}
+
 
 .presentation .thumbnail{
 	width: 50%;

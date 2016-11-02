@@ -15,7 +15,8 @@ from os import walk
 import numpy as np
 import string
 
-ofile = open("sitemap.txt", "w")
+ofile1 = open("sitemap.txt", "w")
+ofile2 = open("./book_in_webpage/sitemap.txt", "w")
 
 #find and get all html
 htmlFiles = []
@@ -23,15 +24,16 @@ for (dirpath, dirnames, filenames) in walk ("."):
     for filename in filenames:
         ext = os.path.splitext(filename)[1]
         if (ext == ".html"):
-            ofile.write("http://www.ufrgs.br/numerico/"+filename+"\n")
+            ofile1.write("https://www.ufrgs.br/numerico/"+filename+"\n")
     break
 for (dirpath, dirnames, filenames) in walk ("./book_in_webpage"):
     for filename in filenames:
         ext = os.path.splitext(filename)[1]
         if (ext == ".html"):
-            ofile.write("http://www.ufrgs.br/numerico/book_in_webpage/"+filename+"\n")
+            ofile1.write("https://www.ufrgs.br/numerico/book_in_webpage"+filename+"\n")
+            ofile2.write("https://www.ufrgs.br/numerico/book_in_webpage/"+filename+"\n")
     break
-ofile.close()
+ofile2.close()
     
 
 

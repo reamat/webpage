@@ -10,6 +10,9 @@
 <link href="http://fonts.googleapis.com/css?family=Open Sans:400,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="./bootstrap-3.3.5-dist/css/bootstrap.css">
 <link href="colabore.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 
@@ -26,21 +29,35 @@
 
 <div class="row">
   <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
-<div class="navbar navbar-default">
- 	<div class="container-fluid">
-   	<div class="navbar-header">
-   		<a class="navbar-brand" href="index.html">Cálculo Numérico - Um Livro Colaborativo</a>
-   	</div>
-   	<ul class="nav navbar-nav">
-   	 	<li><a href="index.html">Projeto</a></li>
-    		<li><a href="./book_in_webpage/main.html">Livro</a></li>
-    		<li class="active"><a href="colabore.html">Colabore</a></li>
-    		<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
-    		<li><a href="organizadores.html">Organizadores</a></li>	
+  
+  <nav class="navbar navbar-default">
+  	<div class="container-fluid">
+   		 <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+    		<a class="navbar-brand" href="index.html">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
+    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+       	<span class="sr-only">Toggle navigation</span>
+       	<span class="icon-bar"></span>
+       	<span class="icon-bar"></span>
+      	<span class="icon-bar"></span>
+   	 </button>
+	  </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+			<li><a href="index.html">Projeto</a></li>
+			<li><a href="./book_in_webpage/main.html">Livro</a></li>
+			<li class="active"><a href="colabore.html">Colabore</a></li>
+			<li><a
+				href="https://github.com/livroscolaborativos/CalculoNumerico"
+				target="_blank">Repositório</a></li>
+			<li><a href="organizadores.html">Organizadores</a></li>
 			<li><a href="derivados.html">Trabalhos Derivados</a></li>
-   	</ul>
-	</div>
-</div>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 <!-- A imagem de fundo do "jumbotron" foi obtida de woodleywonderworks
 e disponível no link https://www.flickr.com/photos/wwworks/5063710551/-->  
@@ -49,11 +66,11 @@ e disponível no link https://www.flickr.com/photos/wwworks/5063710551/-->
 
 <div class="jumbotron jumbotron-fluid">
     <h1>Cálculo Numérico</h1>
-    <h2>Um Livro Colaborativo</h2>
+    <h3>Um Livro Colaborativo</h3>
     <h3>Colabore</h3>
 </div>
 
-	<p style="text-align: right">
+	<p>
 		Imagem: <a href="https://www.flickr.com/photos/wwworks/5063710551/" target="_blank">
 	woodleywonderworks</a></p>		
 	</div>
@@ -66,15 +83,15 @@ uma nova figura, uma nova seção ou um novo capítulo.</h4>
 <h2>Obtenha a sua versão</h2>
 <p>O código <a href="http://www.latex-project.org/" target="_blank">LaTeX</a>
 do livro está disponível no repositório GitHub:</p> 
-<p><a href="https://github.com/livroscolaborativos/CalculoNumerico">
-https://github.com/livroscolaborativos/CalculoNumerico</a></p>
+<p style="text-align: center;"><a href="https://github.com/livroscolaborativos/CalculoNumerico">
+Repositório Oficial do Projeto</a></p>
 <p>No <a href="https://github.com/">GitHub</a> você pode fazer sua própria cópia
 do repositório, editá-la e, então, sugerir que sua cópia seja 
 incorporada a versão oficial do projeto.</p>
 <p>Nunca usou o GitHub, mas quer colaborar com o livro? Nós podemos ajudar! Escreva 
 para nossa lista de emails:
-<a href="https://groups.google.com/forum/#!forum/livro_colaborativo">
-https://groups.google.com/forum/#!forum/livro_colaborativo</a>
+<p style="text-align: center;"><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">
+livro_colaborativo@googlegroups.com</a></p>
 </p>
 <p>Nós adoraríamos saber sobre aplicações e derivações do livro que você venha a fazer.
 A licença CC-BY-SA 3.0 não lhe obriga a nos informar, mas caso tenha interesse de ter seu
@@ -82,7 +99,7 @@ trabalho divulgado na nossa lista de <a href="derivados.html">trabalhos derivado
 em contato conosco pela lista de <a href="https://groups.google.com/forum/#!forum/livro_colaborativo">emails</a>
 ou pelo email:
 </p>
-<a href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a>
+<p style="text-align: center;"><a href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a></p>
 
 <h2>Envie sua colaboração</h2>
 <p>Para requerer que suas contribuições no livro sejam incorporadas a versão oficial,
@@ -104,19 +121,19 @@ que está de acordo que seu material seja colocado sob a licença CC-BY-SA 3.0
 <h2>Outras formas de colaboração</h2>
 <p>Toda a colaração é bem vinda! Caso tenha encontrado algum erro, imprecisão ou tenha alguma 
 sugestão a fazer, escreva para nossa lista de emails:</p>
-<a href="https://groups.google.com/forum/#!forum/livro_colaborativo" target="_blank">
-https://groups.google.com/forum/#!forum/livro_colaborativo</a>
+<p style="text-align: center;"><a href="https://groups.google.com/forum/#!forum/livro_colaborativo" target="_blank">
+livro_colaborativo@googlegroups.com</a></p>
 <p></p>
 <p>Alternativamente, entre em contato pelo email:</p>
-<a href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a>
+<p style="text-align: center;"><a href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a></p>
 
 <h2>Aviso de violação de <i>copyright</i></h2>
 <p>Caso encontre qualquer violação de <i>copyright</i> em qualquer parte do material do livro, por favor,
 nos informe pelo email:</p>
-<a href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a>
+<p style="text-align: center;"><a href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a></p>
 <p>ou pela lista de emails:</p>
-<a href="https://groups.google.com/forum/#!forum/livro_colaborativo">
-https://groups.google.com/forum/#!forum/livro_colaborativo</a>.
+<p style="text-align: center;"><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">
+livro_colaborativo@googlegroups.com</a>.</p>
 <p>Iremos cuidar para analisar seu aviso o mais prontamente possível e removeremos o material que
 não esteja de acordo com a licença CC-BY-SA 3.0.</p>
 

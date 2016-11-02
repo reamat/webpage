@@ -10,6 +10,7 @@
 .lmsy-10{font-size:83%;}
 .lmsy7-{font-size:58%;}
 .lmex-10{font-size:83%;}
+.msbm-10{font-size:83%;}
 .msbm-7{font-size:58%;}
 .ec-lmtt-12{ font-family: monospace;}
 .ec-lmtt-12{ font-family: monospace;}
@@ -277,7 +278,13 @@ body{
 
 /*Navigation menu*/
 .nav a{
-    color: #f5f5f5;
+    color: #d6d6d6; /*f5f5f5;*/
+}
+
+.navbar-brand
+{
+	padding-top: 5px;
+	margin-bottom: 5px;
 }
 
 .panel {
@@ -296,12 +303,7 @@ center img.math-display
 
 .figure .caption
 {
-	margin: 0px;
-	text-align: center;
-}
-
-.figure img.graphics
-{
+	text-indent: 0em;
 	margin: 0px;
 	text-align: center;
 }
@@ -310,4 +312,64 @@ center img.math-display
 {
 	margin: 0px;
 	text-align: center;
+}
+
+.figure img.graphics
+{
+	margin: 0px;
+}
+
+h1
+{
+	font-weight: 700;
+}
+
+h2.titleHead
+{
+	font-size: 400;
+}
+
+h2.chapterHead
+{
+	font-weight: 700;
+}
+
+h2.likechapterHead
+{
+	font-weight: 700;
+}
+
+h2.appendixHead
+{
+	font-weight: 700;
+}
+
+h3.sectionHead
+{
+	font-weight: 700;
+}
+
+h3.likesectionHead
+{
+	font-weight: 700;
+}
+
+h4.subsectionHead
+{
+	font-weight: 700;
+}
+
+h4.likesubsectionHead
+{
+	font-weight: 700;
+}
+
+h5.subsubsectionHead
+{
+	font-weight: 700;
+}
+
+h5.likesubsubsectionHead
+{
+	font-weight: 700;
 }

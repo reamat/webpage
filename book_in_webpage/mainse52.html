@@ -1,20 +1,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
   "http://www.w3.org/TR/html4/loose.dtd">  
 <html xml:lang="pt" > 
-<head><title>Gráficos</title> 
+<head><title>Métodos de passo múltiplo - Adams-Moulton</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-10-30 17:05:00"> 
+<meta name="date" content="2016-11-02 17:38:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Gráficos'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Métodos de passo múltiplo - Adams-Moulton'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="new_main.css"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -26,69 +28,84 @@
 
   ga('create', 'UA-61232881-2', 'auto');
   ga('send', 'pageview');
-
 </script>
 
 <div class="row">
   <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
 
-<div class="navbar navbar-default">
-<div class="container-fluid">
-   	<div class="navbar-header">
-    		<a class="navbar-brand" href="../index.html">Cálculo Numérico - Um Livro Colaborativo</a>
-   	</div>
-   	<ul class="nav navbar-nav">
-    		<li><a href="main.html">Menu Principal</a></li>
-   	 	<li><a href="../index.html">Projeto</a></li>
-    		<li><a href="../colabore.html">Colabore</a></li>
-    		<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
-    		<li><a href="../organizadores.html">Organizadores</a></li>	
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+			<li class="active"><a href="main.html">Sumário</a></li>
+			<li><a href="../index.html">Projeto</a></li>
+			<li><a href="../colabore.html">Colabore</a></li>
+			<li><a
+				href="https://github.com/livroscolaborativos/CalculoNumerico"
+				target="_blank">Repositório</a></li>
+			<li><a href="../organizadores.html">Organizadores</a></li>
 			<li><a href="../derivados.html">Trabalhos Derivados</a></li>
-   	</ul>
-	</div>
-	</div>
-
-   <!--l. 523--><div class="crosslinks"><p class="noindent"><a 
-href="# "  >Índice</a></p></div>
-   <h3 class="sectionHead"><span class="titlemark">A.6   </span> <a 
- id="x101-175000A.6"></a>Gráficos</h3>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+   <!--l. 498-->
+   <h3 class="sectionHead"><span class="titlemark">10.7   </span> <a 
+ id="x102-16300010.7"></a>Métodos de passo múltiplo - Adams-Moulton</h3>
 <a 
- id="dx101-175001"></a>
-<!--l. 525--><p class="noindent" >Para criar um esboço do gráfico de uma função de uma variável real <img 
-src="main4573x.png" alt="y = f (x )  "  class="math" >,
-podemos usar a função <span class="obeylines-h"><span class="verb"><span 
-class="ec-lmtt-12">plot</span></span></span>. Esta função faz uma representação gráfica de
-pontos <img 
-src="main4574x.png" alt="(xi,yi)  "  class="math" > fornecidos. O Scilab oferece uma série de opções para esta função
-de forma que o usuário pode ajustar várias questões de visualização. Consulte
-sobre a função <span class="obeylines-h"><span class="verb"><span 
-class="ec-lmtt-12">plot</span></span></span> no <a 
-href="http://help.scilab.org/docs/5.5.2/pt_BR/index.html" >manual do Scilab</a>.
+ id="dx102-163001"></a>
+<!--l. 500--><p class="noindent" >O método de Adams-Moulton consiste de um esquema recursivo do tipo:
+   <center class="math-display" >
+<img 
+src="main4404x.png" alt="               &sum;k
+y(n+1) = y(n) +     wjf (y(n&minus;j),t(n&minus; j))
+               j=&minus;1
+" class="math-display" ></center>
    <div class="newtheorem">
-<!--l. 527--><p class="noindent" ><span class="head">
+<!--l. 503--><p class="noindent" ><span class="head">
 <a 
- id="x101-175002r1"></a>
+ id="x102-163002r1"></a>
 <span 
-class="ec-lmbx-12">Exemplo A.6.1.</span>  </span>Veja as seguintes linhas de código:
-                                                                          
-
-                                                                          
-   <div class="verbatim" id="verbatim-95">
---&#x003E;deff(&#8217;y&#x00A0;=&#x00A0;f(x)&#8217;,&#8217;y&#x00A0;=&#x00A0;x&#x00A0;.^&#x00A0;3&#x00A0;+&#x00A0;1&#8217;)
-&#x00A0;<br />--&#x003E;x&#x00A0;=&#x00A0;linspace(-2,&#x00A0;2,&#x00A0;100);
-&#x00A0;<br />--&#x003E;plot(x,&#x00A0;f(x));&#x00A0;xgrid
-</div>
-<!--l. 533--><p class="nopar" >
+class="ec-lmbx-12">Exemplo 10.7.1.</span>  </span>Adams-Moulton de quarta ordem
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main4405x.png" alt=" (n+1)    (n)    h [   ( (n+1) (n+1))       ( (n) (n))
+y     =  y   + 24- 9f  y    ,t      + 19f  y   ,t
+            ( (n&minus; 1) (n&minus; 1))     ( (n&minus;2) (n&minus; 2))]
+      &minus;  5f  y    ,t      + f  y    ,t
+" class="math-display" ></center></td></tr></table>
+<!--l. 509--><p class="nopar" >
+   <center class="math-display" >
+<img 
+src="main4406x.png" alt="
+" class="math-display" ></center>
    </div>
+<!--l. 512--><p class="indent" >   O método de Adams-Moulton é implícito, ou seja, exige que a cada passo,
+uma equação em <img 
+src="main4407x.png" alt="y(n+1)   "  class="math" > seja resolvida.
                                                                           
 
                                                                           
-                                                                          
+   <!--l. 514-->
 
-                                                                          
-   <!--l. 1--><div class="crosslinks"><p class="noindent"><a 
-href="# "  >Índice</a></p></div>
-<!--l. 1--><p class="indent" >   <a 
+<p><a href=main.html#mainse52.html><br>Retorne ao Sumário<br></a></p>
+
+
+<!--l. 514--><p class="indent" >   <a 
  id="tailmainse52.html"></a>  
 <div class="panel panel-default">
 	    <div class="panel-body">
