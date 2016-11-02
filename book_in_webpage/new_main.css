@@ -303,12 +303,7 @@ center img.math-display
 
 .figure .caption
 {
-	margin: 0px;
-	text-align: center;
-}
-
-.figure img.graphics
-{
+	text-indent: 0em;
 	margin: 0px;
 	text-align: center;
 }
@@ -317,4 +312,9 @@ center img.math-display
 {
 	margin: 0px;
 	text-align: center;
+}
+
+.figure img.graphics
+{
+	margin: 0px;
 }
