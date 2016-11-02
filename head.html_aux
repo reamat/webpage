@@ -25,7 +25,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Cálculo Numérico<br>Um Livro Colaborativo</a>
+      <a class="navbar-brand" href="#">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>

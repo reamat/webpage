@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-01 23:06:00"> 
+<meta name="date" content="2016-11-02 17:38:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 <meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Problemas de valor inicial'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -37,7 +37,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Cálculo Numérico<br>Um Livro Colaborativo</a>
+      <a class="navbar-brand" href="#">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -49,7 +49,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-			<li class="active"><a href="main.html">Menu do Livro</a></li>
+			<li class="active"><a href="main.html">Sumário</a></li>
 			<li><a href="../index.html">Projeto</a></li>
 			<li><a href="../colabore.html">Colabore</a></li>
 			<li><a
@@ -61,8 +61,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-   <!--l. 6--><div class="crosslinks"><p class="noindent"><a 
-href="main.html# " >Índice</a></p></div>
+   <!--l. 6-->
    <h2 class="chapterHead"><span class="titlemark">Capítulo&#x00A0;10</span><br /><a 
  id="x93-14900010"></a>Problemas de valor inicial</h2>
 <a 
@@ -72,7 +71,7 @@ problemas de valor inical da forma <div class="subequations"><a
  id="x93-1490020"></a> <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4146x.png" alt=" y&prime;(t)  =   f(y(t),t)                           (10.1a)
+src="main4149x.png" alt=" y&prime;(t)  =   f(y(t),t)                           (10.1a)
 
 y (t0)  =   y0 (condição inicial).              (10.1b)
 " class="math-display" ><a 
@@ -93,17 +92,17 @@ class="ec-lmbx-12">Exemplo 10.0.1.</span>  </span>Considere o seguinte problema 
  id="x93-1490050"></a> <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4147x.png" alt="  &prime;
+src="main4150x.png" alt="  &prime;
  y(t)  =  2y (t),                      (10.2a)
 y(t0)  =  1.                          (10.2b)
 " class="math-display" ></center>
 </div>
 </div>
 <!--l. 23--><p class="indent" >   A solução desta equação é dada pela função <img 
-src="main4148x.png" alt="y(t) = e2t  "  class="math" > pois <img 
-src="main4149x.png" alt="y&prime;(t) = 2e2t = 2y(t)  "  class="math" >
+src="main4151x.png" alt="y(t) = e2t  "  class="math" > pois <img 
+src="main4152x.png" alt="y&prime;(t) = 2e2t = 2y(t)  "  class="math" >
 e <img 
-src="main4150x.png" alt="y(0) = e0 = 1  "  class="math" >.
+src="main4153x.png" alt="y(0) = e0 = 1  "  class="math" >.
    </div>
 <!--l. 27--><p class="indent" >   Muitos problemas de valor inicial da forma (<a 
 href="#x93-1490020">10.1<!--tex4ht:ref: PVI --></a>) não podem ser resolvidos
@@ -113,14 +112,14 @@ aproximações numéricas. Diversos métodos completamente diferentes estão
 disponíveis para aproximar uma função real.
 <!--l. 29--><p class="indent" >   Aqui nos limitaremos a estudar métodos que se fundamentam em tentar
 calcular <img 
-src="main4151x.png" alt="y(t)  "  class="math" > em um conjunto finito de valores de <img 
-src="main4152x.png" alt="t  "  class="math" >. Esse conjunto de valores
+src="main4154x.png" alt="y(t)  "  class="math" > em um conjunto finito de valores de <img 
+src="main4155x.png" alt="t  "  class="math" >. Esse conjunto de valores
 para <img 
-src="main4153x.png" alt="t  "  class="math" > será denotado por <img 
-src="main4154x.png" alt="{ti}Ni=1   "  class="math" >, isto é <img 
-src="main4155x.png" alt="{t1,t2,t3,...,tN } "  class="math" > e calculamos o valor
+src="main4156x.png" alt="t  "  class="math" > será denotado por <img 
+src="main4157x.png" alt="{ti}Ni=1   "  class="math" >, isto é <img 
+src="main4158x.png" alt="{t1,t2,t3,...,tN } "  class="math" > e calculamos o valor
 aproximado da função solução <img 
-src="main4156x.png" alt="y(ti)  "  class="math" > em cada ponto da malha usando esquemas
+src="main4159x.png" alt="y(ti)  "  class="math" > em cada ponto da malha usando esquemas
 numéricos.
    <div class="sectionTOCS">
    &#x00A0;<span class="sectionToc" >10.1 <a 
@@ -169,8 +168,11 @@ href="mainse54.html#x105-16600010.9">Exercícios finais</a></span>
                                                                           
 
                                                                           
-   <!--l. 6--><div class="crosslinks"><p class="noindent"><a 
-href="main.html# " >Índice</a></p></div>
+   <!--l. 6-->
+
+<p><a href=main.html#mainch10.html><br>Retorne ao Sumário<br></a></p>
+
+
 <!--l. 6--><p class="indent" >   <a 
  id="tailmainch10.html"></a>  
 <div class="panel panel-default">

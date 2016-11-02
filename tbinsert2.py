@@ -17,6 +17,51 @@ for index, f in enumerate (lfiles):
     lfiles[index] = os.path.splitext(f)[0]
 print("Source files: ", lfiles)
 
+#create names for hrefs in main.html
+ifile = open(sdirname + "main.html", 'r')
+text = ifile.read()
+
+s = text.index('<div class="tableofcontents">')
+rtext = text[s:]
+
+s = rtext.find('href="main')
+saux = s
+while (saux != -1):
+    auxText = rtext[s+10:]
+    e = s + 10 + auxText.index('"')+1
+    rep = 'name ="main'
+    aux_e = s + 10 + auxText.find(".html")+5
+    rep += rtext[s+10:aux_e] + '" '
+    rep += rtext[s:e]
+    print(rep)
+    sub = rtext[s:e]
+    rtext = rtext.replace(sub, rep)
+
+    s += auxText.index("</a>")
+    saux = rtext[s:].find('href="main')
+    s += saux
+    
+s = text.index('<div class="tableofcontents">')
+text = text.replace(text[s:],rtext)
+ifile.close()
+
+#change title
+text = text.replace('<h2 class="titleHead">Cálculo Numérico<br />',
+                    '<h2 class="titleHead">Cálculo Numérico<br /><small>')
+s = text.index('<h2 class="titleHead">')
+auxText = text[s:]
+e = s + auxText.index('</h2>')
+text = text.replace(text[s:e],text[s:e]+"</small>")
+
+ofile = open(sdirname + "main.html", 'w')
+ofile.write(text)
+ofile.close()
+
+#print(text)
+#raise Error("Oie")
+
+    
+
 for index, f in enumerate (lfiles):
     print ("Changing %s file." % (f))
     ifile = open(sdirname + f + ".html", "r")
@@ -72,6 +117,30 @@ for index, f in enumerate (lfiles):
     head_include = head1 + head_include;
     
     text = text.replace("</head><body \n>", head_include)
+
+    #replace crosslinks
+    if ((f[0:6] == "mainch") or (f[0:6] == "mainse") or
+        (f[0:6] == "mainli") or (f[0:6] == "mainap")):
+        link = '<a href="main.html#'
+        link += f + ".html>Menu do Livro</a>"
+        s = text.replace('<a href="main.html">Menu do Livro</a>',
+                        link)
+
+        #top crosslinks
+        s = text.index('<div class="crosslinks">')
+        auxText = text[s:]
+        e = s + auxText.index('</div>') + 6
+        text = text.replace(text[s:e], "")
+
+        #bottom crosslinks
+        s = text.index('<div class="crosslinks">')
+        auxText = text[s:]
+        e = s + auxText.index('</div>') + 6
+        link = "\n\n<p><a href=main.html#"
+        link += f + ".html>"
+        link += "<br>Retorne ao Sumário<br>"
+        link += "</a></p>\n\n"
+        text = text.replace(text[s:e], link)
 
     #include on bottom
     bottom_aux_file = open("bottom.html_aux", "r")

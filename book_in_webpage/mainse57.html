@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-01 23:06:00"> 
+<meta name="date" content="2016-11-02 17:38:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 <meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Matrizes, O operador &#8220;:&#8221;, Obtendo dados de uma matriz, Operações matriciais e elemento-a-elemento'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -37,7 +37,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Cálculo Numérico<br>Um Livro Colaborativo</a>
+      <a class="navbar-brand" href="#">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -49,7 +49,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-			<li class="active"><a href="main.html">Menu do Livro</a></li>
+			<li class="active"><a href="main.html">Sumário</a></li>
 			<li><a href="../index.html">Projeto</a></li>
 			<li><a href="../colabore.html">Colabore</a></li>
 			<li><a
@@ -61,8 +61,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-   <!--l. 159--><div class="crosslinks"><p class="noindent"><a 
-href="# "  >Índice</a></p></div>
+   <!--l. 159-->
    <h3 class="sectionHead"><span class="titlemark">A.3   </span> <a 
  id="x111-177000A.3"></a>Matrizes</h3>
 <a 
@@ -70,7 +69,7 @@ href="# "  >Índice</a></p></div>
 <!--l. 161--><p class="noindent" >No Scilab, matriz é o tipo básico de dados, a qual é definida por seu número de
 linhas, colunas e tipo de dado (real, inteiro, lógico, etc.). Uma matriz
 <img 
-src="main4580x.png" alt="A  = [ai,j]m,n
+src="main4583x.png" alt="A  = [ai,j]m,n
          i,j=1   "  class="math" > no Scilab é definida usando-se a seguinte sintaxe:
                                                                           
 
@@ -89,7 +88,7 @@ class="ec-lmbx-12">Exemplo A.3.1.</span>  </span>Defina a matriz:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main4581x.png" alt="    &lfloor;          &rfloor;
+src="main4584x.png" alt="    &lfloor;          &rfloor;
 
 A = |&lceil;  1  2  3 |&rceil;
        4  5  6
@@ -114,7 +113,7 @@ class="ec-lmbx-12">ão.</span> </span> No Scilab, digitamos:
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;4.&#x00A0;&#x00A0;&#x00A0;&#x00A0;5.&#x00A0;&#x00A0;&#x00A0;&#x00A0;6.
 </div>
 <!--l. 185--><p class="nopar" >                                                                       <img 
-src="main4582x.png" alt="&#x2662; "  class="math" >
+src="main4585x.png" alt="&#x2662; "  class="math" >
    </div>
 <!--l. 188--><p class="indent" >   A seguinte lista contém uma série de funções que geram matrizes
 particulares:
@@ -145,12 +144,12 @@ v&#x00A0;=&#x00A0;i:s:j
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main4583x.png" alt="v = [i, i + s, i + 2s, ...,i + ns]
+src="main4586x.png" alt="v = [i, i + s, i + 2s, ...,i + ns]
 " class="math-display" ></center></td></tr></table>
 <!--l. 205--><p class="nopar" >
 onde <img 
-src="main4584x.png" alt="n  "  class="math" > é o maior inteiro tal que <img 
-src="main4585x.png" alt="i + ns &#x003C; j  "  class="math" >.
+src="main4587x.png" alt="n  "  class="math" > é o maior inteiro tal que <img 
+src="main4588x.png" alt="i + ns &#x003C; j  "  class="math" >.
    <div class="newtheorem">
 <!--l. 208--><p class="noindent" ><span class="head">
 <a 
@@ -212,8 +211,8 @@ class="ec-lmtt-12">A</span></span></span>:
       <!--l. 248--><p class="nopar" >
       </li>
       <li class="itemize">o elemento da <img 
-src="main4586x.png" alt="i  "  class="math" >-ésima linha e <img 
-src="main4587x.png" alt="j  "  class="math" >-ésima coluna acessa-se usando a
+src="main4589x.png" alt="i  "  class="math" >-ésima linha e <img 
+src="main4590x.png" alt="j  "  class="math" >-ésima coluna acessa-se usando a
       sintaxe:
                                                                           
 
@@ -224,10 +223,10 @@ src="main4587x.png" alt="j  "  class="math" >-ésima coluna acessa-se usando a
       <!--l. 252--><p class="nopar" >
       </li>
       <li class="itemize">o bloco formado pelas linhas <img 
-src="main4588x.png" alt="i1   "  class="math" >, <img 
-src="main4589x.png" alt="i2   "  class="math" > e pelas colunas <img 
-src="main4590x.png" alt="j1   "  class="math" >, <img 
-src="main4591x.png" alt="j2   "  class="math" > obtém-se
+src="main4591x.png" alt="i1   "  class="math" >, <img 
+src="main4592x.png" alt="i2   "  class="math" > e pelas colunas <img 
+src="main4593x.png" alt="j1   "  class="math" >, <img 
+src="main4594x.png" alt="j2   "  class="math" > obtém-se
       usando a sintaxe:
                                                                           
 
@@ -274,7 +273,7 @@ class="ec-lmbx-12">Exemplo A.3.3.</span>  </span>Veja as seguintes linhas de com
 <!--l. 286--><p class="nopar" >
    </div>
 <!--l. 289--><p class="indent" >   Definida uma matriz <img 
-src="main4592x.png" alt="A  "  class="math" > no Scilab, as seguintes sintaxes são bastante
+src="main4595x.png" alt="A  "  class="math" > no Scilab, as seguintes sintaxes são bastante
 úteis:
                                                                           
 
@@ -376,8 +375,11 @@ class="ec-lmbx-12">Exemplo A.3.5.</span>  </span>Veja as seguintes linhas de com
                                                                           
 
                                                                           
-   <!--l. 364--><div class="crosslinks"><p class="noindent"><a 
-href="# "  >Índice</a></p></div>
+   <!--l. 364-->
+
+<p><a href=main.html#mainse57.html><br>Retorne ao Sumário<br></a></p>
+
+
 <!--l. 364--><p class="indent" >   <a 
  id="tailmainse57.html"></a>   
 <div class="panel panel-default">

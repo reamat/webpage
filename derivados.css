@@ -35,13 +35,7 @@ body{
 	background-color: #ffffff;
 	opacity: 0.65;
 	text-align: center;
-}
-
-.jumbotron h2{
-	display: block;
-	background-color: #ffffff;
-	opacity: 0.65;
-	text-align: center;
+	font-weight: 700;
 }
 
 .jumbotron h3{
@@ -49,6 +43,7 @@ body{
 	background-color: #ffffff;
 	opacity: 0.65;
 	text-align: center;
+	font-weight: 700;
 }
 
 

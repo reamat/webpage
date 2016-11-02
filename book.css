@@ -51,22 +51,52 @@ h1
 	font-weight: 700;
 }
 
-h2
+h2.titleHead
+{
+	font-size: 400;
+}
+
+h2.chapterHead
 {
 	font-weight: 700;
 }
 
-h3
+h2.likechapterHead
 {
 	font-weight: 700;
 }
 
-h4
+h2.appendixHead
 {
 	font-weight: 700;
 }
 
-h5
+h3.sectionHead
+{
+	font-weight: 700;
+}
+
+h3.likesectionHead
+{
+	font-weight: 700;
+}
+
+h4.subsectionHead
+{
+	font-weight: 700;
+}
+
+h4.likesubsectionHead
+{
+	font-weight: 700;
+}
+
+h5.subsubsectionHead
+{
+	font-weight: 700;
+}
+
+h5.likesubsubsectionHead
 {
 	font-weight: 700;
 }
