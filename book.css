@@ -21,6 +21,7 @@ body{
 .math-display
 {
 	max-width: 100%;
+	margin-bottom: 0px;
 }
 
 center img.math-display
@@ -99,4 +100,14 @@ h5.subsubsectionHead
 h5.likesubsubsectionHead
 {
 	font-weight: 700;
+}
+
+.proof p.indent
+{
+	text-indent: 0px;	
+}
+
+.text-center
+{
+	width: 100%;
 }

@@ -31,7 +31,7 @@ for file in *.html; do
 done
 
 cd ..
-python tbinsert2.py
+python tbinsert3.py
 
 rm -rf ./.tmp
 rm -rf ./.book_in_html
