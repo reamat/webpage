@@ -1,9 +1,7 @@
 #/usr/bin/bash
 
-
-
 #master repo
-DIR_MASTER=../master
+DIR_MASTER=.book_in_repo
 
 #getting and preparing Book as HTML
 
@@ -35,6 +33,9 @@ python tbinsert3.py
 
 rm -rf ./.tmp
 rm -rf ./.book_in_html
+
+#getting PDF
+cp $DIR_MASTER/main.pdf ./book_in_webpage/main.pdf
 
 #getting EPUB
 cp $DIR_MASTER/main.epub ./book_in_webpage/

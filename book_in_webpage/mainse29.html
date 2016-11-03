@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-02 17:38:00"> 
+<meta name="date" content="2016-11-03 16:40:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 <meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Interpolação linear segmentada'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -37,7 +37,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
+      <a class="navbar-brand" href="../index.html">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -63,78 +63,76 @@
 </nav>
 
 <div class="text-center">
-<nav aria-label="Page navigation">
-<div class="container-fluid">
-  <ul class="nav-justified">
-    <li>
-      <a href="#Previous#" aria-label="Previous">
-        <span class="glyphicon glyphicon-arrow-left">
-        <!--<span aria-hidden="true">&laquo;</span>-->
-      </a>
-    </li>
-    <li><a href="#TableOfContents#">
-    <span class="glyphicon glyphicon-menu-hamburger">
-    </a></li>
-    <li>
-	   <a href="#Next#" aria-label="Next">
-	   <span class="glyphicon glyphicon-arrow-right">
-      <!--<span aria-hidden="true">&raquo;</span>-->
-      </a>
-    </li>
-  </ul>
- </div>
-</nav>
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="mainse28.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-arrow-left">
+        	<!--<span aria-hidden="true">&laquo;</span>-->
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#mainse29.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="mainse30.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-arrow-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
 </div>
    <!--l. 449-->
    <h3 class="sectionHead"><span class="titlemark">6.5   </span> <a 
- id="x66-1020006.5"></a>Interpolação linear segmentada</h3>
+ id="x60-1010006.5"></a>Interpolação linear segmentada</h3><hr class="section">
 <a 
- id="dx66-102001"></a>
+ id="dx60-101001"></a>
 <!--l. 450--><p class="noindent" >Considere o conjunto <img 
-src="main2971x.png" alt="      n
+src="main2981x.png" alt="      n
 (xi,yi)j=1   "  class="math" > de <img 
-src="main2972x.png" alt="n  "  class="math" > pontos. Assumiremos que <img 
-src="main2973x.png" alt="xi+1 &#x003E; xi  "  class="math" >, ou
+src="main2982x.png" alt="n  "  class="math" > pontos. Assumiremos que <img 
+src="main2983x.png" alt="xi+1 &#x003E; xi  "  class="math" >, ou
 seja, as abscissas são distintas e estão em ordem crescente. A função linear que
 interpola os pontos <img 
-src="main2974x.png" alt="xi  "  class="math" > e <img 
-src="main2975x.png" alt="xi+1   "  class="math" > no intervalo <img 
-src="main2976x.png" alt="i  "  class="math" > é dada por
+src="main2984x.png" alt="xi  "  class="math" > e <img 
+src="main2985x.png" alt="xi+1   "  class="math" > no intervalo <img 
+src="main2986x.png" alt="i  "  class="math" > é dada por
    <center class="math-display" >
 <img 
-src="main2977x.png" alt="          (xi+1-&minus;-x)-      --(x &minus;-xi)-
+src="main2987x.png" alt="          (xi+1-&minus;-x)-      --(x &minus;-xi)-
 Pi(x) = yi(x   &minus;  x ) + yi+1(x   &minus; x )
             i+1    i          i+1    i
 " class="math-display" ></center>
 <!--l. 453--><p class="indent" >   O resultado da interpolação linear segmentada é a seguinte função contínua
 definida por partes no intervalo <img 
-src="main2978x.png" alt="[x1,xn ]  "  class="math" >:
+src="main2988x.png" alt="[x1,xn ]  "  class="math" >:
    <center class="math-display" >
 <img 
-src="main2979x.png" alt="f(x) = Pi(x),   x &isin; [xi,xi+1 ]
+src="main2989x.png" alt="f(x) = Pi(x),   x &isin; [xi,xi+1 ]
 " class="math-display" ></center>
    <div class="newtheorem">
 <!--l. 456--><p class="noindent" ><span class="head">
 <a 
- id="x66-102002r1"></a>
+ id="x60-101002r1"></a>
                                                                           
 
                                                                           
 <span 
 class="ec-lmbx-12">Exemplo 6.5.1.</span>  </span>Construa uma função linear por partes que interpola os
 pontos <img 
-src="main2980x.png" alt="(0,0)  "  class="math" >, <img 
-src="main2981x.png" alt="(1,4)  "  class="math" >, <img 
-src="main2982x.png" alt="(2,3)  "  class="math" >, <img 
-src="main2983x.png" alt="(3,0 )  "  class="math" >, <img 
-src="main2984x.png" alt="(4,2)  "  class="math" >, <img 
-src="main2985x.png" alt="(5,0 )  "  class="math" >.
+src="main2990x.png" alt="(0,0)  "  class="math" >, <img 
+src="main2991x.png" alt="(1,4)  "  class="math" >, <img 
+src="main2992x.png" alt="(2,3)  "  class="math" >, <img 
+src="main2993x.png" alt="(3,0 )  "  class="math" >, <img 
+src="main2994x.png" alt="(4,2)  "  class="math" >, <img 
+src="main2995x.png" alt="(5,0 )  "  class="math" >.
 <!--l. 459--><p class="indent" >   A função procurada pode ser construída da seguinte forma:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2986x.png" alt="       (
+src="main2996x.png" alt="       (
        ||||  0x&minus;-1+ 1 x&minus;0  ,0 &le; x &#x003C; 1
        |{   0&minus; 1    1&minus;0
 f(x ) = | 4x1&minus;&minus;-22 + 3 x2&minus;&minus;11 ,1 &le; x &#x003C; 2
@@ -147,7 +145,7 @@ Simplificando, obtemos:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2987x.png" alt="       (
+src="main2997x.png" alt="       (
        ||
        |||{  x         ,0 &le; x &#x003C; 1
 f(x) =
@@ -160,8 +158,8 @@ f(x) =
                                                                           
    </div>
 <!--l. 481--><p class="indent" >   A Figura <a 
-href="#x66-1020033">6.3<!--tex4ht:ref: fig:linear_segmentada --></a> é um esboço da função <img 
-src="main2988x.png" alt="f (x )  "  class="math" > obtida. Ela foi gerada no <span class="obeylines-h"><span class="verb"><span 
+href="#x60-1010033">6.3<!--tex4ht:ref: fig:linear_segmentada --></a> é um esboço da função <img 
+src="main2998x.png" alt="f (x )  "  class="math" > obtida. Ela foi gerada no <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">Scilab</span></span></span>
 usando os comandos: <div class="verbatiminput">
 <span 
@@ -336,7 +334,7 @@ class="ec-lmtt-12">)</span>
 
                                                                           
 <a 
- id="x66-1020033"></a>
+ id="x60-1010033"></a>
                                                                           
 
                                                                           
@@ -344,12 +342,12 @@ class="ec-lmtt-12">)</span>
 >
 <!--l. 488--><p class="noindent" >
 <!--l. 489--><p class="noindent" ><img 
-src="main2989x.png" alt="PIC" class="graphics" width="306.14374pt" height="230.86249pt" ><!--tex4ht:graphics  
-name="main2989x.png" src="./cap_interp/pics/interpolacao_linear_segmentada.eps"  
+src="main2999x.png" alt="PIC" class="graphics" width="306.14374pt" height="230.86249pt" ><!--tex4ht:graphics  
+name="main2999x.png" src="./cap_interp/pics/interpolacao_linear_segmentada.eps"  
 -->
 <br /> <div class="caption" 
 ><span class="id">Figura&#x00A0;6.3: </span><span  
-class="content">Interpolação linear segmentada.</span></div><!--tex4ht:label?: x66-1020033 -->
+class="content">Interpolação linear segmentada.</span></div><!--tex4ht:label?: x60-1010033 -->
 </div>
                                                                           
 
@@ -359,35 +357,34 @@ class="content">Interpolação linear segmentada.</span></div><!--tex4ht:label?:
 
                                                                           
    <!--l. 496-->
-
-<p><a href=main.html#mainse29.html><br>Retorne ao Sumário<br></a></p>
-
-
 <!--l. 496--><p class="indent" >   <a 
  id="tailmainse29.html"></a>  
 <div class="text-center">
-<nav aria-label="Page navigation">
-<div class="container-fluid">
-  <ul class="nav-justified">
-    <li>
-      <a href="#Previous#" aria-label="Previous">
-        <span class="glyphicon glyphicon-arrow-left">
-        <!--<span aria-hidden="true">&laquo;</span>-->
-      </a>
-    </li>
-    <li><a href="#TableOfContents#">
-    <span class="glyphicon glyphicon-menu-hamburger">
-    </a></li>
-    <li>
-	   <a href="#Next#" aria-label="Next">
-	   <span class="glyphicon glyphicon-arrow-right">
-      <!--<span aria-hidden="true">&raquo;</span>-->
-      </a>
-    </li>
-  </ul>
- </div>
-</nav>
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="mainse28.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-arrow-left">
+        	<!--<span aria-hidden="true">&laquo;</span>-->
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#mainse29.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="mainse30.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-arrow-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
 </div>
+<p style="font-size: small; margin-top:10px;">* As versões do livro disponíveis no site podem estar desatualizadas, veja a 
+<a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
+target="_blank">versão PDF atual</a> no <a href="https://github.com/livroscolaborativos/CalculoNumerico"
+target="_blank">repositório GitHub oficial</a> do projeto.</p>
+
 <div class="panel panel-default">
 	    <div class="panel-body">
 	    	<div class="row">
@@ -395,10 +392,10 @@ class="content">Interpolação linear segmentada.</span></div><!--tex4ht:label?:
    	   <ul class="list-unstyled">
 				<li>Livro
 				<ul class="list-unstyled">
-	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf" target="_blank">Versão PDF</a></li>
-	  				<li><a 	href="main.html">Versão HTML*</a></li>
-	  				<li><a href="main.epub" target="_blank">Versão EPUB*</a></li>		  			       
-	  				<li><a href="slide.pdf" target="_blank">Versão Slides*</a></li>
+	  				<li><a href="main.pdf" target="_blank">Versão PDF</a></li>
+	  				<li><a 	href="main.html">Versão HTML</a></li>
+	  				<li><a href="main.epub" target="_blank">Versão EPUB</a></li>		  			       
+	  				<li><a href="slide.pdf" target="_blank">Versão Slides</a></li>
 	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
 	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
 				</ul>
@@ -428,9 +425,6 @@ class="content">Interpolação linear segmentada.</span></div><!--tex4ht:label?:
     			</ul>
     			</div>
   			</div>
-  			<p style="font-size: small;">* Os formatos HTML, EPUB e Slides podem estar desatualizados. Para ver a última atualização,
-  			veja o formato principal <a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf" target="_blank">PDF</a>.
- 
      </div>
      <div class="panel-footer">
 	 <div class="row">

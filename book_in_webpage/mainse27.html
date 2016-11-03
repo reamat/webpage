@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-02 17:38:00"> 
+<meta name="date" content="2016-11-03 16:40:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 <meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Polinômios de Lagrange'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -37,7 +37,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
+      <a class="navbar-brand" href="../index.html">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -63,54 +63,52 @@
 </nav>
 
 <div class="text-center">
-<nav aria-label="Page navigation">
-<div class="container-fluid">
-  <ul class="nav-justified">
-    <li>
-      <a href="#Previous#" aria-label="Previous">
-        <span class="glyphicon glyphicon-arrow-left">
-        <!--<span aria-hidden="true">&laquo;</span>-->
-      </a>
-    </li>
-    <li><a href="#TableOfContents#">
-    <span class="glyphicon glyphicon-menu-hamburger">
-    </a></li>
-    <li>
-	   <a href="#Next#" aria-label="Next">
-	   <span class="glyphicon glyphicon-arrow-right">
-      <!--<span aria-hidden="true">&raquo;</span>-->
-      </a>
-    </li>
-  </ul>
- </div>
-</nav>
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="mainse26.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-arrow-left">
+        	<!--<span aria-hidden="true">&laquo;</span>-->
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#mainse27.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="mainse28.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-arrow-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
 </div>
    <!--l. 292-->
    <h3 class="sectionHead"><span class="titlemark">6.3   </span> <a 
- id="x64-990006.3"></a>Polinômios de Lagrange</h3>
+ id="x58-980006.3"></a>Polinômios de Lagrange</h3><hr class="section">
 <a 
- id="dx64-99001"></a>
+ id="dx58-98001"></a>
 <!--l. 293--><p class="noindent" >Outra maneira clássica de resolver o problema da interpolação polinomial é
 através dos polinômios de Lagrange. Dado um conjunto de pontos <img 
-src="main2886x.png" alt="{x }n
+src="main2896x.png" alt="{x }n
   j j=1   "  class="math" >
 distintos dois a dois, definimos os polinômios de Lagrange como os polinômios de
 grau <img 
-src="main2887x.png" alt="n &minus; 1  "  class="math" > que satisfazem
+src="main2897x.png" alt="n &minus; 1  "  class="math" > que satisfazem
    <center class="math-display" >
 <img 
-src="main2888x.png" alt="         (
+src="main2898x.png" alt="         (
          |{
 Lk(xj) =    1, se k = j
          |(  0, se k &frasl;= j  " class="math-display" ></center>
 Assim, o polinômio de grau <img 
-src="main2889x.png" alt="n &minus; 1  "  class="math" > que interpola os pontos dados, tais
+src="main2899x.png" alt="n &minus; 1  "  class="math" > que interpola os pontos dados, tais
 <img 
-src="main2890x.png" alt="p(x ) = y ,j = 1,...,n
+src="main2900x.png" alt="p(x ) = y ,j = 1,...,n
     j    j  "  class="math" > é dado por
    <center class="math-display" >
 <img 
-src="main2891x.png" alt="                                            n&sum;
+src="main2901x.png" alt="                                            n&sum;
 p(x) = y1L1(x) + y2L2(x ) + &sdot;&sdot;&sdot; + ynLn(x ) =   ykLk(x)
                                            k=1
 " class="math-display" ></center>
@@ -121,16 +119,16 @@ p(x) = y1L1(x) + y2L2(x ) + &sdot;&sdot;&sdot; + ynLn(x ) =   ykLk(x)
 fatorada, ou seja:
    <center class="math-display" >
 <img 
-src="main2892x.png" alt="            n
+src="main2902x.png" alt="            n
 Lk (x) = ck&prod;  (x &minus; xj)
            j=1
            j&frasl;=i  " class="math-display" ></center>
 onde o coeficiente <img 
-src="main2893x.png" alt="ck  "  class="math" > é obtido da condição <img 
-src="main2894x.png" alt="Lk(xk ) = 1  "  class="math" >:
+src="main2903x.png" alt="ck  "  class="math" > é obtido da condição <img 
+src="main2904x.png" alt="Lk(xk ) = 1  "  class="math" >:
    <center class="math-display" >
 <img 
-src="main2895x.png" alt="             n
+src="main2905x.png" alt="             n
 L  (x ) = c &prod;  (x &minus;  x ) = &rArr; c =  -----1------
   k  k     kj=1  k    j       k   &prod;n
             j&frasl;=i                      (xk &minus; xj)
@@ -138,7 +136,7 @@ L  (x ) = c &prod;  (x &minus;  x ) = &rArr; c =  -----1------
 Portanto,
    <center class="math-display" >
 <img 
-src="main2896x.png" alt="         &prod;n  (x &minus; xj)
+src="main2906x.png" alt="         &prod;n  (x &minus; xj)
 Lk (x) =    ---------
          j=1(xk &minus; xj)
          j&frasl;=i
@@ -146,7 +144,7 @@ Lk (x) =    ---------
    <div class="newtheorem">
 <!--l. 311--><p class="noindent" ><span class="head">
 <a 
- id="x64-99002r1"></a>
+ id="x58-98002r1"></a>
 <span 
 class="ec-lmbx-12">Observa</span><span 
 class="ec-lmbx-12">ç</span><span 
@@ -156,19 +154,19 @@ como base os polinômios de Lagrange produz um sistema linear diagonal.
    <div class="newtheorem">
 <!--l. 314--><p class="noindent" ><span class="head">
 <a 
- id="x64-99003r1"></a>
+ id="x58-98003r1"></a>
 <span 
 class="ec-lmbx-12">Exemplo 6.3.1.</span>  </span>Encontre          o          polinômio          da          forma
 <img 
-src="main2897x.png" alt="                      2      3
+src="main2907x.png" alt="                      2      3
 p(x ) = a1 + a2x + a3x + a4x   "  class="math" > que passa pelos pontos
    <center class="math-display" >
 <img 
-src="main2898x.png" alt="(0,0 ),(1,1),(2,4),(3,9)  " class="math-display" ></center>
+src="main2908x.png" alt="(0,0 ),(1,1),(2,4),(3,9)  " class="math-display" ></center>
 Escrevemos: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2899x.png" alt="           (x &minus; 1)(x &minus; 2)(x &minus; 3)     1  3    2   11
+src="main2909x.png" alt="           (x &minus; 1)(x &minus; 2)(x &minus; 3)     1  3    2   11
 L1(x)  =   --------------------- = &minus; -x  + x  &minus;  --x + 1
            (0 &minus; 1)(0 &minus; 2)(0 &minus; 3)     6           6
            x(x-&minus;-2)(x-&minus;-3)-   1-3   5- 2
@@ -183,26 +181,26 @@ L4(x)  =   ----------------=  -x3 &minus; --x2 + -x
 </div>Assim temos:
    <center class="math-display" >
 <img 
-src="main2900x.png" alt="P (x) = 0 &sdot; L1(x) + 1 &sdot; L2 (x) + 4 &sdot; L3 (x) + 9 &sdot; L4 (x) = x2
+src="main2910x.png" alt="P (x) = 0 &sdot; L1(x) + 1 &sdot; L2 (x) + 4 &sdot; L3 (x) + 9 &sdot; L4 (x) = x2
 " class="math-display" ></center>
    </div>
    <div class="newtheorem">
 <!--l. 327--><p class="noindent" ><span class="head">
 <a 
- id="x64-99005r2"></a>
+ id="x58-98005r2"></a>
 <span 
 class="ec-lmbx-12">Exemplo 6.3.2.</span>  </span>Encontre          o          polinômio          da          forma
 <img 
-src="main2901x.png" alt="p(x ) = a + a x + a x2 + a x3
+src="main2911x.png" alt="p(x ) = a + a x + a x2 + a x3
          1   2      3      4   "  class="math" > que passa pelos pontos
    <center class="math-display" >
 <img 
-src="main2902x.png" alt="(0,0 ),(1,1),(2,0),(3,1)
+src="main2912x.png" alt="(0,0 ),(1,1),(2,0),(3,1)
 " class="math-display" ></center> Como as abscissas são as mesmas do exemplo anterior, podemos utilizar os
 mesmos polinômios de Lagrange, assim temos:
    <center class="math-display" >
 <img 
-src="main2903x.png" alt="                                                    2-3     2   10-
+src="main2913x.png" alt="                                                    2-3     2   10-
 p(x) = 0 &sdot; L1(x ) + 1 &sdot; L2(x ) + 0 &sdot; L3(x ) + 1 &sdot; L4(x) = 3x &minus; 3x + 3 x
 " class="math-display" ></center>
    </div>
@@ -210,35 +208,34 @@ p(x) = 0 &sdot; L1(x ) + 1 &sdot; L2(x ) + 0 &sdot; L3(x ) + 1 &sdot; L4(x) = 3x
 
                                                                           
    <!--l. 333-->
-
-<p><a href=main.html#mainse27.html><br>Retorne ao Sumário<br></a></p>
-
-
 <!--l. 333--><p class="indent" >   <a 
  id="tailmainse27.html"></a>  
 <div class="text-center">
-<nav aria-label="Page navigation">
-<div class="container-fluid">
-  <ul class="nav-justified">
-    <li>
-      <a href="#Previous#" aria-label="Previous">
-        <span class="glyphicon glyphicon-arrow-left">
-        <!--<span aria-hidden="true">&laquo;</span>-->
-      </a>
-    </li>
-    <li><a href="#TableOfContents#">
-    <span class="glyphicon glyphicon-menu-hamburger">
-    </a></li>
-    <li>
-	   <a href="#Next#" aria-label="Next">
-	   <span class="glyphicon glyphicon-arrow-right">
-      <!--<span aria-hidden="true">&raquo;</span>-->
-      </a>
-    </li>
-  </ul>
- </div>
-</nav>
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="mainse26.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-arrow-left">
+        	<!--<span aria-hidden="true">&laquo;</span>-->
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#mainse27.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="mainse28.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-arrow-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
 </div>
+<p style="font-size: small; margin-top:10px;">* As versões do livro disponíveis no site podem estar desatualizadas, veja a 
+<a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
+target="_blank">versão PDF atual</a> no <a href="https://github.com/livroscolaborativos/CalculoNumerico"
+target="_blank">repositório GitHub oficial</a> do projeto.</p>
+
 <div class="panel panel-default">
 	    <div class="panel-body">
 	    	<div class="row">
@@ -246,10 +243,10 @@ p(x) = 0 &sdot; L1(x ) + 1 &sdot; L2(x ) + 0 &sdot; L3(x ) + 1 &sdot; L4(x) = 3x
    	   <ul class="list-unstyled">
 				<li>Livro
 				<ul class="list-unstyled">
-	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf" target="_blank">Versão PDF</a></li>
-	  				<li><a 	href="main.html">Versão HTML*</a></li>
-	  				<li><a href="main.epub" target="_blank">Versão EPUB*</a></li>		  			       
-	  				<li><a href="slide.pdf" target="_blank">Versão Slides*</a></li>
+	  				<li><a href="main.pdf" target="_blank">Versão PDF</a></li>
+	  				<li><a 	href="main.html">Versão HTML</a></li>
+	  				<li><a href="main.epub" target="_blank">Versão EPUB</a></li>		  			       
+	  				<li><a href="slide.pdf" target="_blank">Versão Slides</a></li>
 	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
 	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
 				</ul>
@@ -279,9 +276,6 @@ p(x) = 0 &sdot; L1(x ) + 1 &sdot; L2(x ) + 0 &sdot; L3(x ) + 1 &sdot; L4(x) = 3x
     			</ul>
     			</div>
   			</div>
-  			<p style="font-size: small;">* Os formatos HTML, EPUB e Slides podem estar desatualizados. Para ver a última atualização,
-  			veja o formato principal <a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf" target="_blank">PDF</a>.
- 
      </div>
      <div class="panel-footer">
 	 <div class="row">

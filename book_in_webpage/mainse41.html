@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-02 17:38:00"> 
+<meta name="date" content="2016-11-03 16:40:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 <meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Regras compostas, Método composto dos trapézios, Código Scilab: Trapézio Composto, Método composto de Simpson, Código Scilab: Simpson Composto'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -37,7 +37,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
+      <a class="navbar-brand" href="../index.html">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -63,33 +63,31 @@
 </nav>
 
 <div class="text-center">
-<nav aria-label="Page navigation">
-<div class="container-fluid">
-  <ul class="nav-justified">
-    <li>
-      <a href="#Previous#" aria-label="Previous">
-        <span class="glyphicon glyphicon-arrow-left">
-        <!--<span aria-hidden="true">&laquo;</span>-->
-      </a>
-    </li>
-    <li><a href="#TableOfContents#">
-    <span class="glyphicon glyphicon-menu-hamburger">
-    </a></li>
-    <li>
-	   <a href="#Next#" aria-label="Next">
-	   <span class="glyphicon glyphicon-arrow-right">
-      <!--<span aria-hidden="true">&raquo;</span>-->
-      </a>
-    </li>
-  </ul>
- </div>
-</nav>
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="mainse40.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-arrow-left">
+        	<!--<span aria-hidden="true">&laquo;</span>-->
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#mainse41.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="mainse42.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-arrow-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
 </div>
    <!--l. 515-->
    <h3 class="sectionHead"><span class="titlemark">9.3   </span> <a 
- id="x88-1360009.3"></a>Regras compostas</h3>
+ id="x82-1350009.3"></a>Regras compostas</h3><hr class="section">
 <a 
- id="dx88-136001"></a>
+ id="dx82-135001"></a>
 <!--l. 517--><p class="noindent" >Vimos que em todas as estimativas de erro que derivamos, o erro depende do
 tamanho do intervalo de integração. Uma estratégia para reduzir o erro
 consiste em particionar o intervalo de integração em diversos subintervalos
@@ -98,23 +96,23 @@ menores:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main3829x.png" alt="&int; b          &sum;n &int; xi+1
+src="main3840x.png" alt="&int; b          &sum;n &int; xi+1
    f(x)dx =          f (x)dx
  a           i=1  xi
 " class="math-display" ></center></td></tr></table>
 <!--l. 520--><p class="nopar" >
 onde <img 
-src="main3830x.png" alt="xi = a + (i &minus; 1)h  "  class="math" >, <img 
-src="main3831x.png" alt="h = (b &minus; a)&#x2215;n  "  class="math" > e <img 
-src="main3832x.png" alt="i = 1,2,...,n + 1  "  class="math" >, sendo <img 
-src="main3833x.png" alt="n  "  class="math" > o número
+src="main3841x.png" alt="xi = a + (i &minus; 1)h  "  class="math" >, <img 
+src="main3842x.png" alt="h = (b &minus; a)&#x2215;n  "  class="math" > e <img 
+src="main3843x.png" alt="i = 1,2,...,n + 1  "  class="math" >, sendo <img 
+src="main3844x.png" alt="n  "  class="math" > o número
 de subintervalos da partição do intervalo de integração. Depois, aplica-se um
 método simples de integração em cada subintervalo.
 <!--l. 523--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">9.3.1   </span> <a 
- id="x88-1370009.3.1"></a>Método composto dos trapézios</h4>
+ id="x82-1360009.3.1"></a>Método composto dos trapézios</h4><hr class="section">
 <a 
- id="dx88-137001"></a>
+ id="dx82-136001"></a>
 <!--l. 524--><p class="noindent" >A <span 
 class="ec-lmbx-12">regra composta dos trap</span><span 
 class="ec-lmbx-12">ézios </span>assume a seguinte forma: <div class="eqnarray">
@@ -123,7 +121,7 @@ class="ec-lmbx-12">ézios </span>assume a seguinte forma: <div class="eqnarray">
 
                                                                           
 <img 
-src="main3834x.png" alt="&int; b            &sum;n &int; xi+1
+src="main3845x.png" alt="&int; b            &sum;n &int; xi+1
    f(x)dx   =           f(x)dx
  a             i=1 xi
                &sum;n  xi+1 &minus; xi
@@ -131,10 +129,10 @@ src="main3834x.png" alt="&int; b            &sum;n &int; xi+1
                i=1    2
 " class="math-display" ></center>
 </div>Como <img 
-src="main3835x.png" alt="h = xi+1 &minus; xi  "  class="math" >, temos: <div class="eqnarray">
+src="main3846x.png" alt="h = xi+1 &minus; xi  "  class="math" >, temos: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main3836x.png" alt="&int; b             h N&sum;i
+src="main3847x.png" alt="&int; b             h N&sum;i
    f (x)dx  &asymp;   --   [f(xk) + f(xk+1)]
  a              2 k=1
                 h-
@@ -146,7 +144,7 @@ src="main3836x.png" alt="&int; b             h N&sum;i
 </div>
 <!--l. 537--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">9.3.2   </span> <a 
- id="x88-1380009.3.2"></a>Código Scilab: Trapézio Composto</h4>
+ id="x82-1370009.3.2"></a>Código Scilab: Trapézio Composto</h4><hr class="section">
 <!--l. 538--><p class="noindent" >O código Scilab abaixo é uma implementação do método do trapézio composto
 para calcular:
    <table 
@@ -156,15 +154,15 @@ class="equation-star"><tr><td>
                                                                           
    <center class="math-display" >
 <img 
-src="main3837x.png" alt="&int; b                                  n
+src="main3848x.png" alt="&int; b                                  n
    f (x )dx = h-[f(x1) + f(xn+1)] + h&sum;  f (xi) + O (h3),
  a           2                      i=2
 " class="math-display" ></center></td></tr></table>
 <!--l. 541--><p class="nopar" >
 onde <img 
-src="main3838x.png" alt="h = (b &minus; a )&#x2215;n  "  class="math" > e <img 
-src="main3839x.png" alt="xi = a + (i &minus; 1)h  "  class="math" >, <img 
-src="main3840x.png" alt="i = 1,2,...,n + 1  "  class="math" >. Os parâmetros de
+src="main3849x.png" alt="h = (b &minus; a )&#x2215;n  "  class="math" > e <img 
+src="main3850x.png" alt="xi = a + (i &minus; 1)h  "  class="math" >, <img 
+src="main3851x.png" alt="i = 1,2,...,n + 1  "  class="math" >. Os parâmetros de
 entrada são: <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">f</span></span></span> o integrando definido como uma função no Scilab, <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">a</span></span></span> o limite
@@ -174,7 +172,7 @@ class="ec-lmtt-12">n</span></span></span> o número de
 subintervalos desejado. A variável de saída é <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">y</span></span></span> e corresponde a aproximação
 calculada de <img 
-src="main3841x.png" alt="&int; bf(x)dx
+src="main3852x.png" alt="&int; bf(x)dx
  a  "  class="math" >.
    <div class="verbatiminput">
 <span 
@@ -229,16 +227,16 @@ class="ec-lmtt-12">endfunction</span>
    </div>
 <!--l. 547--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">9.3.3   </span> <a 
- id="x88-1390009.3.3"></a>Método composto de Simpson</h4>
+ id="x82-1380009.3.3"></a>Método composto de Simpson</h4><hr class="section">
 <a 
- id="dx88-139001"></a>
+ id="dx82-138001"></a>
 <!--l. 548--><p class="noindent" >Já a regra composta de Simpson assume a seguinte forma: <div class="eqnarray">
                                                                           
 
                                                                           
    <center class="math-display" >
 <img 
-src="main3842x.png" alt="&int; b             &sum;n &int; xk+1
+src="main3853x.png" alt="&int; b             &sum;n &int; xk+1
     f(x)dx  =            f (x )dx
   a             k=1 xk
                 &sum;n xx+1 &minus;  xk[           ( xk+1 + xk )          ]
@@ -246,28 +244,28 @@ src="main3842x.png" alt="&int; b             &sum;n &int; xk+1
                 k=1     6                      2
 " class="math-display" ></center>
 </div>onde, como anteriormente, <img 
-src="main3843x.png" alt="xk = a + (k &minus; 1)h  "  class="math" >, <img 
-src="main3844x.png" alt="h = (b &minus; a)&#x2215;n  "  class="math" > e <img 
-src="main3845x.png" alt="i = 1,2,...,n + 1  "  class="math" >,
+src="main3854x.png" alt="xk = a + (k &minus; 1)h  "  class="math" >, <img 
+src="main3855x.png" alt="h = (b &minus; a)&#x2215;n  "  class="math" > e <img 
+src="main3856x.png" alt="i = 1,2,...,n + 1  "  class="math" >,
 sendo <img 
-src="main3846x.png" alt="n  "  class="math" > o número de subintervalos da partição do intervalo de integração.
+src="main3857x.png" alt="n  "  class="math" > o número de subintervalos da partição do intervalo de integração.
 Podemos simplificar o somatório acima, escrevendo:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main3847x.png" alt="&int;              [         n&minus; 1             n                  ]
+src="main3858x.png" alt="&int;              [         n&minus; 1             n                  ]
  b f(x)dx &asymp;  h- f(x ) + 2&sum;   f(x    ) + 4 &sum; f(x  ) + f(x    ) +  O (h5 )
  a           3     1     i=1    2i+1     i=1    2i       2n+1
 " class="math-display" ></center></td></tr></table>
 <!--l. 556--><p class="nopar" >
 onde, agora, <img 
-src="main3848x.png" alt="h = (b &minus; a)&#x2215;(2n)  "  class="math" >, <img 
-src="main3849x.png" alt="xi = a + (i &minus; 1)h  "  class="math" >, <img 
-src="main3850x.png" alt="i = 1,2,...,2n + 1  "  class="math" >.
+src="main3859x.png" alt="h = (b &minus; a)&#x2215;(2n)  "  class="math" >, <img 
+src="main3860x.png" alt="xi = a + (i &minus; 1)h  "  class="math" >, <img 
+src="main3861x.png" alt="i = 1,2,...,2n + 1  "  class="math" >.
 <!--l. 560--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">9.3.4   </span> <a 
- id="x88-1400009.3.4"></a>Código Scilab: Simpson Composto</h4>
+ id="x82-1390009.3.4"></a>Código Scilab: Simpson Composto</h4><hr class="section">
 <!--l. 561--><p class="noindent" >O código Scilab abaixo é uma implementação do método de Simpson composto
 para calcular:
    <table 
@@ -277,15 +275,15 @@ class="equation-star"><tr><td>
                                                                           
    <center class="math-display" >
 <img 
-src="main3851x.png" alt="&int; b            [          n&sum;&minus;1            &sum;n                  ]
+src="main3862x.png" alt="&int; b            [          n&sum;&minus;1            &sum;n                  ]
    f (x )dx = h- f (x1 ) + 2   f (x2i+1) + 4   f (x2i) + f(x2n+1)  + O (h3),
  a           3            i=1            i=1
 " class="math-display" ></center></td></tr></table>
 <!--l. 564--><p class="nopar" >
 onde <img 
-src="main3852x.png" alt="h = (b &minus; a )&#x2215;(2n)  "  class="math" > e <img 
-src="main3853x.png" alt="xi = a + (i &minus; 1)h  "  class="math" >, <img 
-src="main3854x.png" alt="i = 1,2,...,2n +  1  "  class="math" >. Os parâmetros
+src="main3863x.png" alt="h = (b &minus; a )&#x2215;(2n)  "  class="math" > e <img 
+src="main3864x.png" alt="xi = a + (i &minus; 1)h  "  class="math" >, <img 
+src="main3865x.png" alt="i = 1,2,...,2n +  1  "  class="math" >. Os parâmetros
 de entrada são: <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">f</span></span></span> o integrando definido como uma função no Scilab, <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">a</span></span></span> o limite
@@ -295,23 +293,23 @@ class="ec-lmtt-12">n</span></span></span> o número de
 subintervalos desejado. A variável de saída é <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">y</span></span></span> e corresponde a aproximação
 calculada de <img 
-src="main3855x.png" alt="&int; b
+src="main3866x.png" alt="&int; b
  a f(x)dx  "  class="math" >. <div class="verbatiminput"></div>
    <div class="newtheorem">
 <!--l. 569--><p class="noindent" ><span class="head">
 <a 
- id="x88-140001r1"></a>
+ id="x82-139001r1"></a>
 <span 
 class="ec-lmbx-12">Exemplo 9.3.1.</span>  </span>Calcule numericamente a integral
    <center class="math-display" >
 <img 
-src="main3856x.png" alt="&int; 2
+src="main3867x.png" alt="&int; 2
    x2ex2dx
  0
 " class="math-display" ></center> pelas regras compostas do ponto médio, trapézio e Simpson variando o
 número de intervalos <br 
 class="newline" /><img 
-src="main3857x.png" alt="Ni =  1, 2, 3, 6, 12, 24, 48, 96  "  class="math" >.
+src="main3868x.png" alt="Ni =  1, 2, 3, 6, 12, 24, 48, 96  "  class="math" >.
    </div>
 <!--l. 575--><p class="indent" >
                                                                           
@@ -332,7 +330,7 @@ id="TBL-16-4"></colgroup><tr
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
  style="vertical-align:baseline;" id="TBL-16-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-16-1-1"  
 class="td11"><img 
-src="main3858x.png" alt="n  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-1-2"  
+src="main3869x.png" alt="n  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-1-2"  
 class="td11">Ponto Médio</td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-1-3"  
 class="td11">Trapézios</td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-1-4"  
 class="td11"> Simpson </td>
@@ -386,11 +384,11 @@ class="td11"> 46,352096  </td><td  style="white-space:nowrap; text-align:center;
 class="td11">46,411323</td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-9-4"  
 class="td11">46,371838</td> </tr></table>
 </div>                                                                       <img 
-src="main3859x.png" alt="&#x2662; "  class="math" >
+src="main3870x.png" alt="&#x2662; "  class="math" >
    </div>
 <!--l. 589--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
- id="x88-1410009.3.4"></a>Exercícios</h4>
+ id="x82-1400009.3.4"></a>Exercícios</h4><hr class="section">
 <!--l. 591--><p class="noindent" >Em construção ... Gostaria de colaborar na escrita deste livro? Veja como
 em:
 <div class="center" 
@@ -400,35 +398,34 @@ em:
 href="http://www.ufrgs.br/numerico" class="url" ><span 
 class="ec-lmtt-12">http://www.ufrgs.br/numerico</span></a></div>
    <!--l. 593-->
-
-<p><a href=main.html#mainse41.html><br>Retorne ao Sumário<br></a></p>
-
-
 <!--l. 593--><p class="indent" >   <a 
  id="tailmainse41.html"></a>   
 <div class="text-center">
-<nav aria-label="Page navigation">
-<div class="container-fluid">
-  <ul class="nav-justified">
-    <li>
-      <a href="#Previous#" aria-label="Previous">
-        <span class="glyphicon glyphicon-arrow-left">
-        <!--<span aria-hidden="true">&laquo;</span>-->
-      </a>
-    </li>
-    <li><a href="#TableOfContents#">
-    <span class="glyphicon glyphicon-menu-hamburger">
-    </a></li>
-    <li>
-	   <a href="#Next#" aria-label="Next">
-	   <span class="glyphicon glyphicon-arrow-right">
-      <!--<span aria-hidden="true">&raquo;</span>-->
-      </a>
-    </li>
-  </ul>
- </div>
-</nav>
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="mainse40.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-arrow-left">
+        	<!--<span aria-hidden="true">&laquo;</span>-->
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#mainse41.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="mainse42.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-arrow-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
 </div>
+<p style="font-size: small; margin-top:10px;">* As versões do livro disponíveis no site podem estar desatualizadas, veja a 
+<a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
+target="_blank">versão PDF atual</a> no <a href="https://github.com/livroscolaborativos/CalculoNumerico"
+target="_blank">repositório GitHub oficial</a> do projeto.</p>
+
 <div class="panel panel-default">
 	    <div class="panel-body">
 	    	<div class="row">
@@ -436,10 +433,10 @@ class="ec-lmtt-12">http://www.ufrgs.br/numerico</span></a></div>
    	   <ul class="list-unstyled">
 				<li>Livro
 				<ul class="list-unstyled">
-	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf" target="_blank">Versão PDF</a></li>
-	  				<li><a 	href="main.html">Versão HTML*</a></li>
-	  				<li><a href="main.epub" target="_blank">Versão EPUB*</a></li>		  			       
-	  				<li><a href="slide.pdf" target="_blank">Versão Slides*</a></li>
+	  				<li><a href="main.pdf" target="_blank">Versão PDF</a></li>
+	  				<li><a 	href="main.html">Versão HTML</a></li>
+	  				<li><a href="main.epub" target="_blank">Versão EPUB</a></li>		  			       
+	  				<li><a href="slide.pdf" target="_blank">Versão Slides</a></li>
 	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
 	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
 				</ul>
@@ -469,9 +466,6 @@ class="ec-lmtt-12">http://www.ufrgs.br/numerico</span></a></div>
     			</ul>
     			</div>
   			</div>
-  			<p style="font-size: small;">* Os formatos HTML, EPUB e Slides podem estar desatualizados. Para ver a última atualização,
-  			veja o formato principal <a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf" target="_blank">PDF</a>.
- 
      </div>
      <div class="panel-footer">
 	 <div class="row">

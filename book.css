@@ -60,46 +60,66 @@ h2.titleHead
 h2.chapterHead
 {
 	font-weight: 700;
+	margin-bottom: 0px;
 }
 
 h2.likechapterHead
 {
 	font-weight: 700;
+	margin-bottom: 0px;
 }
 
 h2.appendixHead
 {
 	font-weight: 700;
+	margin-bottom: 0px;
 }
 
 h3.sectionHead
 {
 	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
 
 h3.likesectionHead
 {
 	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
 
 h4.subsectionHead
 {
 	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
 
 h4.likesubsectionHead
 {
 	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
 
 h5.subsubsectionHead
 {
 	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
 
 h5.likesubsubsectionHead
 {
 	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+hr.section
+{
+	margin-top: 0px;
 }
 
 .proof p.indent
@@ -107,7 +127,20 @@ h5.likesubsubsectionHead
 	text-indent: 0px;	
 }
 
-.text-center
+nav ul.nav-justified
 {
-	width: 100%;
+	display: inline;
+	text-align: center;
+	padding: 0px;
+}
+
+ul.nav-justified > li
+{
+	display: inherit;
+}
+ul.nav-justified > li.meio
+{
+	display: inherit;
+	margin-left: 30%;
+	margin-right: 30%;
 }

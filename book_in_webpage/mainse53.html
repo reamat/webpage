@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-02 17:38:00"> 
+<meta name="date" content="2016-11-03 16:40:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 <meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Estabilidade'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -37,7 +37,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
+      <a class="navbar-brand" href="../index.html">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -63,48 +63,46 @@
 </nav>
 
 <div class="text-center">
-<nav aria-label="Page navigation">
-<div class="container-fluid">
-  <ul class="nav-justified">
-    <li>
-      <a href="#Previous#" aria-label="Previous">
-        <span class="glyphicon glyphicon-arrow-left">
-        <!--<span aria-hidden="true">&laquo;</span>-->
-      </a>
-    </li>
-    <li><a href="#TableOfContents#">
-    <span class="glyphicon glyphicon-menu-hamburger">
-    </a></li>
-    <li>
-	   <a href="#Next#" aria-label="Next">
-	   <span class="glyphicon glyphicon-arrow-right">
-      <!--<span aria-hidden="true">&raquo;</span>-->
-      </a>
-    </li>
-  </ul>
- </div>
-</nav>
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="mainse52.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-arrow-left">
+        	<!--<span aria-hidden="true">&laquo;</span>-->
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#mainse53.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="mainse54.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-arrow-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
 </div>
    <!--l. 514-->
    <h3 class="sectionHead"><span class="titlemark">10.8   </span> <a 
- id="x103-16400010.8"></a>Estabilidade</h3>
+ id="x95-16300010.8"></a>Estabilidade</h3><hr class="section">
 <a 
- id="dx103-164001"></a>
+ id="dx95-163001"></a>
 <!--l. 516--><p class="noindent" >Consideremos o seguinte problema de teste:
    <center class="math-display" >
 <img 
-src="main4408x.png" alt="(
+src="main4419x.png" alt="(
 |{    y&prime;  =  &minus; &alpha;y
 
 |(  y(0)  =  1  " class="math-display" ></center>
 cuja solução exata é dada por <img 
-src="main4409x.png" alt="y(t) = e&minus; &alpha;t  "  class="math" >.
+src="main4420x.png" alt="y(t) = e&minus; &alpha;t  "  class="math" >.
 <!--l. 520--><p class="indent" >   Considere agora o método de Euler aplicado a este problema com passa
 <img 
-src="main4410x.png" alt="h  "  class="math" >:
+src="main4421x.png" alt="h  "  class="math" >:
    <center class="math-display" >
 <img 
-src="main4411x.png" alt="(
+src="main4422x.png" alt="(
 |{  y(k+1) =   y(k) &minus; &alpha;hy (k)
 
 |(    y(1) =   1  " class="math-display" ></center> A
@@ -114,59 +112,70 @@ solução exata do esquema de Euler é dada por
                                                                           
    <center class="math-display" >
 <img 
-src="main4412x.png" alt=" (k+1)           k
+src="main4423x.png" alt=" (k+1)           k
 y     =  (1 &minus; &alpha;h )  " class="math-display" ></center> e,
 portanto,
    <center class="math-display" >
 <img 
-src="main4413x.png" alt="&#x02DC;y(t) = y(k+1) = (1 &minus; &alpha;h )t&#x2215;h
+src="main4424x.png" alt="&#x02DC;y(t) = y(k+1) = (1 &minus; &alpha;h )t&#x2215;h
 " class="math-display" ></center>
 <!--l. 527--><p class="indent" >   Fixamos um <img 
-src="main4414x.png" alt="&alpha; &#x003E; 0  "  class="math" >, de forma que <img 
-src="main4415x.png" alt="y(t) &rarr; 0  "  class="math" >. Mas observamos que
+src="main4425x.png" alt="&alpha; &#x003E; 0  "  class="math" >, de forma que <img 
+src="main4426x.png" alt="y(t) &rarr; 0  "  class="math" >. Mas observamos que
 <img 
-src="main4416x.png" alt="&#x02DC;y(t) &rarr;  0  "  class="math" > somente quando <img 
-src="main4417x.png" alt="|1 &minus; &alpha;h | &#x003C; 1  "  class="math" > e solução positivas somente quando
+src="main4427x.png" alt="&#x02DC;y(t) &rarr;  0  "  class="math" > somente quando <img 
+src="main4428x.png" alt="|1 &minus; &alpha;h | &#x003C; 1  "  class="math" > e solução positivas somente quando
 <img 
-src="main4418x.png" alt="&alpha;h  &#x003C; 1  "  class="math" >.
+src="main4429x.png" alt="&alpha;h  &#x003C; 1  "  class="math" >.
 <!--l. 529--><p class="indent" >   <span 
 class="ec-lmbx-12">Conclus</span><span 
 class="ec-lmbx-12">ão: </span>Se o passo <img 
-src="main4419x.png" alt="h  "  class="math" > for muito grande, o método pode se tornar
+src="main4430x.png" alt="h  "  class="math" > for muito grande, o método pode se tornar
 instável, produzindo solução espúrias.
+<!--l. 531--><p class="noindent" >
+   <h4 class="likesubsectionHead"><a 
+ id="x95-16400010.8"></a>Exercícios</h4><hr class="section">
+   <div class="newtheorem">
+<!--l. 533--><p class="noindent" ><span class="head">
+<a 
+ id="x95-164001r1"></a>
+<span 
+class="ec-lmbx-12">E 10.8.1.</span>  </span>Resolva  o  problema  1  pelos  diversos  métodos  e  verifique
+heuristicamente a estabilidade para diversos valores de <img 
+src="main4431x.png" alt="h  "  class="math" >.
+   </div>
                                                                           
 
                                                                           
-   <!--l. 531-->
-
-<p><a href=main.html#mainse53.html><br>Retorne ao Sumário<br></a></p>
-
-
-<!--l. 531--><p class="indent" >   <a 
- id="tailmainse53.html"></a>  
+   <!--l. 536-->
+<!--l. 536--><p class="indent" >   <a 
+ id="tailmainse53.html"></a>   
 <div class="text-center">
-<nav aria-label="Page navigation">
-<div class="container-fluid">
-  <ul class="nav-justified">
-    <li>
-      <a href="#Previous#" aria-label="Previous">
-        <span class="glyphicon glyphicon-arrow-left">
-        <!--<span aria-hidden="true">&laquo;</span>-->
-      </a>
-    </li>
-    <li><a href="#TableOfContents#">
-    <span class="glyphicon glyphicon-menu-hamburger">
-    </a></li>
-    <li>
-	   <a href="#Next#" aria-label="Next">
-	   <span class="glyphicon glyphicon-arrow-right">
-      <!--<span aria-hidden="true">&raquo;</span>-->
-      </a>
-    </li>
-  </ul>
- </div>
-</nav>
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="mainse52.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-arrow-left">
+        	<!--<span aria-hidden="true">&laquo;</span>-->
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#mainse53.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="mainse54.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-arrow-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
 </div>
+<p style="font-size: small; margin-top:10px;">* As versões do livro disponíveis no site podem estar desatualizadas, veja a 
+<a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
+target="_blank">versão PDF atual</a> no <a href="https://github.com/livroscolaborativos/CalculoNumerico"
+target="_blank">repositório GitHub oficial</a> do projeto.</p>
+
 <div class="panel panel-default">
 	    <div class="panel-body">
 	    	<div class="row">
@@ -174,10 +183,10 @@ instável, produzindo solução espúrias.
    	   <ul class="list-unstyled">
 				<li>Livro
 				<ul class="list-unstyled">
-	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf" target="_blank">Versão PDF</a></li>
-	  				<li><a 	href="main.html">Versão HTML*</a></li>
-	  				<li><a href="main.epub" target="_blank">Versão EPUB*</a></li>		  			       
-	  				<li><a href="slide.pdf" target="_blank">Versão Slides*</a></li>
+	  				<li><a href="main.pdf" target="_blank">Versão PDF</a></li>
+	  				<li><a 	href="main.html">Versão HTML</a></li>
+	  				<li><a href="main.epub" target="_blank">Versão EPUB</a></li>		  			       
+	  				<li><a href="slide.pdf" target="_blank">Versão Slides</a></li>
 	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
 	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
 				</ul>
@@ -207,9 +216,6 @@ instável, produzindo solução espúrias.
     			</ul>
     			</div>
   			</div>
-  			<p style="font-size: small;">* Os formatos HTML, EPUB e Slides podem estar desatualizados. Para ver a última atualização,
-  			veja o formato principal <a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf" target="_blank">PDF</a>.
- 
      </div>
      <div class="panel-footer">
 	 <div class="row">

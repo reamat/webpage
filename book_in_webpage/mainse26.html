@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-02 17:38:00"> 
+<meta name="date" content="2016-11-03 16:40:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 <meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Diferenças divididas de Newton'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -37,7 +37,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
+      <a class="navbar-brand" href="../index.html">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -63,36 +63,34 @@
 </nav>
 
 <div class="text-center">
-<nav aria-label="Page navigation">
-<div class="container-fluid">
-  <ul class="nav-justified">
-    <li>
-      <a href="#Previous#" aria-label="Previous">
-        <span class="glyphicon glyphicon-arrow-left">
-        <!--<span aria-hidden="true">&laquo;</span>-->
-      </a>
-    </li>
-    <li><a href="#TableOfContents#">
-    <span class="glyphicon glyphicon-menu-hamburger">
-    </a></li>
-    <li>
-	   <a href="#Next#" aria-label="Next">
-	   <span class="glyphicon glyphicon-arrow-right">
-      <!--<span aria-hidden="true">&raquo;</span>-->
-      </a>
-    </li>
-  </ul>
- </div>
-</nav>
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="mainse25.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-arrow-left">
+        	<!--<span aria-hidden="true">&laquo;</span>-->
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#mainse26.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="mainse27.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-arrow-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
 </div>
    <!--l. 206-->
    <h3 class="sectionHead"><span class="titlemark">6.2   </span> <a 
- id="x63-980006.2"></a>Diferenças divididas de Newton</h3>
+ id="x57-970006.2"></a>Diferenças divididas de Newton</h3><hr class="section">
 <a 
- id="dx63-98001"></a>
+ id="dx57-97001"></a>
 <!--l. 207--><p class="noindent" >Dado um conjunto com <img 
-src="main2867x.png" alt="n  "  class="math" > pontos <img 
-src="main2868x.png" alt="{(xi,yi)}ni=1   "  class="math" >, o <span 
+src="main2877x.png" alt="n  "  class="math" > pontos <img 
+src="main2878x.png" alt="{(xi,yi)}ni=1   "  class="math" >, o <span 
 class="ec-lmbx-12">m</span><span 
 class="ec-lmbx-12">étodo das diferen</span><span 
 class="ec-lmbx-12">ças</span>
@@ -101,20 +99,20 @@ class="ec-lmbx-12">divididas de Newton </span>consiste em construir o polinômio
 <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2869x.png" alt="p (x ) =   a1 + a2(x &minus; x1) + a3(x &minus; x1)(x &minus; x2) + &sdot;&sdot;&sdot;
+src="main2879x.png" alt="p (x ) =   a1 + a2(x &minus; x1) + a3(x &minus; x1)(x &minus; x2) + &sdot;&sdot;&sdot;
 
       +   an(x &minus; x1)(x &minus; x2) &sdot;&sdot;&sdot;(x &minus; xn&minus;1).
 " class="math-display" ></center>
 </div>Como <img 
-src="main2870x.png" alt="p(xi) = yi  "  class="math" >, <img 
-src="main2871x.png" alt="i = 1,2,...,n  "  class="math" >, os coeficientes <img 
-src="main2872x.png" alt="ai  "  class="math" > satisfazem o seguinte
+src="main2880x.png" alt="p(xi) = yi  "  class="math" >, <img 
+src="main2881x.png" alt="i = 1,2,...,n  "  class="math" >, os coeficientes <img 
+src="main2882x.png" alt="ai  "  class="math" > satisfazem o seguinte
 sistema triangular inferior:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2873x.png" alt="a1                                               =  y1
+src="main2883x.png" alt="a1                                               =  y1
 a1 + a2(x2 &minus; x1)                                 =  y2
 
 a1 + a2(x3 &minus; x1) + a3(x3 &minus; x1)(x3 &minus; x2)          =  y3
@@ -129,7 +127,7 @@ Resolvendo de cima para baixo, obtemos
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2874x.png" alt="a1 = y1
+src="main2884x.png" alt="a1 = y1
 
 a2 =  y2 &minus;-a1-= -y2 &minus;-y1
       x2 &minus; x1   x2 &minus; x1
@@ -138,7 +136,7 @@ a3 =  -3----2--3----1----1-=  (x3&minus;-x2)---(x2&minus;x1)
        (x3 &minus; x1)(x3 &minus; x2)        (x3 &minus; x1)
    ...
 " class="math-display" ><a 
- id="x63-980006.2"></a></center></td></tr></table>
+ id="x57-970006.2"></a></center></td></tr></table>
 <!--l. 232--><p class="nopar" >
 <!--l. 234--><p class="indent" >   Note que os coeficientes são obtidos por diferenças das ordenadas divididas
 por diferenças das abscissas dos pontos dados. Para vermos isso mais claramente,
@@ -148,7 +146,7 @@ introduzimos a seguinte notação: <div class="eqnarray">
                                                                           
    <center class="math-display" >
 <img 
-src="main2875x.png" alt="               f[xj]  :=   yj
+src="main2885x.png" alt="               f[xj]  :=   yj
                           f[xj+1] &minus;-f[xj]
           f[xj,xj+1]  :=      x   &minus;  x
                               j+1    j
@@ -161,35 +159,35 @@ f [xj, xj+1,...,xj+k]  :=                     x    &minus; x
                                              j+k    j
 " class="math-display" ></center>
 </div>Chamamos <img 
-src="main2876x.png" alt="f[xj]  "  class="math" > de diferença dividida de ordem zero (ou primeira diferença
+src="main2886x.png" alt="f[xj]  "  class="math" > de diferença dividida de ordem zero (ou primeira diferença
 dividida), <img 
-src="main2877x.png" alt="f [xi,xj + 1]  "  class="math" > de diferença dividida de ordem 1 (ou segunda diferença
+src="main2887x.png" alt="f [xi,xj + 1]  "  class="math" > de diferença dividida de ordem 1 (ou segunda diferença
 dividida) e assim por diante.
 <!--l. 244--><p class="indent" >   Uma inspeção cuidadosa dos coeficientes obtidos em (<a 
-href="#x63-980006.2">6.2<!--tex4ht:ref: eq:coef_dif_div --></a>) nos mostra
+href="#x57-970006.2">6.2<!--tex4ht:ref: eq:coef_dif_div --></a>) nos mostra
 que
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2878x.png" alt="ak = f [x1,x2,...,xk]
+src="main2888x.png" alt="ak = f [x1,x2,...,xk]
 " class="math-display" ></center></td></tr></table>
 <!--l. 247--><p class="nopar" >
 Isto nos permite esquematizar o método conforme apresentado na Tabela&#x00A0;<a 
-href="#x63-980041">6.1<!--tex4ht:ref: tab:esquema_difdiv --></a>.
+href="#x57-970041">6.1<!--tex4ht:ref: tab:esquema_difdiv --></a>.
    <div class="table">
                                                                           
 
                                                                           
 <!--l. 251--><p class="indent" >   <a 
- id="x63-980041"></a><hr class="float"><div class="float" 
+ id="x57-970041"></a><hr class="float"><div class="float" 
 >
                                                                           
 
                                                                           
 <center class="math-display" >
 <img 
-src="main2879x.png" alt="---|----|-------------------------------------------------------
+src="main2889x.png" alt="---|----|-------------------------------------------------------
  j |xj  |f[xj]      f[xj&minus;1,xj]             f[xj&minus;2,xj&minus; 1,xj]
 ---|----|-------------------------------------------------------
  1 |x1  fff [x[x[x111 ]]]
@@ -206,8 +204,8 @@ src="main2879x.png" alt="---|----|----------------------------------------------
 ><span class="id">Tabela&#x00A0;6.1: </span><span  
 class="content">Esquema de diferenças divididas para um conjunto com três
 pontos <img 
-src="main2880x.png" alt="         3
-{ (xi,yi)}i=1   "  class="math" >.</span></div><!--tex4ht:label?: x63-980041 -->
+src="main2890x.png" alt="         3
+{ (xi,yi)}i=1   "  class="math" >.</span></div><!--tex4ht:label?: x57-970041 -->
                                                                           
 
                                                                           
@@ -216,11 +214,11 @@ src="main2880x.png" alt="         3
    <div class="newtheorem">
 <!--l. 267--><p class="noindent" ><span class="head">
 <a 
- id="x63-98005r1"></a>
+ id="x57-97005r1"></a>
 <span 
 class="ec-lmbx-12">Exemplo 6.2.1.</span>  </span>Use  o  método  de  diferenças  divididas  para  encontrar  o
 polinômio que passe pelos pontos <img 
-src="main2881x.png" alt="(&minus; 1,3),(0,1),(1,3 ),(3,43)  "  class="math" >.
+src="main2891x.png" alt="(&minus; 1,3),(0,1),(1,3 ),(3,43)  "  class="math" >.
    </div>
 <!--l. 270--><p class="indent" >
    <div class="proof">
@@ -229,12 +227,12 @@ src="main2881x.png" alt="(&minus; 1,3),(0,1),(1,3 ),(3,43)  "  class="math" >.
 class="ec-lmbx-12">Solu</span><span 
 class="ec-lmbx-12">ç</span><span 
 class="ec-lmbx-12">ão.</span> </span> Usando o esquema apresentado na Tabela&#x00A0;<a 
-href="#x63-980041">6.1<!--tex4ht:ref: tab:esquema_difdiv --></a>, obtemos
+href="#x57-970041">6.1<!--tex4ht:ref: tab:esquema_difdiv --></a>, obtemos
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2882x.png" alt="---||---|---------------------------------------------------------
+src="main2892x.png" alt="---||---|---------------------------------------------------------
    ||   |
 -j-||xj-|f-[xj]---f[xj&minus;1,xj]---f[xj&minus;2,xj&minus;-1,xj]--f[xj&minus;3,xj&minus;2,xj&minus;-1,xj]-
    ||   |
@@ -255,45 +253,44 @@ src="main2882x.png" alt="---||---|----------------------------------------------
 Portanto, o polinômio interpolador do conjunto de pontos dados é <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2883x.png" alt="p(x ) =   3 &minus; 2(x + 1) + 2(x + 1)x + (x + 1)x(x &minus; 1)
+src="main2893x.png" alt="p(x ) =   3 &minus; 2(x + 1) + 2(x + 1)x + (x + 1)x(x &minus; 1)
 " class="math-display" ></center>
 </div>ou, equivalentemente, <img 
-src="main2884x.png" alt="p(x) = x3 + 2x2 &minus; x + 1  "  class="math" >.                                <img 
-src="main2885x.png" alt="&#x2662; "  class="math" >
+src="main2894x.png" alt="p(x) = x3 + 2x2 &minus; x + 1  "  class="math" >.                                <img 
+src="main2895x.png" alt="&#x2662; "  class="math" >
    </div>
                                                                           
 
                                                                           
    <!--l. 292-->
-
-<p><a href=main.html#mainse26.html><br>Retorne ao Sumário<br></a></p>
-
-
 <!--l. 292--><p class="indent" >   <a 
  id="tailmainse26.html"></a>  
 <div class="text-center">
-<nav aria-label="Page navigation">
-<div class="container-fluid">
-  <ul class="nav-justified">
-    <li>
-      <a href="#Previous#" aria-label="Previous">
-        <span class="glyphicon glyphicon-arrow-left">
-        <!--<span aria-hidden="true">&laquo;</span>-->
-      </a>
-    </li>
-    <li><a href="#TableOfContents#">
-    <span class="glyphicon glyphicon-menu-hamburger">
-    </a></li>
-    <li>
-	   <a href="#Next#" aria-label="Next">
-	   <span class="glyphicon glyphicon-arrow-right">
-      <!--<span aria-hidden="true">&raquo;</span>-->
-      </a>
-    </li>
-  </ul>
- </div>
-</nav>
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="mainse25.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-arrow-left">
+        	<!--<span aria-hidden="true">&laquo;</span>-->
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#mainse26.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="mainse27.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-arrow-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
 </div>
+<p style="font-size: small; margin-top:10px;">* As versões do livro disponíveis no site podem estar desatualizadas, veja a 
+<a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
+target="_blank">versão PDF atual</a> no <a href="https://github.com/livroscolaborativos/CalculoNumerico"
+target="_blank">repositório GitHub oficial</a> do projeto.</p>
+
 <div class="panel panel-default">
 	    <div class="panel-body">
 	    	<div class="row">
@@ -301,10 +298,10 @@ src="main2885x.png" alt="&#x2662; "  class="math" >
    	   <ul class="list-unstyled">
 				<li>Livro
 				<ul class="list-unstyled">
-	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf" target="_blank">Versão PDF</a></li>
-	  				<li><a 	href="main.html">Versão HTML*</a></li>
-	  				<li><a href="main.epub" target="_blank">Versão EPUB*</a></li>		  			       
-	  				<li><a href="slide.pdf" target="_blank">Versão Slides*</a></li>
+	  				<li><a href="main.pdf" target="_blank">Versão PDF</a></li>
+	  				<li><a 	href="main.html">Versão HTML</a></li>
+	  				<li><a href="main.epub" target="_blank">Versão EPUB</a></li>		  			       
+	  				<li><a href="slide.pdf" target="_blank">Versão Slides</a></li>
 	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
 	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
 				</ul>
@@ -334,9 +331,6 @@ src="main2885x.png" alt="&#x2662; "  class="math" >
     			</ul>
     			</div>
   			</div>
-  			<p style="font-size: small;">* Os formatos HTML, EPUB e Slides podem estar desatualizados. Para ver a última atualização,
-  			veja o formato principal <a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf" target="_blank">PDF</a>.
- 
      </div>
      <div class="panel-footer">
 	 <div class="row">
