@@ -14,14 +14,9 @@ rm -rf .book_in_repo/*
 
 cp -rf $DIR_MASTER/* .book_in_repo/
 
-<<<<<<< HEAD
-cp Makefile_example ./book_in_repo/Makefile
-cp myconfig.cfg ./book_in_repo/myconfig.cfg
-=======
 #copy local Makefile and config's for Tex4ht
 cp Makefile_example ./.book_in_repo/Makefile
 cp myconfig.cfg  ./.book_in_repo/myconfig.cfg
->>>>>>> 65885d53abda61815f3b36194c3f12e163d871c2
 
 #enter dest and make all local versions of the book
 cd .book_in_repo
