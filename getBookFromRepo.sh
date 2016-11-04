@@ -4,13 +4,16 @@
 DIR_MASTER=../master
 
 mkdir -p .book_in_repo
+rm -rf .book_in_repo/*
 
-rsync -av --delete $DIR_MASTER/* .book_in_repo/
+cp -rf $DIR_MASTER/* .book_in_repo/
 
-cp Makefile_example ./book_in_repo/Makefile
+cp Makefile_example ./.book_in_repo/Makefile
+cp myconfig.cfg  ./.book_in_repo/myconfig.cfg
 
 cd .book_in_repo
-make all
+make clean
+make html -B
 
 cd ..
 
