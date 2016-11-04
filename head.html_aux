@@ -55,8 +55,7 @@
 		  <ul class="nav-justified">
     		<li>
       	<a href="#Previous#" aria-label="Previous">
-        	<span class="glyphicon glyphicon-arrow-left">
-        	<!--<span aria-hidden="true">&laquo;</span>-->
+        	<span class="glyphicon glyphicon-chevron-left">
       	</a>
     		</li>
     		<li class="meio"><a href="#TableOfContents#">
@@ -64,7 +63,7 @@
     		</a></li>
     		<li>
 	   	<a href="#Next#" aria-label="Next">
-	   	<span class="glyphicon glyphicon-arrow-right">
+	   	<span class="glyphicon glyphicon-chevron-right">
       	<!--<span aria-hidden="true">&raquo;</span>-->
       	</a>
     		</li>

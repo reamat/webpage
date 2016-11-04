@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 https://www.ufrgs.br/numerico/book_in_webpage/main10.html
 https://www.ufrgs.br/numerico/book_in_webpage/mainse6.html
 https://www.ufrgs.br/numerico/book_in_webpage/mainse5.html
@@ -17,3 +18,28 @@ https://www.ufrgs.br/numerico/book_in_webpage/main14.html
 https://www.ufrgs.br/numerico/book_in_webpage/mainse3.html
 https://www.ufrgs.br/numerico/book_in_webpage/main3.html
 https://www.ufrgs.br/numerico/book_in_webpage/main.html
+=======
+https://www.ufrgs.br/numerico/book_in_webpage/main14.html
+https://www.ufrgs.br/numerico/book_in_webpage/mainli4.html
+https://www.ufrgs.br/numerico/book_in_webpage/mainli5.html
+https://www.ufrgs.br/numerico/book_in_webpage/main.html
+https://www.ufrgs.br/numerico/book_in_webpage/mainse3.html
+https://www.ufrgs.br/numerico/book_in_webpage/main9.html
+https://www.ufrgs.br/numerico/book_in_webpage/main17.html
+https://www.ufrgs.br/numerico/book_in_webpage/main7.html
+https://www.ufrgs.br/numerico/book_in_webpage/mainse7.html
+https://www.ufrgs.br/numerico/book_in_webpage/main15.html
+https://www.ufrgs.br/numerico/book_in_webpage/mainse1.html
+https://www.ufrgs.br/numerico/book_in_webpage/mainli3.html
+https://www.ufrgs.br/numerico/book_in_webpage/mainse2.html
+https://www.ufrgs.br/numerico/book_in_webpage/mainse4.html
+https://www.ufrgs.br/numerico/book_in_webpage/mainli6.html
+https://www.ufrgs.br/numerico/book_in_webpage/mainli1.html
+https://www.ufrgs.br/numerico/book_in_webpage/mainch1.html
+https://www.ufrgs.br/numerico/book_in_webpage/mainse5.html
+https://www.ufrgs.br/numerico/book_in_webpage/mainse6.html
+https://www.ufrgs.br/numerico/book_in_webpage/googlee521115172992e66.html
+https://www.ufrgs.br/numerico/book_in_webpage/mainli2.html
+https://www.ufrgs.br/numerico/book_in_webpage/main18.html
+https://www.ufrgs.br/numerico/book_in_webpage/main12.html
+>>>>>>> 65885d53abda61815f3b36194c3f12e163d871c2

@@ -24,6 +24,16 @@
 .ec-lmtt-12{ font-family: monospace;}
 .ec-lmtt-12{ font-family: monospace;}
 .ec-lmtt-12{ font-family: monospace;}
+<<<<<<< HEAD
+=======
+.rm-lmr-8{font-size:66%;}
+.rm-lmr-6{font-size:50%;}
+.lmmi-8{font-size:66%;}
+.lmmi-6{font-size:50%;}
+.lmsy8-{font-size:66%;}
+.lmsy6-{font-size:50%;}
+.msbm-10x-x-80{font-size:66%;}
+>>>>>>> 65885d53abda61815f3b36194c3f12e163d871c2
 .ec-lmbx-12{ font-weight: bold;}
 .ec-lmbx-12{ font-weight: bold;}
 .ec-lmbx-12{ font-weight: bold;}
@@ -51,6 +61,7 @@
 .ec-lmri-12{ font-style:italic;}
 .ec-lmri-12{ font-style:italic;}
 .ec-lmri-12{ font-style:italic;}
+<<<<<<< HEAD
 .rm-lmr-8{font-size:66%;}
 .rm-lmr-6{font-size:50%;}
 .lmmi-8{font-size:66%;}
@@ -58,6 +69,8 @@
 .lmsy8-{font-size:66%;}
 .lmsy6-{font-size:50%;}
 .msbm-10x-x-80{font-size:66%;}
+=======
+>>>>>>> 65885d53abda61815f3b36194c3f12e163d871c2
 .ec-lmbx-6{font-size:50%; font-weight: bold;}
 .ec-lmbx-6{ font-weight: bold;}
 .ec-lmbx-6{ font-weight: bold;}
@@ -399,11 +412,6 @@ hr.section
 	margin-top: 0px;
 }
 
-.proof p.indent
-{
-	text-indent: 0px;	
-}
-
 nav ul.nav-justified
 {
 	display: inline;
@@ -422,3 +430,4 @@ ul.nav-justified > li.meio
 	margin-left: 30%;
 	margin-right: 30%;
 }
+

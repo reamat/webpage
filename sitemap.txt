@@ -1,7 +1,7 @@
-https://www.ufrgs.br/numerico/index.html
+https://www.ufrgs.br/numerico/colabore.html
 https://www.ufrgs.br/numerico/organizadores.html
-https://www.ufrgs.br/numerico/derivados.html
 https://www.ufrgs.br/numerico/googlee521115172992e66.html
+<<<<<<< HEAD
 https://www.ufrgs.br/numerico/colabore.html
 https://www.ufrgs.br/numerico/book_in_webpagemain10.html
 https://www.ufrgs.br/numerico/book_in_webpagemainse6.html
@@ -22,3 +22,30 @@ https://www.ufrgs.br/numerico/book_in_webpagemain14.html
 https://www.ufrgs.br/numerico/book_in_webpagemainse3.html
 https://www.ufrgs.br/numerico/book_in_webpagemain3.html
 https://www.ufrgs.br/numerico/book_in_webpagemain.html
+=======
+https://www.ufrgs.br/numerico/index.html
+https://www.ufrgs.br/numerico/derivados.html
+https://www.ufrgs.br/numerico/book_in_webpagemain14.html
+https://www.ufrgs.br/numerico/book_in_webpagemainli4.html
+https://www.ufrgs.br/numerico/book_in_webpagemainli5.html
+https://www.ufrgs.br/numerico/book_in_webpagemain.html
+https://www.ufrgs.br/numerico/book_in_webpagemainse3.html
+https://www.ufrgs.br/numerico/book_in_webpagemain9.html
+https://www.ufrgs.br/numerico/book_in_webpagemain17.html
+https://www.ufrgs.br/numerico/book_in_webpagemain7.html
+https://www.ufrgs.br/numerico/book_in_webpagemainse7.html
+https://www.ufrgs.br/numerico/book_in_webpagemain15.html
+https://www.ufrgs.br/numerico/book_in_webpagemainse1.html
+https://www.ufrgs.br/numerico/book_in_webpagemainli3.html
+https://www.ufrgs.br/numerico/book_in_webpagemainse2.html
+https://www.ufrgs.br/numerico/book_in_webpagemainse4.html
+https://www.ufrgs.br/numerico/book_in_webpagemainli6.html
+https://www.ufrgs.br/numerico/book_in_webpagemainli1.html
+https://www.ufrgs.br/numerico/book_in_webpagemainch1.html
+https://www.ufrgs.br/numerico/book_in_webpagemainse5.html
+https://www.ufrgs.br/numerico/book_in_webpagemainse6.html
+https://www.ufrgs.br/numerico/book_in_webpagegooglee521115172992e66.html
+https://www.ufrgs.br/numerico/book_in_webpagemainli2.html
+https://www.ufrgs.br/numerico/book_in_webpagemain18.html
+https://www.ufrgs.br/numerico/book_in_webpagemain12.html
+>>>>>>> 65885d53abda61815f3b36194c3f12e163d871c2

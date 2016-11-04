@@ -1,6 +1,11 @@
 #/usr/bin/python
 # -*- coding: utf-8 -*-
 
+# This script changes how things look like
+# from the the previous TeX4ht generated version.
+#
+# Author: Pedro H A Konzen - UFRGS - 2016
+
 import os
 from os import walk
 import numpy as np
@@ -152,11 +157,6 @@ for index, f in enumerate (lfiles):
         text = text.replace(text[s:e], "")
 
     #configure navigation links
-    if (f == "main"):
-        text = text.replace('<span class="glyphicon glyphicon-arrow-left">', "")
-        text = text.replace('<span class="glyphicon glyphicon-menu-hamburger">', "")
-        text = text.replace('<span class="glyphicon glyphicon-arrow-right">', "")
-
     if ((f[0:6] == "mainch") or (f[0:6] == "mainse") or
         (f[0:6] == "mainli") or (f[0:6] == "mainap")):
 
@@ -175,9 +175,13 @@ for index, f in enumerate (lfiles):
             text = text.replace('#Previous#',('%s' % listOfContents[pos-1][1]))
         text = text.replace('#TableOfContents#',('main.html#%s.html' %f))
         if (pos == len(listOfContents)-1):
-            text = text.replace('<span class="glyphicon glyphicon-arrow-right">', "")
+            text = text.replace('<span class="glyphicon glyphicon-chevron-right">', "")
         else:
             text = text.replace('#Next#',('%s' % listOfContents[pos+1][1]))
+    else:
+        text = text.replace('<span class="glyphicon glyphicon-chevron-left">', "")
+        text = text.replace('<span class="glyphicon glyphicon-menu-hamburger">', "")
+        text = text.replace('<span class="glyphicon glyphicon-chevron-right">', "")
         
 
     #sectionTOCS title
@@ -186,6 +190,19 @@ for index, f in enumerate (lfiles):
         rep += '<h3 class="sectionHead">Sumário</h3><hr class="section">'
         text = text.replace('<div class="sectionTOCS">', rep)
         
+    #collapse demo's
+    s = text.find("<!--prova begin-->")
+    count = 0
+    while (s != -1):
+        count += 1
+        sub =  '<div class="container-fluid">\n'
+        sub += '<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo'
+        sub += str(count) + '">Demonstração</button>\n'
+        sub += '<div id="demo' + str(count) + '" class="collapse out">\n'
+        text = text.replace("<!--prova begin-->",sub,1)
+        text = text.replace("<!--prova end-->",'</div></div>',1)
+        s = text.find("<!--prova begin-->")
+
     #change title
     if (len(title) != 0):
         s = -1
@@ -199,6 +216,7 @@ for index, f in enumerate (lfiles):
     ofile.close ()
     head_aux_file.close()
     bottom_aux_file.close()
+
 
 #change main.css
 ifile = open("./book_in_webpage/main.css",'r')
