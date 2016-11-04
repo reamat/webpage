@@ -46,21 +46,6 @@ body{
 	font-weight: 700;
 }
 
-
-.jumbotron h2{
-	display: block;
-	background-color: #ffffff;
-	opacity: 0.6;
-	text-align: center;
-}
-
-.jumbotron h3{
-	display: block;
-	background-color: #ffffff;
-	opacity: 0.6;
-	text-align: center;
-}
-
 .navbar {
 	margin-bottom: 0px;
 	background-color: transparent;

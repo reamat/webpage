@@ -10,7 +10,6 @@
 .lmsy-10{font-size:83%;}
 .lmsy7-{font-size:58%;}
 .lmex-10{font-size:83%;}
-.msbm-10{font-size:83%;}
 .msbm-7{font-size:58%;}
 .ec-lmtt-12{ font-family: monospace;}
 .ec-lmtt-12{ font-family: monospace;}
@@ -32,7 +31,6 @@
 .lmsy8-{font-size:66%;}
 .lmsy6-{font-size:50%;}
 .msbm-10x-x-80{font-size:66%;}
-.msbm-7x-x-85{font-size:49%;}
 .ec-lmbx-12{ font-weight: bold;}
 .ec-lmbx-12{ font-weight: bold;}
 .ec-lmbx-12{ font-weight: bold;}
@@ -46,20 +44,34 @@
 .ec-lmbx-12{ font-weight: bold;}
 .ec-lmbx-12{ font-weight: bold;}
 .ec-lmbx-12{ font-weight: bold;}
-.ec-lmri-12{ font-style:italic;}
-.ec-lmri-12{ font-style:italic;}
-.ec-lmri-12{ font-style:italic;}
-.ec-lmri-12{ font-style:italic;}
-.ec-lmri-12{ font-style:italic;}
-.ec-lmri-12{ font-style:italic;}
-.ec-lmri-12{ font-style:italic;}
-.ec-lmri-12{ font-style:italic;}
-.ec-lmri-12{ font-style:italic;}
-.ec-lmri-12{ font-style:italic;}
-.ec-lmri-12{ font-style:italic;}
-.ec-lmri-12{ font-style:italic;}
-.ec-lmri-12{ font-style:italic;}
 .ec-lmr-10{font-size:83%;}
+.ec-lmri-12{ font-style:italic;}
+.ec-lmri-12{ font-style:italic;}
+.ec-lmri-12{ font-style:italic;}
+.ec-lmri-12{ font-style:italic;}
+.ec-lmri-12{ font-style:italic;}
+.ec-lmri-12{ font-style:italic;}
+.ec-lmri-12{ font-style:italic;}
+.ec-lmri-12{ font-style:italic;}
+.ec-lmri-12{ font-style:italic;}
+.ec-lmri-12{ font-style:italic;}
+.ec-lmri-12{ font-style:italic;}
+.ec-lmri-12{ font-style:italic;}
+.ec-lmri-12{ font-style:italic;}
+.ec-lmbx-6{font-size:50%; font-weight: bold;}
+.ec-lmbx-6{ font-weight: bold;}
+.ec-lmbx-6{ font-weight: bold;}
+.ec-lmbx-6{ font-weight: bold;}
+.ec-lmbx-6{ font-weight: bold;}
+.ec-lmbx-6{ font-weight: bold;}
+.ec-lmbx-6{ font-weight: bold;}
+.ec-lmbx-6{ font-weight: bold;}
+.ec-lmbx-6{ font-weight: bold;}
+.ec-lmbx-6{ font-weight: bold;}
+.ec-lmbx-6{ font-weight: bold;}
+.ec-lmbx-6{ font-weight: bold;}
+.ec-lmbx-6{ font-weight: bold;}
+.ec-lmr-6{font-size:50%;}
 .rm-lmr-5{font-size:41%;}
 .lmmi-5{font-size:41%;}
 .lmsy5-{font-size:41%;}
@@ -76,20 +88,6 @@
 .ec-lmbxi-10x-x-120{ font-style:italic; font-weight: bold;}
 .ec-lmbxi-10x-x-120{ font-style:italic; font-weight: bold;}
 .ec-lmbxi-10x-x-120{ font-style:italic; font-weight: bold;}
-.ec-lmr-6{font-size:50%;}
-.ec-lmbx-6{font-size:50%; font-weight: bold;}
-.ec-lmbx-6{ font-weight: bold;}
-.ec-lmbx-6{ font-weight: bold;}
-.ec-lmbx-6{ font-weight: bold;}
-.ec-lmbx-6{ font-weight: bold;}
-.ec-lmbx-6{ font-weight: bold;}
-.ec-lmbx-6{ font-weight: bold;}
-.ec-lmbx-6{ font-weight: bold;}
-.ec-lmbx-6{ font-weight: bold;}
-.ec-lmbx-6{ font-weight: bold;}
-.ec-lmbx-6{ font-weight: bold;}
-.ec-lmbx-6{ font-weight: bold;}
-.ec-lmbx-6{ font-weight: bold;}
 .ec-lmtt-8x-x-75{font-size:50%; font-family: monospace;}
 .ec-lmtt-8x-x-75{ font-family: monospace;}
 .ec-lmtt-8x-x-75{ font-family: monospace;}
@@ -120,7 +118,6 @@
 .ec-lmtt-10x-x-109{ font-family: monospace;}
 .ec-lmtt-10x-x-109{ font-family: monospace;}
 .ec-lmtt-10x-x-109{ font-family: monospace;}
-.rm-lmbx-12{ font-weight: bold;}
 p.noindent { text-indent: 0em }
 td p.noindent { text-indent: 0em; margin-top:0em; }
 p.nopar { text-indent: 0em; }
@@ -294,11 +291,19 @@ body{
 .math-display
 {
 	max-width: 100%;
+	margin-bottom: 0px;
 }
 
 center img.math-display
 {
 	max-width: 100%;
+}
+
+.float .caption
+{
+	text-indent: 0em;
+	margin: 0px;
+	text-align: center;
 }
 
 .figure .caption
@@ -332,44 +337,84 @@ h2.titleHead
 h2.chapterHead
 {
 	font-weight: 700;
+	margin-bottom: 0px;
 }
 
 h2.likechapterHead
 {
 	font-weight: 700;
+	margin-bottom: 0px;
 }
 
 h2.appendixHead
 {
 	font-weight: 700;
+	margin-bottom: 0px;
 }
 
 h3.sectionHead
 {
 	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
 
 h3.likesectionHead
 {
 	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
 
 h4.subsectionHead
 {
 	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
 
 h4.likesubsectionHead
 {
 	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
 
 h5.subsubsectionHead
 {
 	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
 
 h5.likesubsubsectionHead
 {
 	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
+
+hr.section
+{
+	margin-top: 0px;
+}
+
+nav ul.nav-justified
+{
+	display: inline;
+	text-align: center;
+	padding: 0px;
+}
+
+ul.nav-justified > li
+{
+	display: inherit;
+}
+
+ul.nav-justified > li.meio
+{
+	display: inherit;
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
