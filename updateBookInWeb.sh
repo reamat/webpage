@@ -1,5 +1,12 @@
 #/usr/bin/bash
 
+#############################################
+# This script build the version of the book
+# for the webpage.
+#
+# Author: Pedro H A Konzen - UFRGS - 2016
+#############################################
+
 #master repo
 DIR_MASTER=.book_in_repo
 
@@ -45,3 +52,9 @@ cp $DIR_MASTER/slide.pdf ./book_in_webpage/
 
 #update sitemap
 python sitemapMaker.py
+
+#a nice final message
+echo "Congratulation! Book is already build for webpage."
+echo "You may now update the webpage server."
+echo "Finished."
+

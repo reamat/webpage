@@ -1,6 +1,11 @@
 #/usr/bin/python
 # -*- coding: utf-8 -*-
 
+# This script changes how things look like
+# from the the previous TeX4ht generated version.
+#
+# Author: Pedro H A Konzen - UFRGS - 2016
+
 import os
 from os import walk
 import numpy as np
