@@ -29,6 +29,13 @@ center img.math-display
 	max-width: 100%;
 }
 
+.float .caption
+{
+	text-indent: 0em;
+	margin: 0px;
+	text-align: center;
+}
+
 .figure .caption
 {
 	text-indent: 0em;
@@ -138,6 +145,7 @@ ul.nav-justified > li
 {
 	display: inherit;
 }
+
 ul.nav-justified > li.meio
 {
 	display: inherit;
