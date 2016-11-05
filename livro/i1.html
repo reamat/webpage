@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="pt" > 
+<head><title>Interpolação</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,3,notoc*,info --> 
+<meta name="src" content="main.tex"> 
+<meta name="date" content="2016-11-05 15:30:00"> 
+<link rel="stylesheet" type="text/css" href="main.css"> 
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Interpolação'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="new_main.css"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61232881-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<div class="row">
+  <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="../index.html">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+			<li class="active"><a href="main.html">Sumário</a></li>
+			<li><a href="../index.html">Projeto</a></li>
+			<li><a href="../participe.html">Participe</a></li>
+			<li><a
+				href="https://github.com/livroscolaborativos/CalculoNumerico"
+				target="_blank">Repositório</a></li>
+			<li><a href="../organizadores.html">Organizadores</a></li>
+			<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="text-center">
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="sdsdenl-linearizacao_de_uma_funcao_de_varias_variaveis.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-chevron-left">
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#i1.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="i1-interpolacao_polinomial.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-chevron-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
+</div>
+   <!--l. 6-->
+   <h2 class="chapterHead"><span class="titlemark">Capítulo&#x00A0;6</span><br /><a 
+ id="x55-940006"></a>Interpolação</h2><hr class="section">
+<a 
+ id="dx55-94001"></a>
+<!--l. 8--><p class="noindent" >Neste capítulo, discutimos sobre problemas de <span 
+class="ec-lmbx-12">interpola</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão</span><a 
+ id="dx55-94002"></a>. Mais precisamente,
+dado um conjunto com <img 
+src="main2708x.png" alt="n  "  class="math" > pontos <img 
+src="main2709x.png" alt="{(x,y ) &isin; &#x211D;2}n
+   i  i       i=1   "  class="math" > e uma família de funções
+<img 
+src="main2710x.png" alt="F  = {f : &#x211D; &rarr;  &#x211D;;y =  f(x)} "  class="math" >, o problema de interpolação consiste em encontrar
+uma função <img 
+src="main2711x.png" alt="f &isin; F "  class="math" > tal que:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main2712x.png" alt="f(xi) = yi,  i = 1,2,...,n.
+" class="math-display" ></center></td></tr></table>
+<!--l. 11--><p class="nopar" >
+Chamamos uma tal <img 
+src="main2713x.png" alt="f(x )  "  class="math" > de <span 
+class="ec-lmbx-12">fun</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão interpoladora </span>dos pontos dados. Ou
+ainda, dizemos que <img 
+src="main2714x.png" alt="f(x)  "  class="math" > interpola os pontos dados.
+<!--l. 14--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x55-940031"></a>
+                                                                          
+
+                                                                          
+<!--l. 16--><p class="noindent" ><img 
+src="main2715x.png" alt="PIC" class="graphics" width="163.50975pt" height="168.92998pt" ><!--tex4ht:graphics  
+name="main2715x.png" src="./cap_interp/pics/ex_intro_interpolacao/ex_intro_interpolacao.eps"  
+-->
+<br /> <div class="caption" 
+><span class="id">Figura&#x00A0;6.1: </span><span  
+class="content">Exemplo de interpolação de dois pontos por uma reta, veja o
+Exemplo&#x00A0;<a 
+href="#x55-94004r2">6.0.2<!--tex4ht:ref: ex:intro_interpolacao --></a>.</span></div><!--tex4ht:label?: x55-940031 -->
+                                                                          
+
+                                                                          
+<!--l. 19--><p class="indent" >   </div><hr class="endfigure">
+   <div class="newtheorem">
+<!--l. 21--><p class="noindent" ><span class="head">
+<a 
+ id="x55-94004r2"></a>
+<span 
+class="ec-lmbx-12">Exemplo 6.0.2.</span>  </span> Um dos problemas de interpolação mais simples é o de
+entrar a equação da reta que passa por dois pontos dados. Por exemplo,
+sejam dados o conjunto de pontos <img 
+src="main2716x.png" alt="{(1,1 ),(2,2 )} "  class="math" > e a família de funções
+<img 
+src="main2717x.png" alt="F  = {f (x ) = a + bx;a,b &isin; &#x211D; } "  class="math" >. Para que uma <img 
+src="main2718x.png" alt="f (x)  "  class="math" > na família seja a função
+interpoladora do conjunto de pontos dados, precisamos que
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main2719x.png" alt="a + bx1 = y1          a + b = 1
+                i.e.
+a + bx2 = y2          a + 2b = 2
+" class="math-display" ></center></td></tr></table>
+<!--l. 32--><p class="nopar" >
+o que nos fornece <img 
+src="main2720x.png" alt="a = 0  "  class="math" > e <img 
+src="main2721x.png" alt="b = 1  "  class="math" >. Então, a função interpoladora é <img 
+src="main2722x.png" alt="f(x ) = x  "  class="math" >.
+Os pontos e a reta interpolada estão esboçados na Figura&#x00A0;<a 
+href="#x62-1060051">7.1<!--tex4ht:ref: fig:ex_intro --></a>.
+   </div>
+<!--l. 36--><p class="indent" >   Um problema de interpolação cuja a família de funções constitui-se de
+polinômios é chamado de problema de interpolação polinomial.
+   <div class="sectionTOCS"><h3 class="sectionHead">Sumário</h3><hr class="section">
+   &#x00A0;<span class="sectionToc" >6.1 <a 
+href="i1-interpolacao_polinomial.html#x56-950006.1">Interpolação polinomial</a></span>
+<br />   &#x00A0;<span class="sectionToc" >6.2 <a 
+href="i1-diferencas_divididas_de_newton.html#x57-970006.2">Diferenças divididas de Newton</a></span>
+<br />   &#x00A0;<span class="sectionToc" >6.3 <a 
+href="i1-polinomios_de_lagrange.html#x58-980006.3">Polinômios de Lagrange</a></span>
+<br />   &#x00A0;<span class="sectionToc" >6.4 <a 
+href="i1-aproximacao_de_funcoes_reais_por_polinomios_interpoladores.html#x59-990006.4">Aproximação de funções reais por polinômios interpoladores</a></span>
+                                                                          
+
+                                                                          
+<br />   &#x00A0;<span class="sectionToc" >6.5 <a 
+href="i1-interpolacao_linear_segmentada.html#x60-1010006.5">Interpolação linear segmentada</a></span>
+<br />   &#x00A0;<span class="sectionToc" >6.6 <a 
+href="i1-interpolacao_cubica_segmentada_-_spline.html#x61-1020006.6">Interpolação cúbica segmentada - spline</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >6.6.1 <a 
+href="i1-interpolacao_cubica_segmentada_-_spline.html#x61-1030006.6.1" id="QQ2-61-123">Spline natural</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >6.6.2 <a 
+href="i1-interpolacao_cubica_segmentada_-_spline.html#x61-1040006.6.2" id="QQ2-61-124">Spline fixado</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >6.6.3 <a 
+href="i1-interpolacao_cubica_segmentada_-_spline.html#x61-1050006.6.3" id="QQ2-61-125">Resumo sobre Splines</a></span>
+   </div>
+
+
+
+
+
+                                                                          
+
+                                                                          
+   <!--l. 6-->
+<!--l. 6--><p class="indent" >   <a 
+ id="taili1.html"></a>  
+<div class="text-center">
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="sdsdenl-linearizacao_de_uma_funcao_de_varias_variaveis.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-chevron-left">
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#i1.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="i1-interpolacao_polinomial.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-chevron-right">
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
+</div>
+<p style="font-size: small; margin-top:10px;">* As versões do livro disponíveis no site podem estar desatualizadas, veja a 
+<a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
+target="_blank">versão PDF atual</a> no <a href="https://github.com/livroscolaborativos/CalculoNumerico"
+target="_blank">repositório GitHub oficial</a> do projeto.</p>
+
+<div class="panel panel-default">
+	    <div class="panel-body">
+	    	<div class="row">
+	    	<div class="col-md-3">
+   	   <ul class="list-unstyled">
+				<li>Livro
+				<ul class="list-unstyled">
+	  				<li><a href="main.pdf" target="_blank">Versão PDF</a></li>
+	  				<li><a 	href="main.html">Versão HTML</a></li>
+	  				<li><a href="main.epub" target="_blank">Versão EPUB</a></li>		  			       
+	  				<li><a href="slide.pdf" target="_blank">Versão Slides</a></li>
+	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
+	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
+				</ul>
+      		</li>
+      		</ul>
+      		</div>
+      		<div class="col-md-3">
+      		<ul class="list-unstyled">
+      		<li>Projeto
+				<ul class="list-unstyled">
+	  				<li><a href="../index.html">Página Inicial</a></li>
+	  				<li><a href="../participe.html">Participe</a></li>
+	  				<li><a href="../organizadores.html">Organizadores</a></li>
+	  				<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+				</ul>
+      		</li>
+    			</ul>
+    			</div>
+	     		<div class="col-md-3">
+      		<ul class="list-unstyled">
+      		<li>IME - UFRGS
+				<ul class="list-unstyled">
+	  				<li><a href="http://www.ufrgs.br/mat" target="_blank">Página do IME</a></li>
+	  				<li><a href="http://www.ufrgs.br" target="_blank">Página da UFRGS</a></li>
+				</ul>
+      		</li>
+    			</ul>
+    			</div>
+  			</div>
+     </div>
+     <div class="panel-footer">
+	 <div class="row">
+				<img src="../favicon.ico" alt="UFRGS"> UFRGS - IME - Cálculo Numérico - Um Livro Colaborativo. 
+				Contato: <a href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a>.
+      </div>
+      </div>
+</div>
+
+</div></div>
+
+</body>
+</html>
+ 

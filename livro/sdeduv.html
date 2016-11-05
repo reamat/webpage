@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="pt" > 
+<head><title>Solução de equações de uma variável</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,3,notoc*,info --> 
+<meta name="src" content="main.tex"> 
+<meta name="date" content="2016-11-05 15:30:00"> 
+<link rel="stylesheet" type="text/css" href="main.css"> 
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Solução de equações de uma variável'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="new_main.css"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61232881-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<div class="row">
+  <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="../index.html">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+			<li class="active"><a href="main.html">Sumário</a></li>
+			<li><a href="../index.html">Projeto</a></li>
+			<li><a href="../participe.html">Participe</a></li>
+			<li><a
+				href="https://github.com/livroscolaborativos/CalculoNumerico"
+				target="_blank">Repositório</a></li>
+			<li><a href="../organizadores.html">Organizadores</a></li>
+			<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="text-center">
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="adm-mais_exemplos_de_cancelamento_catastrofico.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-chevron-left">
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#sdeduv.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="sdeduv-existencia_e_unicidade.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-chevron-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
+</div>
+   <!--l. 6-->
+   <h2 class="chapterHead"><span class="titlemark">Capítulo&#x00A0;3</span><br /><a 
+ id="x20-310003"></a>Solução de equações de uma variável</h2><hr class="section">
+<a 
+ id="dx20-31001"></a>
+<!--l. 8--><p class="noindent" >Neste capítulo buscaremos aproximações numéricas para a solução de <span 
+class="ec-lmbx-12">equa</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ões</span>
+<span 
+class="ec-lmbx-12">de uma vari</span><span 
+class="ec-lmbx-12">ável real</span>. Observamos que obter uma solução para uma tal dada
+equação é equivalente a encontrar um <span 
+class="ec-lmbx-12">zero de uma fun</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão</span><a 
+ id="dx20-31002"></a><a 
+ id="dx20-31003"></a> apropriada. Com
+isso, iniciamos este capítulo discutindo sobre condições de existência e unicidade
+de raízes de funções de uma variável real. Então, apresentamos o <span 
+class="ec-lmbx-12">m</span><span 
+class="ec-lmbx-12">étodo da</span>
+<span 
+class="ec-lmbx-12">bisse</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão</span><a 
+ id="dx20-31004"></a> como uma primeira abordagem numérica para a solução de tais
+equações.
+<!--l. 10--><p class="indent" >   Em seguida, exploramos uma outra abordagem via
+<span 
+class="ec-lmbx-12">itera</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão do ponto fixo</span><a 
+ id="dx20-31005"></a>. Desta, obtemos o <span 
+class="ec-lmbx-12">m</span><span 
+class="ec-lmbx-12">étodo de</span>
+<span 
+class="ec-lmbx-12">Newton</span><span class="footnote-mark"><a 
+href="main21.html#fn1x4"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x20-31006f1"></a> <a 
+ id="dx20-31007"></a>,
+para o qual discutimos sua aplicação e convergência. Por fim, apresentamos o
+<span 
+class="ec-lmbx-12">m</span><span 
+class="ec-lmbx-12">étodo das secantes</span><a 
+ id="dx20-31008"></a> como uma das possíveis variações do método de
+Newton.
+   <div class="sectionTOCS"><h3 class="sectionHead">Sumário</h3><hr class="section">
+   &#x00A0;<span class="sectionToc" >3.1 <a 
+href="sdeduv-existencia_e_unicidade.html#x22-320003.1">Existência e unicidade</a></span>
+<br />   &#x00A0;<span class="sectionToc" >3.2 <a 
+href="sdeduv-metodo_da_bissecao.html#x24-340003.2">Método da bisseção</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.2.1 <a 
+href="sdeduv-metodo_da_bissecao.html#x24-350003.2.1" id="QQ2-24-44">Código Scilab: método da bisseção</a></span>
+<br />   &#x00A0;<span class="sectionToc" >3.3 <a 
+href="sdeduv-iteracao_de_ponto_fixo.html#x25-370003.3">Iteração de Ponto Fixo</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.3.1 <a 
+href="sdeduv-iteracao_de_ponto_fixo.html#x25-380003.3.1" id="QQ2-25-49">Teorema do ponto fixo</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.3.2 <a 
+href="sdeduv-iteracao_de_ponto_fixo.html#x25-390003.3.2" id="QQ2-25-51">Teste de convergência</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.3.3 <a 
+href="sdeduv-iteracao_de_ponto_fixo.html#x25-400003.3.3" id="QQ2-25-53">Estabilidade e convergência</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.3.4 <a 
+href="sdeduv-iteracao_de_ponto_fixo.html#x25-410003.3.4" id="QQ2-25-54">Erro absoluto e tolerância</a></span>
+<br />   &#x00A0;<span class="sectionToc" >3.4 <a 
+href="sdeduv-metodo_de_newton-raphson.html#x27-430003.4">Método de Newton-Raphson</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.4.1 <a 
+href="sdeduv-metodo_de_newton-raphson.html#x27-440003.4.1" id="QQ2-27-57">Interpretação geométrica</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.4.2 <a 
+href="sdeduv-metodo_de_newton-raphson.html#x27-450003.4.2" id="QQ2-27-59">Análise de convergência</a></span>
+<br />   &#x00A0;<span class="sectionToc" >3.5 <a 
+href="sdeduv-metodo_das_secantes.html#x30-470003.5">Método das secantes</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.5.1 <a 
+href="sdeduv-metodo_das_secantes.html#x30-480003.5.1" id="QQ2-30-62">Interpretação geométrica</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.5.2 <a 
+href="sdeduv-metodo_das_secantes.html#x30-490003.5.2" id="QQ2-30-64">Análise de convergência</a></span>
+                                                                          
+
+                                                                          
+<br />   &#x00A0;<span class="sectionToc" >3.6 <a 
+href="sdeduv-criterios_de_parada.html#x33-500003.6">Critérios de parada</a></span>
+<br />   &#x00A0;<span class="sectionToc" >3.7 <a 
+href="sdeduv-exercicios_finais.html#x34-520003.7">Exercícios finais</a></span>
+   </div>
+
+
+
+
+
+
+                                                                          
+
+                                                                          
+   <!--l. 7-->
+<!--l. 7--><p class="indent" >   <a 
+ id="tailsdeduv.html"></a>  
+<div class="text-center">
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="adm-mais_exemplos_de_cancelamento_catastrofico.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-chevron-left">
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#sdeduv.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="sdeduv-existencia_e_unicidade.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-chevron-right">
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
+</div>
+<p style="font-size: small; margin-top:10px;">* As versões do livro disponíveis no site podem estar desatualizadas, veja a 
+<a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
+target="_blank">versão PDF atual</a> no <a href="https://github.com/livroscolaborativos/CalculoNumerico"
+target="_blank">repositório GitHub oficial</a> do projeto.</p>
+
+<div class="panel panel-default">
+	    <div class="panel-body">
+	    	<div class="row">
+	    	<div class="col-md-3">
+   	   <ul class="list-unstyled">
+				<li>Livro
+				<ul class="list-unstyled">
+	  				<li><a href="main.pdf" target="_blank">Versão PDF</a></li>
+	  				<li><a 	href="main.html">Versão HTML</a></li>
+	  				<li><a href="main.epub" target="_blank">Versão EPUB</a></li>		  			       
+	  				<li><a href="slide.pdf" target="_blank">Versão Slides</a></li>
+	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
+	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
+				</ul>
+      		</li>
+      		</ul>
+      		</div>
+      		<div class="col-md-3">
+      		<ul class="list-unstyled">
+      		<li>Projeto
+				<ul class="list-unstyled">
+	  				<li><a href="../index.html">Página Inicial</a></li>
+	  				<li><a href="../participe.html">Participe</a></li>
+	  				<li><a href="../organizadores.html">Organizadores</a></li>
+	  				<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+				</ul>
+      		</li>
+    			</ul>
+    			</div>
+	     		<div class="col-md-3">
+      		<ul class="list-unstyled">
+      		<li>IME - UFRGS
+				<ul class="list-unstyled">
+	  				<li><a href="http://www.ufrgs.br/mat" target="_blank">Página do IME</a></li>
+	  				<li><a href="http://www.ufrgs.br" target="_blank">Página da UFRGS</a></li>
+				</ul>
+      		</li>
+    			</ul>
+    			</div>
+  			</div>
+     </div>
+     <div class="panel-footer">
+	 <div class="row">
+				<img src="../favicon.ico" alt="UFRGS"> UFRGS - IME - Cálculo Numérico - Um Livro Colaborativo. 
+				Contato: <a href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a>.
+      </div>
+      </div>
+</div>
+
+</div></div>
+
+</body>
+</html>
+ 

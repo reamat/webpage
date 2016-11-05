@@ -17,17 +17,17 @@ rm -rf ./.book_in_html/*
 
 cp $DIR_MASTER/html/* ./.book_in_html/
 
-mkdir -p ./book_in_webpage
+mkdir -p ./livro
 mkdir -p ./.tmp
 
-rm -rf ./book_in_webpage/*
+rm -rf ./livro/*
 rm -rf ./.tmp/*
 
-mv ./.book_in_html/*.png ./book_in_webpage/
-mv ./.book_in_html/*.css ./book_in_webpage/
+mv ./.book_in_html/*.png ./livro/
+mv ./.book_in_html/*.css ./livro/
 
 #google search validator
-cp googlee521115172992e66.html ./book_in_webpage/
+#cp googlee521115172992e66.html ./livro/
 
 #change encoding to utf-8
 cd ./.book_in_html
@@ -36,19 +36,19 @@ for file in *.html; do
 done
 
 cd ..
-python tbinsert3.py
+python tbinsert4.py
 
 rm -rf ./.tmp
 rm -rf ./.book_in_html
 
 #getting PDF
-cp $DIR_MASTER/main.pdf ./book_in_webpage/main.pdf
+cp $DIR_MASTER/main.pdf ./livro/main.pdf
 
 #getting EPUB
-cp $DIR_MASTER/main.epub ./book_in_webpage/
+cp $DIR_MASTER/main.epub ./livro/
 
 #getting Slide
-cp $DIR_MASTER/slide.pdf ./book_in_webpage/
+cp $DIR_MASTER/slide.pdf ./livro/
 
 #update sitemap
 python sitemapMaker.py

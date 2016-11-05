@@ -20,7 +20,7 @@ for index, f in enumerate (lfiles):
     ifile = open("./tmp/"+f+".html", "r")
     headfile = open("head_aux.html", "r")
     bottomfile = open("bottom_aux.html", "r")
-    ofile = open("./book_in_webpage/"+f+".html", "w")
+    ofile = open("./livro/"+f+".html", "w")
     atTop = False
     atBottom = False
 
@@ -52,9 +52,9 @@ for index, f in enumerate (lfiles):
     bottomfile.close ()
 
 #change main.css
-ifile = open("./book_in_webpage/main.css",'r')
+ifile = open("./livro/main.css",'r')
 bookfile = open("book.css",'r')
-ofile = open("./book_in_webpage/new_main.css",'w')
+ofile = open("./livro/new_main.css",'w')
 
 for line in bookfile:
     ofile.write (line)

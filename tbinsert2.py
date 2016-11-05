@@ -65,7 +65,7 @@ ofile.close()
 for index, f in enumerate (lfiles):
     print ("Changing %s file." % (f))
     ifile = open(sdirname + f + ".html", "r")
-    ofile = open("./book_in_webpage/"+f+".html", "w")
+    ofile = open("./livro/"+f+".html", "w")
 
     text = ifile.read()
 
@@ -162,9 +162,9 @@ for index, f in enumerate (lfiles):
     bottom_aux_file.close()
 
 #change main.css
-ifile = open("./book_in_webpage/main.css",'r')
+ifile = open("./livro/main.css",'r')
 bookfile = open("book.css",'r')
-ofile = open("./book_in_webpage/new_main.css",'w')
+ofile = open("./livro/new_main.css",'w')
 
 for line in ifile:
     ofile.write (line)
