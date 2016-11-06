@@ -21,6 +21,7 @@ cp myconfig.cfg  ./.book_in_repo/myconfig.cfg
 #enter dest and make all local versions of the book
 cd .book_in_repo
 make all
+make all-py
 
 #back to origin folder
 cd ..
@@ -28,4 +29,4 @@ cd ..
 #a nice final message
 echo "Congratulation! Book is in .book_in_repo now."
 echo "Finished."
-echo "Run updateBookInWeb to update book_in_webpage."
+echo "Run updateBookInWeb to update livro."
