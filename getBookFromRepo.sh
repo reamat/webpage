@@ -21,6 +21,7 @@ cp myconfig.cfg  ./.book_in_repo/myconfig.cfg
 #enter dest and make all local versions of the book
 cd .book_in_repo
 make all
+make all-py
 
 #back to origin folder
 cd ..
