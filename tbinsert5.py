@@ -172,7 +172,7 @@ for index, f in enumerate (lfiles):
     if (s != -1):
         auxText = text[s:]
         s = auxText.find('</a>')+4
-        e = auxText.index('</h2>')
+        e = auxText.index('</h2>')        
         kw = auxText[s:e]
         title = kw
     else:
@@ -217,8 +217,15 @@ for index, f in enumerate (lfiles):
 
     head1 = "<meta name='keywords' content='"
     head1 += "Livro, Cálculo Numérico, Métodos, Análise"
+    codeIn = []
+    if (sys.argv[1] == 'livro'):
+        codeIn = 'Scilab'
+    elif (sys.argv[1] == 'livro-py'):
+        codeIn = 'Python'
+    else:
+        raise NameError('opção inválida.')
     if (len(kw) != 0):
-        head1 += ", " + kw 
+        head1 += ", " + kw + ", " + codeIn
     head1 += "'>\n"
     head_include = head1 + head_include;
     
