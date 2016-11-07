@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="pt" > 
+<head><title>Matrizes</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,3,notoc*,info --> 
+<meta name="src" content="main.tex"> 
+<meta name="date" content="2016-11-07 01:12:00"> 
+<link rel="stylesheet" type="text/css" href="main.css"> 
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Matrizes, Obtendo dados de uma matriz, Operações matriciais e elemento-a-elemento'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="new_main.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61232881-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<div class="row">
+  <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="../index.html">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+			<li><a href="../index.html">Projeto</a></li>
+	       <li class="dropdown">
+          <a class="active" href="#" class="dropdown-toggle" data-toggle="dropdown" 
+          role="button" aria-haspopup="true" aria-expanded="false">Livro
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          	<li><a href="../livro-py/main.html">Sumário</a></li>
+            <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
+            <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
+            <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="../livro/main.html">Versão Scilab</a></li>
+          </ul>
+        </li>		
+			<li><a href="../participe.html">Participe</a></li>
+			<li><a
+				href="https://github.com/livroscolaborativos/CalculoNumerico"
+				target="_blank">Repositório</a></li>
+			<li><a href="../organizadores.html">Organizadores</a></li>
+			<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="text-center">
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="riap-elementos_da_linguagem.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-chevron-left">
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#riap-matrizes.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="riap-estruturas_de_ramificacao_e_repeticao.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-chevron-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
+</div>
+   <!--l. 184-->
+   <h3 class="sectionHead"><span class="titlemark">A.3   </span> <a 
+ id="x100-172000A.3"></a>Matrizes</h3><hr class="section">
+<a 
+ id="dx100-172001"></a>
+<!--l. 186--><p class="noindent" >Em <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">Python</span></span></span>, temos um ótimo suporte para computação científica com o pacote
+<a 
+href="http://www.numpy.org/" >numpy</a>. Uma matriz <img 
+src="main4294x.png" alt="A = [ai,j]mi,,j=n1   "  class="math" > em Python é definida usando-se a seguinte
+sintaxe:
+                                                                          
+
+                                                                          
+   <div class="verbatim" id="verbatim-45">
+&#x003E;&#x003E;&#x003E;&#x00A0;import&#x00A0;numpy&#x00A0;as&#x00A0;np
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A&#x00A0;=&#x00A0;np.array([[&#x00A0;a11&#x00A0;,&#x00A0;a12&#x00A0;,&#x00A0;...&#x00A0;,&#x00A0;a1n],&#x00A0;[...].&#x00A0;[am1&#x00A0;,&#x00A0;am2&#x00A0;,&#x00A0;...&#x00A0;,&#x00A0;amn]])
+</div>
+<!--l. 190--><p class="nopar" >
+   <div class="newtheorem">
+<!--l. 192--><p class="noindent" ><span class="head">
+<a 
+ id="x100-172002r1"></a>
+<span 
+class="ec-lmbx-12">Exemplo A.3.1.</span>  </span>Defina a matriz:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main4295x.png" alt="    &lfloor;          &rfloor;
+    |  1  2  3 |
+A = &lceil;          &rceil;
+       4  5  6
+" class="math-display" ></center></td></tr></table>
+<!--l. 201--><p class="nopar" >
+   </div>
+<!--l. 203--><p class="indent" >   <span 
+class="ec-lmbx-12">Solu</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão. </span>Em <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">Python</span></span></span>, digitamos:
+                                                                          
+
+                                                                          
+   <div class="verbatim" id="verbatim-46">
+&#x003E;&#x003E;&#x003E;&#x00A0;import&#x00A0;numpy&#x00A0;as&#x00A0;np
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A&#x00A0;=&#x00A0;np.array([[1,2,3],
+&#x00A0;<br />...&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[4,5,6]])
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;print(A)
+&#x00A0;<br />[[1&#x00A0;2&#x00A0;3]
+&#x00A0;<br />&#x00A0;[4&#x00A0;5&#x00A0;6]]
+</div>
+<!--l. 212--><p class="nopar" >
+                                                                          <div class="flushright" 
+>
+<!--l. 213--><p class="noindent" >
+ <img 
+src="main4296x.png" alt="&#x2662; "  class="math" ></div>
+<!--l. 215--><p class="indent" >   A seguinte lista contém uma série de funções que geram matrizes
+particulares:
+                                                                          
+
+                                                                          
+   <div class="verbatim" id="verbatim-47">
+numpy.eye&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;matrix&#x00A0;identidade
+&#x00A0;<br />numpy.linspace&#x00A0;vetor&#x00A0;de&#x00A0;elementos&#x00A0;linearmente&#x00A0;espaçados
+&#x00A0;<br />numpy.ones&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;matriz&#x00A0;cheia&#x00A0;de&#x00A0;uns
+&#x00A0;<br />numpy.zeros&#x00A0;&#x00A0;&#x00A0;&#x00A0;matriz&#x00A0;nula
+</div>
+<!--l. 221--><p class="nopar" >
+<!--l. 223--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">A.3.1   </span> <a 
+ id="x100-173000A.3.1"></a>Obtendo dados de uma matriz</h4><hr class="section">
+<!--l. 225--><p class="noindent" >A função <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">numpy.shape</span></span></span> retorna o tamanho de uma matriz, por exemplo:
+                                                                          
+
+                                                                          
+   <div class="verbatim" id="verbatim-48">
+&#x003E;&#x003E;&#x003E;&#x00A0;A&#x00A0;=&#x00A0;np.ones((3,2))
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;print(A)
+&#x00A0;<br />[[&#x00A0;1.&#x00A0;&#x00A0;1.]
+&#x00A0;<br />&#x00A0;[&#x00A0;1.&#x00A0;&#x00A0;1.]
+&#x00A0;<br />&#x00A0;[&#x00A0;1.&#x00A0;&#x00A0;1.]]
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;nl,&#x00A0;nc&#x00A0;=&#x00A0;np.shape(A)
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;print(nl,nc)
+&#x00A0;<br />(3,&#x00A0;2)
+</div>
+<!--l. 235--><p class="nopar" >informando que a matriz <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">A</span></span></span> tem três linhas e duas colunas.
+<!--l. 238--><p class="indent" >   Existem vários métodos para se acessar os elementos de uma matriz dada
+<span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">A</span></span></span>:
+      <ul class="itemize1">
+      <li class="itemize">a matriz inteira acessa-se com a sintaxe:
+                                                                          
+
+                                                                          
+      <div class="verbatim" id="verbatim-49">
+      A
+</div>
+      <!--l. 243--><p class="nopar" >
+      </li>
+      <li class="itemize">o elemento da <img 
+src="main4297x.png" alt="i  "  class="math" >-ésima linha e <img 
+src="main4298x.png" alt="j  "  class="math" >-ésima coluna acessa-se usando a
+      sintaxe:
+                                                                          
+
+                                                                          
+      <div class="verbatim" id="verbatim-50">
+      A[i,j]
+</div>
+      <!--l. 247--><p class="nopar" >
+      </li>
+      <li class="itemize">o bloco formado pelas linhas <img 
+src="main4299x.png" alt="i1   "  class="math" >, <img 
+src="main4300x.png" alt="i2   "  class="math" > e pelas colunas <img 
+src="main4301x.png" alt="j1   "  class="math" >, <img 
+src="main4302x.png" alt="j2   "  class="math" > obtém-se
+      usando a sintaxe:
+                                                                          
+
+                                                                          
+      <div class="verbatim" id="verbatim-51">
+      A[i1:i2,&#x00A0;j1:j2]
+</div>
+      <!--l. 251--><p class="nopar" ></li></ul>
+   <div class="newtheorem">
+<!--l. 254--><p class="noindent" ><span class="head">
+<a 
+ id="x100-173001r2"></a>
+<span 
+class="ec-lmbx-12">Exemplo A.3.2.</span>  </span>Veja as seguintes linhas de comando:
+                                                                          
+
+                                                                          
+   <div class="verbatim" id="verbatim-52">
+&#x003E;&#x003E;&#x003E;&#x00A0;from&#x00A0;numpy&#x00A0;import&#x00A0;random
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A&#x00A0;=&#x00A0;np.random.random((3,4))
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A
+&#x00A0;<br />array([[&#x00A0;0.39235668,&#x00A0;&#x00A0;0.30287204,&#x00A0;&#x00A0;0.24379253,&#x00A0;&#x00A0;0.98866709],
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[&#x00A0;0.72049734,&#x00A0;&#x00A0;0.99300252,&#x00A0;&#x00A0;0.14232844,&#x00A0;&#x00A0;0.25604346],
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[&#x00A0;0.61553036,&#x00A0;&#x00A0;0.80615392,&#x00A0;&#x00A0;0.22418474,&#x00A0;&#x00A0;0.13685148]])
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A[2,3]
+&#x00A0;<br />0.13685147547025989
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A[1:3,1:4]
+&#x00A0;<br />array([[&#x00A0;0.99300252,&#x00A0;&#x00A0;0.14232844,&#x00A0;&#x00A0;0.25604346],
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[&#x00A0;0.80615392,&#x00A0;&#x00A0;0.22418474,&#x00A0;&#x00A0;0.13685148]])
+</div>
+<!--l. 268--><p class="nopar" >
+   </div>
+<!--l. 271--><p class="indent" >   Definida uma matriz <img 
+src="main4303x.png" alt="A  "  class="math" > em Python, as seguintes sintaxes são bastante
+úteis:
+                                                                          
+
+                                                                          
+   <div class="verbatim" id="verbatim-53">
+A[:,:]&#x00A0;&#x00A0;&#x00A0;toda&#x00A0;a&#x00A0;matriz
+&#x00A0;<br />A[i:j,k]&#x00A0;os&#x00A0;elementos&#x00A0;das&#x00A0;linhas&#x00A0;i&#x00A0;até&#x00A0;j&#x00A0;(exclusive)&#x00A0;da&#x00A0;k-ésima&#x00A0;coluna
+&#x00A0;<br />A[i,j:k]&#x00A0;os&#x00A0;elementos&#x00A0;da&#x00A0;i-ésina&#x00A0;linha&#x00A0;das&#x00A0;colunas&#x00A0;j&#x00A0;até&#x00A0;k&#x00A0;(exclusive)
+&#x00A0;<br />A[i,:]&#x00A0;&#x00A0;&#x00A0;a&#x00A0;i-ésima&#x00A0;linha&#x00A0;da&#x00A0;matriz
+&#x00A0;<br />A[:,j]&#x00A0;&#x00A0;&#x00A0;a&#x00A0;j-ésima&#x00A0;coluna&#x00A0;da&#x00A0;matriz
+</div>
+<!--l. 278--><p class="nopar" >
+<!--l. 280--><p class="indent" >   Atenção, os índices em <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">Python</span></span></span> iniciam-se em <img 
+src="main4304x.png" alt="0  "  class="math" >. Assim, o comando
+<span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">A[1:3,1:4]</span></span></span> retorna o bloco da matriz <img 
+src="main4305x.png" alt="A  "  class="math" > compreendido da segunda à terceira
+linha e da segunda a quarta coluna desta matriz.
+   <div class="newtheorem">
+<!--l. 282--><p class="noindent" ><span class="head">
+<a 
+ id="x100-173002r3"></a>
+<span 
+class="ec-lmbx-12">Exemplo A.3.3.</span>  </span>Veja as seguintes linhas de comando:
+                                                                          
+
+                                                                          
+   <div class="verbatim" id="verbatim-54">
+&#x003E;&#x003E;&#x003E;&#x00A0;B&#x00A0;=&#x00A0;np.random.random((4,4))
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;B
+&#x00A0;<br />array([[&#x00A0;0.94313432,&#x00A0;&#x00A0;0.72650883,&#x00A0;&#x00A0;0.55487089,&#x00A0;&#x00A0;0.18753526],
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[&#x00A0;0.02094937,&#x00A0;&#x00A0;0.45726099,&#x00A0;&#x00A0;0.51925464,&#x00A0;&#x00A0;0.8535878&#x00A0;],
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[&#x00A0;0.75948469,&#x00A0;&#x00A0;0.95362926,&#x00A0;&#x00A0;0.77942318,&#x00A0;&#x00A0;0.06464183],
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[&#x00A0;0.91243198,&#x00A0;&#x00A0;0.22775889,&#x00A0;&#x00A0;0.04061536,&#x00A0;&#x00A0;0.14908227]])
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;aux&#x00A0;=&#x00A0;np.copy(B[:,2])
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;B[:,2]&#x00A0;=&#x00A0;np.copy(B[:,3])
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;B[:,3]&#x00A0;=&#x00A0;np.copy(aux)
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;B
+&#x00A0;<br />array([[&#x00A0;0.94313432,&#x00A0;&#x00A0;0.72650883,&#x00A0;&#x00A0;0.18753526,&#x00A0;&#x00A0;0.55487089],
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[&#x00A0;0.02094937,&#x00A0;&#x00A0;0.45726099,&#x00A0;&#x00A0;0.8535878&#x00A0;,&#x00A0;&#x00A0;0.51925464],
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[&#x00A0;0.75948469,&#x00A0;&#x00A0;0.95362926,&#x00A0;&#x00A0;0.06464183,&#x00A0;&#x00A0;0.77942318],
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[&#x00A0;0.91243198,&#x00A0;&#x00A0;0.22775889,&#x00A0;&#x00A0;0.14908227,&#x00A0;&#x00A0;0.04061536]])
+</div>
+<!--l. 299--><p class="nopar" >
+   </div>
+<!--l. 302--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">A.3.2   </span> <a 
+ id="x100-174000A.3.2"></a>Operações matriciais e elemento-a-elemento</h4><hr class="section">
+<!--l. 304--><p class="noindent" >Em <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">Python</span></span></span> com <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">numpy</span></span></span>, o operador <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">*</span></span></span> opera elemento a elemento. Por
+exemplo:
+                                                                          
+
+                                                                          
+   <div class="verbatim" id="verbatim-55">
+&#x003E;&#x003E;&#x003E;&#x00A0;A&#x00A0;=&#x00A0;np.array([[1,2],[2,1]]);&#x00A0;print(A)
+&#x00A0;<br />[[1&#x00A0;2]
+&#x00A0;<br />&#x00A0;[2&#x00A0;1]]
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;B&#x00A0;=&#x00A0;np.array([[2,1],[2,1]]);&#x00A0;print(B)
+&#x00A0;<br />[[2&#x00A0;1]
+&#x00A0;<br />&#x00A0;[2&#x00A0;1]]
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;print(A*B)
+&#x00A0;<br />[[2&#x00A0;2]
+&#x00A0;<br />&#x00A0;[4&#x00A0;1]]
+</div>
+<!--l. 315--><p class="nopar" >A multiplicação matricial obtemos com:
+                                                                          
+
+                                                                          
+   <div class="verbatim" id="verbatim-56">
+&#x003E;&#x003E;&#x003E;&#x00A0;C&#x00A0;=&#x00A0;A.dot(B)
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;print(C)
+&#x00A0;<br />[[6&#x00A0;3]
+&#x00A0;<br />&#x00A0;[6&#x00A0;3]]
+</div>
+<!--l. 322--><p class="nopar" >
+<!--l. 324--><p class="indent" >   Aqui, temos as sintaxes análogas entre operações elemento-a-elemento:
+                                                                          
+
+                                                                          
+   <div class="verbatim" id="verbatim-57">
++&#x00A0;adição
+&#x00A0;<br />-&#x00A0;subtração
+&#x00A0;<br />*&#x00A0;multiplicação
+&#x00A0;<br />/&#x00A0;divisão
+&#x00A0;<br />**&#x00A0;potenciação
+</div>
+<!--l. 331--><p class="nopar" >
+   <div class="newtheorem">
+<!--l. 333--><p class="noindent" ><span class="head">
+<a 
+ id="x100-174001r4"></a>
+<span 
+class="ec-lmbx-12">Exemplo A.3.4.</span>  </span>Veja as seguintes linhas de comando:
+                                                                          
+
+                                                                          
+   <div class="verbatim" id="verbatim-58">
+&#x003E;&#x003E;&#x003E;&#x00A0;A&#x00A0;=&#x00A0;np.ones((2,2))
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A
+&#x00A0;<br />array([[&#x00A0;1.,&#x00A0;&#x00A0;1.],
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[&#x00A0;1.,&#x00A0;&#x00A0;1.]])
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;B&#x00A0;=&#x00A0;2&#x00A0;*&#x00A0;np.ones((2,2))
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;B
+&#x00A0;<br />array([[&#x00A0;2.,&#x00A0;&#x00A0;2.],
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[&#x00A0;2.,&#x00A0;&#x00A0;2.]])
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A*B
+&#x00A0;<br />array([[&#x00A0;2.,&#x00A0;&#x00A0;2.],
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[&#x00A0;2.,&#x00A0;&#x00A0;2.]])
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A.dot(B)
+&#x00A0;<br />array([[&#x00A0;4.,&#x00A0;&#x00A0;4.],
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[&#x00A0;4.,&#x00A0;&#x00A0;4.]])
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A/B
+&#x00A0;<br />array([[&#x00A0;0.5,&#x00A0;&#x00A0;0.5],
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[&#x00A0;0.5,&#x00A0;&#x00A0;0.5]])
+</div>
+<!--l. 353--><p class="nopar" >
+   </div>
+                                                                          
+
+                                                                          
+   <!--l. 356-->
+<!--l. 356--><p class="indent" >   <a 
+ id="tailriap-matrizes.html"></a>   
+<div class="text-center">
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="riap-elementos_da_linguagem.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-chevron-left">
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#riap-matrizes.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="riap-estruturas_de_ramificacao_e_repeticao.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-chevron-right">
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
+</div>
+<p style="font-size: small; margin-top:10px;">* As versões do livro disponíveis no site podem estar desatualizadas, veja a 
+<a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
+target="_blank">versão PDF atual</a> no <a href="https://github.com/livroscolaborativos/CalculoNumerico"
+target="_blank">repositório GitHub oficial</a> do projeto.</p>
+
+<div class="panel panel-default">
+	    <div class="panel-body">
+	    	<div class="row">
+	    	<div class="col-md-3">
+   	   <ul class="list-unstyled">
+				<li>Livro
+				<ul class="list-unstyled">
+			<li><a
+			       href="../livro/main.html">Versão Scilab</a></li>
+			<li><a href="../livro-py/main.html">Versão Python</a></li>
+	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
+	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
+				</ul>
+      		</li>
+      		</ul>
+      		</div>
+      		<div class="col-md-3">
+      		<ul class="list-unstyled">
+      		<li>Projeto
+				<ul class="list-unstyled">
+	  				<li><a href="../index.html">Página Inicial</a></li>
+	  				<li><a href="../participe.html">Participe</a></li>
+	  				<li><a href="../organizadores.html">Organizadores</a></li>
+	  				<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+				</ul>
+      		</li>
+    			</ul>
+    			</div>
+	     		<div class="col-md-3">
+      		<ul class="list-unstyled">
+      		<li>IME - UFRGS
+				<ul class="list-unstyled">
+	  				<li><a href="http://www.ufrgs.br/mat" target="_blank">Página do IME</a></li>
+	  				<li><a href="http://www.ufrgs.br" target="_blank">Página da UFRGS</a></li>
+				</ul>
+      		</li>
+    			</ul>
+    			</div>
+  			</div>
+     </div>
+     <div class="panel-footer">
+	 <div class="row">
+				<img src="../favicon.ico" alt="UFRGS"> UFRGS - IME - Cálculo Numérico - Um Livro Colaborativo. 
+				Contato: <a href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a>.
+      </div>
+      </div>
+</div>
+
+</div></div>
+
+</body>
+</html>
+ 

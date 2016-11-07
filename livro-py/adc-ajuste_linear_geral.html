@@ -1,0 +1,946 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="pt" > 
+<head><title>Ajuste linear geral</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,3,notoc*,info --> 
+<meta name="src" content="main.tex"> 
+<meta name="date" content="2016-11-07 01:12:00"> 
+<link rel="stylesheet" type="text/css" href="main.css"> 
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Ajuste linear geral, Ajuste polinomial'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="new_main.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61232881-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<div class="row">
+  <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="../index.html">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+			<li><a href="../index.html">Projeto</a></li>
+	       <li class="dropdown">
+          <a class="active" href="#" class="dropdown-toggle" data-toggle="dropdown" 
+          role="button" aria-haspopup="true" aria-expanded="false">Livro
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          	<li><a href="../livro-py/main.html">Sumário</a></li>
+            <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
+            <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
+            <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="../livro/main.html">Versão Scilab</a></li>
+          </ul>
+        </li>		
+			<li><a href="../participe.html">Participe</a></li>
+			<li><a
+				href="https://github.com/livroscolaborativos/CalculoNumerico"
+				target="_blank">Repositório</a></li>
+			<li><a href="../organizadores.html">Organizadores</a></li>
+			<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="text-center">
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="adc-ajuste_de_uma_reta.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-chevron-left">
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#adc-ajuste_linear_geral.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="adc-aproximando_problemas_nao_lineares_por_problemas_lineares.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-chevron-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
+</div>
+   <!--l. 245-->
+   <h3 class="sectionHead"><span class="titlemark">7.2   </span> <a 
+ id="x61-1050007.2"></a>Ajuste linear geral</h3><hr class="section">
+<a 
+ id="dx61-105001"></a>
+<!--l. 247--><p class="noindent" >O problem geral de ajuste linear consiste em dada uma família <img 
+src="main2992x.png" alt="F "  class="math" > gerada pelo
+conjunto de <img 
+src="main2993x.png" alt="m  "  class="math" > funções <img 
+src="main2994x.png" alt="{f1(x),f2(x),...,fm (x )} "  class="math" > e um conjunto de <img 
+src="main2995x.png" alt="n  "  class="math" > pontos
+<img 
+src="main2996x.png" alt="{(x1,y1)  "  class="math" >, <img 
+src="main2997x.png" alt="(x2,y2)  "  class="math" >, <img 
+src="main2998x.png" alt="...  "  class="math" >, <img 
+src="main2999x.png" alt="(xn,yn)} "  class="math" >, calcular os coeficientes <img 
+src="main3000x.png" alt="a1   "  class="math" >, <img 
+src="main3001x.png" alt="a2   "  class="math" >, <img 
+src="main3002x.png" alt="...  "  class="math" >, <img 
+src="main3003x.png" alt="am  "  class="math" >
+tais que a função dada por
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3004x.png" alt="       &sum;m
+f(x ) =    ajfj(x ) = a1f1(x) + a2f2 (x ) + ...+ amfm (x)
+       j=1
+" class="math-display" ></center></td></tr></table>
+<!--l. 250--><p class="nopar" >
+minimiza o resíduo
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3005x.png" alt="    &sum;n            2
+R =     [f (xi) &minus; yi] .
+     i=1
+                                                                          
+
+                                                                          
+" class="math-display" ></center></td></tr></table>
+<!--l. 254--><p class="nopar" >
+Aqui, a minimização é feita por todas as possíveis escolhas dos coeficientes <img 
+src="main3006x.png" alt="a1   "  class="math" >,
+<img 
+src="main3007x.png" alt="a2   "  class="math" >, <img 
+src="main3008x.png" alt="...  "  class="math" >, <img 
+src="main3009x.png" alt="am  "  class="math" >.
+<!--l. 257--><p class="indent" >   Com o objetivo de tornar a desenvolvimento mais claro, vamos escrever <img 
+src="main3010x.png" alt="R  "  class="math" >
+como a soma dos resíduos parciais:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3011x.png" alt="     n
+R = &sum;   R ,  onde   R  :=  [f (x ) &minus; y ]2 .
+     i=1  i           i        i    i
+" class="math-display" ></center></td></tr></table>
+<!--l. 260--><p class="nopar" >
+Do fato que <img 
+src="main3012x.png" alt="        &sum;m
+f(xi) =   j=1 ajfj(xi)  "  class="math" >, temos que cada resíduo pode ser escrito
+como
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3013x.png" alt="      &lfloor;&sum;m             &rfloor; 2
+Ri =  &lceil;   ajfj(xi) &minus; yi&rceil;  .
+       j=1
+" class="math-display" ></center></td></tr></table>
+<!--l. 264--><p class="nopar" >
+<!--l. 266--><p class="indent" >   A fim de encontrar o ponto de mínimo, resolvemos o sistema oriundo de
+igualar a zero cada uma das derivadas parciais de <img 
+src="main3014x.png" alt="R  "  class="math" > em relação aos <img 
+src="main3015x.png" alt="m  "  class="math" >
+                                                                          
+
+                                                                          
+coeficientes <img 
+src="main3016x.png" alt="aj  "  class="math" >, i.e. devemos resolver: <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main3017x.png" alt="            n           n &lfloor; m              &rfloor;
+ &part;R-- =   2 &sum;  &part;Ri-=  2&sum;  &lceil; &sum;  a f (x ) &minus; y &rceil; f (x) = 0,
+ &part;a1        i=1 &part;a1     i=1  j=1  j j  i    i   1  i
+                          &lfloor;                &rfloor;
+ &part;R         n&sum;  &part;Ri     &sum;n   m&sum;
+ &part;a-- =   2    &part;a--=  2   &lceil;    ajfj(xi) &minus; yi&rceil; f2(xi) = 0,
+   2        i=1   2     i=1  j=1
+       ..
+       .                   &lfloor;               &rfloor;
+-&part;R--       n&sum;  &part;Ri--    n&sum;   &sum;m
+&part;a    =   2    &part;a   = 2    &lceil;   ajfj(xi) &minus; yi&rceil; fm (xi) = 0.
+   m        i=1   m      i=1  j=1
+" class="math-display" ></center>
+</div>
+<!--l. 274--><p class="indent" >   Dividindo cada equação por 2 e escrevendo na forma matricial, obtemos
+<img 
+src="main3018x.png" alt="M  a = w  "  class="math" >, onde a matriz <img 
+src="main3019x.png" alt="M  "  class="math" > é dada por: <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main3020x.png" alt="      &lfloor;   &sum;n       2     n&sum;                     n&sum;              &rfloor;
+      |   i=1f1(xi)      i=1 f2(xi)f1(xi)   &sdot;&sdot;&sdot;  i=1 fm(xi)f1(xi)|
+      || &sum;n                 &sum;n       2          n&sum;              ||
+      ||    f1(xi)f2(xi)        f2(xi)      &sdot;&sdot;&sdot;     fm(xi)f2(xi)||
+      || i=&sum;1n               n&sum; i=1                 i=n&sum;1             ||
+M  =  ||    f1(xi)f3(xi)      f2(xi)f3(xi)   &sdot;&sdot;&sdot;     fm(xi)f3(xi)||.
+      || i=1     .         i=1     .         .    i=1     .       ||
+      ||        ..                ..          ..         ..       ||
+      |&lceil; n&sum;                n&sum;                       &sum;n       2   |&rceil;
+          f1 (xi)fm (xi)    f2(xi)fm (xi)   &sdot;&sdot;&sdot;       fm (xi)
+       i=1              i=1                      i=1
+" class="math-display" ></center>
+</div>E os vetores <img 
+src="main3021x.png" alt="a  "  class="math" > e <img 
+src="main3022x.png" alt="w  "  class="math" >, por: <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main3023x.png" alt="                          &lfloor;  &sum;n          &rfloor;
+    &lfloor;     &rfloor;               |     f1(xi)yi |
+       a1                 ||  i=&sum;1n          ||
+    ||     ||               ||     f2(xi)yi ||
+    ||  a2 ||               ||  i=&sum;1n          ||
+a = ||  .  ||     e     w = ||     f3(xi)yi ||
+    ||  ..  ||               ||  i=1   .      ||
+    &lceil;     &rceil;               ||       ..      ||
+      am                  |&lceil;  n&sum;           |&rceil;
+                                fm(xi)yi
+                             i=1
+" class="math-display" ></center>
+</div>
+<!--l. 303--><p class="indent" >   Agora, observamos que <img 
+src="main3024x.png" alt="M  = V TV  "  class="math" > e <img 
+src="main3025x.png" alt="w =  V Ty  "  class="math" >, onde a matriz <img 
+src="main3026x.png" alt="V  "  class="math" > é dada
+por:
+   <table 
+class="equation-star"><tr><td>
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main3027x.png" alt="     &lfloor;                            &rfloor;
+
+     || f1(x1)  f2(x1)  &sdot;&sdot;&sdot;  fm(x1)||
+     || f1(x2)  f2(x2)  &sdot;&sdot;&sdot;  fm(x2)||
+     ||                            ||
+V  = || f1(x3)  f2(x3)  &sdot;&sdot;&sdot;  fm(x3)||
+     ||   .       .     .       .  ||
+     ||   ..       ..      ..     ..  ||
+     &lceil;                            &rceil;
+       f1(xn )  f2(xn )  &sdot;&sdot;&sdot;  fm(xn)
+" class="math-display" ></center></td></tr></table>
+<!--l. 312--><p class="nopar" >
+e é o vetor coluna <img 
+src="main3028x.png" alt="y = (y ,y ,...,y )
+      1  2      N  "  class="math" >,
+<!--l. 315--><p class="indent" >   Então, o problema de ajuste se reduz a resolver o sistema linear <img 
+src="main3029x.png" alt="M a = w  "  class="math" >, ou
+<img 
+src="main3030x.png" alt="V TV a = V Ty  "  class="math" >. Este sistema linear tem solução única se a matriz <img 
+src="main3031x.png" alt="M  "  class="math" > for inversível.
+O teorema a seguir mostra que isto acontece sempre a matriz <img 
+src="main3032x.png" alt="V  "  class="math" > possui posto
+<img 
+src="main3033x.png" alt="m  "  class="math" >, ou seja, o número de linhas linearmente independentes for igual ao número de
+colunas.<span class="footnote-mark"><a 
+href="main62.html#fn1x10"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x61-105005f1"></a> 
+   <div class="newtheorem">
+<!--l. 318--><p class="noindent" ><span class="head">
+<a 
+ id="x61-105006r1"></a>
+<span 
+class="ec-lmbx-12">Teorema 7.2.1.</span>  </span><span 
+class="ec-lmri-12">A  matriz</span>  <img 
+src="main3034x.png" alt="       T
+M  = V  V  "  class="math" >  <span 
+class="ec-lmri-12">é  quadrada  de  ordem</span>  <img 
+src="main3035x.png" alt="m  "  class="math" >  <span 
+class="ec-lmri-12">e  </span><span 
+class="ec-lmri-12">é</span>
+<span 
+class="ec-lmri-12">invers</span><span 
+class="ec-lmri-12">ível sempre que o posto da matriz</span> <img 
+src="main3036x.png" alt="V  "  class="math" > <span 
+class="ec-lmri-12">é igual a n</span><span 
+class="ec-lmri-12">úmero de colunas</span> <img 
+src="main3037x.png" alt="m  "  class="math" ><span 
+class="ec-lmri-12">.</span>
+   </div>
+<!--l. 321--><p class="indent" >   <div class="container-fluid">
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo1">Demonstração</button>
+<div id="demo1" class="collapse out">
+ <div class="prova"><span 
+class="ec-lmbx-12">Demonstra</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão. </span>Para provar que <img 
+src="main3038x.png" alt="M  "  class="math" > é inversível, precisamos mostrar que se
+<img 
+src="main3039x.png" alt="v  "  class="math" > é um vetor de ordem <img 
+src="main3040x.png" alt="m  "  class="math" > e <img 
+src="main3041x.png" alt="M v = 0  "  class="math" >, então <img 
+src="main3042x.png" alt="v =  0  "  class="math" >. Suponha, então, que
+<img 
+src="main3043x.png" alt="M  v = 0  "  class="math" >, isto é, <img 
+src="main3044x.png" alt=" T
+V  V v = 0  "  class="math" >. Tomando o produto interno da expressão
+<img 
+src="main3045x.png" alt="V TV v = 0  "  class="math" > com <img 
+src="main3046x.png" alt="v  "  class="math" >, temos:
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main3047x.png" alt="    &#x27E8;        &#x27E9;
+0 =  V TV v,v  = &#x27E8;V v,V v&#x27E9; = &#x2225;V v&#x2225;2   " class="math-display" ></center>
+Portato <img 
+src="main3048x.png" alt="M  v = 0  "  class="math" > implica obrigatoriamente <img 
+src="main3049x.png" alt="Vv = 0  "  class="math" >. Como o posto de <img 
+src="main3050x.png" alt="V  "  class="math" > é
+igual ao número de colunas, <img 
+src="main3051x.png" alt="v  "  class="math" > precisar ser o vetor nulo.
+                                                                          <div class="flushright" 
+>
+<!--l. 326--><p class="noindent" >
+ <img 
+src="main3052x.png" alt="&#x25A0; "  class="math" ></div>
+</div>
+<!--l. 326--><p class="indent" >   </div></div>
+   <div class="newtheorem">
+<!--l. 335--><p class="noindent" ><span class="head">
+<a 
+ id="x61-105007r1"></a>
+<span 
+class="ec-lmbx-12">Observa</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão 7.2.1.</span>  </span>Este problema é equivalente a resolver pelo métodos dos
+mínimos quadrados o seguinte sistema linear:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3053x.png" alt="&lfloor;                            &rfloor;         &lfloor;   &rfloor;
+                               &lfloor;   &rfloor;
+||f1(x1)  f2(x1)  &sdot;&sdot;&sdot;  fm (x1)||         || y1||
+||f (x )  f (x )  &sdot;&sdot;&sdot;  f  (x )|| ||a1 ||   || y ||
+|| 1  2    2  2         m   2 || ||a  ||   ||  2||
+||f1(x3)  f2(x3)  &sdot;&sdot;&sdot;  fm (x3)|| ||  2|| = || y3||
+||   .       .            .   || || ... ||   ||  .||
+||   ..       ..    ...     ..   || &lceil;   &rceil;   ||  ..||
+&lceil;                            &rceil;  am     &lceil;   &rceil;
+ f1(xn)  f2(xn)  &sdot;&sdot;&sdot;  fm (xn)            yn
+" class="math-display" ></center></td></tr></table>
+<!--l. 357--><p class="nopar" >
+   </div>
+<!--l. 360--><p class="indent" >   O caso de ajuste de um reta para um conjunto de pontos é um caso particular
+de ajuste linear.
+<!--l. 362--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x61-1050082"></a>
+                                                                          
+
+                                                                          
+<!--l. 364--><p class="noindent" ><img 
+src="main3054x.png" alt="PIC" class="graphics" width="215.80624pt" height="218.81749pt" ><!--tex4ht:graphics  
+name="main3054x.png" src="cap_ajuste/pics/ex_ajuste_reta2/ex_ajuste_reta2.eps"  
+-->
+<br /> <div class="caption" 
+><span class="id">Figura&#x00A0;7.2: </span><span  
+class="content">Gráfico da solução do problema apresentado no Exemplo&#x00A0;<a 
+href="#x61-105009r1">7.2.1<!--tex4ht:ref: ex:ajuste_reta2 --></a>.</span></div><!--tex4ht:label?: x61-1050082 -->
+                                                                          
+
+                                                                          
+<!--l. 367--><p class="indent" >   </div><hr class="endfigure">
+   <div class="newtheorem">
+<!--l. 369--><p class="noindent" ><span class="head">
+<a 
+ id="x61-105009r1"></a>
+<span 
+class="ec-lmbx-12">Exemplo 7.2.1.</span>  </span> Encontre a reta que melhor se ajusta aos pontos dados na
+seguinte tabela:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3055x.png" alt="    |
+ i  | 1     2     3     4     5
+----|------------------------------
+ xi |0,01  1,02  2,04  2,95   3,55
+    |
+ yi  1,99  4,55  7,20  9,51  10,82
+" class="math-display" ></center></td></tr></table>
+<!--l. 376--><p class="nopar" >
+   </div>
+<!--l. 378--><p class="indent" >   <span 
+class="ec-lmbx-12">Solu</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão. </span>O problema consiste em ajustar uma função da forma
+<img 
+src="main3056x.png" alt="f (x ) = a1 + a2x  "  class="math" > no conjunto de pontos dados. Notamos que <img 
+src="main3057x.png" alt="f (x )  "  class="math" > é uma
+função da família gerada pelo conjunto de funções <img 
+src="main3058x.png" alt="{f1(x) = 1,f2(x) = x } "  class="math" >.
+Então, aplicando o procedimento acima, temos que o vetor dos coeficientes
+<img 
+src="main3059x.png" alt="a = (a ,a )
+      1   2  "  class="math" > é solução por mínimos quadrados do sistema linear <img 
+src="main3060x.png" alt="V a = y  "  class="math" >,
+onde:
+   <table 
+class="equation-star"><tr><td>
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main3061x.png" alt="     &lfloor;               &rfloor;   &lfloor;       &rfloor;
+     | f1(x1)  f2(x1 )|   |1  0,01|
+     ||               ||   ||       ||
+     || f1(x2)  f2(x2 )||   ||1  1,02||
+V  = || f (x )  f (x  )||=  ||1  2,04|| .
+     ||  1  3    2  3 ||   ||       ||
+     || f1(x4)  f2(x4 )||   ||1  2,95||
+     |&lceil;               |&rceil;   |&lceil;       |&rceil;
+       f1(x5)  f2(x5 )     1  3,55
+" class="math-display" ></center></td></tr></table>
+<!--l. 395--><p class="nopar" >
+Ou seja, é a solução do sistema <img 
+src="main3062x.png" alt="  T        T
+V  V a = V  y  "  class="math" > dado por
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3063x.png" alt="&lfloor;             &rfloor; &lfloor;   &rfloor;   &lfloor;        &rfloor;
+|  5     9,57  | | a1|   |  34,07 |
+&lceil;             &rceil; &lceil;   &rceil; = &lceil;        &rceil;
+ 9,57  26,5071    a2      85,8144
+" class="math-display" ></center></td></tr></table>
+<!--l. 410--><p class="nopar" >
+A solução desse sistema é <img 
+src="main3064x.png" alt="a  = 1,9988251
+  1  "  class="math" > e <img 
+src="main3065x.png" alt="a  = 2,5157653
+ 2  "  class="math" >. A Figura&#x00A0;<a 
+href="#x61-1050082">7.2<!--tex4ht:ref: fig:ex_ajuste_reta2 --></a>,
+apresenta um gráfico dos pontos e da reta ajustada.
+                                                                          <div class="flushright" 
+>
+<!--l. 427--><p class="noindent" >
+ <img 
+src="main3066x.png" alt="&#x2662; "  class="math" ></div>
+<!--l. 429--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x61-1050103"></a>
+                                                                          
+
+                                                                          
+<!--l. 431--><p class="noindent" ><img 
+src="main3067x.png" alt="PIC" class="graphics" width="213.79874pt" height="206.77249pt" ><!--tex4ht:graphics  
+name="main3067x.png" src="cap_ajuste/pics/ex_ajuste_linear/ex_ajuste_linear.eps"  
+-->
+<br /> <div class="caption" 
+><span class="id">Figura&#x00A0;7.3: </span><span  
+class="content">Gráfico da solução do problema apresentado no Exemplo&#x00A0;<a 
+href="#x61-105011r2">7.2.2<!--tex4ht:ref: ex:ajuste_linear --></a>.</span></div><!--tex4ht:label?: x61-1050103 -->
+                                                                          
+
+                                                                          
+<!--l. 434--><p class="indent" >   </div><hr class="endfigure">
+   <div class="newtheorem">
+<!--l. 437--><p class="noindent" ><span class="head">
+<a 
+ id="x61-105011r2"></a>
+<span 
+class="ec-lmbx-12">Exemplo 7.2.2.</span>  </span> Encontre a função <img 
+src="main3068x.png" alt="f (x) = a1sen (&pi;x) + a2cos(&pi;x )  "  class="math" > que
+melhor se ajusta pelo critérios dos mínimos quadrados aos seguintes pontos
+dados
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3069x.png" alt="    |
+ i  |  1     2     3     4     5
+----|------------------------------
+ xi |0,00   0,25   0,50  0,75  1,00
+    |
+ yi |&minus; 153   64   242   284   175
+" class="math-display" ></center></td></tr></table>
+<!--l. 444--><p class="nopar" >
+   </div>
+<!--l. 446--><p class="indent" >   <span 
+class="ec-lmbx-12">Solu</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão. </span>Pelo procedimento visto nesta seção, temos que os coeficientes <img 
+src="main3070x.png" alt="a1   "  class="math" > e
+<img 
+src="main3071x.png" alt="a2   "  class="math" > são dados pela solução por mínimos quadrados do seguinte sistema linear
+<img 
+src="main3072x.png" alt="V a = y  "  class="math" >
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3073x.png" alt="a1 sen (&pi;x1 ) + a2 cos(&pi;x1 ) = y1
+
+a1 sen (&pi;x2 ) + a2 cos(&pi;x2 ) = y2
+a1 sen (&pi;x3 ) + a2 cos(&pi;x3 ) = y3
+
+a1 sen (&pi;x4 ) + a2 cos(&pi;x4 ) = y4
+a1 sen (&pi;x5 ) + a2 cos(&pi;x5 ) = y5
+" class="math-display" ></center></td></tr></table>
+<!--l. 456--><p class="nopar" >
+cuja matriz de coeficientes <img 
+src="main3074x.png" alt="V  "  class="math" > é:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3075x.png" alt="     &lfloor;                      &rfloor;
+     ||   sin(0)      cos(0)  ||
+     || sin(0,25&pi;)  cos(0,25&pi;)||
+     ||                      ||
+     || sin(0,5 &pi;)   cos(0,5 &pi;)||
+V =  ||                      ||
+     || sin(0,75&pi;)  cos(0,75&pi;)||
+     ||                      ||
+     |   sin(&pi;)      cos(&pi;)  |
+     &lceil;                      &rceil;
+" class="math-display" ></center></td></tr></table>
+<!--l. 466--><p class="nopar" >
+<!--l. 468--><p class="indent" >   Então, a solução por mínimos quadrados é
+   <table 
+class="equation-star"><tr><td>
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main3076x.png" alt="                     &lfloor;           &rfloor;
+       T   &minus;1  T     | 244,03658 |
+a = (V  V )  V  y =  &lceil;           &rceil; .
+                      &minus; 161,18783
+" class="math-display" ></center></td></tr></table>
+<!--l. 475--><p class="nopar" >
+Ou seja, <img 
+src="main3077x.png" alt="f(x) = 244,03658 sen (&pi;x) &minus; 161,18783 cos(&pi;x)  "  class="math" > é a função ajustada ao
+conjunto de pontos dados. A Figura&#x00A0;<a 
+href="#x61-1050103">7.3<!--tex4ht:ref: fig:ex_ajuste_linear --></a> apresenta o gráfica de <img 
+src="main3078x.png" alt="f(x )  "  class="math" > e dos pontos
+dados.
+                                                                          <div class="flushright" 
+>
+<!--l. 505--><p class="noindent" >
+ <img 
+src="main3079x.png" alt="&#x2662; "  class="math" ></div>
+   <h4 class="subsectionHead"><span class="titlemark">7.2.1   </span> <a 
+ id="x61-1060007.2.1"></a>Ajuste polinomial</h4><hr class="section">
+<a 
+ id="dx61-106001"></a>
+<!--l. 584--><p class="noindent" >O <span 
+class="ec-lmbx-12">ajuste polinomial </span>é o caso particular do ajuste linear para <span 
+class="ec-lmbx-12">fun</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ões</span>
+<span 
+class="ec-lmbx-12">polinomiais</span>, isto é, funções do tipo
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3080x.png" alt="p(x) = a1 + a2x + &sdot;&sdot;&sdot; + amxm &minus;1.
+" class="math-display" ></center></td></tr></table>
+<!--l. 587--><p class="nopar" >
+<!--l. 589--><p class="indent" >   Neste caso, a matriz <img 
+src="main3081x.png" alt="V  "  class="math" > associada ao ajuste dos pontos <img 
+src="main3082x.png" alt="{(x1,y1)  "  class="math" >, <img 
+src="main3083x.png" alt="(x2, y2)  "  class="math" >,
+<img 
+src="main3084x.png" alt="(x3,y3)  "  class="math" >, <img 
+src="main3085x.png" alt="...  "  class="math" >, <img 
+src="main3086x.png" alt="(xn,yn)} "  class="math" > é dada por:
+   <table 
+class="equation-star"><tr><td>
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main3087x.png" alt="     &lfloor;                      &rfloor;
+     | 1  x1  x21  &sdot;&sdot;&sdot;  xm1&minus;1|
+     ||                      ||
+     || 1  x2  x22  &sdot;&sdot;&sdot;  xm2&minus;1||
+     ||         2         m&minus;1||
+V  = || 1  x3  x3  &sdot;&sdot;&sdot;  x 3  ||
+     || ..   ..       ...    ..  ||
+     |&lceil; .   .             .  |&rceil;
+       1  x   x2  &sdot;&sdot;&sdot;  xm &minus;1
+           n   n         n
+" class="math-display" ></center></td></tr></table>
+<!--l. 599--><p class="nopar" >
+Então, os coeficientes <img 
+src="main3088x.png" alt="ai  "  class="math" >, <img 
+src="main3089x.png" alt="i = 1,2, ...,m  "  class="math" >, são dados pela solução do sistema
+linear <img 
+src="main3090x.png" alt="V T Va =  vTy  "  class="math" >:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3091x.png" alt="&lfloor;            n            n      &rfloor;           &lfloor;    n      &rfloor;
+|    n      &sum;  xj  &sdot;&sdot;&sdot;   &sum;  xmj &minus;1| &lfloor;     &rfloor;   |   &sum;  yj   |
+||           j=1          j=1      || |  a1 |   ||   j=1     ||
+||  &sum;n x     &sum;n x2         &sum;n xm  || ||     ||   ||  &sum;n x y   ||
+||  j=1 j    j=1 j         j=1  j  || ||  a2 || = ||  j=1 j j  ||
+||    ..              ..      ..    || ||  ...  ||   ||     ..     ||
+||    .               .      .    || |&lceil;     |&rceil;   ||     .     ||
+&lceil; n&sum;  xm&minus; 1  n&sum;  xm  &sdot;&sdot;&sdot;   n&sum; x2m &minus;1&rceil;  ap+1     &lceil; n&sum;  xm&minus; 1y &rceil;
+ j=1  j    j=1  j       j=1  j     &#x25DF;-&#x25DD;&#x25DC;--&#x25DE;     j=1  j    j
+&#x25DF;---------------&#x25DD;&#x25DC;----------------&#x25DE;   a      &#x25DF;-----&#x25DD;&#x25DC;-----&#x25DE;
+               V TV                               VTy
+" class="math-display" ></center></td></tr></table>
+<!--l. 620--><p class="nopar" >
+                                                                          
+
+                                                                          
+<!--l. 622--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x61-1060024"></a>
+                                                                          
+
+                                                                          
+<!--l. 624--><p class="noindent" ><img 
+src="main3092x.png" alt="PIC" class="graphics" width="213.79874pt" height="203.76125pt" ><!--tex4ht:graphics  
+name="main3092x.png" src="cap_ajuste/pics/ex_ajuste_polinomial/ex_ajuste_polinomial.eps"  
+-->
+<br /> <div class="caption" 
+><span class="id">Figura&#x00A0;7.4: </span><span  
+class="content">Gráfico da solução do problema apresentado no Exemplo&#x00A0;<a 
+href="#x61-106003r3">7.2.3<!--tex4ht:ref: ex:ajuste_polinomial --></a>.</span></div><!--tex4ht:label?: x61-1060024 -->
+                                                                          
+
+                                                                          
+<!--l. 627--><p class="indent" >   </div><hr class="endfigure">
+   <div class="newtheorem">
+<!--l. 630--><p class="noindent" ><span class="head">
+<a 
+ id="x61-106003r3"></a>
+<span 
+class="ec-lmbx-12">Exemplo 7.2.3.</span>  </span> Entre o polinômio de grau 2 que melhor se ajusta aos pontos
+dados na seguinte tabela:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3093x.png" alt="    |
+ i  |  1     2     3     4     5
+----|------------------------------
+ xi |0,00   0,25   0,50  0,75  1,00
+    |
+ yi |&minus; 153   64   242   284   175
+" class="math-display" ></center></td></tr></table>
+<!--l. 637--><p class="nopar" >
+   </div>
+<!--l. 639--><p class="indent" >   <span 
+class="ec-lmbx-12">Solu</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão. </span>Um polinômio de grau 2 pode ser escrito na seguinte forma:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3094x.png" alt="p(x) = a1 + a2x + a3x2.
+" class="math-display" ></center></td></tr></table>
+                                                                          
+
+                                                                          
+<!--l. 643--><p class="nopar" >
+Assim, o problema se resume em encontrarmos a solução por mínimos quadrados
+do seguinte sistema linear:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3095x.png" alt="a  + a x  + a x2 =  y
+  1   2  1   3  1    1
+a2 + a2x2 + a3x22 = y2
+a  + a x  + a x2 =  y
+  3   2  3   3  32    3
+a4 + a2x4 + a3x 4 = y4
+a5 + a2x5 + a3x2 =  y5
+                5
+" class="math-display" ></center></td></tr></table>
+<!--l. 653--><p class="nopar" >
+Ou, escrita na forma matricial, <img 
+src="main3096x.png" alt="V a = y  "  class="math" >, onde:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3097x.png" alt="      &lfloor;         &rfloor;
+               2
+      ||1  x1  x1||
+      ||1  x   x2||
+      ||    2   2||
+V  =  ||1  x3  x2||
+      ||        3||
+      ||1  x4  x24||
+      &lceil;         &rceil;
+       1  x5  x25
+" class="math-display" ></center></td></tr></table>
+<!--l. 664--><p class="nopar" >
+<!--l. 666--><p class="indent" >   A solução por mínimos quadrados é, então:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3098x.png" alt="                    &lfloor;            &rfloor;
+                     &minus; 165,37143
+                    ||            ||
+a = (VT V )&minus; 1VT y = || 1250,9714  ||
+                    |&lceil;            |&rceil;
+                     &minus; 900,57143
+" class="math-display" ></center></td></tr></table>
+<!--l. 674--><p class="nopar" >
+Ou seja, o polinômio de grau 2 que melhor ajusta os pontos dados no sentido de
+mínimos quadrados é <img 
+src="main3099x.png" alt="                                              2
+p (x ) = &minus; 165,37143 + 1250,9714x &minus; 900,57143x   "  class="math" >. A
+Figura&#x00A0;<a 
+href="#x61-1060024">7.4<!--tex4ht:ref: fig:ex_ajuste_polinomial --></a> mostra o gráfico do polinômio ajustado e os pontos dados.
+                                                                          <div class="flushright" 
+>
+<!--l. 695--><p class="noindent" >
+ <img 
+src="main3100x.png" alt="&#x2662; "  class="math" ></div>
+   <h4 class="likesubsectionHead"><a 
+ id="x61-1070007.2.1"></a>Exercícios</h4><hr class="section">
+                                                                          
+
+                                                                          
+   <div class="newtheorem">
+<!--l. 756--><p class="noindent" ><span class="head">
+<a 
+ id="x61-107001r1"></a>
+<span 
+class="ec-lmbx-12">E 7.2.1.</span>  </span>Encontre o polinômio <img 
+src="main3101x.png" alt="p(x ) = a1 + a2x + a3x2   "  class="math" > que melhor se ajusta no
+sentido de mínimos quadrados aos pontos:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3102x.png" alt="   |
+   |
+-i-|---1------2------3-----4---
+ x |&minus; 1,50  &minus; 0,50  1,25   1,50
+  i|
+ yi| 1,15   &minus; 0,37  0,17   0,94
+" class="math-display" ></center></td></tr></table>
+<!--l. 764--><p class="nopar" >
+   </div>
+<!--l. 766--><p class="noindent" ><span 
+class="ec-lmbx-6">Resposta.</span>  <img 
+src="main3103x.png" alt="a1 = &minus;0,1946029  "  class="math" ><span 
+class="ec-lmr-6">,</span> <img 
+src="main3104x.png" alt="a2 = 0,585986  "  class="math" ><span 
+class="ec-lmr-6">,</span> <img 
+src="main3105x.png" alt="a3 =&minus; 0,0112599  "  class="math" ><span 
+class="ec-lmr-6">.</span>
+   <div class="newtheorem">
+<!--l. 772--><p class="noindent" ><span class="head">
+<a 
+ id="x61-107002r2"></a>
+<span 
+class="ec-lmbx-12">E 7.2.2.</span>  </span>Encontrar a parábola <img 
+src="main3106x.png" alt="       2
+y =  ax +  bx + c  "  class="math" > que melhor aproxima o seguinte
+conjunto de dados:
+   <table 
+class="equation-star"><tr><td>
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main3107x.png" alt="    |
+-i--|-1-----2-----3-----4-----5----
+    |
+ xi |0,01  1,02  2,04  2,95   3,55
+ y  |1,99  4,55  7,20  9,51  10,82
+  i
+" class="math-display" ></center></td></tr></table>
+<!--l. 779--><p class="nopar" >
+   </div>
+<!--l. 781--><p class="noindent" ><span 
+class="ec-lmbx-6">Resposta.</span>  <img 
+src="main3108x.png" alt="y= &minus;0,0407898x2+2,6613293x+ 1,9364598  "  class="math" ><span 
+class="ec-lmr-6">.</span>
+   <div class="newtheorem">
+<!--l. 787--><p class="noindent" ><span class="head">
+<a 
+ id="x61-107003r3"></a>
+<span 
+class="ec-lmbx-12">E 7.2.3.</span>  </span>Dado o seguinte conjunto de dados
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3109x.png" alt="    |
+    |
+-xi-|0,0--0,1--0,2--0,3--0,4--0,5--0,6--0,7--0,8--0,9--1,0--
+ y  |31   35   37  33   28   20   16  15   18   23   31
+  i
+" class="math-display" ></center></td></tr></table>
+<!--l. 793--><p class="nopar" >
+                                                                          
+
+                                                                          
+      <ul class="itemize1">
+      <li class="itemize">Encontre  a  função  do  tipo  <img 
+src="main3110x.png" alt="f(x) = a + b sin(2&pi;x ) + ccos(2&pi;x )  "  class="math" >  que
+      melhor aproxima os valores dados.
+      </li>
+      <li class="itemize">Encontre  a  função  do  tipo  <img 
+src="main3111x.png" alt="f(x) = a + bx + cx2 + dx3   "  class="math" >  que  melhor
+      aproxima os valores dados.</li></ul>
+   </div>
+<!--l. 799--><p class="noindent" ><span 
+class="ec-lmbx-6">Resposta.  </span><span 
+class="ec-lmr-6">a)</span> <img 
+src="main3112x.png" alt="a= 25,638625  "  class="math" ><span 
+class="ec-lmr-6">,</span> <img 
+src="main3113x.png" alt="b= 9,8591874  "  class="math" ><span 
+class="ec-lmr-6">,</span> <img 
+src="main3114x.png" alt="c=4,9751219  "  class="math" ><span 
+class="ec-lmr-6">; b)</span><img 
+src="main3115x.png" alt="a =31,475524  "  class="math" ><span 
+class="ec-lmr-6">,</span> <img 
+src="main3116x.png" alt="b=65,691531  "  class="math" ><span 
+class="ec-lmr-6">,</span> <img 
+src="main3117x.png" alt="c= &minus;272,84382  "  class="math" ><span 
+class="ec-lmr-6">,</span>
+<img 
+src="main3118x.png" alt="d= 208,23621  "  class="math" ><span 
+class="ec-lmr-6">.</span>
+                                                                          
+
+                                                                          
+   <!--l. 863-->
+<!--l. 863--><p class="indent" >   <a 
+ id="tailadc-ajuste_linear_geral.html"></a>   
+<div class="text-center">
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="adc-ajuste_de_uma_reta.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-chevron-left">
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#adc-ajuste_linear_geral.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="adc-aproximando_problemas_nao_lineares_por_problemas_lineares.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-chevron-right">
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
+</div>
+<p style="font-size: small; margin-top:10px;">* As versões do livro disponíveis no site podem estar desatualizadas, veja a 
+<a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
+target="_blank">versão PDF atual</a> no <a href="https://github.com/livroscolaborativos/CalculoNumerico"
+target="_blank">repositório GitHub oficial</a> do projeto.</p>
+
+<div class="panel panel-default">
+	    <div class="panel-body">
+	    	<div class="row">
+	    	<div class="col-md-3">
+   	   <ul class="list-unstyled">
+				<li>Livro
+				<ul class="list-unstyled">
+			<li><a
+			       href="../livro/main.html">Versão Scilab</a></li>
+			<li><a href="../livro-py/main.html">Versão Python</a></li>
+	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
+	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
+				</ul>
+      		</li>
+      		</ul>
+      		</div>
+      		<div class="col-md-3">
+      		<ul class="list-unstyled">
+      		<li>Projeto
+				<ul class="list-unstyled">
+	  				<li><a href="../index.html">Página Inicial</a></li>
+	  				<li><a href="../participe.html">Participe</a></li>
+	  				<li><a href="../organizadores.html">Organizadores</a></li>
+	  				<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+				</ul>
+      		</li>
+    			</ul>
+    			</div>
+	     		<div class="col-md-3">
+      		<ul class="list-unstyled">
+      		<li>IME - UFRGS
+				<ul class="list-unstyled">
+	  				<li><a href="http://www.ufrgs.br/mat" target="_blank">Página do IME</a></li>
+	  				<li><a href="http://www.ufrgs.br" target="_blank">Página da UFRGS</a></li>
+				</ul>
+      		</li>
+    			</ul>
+    			</div>
+  			</div>
+     </div>
+     <div class="panel-footer">
+	 <div class="row">
+				<img src="../favicon.ico" alt="UFRGS"> UFRGS - IME - Cálculo Numérico - Um Livro Colaborativo. 
+				Contato: <a href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a>.
+      </div>
+      </div>
+</div>
+
+</div></div>
+
+</body>
+</html>
+ 

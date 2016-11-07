@@ -61,8 +61,8 @@ body{
 }
 
 
-.presentation .thumbnail{
-	width: 50%;
+.presentation .thumbnail {
+	width: 150px;
 }
 
 .panel {
@@ -84,6 +84,4 @@ body{
 .lista-organizadores a:focus {
   text-decoration: none;
   background-color: #eee;
-
 }
-

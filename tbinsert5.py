@@ -153,7 +153,14 @@ for index, f in enumerate (lfiles):
     text = text.replace("iso-8859-1","utf-8")
     
     #include head
-    head_aux_file = open("./head.html_aux", "r")
+    headname = []
+    if (sys.argv[1] == "livro"):
+        headname = "./head.html_aux"
+    elif (sys.argv[1] == "livro-py"):
+        headname = "./head-py.html_aux"
+    else:
+        raise NameError('This is not a valid option.')
+    head_aux_file = open(headname, "r")
     head_include = head_aux_file.read()
     
     #get chapterHead or sectionHead to include in <meta> keywords
@@ -172,7 +179,6 @@ for index, f in enumerate (lfiles):
         #likechapterHead
         s = text.find('<h2 class="likechapterHead">')
         if (s != -1):
-            print("\n\nlikechapter\n\n")
             auxText = text[s:]
             s = auxText.find('</a>')+4
             e = auxText.index('</h2>')
@@ -373,7 +379,6 @@ for index, f in enumerate (lfiles):
     file.close()
 
     fn = os.path.splitext(f)[0]
-    print(fn)
     ii = -1
     try:
         ii = [y[0] for y in lFilesAndTitles].index(fn)

@@ -92,13 +92,13 @@ rm -rf ./.tmp
 rm -rf ./.book_in_html
 
 #getting PDF
-cp ./$DIR_MASTER/main.pdf ./livro-py/main.pdf
+cp ./$DIR_MASTER/main-py.pdf ./livro-py/
 
 #getting EPUB
-cp ./$DIR_MASTER/main.epub ./livro-py/
+cp ./$DIR_MASTER/main-py.epub ./livro-py/
 
 #getting Slide
-cp ./$DIR_MASTER/slide.pdf ./livro-py/
+cp ./$DIR_MASTER/slide-py.pdf ./livro-py/
 
 ####################
 

@@ -1,0 +1,809 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="pt" > 
+<head><title>Condicionamento de um problema</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,3,notoc*,info --> 
+<meta name="src" content="main.tex"> 
+<meta name="date" content="2016-11-07 01:12:00"> 
+<link rel="stylesheet" type="text/css" href="main.css"> 
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Condicionamento de um problema'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="new_main.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61232881-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<div class="row">
+  <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="../index.html">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+			<li><a href="../index.html">Projeto</a></li>
+	       <li class="dropdown">
+          <a class="active" href="#" class="dropdown-toggle" data-toggle="dropdown" 
+          role="button" aria-haspopup="true" aria-expanded="false">Livro
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          	<li><a href="../livro-py/main.html">Sumário</a></li>
+            <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
+            <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
+            <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="../livro/main.html">Versão Scilab</a></li>
+          </ul>
+        </li>		
+			<li><a href="../participe.html">Participe</a></li>
+			<li><a
+				href="https://github.com/livroscolaborativos/CalculoNumerico"
+				target="_blank">Repositório</a></li>
+			<li><a href="../organizadores.html">Organizadores</a></li>
+			<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="text-center">
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="adm-cancelamento_catastrofico.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-chevron-left">
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#adm-condicionamento_de_um_problema.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="adm-mais_exemplos_de_cancelamento_catastrofico.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-chevron-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
+</div>
+   <!--l. 1101-->
+   <h3 class="sectionHead"><span class="titlemark">2.5   </span> <a 
+ id="x15-240002.5"></a>Condicionamento de um problema</h3><hr class="section">
+<!--l. 1102--><p class="noindent" >Nesta seção, utilizaremos a seguinte descrição abstrata para o conceito de
+&#8220;resolver um problema&#8221;: dado um conjunto de dados de entrada, encontrar os
+dados de saída. Se denotamos pela variável <img 
+src="main318x.png" alt="x  "  class="math" > os dados de entrada e pela
+variável <img 
+src="main319x.png" alt="y  "  class="math" > os dados de saída, resolver o problema significa encontrar <img 
+src="main320x.png" alt="y  "  class="math" > dado
+<img 
+src="main321x.png" alt="x  "  class="math" >. Em termos matemáticos, a resolução de um problema é realizada pelo
+mapeamento <img 
+src="main322x.png" alt="f : x &rarr; y  "  class="math" >, ou simplesmente <img 
+src="main323x.png" alt="y =  f(x)  "  class="math" >.
+<!--l. 1104--><p class="indent" >   É certo que na maioria das aplicações, os dados de entrada do problema, isto é
+<img 
+src="main324x.png" alt="x  "  class="math" >, não é conhecido com total exatidão, devido a diversas fontes de erros como
+incertezas na coleta dos dados e erros de arredondamento. O conceito de
+condicionamento está relacionado com a forma como os erros nos dados de
+entrada influenciam os dados de saída.
+<!--l. 1106--><p class="indent" >   Para fins de análise, denotaremos por <img 
+src="main325x.png" alt="x  "  class="math" >, os dados de entrada com precisão
+absoluta e por <img 
+src="main326x.png" alt=" &lowast;
+x  "  class="math" >, os dados com erro. Definiremos também a solução <img 
+src="main327x.png" alt=" &lowast;
+y  "  class="math" >, do
+problema com dados de entrada <img 
+src="main328x.png" alt="x &lowast;  "  class="math" >, ou seja, <img 
+src="main329x.png" alt="y &lowast; = f(x&lowast;)  "  class="math" >.
+<!--l. 1108--><p class="indent" >   Estamos interessados em saber se os erros cometidos na entrada <img 
+src="main330x.png" alt="&Delta;x =  x &minus; x&lowast;  "  class="math" >
+influenciaram na saída do problema <img 
+src="main331x.png" alt="&Delta;y  = y &minus; y &lowast;  "  class="math" >. No caso mais simples, temos
+que <img 
+src="main332x.png" alt="x &isin; &#x211D;  "  class="math" > e <img 
+src="main333x.png" alt="y &isin; &#x211D;  "  class="math" >. Assumindo que <img 
+src="main334x.png" alt="f  "  class="math" > seja diferenciável, a partir da série de
+Taylor
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main335x.png" alt="f(x + &Delta;x ) &asymp; f(x ) + f &prime;(x)&Delta;x
+" class="math-display" ></center></td></tr></table>
+                                                                          
+
+                                                                          
+<!--l. 1111--><p class="nopar" >
+obtemos (subtraindo <img 
+src="main336x.png" alt="f (x )  "  class="math" > dos dois lados)
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main337x.png" alt="&Delta;y =  f(x + &Delta;x ) &minus; f(x) &asymp; f &prime;(x)&Delta;x
+" class="math-display" ></center></td></tr></table>
+<!--l. 1115--><p class="nopar" >
+Para relacionarmos os erros relativos, dividimos o lado esquerdo por <img 
+src="main338x.png" alt="y  "  class="math" >, o lado
+direito por <img 
+src="main339x.png" alt="f (x) = y  "  class="math" > e obtemos
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main340x.png" alt="        &prime;
+&Delta;y--&asymp; f-(x) x&Delta;x--
+ y     f(x)  x
+" class="math-display" ></center></td></tr></table>
+<!--l. 1119--><p class="nopar" >
+sugerindo a definição de número de condicionamento de um problema.
+   <div class="newtheorem">
+<!--l. 1122--><p class="noindent" ><span class="head">
+<a 
+ id="x15-24001r1"></a>
+<span 
+class="ec-lmbx-12">Defini</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão 2.5.1.</span>  </span><span 
+class="ec-lmri-12">Seja</span> <img 
+src="main341x.png" alt="f  "  class="math" > <span 
+class="ec-lmri-12">uma fun</span><span 
+class="ec-lmri-12">ç</span><span 
+class="ec-lmri-12">ão diferenci</span><span 
+class="ec-lmri-12">ável. O </span><span 
+class="ec-lmbxi-10x-x-120">n</span><span 
+class="ec-lmbxi-10x-x-120">úmero de</span>
+<span 
+class="ec-lmbxi-10x-x-120">condicionamento </span><span 
+class="ec-lmri-12">de um problema </span><span 
+class="ec-lmri-12">é definido como</span>
+   <table 
+class="equation-star"><tr><td>
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main342x.png" alt="         ||xf &prime;(x )||
+&kappa;f (x) := ||------||
+         | f (x ) |
+" class="math-display" ></center></td></tr></table>
+<!--l. 1126--><p class="nopar" >
+<span 
+class="ec-lmri-12">e fornece uma estimativa de quanto os erros relativos na entrada</span> <img 
+src="main343x.png" alt="|  |
+||&Delta;xx|| "  class="math" > <span 
+class="ec-lmri-12">ser</span><span 
+class="ec-lmri-12">ão</span>
+<span 
+class="ec-lmri-12">amplificados na sa</span><span 
+class="ec-lmri-12">ída</span> <img 
+src="main344x.png" alt="||&Delta;y||
+|y | "  class="math" ><span 
+class="ec-lmri-12">.</span>
+   </div>
+<!--l. 1148--><p class="indent" >   De modo geral, quando <img 
+src="main345x.png" alt="f  "  class="math" > depende de várias variáveis, podemos obter
+<!--l. 1150--><p class="indent" >
+   <center class="math-display" >
+<img 
+src="main346x.png" alt="                                           |                |
+                                        &sum;n ||&part;f--            ||
+&delta;f = |f(x1,x2,...,xn ) &minus; f (¯x1, ¯x2,...,¯xn)| &asymp;  ||&part;x (x1,x2,...,xn)||&delta;xi
+                                        i=1    i
+" class="math-display" ></center>
+<!--l. 1154--><p class="indent" >   Uma matriz de números de condicionamento também poderia ser obtida como
+em [5].
+   <div class="newtheorem">
+<!--l. 1156--><p class="noindent" ><span class="head">
+<a 
+ id="x15-24002r1"></a>
+<span 
+class="ec-lmbx-12">Exemplo 2.5.1.</span>  </span>Considere o problema de calcular <img 
+src="main347x.png" alt="&radic; --
+  x  "  class="math" > em <img 
+src="main348x.png" alt="x = 2  "  class="math" >. Se usarmos
+<img 
+src="main349x.png" alt="  &lowast;
+x  = 1,999  "  class="math" >, quanto será o erro relativo na saída? O erro relativo na entrada
+é
+                                                                          
+
+                                                                          
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main350x.png" alt="||&Delta;x ||   ||2 &minus; 1,999 ||
+||---|| = ||---------|| = 0,0005
+| x |        2
+" class="math-display" ></center></td></tr></table>
+<!--l. 1160--><p class="nopar" >
+O número de condicionamento do problema calcular a raiz é
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main351x.png" alt="        ||   &prime;   ||  ||x -1&radic;-||
+&kappa;f(x) := ||xf-(x-)||= ||-&radic;2-x|| = 1-
+        | f (x ) |  ||   x ||   2
+" class="math-display" ></center></td></tr></table>
+<!--l. 1164--><p class="nopar" >
+Ou seja, os erros na entrada serão diminuídos pela metade. De fato, usando
+<img 
+src="main352x.png" alt="    &radic; --
+y =   2 = 1,4142136...  "  class="math" > e <img 
+src="main353x.png" alt=" &lowast;   &radic; ------
+y  =   1,999 = 1,41386...  "  class="math" >, obtemos
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main354x.png" alt="      &radic; --
+&Delta;y      2 &minus; &radic;1,999--
+----= -----&radic;------- &asymp;  0,000250031...
+ y           2
+" class="math-display" ></center></td></tr></table>
+<!--l. 1168--><p class="nopar" >
+   </div>
+   <div class="newtheorem">
+<!--l. 1172--><p class="noindent" ><span class="head">
+<a 
+ id="x15-24003r2"></a>
+<span 
+class="ec-lmbx-12">Exemplo 2.5.2.</span>  </span>Considere a função <img 
+src="main355x.png" alt="        -10-
+f (x) = 1&minus;x2   "  class="math" >  e <img 
+src="main356x.png" alt=" &lowast;
+x  = 0,9995  "  class="math" > com um
+erro absoluto na entrada de <img 
+src="main357x.png" alt="0,0001  "  class="math" >.
+<!--l. 1175--><p class="indent" >   Calculando <img 
+src="main358x.png" alt="y&lowast; = f (x&lowast;)  "  class="math" > temos
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main359x.png" alt=" &lowast;         10
+y  = 1-&minus;-(0,9995)2 &asymp;  10002,500625157739705173
+" class="math-display" ></center></td></tr></table>
+<!--l. 1178--><p class="nopar" >
+Mas qual é a estimativa de erro nessa resposta? Quantos dígitos significativos
+temos nessa resposta?
+<!--l. 1181--><p class="indent" >   Sabendo que <img 
+src="main360x.png" alt="f&prime;(x) = &minus; 10&#x2215;(1 &minus; x2)2   "  class="math" >, o número de condicionamento
+é
+   <table 
+class="equation-star"><tr><td>
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main361x.png" alt="         ||xf&prime;(x)||   || 2x2  ||
+&kappa;f(x) := ||------||=  ||------||
+         | f(x) |   |1 &minus; x2|
+" class="math-display" ></center></td></tr></table>
+<!--l. 1184--><p class="nopar" >
+o que nos fornece para <img 
+src="main362x.png" alt="x&lowast; = 0,9995  "  class="math" >,
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main363x.png" alt="&kappa;f (0,9995 ) &asymp; 1998,5
+" class="math-display" ></center></td></tr></table>
+<!--l. 1188--><p class="nopar" >
+Como o erro relativo na entrada é
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main364x.png" alt="|    |  |      |
+||&Delta;x  ||  ||0,0001||
+||----|| = ||-----|| &asymp; 0,00010005...
+  x      0,9995
+" class="math-display" ></center></td></tr></table>
+<!--l. 1192--><p class="nopar" >
+temos que o erro na saída será aproximadamente
+                                                                          
+
+                                                                          
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main365x.png" alt="|   |        |    |
+||&Delta;y ||        ||&Delta;x  ||
+||---|| &asymp; &kappa;f(x)||----|| &asymp; 1998,5 &#x00D7; 0,00010005... &asymp; 0,1999
+  y            x
+" class="math-display" ></center></td></tr></table>
+<!--l. 1196--><p class="nopar" >
+ou seja um erro relativo de aproximadamente <img 
+src="main366x.png" alt="19,99%  "  class="math" >.
+<!--l. 1199--><p class="indent" >   Note que se usarmos <img 
+src="main367x.png" alt="x1 =  0,9994  "  class="math" > e <img 
+src="main368x.png" alt="x2 = 0,9996  "  class="math" > (ambos no intervalo do erro
+absoluto da entrada) encontramos <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main369x.png" alt="y&lowast;  &asymp;   8335,83
+ 1&lowast;
+y2  &asymp;   12520,50
+" class="math-display" ></center>
+</div>confirmando a estimativa de <img 
+src="main370x.png" alt="19,99%  "  class="math" >.
+   </div>
+   <div class="newtheorem">
+<!--l. 1209--><p class="noindent" ><span class="head">
+<a 
+ id="x15-24005r3"></a>
+<span 
+class="ec-lmbx-12">Exemplo 2.5.3.</span>  </span>Seja  <img 
+src="main371x.png" alt="f (x) = xexp (x)  "  class="math" >.  Calcule  o  erro  absoluto  em  se
+calcular <img 
+src="main372x.png" alt="f(x)  "  class="math" > sabendo que <img 
+src="main373x.png" alt="x = 2 ± 0,05  "  class="math" >.
+                                                                          
+
+                                                                          
+   </div>
+<!--l. 1212--><p class="indent" >   <span 
+class="ec-lmbx-12">Solu</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão. </span>Temos que <img 
+src="main374x.png" alt="x &asymp; 2  "  class="math" > com erro absoluto de <img 
+src="main375x.png" alt="&delta;x = 0,05  "  class="math" >. Neste caso,
+calculamos <img 
+src="main376x.png" alt="&delta;f  "  class="math" >, i.e. o erro absoluto em se calcular <img 
+src="main377x.png" alt="f(x )  "  class="math" >, por:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main378x.png" alt="&delta;f = |f&prime;(x)|&delta;x.
+" class="math-display" ></center></td></tr></table>
+<!--l. 1216--><p class="nopar" >
+Como <img 
+src="main379x.png" alt=" &prime;              x
+f (x ) = (1 + x )e  "  class="math" >, temos: <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main380x.png" alt="                x
+&delta;f  =   |(1 + x )e | &sdot; &delta;x
+    =   |3e2| &sdot; 0,05 = 1,1084.
+" class="math-display" ></center>
+</div>Portanto, o erro absoluto em se calcular <img 
+src="main381x.png" alt="f (x)  "  class="math" > quando <img 
+src="main382x.png" alt="x = 2 ± 0,05  "  class="math" > é de
+<img 
+src="main383x.png" alt="1,084  "  class="math" >.
+                                                                          <div class="flushright" 
+>
+<!--l. 1223--><p class="noindent" >
+ <img 
+src="main384x.png" alt="&#x2662; "  class="math" ></div>
+   <div class="newtheorem">
+<!--l. 1225--><p class="noindent" ><span class="head">
+<a 
+ id="x15-24007r4"></a>
+                                                                          
+
+                                                                          
+<span 
+class="ec-lmbx-12">Exemplo 2.5.4.</span>  </span>Calcule o erro relativo ao medir <img 
+src="main385x.png" alt="          x2+1 2y
+f (x,y) =  x2 e  "  class="math" > sabendo
+que <img 
+src="main386x.png" alt="x &asymp;  3  "  class="math" > é conhecido com <img 
+src="main387x.png" alt="10%  "  class="math" > de erro e <img 
+src="main388x.png" alt="y &asymp; 2  "  class="math" > é conhecido com <img 
+src="main389x.png" alt="3%  "  class="math" >
+de erro.
+   </div>
+<!--l. 1227--><p class="indent" >   <span 
+class="ec-lmbx-12">Solu</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão. </span>Calculamos as derivadas parciais de <img 
+src="main390x.png" alt="f  "  class="math" >:
+   <center class="math-display" >
+<img 
+src="main391x.png" alt="&part;f-   2x3-&minus;-(2x3-+-2x)-2y     2e2y
+&part;x =         x4       e   = &minus;  x3   " class="math-display" ></center>
+e
+   <center class="math-display" >
+<img 
+src="main392x.png" alt="        2
+&part;f-=  2x--+-1e2y
+&part;y       x2  " class="math-display" ></center>
+Calculamos o erro absoluto em termos do erro relativo:
+   <center class="math-display" >
+<img 
+src="main393x.png" alt="&delta;x
+|x-| = 0,1 &rArr;  &delta;x = 3 &sdot; 0,1 = 0,3
+" class="math-display" ></center>
+   <center class="math-display" >
+<img 
+src="main394x.png" alt="&delta;y-
+|y| = 0,03 &rArr; &delta;y = 2 &sdot; 0,03 = 0,06  " class="math-display" ></center>
+Aplicando a expressão para estimar o erro em <img 
+src="main395x.png" alt="f  "  class="math" > temos <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main396x.png" alt="                  ||  ||     ||  ||
+&delta;f             =  |&part;&part;fx|&delta;x + |&part;f&part;y |&delta;y
+       2e4        9+1 4
+    =  27 &sdot; 0,3 + 2 9 e &sdot; 0,06 = 8,493045557
+" class="math-display" ></center>
+</div>Portanto, o erro relativo ao calcular <img 
+src="main397x.png" alt="f  "  class="math" > é estimado por
+   <center class="math-display" >
+<img 
+src="main398x.png" alt="&delta;f    8,493045557
+|f|-=  ---9+1e4----=  14%
+          9
+" class="math-display" ></center>
+                                                                          <div class="flushright" 
+>
+<!--l. 1252--><p class="noindent" >
+ <img 
+src="main399x.png" alt="&#x2662; "  class="math" ></div>
+   <div class="newtheorem">
+<!--l. 1254--><p class="noindent" ><span class="head">
+<a 
+ id="x15-24009r5"></a>
+<span 
+class="ec-lmbx-12">Exemplo 2.5.5.</span>  </span>No exemplo anterior, reduza o erro relativo em <img 
+src="main400x.png" alt="x  "  class="math" > pela
+metade e calcule o erro relativo em <img 
+src="main401x.png" alt="f  "  class="math" >. Depois, repita o processo reduzindo
+o erro relativo em <img 
+src="main402x.png" alt="y  "  class="math" > pela metade.
+   </div>
+<!--l. 1256--><p class="indent" >   <span 
+class="ec-lmbx-12">Solu</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão. </span>Na primeira situação temos <img 
+src="main403x.png" alt="x = 3  "  class="math" > com erro relativo de <img 
+src="main404x.png" alt="5%  "  class="math" > e
+<img 
+src="main405x.png" alt="&delta;x = 0,05 &sdot; 3 = 0,15  "  class="math" >. Calculamos <img 
+src="main406x.png" alt="&delta;f = 7,886399450  "  class="math" > e o erro relativo em
+<img 
+src="main407x.png" alt="f  "  class="math" > de <img 
+src="main408x.png" alt="13%  "  class="math" >. Na segunda situação, temos <img 
+src="main409x.png" alt="y = 2  "  class="math" > com erro de <img 
+src="main410x.png" alt="1,5%  "  class="math" > e
+<img 
+src="main411x.png" alt="&delta;y = 2 &sdot; 0,015 = 0,03  "  class="math" >. Calculamos <img 
+src="main412x.png" alt="&delta;f = 4,853168892  "  class="math" > e o erro relativo em <img 
+src="main413x.png" alt="f  "  class="math" > de
+<img 
+src="main414x.png" alt="8%  "  class="math" >. Observe que mesma o erro relativo em <img 
+src="main415x.png" alt="x  "  class="math" > sendo maior, o erro em <img 
+src="main416x.png" alt="y  "  class="math" > é mais
+significante na função.
+                                                                          <div class="flushright" 
+>
+<!--l. 1258--><p class="noindent" >
+ <img 
+src="main417x.png" alt="&#x2662; "  class="math" ></div>
+   <div class="newtheorem">
+<!--l. 1261--><p class="noindent" ><span class="head">
+<a 
+ id="x15-24010r6"></a>
+<span 
+class="ec-lmbx-12">Exemplo 2.5.6.</span>  </span>Considere um triângulo retângulo onde a hipotenusa e um
+dos catetos são conhecidos a menos de um erro: hipotenusa <img 
+src="main418x.png" alt="a = 3 ± 0,01  "  class="math" >
+metros e cateto <img 
+src="main419x.png" alt="b = 2 ± 0,01  "  class="math" > metros. Calcule o erro absoluto ao calcular a
+área dessa triângulo.
+                                                                          
+
+                                                                          
+   </div>
+<!--l. 1264--><p class="indent" >   <span 
+class="ec-lmbx-12">Solu</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão. </span>Primeiro vamos encontrar a expressão para a área em função da
+hipotenusa <img 
+src="main420x.png" alt="a  "  class="math" > e um cateto <img 
+src="main421x.png" alt="b  "  class="math" >. A tamanho de segundo cateto <img 
+src="main422x.png" alt="c  "  class="math" > é dado pelo
+teorema de Pitágoras, <img 
+src="main423x.png" alt="a2 =  b2 + c2   "  class="math" >, ou seja, <img 
+src="main424x.png" alt="    &radic; -------
+c =   a2 &minus; b2   "  class="math" >. Portanto a área
+é
+   <center class="math-display" >
+<img 
+src="main425x.png" alt="             -------
+     bc   b&radic; a2 &minus; b2
+A =  --=  ----------.
+     2        2  " class="math-display" ></center>
+Agora calculamos as derivadas
+   <center class="math-display" >
+<img 
+src="main426x.png" alt="&part;A-   ----ab----
+&part;a =  2&radic;a2--&minus;-b2,
+" class="math-display" ></center>
+   <center class="math-display" >
+<img 
+src="main427x.png" alt="&part;A    &radic;a2--&minus;-b2       b2
+--- = ---------&minus;  -&radic;--------,
+&part;b        2       2  a2 &minus; b2  " class="math-display" ></center> e
+                                                                          
+
+                                                                          
+substituindo na estimativa para o erro <img 
+src="main428x.png" alt="&delta;A  "  class="math" > em termos de <img 
+src="main429x.png" alt="&delta;a = 0,01  "  class="math" > e <img 
+src="main430x.png" alt="&delta;b = 0,01  "  class="math" >:
+<div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="main431x.png" alt="        |   |     |   |
+        ||&part;A-||     ||&part;A-||
+&delta;A   &asymp;  ||&part;a ||&delta;a + ||&part;b ||&delta;b
+          &radic; --        &radic;--
+         3--5-        -5--
+     &asymp;    5  &sdot; 0,01 +  10 &sdot; 0,01 = 0,01565247584
+" class="math-display" ></center>
+</div>Em termos do erro relativo temos erro na hipotenusa de <img 
+src="main432x.png" alt="0,01
+ 3  &asymp; 0,333%  "  class="math" >, erro no
+cateto de <img 
+src="main433x.png" alt="0,01
+ 2  = 0,5%  "  class="math" > e erro na área de
+   <center class="math-display" >
+<img 
+src="main434x.png" alt="0,01565247584--
+    2&radic;32&minus;22    = 0,7%
+       2
+" class="math-display" ></center>
+                                                                          <div class="flushright" 
+>
+<!--l. 1284--><p class="noindent" >
+ <img 
+src="main435x.png" alt="&#x2662; "  class="math" ></div>
+                                                                          
+
+                                                                          
+<!--l. 1286--><p class="noindent" >
+   <h4 class="likesubsectionHead"><a 
+ id="x15-250002.5"></a>Exercícios</h4><hr class="section">
+   <div class="newtheorem">
+<!--l. 1288--><p class="noindent" ><span class="head">
+<a 
+ id="x15-25001r1"></a>
+<span 
+class="ec-lmbx-12">E 2.5.1.</span>  </span>Considere que a variável <img 
+src="main436x.png" alt="x &asymp;  2  "  class="math" > é conhecida com um erro relativo de
+<img 
+src="main437x.png" alt="1%  "  class="math" > e a variável <img 
+src="main438x.png" alt="y &asymp;  10  "  class="math" > com um erro relativo de <img 
+src="main439x.png" alt="10%  "  class="math" >. Calcule o erro relativo
+associado a <img 
+src="main440x.png" alt="z  "  class="math" > quando:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main441x.png" alt="     --y4-- x
+z =  1 + y4e .
+" class="math-display" ></center></td></tr></table>
+<!--l. 1291--><p class="nopar" >
+Suponha que você precise conhecer o valor de <img 
+src="main442x.png" alt="z  "  class="math" > com um erro de <img 
+src="main443x.png" alt="0,5%  "  class="math" >. Você
+propõe uma melhoria na medição da variável <img 
+src="main444x.png" alt="x  "  class="math" > ou <img 
+src="main445x.png" alt="y  "  class="math" >? Explique.
+   </div>
+<!--l. 1294--><p class="noindent" ><span 
+class="ec-lmbx-6">Resposta.</span>  <img 
+src="main446x.png" alt="2%  "  class="math" > <span 
+class="ec-lmr-6">, deve-se melhorar a medida na vari</span><span 
+class="ec-lmr-6">ável</span> <img 
+src="main447x.png" alt="x  "  class="math" ><span 
+class="ec-lmr-6">, pois, por mais que o erro relativo seja maior para esta</span>
+<span 
+class="ec-lmr-6">vari</span><span 
+class="ec-lmr-6">ável, a propaga</span><span 
+class="ec-lmr-6">ç</span><span 
+class="ec-lmr-6">ão de erros atraves desta vari</span><span 
+class="ec-lmr-6">áveis </span><span 
+class="ec-lmr-6">é muito menos importante do que para a outra vari</span><span 
+class="ec-lmr-6">ável.</span>
+   <div class="newtheorem">
+<!--l. 1300--><p class="noindent" ><span class="head">
+<a 
+ id="x15-25002r2"></a>
+<span 
+class="ec-lmbx-12">E 2.5.2.</span>  </span>A corrente <img 
+src="main448x.png" alt="I  "  class="math" > em ampères e a tensão <img 
+src="main449x.png" alt="V  "  class="math" > em volts em uma lâmpada se
+relacionam conforme a seguinte expressão:
+                                                                          
+
+                                                                          
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main450x.png" alt="    ( V ) &alpha;
+I =   ---  ,
+      V0
+" class="math-display" ></center></td></tr></table>
+<!--l. 1303--><p class="nopar" >
+onde <img 
+src="main451x.png" alt="&alpha;  "  class="math" > é um número entre <img 
+src="main452x.png" alt="0  "  class="math" > e <img 
+src="main453x.png" alt="1  "  class="math" > e <img 
+src="main454x.png" alt="V0   "  class="math" > é tensão nominal em volts. Sabendo
+que <img 
+src="main455x.png" alt="V0 =  220 ± 3%  "  class="math" > e <img 
+src="main456x.png" alt="&alpha; = &minus; 0,8 ± 4%  "  class="math" >, calcule a corrente e o erro relativo
+associado quando a tensão vale <img 
+src="main457x.png" alt="220 ±  1%  "  class="math" >.<br 
+class="newline" /><span 
+class="ec-lmbx-12">Obs:. </span>Este problema pode ser resolvido de duas formas distintas: usando
+a expressão aproximada para a propagação de erro e inspecionando os
+valores máximos e mínimos que a expressão pode assumir. Pratique os dois
+métodos.
+   </div>
+<!--l. 1307--><p class="noindent" ><span 
+class="ec-lmbx-6">Resposta.</span>  <img 
+src="main458x.png" alt="3,2%  "  class="math" > <span 
+class="ec-lmr-6">pela aproxima</span><span 
+class="ec-lmr-6">ç</span><span 
+class="ec-lmr-6">ão ou</span> <img 
+src="main459x.png" alt="3,4%  "  class="math" > <span 
+class="ec-lmr-6">pela segundo m</span><span 
+class="ec-lmr-6">étodo</span> <img 
+src="main460x.png" alt="(0,96758 &le;I&le; 1,0342)  "  class="math" ><span 
+class="ec-lmr-6">.</span>
+   <div class="newtheorem">
+<!--l. 1313--><p class="noindent" ><span class="head">
+<a 
+ id="x15-25003r3"></a>
+<span 
+class="ec-lmbx-12">E 2.5.3.</span>  </span>A corrente <img 
+src="main461x.png" alt="I  "  class="math" > em ampères e a tensão <img 
+src="main462x.png" alt="V  "  class="math" > em volts em uma lâmpada
+se relacionam conforme a seguinte expressão:
+   <center class="math-display" >
+                                                                          
+
+                                                                          
+<img 
+src="main463x.png" alt="    ( V )&alpha;
+I =  ---
+     V0
+" class="math-display" ></center> Onde <img 
+src="main464x.png" alt="&alpha;  "  class="math" > é um número entre 0 e 1 e <img 
+src="main465x.png" alt="V0   "  class="math" >  é a tensão nominal em volts.
+Sabendo que <img 
+src="main466x.png" alt="V  = 220 ± 3%
+ 0  "  class="math" > e <img 
+src="main467x.png" alt="&alpha; =  0,8 ± 4%  "  class="math" > Calcule a corrente e o erro
+relativo associado quando a tensão vale <img 
+src="main468x.png" alt="220 ± 1%  "  class="math" >. <span 
+class="ec-lmbx-12">Dica: </span>lembre que <img 
+src="main469x.png" alt=" &alpha;     &alpha;ln(x)
+x  = e   "  class="math" >
+   </div>
+                                                                          
+
+                                                                          
+   <!--l. 1320-->
+<!--l. 1320--><p class="indent" >   <a 
+ id="tailadm-condicionamento_de_um_problema.html"></a>   
+<div class="text-center">
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="adm-cancelamento_catastrofico.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-chevron-left">
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#adm-condicionamento_de_um_problema.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="adm-mais_exemplos_de_cancelamento_catastrofico.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-chevron-right">
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
+</div>
+<p style="font-size: small; margin-top:10px;">* As versões do livro disponíveis no site podem estar desatualizadas, veja a 
+<a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
+target="_blank">versão PDF atual</a> no <a href="https://github.com/livroscolaborativos/CalculoNumerico"
+target="_blank">repositório GitHub oficial</a> do projeto.</p>
+
+<div class="panel panel-default">
+	    <div class="panel-body">
+	    	<div class="row">
+	    	<div class="col-md-3">
+   	   <ul class="list-unstyled">
+				<li>Livro
+				<ul class="list-unstyled">
+			<li><a
+			       href="../livro/main.html">Versão Scilab</a></li>
+			<li><a href="../livro-py/main.html">Versão Python</a></li>
+	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
+	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
+				</ul>
+      		</li>
+      		</ul>
+      		</div>
+      		<div class="col-md-3">
+      		<ul class="list-unstyled">
+      		<li>Projeto
+				<ul class="list-unstyled">
+	  				<li><a href="../index.html">Página Inicial</a></li>
+	  				<li><a href="../participe.html">Participe</a></li>
+	  				<li><a href="../organizadores.html">Organizadores</a></li>
+	  				<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+				</ul>
+      		</li>
+    			</ul>
+    			</div>
+	     		<div class="col-md-3">
+      		<ul class="list-unstyled">
+      		<li>IME - UFRGS
+				<ul class="list-unstyled">
+	  				<li><a href="http://www.ufrgs.br/mat" target="_blank">Página do IME</a></li>
+	  				<li><a href="http://www.ufrgs.br" target="_blank">Página da UFRGS</a></li>
+				</ul>
+      		</li>
+    			</ul>
+    			</div>
+  			</div>
+     </div>
+     <div class="panel-footer">
+	 <div class="row">
+				<img src="../favicon.ico" alt="UFRGS"> UFRGS - IME - Cálculo Numérico - Um Livro Colaborativo. 
+				Contato: <a href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a>.
+      </div>
+      </div>
+</div>
+
+</div></div>
+
+</body>
+</html>
+ 

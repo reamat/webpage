@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="pt" > 
+<head><title>Método da potência para cálculo de autovalores</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,3,notoc*,info --> 
+<meta name="src" content="main.tex"> 
+<meta name="date" content="2016-11-07 01:12:00"> 
+<link rel="stylesheet" type="text/css" href="main.css"> 
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Método da potência para cálculo de autovalores'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="new_main.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61232881-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<div class="row">
+  <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="../index.html">Cálculo Numérico<br><small>Um Livro Colaborativo</small></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+			<li><a href="../index.html">Projeto</a></li>
+	       <li class="dropdown">
+          <a class="active" href="#" class="dropdown-toggle" data-toggle="dropdown" 
+          role="button" aria-haspopup="true" aria-expanded="false">Livro
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          	<li><a href="../livro-py/main.html">Sumário</a></li>
+            <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
+            <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
+            <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="../livro/main.html">Versão Scilab</a></li>
+          </ul>
+        </li>		
+			<li><a href="../participe.html">Participe</a></li>
+			<li><a
+				href="https://github.com/livroscolaborativos/CalculoNumerico"
+				target="_blank">Repositório</a></li>
+			<li><a href="../organizadores.html">Organizadores</a></li>
+			<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="text-center">
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="sdsl-metodos_iterativos_para_sistemas_lineares.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-chevron-left">
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#sdsl-metodo_da_potencia_para_calculo_de_autovalores.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="sdsl-exercicios_finais.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-chevron-right">
+      	<!--<span aria-hidden="true">&raquo;</span>-->
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
+</div>
+   <!--l. 1948-->
+   <h3 class="sectionHead"><span class="titlemark">4.7   </span> <a 
+ id="x47-810004.7"></a>Método da potência para cálculo de autovalores</h3><hr class="section">
+<a 
+ id="dx47-81001"></a>
+<a 
+ id="dx47-81002"></a>
+<!--l. 1949--><p class="noindent" >Consideremos uma matriz <img 
+src="main2291x.png" alt="A  &isin; &#x211D;n,n  "  class="math" > diagonalizável, isto é, existe um conjunto
+<img 
+src="main2292x.png" alt="    n
+{vj}j=1   "  class="math" > de autovetores de <img 
+src="main2293x.png" alt="A  "  class="math" > tais que qualquer elemento <img 
+src="main2294x.png" alt="      n
+x &isin; &#x211D;  "  class="math" > pode ser
+escrito como uma combinação linear dos <img 
+src="main2295x.png" alt="vj  "  class="math" >. Sejam <img 
+src="main2296x.png" alt="     n
+{&lambda;j} j=1   "  class="math" > o conjunto de
+autovalores associados aos autovetores tal que um deles seja dominante, ou
+seja,
+   <center class="math-display" >
+<img 
+src="main2297x.png" alt="|&lambda;  | &#x003E; |&lambda; | &ge; |&lambda; | &ge; &sdot;&sdot;&sdot;|&lambda; | &#x003E; 0
+  1     2      3        n  " class="math-display" ></center>
+Como os autovetores são l.i., todo vetor <img 
+src="main2298x.png" alt="x &isin; &#x211D;n  "  class="math" >, <img 
+src="main2299x.png" alt="x = (x1,x2,...,xn)  "  class="math" >, pode ser
+escrito com combinação linear dos autovetores da seguinte forma:
+   <table 
+class="equation"><tr><td><a 
+ id="x47-81003r26"></a>
+   <center class="math-display" >
+<img 
+src="main2300x.png" alt="    &sum;n
+x =    &beta;jvj.
+    j=1
+                                                                          
+
+                                                                          
+" class="math-display" ></center></td><td class="equation-label">(4.26)</td></tr></table>
+<!--l. 1956--><p class="nopar" >
+<!--l. 1958--><p class="indent" >   O método da potência permite o cálculo do autovetor dominante com base no
+comportamento assintótico (i.e. "no infinito") da sequência
+   <center class="math-display" >
+<img 
+src="main2301x.png" alt="x,Ax, A2x, A3x, ...
+" class="math-display" ></center>.
+<!--l. 1961--><p class="indent" >   Por questões de convergência, consideramos a seguinte sequência semelhante à
+anterior, porém normalizada:
+   <center class="math-display" >
+<img 
+src="main2302x.png" alt=" x    Ax     A2x    A3x
+----,-----, ------,-------,...,
+&#x2225;x&#x2225;  &#x2225;Ax &#x2225;  &#x2225;A2x &#x2225; &#x2225;A3x &#x2225;  " class="math-display" ></center> que
+pode ser obtida pelo seguinte processo iterativo:
+   <center class="math-display" >
+<img 
+src="main2303x.png" alt="  (k+1)    Akx
+x      = ---k---
+         &#x2225;A  x&#x2225; " class="math-display" ></center>
+Observamos que se <img 
+src="main2304x.png" alt="x  "  class="math" > está na forma (<a 
+href="#x47-81003r26">4.26<!--tex4ht:ref: met_pot_forma --></a>), então <img 
+src="main2305x.png" alt="Akx  "  class="math" > pode ser escrito
+como
+   <center class="math-display" >
+<img 
+src="main2306x.png" alt="        n            n               (      n     (   )k   )
+Akx =  &sum;  &beta; Akv  =  &sum;  &beta; &lambda;kv  = &beta; &lambda;k (v  + &sum;   &beta;j- &lambda;j-   v )
+       j=1  j    j   j=1  j j j    1  1   1  j=2 &beta;1  &lambda;1     j " class="math-display" ></center>
+Como <img 
+src="main2307x.png" alt="||&lambda;j||
+|&lambda;1| &#x003C; 1  "  class="math" > para todo <img 
+src="main2308x.png" alt="j &ge; 2  "  class="math" >, temos
+   <center class="math-display" >
+<img 
+src="main2309x.png" alt="      (   )k
+&sum;n &beta;j-  &lambda;j-
+   &beta;1   &lambda;1   vj &rarr;  0.
+j=2  " class="math-display" ></center>
+Assim
+   <table 
+class="equation"><tr><td><a 
+ id="x47-81004r27"></a>
+   <center class="math-display" >
+                                                                          
+
+                                                                          
+<img 
+src="main2310x.png" alt="   k          k  (       ( ||  ||k) )
+-A--x--=  -&beta;1&lambda;1--(v  + O ( ||&lambda;2|| )))
+&#x2225;Akx &#x2225;    &#x2225;Akx &#x2225;   1       |&lambda;1|
+" class="math-display" ></center></td><td class="equation-label">(4.27)</td></tr></table>
+<!--l. 1972--><p class="nopar" >
+Como a norma de <img 
+src="main2311x.png" alt="  k
+&#x2225;AAkxx&#x2225;  "  class="math" > é igual a um, temos
+   <center class="math-display" >
+<img 
+src="main2312x.png" alt="&#x2225;         &#x2225;
+&#x2225;&#x2225; &beta;1-&lambda;k1-- &#x2225;&#x2225;
+&#x2225;&#x2225; &#x2225;Akx &#x2225;v1&#x2225;&#x2225; &rarr;  1  " class="math-display" ></center> e,
+portanto,
+   <center class="math-display" >
+<img 
+src="main2313x.png" alt="||    k ||
+||-&beta;1&lambda;1-||&rarr;   -1---
+|&#x2225;Akx &#x2225;|    &#x2225;v1&#x2225; " class="math-display" ></center> Ou
+seja, se definimos <img 
+src="main2314x.png" alt="          k
+&alpha;(k) = &beta;1&lambda;k1-
+       &#x2225;A x&#x2225;  "  class="math" >, então
+   <center class="math-display" >
+<img 
+src="main2315x.png" alt="  (k)
+|&alpha;   | &rarr; 1  " class="math-display" ></center>
+Retornando a (<a 
+href="#x47-81004r27">4.27<!--tex4ht:ref: met_pot_assim --></a>), temos:
+<!--l. 1983--><p class="indent" >
+   <center class="math-display" >
+<img 
+src="main2316x.png" alt=" Akx
+---k---&minus;  &alpha;(k)v1 &rarr;  0
+&#x2225;A  x&#x2225;
+" class="math-display" ></center>
+<!--l. 1985--><p class="indent" >   Observe que um múltiplo de autovetor também é um autovetor e,
+portanto,
+   <center class="math-display" >
+<img 
+src="main2317x.png" alt="-Akx---
+&#x2225;Akx &#x2225; " class="math-display" ></center> é
+um esquema que oscila entre os autovetores ou converge para o autovetor
+<img 
+src="main2318x.png" alt="v1   "  class="math" >.
+<!--l. 1992--><p class="indent" >   Uma vez que temos o autovetor <img 
+src="main2319x.png" alt="v
+ 1   "  class="math" > de <img 
+src="main2320x.png" alt="A  "  class="math" >, podemos calcular <img 
+src="main2321x.png" alt="&lambda;
+  1   "  class="math" > da seguinte
+forma:
+   <table 
+class="equation-star"><tr><td>
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main2322x.png" alt="                                              T
+Av   = &lambda; v   =&rArr;   vTAv  =  vT&lambda; v   =&rArr;   &lambda;  = v1-Av1-
+   1    1 1        1   1    1  1 1       1    vT1 v1
+" class="math-display" ></center></td></tr></table>
+<!--l. 1995--><p class="nopar" >
+Observe que a última identidade é válida, pois <img 
+src="main2323x.png" alt="&#x2225;v1&#x2225; = 1  "  class="math" > por construção.
+<!--l. 1998--><p class="noindent" >
+   <h4 class="likesubsectionHead"><a 
+ id="x47-820004.7"></a>Exercícios</h4><hr class="section">
+   <div class="newtheorem">
+<!--l. 2000--><p class="noindent" ><span class="head">
+<a 
+ id="x47-82001r1"></a>
+<span 
+class="ec-lmbx-12">E 4.7.1.</span>  </span>Calcule o autovalor dominante e o autovetor associado da matriz
+   <center class="math-display" >
+<img 
+src="main2324x.png" alt="&lfloor;            &rfloor;
+  4   41  78
+||            ||
+|| 48  28  21 ||
+|&lceil;            |&rceil;
+  26  13  11
+" class="math-display" ></center> Expresse sua resposta com seis dígitos significativos
+   </div>
+                                                                          
+
+                                                                          
+<!--l. 2009--><p class="noindent" ><span 
+class="ec-lmbx-6">Resposta.</span>  <img 
+src="main2325x.png" alt="&lambda;= 86.1785  "  class="math" > <span 
+class="ec-lmr-6">associado ao autovetor dado por</span> <img 
+src="main2326x.png" alt="v1 = [0.65968 0.66834 0.34372]T  "  class="math" ><span 
+class="ec-lmr-6">.</span>
+   <div class="newtheorem">
+<!--l. 2015--><p class="noindent" ><span class="head">
+<a 
+ id="x47-82002r2"></a>
+<span 
+class="ec-lmbx-12">E 4.7.2.</span>  </span>Calcule o autovalor dominante e o autovetor associado da matriz
+   <center class="math-display" >
+<img 
+src="main2327x.png" alt="&lfloor;        &rfloor;
+
+|&lceil; 3   4  |&rceil;
+  2  &minus; 1
+" class="math-display" ></center> usando o método da potência inciando com o vetor <img 
+src="main2328x.png" alt="x =  [1  1]T  "  class="math" >
+   </div>
+   <div class="newtheorem">
+<!--l. 2024--><p class="noindent" ><span class="head">
+<a 
+ id="x47-82003r3"></a>
+<span 
+class="ec-lmbx-12">E 4.7.3.</span>  </span>A norma <img 
+src="main2329x.png" alt="L2   "  class="math" >  de um matriz <img 
+src="main2330x.png" alt="A  "  class="math" > é dada pela raiz quadrada do
+autovalor dominante da matriz <img 
+src="main2331x.png" alt="A &lowast;A  "  class="math" >, isto é:
+   <center class="math-display" >
+<img 
+src="main2332x.png" alt="        &#x2218; -----------------------
+                            &lowast;
+&#x2225;A &#x2225;2 =   max {|&lambda;| : &lambda; &isin; &sigma;(A A)} :
+" class="math-display" ></center> Use o método da potência para obter a norma <img 
+src="main2333x.png" alt="L2   "  class="math" > da seguinte matriz:
+   <center class="math-display" >
+<img 
+src="main2334x.png" alt="     &lfloor;              &rfloor;
+     | 69   84   88 |
+     ||              ||
+A  = || 15  &minus; 40  11 ||
+     &lceil; 70   41   20 &rceil;
+" class="math-display" ></center> Expresse sua resposta com seis dígitos significativos
+   </div>
+<!--l. 2035--><p class="noindent" ><span 
+class="ec-lmbx-6">Resposta.</span>  <img 
+src="main2335x.png" alt="158,726  "  class="math" >
+   <div class="newtheorem">
+<!--l. 2042--><p class="noindent" ><span class="head">
+<a 
+ id="x47-82004r4"></a>
+<span 
+class="ec-lmbx-12">E 4.7.4.</span>  </span>Os  autovalores  de  uma  matriz  triangular  são  os  elementos  da
+diagonal  principal.  Verifique  o  método  da  potência  aplicada  à  seguinte
+matriz:
+   <center class="math-display" >
+<img 
+src="main2336x.png" alt="&lfloor;           &rfloor;
+
+|| 2  3   1  ||
+||           || .
+|&lceil; 0  3  &minus; 1 |&rceil;
+  0  0   1
+" class="math-display" ></center>
+   </div>
+                                                                          
+
+                                                                          
+   <!--l. 2052-->
+<!--l. 2052--><p class="indent" >   <a 
+ id="tailsdsl-metodo_da_potencia_para_calculo_de_autovalores.html"></a>   
+<div class="text-center">
+		<nav class="nav-links" aria-label="Page navigation">
+		  <ul class="nav-justified">
+    		<li>
+      	<a href="sdsl-metodos_iterativos_para_sistemas_lineares.html" aria-label="Previous">
+        	<span class="glyphicon glyphicon-chevron-left">
+      	</a>
+    		</li>
+    		<li class="meio"><a href="main.html#sdsl-metodo_da_potencia_para_calculo_de_autovalores.html">
+    		<span class="glyphicon glyphicon-menu-hamburger">
+    		</a></li>
+    		<li>
+	   	<a href="sdsl-exercicios_finais.html" aria-label="Next">
+	   	<span class="glyphicon glyphicon-chevron-right">
+      	</a>
+    		</li>
+  		</ul>
+	</nav>
+</div>
+<p style="font-size: small; margin-top:10px;">* As versões do livro disponíveis no site podem estar desatualizadas, veja a 
+<a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
+target="_blank">versão PDF atual</a> no <a href="https://github.com/livroscolaborativos/CalculoNumerico"
+target="_blank">repositório GitHub oficial</a> do projeto.</p>
+
+<div class="panel panel-default">
+	    <div class="panel-body">
+	    	<div class="row">
+	    	<div class="col-md-3">
+   	   <ul class="list-unstyled">
+				<li>Livro
+				<ul class="list-unstyled">
+			<li><a
+			       href="../livro/main.html">Versão Scilab</a></li>
+			<li><a href="../livro-py/main.html">Versão Python</a></li>
+	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
+	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
+				</ul>
+      		</li>
+      		</ul>
+      		</div>
+      		<div class="col-md-3">
+      		<ul class="list-unstyled">
+      		<li>Projeto
+				<ul class="list-unstyled">
+	  				<li><a href="../index.html">Página Inicial</a></li>
+	  				<li><a href="../participe.html">Participe</a></li>
+	  				<li><a href="../organizadores.html">Organizadores</a></li>
+	  				<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+				</ul>
+      		</li>
+    			</ul>
+    			</div>
+	     		<div class="col-md-3">
+      		<ul class="list-unstyled">
+      		<li>IME - UFRGS
+				<ul class="list-unstyled">
+	  				<li><a href="http://www.ufrgs.br/mat" target="_blank">Página do IME</a></li>
+	  				<li><a href="http://www.ufrgs.br" target="_blank">Página da UFRGS</a></li>
+				</ul>
+      		</li>
+    			</ul>
+    			</div>
+  			</div>
+     </div>
+     <div class="panel-footer">
+	 <div class="row">
+				<img src="../favicon.ico" alt="UFRGS"> UFRGS - IME - Cálculo Numérico - Um Livro Colaborativo. 
+				Contato: <a href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a>.
+      </div>
+      </div>
+</div>
+
+</div></div>
+
+</body>
+</html>
+ 

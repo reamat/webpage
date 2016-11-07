@@ -4,13 +4,13 @@
 <head>
    <title>Calculo Numerico
 Um Livro Colaborativo
-Versao com Python</title> 
+Versao Python</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-06 00:33:00"> 
+<meta name="date" content="2016-11-07 01:12:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 <meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -18,8 +18,8 @@ Versao com Python</title>
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="new_main.css"> 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -52,8 +52,20 @@ Versao com Python</title>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-			<li class="active"><a href="main.html">Sumário</a></li>
 			<li><a href="../index.html">Projeto</a></li>
+	       <li class="dropdown">
+          <a class="active" href="#" class="dropdown-toggle" data-toggle="dropdown" 
+          role="button" aria-haspopup="true" aria-expanded="false">Livro
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          	<li><a href="../livro-py/main.html">Sumário</a></li>
+            <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
+            <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
+            <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="../livro/main.html">Versão Scilab</a></li>
+          </ul>
+        </li>		
 			<li><a href="../participe.html">Participe</a></li>
 			<li><a
 				href="https://github.com/livroscolaborativos/CalculoNumerico"
@@ -99,10 +111,10 @@ Versao com Python</title>
 
 <h2 class="titleHead">Cálculo Numérico<br /><small>
 Um Livro Colaborativo<br />
-Versão com Python</small></h2>
+Versão Python</small></h2>
 <div class="author" ></div><br />
 <div class="date" ><span 
-class="ec-lmr-12x-x-120">6 de novembro de 2016</span></div>
+class="ec-lmr-12x-x-120">7 de novembro de 2016</span></div>
                                                                           
 
                                                                           
@@ -125,6 +137,152 @@ name ="ndo.html"href="ndo.html">Nota dos organizadores</a></span>
 name ="p.html"href="p.html">Prefácio</a></span>
 <br />   <span class="chapterToc" >1 <a 
 name ="i.html"href="i.html" id="QQ2-6-9">Introdução</a></span>
+<br />   <span class="chapterToc" >2 <a 
+name ="adm.html"href="adm.html" id="QQ2-7-10">Aritmética de máquina</a></span>
+<br />   &#x00A0;<span class="sectionToc" >2.1 <a 
+name ="adm-sistema_de_numeracao_e_mudanca_de_base.html"href="adm-sistema_de_numeracao_e_mudanca_de_base.html" id="QQ2-8-11">Sistema de numeração e mudança de base</a></span>
+<br />   &#x00A0;<span class="sectionToc" >2.2 <a 
+name ="adm-representacao_de_numeros.html"href="adm-representacao_de_numeros.html" id="QQ2-10-13">Representação de números</a></span>
+<br />   &#x00A0;<span class="sectionToc" >2.3 <a 
+name ="adm-erros_nas_operacoes_elementares.html"href="adm-erros_nas_operacoes_elementares.html" id="QQ2-13-26">Erros nas operações elementares</a></span>
+<br />   &#x00A0;<span class="sectionToc" >2.4 <a 
+name ="adm-cancelamento_catastrofico.html"href="adm-cancelamento_catastrofico.html" id="QQ2-14-27">Cancelamento catastrófico</a></span>
+<br />   &#x00A0;<span class="sectionToc" >2.5 <a 
+name ="adm-condicionamento_de_um_problema.html"href="adm-condicionamento_de_um_problema.html" id="QQ2-15-28">Condicionamento de um problema</a></span>
+<br />   &#x00A0;<span class="sectionToc" >2.6 <a 
+name ="adm-mais_exemplos_de_cancelamento_catastrofico.html"href="adm-mais_exemplos_de_cancelamento_catastrofico.html" id="QQ2-16-30">Mais exemplos de Cancelamento Catastrófico</a></span>
+<br />   <span class="chapterToc" >3 <a 
+name ="sdeduv.html"href="sdeduv.html" id="QQ2-17-34">Solução de equações de uma variável</a></span>
+<br />   &#x00A0;<span class="sectionToc" >3.1 <a 
+name ="sdeduv-existencia_e_unicidade.html"href="sdeduv-existencia_e_unicidade.html" id="QQ2-19-35">Existência e unicidade</a></span>
+<br />   &#x00A0;<span class="sectionToc" >3.2 <a 
+name ="sdeduv-metodo_da_bissecao.html"href="sdeduv-metodo_da_bissecao.html" id="QQ2-21-38">Método da bisseção</a></span>
+<br />   &#x00A0;<span class="sectionToc" >3.3 <a 
+name ="sdeduv-iteracao_de_ponto_fixo.html"href="sdeduv-iteracao_de_ponto_fixo.html" id="QQ2-22-43">Iteração de Ponto Fixo</a></span>
+<br />   &#x00A0;<span class="sectionToc" >3.4 <a 
+name ="sdeduv-metodo_de_newton-raphson.html"href="sdeduv-metodo_de_newton-raphson.html" id="QQ2-24-53">Método de Newton-Raphson</a></span>
+<br />   &#x00A0;<span class="sectionToc" >3.5 <a 
+name ="sdeduv-metodo_das_secantes.html"href="sdeduv-metodo_das_secantes.html" id="QQ2-27-58">Método das secantes</a></span>
+<br />   &#x00A0;<span class="sectionToc" >3.6 <a 
+name ="sdeduv-criterios_de_parada.html"href="sdeduv-criterios_de_parada.html" id="QQ2-30-62">Critérios de parada</a></span>
+<br />   &#x00A0;<span class="sectionToc" >3.7 <a 
+name ="sdeduv-exercicios_finais.html"href="sdeduv-exercicios_finais.html" id="QQ2-31-65">Exercícios finais</a></span>
+<br />   <span class="chapterToc" >4 <a 
+name ="sdsl.html"href="sdsl.html" id="QQ2-32-66">Solução de sistemas lineares</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.1 <a 
+name ="sdsl-eliminacao_gaussiana.html"href="sdsl-eliminacao_gaussiana.html" id="QQ2-33-67">Eliminação gaussiana</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.2 <a 
+name ="sdsl-complexidade_de_algoritmos_em_Algebra_linear.html"href="sdsl-complexidade_de_algoritmos_em_Algebra_linear.html" id="QQ2-34-70">Complexidade de Algoritmos em Álgebra Linear</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.3 <a 
+name ="sdsl-sistemas_triangulares.html"href="sdsl-sistemas_triangulares.html" id="QQ2-37-71">Sistemas triangulares</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.4 <a 
+name ="sdsl-fatoracao_lu.html"href="sdsl-fatoracao_lu.html" id="QQ2-40-75">Fatoração LU</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.5 <a 
+name ="sdsl-condicionamento_de_sistemas_lineares.html"href="sdsl-condicionamento_de_sistemas_lineares.html" id="QQ2-44-81">Condicionamento de sistemas lineares</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.6 <a 
+name ="sdsl-metodos_iterativos_para_sistemas_lineares.html"href="sdsl-metodos_iterativos_para_sistemas_lineares.html" id="QQ2-45-86">Métodos iterativos para sistemas lineares</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.7 <a 
+name ="sdsl-metodo_da_potencia_para_calculo_de_autovalores.html"href="sdsl-metodo_da_potencia_para_calculo_de_autovalores.html" id="QQ2-47-97">Método da potência para cálculo de autovalores</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.8 <a 
+name ="sdsl-exercicios_finais.html"href="sdsl-exercicios_finais.html" id="QQ2-48-99">Exercícios finais</a></span>
+                                                                          
+
+                                                                          
+<br />   <span class="chapterToc" >5 <a 
+name ="sdsdenl.html"href="sdsdenl.html" id="QQ2-49-100">Solução de sistemas de equações não lineares</a></span>
+<br />   &#x00A0;<span class="sectionToc" >5.1 <a 
+name ="sdsdenl-o_metodo_de_newton_para_sistemas.html"href="sdsdenl-o_metodo_de_newton_para_sistemas.html" id="QQ2-50-101">O método de Newton para sistemas</a></span>
+<br />   &#x00A0;<span class="sectionToc" >5.2 <a 
+name ="sdsdenl-linearizacao_de_uma_funcao_de_varias_variaveis.html"href="sdsdenl-linearizacao_de_uma_funcao_de_varias_variaveis.html" id="QQ2-51-103">Linearização de uma função de várias variáveis</a></span>
+<br />   <span class="chapterToc" >6 <a 
+name ="i1.html"href="i1.html" id="QQ2-52-106">Interpolação</a></span>
+<br />   &#x00A0;<span class="sectionToc" >6.1 <a 
+name ="i1-interpolacao_polinomial.html"href="i1-interpolacao_polinomial.html" id="QQ2-53-108">Interpolação polinomial</a></span>
+<br />   &#x00A0;<span class="sectionToc" >6.2 <a 
+name ="i1-diferencas_divididas_de_newton.html"href="i1-diferencas_divididas_de_newton.html" id="QQ2-54-111">Diferenças divididas de Newton</a></span>
+<br />   &#x00A0;<span class="sectionToc" >6.3 <a 
+name ="i1-polinomios_de_lagrange.html"href="i1-polinomios_de_lagrange.html" id="QQ2-55-113">Polinômios de Lagrange</a></span>
+<br />   &#x00A0;<span class="sectionToc" >6.4 <a 
+name ="i1-aproximacao_de_funcoes_reais_por_polinomios_interpoladores.html"href="i1-aproximacao_de_funcoes_reais_por_polinomios_interpoladores.html" id="QQ2-56-114">Aproximação de funções reais por polinômios interpoladores</a></span>
+<br />   &#x00A0;<span class="sectionToc" >6.5 <a 
+name ="i1-interpolacao_linear_segmentada.html"href="i1-interpolacao_linear_segmentada.html" id="QQ2-57-116">Interpolação linear segmentada</a></span>
+<br />   &#x00A0;<span class="sectionToc" >6.6 <a 
+name ="i1-interpolacao_cubica_segmentada_-_spline.html"href="i1-interpolacao_cubica_segmentada_-_spline.html" id="QQ2-58-118">Interpolação cúbica segmentada - spline</a></span>
+<br />   <span class="chapterToc" >7 <a 
+name ="adc.html"href="adc.html" id="QQ2-59-122">Ajuste de curvas</a></span>
+<br />   &#x00A0;<span class="sectionToc" >7.1 <a 
+name ="adc-ajuste_de_uma_reta.html"href="adc-ajuste_de_uma_reta.html" id="QQ2-60-124">Ajuste de uma reta</a></span>
+<br />   &#x00A0;<span class="sectionToc" >7.2 <a 
+name ="adc-ajuste_linear_geral.html"href="adc-ajuste_linear_geral.html" id="QQ2-61-126">Ajuste linear geral</a></span>
+<br />   &#x00A0;<span class="sectionToc" >7.3 <a 
+name ="adc-aproximando_problemas_nao_lineares_por_problemas_lineares.html"href="adc-aproximando_problemas_nao_lineares_por_problemas_lineares.html" id="QQ2-63-132">Aproximando problemas não lineares por problemas lineares</a></span>
+<br />   <span class="chapterToc" >8 <a 
+name ="dn.html"href="dn.html" id="QQ2-65-133">Derivação Numérica</a></span>
+<br />   &#x00A0;<span class="sectionToc" >8.1 <a 
+name ="dn-diferencas_finitas.html"href="dn-diferencas_finitas.html" id="QQ2-66-134">Diferenças finitas</a></span>
+<br />   &#x00A0;<span class="sectionToc" >8.2 <a 
+name ="dn-diferencas_finitas_de_ordem_mais_alta.html"href="dn-diferencas_finitas_de_ordem_mais_alta.html" id="QQ2-72-143">Diferenças finitas de ordem mais alta</a></span>
+<br />   &#x00A0;<span class="sectionToc" >8.3 <a 
+name ="dn-diferencas_finitas_para_derivadas_de_ordem_mais_alta.html"href="dn-diferencas_finitas_para_derivadas_de_ordem_mais_alta.html" id="QQ2-73-145">Diferenças finitas para derivadas de ordem mais alta</a></span>
+<br />   &#x00A0;<span class="sectionToc" >8.4 <a 
+name ="dn-derivada_via_ajuste_ou_interpolacao.html"href="dn-derivada_via_ajuste_ou_interpolacao.html" id="QQ2-74-147">Derivada via ajuste ou interpolação</a></span>
+<br />   &#x00A0;<span class="sectionToc" >8.5 <a 
+name ="dn-exercicios_finais.html"href="dn-exercicios_finais.html" id="QQ2-75-149">Exercícios finais</a></span>
+<br />   <span class="chapterToc" >9 <a 
+name ="in.html"href="in.html" id="QQ2-76-150">Integração Numérica</a></span>
+<br />   &#x00A0;<span class="sectionToc" >9.1 <a 
+name ="in-regras_de_newton-cotes.html"href="in-regras_de_newton-cotes.html" id="QQ2-77-152">Regras de Newton-Cotes</a></span>
+<br />   &#x00A0;<span class="sectionToc" >9.2 <a 
+name ="in-regras_compostas.html"href="in-regras_compostas.html" id="QQ2-79-159">Regras compostas</a></span>
+<br />   &#x00A0;<span class="sectionToc" >9.3 <a 
+name ="in-o_metodo_de_romberg.html"href="in-o_metodo_de_romberg.html" id="QQ2-80-163">O método de Romberg</a></span>
+<br />   &#x00A0;<span class="sectionToc" >9.4 <a 
+name ="in-ordem_de_precisao.html"href="in-ordem_de_precisao.html" id="QQ2-81-165">Ordem de precisão</a></span>
+<br />   &#x00A0;<span class="sectionToc" >9.5 <a 
+name ="in-quadratura_de_gauss-legendre.html"href="in-quadratura_de_gauss-legendre.html" id="QQ2-82-167">Quadratura de Gauss-Legendre</a></span>
+<br />   &#x00A0;<span class="sectionToc" >9.6 <a 
+name ="in-exercicios_finais.html"href="in-exercicios_finais.html" id="QQ2-83-169">Exercícios finais</a></span>
+<br />   <span class="chapterToc" >10 <a 
+name ="pdvi.html"href="pdvi.html" id="QQ2-84-170">Problemas de valor inicial</a></span>
+<br />   &#x00A0;<span class="sectionToc" >10.1 <a 
+name ="pdvi-metodo_de_euler.html"href="pdvi-metodo_de_euler.html" id="QQ2-85-171">Método de Euler</a></span>
+<br />   &#x00A0;<span class="sectionToc" >10.2 <a 
+name ="pdvi-metodo_de_euler_melhorado.html"href="pdvi-metodo_de_euler_melhorado.html" id="QQ2-86-174">Método de Euler melhorado</a></span>
+<br />   &#x00A0;<span class="sectionToc" >10.3 <a 
+name ="pdvi-ordem_de_precisao.html"href="pdvi-ordem_de_precisao.html" id="QQ2-87-176">Ordem de precisão</a></span>
+<br />   &#x00A0;<span class="sectionToc" >10.4 <a 
+name ="pdvi-convergencia.html"href="pdvi-convergencia.html" id="QQ2-88-179">Convergência</a></span>
+<br />   &#x00A0;<span class="sectionToc" >10.5 <a 
+name ="pdvi-metodos_de_runge-kutta.html"href="pdvi-metodos_de_runge-kutta.html" id="QQ2-89-182">Métodos de Runge-Kutta</a></span>
+<br />   &#x00A0;<span class="sectionToc" >10.6 <a 
+name ="pdvi-metodos_de_passo_multiplo_-_adams-bashforth.html"href="pdvi-metodos_de_passo_multiplo_-_adams-bashforth.html" id="QQ2-90-184">Métodos de passo múltiplo - Adams-Bashforth</a></span>
+<br />   &#x00A0;<span class="sectionToc" >10.7 <a 
+name ="pdvi-metodos_de_passo_multiplo_-_adams-moulton.html"href="pdvi-metodos_de_passo_multiplo_-_adams-moulton.html" id="QQ2-91-185">Métodos de passo múltiplo - Adams-Moulton</a></span>
+<br />   &#x00A0;<span class="sectionToc" >10.8 <a 
+name ="pdvi-estabilidade.html"href="pdvi-estabilidade.html" id="QQ2-92-186">Estabilidade</a></span>
+<br />   &#x00A0;<span class="sectionToc" >10.9 <a 
+name ="pdvi-exercicios_finais.html"href="pdvi-exercicios_finais.html" id="QQ2-93-188">Exercícios finais</a></span>
+<br />   <span class="chapterToc" >11 <a 
+name ="pdvdc.html"href="pdvdc.html" id="QQ2-94-189">Problemas de Valores de Controno</a></span>
+                                                                          
+
+                                                                          
+<br />   &#x00A0;<span class="sectionToc" >11.1 <a 
+name ="pdvdc-metodo_de_diferencas_finitas.html"href="pdvdc-metodo_de_diferencas_finitas.html" id="QQ2-95-190">Método de Diferenças Finitas</a></span>
+<br />   <span class="appendixToc" >A <a 
+name ="riap.html"href="riap.html" id="QQ2-96-192">Rápida Introdução à Python</a></span>
+<br />   &#x00A0;<span class="sectionToc" >A.1 <a 
+name ="riap-sobre_a_linguagem_python.html"href="riap-sobre_a_linguagem_python.html" id="QQ2-97-193">Sobre a linguagem Python</a></span>
+<br />   &#x00A0;<span class="sectionToc" >A.2 <a 
+name ="riap-elementos_da_linguagem.html"href="riap-elementos_da_linguagem.html" id="QQ2-99-196">Elementos da linguagem</a></span>
+<br />   &#x00A0;<span class="sectionToc" >A.3 <a 
+name ="riap-matrizes.html"href="riap-matrizes.html" id="QQ2-100-200">Matrizes</a></span>
+<br />   &#x00A0;<span class="sectionToc" >A.4 <a 
+name ="riap-estruturas_de_ramificacao_e_repeticao.html"href="riap-estruturas_de_ramificacao_e_repeticao.html" id="QQ2-101-203">Estruturas de ramificação e repetição</a></span>
+<br />   &#x00A0;<span class="sectionToc" >A.5 <a 
+name ="riap-funcoes.html"href="riap-funcoes.html" id="QQ2-102-207">Funções</a></span>
+<br />   &#x00A0;<span class="sectionToc" >A.6 <a 
+name ="riap-graficos.html"href="riap-graficos.html" id="QQ2-103-208">Gráficos</a></span>
 <br />   <span class="chapterToc" > <a 
 name ="rb.html"href="rb.html">Referências Bibliográficas</a></span>
 <br />   <span class="chapterToc" > <a 
@@ -146,6 +304,55 @@ name ="c.html"href="c.html">Colaboradores</a></span>
 
                                                                           
 
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+
+                                                                          
+<!--l. 3--><p class="indent" >
+                                                                          
+
+                                                                          
+<a 
+ id="x1-163007r189"></a>
                                                                           
 
                                                                           
@@ -185,10 +392,9 @@ target="_blank">repositório GitHub oficial</a> do projeto.</p>
    	   <ul class="list-unstyled">
 				<li>Livro
 				<ul class="list-unstyled">
-	  				<li><a href="main.pdf" target="_blank">Versão PDF</a></li>
-	  				<li><a 	href="main.html">Versão HTML</a></li>
-	  				<li><a href="main.epub" target="_blank">Versão EPUB</a></li>		  			       
-	  				<li><a href="slide.pdf" target="_blank">Versão Slides</a></li>
+			<li><a
+			       href="../livro/main.html">Versão Scilab</a></li>
+			<li><a href="../livro-py/main.html">Versão Python</a></li>
 	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
 	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
 				</ul>

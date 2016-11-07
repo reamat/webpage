@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-06 00:33:00"> 
+<meta name="date" content="2016-11-07 01:12:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 <meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Prefácio'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,8 +15,8 @@
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="new_main.css"> 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -49,8 +49,20 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-			<li class="active"><a href="main.html">Sumário</a></li>
 			<li><a href="../index.html">Projeto</a></li>
+	       <li class="dropdown">
+          <a class="active" href="#" class="dropdown-toggle" data-toggle="dropdown" 
+          role="button" aria-haspopup="true" aria-expanded="false">Livro
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          	<li><a href="../livro-py/main.html">Sumário</a></li>
+            <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
+            <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
+            <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="../livro/main.html">Versão Scilab</a></li>
+          </ul>
+        </li>		
 			<li><a href="../participe.html">Participe</a></li>
 			<li><a
 				href="https://github.com/livroscolaborativos/CalculoNumerico"
@@ -104,8 +116,8 @@ class="ec-lmtt-12">Python</span><span
 class="ec-lmtt-12">&#x00A0;2.7</span></span></span> (ou superior) e o conjunto de biblioteca <a 
 href="https://www.scipy.org/" >SciPy</a>
 instalados. Não é necessário estar familiarizado com esta linguagem, mas
-recomendamos a leitura do Apêndice&#x00A0;<span 
-class="ec-lmbx-12">??</span>, no qual apresentamos uma rápida
+recomendamos a leitura do Apêndice&#x00A0;<a 
+href="riap.html#x96-164000A">A<!--tex4ht:ref: cap:python --></a>, no qual apresentamos uma rápida
 introdução a esta linguagem com ênfase naquilo que é mais excencial
 para a leitura do livro. Alternativamente, existem algumas soluções em
 nuvem que fornecem acesso à consoles <span 
@@ -160,10 +172,9 @@ target="_blank">repositório GitHub oficial</a> do projeto.</p>
    	   <ul class="list-unstyled">
 				<li>Livro
 				<ul class="list-unstyled">
-	  				<li><a href="main.pdf" target="_blank">Versão PDF</a></li>
-	  				<li><a 	href="main.html">Versão HTML</a></li>
-	  				<li><a href="main.epub" target="_blank">Versão EPUB</a></li>		  			       
-	  				<li><a href="slide.pdf" target="_blank">Versão Slides</a></li>
+			<li><a
+			       href="../livro/main.html">Versão Scilab</a></li>
+			<li><a href="../livro-py/main.html">Versão Python</a></li>
 	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
 	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
 				</ul>
