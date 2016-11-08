@@ -223,7 +223,7 @@ epub-py: main.tex
 
 	ebook-convert ./.tmp1/main.html main-py.epub \
 	      --authors="Todos os Colaboradores"\
-              --cover=./rosto/cover-scilab-epub.png\
+              --cover=./rosto/cover-python-epub.png\
 	      --comments="Para mais informações sobre este livro visite  http://www.ufrgs.br/numerico"
 
 ########################################
