@@ -43,14 +43,14 @@
           role="button" aria-haspopup="true" aria-expanded="false">Livro
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-          	<li><a href="../livro/main.html">Sumário</a></li>
+          	<li><a href="../livro-py/main.html">Sumário</a></li>
           	<li class="dropdown-header">Para Baixar</li>
-            <li><a href="../livro/main.pdf">Formato PDF</a></li>
-            <li><a href="../livro/main.epub">Formato EPUB</a></li>
-            <li><a href="../livro/slide.pdf">Formato Slides</a></li>
+            <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
+            <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
+            <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
             <li class="dropdown-header">Mudar Versão</li>
-            <li><a href="../livro-py/main.html">Versão Python</a></li>
+            <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
 			<li><a href="../participe.html">Participe</a></li>

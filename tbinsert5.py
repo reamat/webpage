@@ -153,7 +153,14 @@ for index, f in enumerate (lfiles):
     text = text.replace("iso-8859-1","utf-8")
     
     #include head
-    head_aux_file = open("./head.html_aux", "r")
+    headname = []
+    if (sys.argv[1] == "livro"):
+        headname = "./head.html_aux"
+    elif (sys.argv[1] == "livro-py"):
+        headname = "./head-py.html_aux"
+    else:
+        raise NameError('This is not a valid option.')
+    head_aux_file = open(headname, "r")
     head_include = head_aux_file.read()
     
     #get chapterHead or sectionHead to include in <meta> keywords
@@ -165,14 +172,13 @@ for index, f in enumerate (lfiles):
     if (s != -1):
         auxText = text[s:]
         s = auxText.find('</a>')+4
-        e = auxText.index('</h2>')
+        e = auxText.index('</h2>')        
         kw = auxText[s:e]
         title = kw
     else:
         #likechapterHead
         s = text.find('<h2 class="likechapterHead">')
         if (s != -1):
-            print("\n\nlikechapter\n\n")
             auxText = text[s:]
             s = auxText.find('</a>')+4
             e = auxText.index('</h2>')
@@ -211,8 +217,15 @@ for index, f in enumerate (lfiles):
 
     head1 = "<meta name='keywords' content='"
     head1 += "Livro, Cálculo Numérico, Métodos, Análise"
+    codeIn = []
+    if (sys.argv[1] == 'livro'):
+        codeIn = 'Scilab'
+    elif (sys.argv[1] == 'livro-py'):
+        codeIn = 'Python'
+    else:
+        raise NameError('opção inválida.')
     if (len(kw) != 0):
-        head1 += ", " + kw 
+        head1 += ", " + kw + ", " + codeIn
     head1 += "'>\n"
     head_include = head1 + head_include;
     
@@ -373,7 +386,6 @@ for index, f in enumerate (lfiles):
     file.close()
 
     fn = os.path.splitext(f)[0]
-    print(fn)
     ii = -1
     try:
         ii = [y[0] for y in lFilesAndTitles].index(fn)
