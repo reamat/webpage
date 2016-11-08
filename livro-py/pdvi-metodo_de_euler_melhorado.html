@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Método de Euler melhorado'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Método de Euler melhorado, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -96,9 +98,9 @@
 </div>
    <!--l. 257-->
    <h3 class="sectionHead"><span class="titlemark">10.2   </span> <a 
- id="x86-14600010.2"></a>Método de Euler melhorado</h3><hr class="section">
+ id="x86-14700010.2"></a>Método de Euler melhorado</h3><hr class="section">
 <a 
- id="dx86-146001"></a>
+ id="dx86-147001"></a>
 <!--l. 258--><p class="noindent" >O método de Euler foi o primeiro método que estudamos e sua principal virtude é
 a simplicidade. Outros métodos, no entanto, podem apresentar resultados
 superiores. Vamos apresentar agora uma pequena modificação ao Método de
@@ -107,21 +109,21 @@ ou Método de Euler Melhorado.
 <!--l. 260--><p class="indent" >   No método de Euler, usamos a seguinte iteração: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4015x.png" alt="  (k+1)       (k)       (k) (k)
+src="main4038x.png" alt="  (k+1)       (k)       (k) (k)
 y       =  y   +  hf(y  ,t  )
    y(1)  =  y0  (condição inicial)
 " class="math-display" ></center>
 </div>
 <!--l. 266--><p class="indent" >   A ideia do método de Euler Melhorado é substituir a declividade <img 
-src="main4016x.png" alt="   (k) (k)
+src="main4039x.png" alt="   (k) (k)
 f(y   ,t  )  "  class="math" >
 pela média aritmética entre <img 
-src="main4017x.png" alt="f (y (k),t(k))  "  class="math" > e <img 
-src="main4018x.png" alt="f (y (k+1),t(k+1))  "  class="math" >, isto é, as declividades
+src="main4040x.png" alt="f (y (k),t(k))  "  class="math" > e <img 
+src="main4041x.png" alt="f (y (k+1),t(k+1))  "  class="math" >, isto é, as declividades
 avaliadas no início e no fim do intervalo <img 
-src="main4019x.png" alt="[t(k),t(k+1)]  "  class="math" >.
+src="main4042x.png" alt="[t(k),t(k+1)]  "  class="math" >.
 <!--l. 268--><p class="indent" >   No entanto, não dispomos do valor de <img 
-src="main4020x.png" alt=" (k+1)
+src="main4043x.png" alt=" (k+1)
 y   "  class="math" > antes de executar o passo.
 Assim aproximamos esta grandeza pelo valor produzido pelo Método de Euler
 original:
@@ -130,14 +132,14 @@ original:
                                                                           
    <center class="math-display" >
 <img 
-src="main4021x.png" alt="&#x02DC;y(k+1) = y(k) + hf (y(k),t(k)).
+src="main4044x.png" alt="&#x02DC;y(k+1) = y(k) + hf (y(k),t(k)).
 " class="math-display" ></center>
 <!--l. 271--><p class="indent" >   De posse desta aproximação, calculamos a média aritmética e, finalmente,
 com esta média, realizamos o passo do Método de Euler Melhorado. O processo
 iterativo de Euler Melhorado é, portanto, dado por: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4022x.png" alt="&#x02DC;y(k+1)  =   y(k) + hf(y (k),t(k))
+src="main4045x.png" alt="&#x02DC;y(k+1)  =   y(k) + hf(y (k),t(k))
                  h [                           ]
 y(k+1)  =   y(k) + -- f(y(k),t(k)) + f(&#x02DC;y(k+1),t(k+1 ))
                  2
@@ -148,7 +150,7 @@ y(k+1)  =   y(k) + -- f(y(k),t(k)) + f(&#x02DC;y(k+1),t(k+1 ))
 <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4023x.png" alt="                (k) (k)
+src="main4046x.png" alt="                (k) (k)
    k1  =   hf (y  ,t  ),
    k2  =   hf (y(k) + k1,t(k+1)),
                  k1 + k2
@@ -157,78 +159,78 @@ y(k+1) =   y(k) +------- ,
   y    =   y0  (condi ção inicial).
 " class="math-display" ></center>
 </div>Aqui <img 
-src="main4024x.png" alt="k
+src="main4047x.png" alt="k
  1   "  class="math" > e <img 
-src="main4025x.png" alt="k
+src="main4048x.png" alt="k
  2   "  class="math" > são variáveis auxiliares que representam as inclinações e devem
 ser calculadas a cada passo. Esta notação é compatível com a notação usada nos
 métodos de Runge-Kutta, uma família de esquemas iterativos para aproximar
 problemas de valor inicial, da qual o Método de Euler e o Método de Euler
 Melhorado são casos particulares. Veremos os métodos de Runge-Kutta na seção
 <a 
-href="pdvi-metodos_de_runge-kutta.html#x89-15400010.5">10.5<!--tex4ht:ref: sec_RK --></a>.
+href="pdvi-metodos_de_runge-kutta.html#x89-15500010.5">10.5<!--tex4ht:ref: sec_RK --></a>.
 <!--l. 288--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
- id="x86-14700010.2"></a>Exercícios</h4><hr class="section">
+ id="x86-14800010.2"></a>Exercícios</h4><hr class="section">
    <div class="newtheorem">
 <!--l. 290--><p class="noindent" ><span class="head">
 <a 
- id="x86-147001r1"></a>
+ id="x86-148001r1"></a>
 <span 
 class="ec-lmbx-12">E 10.2.1.</span>  </span>Use o Método de Euler melhorado para obter uma aproximação
 numérica do valor de <img 
-src="main4026x.png" alt="y(1)  "  class="math" > quando <img 
-src="main4027x.png" alt="y(t)  "  class="math" > satisfaz o seguinte problema de valor
+src="main4049x.png" alt="y(1)  "  class="math" > quando <img 
+src="main4050x.png" alt="y(t)  "  class="math" > satisfaz o seguinte problema de valor
 inicial <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4028x.png" alt=" &prime;                 y(t)
-y(t)  =   &minus; y (t) + e  ,
+src="main4051x.png" alt=" &#x2032;                 y(t)
+y(t)  =   - y (t) + e  ,
 y(0)  =   0,
 " class="math-display" ></center>
 </div>usando passos <img 
-src="main4029x.png" alt="h = 0,1  "  class="math" > e <img 
-src="main4030x.png" alt="h = 0,01  "  class="math" >.
+src="main4052x.png" alt="h = 0,1  "  class="math" > e <img 
+src="main4053x.png" alt="h = 0,01  "  class="math" >.
    </div>
 <!--l. 297--><p class="noindent" ><span 
 class="ec-lmbx-6">Resposta.</span>  <img 
-src="main4031x.png" alt="y(1)&asymp; 1,317078  "  class="math" > <span 
+src="main4054x.png" alt="y(1)&#x2248; 1,317078  "  class="math" > <span 
 class="ec-lmr-6">quando</span> <img 
-src="main4032x.png" alt="h =0,1  "  class="math" > <span 
+src="main4055x.png" alt="h =0,1  "  class="math" > <span 
 class="ec-lmr-6">e</span> <img 
-src="main4033x.png" alt="y(1)&asymp; 1,317045  "  class="math" ><span 
+src="main4056x.png" alt="y(1)&#x2248; 1,317045  "  class="math" ><span 
 class="ec-lmr-6">.</span>
    <div class="newtheorem">
 <!--l. 304--><p class="noindent" ><span class="head">
 <a 
- id="x86-147003r2"></a>
+ id="x86-148003r2"></a>
 <span 
 class="ec-lmbx-12">E 10.2.2.</span>  </span>Use o Método de Euler e o Método de Euler melhorado para obter
 aproximações numéricas para a solução do seguinte problema de valor inicial para
 <img 
-src="main4034x.png" alt="t &isin; [0,1]  "  class="math" >: <div class="eqnarray">
+src="main4057x.png" alt="t &#x2208; [0,1]  "  class="math" >: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4035x.png" alt="  &prime;                   2
-y (t)  =  &minus; y(t) &minus; y (t) ,
+src="main4058x.png" alt="  &#x2032;                   2
+y (t)  =  - y(t) - y (t) ,
  y(0)  =  1,
 " class="math-display" ></center>
 </div>usando passo <img 
-src="main4036x.png" alt="h = 0,1  "  class="math" >. Compare os valores da solução exata dada por
+src="main4059x.png" alt="h = 0,1  "  class="math" >. Compare os valores da solução exata dada por
 <img 
-src="main4037x.png" alt="y(t) = 2e1t&minus;-1   "  class="math" > com os numéricos nos pontos <img 
-src="main4038x.png" alt="t = 0  "  class="math" >, <img 
-src="main4039x.png" alt="t = 0.1  "  class="math" >, <img 
-src="main4040x.png" alt="t = 0.2  "  class="math" >, <img 
-src="main4041x.png" alt="t = 0.3  "  class="math" >,
+src="main4060x.png" alt="y(t) = 2e1t--1   "  class="math" > com os numéricos nos pontos <img 
+src="main4061x.png" alt="t = 0  "  class="math" >, <img 
+src="main4062x.png" alt="t = 0.1  "  class="math" >, <img 
+src="main4063x.png" alt="t = 0.2  "  class="math" >, <img 
+src="main4064x.png" alt="t = 0.3  "  class="math" >,
 <img 
-src="main4042x.png" alt="t = 0.4  "  class="math" >, <img 
-src="main4043x.png" alt="t = 0.5  "  class="math" >, <img 
-src="main4044x.png" alt="t = 0.6  "  class="math" >, <img 
-src="main4045x.png" alt="t = 0.7  "  class="math" >, <img 
-src="main4046x.png" alt="t = 0.8  "  class="math" >, <img 
-src="main4047x.png" alt="t = 0.9  "  class="math" >, <img 
-src="main4048x.png" alt="t = 1.0  "  class="math" >.
+src="main4065x.png" alt="t = 0.4  "  class="math" >, <img 
+src="main4066x.png" alt="t = 0.5  "  class="math" >, <img 
+src="main4067x.png" alt="t = 0.6  "  class="math" >, <img 
+src="main4068x.png" alt="t = 0.7  "  class="math" >, <img 
+src="main4069x.png" alt="t = 0.8  "  class="math" >, <img 
+src="main4070x.png" alt="t = 0.9  "  class="math" >, <img 
+src="main4071x.png" alt="t = 1.0  "  class="math" >.
    </div>
 <!--l. 311--><p class="noindent" ><span 
 class="ec-lmbx-6">Resposta.</span>
@@ -237,7 +239,7 @@ class="ec-lmbx-6">Resposta.</span>
                                                                           
    <center class="math-display" >
 <img 
-src="main4049x.png" alt="|t-|-Exato--|-Euler--|EulerMelhorado-|ErroEuler|Erro-EulerMelhorado-|
+src="main4072x.png" alt="|t-|-Exato--|-Euler--|EulerMelhorado-|ErroEuler|Erro-EulerMelhorado-|
 |0.0|---1.---|--1.---|----1.-----|---0.---|-------0.-------|
 |0.1|0.826213 | 0.8  |   0.828    | 0.026213 |    0.001787     |
 |0.2|0.693094 | 0.656  |  0.695597   | 0.037094 |    0.002502     |

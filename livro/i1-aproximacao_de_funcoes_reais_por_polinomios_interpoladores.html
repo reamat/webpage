@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:03:00"> 
+<meta name="date" content="2016-11-07 23:12:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Aproximação de funções reais por polinômios interpoladores'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Aproximação de funções reais por polinômios interpoladores, Scilab'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro/main.pdf">Formato PDF</a></li>
             <li><a href="../livro/main.epub">Formato EPUB</a></li>
             <li><a href="../livro/slide.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro-py/main.html">Versão Python</a></li>
           </ul>
         </li>		
@@ -94,105 +96,105 @@
   		</ul>
 	</nav>
 </div>
-   <!--l. 330-->
+   <!--l. 383-->
    <h3 class="sectionHead"><span class="titlemark">6.4   </span> <a 
  id="x59-990006.4"></a>Aproximação de funções reais por polinômios interpoladores</h3><hr class="section">
 <a 
  id="dx59-99001"></a>
    <div class="newtheorem">
-<!--l. 332--><p class="noindent" ><span class="head">
+<!--l. 385--><p class="noindent" ><span class="head">
 <a 
  id="x59-99002r1"></a>
 <span 
 class="ec-lmbx-12">Teorema 6.4.1.</span>  </span> <span 
 class="ec-lmri-12">Dados</span> <img 
-src="main2848x.png" alt="n + 1  "  class="math" > <span 
+src="main2856x.png" alt="n + 1  "  class="math" > <span 
 class="ec-lmri-12">pontos distintos,</span> <img 
-src="main2849x.png" alt="x0, x1, &sdot;&sdot;&sdot;, xn   "  class="math" ><span 
+src="main2857x.png" alt="x0, x1, &#x22C5;&#x22C5;&#x22C5;, xn   "  class="math" ><span 
 class="ec-lmri-12">, dentro</span>
 <span 
 class="ec-lmri-12">de um intervalo</span> <img 
-src="main2850x.png" alt="[a,b]  "  class="math" > <span 
+src="main2858x.png" alt="[a,b]  "  class="math" > <span 
 class="ec-lmri-12">e uma fun</span><span 
 class="ec-lmri-12">ç</span><span 
 class="ec-lmri-12">ão</span> <img 
-src="main2851x.png" alt="f  "  class="math" > <span 
+src="main2859x.png" alt="f  "  class="math" > <span 
 class="ec-lmri-12">com</span> <img 
-src="main2852x.png" alt="n + 1  "  class="math" > <span 
+src="main2860x.png" alt="n + 1  "  class="math" > <span 
 class="ec-lmri-12">derivadas cont</span><span 
 class="ec-lmri-12">ínuas</span>
 <span 
 class="ec-lmri-12">nesse intervalo (</span><img 
-src="main2853x.png" alt="f &isin; Cn+1 [a,b]  "  class="math" ><span 
+src="main2861x.png" alt="f &#x2208; Cn+1 [a,b]  "  class="math" ><span 
 class="ec-lmri-12">), ent</span><span 
 class="ec-lmri-12">ão para cada</span> <img 
-src="main2854x.png" alt="x  "  class="math" > <span 
+src="main2862x.png" alt="x  "  class="math" > <span 
 class="ec-lmri-12">em</span> <img 
-src="main2855x.png" alt="[a,b]  "  class="math" ><span 
+src="main2863x.png" alt="[a,b]  "  class="math" ><span 
 class="ec-lmri-12">, existe um</span>
 <span 
 class="ec-lmri-12">n</span><span 
 class="ec-lmri-12">úmero</span> <img 
-src="main2856x.png" alt="&xi;(x)  "  class="math" > <span 
+src="main2864x.png" alt="&#x03BE;(x)  "  class="math" > <span 
 class="ec-lmri-12">em</span> <img 
-src="main2857x.png" alt="(a,b)  "  class="math" > <span 
+src="main2865x.png" alt="(a,b)  "  class="math" > <span 
 class="ec-lmri-12">tal que</span>
    <center class="math-display" >
 <img 
-src="main2858x.png" alt="                (n+1)
-f(x) = P (x) + f----(&xi;(x))(x &minus; x  )(x &minus; x  )&sdot;&sdot;&sdot;(x &minus; x ),
+src="main2866x.png" alt="                (n+1)
+f(x) = P (x) + f----(&#x03BE;(x))(x - x  )(x - x  )&#x22C5;&#x22C5;&#x22C5;(x - x ),
                  (n + 1)!        0       1          n
 " class="math-display" ></center> <span 
 class="ec-lmri-12">onde</span> <img 
-src="main2859x.png" alt="P (x)  "  class="math" > <span 
+src="main2867x.png" alt="P (x)  "  class="math" > <span 
 class="ec-lmri-12">é o polin</span><span 
 class="ec-lmri-12">ômio interpolador. Em especial, pode-se dizer que</span>
    <center class="math-display" >
 <img 
-src="main2860x.png" alt="                ---M----
-|f (x) &minus; P(x )| &le; (n + 1)! |(x &minus; x0)(x &minus; x1)&sdot;&sdot; &sdot;(x &minus; xn )|,
+src="main2868x.png" alt="                ---M----
+|f (x) - P(x )| &#x2264; (n + 1)! |(x - x0)(x - x1)&#x22C5;&#x22C5; &#x22C5;(x - xn )|,
 " class="math-display" ></center> <span 
 class="ec-lmri-12">onde</span>
    <center class="math-display" >
 <img 
-src="main2861x.png" alt="M  =  max  |f(n+1)(&xi;(x))|
-      x&isin;[a,b]
+src="main2869x.png" alt="M  =  max  |f(n+1)(&#x03BE;(x))|
+      x&#x2208;[a,b]
 " class="math-display" ></center>
    </div>
    <div class="newtheorem">
-<!--l. 347--><p class="noindent" ><span class="head">
+<!--l. 400--><p class="noindent" ><span class="head">
 <a 
  id="x59-99003r1"></a>
 <span 
 class="ec-lmbx-12">Exemplo 6.4.1.</span>  </span>Considere a função <img 
-src="main2862x.png" alt="f(x) = cos(x)  "  class="math" > e o polinômio <img 
-src="main2863x.png" alt="P (x)  "  class="math" >
+src="main2870x.png" alt="f(x) = cos(x)  "  class="math" > e o polinômio <img 
+src="main2871x.png" alt="P (x)  "  class="math" >
 de grau 2 tal que <img 
-src="main2864x.png" alt="P (0) = cos(0 ) = 1  "  class="math" >, <img 
-src="main2865x.png" alt="P (12) = cos(12)  "  class="math" > e <img 
-src="main2866x.png" alt="P (1 ) = cos(1)  "  class="math" >. Use
+src="main2872x.png" alt="P (0) = cos(0 ) = 1  "  class="math" >, <img 
+src="main2873x.png" alt="P (12) = cos(12)  "  class="math" > e <img 
+src="main2874x.png" alt="P (1 ) = cos(1)  "  class="math" >. Use
 a fórmula de Lagrange para encontrar <img 
-src="main2867x.png" alt="P(x)  "  class="math" >. Encontre o erro máximo que
+src="main2875x.png" alt="P(x)  "  class="math" >. Encontre o erro máximo que
 se assume ao aproximar o valor de <img 
-src="main2868x.png" alt="cos(x)  "  class="math" > pelo de <img 
-src="main2869x.png" alt="P (x)  "  class="math" > no intervalo <img 
-src="main2870x.png" alt="[0,1]  "  class="math" >.
+src="main2876x.png" alt="cos(x)  "  class="math" > pelo de <img 
+src="main2877x.png" alt="P (x)  "  class="math" > no intervalo <img 
+src="main2878x.png" alt="[0,1]  "  class="math" >.
 Trace os gráficos de <img 
-src="main2871x.png" alt="f(x)  "  class="math" > e <img 
-src="main2872x.png" alt="P (x )  "  class="math" > no intervalo <img 
-src="main2873x.png" alt="[0,1]  "  class="math" > no mesmo plano
+src="main2879x.png" alt="f(x)  "  class="math" > e <img 
+src="main2880x.png" alt="P (x )  "  class="math" > no intervalo <img 
+src="main2881x.png" alt="[0,1]  "  class="math" > no mesmo plano
 cartesiano e, depois, trace o gráfico da diferença <img 
-src="main2874x.png" alt="cos(x) &minus; P (x)  "  class="math" >. Encontre
+src="main2882x.png" alt="cos(x) - P (x)  "  class="math" >. Encontre
 o erro efetivo máximo <img 
-src="main2875x.png" alt="|cos(x ) &minus; P (x)| "  class="math" >.
+src="main2883x.png" alt="|cos(x ) - P (x)| "  class="math" >.
    </div>
-<!--l. 351--><p class="noindent" ><div class="eqnarray">
+<!--l. 404--><p class="noindent" ><div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2876x.png" alt="            (x &minus;  1)(x &minus; 1)      ( 1) (x &minus; 0)(x &minus; 1)         (x &minus; 0)(x &minus; 1)
+src="main2884x.png" alt="            (x -  1)(x - 1)      ( 1) (x - 0)(x - 1)         (x - 0)(x - 1)
 P (x)  =  1 -----21--------+  cos  -- -1------1----- + cos(1)------------21-
-            (0 &minus; 2)(0 &minus; 1 )       2  (2 &minus; 0)(2 &minus; 1)         (1 &minus; 0)(1 &minus; 2)
-       &asymp;  1 &minus; 0,0299720583066x  &minus;  0,4297256358252x2
+            (0 - 2)(0 - 1 )       2  (2 - 0)(2 - 1)         (1 - 0)(1 - 2)
+       &#x2248;  1 - 0,0299720583066x  -  0,4297256358252x2
 " class="math-display" ></center>
 </div>
                                                                           
@@ -208,92 +210,92 @@ L1=poly([.5&#x00A0;1],&#8217;x&#8217;);L1=L1/horner(L1,0)
 &#x00A0;<br />plot(x,horner(P,x),&#8217;red&#8217;)
 &#x00A0;<br />plot(x,horner(P,x)-cos(x))
 </div>
-<!--l. 366--><p class="nopar" >
-<!--l. 369--><p class="indent" >   Para encontrar o erro máximo, precisamos estimar <img 
-src="main2877x.png" alt="|f&prime;&prime;&prime;(x)| = |sin(x)| &le; sin (1 ) &#x003C; 0,85  "  class="math" >
+<!--l. 422--><p class="nopar" >
+<!--l. 426--><p class="indent" >   Para encontrar o erro máximo, precisamos estimar <img 
+src="main2885x.png" alt="|f&#x2032;&#x2032;&#x2032;(x)| = |sin(x)| &#x2264; sin (1 ) &#x003C; 0,85  "  class="math" >
 e
    <center class="math-display" >
 <img 
-src="main2878x.png" alt="     ||  (    1 )       ||
-max  ||x  x &minus; -- (x &minus; 1 )||
-x&isin;[0,1]       2 " class="math-display" ></center> O
+src="main2886x.png" alt="     ||  (    1 )       ||
+max  ||x  x - -- (x - 1 )||
+x&#x2208;[0,1]       2 " class="math-display" ></center> O
 polinômio de grau três <img 
-src="main2879x.png" alt="          (    1)
-Q (x) = x  x &minus; 2  (x &minus;  1)  "  class="math" > tem um mínimo (negativo) em
+src="main2887x.png" alt="          (    1)
+Q (x) = x  x - 2  (x -  1)  "  class="math" > tem um mínimo (negativo) em
 <img 
-src="main2880x.png" alt="        &radic;-
+src="main2888x.png" alt="        &#x221A;-
 x1 =  3+6-3-   "  class="math" > e um máximo (positivo) em <img 
-src="main2881x.png" alt="        &radic;-
-x2 =  3&minus;6-3-   "  class="math" >. Logo:
+src="main2889x.png" alt="        &#x221A;-
+x2 =  3-6-3-   "  class="math" >. Logo:
    <center class="math-display" >
 <img 
-src="main2882x.png" alt="     |  (      )       |
+src="main2890x.png" alt="     |  (      )       |
      ||       1-        ||
-mxa&isin;x[0,1]|x  x &minus; 2  (x &minus; 1)| &le; max {|Q (x1)|, |Q (x2)|} &asymp; 0,0481125.  " class="math-display" ></center>
+mxa&#x2208;x[0,1]|x  x - 2  (x - 1)| &#x2264; max {|Q (x1)|, |Q (x2)|} &#x2248; 0,0481125.  " class="math-display" ></center>
 Portanto:
    <center class="math-display" >
 <img 
-src="main2883x.png" alt="                0,85                              &minus; 3
-|f(x ) &minus; P (x)| &#x003C; 3! 0,0481125 &asymp;  0,0068159 &#x003C; 7 &sdot; 10
+src="main2891x.png" alt="                0,85                              - 3
+|f(x ) - P (x)| &#x003C; 3! 0,0481125 &#x2248;  0,0068159 &#x003C; 7 &#x22C5; 10
 " class="math-display" ></center>
-<!--l. 382--><p class="indent" >   Para encontrar o erro efetivo máximo, basta encontrar o máximo de
+<!--l. 439--><p class="indent" >   Para encontrar o erro efetivo máximo, basta encontrar o máximo de
 <img 
-src="main2884x.png" alt="|P (x) &minus; cos (x )| "  class="math" >. O mínimo (negativo) de <img 
-src="main2885x.png" alt="P (x) &minus; cos(x)  "  class="math" > acontece em
+src="main2892x.png" alt="|P (x) - cos (x )| "  class="math" >. O mínimo (negativo) de <img 
+src="main2893x.png" alt="P (x) - cos(x)  "  class="math" > acontece em
 <img 
-src="main2886x.png" alt="             &minus; 3
-x1 = 4,29 &sdot; 10   "  class="math" > e o máximo (positivo) acontece em <img 
-src="main2887x.png" alt="             &minus; 3
-x2 =  3,29 &sdot; 10   "  class="math" >. Portanto,
+src="main2894x.png" alt="             - 3
+x1 = 4,29 &#x22C5; 10   "  class="math" > e o máximo (positivo) acontece em <img 
+src="main2895x.png" alt="             - 3
+x2 =  3,29 &#x22C5; 10   "  class="math" >. Portanto,
 o erro máximo efetivo é <img 
-src="main2888x.png" alt="        &minus;3
-4,29 &sdot; 10   "  class="math" >.
+src="main2896x.png" alt="        -3
+4,29 &#x22C5; 10   "  class="math" >.
    <div class="newtheorem">
-<!--l. 384--><p class="noindent" ><span class="head">
+<!--l. 441--><p class="noindent" ><span class="head">
 <a 
  id="x59-99005r2"></a>
 <span 
 class="ec-lmbx-12">Exemplo 6.4.2.</span>  </span> Considere o problema de aproximar o valor da integral
 <img 
-src="main2889x.png" alt="&int;1
+src="main2897x.png" alt="&#x222B;1
  0 f (x )dx  "  class="math" > pelo valor da integral do polinômio <img 
-src="main2890x.png" alt="P (x )  "  class="math" > que coincide com
+src="main2898x.png" alt="P (x )  "  class="math" > que coincide com
 <img 
-src="main2891x.png" alt="f (x )  "  class="math" > nos pontos <img 
-src="main2892x.png" alt="x0 =  0  "  class="math" >, <img 
-src="main2893x.png" alt="x1 = 12   "  class="math" >  e <img 
-src="main2894x.png" alt="x2 =  1  "  class="math" >. Use a fórmula de Lagrange
+src="main2899x.png" alt="f (x )  "  class="math" > nos pontos <img 
+src="main2900x.png" alt="x0 =  0  "  class="math" >, <img 
+src="main2901x.png" alt="x1 = 12   "  class="math" >  e <img 
+src="main2902x.png" alt="x2 =  1  "  class="math" >. Use a fórmula de Lagrange
 para  encontrar  <img 
-src="main2895x.png" alt="P (x)  "  class="math" >.  Obtenha  o  valor  de  <img 
-src="main2896x.png" alt="&int; 1f(x )dx
+src="main2903x.png" alt="P (x)  "  class="math" >.  Obtenha  o  valor  de  <img 
+src="main2904x.png" alt="&#x222B; 1f(x )dx
  0  "  class="math" > e  encontre  uma
 expressão para o erro de truncamento.
    </div>
-<!--l. 387--><p class="indent" >   O polinômio interpolador de <img 
-src="main2897x.png" alt="f (x )  "  class="math" > é <div class="eqnarray">
+<!--l. 444--><p class="indent" >   O polinômio interpolador de <img 
+src="main2905x.png" alt="f (x )  "  class="math" > é <div class="eqnarray">
    <center class="math-display" >
                                                                           
 
                                                                           
 <img 
-src="main2898x.png" alt="               (x &minus; 1)(x &minus; 1)     (1) (x &minus; 0 )(x &minus; 1)        (x &minus; 0)(x &minus; 1)
+src="main2906x.png" alt="               (x - 1)(x - 1)     (1) (x - 0 )(x - 1)        (x - 0)(x - 1)
 P (x)  =  f (0)-----21-------- + f  -- --1------1---- + f (1)------------21-
-               (0 &minus; 2)(0 &minus; 1)      2  ( 2 &minus; 0 )( 2 &minus; 1)      (1 &minus; 0)(1 &minus; 2)
+               (0 - 2)(0 - 1)      2  ( 2 - 0 )( 2 - 1)      (1 - 0)(1 - 2)
                   2              ( 1)      2                2
-       =  f (0)(2x  &minus;  3x + 1) + f  -- (&minus; 4x +  4x) + f(1)(2x  &minus; x)
+       =  f (0)(2x  -  3x + 1) + f  -- (- 4x +  4x) + f(1)(2x  - x)
                                    2
 " class="math-display" ></center>
 </div>e a integral de <img 
-src="main2899x.png" alt="P (x)  "  class="math" > é: <div class="eqnarray">
+src="main2907x.png" alt="P (x)  "  class="math" > é: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2900x.png" alt="&int; 1             [    ( 2     3       )]1   [  (1 )(   4        ) ]1
-   P (x )dx  =    f(0)  -x3 &minus; --x2 + x    +  f  --   &minus; -x3 + 2x2
+src="main2908x.png" alt="&#x222B; 1             [    ( 2     3       )]1   [  (1 )(   4        ) ]1
+   P (x )dx  =    f(0)  -x3 - --x2 + x    +  f  --   - -x3 + 2x2
  0              [    ( 3     2   )]    0       2      3           0
                        2-3   1- 2  1
-            +    f(1)  3x  &minus; 2 x   0
+            +    f(1)  3x  - 2 x   0
                     ( 2   3    )     ( 1) (  4     )       ( 2   1 )
-            =   f(0)  --&minus; --+ 1  + f   --  &minus; --+ 2   + f(1)  --&minus; --
+            =   f(0)  --- --+ 1  + f   --  - --+ 2   + f(1)  --- --
                       3   2(  )        2     3               3   2
                 1-      2-   1-    1-
             =   6f(0) + 3 f  2  +  6f(1)
@@ -302,28 +304,28 @@ src="main2900x.png" alt="&int; 1             [    ( 2     3       )]1   [  (1 )(
 href="#x59-99002r1">6.4.1<!--tex4ht:ref: teo_interp --></a>, e temos <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2901x.png" alt="|                       |     |                 |
-||&int; 1          &int; 1       ||     ||&int; 1              ||
-| 0 f(x )dx &minus;   0 P (x )dx|  =  | 0 f(x ) &minus; P (x)dx|
-                              &int; 1
-                           &le;     |f(x ) &minus; P (x)|dx
-                               0 &int;   | (      )        |
+src="main2909x.png" alt="|                       |     |                 |
+||&#x222B; 1          &#x222B; 1       ||     ||&#x222B; 1              ||
+| 0 f(x )dx -   0 P (x )dx|  =  | 0 f(x ) - P (x)dx|
+                              &#x222B; 1
+                           &#x2264;     |f(x ) - P (x)|dx
+                               0 &#x222B;   | (      )        |
                               M--  1 ||       1-        ||
-                           &le;   6   0 |x  x &minus;  2  (x &minus; 1)|dx
-                              M  [ &int; 1&#x2215;2 (     1)
-                           =  ---      x  x &minus;  -- (x &minus; 1)dx
+                           &#x2264;   6   0 |x  x -  2  (x - 1)|dx
+                              M  [ &#x222B; 1&#x2215;2 (     1)
+                           =  ---      x  x -  -- (x - 1)dx
                                6    0          2
-                              &int; 1   (     1)          ]
-                           &minus;      x  x &minus;  -- (x &minus; 1)dx
+                              &#x222B; 1   (     1)          ]
+                           -      x  x -  -- (x - 1)dx
                                 1&#x2215;2[      ( 2   )]
                               M--  1--     -1-     -M--
-                           =   6   64 &minus;  &minus; 64    = 192 .
+                           =   6   64 -  - 64    = 192 .
 " class="math-display" ></center>
 </div>Lembramos que <img 
-src="main2902x.png" alt="                 &prime;&prime;&prime;
-M  =  maxx &isin;[0,1]|f  (x)| "  class="math" >.
+src="main2910x.png" alt="                 &#x2032;&#x2032;&#x2032;
+M  =  maxx &#x2208;[0,1]|f  (x)| "  class="math" >.
    <div class="newtheorem">
-<!--l. 410--><p class="noindent" ><span class="head">
+<!--l. 467--><p class="noindent" ><span class="head">
 <a 
  id="x59-99009r1"></a>
 <span 
@@ -334,51 +336,51 @@ truncamento para este esquema de integração numérica. Veremos com mais
 detalhes tais esquemas na teoria de integração numérica.
    </div>
    <div class="newtheorem">
-<!--l. 413--><p class="noindent" ><span class="head">
+<!--l. 470--><p class="noindent" ><span class="head">
 <a 
  id="x59-99010r3"></a>
 <span 
 class="ec-lmbx-12">Exemplo 6.4.3.</span>  </span>Use o resultado do exemplo anterior para aproximar o valor
 das seguintes integrais:<br 
 class="newline" />
-<!--l. 416--><p class="indent" >   a) <img 
-src="main2903x.png" alt="&int; 1
+<!--l. 473--><p class="indent" >   a) <img 
+src="main2911x.png" alt="&#x222B; 1
  0 ln(x + 1)dx  "  class="math" ><br 
 class="newline" />
-<!--l. 418--><p class="indent" >   b) <img 
-src="main2904x.png" alt="&int; 1
-   e&minus;x2dx
+<!--l. 475--><p class="indent" >   b) <img 
+src="main2912x.png" alt="&#x222B; 1
+   e-x2dx
  0  "  class="math" >
                                                                           
 
                                                                           
    </div>
-<!--l. 421--><p class="indent" >   <span 
+<!--l. 478--><p class="indent" >   <span 
 class="ec-lmbx-12">Solu</span><span 
 class="ec-lmbx-12">ç</span><span 
 class="ec-lmbx-12">ão. </span>Usando a fórmula obtida, temos que
    <center class="math-display" >
 <img 
-src="main2905x.png" alt="&int; 1                      1
-   ln (x +  1)dx &asymp; 0,39 ± ---
+src="main2913x.png" alt="&#x222B; 1                      1
+   ln (x +  1)dx &#x2248; 0,39 ± ---
  0                      96
 " class="math-display" ></center>
    <center class="math-display" >
 <img 
-src="main2906x.png" alt="&int; 1
-   e&minus; x2dx &asymp;  0,75 ± 3,87
+src="main2914x.png" alt="&#x222B; 1
+   e- x2dx &#x2248;  0,75 ± 3,87
  0                  192
 " class="math-display" ></center>
                                                                           <div class="flushright" 
 >
-<!--l. 429--><p class="noindent" >
+<!--l. 486--><p class="noindent" >
  <img 
-src="main2907x.png" alt="&#x2662; "  class="math" ></div>
-<!--l. 431--><p class="noindent" >
+src="main2915x.png" alt="&#x2662; "  class="math" ></div>
+<!--l. 488--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
  id="x59-1000006.4"></a>Exercícios</h4><hr class="section">
    <div class="newtheorem">
-<!--l. 433--><p class="noindent" ><span class="head">
+<!--l. 490--><p class="noindent" ><span class="head">
 <a 
  id="x59-100001r1"></a>
                                                                           
@@ -392,29 +394,29 @@ uma aproximação do valor de:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2908x.png" alt="&int; 1
+src="main2916x.png" alt="&#x222B; 1
    f (x )dx
  0
 " class="math-display" ></center></td></tr></table>
-<!--l. 437--><p class="nopar" >
+<!--l. 494--><p class="nopar" >
 através do polinômio interpolador que coincide com <img 
-src="main2909x.png" alt="f(x)  "  class="math" > nos pontos <img 
-src="main2910x.png" alt="x =  0  "  class="math" > e
+src="main2917x.png" alt="f(x)  "  class="math" > nos pontos <img 
+src="main2918x.png" alt="x =  0  "  class="math" > e
 <img 
-src="main2911x.png" alt="x =  1  "  class="math" >.
+src="main2919x.png" alt="x =  1  "  class="math" >.
    </div>
-<!--l. 440--><p class="noindent" ><span 
+<!--l. 497--><p class="noindent" ><span 
 class="ec-lmbx-6">Resposta.</span>  <img 
-src="main2912x.png" alt="&int; 1P(x)dx = f(0)+f(1)
+src="main2920x.png" alt="&#x222B; 1P(x)dx = f(0)+f(1)
  0          2  "  class="math" ><span 
 class="ec-lmr-6">,</span> <img 
-src="main2913x.png" alt="-1max    |f&prime;&prime;(x)|
-12   x&isin;[0,1] "  class="math" >
+src="main2921x.png" alt="-1max    |f&#x2032;&#x2032;(x)|
+12   x&#x2208;[0,1] "  class="math" >
                                                                           
 
                                                                           
-   <!--l. 446-->
-<!--l. 446--><p class="indent" >   <a 
+   <!--l. 503-->
+<!--l. 503--><p class="indent" >   <a 
  id="taili1-aproximacao_de_funcoes_reais_por_polinomios_interpoladores.html"></a>   
 <div class="text-center">
 		<nav class="nav-links" aria-label="Page navigation">

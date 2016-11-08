@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Linearização de uma função de várias variáveis, O gradiente, A matriz jacobiana'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Linearização de uma função de várias variáveis, O gradiente, A matriz jacobiana, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -94,88 +96,88 @@
   		</ul>
 	</nav>
 </div>
-   <!--l. 345-->
+   <!--l. 369-->
    <h3 class="sectionHead"><span class="titlemark">5.2   </span> <a 
- id="x51-870005.2"></a>Linearização de uma função de várias variáveis</h3><hr class="section">
-<!--l. 347--><p class="noindent" >
+ id="x51-880005.2"></a>Linearização de uma função de várias variáveis</h3><hr class="section">
+<!--l. 371--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">5.2.1   </span> <a 
- id="x51-880005.2.1"></a>O gradiente</h4><hr class="section">
-<!--l. 349--><p class="noindent" >Considere primeiramente uma função <img 
-src="main2473x.png" alt="     n
-f : &#x211D; &rarr;  &#x211D;  "  class="math" >, ou seja, uma função que
+ id="x51-890005.2.1"></a>O gradiente</h4><hr class="section">
+<!--l. 373--><p class="noindent" >Considere primeiramente uma função <img 
+src="main2474x.png" alt="     n
+f : &#x211D; &#x2192;  &#x211D;  "  class="math" >, ou seja, uma função que
 mapeia n variáveis reais em um único real, por exemplo:
    <center class="math-display" >
 <img 
-src="main2474x.png" alt="f(x) = x21 + x22&#x2215;4
+src="main2475x.png" alt="f(x) = x21 + x22&#x2215;4
 " class="math-display" ></center>
-<!--l. 352--><p class="indent" >   Para construirmos a linearização, fixemos uma direção no espaço <img 
-src="main2475x.png" alt="&#x211D;n  "  class="math" >, ou seja
+<!--l. 376--><p class="indent" >   Para construirmos a linearização, fixemos uma direção no espaço <img 
+src="main2476x.png" alt="&#x211D;n  "  class="math" >, ou seja
 um vetor <img 
-src="main2476x.png" alt="v  "  class="math" >:
+src="main2477x.png" alt="v  "  class="math" >:
    <center class="math-display" >
 <img 
-src="main2477x.png" alt="v = [v1,v2,&sdot;&sdot;&sdot;,vn ]T
+src="main2478x.png" alt="v = [v1,v2,&#x22C5;&#x22C5;&#x22C5;,vn ]T
 " class="math-display" ></center>
                                                                           
 
                                                                           
-<!--l. 355--><p class="indent" >   Queremos estudar como a função <img 
-src="main2478x.png" alt="f(x)  "  class="math" > varia quando &#8220;andamos&#8221; na direção
+<!--l. 379--><p class="indent" >   Queremos estudar como a função <img 
+src="main2479x.png" alt="f(x)  "  class="math" > varia quando &#8220;andamos&#8221; na direção
 <img 
-src="main2479x.png" alt="v  "  class="math" > a partir do ponto <img 
-src="main2480x.png" alt=" (0)
+src="main2480x.png" alt="v  "  class="math" > a partir do ponto <img 
+src="main2481x.png" alt=" (0)
 x   "  class="math" >. Para tal, inserimos um parâmetro real pequeno <img 
-src="main2481x.png" alt="h  "  class="math" >,
+src="main2482x.png" alt="h  "  class="math" >,
 dizemos que
    <center class="math-display" >
 <img 
-src="main2482x.png" alt="x = x(0) + hv  " class="math-display" ></center> e
+src="main2483x.png" alt="x = x(0) + hv  " class="math-display" ></center> e
 definimos a função auxiliar
    <center class="math-display" >
 <img 
-src="main2483x.png" alt="           0
+src="main2484x.png" alt="           0
 g(h) = f(x  + hv ).  " class="math-display" ></center>
 Observamos que a função <img 
-src="main2484x.png" alt="g(h )  "  class="math" > é uma função de <img 
-src="main2485x.png" alt="&#x211D;  "  class="math" > em <img 
-src="main2486x.png" alt="&#x211D;  "  class="math" >.
-<!--l. 361--><p class="indent" >   A linearização de <img 
-src="main2487x.png" alt="g (h )  "  class="math" > em torno de <img 
-src="main2488x.png" alt="h =  0  "  class="math" > é dada por
-<!--l. 363--><p class="indent" >
+src="main2485x.png" alt="g(h )  "  class="math" > é uma função de <img 
+src="main2486x.png" alt="&#x211D;  "  class="math" > em <img 
+src="main2487x.png" alt="&#x211D;  "  class="math" >.
+<!--l. 385--><p class="indent" >   A linearização de <img 
+src="main2488x.png" alt="g (h )  "  class="math" > em torno de <img 
+src="main2489x.png" alt="h =  0  "  class="math" > é dada por
+<!--l. 387--><p class="indent" >
    <center class="math-display" >
 <img 
-src="main2489x.png" alt="g(h) = g(0) + hg&prime;(0) + O (h2)  " class="math-display" ></center>
+src="main2490x.png" alt="g(h) = g(0) + hg&#x2032;(0) + O (h2)  " class="math-display" ></center>
 Observamos que <img 
-src="main2490x.png" alt="           (0)
+src="main2491x.png" alt="           (0)
 g(h) = f(x   +  hv)  "  class="math" > e <img 
-src="main2491x.png" alt="          (0)
+src="main2492x.png" alt="          (0)
 g(0) = f(x  )  "  class="math" >. Precisamos calcular
 <img 
-src="main2492x.png" alt="g&prime;(0)  "  class="math" >:
+src="main2493x.png" alt="g&#x2032;(0)  "  class="math" >:
                                                                           
 
                                                                           
-<!--l. 366--><p class="indent" >   <div class="eqnarray">
+<!--l. 390--><p class="indent" >   <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2493x.png" alt=" &prime;      d--       -d-   (0)
+src="main2494x.png" alt=" &#x2032;      d--       -d-   (0)
 g (h ) = dh g(h) = dh f(x   + hv)
 " class="math-display" ></center>
 </div>Pela regra da cadeia temos: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2494x.png" alt="                  n&sum;
--d-f(x(0) + hv ) =   &part;f--dxj-
-dh                j=1 &part;xj dh
+src="main2495x.png" alt="                  n&#x2211;
+-d-f(x(0) + hv ) =   &#x2202;f--dxj-
+dh                j=1 &#x2202;xj dh
 " class="math-display" ></center>
 </div>
-<!--l. 374--><p class="indent" >   Observamos que <img 
-src="main2495x.png" alt="       (0)
+<!--l. 398--><p class="indent" >   Observamos que <img 
+src="main2496x.png" alt="       (0)
 xj = x j +  hvj  "  class="math" >, portanto
    <center class="math-display" >
 <img 
-src="main2496x.png" alt="dxj-= vj
+src="main2497x.png" alt="dxj-= vj
 dh  " class="math-display" ></center>
                                                                           
 
@@ -183,142 +185,142 @@ dh  " class="math-display" ></center>
 Assim: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2497x.png" alt="                 &sum;n
--d-f(x(0) + hv ) =   &part;f--vj
-dh               j=1 &part;xj
+src="main2498x.png" alt="                 &#x2211;n
+-d-f(x(0) + hv ) =   &#x2202;f--vj
+dh               j=1 &#x2202;xj
 " class="math-display" ></center>
 </div>Observamos que esta expressão pode ser vista como o produto interno entre o
 gradiente de <img 
-src="main2498x.png" alt="f  "  class="math" > e o vetor <img 
-src="main2499x.png" alt="v  "  class="math" >: <div class="eqnarray">
+src="main2499x.png" alt="f  "  class="math" > e o vetor <img 
+src="main2500x.png" alt="v  "  class="math" >: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2500x.png" alt="      &lfloor; &part;f-&rfloor;         &lfloor;   &rfloor;
-      | &part;x1|         |v1 |
-      || &part;f-||         ||v  ||
-&nabla;f  = || &part;x2||     v = ||  2||
+src="main2501x.png" alt="      &#x230A; &#x2202;f-&#x230B;         &#x230A;   &#x230B;
+      | &#x2202;x1|         |v1 |
+      || &#x2202;f-||         ||v  ||
+&#x2207;f  = || &#x2202;x2||     v = ||  2||
       ||  ... ||         || ... ||
-      |&lceil;    |&rceil;         |&lceil;   |&rceil;
-        &part;&part;fx-           vn
+      |&#x2308;    |&#x2309;         |&#x2308;   |&#x2309;
+        &#x2202;&#x2202;fx-           vn
           n
 " class="math-display" ></center>
 </div>
-<!--l. 399--><p class="indent" >   Na notação cálculo vetorial escrevemos este produto interno como
+<!--l. 423--><p class="indent" >   Na notação cálculo vetorial escrevemos este produto interno como
 <img 
-src="main2501x.png" alt="&nabla;f  &sdot; v = v &sdot; &nabla;f  "  class="math" > na notação de produto matricial, escrevemos <img 
-src="main2502x.png" alt="(&nabla;f  )T v = vT &nabla;f  "  class="math" >.
+src="main2502x.png" alt="&#x2207;f  &#x22C5; v = v &#x22C5; &#x2207;f  "  class="math" > na notação de produto matricial, escrevemos <img 
+src="main2503x.png" alt="(&#x2207;f  )T v = vT &#x2207;f  "  class="math" >.
 Esta quantidade é conhecida como <span 
 class="ec-lmbx-12">derivada direcional </span>de <img 
-src="main2503x.png" alt="f  "  class="math" > no ponto <img 
-src="main2504x.png" alt=" (0)
+src="main2504x.png" alt="f  "  class="math" > no ponto <img 
+src="main2505x.png" alt=" (0)
 x   "  class="math" > na
 direção <img 
-src="main2505x.png" alt="v  "  class="math" >, sobretudo quando <img 
-src="main2506x.png" alt="&#x2225;v &#x2225; = 1  "  class="math" >.
-<!--l. 402--><p class="indent" >   Podemos escrever a linearização <img 
-src="main2507x.png" alt="g(h) = g(0) + hg&prime;(0) + O (h2)  "  class="math" > como
+src="main2506x.png" alt="v  "  class="math" >, sobretudo quando <img 
+src="main2507x.png" alt="&#x2225;v &#x2225; = 1  "  class="math" >.
+<!--l. 426--><p class="indent" >   Podemos escrever a linearização <img 
+src="main2508x.png" alt="g(h) = g(0) + hg&#x2032;(0) + O (h2)  "  class="math" > como
                                                                           
 
                                                                           
    <center class="math-display" >
 <img 
-src="main2508x.png" alt="    (0)             (0)       T   (0)         2
-f (x  +  hv) = f(x   ) + h &nabla; f(x  ) v + O (h )
+src="main2509x.png" alt="    (0)             (0)       T   (0)         2
+f (x  +  hv) = f(x   ) + h &#x2207; f(x  ) v + O (h )
 " class="math-display" ></center>
-<!--l. 406--><p class="indent" >   Finalmente, escrevemos <img 
-src="main2509x.png" alt="      (0)
+<!--l. 430--><p class="indent" >   Finalmente, escrevemos <img 
+src="main2510x.png" alt="      (0)
 x =  x   + hv  "  class="math" >, ou seja, <img 
-src="main2510x.png" alt="           (0)
-hv =  x &minus; x   "  class="math" >
+src="main2511x.png" alt="           (0)
+hv =  x - x   "  class="math" >
    <center class="math-display" >
 <img 
-src="main2511x.png" alt="           (0)     T    (0)        (0)             (0) 2
-f (x) = f(x  ) + &nabla;  f (x   ) (x &minus; x  ) + O (&#x2225;x &minus; x  &#x2225; )
+src="main2512x.png" alt="           (0)     T    (0)        (0)             (0) 2
+f (x) = f(x  ) + &#x2207;  f (x   ) (x - x  ) + O (&#x2225;x - x  &#x2225; )
 " class="math-display" ></center>
    <div class="newtheorem">
-<!--l. 409--><p class="noindent" ><span class="head">
+<!--l. 433--><p class="noindent" ><span class="head">
 <a 
- id="x51-88005r1"></a>
+ id="x51-89005r1"></a>
 <span 
 class="ec-lmbx-12">Observa</span><span 
 class="ec-lmbx-12">ç</span><span 
 class="ec-lmbx-12">ão 5.2.1.</span>  </span>Observe a semelhança com a linearização no caso em
 uma dimensão. A notação <img 
-src="main2512x.png" alt="&nabla;T f (x (0))  "  class="math" > é o transposto do vetor gradiente
+src="main2513x.png" alt="&#x2207;T f (x (0))  "  class="math" > é o transposto do vetor gradiente
 associado à função <img 
-src="main2513x.png" alt="f (x)  "  class="math" > no ponto <img 
-src="main2514x.png" alt="x(0)   "  class="math" >:
+src="main2514x.png" alt="f (x)  "  class="math" > no ponto <img 
+src="main2515x.png" alt="x(0)   "  class="math" >:
    <center class="math-display" >
 <img 
-src="main2515x.png" alt="             &lfloor;   (    )      (   )           (   ) &rfloor;
-              &part;f  x (0)    &part;f  x(0)         &part;f  x(0)
-&nabla;T f (x (0)) = &lceil;---------,  ---------, &sdot;&sdot;&sdot;, ---------&rceil;
-                 &part;x1        &part;x2             &part;xn
+src="main2516x.png" alt="             &#x230A;   (    )      (   )           (   ) &#x230B;
+              &#x2202;f  x (0)    &#x2202;f  x(0)         &#x2202;f  x(0)
+&#x2207;T f (x (0)) = &#x2308;---------,  ---------, &#x22C5;&#x22C5;&#x22C5;, ---------&#x2309;
+                 &#x2202;x1        &#x2202;x2             &#x2202;xn
 " class="math-display" ></center>
                                                                           
 
                                                                           
    </div>
-<!--l. 413--><p class="noindent" >
+<!--l. 437--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">5.2.2   </span> <a 
- id="x51-890005.2.2"></a>A matriz jacobiana</h4><hr class="section">
+ id="x51-900005.2.2"></a>A matriz jacobiana</h4><hr class="section">
 <a 
- id="dx51-89001"></a>
-<!--l. 414--><p class="noindent" >Interessamo-nos, agora, pela linearização da função <img 
-src="main2516x.png" alt="F  : &#x211D;n &rarr; &#x211D;n  "  class="math" >. Lembramos
+ id="dx51-90001"></a>
+<!--l. 438--><p class="noindent" >Interessamo-nos, agora, pela linearização da função <img 
+src="main2517x.png" alt="F  : &#x211D;n &#x2192; &#x211D;n  "  class="math" >. Lembramos
 que <img 
-src="main2517x.png" alt="F (x)  "  class="math" > pode ser escrita como um vetor de funções <img 
-src="main2518x.png" alt="fj : &#x211D; &#x22C9; &rarr; &#x211D;  "  class="math" >:
+src="main2518x.png" alt="F (x)  "  class="math" > pode ser escrita como um vetor de funções <img 
+src="main2519x.png" alt="fj : &#x211D; &#x22C9; &#x2192; &#x211D;  "  class="math" >:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2519x.png" alt="        &lfloor;     &rfloor;
+src="main2520x.png" alt="        &#x230A;     &#x230B;
         |f1(x)|
         ||     ||
         ||f2(x)||
 F (x) = ||  ..  ||
-        |&lceil;  .  |&rceil;
+        |&#x2308;  .  |&#x2309;
          f (x)
           n
 " class="math-display" ></center></td></tr></table>
-<!--l. 422--><p class="nopar" >
+<!--l. 446--><p class="nopar" >
 Linearizando cada uma das funções <img 
-src="main2520x.png" alt="fj  "  class="math" >, temos: <div class="eqnarray">
+src="main2521x.png" alt="fj  "  class="math" >, temos: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2521x.png" alt="          &lfloor;    ( (0))     T     (0)  (     (0))            (0) 2  &rfloor;
-          || f1  x    + &nabla;  f1(x   )  x &minus; x    + O (&#x2225;x &minus; x   &#x2225; ) ||
+src="main2522x.png" alt="          &#x230A;    ( (0))     T     (0)  (     (0))            (0) 2  &#x230B;
+          || f1  x    + &#x2207;  f1(x   )  x - x    + O (&#x2225;x - x   &#x2225; ) ||
           ||                                                    ||
           ||    (   )               (       )                   ||
-          || f2  x(0) + &nabla;T f2(x (0))  x &minus; x(0) + O (&#x2225;x &minus; x(0)&#x2225;2) ||
+          || f2  x(0) + &#x2207;T f2(x (0))  x - x(0) + O (&#x2225;x - x(0)&#x2225;2) ||
           ||                                                    ||
 F(x ) =   ||                                                    ||
           ||                          .                         ||
           ||                          ..                         ||
           ||                                                    ||
           |                                                    |
-          &lceil;    ( (0))     T     (0)  (     (0))            (0) 2  &rceil;
-          &#x25DF;-fn--x----+-&nabla;--fn-(x--)--x&#x25DD;&#x25DC;&minus;-x----+-O-(&#x2225;x-&minus;-x---&#x2225;-)-&#x25DE;
+          &#x2308;    ( (0))     T     (0)  (     (0))            (0) 2  &#x2309;
+          &#x25DF;-fn--x----+-&#x2207;--fn-(x--)--x&#x25DD;&#x25DC;--x----+-O-(&#x2225;x---x---&#x2225;-)-&#x25DE;
 
                                Vetor coluna
 " class="math-display" ></center>
 </div>ou, equivalentemente: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2522x.png" alt="           &lfloor;   (  (0)) &rfloor;    &lfloor;   T     (0)  &rfloor;
-           | f1  x    |    | &nabla;  f1(x   ) |
+src="main2523x.png" alt="           &#x230A;   (  (0)) &#x230B;    &#x230A;   T     (0)  &#x230B;
+           | f1  x    |    | &#x2207;  f1(x   ) |
            ||          ||    ||             ||
            ||   (    ) ||    ||             ||
-           || f   x(0)  ||    || &nabla;T f (x (0)) ||
+           || f   x(0)  ||    || &#x2207;T f (x (0)) ||
            ||  2       ||    ||      2      ||  (        )
-F (x)  =   ||          || +  ||             ||    x &minus; x(0)   +O (&#x2225;x &minus; x (0)&#x2225;2)
+F (x)  =   ||          || +  ||             ||    x - x(0)   +O (&#x2225;x - x (0)&#x2225;2)
            ||     .    ||    ||      .      ||  &#x25DF;---&#x25DD;&#x25DC;---&#x25DE;
            ||     ..    ||    ||      ..      || Vetor coluna
            ||          ||    ||             ||
            ||          ||    ||             ||
-           &lceil;   (  (0)) &rceil;    &lceil;   T     (0)  &rceil;
-             fn x            &nabla;  fn(x   )
+           &#x2308;   (  (0)) &#x2309;    &#x2308;   T     (0)  &#x2309;
+             fn x            &#x2207;  fn(x   )
            &#x25DF;----&#x25DD;&#x25DC;-----&#x25DE;   &#x25DF;------&#x25DD;&#x25DC;------&#x25DE;
            Vetor coluna   Matriz jacobiana
 " class="math-display" ></center>
@@ -326,74 +328,74 @@ F (x)  =   ||          || +  ||             ||    x &minus; x(0)   +O (&#x2225;x
 
                                                                           
 </div>
-<!--l. 453--><p class="indent" >   Podemos escrever a linearização de <img 
-src="main2523x.png" alt="F (x)  "  class="math" > na seguinte forma mais
+<!--l. 477--><p class="indent" >   Podemos escrever a linearização de <img 
+src="main2524x.png" alt="F (x)  "  class="math" > na seguinte forma mais
 enxuta:
    <center class="math-display" >
 <img 
-src="main2524x.png" alt="          (   )           (        )     (&#x2225;        &#x2225; )
-F (x ) = F  x(0) + J  (x(0)) x &minus; x (0)  + O  &#x2225;&#x2225;x &minus; x (0)&#x2225;&#x2225;2
+src="main2525x.png" alt="          (   )           (        )     (&#x2225;        &#x2225; )
+F (x ) = F  x(0) + J  (x(0)) x - x (0)  + O  &#x2225;&#x2225;x - x (0)&#x2225;&#x2225;2
                    F
 " class="math-display" ></center>
-<!--l. 456--><p class="indent" >   A matriz jacobiana <img 
-src="main2525x.png" alt="JF  "  class="math" > é matriz cujas linhas são os gradientes transpostos de
+<!--l. 480--><p class="indent" >   A matriz jacobiana <img 
+src="main2526x.png" alt="JF  "  class="math" > é matriz cujas linhas são os gradientes transpostos de
 <img 
-src="main2526x.png" alt="fj  "  class="math" >, ou seja:
+src="main2527x.png" alt="fj  "  class="math" >, ou seja:
    <center class="math-display" >
 <img 
-src="main2527x.png" alt="                        &lfloor;                    &rfloor;
-                        | &part;&part;fx11  &part;&part;fx12  &sdot;&sdot;&sdot;  &part;&part;fx1n |
+src="main2528x.png" alt="                        &#x230A;                    &#x230B;
+                        | &#x2202;&#x2202;fx11  &#x2202;&#x2202;fx12  &#x22C5;&#x22C5;&#x22C5;  &#x2202;&#x2202;fx1n |
                         ||                    ||
                         ||                    ||
-                        || &part;f2  &part;f2       &part;f2 ||
-                        || &part;x1  &part;x2  &sdot;&sdot;&sdot;  &part;xn ||
+                        || &#x2202;f2  &#x2202;f2       &#x2202;f2 ||
+                        || &#x2202;x1  &#x2202;x2  &#x22C5;&#x22C5;&#x22C5;  &#x2202;xn ||
                         ||                    ||
-      &part;(f ,f ,...,f )    ||                    ||
+      &#x2202;(f ,f ,...,f )    ||                    ||
 JF = ----1--2-----n--=  ||  ...    ...   ...   ...  ||
-     &part; (x1,x2, ...,xn )   ||                    ||
+     &#x2202; (x1,x2, ...,xn )   ||                    ||
                         ||                    ||
-                        || &part;fn  &part;fn       &part;fn ||
-                        || &part;x1  &part;x2  &sdot;&sdot;&sdot;  &part;xn ||
+                        || &#x2202;fn  &#x2202;fn       &#x2202;fn ||
+                        || &#x2202;x1  &#x2202;x2  &#x22C5;&#x22C5;&#x22C5;  &#x2202;xn ||
                         ||                    ||
-                        |&lceil;                    |&rceil; " class="math-display" ></center> A
+                        |&#x2308;                    |&#x2309; " class="math-display" ></center> A
                                                                           
 
                                                                           
 matriz jacobiana de uma função ou simplesmente, o Jacobiano de uma função
 <img 
-src="main2528x.png" alt="F (x)  "  class="math" > é a matriz formada pelas suas derivadas parciais:
+src="main2529x.png" alt="F (x)  "  class="math" > é a matriz formada pelas suas derivadas parciais:
    <center class="math-display" >
 <img 
-src="main2529x.png" alt="(JF)ij = &part;fi-
-         &part;xj
+src="main2530x.png" alt="(JF)ij = &#x2202;fi-
+         &#x2202;xj
 " class="math-display" ></center>
    <div class="newtheorem">
-<!--l. 470--><p class="noindent" ><span class="head">
+<!--l. 494--><p class="noindent" ><span class="head">
 <a 
- id="x51-89004r1"></a>
+ id="x51-90004r1"></a>
 <span 
 class="ec-lmbx-12">Exemplo 5.2.1.</span>  </span>Calcule a matriz jacobiana da função
    <center class="math-display" >
 <img 
-src="main2530x.png" alt="        &lfloor;  x2         &rfloor;
-        |  31+ x22 &minus; 1 |
+src="main2531x.png" alt="        &#x230A;  x2         &#x230B;
+        |  31+ x22 - 1 |
         ||             ||
 F (x) = ||             ||
-        &lceil;   2   x22-    &rceil;
-          x 1 + 4 &minus; 1
+        &#x2308;   2   x22-    &#x2309;
+          x 1 + 4 - 1
 " class="math-display" ></center>
-<!--l. 478--><p class="indent" >
+<!--l. 502--><p class="indent" >
                                                                           
 
                                                                           
    <center class="math-display" >
 <img 
-src="main2531x.png" alt="      &lfloor; &part;f1  &part;f1 &rfloor;   &lfloor;           &rfloor;
-      | &part;x1  &part;x2 |      2x1-
+src="main2532x.png" alt="      &#x230A; &#x2202;f1  &#x2202;f1 &#x230B;   &#x230A;           &#x230B;
+      | &#x2202;x1  &#x2202;x2 |      2x1-
       ||          ||   ||   3   2x2 ||
 J  =  ||          || = ||           ||
- F    || &part;f2  &part;f2 ||   |&lceil;           |&rceil;
-      |&lceil; &part;x1  &part;x2 |&rceil;     2x1   x2
+ F    || &#x2202;f2  &#x2202;f2 ||   |&#x2308;           |&#x2309;
+      |&#x2308; &#x2202;x1  &#x2202;x2 |&#x2309;     2x1   x2
                               2
 " class="math-display" ></center>
    </div>

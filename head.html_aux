@@ -44,10 +44,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro/main.pdf">Formato PDF</a></li>
             <li><a href="../livro/main.epub">Formato EPUB</a></li>
             <li><a href="../livro/slide.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro-py/main.html">Versão Python</a></li>
           </ul>
         </li>		

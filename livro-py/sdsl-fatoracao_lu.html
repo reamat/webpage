@@ -7,11 +7,11 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
 <meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Fatoração LU, Algoritmo para fatoração LU, Custo computacional para resolver um sistema linear usando fatoração
 LU, Custo para resolver m sistemas lineares, Custo para calcular a matriz inversa de <img 
-src="main1930x.png" alt="A  "  class="math" >'>
+src="main1930x.png" alt="A  "  class="math" >, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -58,10 +58,12 @@ src="main1930x.png" alt="A  "  class="math" >'>
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -148,7 +150,7 @@ src="main1858x.png" alt="L21 = A21 &#x2215;A11   " class="math-display" ></cente
 fazemos
    <center class="math-display" >
 <img 
-src="main1859x.png" alt="A2,: &lArr; A2,: &minus; L21A1,:
+src="main1859x.png" alt="A2,: &#x21D0; A2,: - L21A1,:
 " class="math-display" ></center>
 <!--l. 746--><p class="indent" >   Note que usaremos <img 
 src="main1860x.png" alt="Ai,:   "  class="math" > para nos referenciarmos a linha <img 
@@ -168,7 +170,7 @@ src="main1867x.png" alt="L31 = A31 &#x2215;A11   " class="math-display" ></cente
 fazemos
    <center class="math-display" >
 <img 
-src="main1868x.png" alt="A3,: &lArr; A3,: &minus; L31A1,:   " class="math-display" ></center> até
+src="main1868x.png" alt="A3,: &#x21D0; A3,: - L31A1,:   " class="math-display" ></center> até
 chegarmos ao último elemento da primeira coluna de <img 
 src="main1869x.png" alt="A  "  class="math" >.
 <!--l. 754--><p class="indent" >   Repetimos o processo para as próximas colunas, escalonando
@@ -214,17 +216,17 @@ src="main1879x.png" alt="n  "  class="math" > na linha
 <!--l. 783--><p class="indent" >   A linha 7, com <img 
 src="main1880x.png" alt="j = 1  "  class="math" > tem um bloco de tamanho <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">2:n</span></span></span> contabilizando <img 
-src="main1881x.png" alt="n &minus; 1  "  class="math" >
+src="main1881x.png" alt="n - 1  "  class="math" >
 flops do produto e <img 
-src="main1882x.png" alt="n &minus; 1  "  class="math" > flops da subtração.
+src="main1882x.png" alt="n - 1  "  class="math" > flops da subtração.
 <!--l. 785--><p class="indent" >   Nas linhas 6-8 são feitas <img 
-src="main1883x.png" alt="(2(n &minus; 1) + 1) = 2n &minus; 1  "  class="math" > flops independente do valor
+src="main1883x.png" alt="(2(n - 1) + 1) = 2n - 1  "  class="math" > flops independente do valor
 de <img 
 src="main1884x.png" alt="i  "  class="math" >. Como <img 
 src="main1885x.png" alt="i  "  class="math" > varia de <img 
 src="main1886x.png" alt="2  "  class="math" > até <img 
 src="main1887x.png" alt="n  "  class="math" >, teremos que o bloco é repetido <img 
-src="main1888x.png" alt="n &minus; 1  "  class="math" > vezes,
+src="main1888x.png" alt="n - 1  "  class="math" > vezes,
 ou seja, o custo das linhas 5-9 é
    <table 
 class="equation"><tr><td><a 
@@ -235,14 +237,14 @@ class="equation"><tr><td><a
                                                                           
 <img 
 src="main1889x.png" alt="                                   2
-(n &minus; 1) &#x00D7; (2(n &minus; 1) + 1) = 2(n &minus; 1) +  (n &minus; 1)
+(n - 1) &#x00D7; (2(n - 1) + 1) = 2(n - 1) +  (n - 1)
 " class="math-display" ></center></td><td class="equation-label">(4.21)</td></tr></table>
 <!--l. 788--><p class="nopar" >
 <!--l. 790--><p class="indent" >   Voltamos a linha 4 quando <img 
 src="main1890x.png" alt="j = 2  "  class="math" >. Das linhas 6-8 teremos <img 
-src="main1891x.png" alt="n &minus; 2  "  class="math" > flops (o
+src="main1891x.png" alt="n - 2  "  class="math" > flops (o
 bloco terá um elemento a menos) que será repetido <img 
-src="main1892x.png" alt="n &minus; 2  "  class="math" > vezes, pois <span class="obeylines-h"><span class="verb"><span 
+src="main1892x.png" alt="n - 2  "  class="math" > vezes, pois <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">i=3:n</span></span></span>, ou
 seja,
    <table 
@@ -250,34 +252,34 @@ class="equation"><tr><td><a
  id="x40-61002r22"></a>
    <center class="math-display" >
 <img 
-src="main1893x.png" alt="(n &minus; 2) &#x00D7; (2(n &minus; 2) + 1) = 2(n &minus; 2)2 + (n &minus; 2)
+src="main1893x.png" alt="(n - 2) &#x00D7; (2(n - 2) + 1) = 2(n - 2)2 + (n - 2)
 " class="math-display" ></center></td><td class="equation-label">(4.22)</td></tr></table>
 <!--l. 793--><p class="nopar" >
 <!--l. 795--><p class="indent" >   Para <img 
 src="main1894x.png" alt="j = 3  "  class="math" >, temos <img 
 src="main1895x.png" alt="         2
-2 (n &minus;  3) + (n &minus; 3)  "  class="math" >.
+2 (n -  3) + (n - 3)  "  class="math" >.
 <!--l. 797--><p class="indent" >   Para <img 
-src="main1896x.png" alt="j = n &minus; 2  "  class="math" >, temos <img 
+src="main1896x.png" alt="j = n - 2  "  class="math" >, temos <img 
 src="main1897x.png" alt="2(2)2 + 2  "  class="math" >.
 <!--l. 799--><p class="indent" >   Finalmente, para <img 
-src="main1898x.png" alt="j = n &minus; 1  "  class="math" >, temos <img 
-src="main1899x.png" alt="2 &sdot; 12 + 1  "  class="math" >.
+src="main1898x.png" alt="j = n - 1  "  class="math" >, temos <img 
+src="main1899x.png" alt="2 &#x22C5; 12 + 1  "  class="math" >.
 <!--l. 802--><p class="indent" >   Somando todos esses custos, temos <div class="eqnarray">
    <center class="math-display" >
 <img 
 src="main1900x.png" alt="                  2                       2                 2
-(n &minus; 1) + 2(n &minus; 1)   +   (n &minus;  2) + 2(n &minus; 2 ) + ...+ (2) + 2(2) + 1 + 2 &sdot; 1
-                         n&sum;&minus;1  2
+(n - 1) + 2(n - 1)   +   (n -  2) + 2(n - 2 ) + ...+ (2) + 2(2) + 1 + 2 &#x22C5; 1
+                         n&#x2211;-1  2
                      =      2k  + k
                          k=1
-                          n&sum;&minus;1  2  n&minus;&sum; 1
+                          n&#x2211;-1  2  n-&#x2211; 1
                      =   2    k +     k
                           k=1     k=1
-                          (n-&minus;-1)n(2n-&minus;-1-)   n(n-&minus;-1)-
+                          (n---1)n(2n---1-)   n(n---1)-
                      =   2        6        +     2
                          2n3   n2    n
-                     =   ----&minus; ---&minus;  --flops.
+                     =   ----- ----  --flops.
                           3     2    6
 " class="math-display" ></center>
 </div>
@@ -295,7 +297,7 @@ src="main1903x.png" alt="U  "  class="math" >. Vimos que o custo é
    <center class="math-display" >
 <img 
 src="main1904x.png" alt="   3    2
-2n--&minus;  n--&minus; n- flops.
+2n---  n--- n- flops.
  3      2    6
 " class="math-display" ></center>
 <!--l. 828--><p class="indent" >   Depois devemos resolver os sistemas <img 
@@ -317,7 +319,7 @@ src="main1909x.png" alt="LU  "  class="math" > é
    <center class="math-display" >
 <img 
 src="main1910x.png" alt="  3      2
-2n--+ 3n--&minus;  n-flops.
+2n--+ 3n---  n-flops.
  3      2    6
 " class="math-display" ></center>
 <!--l. 834--><p class="indent" >   Quando <img 
@@ -326,7 +328,7 @@ seja,
    <center class="math-display" >
 <img 
 src="main1912x.png" alt="     3      2              3      2         3
-O (2n--+  3n--&minus; n-) = O( 2n--+ 3n--) = O( 2n-)
+O (2n--+  3n--- n-) = O( 2n--+ 3n--) = O( 2n-)
     3      2    6         3     2          3
 " class="math-display" ></center>
                                                                           
@@ -342,14 +344,14 @@ src="main1914x.png" alt="LU  "  class="math" >, ou seja, o custo será
    <center class="math-display" >
 <img 
 src="main1915x.png" alt="   2n3   3n2    n     2mn3    3mn2     mn
-m (----+ ----&minus;  --) = ------+ ------&minus;  ----
+m (----+ -----  --) = ------+ -------  ----
     3     2     6       3       2       6  " class="math-display" ></center> e
 com <img 
 src="main1916x.png" alt="m  = n  "  class="math" > temos
    <center class="math-display" >
 <img 
 src="main1917x.png" alt="  4      3     2
-2n--+  3n--&minus; n--.
+2n--+  3n--- n--.
  3      2     6
 " class="math-display" ></center>
 <!--l. 843--><p class="indent" >   Porém, se estivermos resolvendo <img 
@@ -363,7 +365,7 @@ obtidos.
 <!--l. 845--><p class="indent" >   Custo para fatoração LU de <img 
 src="main1921x.png" alt="A  "  class="math" >: <img 
 src="main1922x.png" alt="  3    2
-2n3-&minus;  n2-&minus;  n6   "  class="math" >.
+2n3--  n2--  n6   "  class="math" >.
 <!--l. 847--><p class="indent" >   Custo para resolver <img 
 src="main1923x.png" alt="m  "  class="math" > sistemas triangulares inferiores: <img 
 src="main1924x.png" alt="mn2   "  class="math" >.
@@ -378,27 +380,27 @@ mn   "  class="math" >.
    <center class="math-display" >
 <img 
 src="main1927x.png" alt="   3    2
-2n--&minus;  n--&minus; n-+  2mn2
+2n---  n--- n-+  2mn2
  3     2    6   " class="math-display" ></center> que
 quando <img 
 src="main1928x.png" alt="m  = n  "  class="math" > obtemos
    <center class="math-display" >
 <img 
 src="main1929x.png" alt="8n3-   n2-  n-
- 3  &minus;   2 &minus;  6 flops.
+ 3  -   2 -  6 flops.
 " class="math-display" ></center>
 <!--l. 856--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">4.4.4   </span> <a 
  id="x40-640004.4.4"></a>Custo para calcular a matriz inversa de <img 
 src="main1930x.png" alt="A  "  class="math" ></h4><hr class="section">
 <!--l. 857--><p class="noindent" >Como vemos em Álgebra Linear, um método para obter a matriz <img 
-src="main1931x.png" alt="  &minus;1
+src="main1931x.png" alt="  -1
 A   "  class="math" > é realizar
 o escalonamento da matriz <img 
 src="main1932x.png" alt="[A|I]  "  class="math" > onde <img 
 src="main1933x.png" alt="I  "  class="math" > é a matriz identidade. Ao terminar o
 escalonamento, o bloco do lado direito conterá <img 
-src="main1934x.png" alt="A&minus;1   "  class="math" >.
+src="main1934x.png" alt="A-1   "  class="math" >.
 <!--l. 859--><p class="indent" >   Isto é equivalente a resolver <img 
 src="main1935x.png" alt="n  "  class="math" > sistemas lineares com a mesma matriz <img 
 src="main1936x.png" alt="A  "  class="math" > e os
@@ -418,7 +420,7 @@ como
    <center class="math-display" >
 <img 
 src="main1943x.png" alt="8n3    n2   n
-----&minus;  ---&minus; --.
+-----  ---- --.
  3     2    6
 " class="math-display" ></center>
    <div class="newtheorem">
@@ -429,7 +431,7 @@ src="main1943x.png" alt="8n3    n2   n
 class="ec-lmbx-12">Exemplo 4.4.1.</span>  </span>Qual o melhor método para resolver um sistema linear: via
 fatoração LU ou calculando a inversa de <img 
 src="main1944x.png" alt="A  "  class="math" > e obtendo <img 
-src="main1945x.png" alt="      &minus;1
+src="main1945x.png" alt="      -1
 x = A   b  "  class="math" >?
    </div>
                                                                           

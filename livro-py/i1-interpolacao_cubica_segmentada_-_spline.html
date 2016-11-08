@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Interpolação cúbica segmentada - spline, Spline natural, Spline fixado, Resumo sobre Splines'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Interpolação cúbica segmentada - spline, Spline natural, Spline fixado, Resumo sobre Splines, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -94,425 +96,425 @@
   		</ul>
 	</nav>
 </div>
-   <!--l. 493-->
+   <!--l. 550-->
    <h3 class="sectionHead"><span class="titlemark">6.6   </span> <a 
- id="x58-980006.6"></a>Interpolação cúbica segmentada - spline</h3><hr class="section">
+ id="x58-990006.6"></a>Interpolação cúbica segmentada - spline</h3><hr class="section">
 <a 
- id="dx58-98001"></a>
+ id="dx58-99001"></a>
 <a 
- id="dx58-98002"></a>
-<!--l. 494--><p class="noindent" >Dado um conjunto de <img 
-src="main2753x.png" alt="n  "  class="math" > pontos <img 
-src="main2754x.png" alt="      n
+ id="dx58-99002"></a>
+<!--l. 551--><p class="noindent" >Dado um conjunto de <img 
+src="main2761x.png" alt="n  "  class="math" > pontos <img 
+src="main2762x.png" alt="      n
 (xj,yj)j=1   "  class="math" > tais que <img 
-src="main2755x.png" alt="xj+1 &#x003E; xj  "  class="math" >, ou
+src="main2763x.png" alt="xj+1 &#x003E; xj  "  class="math" >, ou
 seja, as abscissas são distintas e estão em ordem crescente; um spline
 cúbico que interpola estes pontos é uma função <img 
-src="main2756x.png" alt="s(x)  "  class="math" > com as seguintes
+src="main2764x.png" alt="s(x)  "  class="math" > com as seguintes
 propriedades:
       <ul class="itemize1">
       <li class="itemize">Em cada segmento <img 
-src="main2757x.png" alt="[xj,xj+1]  "  class="math" >, <img 
-src="main2758x.png" alt="j = 1,2,...n &minus; 1  "  class="math" > <img 
-src="main2759x.png" alt="s(x )  "  class="math" > é um polinômio
+src="main2765x.png" alt="[xj,xj+1]  "  class="math" >, <img 
+src="main2766x.png" alt="j = 1,2,...n - 1  "  class="math" > <img 
+src="main2767x.png" alt="s(x )  "  class="math" > é um polinômio
       cúbico.
       </li>
       <li class="itemize">para cada ponto, <img 
-src="main2760x.png" alt="s(xj) = yj  "  class="math" >, i.e., o spline interpola os pontos dados.
+src="main2768x.png" alt="s(xj) = yj  "  class="math" >, i.e., o spline interpola os pontos dados.
       </li>
       <li class="itemize"><img 
-src="main2761x.png" alt="        2
-s(x) &isin; C   "  class="math" >, i.e., é função duas vezes continuamente diferenciável.</li></ul>
-<!--l. 501--><p class="indent" >   Da primeira hipótese, escrevemos
+src="main2769x.png" alt="        2
+s(x) &#x2208; C   "  class="math" >, i.e., é função duas vezes continuamente diferenciável.</li></ul>
+<!--l. 558--><p class="indent" >   Da primeira hipótese, escrevemos
    <center class="math-display" >
 <img 
-src="main2762x.png" alt="s(x) = sj(x),x &isin; [xj,xj+1], j = 1,...,n &minus; 1  " class="math-display" ></center>
+src="main2770x.png" alt="s(x) = sj(x),x &#x2208; [xj,xj+1], j = 1,...,n - 1  " class="math-display" ></center>
 com
                                                                           
 
                                                                           
    <center class="math-display" >
 <img 
-src="main2763x.png" alt="                                   2             3
-sj(x) = aj + bj(x &minus; xj) + cj(x &minus; xj) + dj(x &minus; xj)   " class="math-display" ></center> O
+src="main2771x.png" alt="                                   2             3
+sj(x) = aj + bj(x - xj) + cj(x - xj) + dj(x - xj)   " class="math-display" ></center> O
 problema agora consiste em obter os 4 coeficientes de cada um desses <img 
-src="main2764x.png" alt="n &minus; 1  "  class="math" >
+src="main2772x.png" alt="n - 1  "  class="math" >
 polinômios cúbicos.
-<!--l. 507--><p class="indent" >   Veremos que a simples definição de spline produz <img 
-src="main2765x.png" alt="4n &minus; 6  "  class="math" > equações
+<!--l. 564--><p class="indent" >   Veremos que a simples definição de spline produz <img 
+src="main2773x.png" alt="4n - 6  "  class="math" > equações
 linearmente independentes:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2766x.png" alt="  sj(xj) =   yj,           j = 1,...,n &minus; 1
+src="main2774x.png" alt="  sj(xj) =   yj,           j = 1,...,n - 1
 
-sj(xj+1 ) =   yj+1,         j = 1,...,n &minus; 1
-s&prime;(x    ) =   s&prime;  (x   ),   j = 1,...,n &minus; 2
+sj(xj+1 ) =   yj+1,         j = 1,...,n - 1
+s&#x2032;(x    ) =   s&#x2032;  (x   ),   j = 1,...,n - 2
  j  j+1       j+1  j+1
-s&prime;&prime;j(xj+1 ) =   s&prime;j&prime;+1(xj+1),   j = 1,...,n &minus; 2
+s&#x2032;&#x2032;j(xj+1 ) =   s&#x2032;j&#x2032;+1(xj+1),   j = 1,...,n - 2
 " class="math-display" ></center></td></tr></table>
-<!--l. 515--><p class="nopar" >
+<!--l. 572--><p class="nopar" >
 Como
    <table 
 class="equation"><tr><td><a 
- id="x58-98003r1"></a>
+ id="x58-99003r1"></a>
    <center class="math-display" >
 <img 
-src="main2767x.png" alt=" &prime;                                   2
-sj(x) = bj + 2cj(x &minus; xj) + 3dj(x &minus; xj)
+src="main2775x.png" alt=" &#x2032;                                   2
+sj(x) = bj + 2cj(x - xj) + 3dj(x - xj)
 " class="math-display" ></center></td><td class="equation-label">(6.1)</td></tr></table>
-<!--l. 519--><p class="nopar" >
+<!--l. 576--><p class="nopar" >
 e
    <table 
 class="equation"><tr><td><a 
- id="x58-98004r2"></a>
+ id="x58-99004r2"></a>
    <center class="math-display" >
 <img 
-src="main2768x.png" alt="s&prime;j&prime;(x) = 2cj + 6dj(x &minus; xj),
+src="main2776x.png" alt="s&#x2032;j&#x2032;(x) = 2cj + 6dj(x - xj),
 " class="math-display" ></center></td><td class="equation-label">(6.2)</td></tr></table>
-<!--l. 523--><p class="nopar" >
+<!--l. 580--><p class="nopar" >
 temos, para <img 
-src="main2769x.png" alt="j =  1,...,n &minus; 1  "  class="math" >, as seguintes equações
+src="main2777x.png" alt="j =  1,...,n - 1  "  class="math" >, as seguintes equações
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2770x.png" alt="                                                aj  =  yj,
+src="main2778x.png" alt="                                                aj  =  yj,
                                 2                3
-aj + bj(xj+1 &minus; xj) + cj(xj+1 &minus; xj) + dj(xj+1 &minus; xj)  =  yj+1,
+aj + bj(xj+1 - xj) + cj(xj+1 - xj) + dj(xj+1 - xj)  =  yj+1,
                                                  2
-              bj + 2cj(xj+1 &minus; xj) + 3dj(xj+1 &minus; xj)   =  bj+1,
-                               c  + 3d (x    &minus; x )  =  c   ,
+              bj + 2cj(xj+1 - xj) + 3dj(xj+1 - xj)   =  bj+1,
+                               c  + 3d (x    - x )  =  c   ,
                                 j     j  j+1    j       j+1
 " class="math-display" ></center></td></tr></table>
                                                                           
 
                                                                           
-<!--l. 532--><p class="nopar" >
+<!--l. 589--><p class="nopar" >
 Por simplicidade, definimos
    <center class="math-display" >
 <img 
-src="main2771x.png" alt="hj = xj+1 &minus; xj  " class="math-display" ></center> e
+src="main2779x.png" alt="hj = xj+1 - xj  " class="math-display" ></center> e
 temos
    <table 
 class="equation"><tr><td><a 
- id="x58-98005r3"></a>
+ id="x58-99005r3"></a>
    <center class="math-display" >
 <img 
-src="main2772x.png" alt="                    aj  =   yj,
+src="main2780x.png" alt="                    aj  =   yj,
               2      3
 aj + bjhj + cjhj + djhj =   yj+1,
                      2
     bj + 2cjhj + 3djhj  =   bj+1,
             cj + 3djhj  =   cj+1,
 " class="math-display" ></center></td><td class="equation-label">(6.3)</td></tr></table>
-<!--l. 545--><p class="nopar" >
+<!--l. 602--><p class="nopar" >
 que podem ser escrita da seguinte maneira
    <table 
 class="equation"><tr><td><a 
- id="x58-98006r4"></a>
+ id="x58-99006r4"></a>
    <center class="math-display" >
                                                                           
 
                                                                           
 <img 
-src="main2773x.png" alt="aj = yj,
+src="main2781x.png" alt="aj = yj,
 " class="math-display" ></center></td><td class="equation-label">(6.4)</td></tr></table>
-<!--l. 549--><p class="nopar" >
+<!--l. 606--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x58-98007r5"></a>
+ id="x58-99007r5"></a>
    <center class="math-display" >
 <img 
-src="main2774x.png" alt="     c   &minus; c
+src="main2782x.png" alt="     c   - c
 dj = -j+1----j,
        3hj
 " class="math-display" ></center></td><td class="equation-label">(6.5)</td></tr></table>
-<!--l. 552--><p class="nopar" >
+<!--l. 609--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x58-98008r6"></a>
+ id="x58-99008r6"></a>
    <center class="math-display" >
 <img 
-src="main2775x.png" alt="     yj+1 &minus; yj &minus; cjh2 &minus;  cj+1&minus;cjh3
+src="main2783x.png" alt="     yj+1 - yj - cjh2 -  cj+1-cjh3
 bj = ---------------j----3hj---j,
                   hj
-     3yj+1 &minus; 3yj &minus; 3cjh2 &minus; cj+1h2+  cjh2
+     3yj+1 - 3yj - 3cjh2 - cj+1h2+  cjh2
    = ------------------j--------j------j
                      3hj
-     3yj+1 &minus; 3yj &minus; 2cjh2j &minus; cj+1h2j
+     3yj+1 - 3yj - 2cjh2j - cj+1h2j
    = ----------------------------
                  3hj
 " class="math-display" ></center></td><td class="equation-label">(6.6)</td></tr></table>
-<!--l. 559--><p class="nopar" >
+<!--l. 616--><p class="nopar" >
 Trocando o índice <img 
-src="main2776x.png" alt="j  "  class="math" > por <img 
-src="main2777x.png" alt="j &minus; 1  "  class="math" > na terceira equação (<a 
-href="#x58-98005r3">6.3<!--tex4ht:ref: eq3 --></a>), <img 
-src="main2778x.png" alt="j = 2, ...,n &minus; 1  "  class="math" >
+src="main2784x.png" alt="j  "  class="math" > por <img 
+src="main2785x.png" alt="j - 1  "  class="math" > na terceira equação (<a 
+href="#x58-99005r3">6.3<!--tex4ht:ref: eq3 --></a>), <img 
+src="main2786x.png" alt="j = 2, ...,n - 1  "  class="math" >
    <table 
 class="equation"><tr><td><a 
- id="x58-98009r7"></a>
+ id="x58-99009r7"></a>
    <center class="math-display" >
 <img 
-src="main2779x.png" alt="                         2
-bj&minus; 1 + 2cj&minus;1hj&minus; 1 + 3dj&minus;1h j&minus; 1 = bj
+src="main2787x.png" alt="                         2
+bj- 1 + 2cj-1hj- 1 + 3dj-1h j- 1 = bj
 " class="math-display" ></center></td><td class="equation-label">(6.7)</td></tr></table>
-<!--l. 563--><p class="nopar" >
+<!--l. 620--><p class="nopar" >
 e, portanto,
    <table 
 class="equation"><tr><td><a 
- id="x58-98010r8"></a>
+ id="x58-99010r8"></a>
    <center class="math-display" >
 <img 
-src="main2780x.png" alt="3yj &minus; 3yj&minus;1 &minus; 2cj&minus;1h2j&minus;1 &minus; cjh2j&minus;1
--------------------------------- + 2cj&minus;1hj&minus;1 + cjhj&minus;1 &minus; cj&minus; 1hj&minus;1
-             3hj &minus;1
-                                   3yj+1 &minus; 3yj &minus; 2cjh2j &minus; cj+1h2j
+src="main2788x.png" alt="3yj - 3yj-1 - 2cj-1h2j-1 - cjh2j-1
+-------------------------------- + 2cj-1hj-1 + cjhj-1 - cj- 1hj-1
+             3hj -1
+                                   3yj+1 - 3yj - 2cjh2j - cj+1h2j
                                  = -------------3h-------------.
                                                   j
 " class="math-display" ></center></td><td class="equation-label">(6.8)</td></tr></table>
-<!--l. 570--><p class="nopar" >
+<!--l. 627--><p class="nopar" >
 Fazendo as simplificações, obtemos:
    <table 
 class="equation"><tr><td><a 
- id="x58-98011r9"></a>
+ id="x58-99011r9"></a>
    <center class="math-display" >
 <img 
-src="main2781x.png" alt="c   h    + c (2h  + 2h   ) + c   h =  3yj+1-&minus;-yj &minus; 3yj-&minus;-yj&minus;1.
- j&minus;1 j&minus;1    j   j     j&minus;1     j+1  j       hj          hj&minus; 1
+src="main2789x.png" alt="c   h    + c (2h  + 2h   ) + c   h =  3yj+1---yj - 3yj---yj-1.
+ j-1 j-1    j   j     j-1     j+1  j       hj          hj- 1
 " class="math-display" ></center></td><td class="equation-label">(6.9)</td></tr></table>
-<!--l. 574--><p class="nopar" >
+<!--l. 631--><p class="nopar" >
 É costumeiro acrescentar a incógnita <img 
-src="main2782x.png" alt="cn  "  class="math" > ao sistema. A incógnita <img 
-src="main2783x.png" alt="cn  "  class="math" > não está
+src="main2790x.png" alt="cn  "  class="math" > ao sistema. A incógnita <img 
+src="main2791x.png" alt="cn  "  class="math" > não está
 relacionada a nenhum dos polinômios interpoladores. Ela é uma construção
 artificial que facilita o cálculo dos coeficientes do spline. Portanto, a equação
 acima pode ser resolvida para <img 
-src="main2784x.png" alt="j = 2,...,n &minus;  1  "  class="math" >.
-<!--l. 577--><p class="indent" >   Para determinar unicamente os <img 
-src="main2785x.png" alt="n  "  class="math" > coeficientes <img 
-src="main2786x.png" alt="cn  "  class="math" > precisamos acrescentar
+src="main2792x.png" alt="j = 2,...,n -  1  "  class="math" >.
+<!--l. 634--><p class="indent" >   Para determinar unicamente os <img 
+src="main2793x.png" alt="n  "  class="math" > coeficientes <img 
+src="main2794x.png" alt="cn  "  class="math" > precisamos acrescentar
 duas equações linearmente independentes às <img 
-src="main2787x.png" alt="n &minus;  2  "  class="math" > equações dadas por (<a 
-href="#x58-98011r9">6.9<!--tex4ht:ref: eq_cn_spline --></a>).
+src="main2795x.png" alt="n -  2  "  class="math" > equações dadas por (<a 
+href="#x58-99011r9">6.9<!--tex4ht:ref: eq_cn_spline --></a>).
 Essas duas equações adicionais definem o tipo de spline usado.
-<!--l. 579--><p class="noindent" >
+<!--l. 636--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">6.6.1   </span> <a 
- id="x58-990006.6.1"></a>Spline natural</h4><hr class="section">
+ id="x58-1000006.6.1"></a>Spline natural</h4><hr class="section">
 <a 
- id="dx58-99001"></a>
-<!--l. 581--><p class="noindent" >Uma forma de definir as duas equações adicionais para completar o sistema (<a 
-href="#x58-98011r9">6.9<!--tex4ht:ref: eq_cn_spline --></a>)
+ id="dx58-100001"></a>
+<!--l. 638--><p class="noindent" >Uma forma de definir as duas equações adicionais para completar o sistema (<a 
+href="#x58-99011r9">6.9<!--tex4ht:ref: eq_cn_spline --></a>)
 é impor condições de fronteira livres (ou naturais), ou seja,
                                                                           
 
                                                                           
    <table 
 class="equation"><tr><td><a 
- id="x58-99002r10"></a>
+ id="x58-100002r10"></a>
    <center class="math-display" >
 <img 
-src="main2788x.png" alt=" &prime;&prime;        &prime;&prime;
+src="main2796x.png" alt=" &#x2032;&#x2032;        &#x2032;&#x2032;
 S (x1) = S  (xn ) = 0.
 " class="math-display" ></center></td><td class="equation-label">(6.10)</td></tr></table>
-<!--l. 584--><p class="nopar" >
+<!--l. 641--><p class="nopar" >
 Substituindo na equação (<a 
-href="#x58-98004r2">6.2<!--tex4ht:ref: eq_2derivada --></a>)
+href="#x58-99004r2">6.2<!--tex4ht:ref: eq_2derivada --></a>)
    <center class="math-display" >
 <img 
-src="main2789x.png" alt=" &prime;&prime;
-s1(x1) = 2c1 + 6d1 (x1 &minus; x1) = 0 = &rArr; c1 = 0.  " class="math-display" ></center>
+src="main2797x.png" alt=" &#x2032;&#x2032;
+s1(x1) = 2c1 + 6d1 (x1 - x1) = 0 = &#x21D2; c1 = 0.  " class="math-display" ></center>
 e
    <center class="math-display" >
 <img 
-src="main2790x.png" alt="s&prime;&prime;  (x ) = 2c    + 6d   (x  &minus; x    ) = 0.
- n&minus;1  n      n&minus;1     n&minus;1  n     n&minus;1  " class="math-display" ></center>
+src="main2798x.png" alt="s&#x2032;&#x2032;  (x ) = 2c    + 6d   (x  - x    ) = 0.
+ n-1  n      n-1     n-1  n     n-1  " class="math-display" ></center>
 Usando o fato que
                                                                           
 
                                                                           
    <center class="math-display" >
 <img 
-src="main2791x.png" alt="cn&minus;1 + 3dn&minus; 1hn &minus;1 = cn  " class="math-display" ></center>
+src="main2799x.png" alt="cn-1 + 3dn- 1hn -1 = cn  " class="math-display" ></center>
 temos que
    <center class="math-display" >
 <img 
-src="main2792x.png" alt="c =  &minus; 3d   (x  &minus; x   ) + 3d   h    =  0.
- n       n&minus;1  n    n&minus;1      n&minus;1  n&minus;1  " class="math-display" ></center>
+src="main2800x.png" alt="c =  - 3d   (x  - x   ) + 3d   h    =  0.
+ n       n-1  n    n-1      n-1  n-1  " class="math-display" ></center>
 Essa duas equações para <img 
-src="main2793x.png" alt="c1   "  class="math" > e <img 
-src="main2794x.png" alt="cn  "  class="math" > juntamente com as equações (<a 
-href="#x58-98011r9">6.9<!--tex4ht:ref: eq_cn_spline --></a>) formam um
+src="main2801x.png" alt="c1   "  class="math" > e <img 
+src="main2802x.png" alt="cn  "  class="math" > juntamente com as equações (<a 
+href="#x58-99011r9">6.9<!--tex4ht:ref: eq_cn_spline --></a>) formam um
 sistema de <img 
-src="main2795x.png" alt="n  "  class="math" > equações <img 
-src="main2796x.png" alt="Ac  = z  "  class="math" >, onde
+src="main2803x.png" alt="n  "  class="math" > equações <img 
+src="main2804x.png" alt="Ac  = z  "  class="math" >, onde
    <table 
 class="equation"><tr><td><a 
- id="x58-99003r11"></a>
+ id="x58-100003r11"></a>
    <center class="math-display" >
 <img 
-src="main2797x.png" alt="     &lfloor;                                                            &rfloor;
-     |  1      0           0       0   &sdot;&sdot;&sdot;         0          0   |
-     || h   2h  + 2h       h        0   &sdot;&sdot;&sdot;         0          0   ||
+src="main2805x.png" alt="     &#x230A;                                                            &#x230B;
+     |  1      0           0       0   &#x22C5;&#x22C5;&#x22C5;         0          0   |
+     || h   2h  + 2h       h        0   &#x22C5;&#x22C5;&#x22C5;         0          0   ||
      ||  1     2     1      2                                      ||
-     ||  0      h2     2h3 +  2h2  h3   &sdot;&sdot;&sdot;         0          0   ||
+     ||  0      h2     2h3 +  2h2  h3   &#x22C5;&#x22C5;&#x22C5;         0          0   ||
 A =  ||  .       .          .       .                .          .  ||
      ||  ..       ..          ..       ..    ...          ..          ..  ||
      ||                                                            ||
-     ||  0      0           0      &sdot;&sdot;&sdot;  hn&minus;2  2hn&minus; 2 + 2hn &minus;1 hn&minus;1 ||
-     &lceil;                                                            &rceil;
-        0      0           0      &sdot;&sdot;&sdot;   0          0          1
+     ||  0      0           0      &#x22C5;&#x22C5;&#x22C5;  hn-2  2hn- 2 + 2hn -1 hn-1 ||
+     &#x2308;                                                            &#x2309;
+        0      0           0      &#x22C5;&#x22C5;&#x22C5;   0          0          1
 " class="math-display" ></center></td><td class="equation-label">(6.11)</td></tr></table>
-<!--l. 611--><p class="nopar" >
+<!--l. 668--><p class="nopar" >
    <table 
 class="equation"><tr><td><a 
- id="x58-99004r12"></a>
+ id="x58-100004r12"></a>
    <center class="math-display" >
 <img 
-src="main2798x.png" alt="                         &lfloor;                         &rfloor;
+src="main2806x.png" alt="                         &#x230A;                         &#x230B;
                                       0
-    &lfloor;    &rfloor;               ||                         ||
-      c1                 ||     3y3&minus;y2&minus;  3y2&minus;y1     ||
+    &#x230A;    &#x230B;               ||                         ||
+      c1                 ||     3y3-y2-  3y2-y1     ||
     ||    ||               ||        h2      h1       ||
-    || c2 ||               ||     3y4&minus;hy3&minus;  3y3h&minus;y2     ||
+    || c2 ||               ||     3y4-hy3-  3y3h-y2     ||
 c = ||  . ||     e     z = ||         3  .    2       ||
     ||  .. ||               ||            ..            ||
-    &lceil;    &rceil;               ||  yn&minus;1&minus;yn&minus;2    yn&minus;2&minus;yn&minus;3 ||
-      cn                 |&lceil; 3   hn&minus; 2  &minus;  3  hn&minus;3    |&rceil;
+    &#x2308;    &#x2309;               ||  yn-1-yn-2    yn-2-yn-3 ||
+      cn                 |&#x2308; 3   hn- 2  -  3  hn-3    |&#x2309;
 
                                       0
 " class="math-display" ></center></td><td class="equation-label">(6.12)</td></tr></table>
-<!--l. 627--><p class="nopar" >
+<!--l. 684--><p class="nopar" >
 Observe que a matriz <img 
-src="main2799x.png" alt="A  "  class="math" > é diagonal dominante estrita e, portanto, o
+src="main2807x.png" alt="A  "  class="math" > é diagonal dominante estrita e, portanto, o
 sistema <img 
-src="main2800x.png" alt="Ac  = z  "  class="math" > possui solução única. Calculado <img 
-src="main2801x.png" alt="c  "  class="math" >, os valores dos <img 
-src="main2802x.png" alt="an  "  class="math" >,
+src="main2808x.png" alt="Ac  = z  "  class="math" > possui solução única. Calculado <img 
+src="main2809x.png" alt="c  "  class="math" >, os valores dos <img 
+src="main2810x.png" alt="an  "  class="math" >,
 <img 
-src="main2803x.png" alt="bn  "  class="math" > e <img 
-src="main2804x.png" alt="dn  "  class="math" > são obtidos diretamente pelas expressões (<a 
-href="#x58-98006r4">6.4<!--tex4ht:ref: eq_an_spline --></a>), (<a 
-href="#x58-98008r6">6.6<!--tex4ht:ref: eq_bn_spline --></a>) e (<a 
-href="#x58-98007r5">6.5<!--tex4ht:ref: eq_dn_spline --></a>),
+src="main2811x.png" alt="bn  "  class="math" > e <img 
+src="main2812x.png" alt="dn  "  class="math" > são obtidos diretamente pelas expressões (<a 
+href="#x58-99006r4">6.4<!--tex4ht:ref: eq_an_spline --></a>), (<a 
+href="#x58-99008r6">6.6<!--tex4ht:ref: eq_bn_spline --></a>) e (<a 
+href="#x58-99007r5">6.5<!--tex4ht:ref: eq_dn_spline --></a>),
 respectivamente.
                                                                           
 
                                                                           
    <div class="newtheorem">
-<!--l. 630--><p class="noindent" ><span class="head">
+<!--l. 687--><p class="noindent" ><span class="head">
 <a 
- id="x58-99005r1"></a>
+ id="x58-100005r1"></a>
 <span 
 class="ec-lmbx-12">Exemplo 6.6.1.</span>  </span>Construa um spline cúbico natural que passe pelos pontos
 <img 
-src="main2805x.png" alt="(2, 4,5)  "  class="math" >, <img 
-src="main2806x.png" alt="(5, &minus; 1,9)  "  class="math" >, <img 
-src="main2807x.png" alt="(9, 0,5)  "  class="math" > e <img 
-src="main2808x.png" alt="(12, &minus; 0,5)  "  class="math" >.
+src="main2813x.png" alt="(2, 4,5)  "  class="math" >, <img 
+src="main2814x.png" alt="(5, - 1,9)  "  class="math" >, <img 
+src="main2815x.png" alt="(9, 0,5)  "  class="math" > e <img 
+src="main2816x.png" alt="(12, - 0,5)  "  class="math" >.
    </div>
-<!--l. 632--><p class="indent" >   <span 
+<!--l. 689--><p class="indent" >   <span 
 class="ec-lmbx-12">Solu</span><span 
 class="ec-lmbx-12">ç</span><span 
 class="ec-lmbx-12">ão. </span>O spline desejado é uma função definida por partes da
 forma:
    <table 
 class="equation"><tr><td><a 
- id="x58-99006r13"></a>
+ id="x58-100006r13"></a>
    <center class="math-display" >
 <img 
-src="main2809x.png" alt="       (|                           2            3
-       ||||  a1 + b1(x &minus; 2 ) + c1(x &minus; 2) + d1(x &minus; 2)  ,2 &le;  x &#x003C; 5
+src="main2817x.png" alt="       (|                           2            3
+       ||||  a1 + b1(x - 2 ) + c1(x - 2) + d1(x - 2)  ,2 &#x2264;  x &#x003C; 5
        {                           2            3
-S(x) = ||  a2 + b2(x &minus; 5 ) + c2(x &minus; 5) + d2(x &minus; 5)  ,5 &le;  x &#x003C; 9   .
-       |||(  a +  b (x &minus; 9 ) + c (x &minus; 9)2 + d (x &minus; 9)3 ,9 &le; x &le; 12
+S(x) = ||  a2 + b2(x - 5 ) + c2(x - 5) + d2(x - 5)  ,5 &#x2264;  x &#x003C; 9   .
+       |||(  a +  b (x - 9 ) + c (x - 9)2 + d (x - 9)3 ,9 &#x2264; x &#x2264; 12
            3    3          3            3
 " class="math-display" ></center></td><td class="equation-label">(6.13)</td></tr></table>
-<!--l. 640--><p class="nopar" >
+<!--l. 697--><p class="nopar" >
 Os coeficientes <img 
-src="main2810x.png" alt="c
+src="main2818x.png" alt="c
  1   "  class="math" >, <img 
-src="main2811x.png" alt="c
+src="main2819x.png" alt="c
  2   "  class="math" > e <img 
-src="main2812x.png" alt="c
+src="main2820x.png" alt="c
  3   "  class="math" > resolvem o sistema <img 
-src="main2813x.png" alt="Ac =  z  "  class="math" >, onde
+src="main2821x.png" alt="Ac =  z  "  class="math" >, onde
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2814x.png" alt="     &lfloor;                              &rfloor;   &lfloor;             &rfloor;
+src="main2822x.png" alt="     &#x230A;                              &#x230B;   &#x230A;             &#x230B;
      | 1      0            0       0|   | 1  0   0   0|
-     || 3  2 &sdot; 3 + 2 &sdot; 4    4       0||   || 3  14  4   0||
+     || 3  2 &#x22C5; 3 + 2 &#x22C5; 4    4       0||   || 3  14  4   0||
 A  = ||                              || = ||             ||
-     || 0      4       2 &sdot; 4 + 2 &sdot; 3 3||  || 0  4   14  3||
-     |&lceil;                              |&rceil;   |&lceil;             |&rceil;
+     || 0      4       2 &#x22C5; 4 + 2 &#x22C5; 3 3||  || 0  4   14  3||
+     |&#x2308;                              |&#x2309;   |&#x2308;             |&#x2309;
        0      0            0       1      0  0   0   1
 " class="math-display" ></center></td></tr></table>
-<!--l. 654--><p class="nopar" >
+<!--l. 711--><p class="nopar" >
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2815x.png" alt="    &lfloor;  &rfloor;           &lfloor;                      &rfloor;    &lfloor;     &rfloor;
+src="main2823x.png" alt="    &#x230A;  &#x230B;           &#x230A;                      &#x230B;    &#x230A;     &#x230B;
     |c1|           |           0          |    |  0  |
-    ||  ||           ||  0,5&minus;(&minus;1,9)    (&minus; 1,9)&minus; 4,5||    ||     ||
-    ||c2||           ||3 ---4----&minus;  3---3----||    || 8,2 ||
-c = ||  ||   e  z =  ||  &minus;0,5&minus;0,5    0,5&minus;-(&minus;1,9)|| =  ||     ||
-    |&lceil;c3|&rceil;           |&lceil; 3   3    &minus; 3    4    |&rceil;    |&lceil;&minus; 2,8 |&rceil;
+    ||  ||           ||  0,5-(-1,9)    (- 1,9)- 4,5||    ||     ||
+    ||c2||           ||3 ---4-----  3---3----||    || 8,2 ||
+c = ||  ||   e  z =  ||  -0,5-0,5    0,5--(-1,9)|| =  ||     ||
+    |&#x2308;c3|&#x2309;           |&#x2308; 3   3    - 3    4    |&#x2309;    |&#x2308;- 2,8 |&#x2309;
      c                         0                  0
       4
 " class="math-display" ></center></td></tr></table>
-<!--l. 673--><p class="nopar" >
+<!--l. 730--><p class="nopar" >
 Observe que <img 
-src="main2816x.png" alt="c4   "  class="math" > é um coeficiente artificial para o problema. A solução é <img 
-src="main2817x.png" alt="c1 = 0  "  class="math" >,
+src="main2824x.png" alt="c4   "  class="math" > é um coeficiente artificial para o problema. A solução é <img 
+src="main2825x.png" alt="c1 = 0  "  class="math" >,
 <img 
-src="main2818x.png" alt="c2 = 0,7  "  class="math" >, <img 
-src="main2819x.png" alt="c3 = &minus; 0,4  "  class="math" > e <img 
-src="main2820x.png" alt="c4 = 0  "  class="math" >. Calculamos os demais coeficientes usando as
+src="main2826x.png" alt="c2 = 0,7  "  class="math" >, <img 
+src="main2827x.png" alt="c3 = - 0,4  "  class="math" > e <img 
+src="main2828x.png" alt="c4 = 0  "  class="math" >. Calculamos os demais coeficientes usando as
 expressões (<a 
-href="#x58-98006r4">6.4<!--tex4ht:ref: eq_an_spline --></a>), (<a 
-href="#x58-98008r6">6.6<!--tex4ht:ref: eq_bn_spline --></a>) e (<a 
-href="#x58-98007r5">6.5<!--tex4ht:ref: eq_dn_spline --></a>): <div class="eqnarray">
+href="#x58-99006r4">6.4<!--tex4ht:ref: eq_an_spline --></a>), (<a 
+href="#x58-99008r6">6.6<!--tex4ht:ref: eq_bn_spline --></a>) e (<a 
+href="#x58-99007r5">6.5<!--tex4ht:ref: eq_dn_spline --></a>): <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2821x.png" alt="a1  =   y1 = 4,5
-a2  =   y2 = &minus; 1,9
+src="main2829x.png" alt="a1  =   y1 = 4,5
+a2  =   y2 = - 1,9
 a   =   y  = 0,5
   3      3
 " class="math-display" ></center>
 </div><div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2822x.png" alt="       c2 &minus; c1   0,7 &minus; 0
+src="main2830x.png" alt="       c2 - c1   0,7 - 0
 d1  =  ------- = ------- =  0,0777778
-         3h1       3 &sdot; 3
-d   =  c3-&minus;-c2 = &minus;-0,4-&minus;-0,7 = &minus; 0,0916667
- 2       3h2         3 &sdot; 4
-       c4 &minus; c3   0 + 0,4
+         3h1       3 &#x22C5; 3
+d   =  c3---c2 = --0,4---0,7 = - 0,0916667
+ 2       3h2         3 &#x22C5; 4
+       c4 - c3   0 + 0,4
 d3  =  ------- = ------- = 0,0444444
-         3h3       3 &sdot; 3
+         3h3       3 &#x22C5; 3
 " class="math-display" ></center>
 </div><div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2823x.png" alt="        y2 &minus; y1   h1
-b1  =   --h----&minus;  3-(2c1 + c2)
+src="main2831x.png" alt="        y2 - y1   h1
+b1  =   --h-----  3-(2c1 + c2)
            1
-    =   &minus;-1,9-&minus;-4,5-&minus; 3-(2 &sdot; 0 &minus; 0,7) = &minus; 2,8333333
+    =   --1,9---4,5-- 3-(2 &#x22C5; 0 - 0,7) = - 2,8333333
             3        3
-        y3 &minus;-y2   h2-
-b2  =     h2   &minus;  3 (2c2 + c3)
+        y3 --y2   h2-
+b2  =     h2   -  3 (2c2 + c3)
 
-    =   0,5 &minus;-(&minus;-1,9)-&minus; 4(2 &sdot; 0,7 + 0,4 ) = &minus; 0,7333333
+    =   0,5 --(--1,9)-- 4(2 &#x22C5; 0,7 + 0,4 ) = - 0,7333333
              4         3
-        y4 &minus;-y3   h3-
-b3  =     h3   &minus;  3 (2c3 + c4)
-        &minus; 0,5 &minus; 0,5   3
-    =   -----------&minus; --(2 &sdot; (&minus; 0,4) + 0) = 0,4666667
+        y4 --y3   h3-
+b3  =     h3   -  3 (2c3 + c4)
+        - 0,5 - 0,5   3
+    =   ------------ --(2 &#x22C5; (- 0,4) + 0) = 0,4666667
             3        3
 " class="math-display" ></center>
 </div>Portanto:
@@ -520,204 +522,204 @@ b3  =     h3   &minus;  3 (2c3 + c4)
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2824x.png" alt="       (
-       ||||  4,5&minus; 2,833(x &minus; 2)+ 0,078(x&minus; 2)3                ,2 &le; x &#x003C; 5
+src="main2832x.png" alt="       (
+       ||||  4,5- 2,833(x - 2)+ 0,078(x- 2)3                ,2 &#x2264; x &#x003C; 5
        {                                2             3
-S (x) = || &minus; 1,9 &minus; 0,733(x&minus; 5) + 0,7(x &minus; 5) &minus; 0,092(x&minus; 5 )  ,5 &le; x &#x003C; 9
-       ||(  0,5+ 0,467(x &minus; 9)&minus; 0,4(x&minus; 9)2 + 0,044(x &minus; 9)3   ,9 &le; x &le; 12
+S (x) = || - 1,9 - 0,733(x- 5) + 0,7(x - 5) - 0,092(x- 5 )  ,5 &#x2264; x &#x003C; 9
+       ||(  0,5+ 0,467(x - 9)- 0,4(x- 9)2 + 0,044(x - 9)3   ,9 &#x2264; x &#x2264; 12
 " class="math-display" ></center></td></tr></table>
-<!--l. 701--><p class="nopar" >
+<!--l. 758--><p class="nopar" >
                                                                           <div class="flushright" 
 >
-<!--l. 728--><p class="noindent" >
+<!--l. 785--><p class="noindent" >
  <img 
-src="main2825x.png" alt="&#x2662; "  class="math" ></div>
+src="main2833x.png" alt="&#x2662; "  class="math" ></div>
                                                                           
 
                                                                           
-<!--l. 730--><p class="noindent" >
+<!--l. 787--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">6.6.2   </span> <a 
- id="x58-1000006.6.2"></a>Spline fixado</h4><hr class="section">
+ id="x58-1010006.6.2"></a>Spline fixado</h4><hr class="section">
 <a 
- id="dx58-100001"></a>
-<!--l. 732--><p class="noindent" >Alternativamente, para completar o sistema (<a 
-href="#x58-98011r9">6.9<!--tex4ht:ref: eq_cn_spline --></a>), podemos impor condições de
+ id="dx58-101001"></a>
+<!--l. 789--><p class="noindent" >Alternativamente, para completar o sistema (<a 
+href="#x58-99011r9">6.9<!--tex4ht:ref: eq_cn_spline --></a>), podemos impor condições de
 contorno fixadas, ou seja, <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2826x.png" alt="S &prime;(x1)  =   f&prime;(x1)
- &prime;           &prime;
+src="main2834x.png" alt="S &#x2032;(x1)  =   f&#x2032;(x1)
+ &#x2032;           &#x2032;
 S (xn)  =   f(xn ).
 " class="math-display" ></center>
 </div>Substituindo na equação (<a 
-href="#x58-98003r1">6.1<!--tex4ht:ref: eq_1derivada --></a>)
+href="#x58-99003r1">6.1<!--tex4ht:ref: eq_1derivada --></a>)
    <table 
 class="equation"><tr><td><a 
- id="x58-100003r14"></a>
+ id="x58-101003r14"></a>
    <center class="math-display" >
 <img 
-src="main2827x.png" alt="s&prime;(x1) = b1 + 2c1(x1 &minus; x1) + 3dj (x1 &minus; x1 )2 = f &prime;(x1) =&rArr; b1 = f&prime;(x1)
+src="main2835x.png" alt="s&#x2032;(x1) = b1 + 2c1(x1 - x1) + 3dj (x1 - x1 )2 = f &#x2032;(x1) =&#x21D2; b1 = f&#x2032;(x1)
  1
 " class="math-display" ></center></td><td class="equation-label">(6.14)</td></tr></table>
-<!--l. 740--><p class="nopar" >
+<!--l. 797--><p class="nopar" >
 e
    <table 
 class="equation"><tr><td><a 
- id="x58-100004r15"></a>
+ id="x58-101004r15"></a>
                                                                           
 
                                                                           
    <center class="math-display" >
 <img 
-src="main2828x.png" alt=" &prime;                                                 2
-sn&minus;1(xn) = bn&minus;1 + 2cn&minus;1(xn &minus; xn&minus; 1) + 3dj(xn &minus; xn&minus; 1)
-         = bn&minus;1 + 2cn&minus;1hn&minus; 1 + 3dn&minus; 1h2n&minus;1 = f&prime;(xn)
+src="main2836x.png" alt=" &#x2032;                                                 2
+sn-1(xn) = bn-1 + 2cn-1(xn - xn- 1) + 3dj(xn - xn- 1)
+         = bn-1 + 2cn-1hn- 1 + 3dn- 1h2n-1 = f&#x2032;(xn)
 " class="math-display" ></center></td><td class="equation-label">(6.15)</td></tr></table>
-<!--l. 747--><p class="nopar" >
+<!--l. 804--><p class="nopar" >
 Usando as equações (<a 
-href="#x58-98007r5">6.5<!--tex4ht:ref: eq_dn_spline --></a>) e (<a 
-href="#x58-98008r6">6.6<!--tex4ht:ref: eq_bn_spline --></a>) para <img 
-src="main2829x.png" alt="j = 1  "  class="math" > e <img 
-src="main2830x.png" alt="j = n &minus; 1  "  class="math" >, temos:
+href="#x58-99007r5">6.5<!--tex4ht:ref: eq_dn_spline --></a>) e (<a 
+href="#x58-99008r6">6.6<!--tex4ht:ref: eq_bn_spline --></a>) para <img 
+src="main2837x.png" alt="j = 1  "  class="math" > e <img 
+src="main2838x.png" alt="j = n - 1  "  class="math" >, temos:
    <table 
 class="equation"><tr><td><a 
- id="x58-100005r16"></a>
+ id="x58-101005r16"></a>
    <center class="math-display" >
 <img 
-src="main2831x.png" alt="2c1h1 + c2h1 = 3 y2 &minus;-y1&minus;  3f&prime;(x1)
+src="main2839x.png" alt="2c1h1 + c2h1 = 3 y2 --y1-  3f&#x2032;(x1)
                    h1
 " class="math-display" ></center></td><td class="equation-label">(6.16)</td></tr></table>
-<!--l. 751--><p class="nopar" >
+<!--l. 808--><p class="nopar" >
 e
    <table 
 class="equation"><tr><td><a 
- id="x58-100006r17"></a>
+ id="x58-101006r17"></a>
    <center class="math-display" >
 <img 
-src="main2832x.png" alt="cn&minus;1hn &minus;1 + cnhn&minus;1 = 3f &prime;(xn) &minus; 3yn-&minus;-yn&minus;-1
-                                   hn&minus;1
+src="main2840x.png" alt="cn-1hn -1 + cnhn-1 = 3f &#x2032;(xn) - 3yn---yn--1
+                                   hn-1
                                                                           
 
                                                                           
 " class="math-display" ></center></td><td class="equation-label">(6.17)</td></tr></table>
-<!--l. 755--><p class="nopar" >
-<!--l. 757--><p class="indent" >   Essas duas equações juntamente com as equações (<a 
-href="#x58-98011r9">6.9<!--tex4ht:ref: eq_cn_spline --></a>) formam um sistema de
+<!--l. 812--><p class="nopar" >
+<!--l. 814--><p class="indent" >   Essas duas equações juntamente com as equações (<a 
+href="#x58-99011r9">6.9<!--tex4ht:ref: eq_cn_spline --></a>) formam um sistema de
 <img 
-src="main2833x.png" alt="n  "  class="math" > equações <img 
-src="main2834x.png" alt="Ac  = z  "  class="math" >, onde
+src="main2841x.png" alt="n  "  class="math" > equações <img 
+src="main2842x.png" alt="Ac  = z  "  class="math" >, onde
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2835x.png" alt="     &lfloor;                                                              &rfloor;
-       2h       h           0       0   &sdot;&sdot;&sdot;         0           0
+src="main2843x.png" alt="     &#x230A;                                                              &#x230B;
+       2h       h           0       0   &#x22C5;&#x22C5;&#x22C5;         0           0
      ||   1       1                                                  ||
-     ||  h1  2h2 + 2h1      h2       0   &sdot;&sdot;&sdot;         0           0   ||
+     ||  h1  2h2 + 2h1      h2       0   &#x22C5;&#x22C5;&#x22C5;         0           0   ||
      ||                                                              ||
-     ||  0       h2     2h3 +  2h2  h3   &sdot;&sdot;&sdot;         0           0   ||
+     ||  0       h2     2h3 +  2h2  h3   &#x22C5;&#x22C5;&#x22C5;         0           0   ||
 A =  ||  ..        ..          ..       ..    ..          ..          ..   ||
      ||  .        .          .       .     .          .          .   ||
      ||                                                              ||
-     |&lceil;  0       0           0      &sdot;&sdot;&sdot;  hn&minus;2  2hn&minus; 2 + 2hn &minus;1 hn &minus;1 |&rceil;
-        0       0           0      &sdot;&sdot;&sdot;   0         h          2h
-                                                    n&minus;1         n&minus;1
+     |&#x2308;  0       0           0      &#x22C5;&#x22C5;&#x22C5;  hn-2  2hn- 2 + 2hn -1 hn -1 |&#x2309;
+        0       0           0      &#x22C5;&#x22C5;&#x22C5;   0         h          2h
+                                                    n-1         n-1
 " class="math-display" ></center></td></tr></table>
-<!--l. 767--><p class="nopar" >
+<!--l. 824--><p class="nopar" >
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2836x.png" alt="                         &lfloor;      y2&minus;-y1-     &prime;        &rfloor;
-    &lfloor;    &rfloor;               |    3  h1  &minus; 3f (x1)     |
-      c                  ||     3y3&minus;y2&minus;  3y2&minus;y1     ||
+src="main2844x.png" alt="                         &#x230A;      y2--y1-     &#x2032;        &#x230B;
+    &#x230A;    &#x230B;               |    3  h1  - 3f (x1)     |
+      c                  ||     3y3-y2-  3y2-y1     ||
     ||  1 ||               ||        h2      h1       ||
-    || c2 ||               ||     3y4&minus;y3&minus;  3y3&minus;y2     ||
+    || c2 ||               ||     3y4-y3-  3y3-y2     ||
 c = ||  . ||     e     z = ||        h3  .   h2       ||
     ||  .. ||               ||            ..            ||
-    &lceil;    &rceil;               ||  y   &minus;y       y   &minus;y    ||
-      cn                 || 3-n&minus;1hn&minus;-n2&minus;2&minus;  3-n&minus;h2n&minus;3n&minus;3 ||
-                         &lceil;      &prime;       yn&minus;-yn&minus;1    &rceil;
-                             3f (xn) &minus; 3  hn&minus;1
+    &#x2308;    &#x2309;               ||  y   -y       y   -y    ||
+      cn                 || 3-n-1hn--n2-2-  3-n-h2n-3n-3 ||
+                         &#x2308;      &#x2032;       yn--yn-1    &#x2309;
+                             3f (xn) - 3  hn-1
 " class="math-display" ></center></td></tr></table>
-<!--l. 783--><p class="nopar" >
+<!--l. 840--><p class="nopar" >
 Observe que a matriz <img 
-src="main2837x.png" alt="A  "  class="math" > é diagonal dominante estrita e, portanto, o
+src="main2845x.png" alt="A  "  class="math" > é diagonal dominante estrita e, portanto, o
 sistema <img 
-src="main2838x.png" alt="Ac  = z  "  class="math" > possui solução única. Calculado <img 
-src="main2839x.png" alt="c  "  class="math" >, os valores dos <img 
-src="main2840x.png" alt="an  "  class="math" >,
+src="main2846x.png" alt="Ac  = z  "  class="math" > possui solução única. Calculado <img 
+src="main2847x.png" alt="c  "  class="math" >, os valores dos <img 
+src="main2848x.png" alt="an  "  class="math" >,
 <img 
-src="main2841x.png" alt="bn  "  class="math" > e <img 
-src="main2842x.png" alt="dn  "  class="math" > são obtidos diretamente pelas expressões (<a 
-href="#x58-98006r4">6.4<!--tex4ht:ref: eq_an_spline --></a>), (<a 
-href="#x58-98008r6">6.6<!--tex4ht:ref: eq_bn_spline --></a>) e (<a 
-href="#x58-98007r5">6.5<!--tex4ht:ref: eq_dn_spline --></a>),
+src="main2849x.png" alt="bn  "  class="math" > e <img 
+src="main2850x.png" alt="dn  "  class="math" > são obtidos diretamente pelas expressões (<a 
+href="#x58-99006r4">6.4<!--tex4ht:ref: eq_an_spline --></a>), (<a 
+href="#x58-99008r6">6.6<!--tex4ht:ref: eq_bn_spline --></a>) e (<a 
+href="#x58-99007r5">6.5<!--tex4ht:ref: eq_dn_spline --></a>),
 respectivamente.
    <div class="newtheorem">
-<!--l. 787--><p class="noindent" ><span class="head">
+<!--l. 844--><p class="noindent" ><span class="head">
 <a 
- id="x58-100007r2"></a>
+ id="x58-101007r2"></a>
 <span 
 class="ec-lmbx-12">Exemplo 6.6.2.</span>  </span>Construa  um  spline  cúbico  com  fronteira  fixada  que
 interpola a função <img 
-src="main2843x.png" alt="y = sin (x )  "  class="math" > nos pontos <img 
-src="main2844x.png" alt="x = 0  "  class="math" >, <img 
-src="main2845x.png" alt="x = &pi;
+src="main2851x.png" alt="y = sin (x )  "  class="math" > nos pontos <img 
+src="main2852x.png" alt="x = 0  "  class="math" >, <img 
+src="main2853x.png" alt="x = &#x03C0;
     2   "  class="math" >, <img 
-src="main2846x.png" alt="x = &pi;  "  class="math" >, <img 
-src="main2847x.png" alt="x = 3&pi;
+src="main2854x.png" alt="x = &#x03C0;  "  class="math" >, <img 
+src="main2855x.png" alt="x = 3&#x03C0;
      2   "  class="math" >
 e <img 
-src="main2848x.png" alt="x = 2&pi;  "  class="math" >.
+src="main2856x.png" alt="x = 2&#x03C0;  "  class="math" >.
    </div>
-<!--l. 789--><p class="indent" >   O spline desejado passa pelos pontos <img 
-src="main2849x.png" alt="(0,0)  "  class="math" >, <img 
-src="main2850x.png" alt="(&pi; &#x2215;2,1)  "  class="math" >, <img 
-src="main2851x.png" alt="(&pi;,0)  "  class="math" >, <img 
-src="main2852x.png" alt="(3&pi;&#x2215;2, &minus; 1)  "  class="math" > e
+<!--l. 846--><p class="indent" >   O spline desejado passa pelos pontos <img 
+src="main2857x.png" alt="(0,0)  "  class="math" >, <img 
+src="main2858x.png" alt="(&#x03C0; &#x2215;2,1)  "  class="math" >, <img 
+src="main2859x.png" alt="(&#x03C0;,0)  "  class="math" >, <img 
+src="main2860x.png" alt="(3&#x03C0;&#x2215;2, - 1)  "  class="math" > e
 <img 
-src="main2853x.png" alt="(2&pi;,0)  "  class="math" > e tem a forma:
+src="main2861x.png" alt="(2&#x03C0;,0)  "  class="math" > e tem a forma:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2854x.png" alt="        (|               2      3                                &pi;
-        |||| a1 + b1x + c1x  + d1x                       ,0 &le;  x &#x003C; 2
-        |||{ a  + b (x &minus; &pi; ) + c (x &minus; &pi;)2 + d (x &minus; &pi;)3   , &pi; &le; x &#x003C; &pi;
+src="main2862x.png" alt="        (|               2      3                                &#x03C0;
+        |||| a1 + b1x + c1x  + d1x                       ,0 &#x2264;  x &#x003C; 2
+        |||{ a  + b (x - &#x03C0; ) + c (x - &#x03C0;)2 + d (x - &#x03C0;)3   , &#x03C0; &#x2264; x &#x003C; &#x03C0;
 S (x) =     2   2     2     2     2      2     2        2            .
-        ||| a3 + b3(x &minus; &pi;) + c3(x &minus; &pi;)2 + d3(x &minus; &pi;)3    ,&pi; &le;  x &#x003C; 3&pi;
+        ||| a3 + b3(x - &#x03C0;) + c3(x - &#x03C0;)2 + d3(x - &#x03C0;)3    ,&#x03C0; &#x2264;  x &#x003C; 3&#x03C0;
         ||||                                                        2
-        |( a4 + b4(x &minus; 3&pi;2 ) + c4(x &minus; 32&pi;)2 + d4(x &minus; 32&pi;)3 , 32&pi;&le;  x &le; 2&pi;
+        |( a4 + b4(x - 3&#x03C0;2 ) + c4(x - 32&#x03C0;)2 + d4(x - 32&#x03C0;)3 , 32&#x03C0;&#x2264;  x &#x2264; 2&#x03C0;
 " class="math-display" ></center></td></tr></table>
-<!--l. 797--><p class="nopar" >
+<!--l. 854--><p class="nopar" >
 Observe que ele satisfaz as condição de contorno <img 
-src="main2855x.png" alt="f&prime;(0) = cos(0) = 1  "  class="math" > e
+src="main2863x.png" alt="f&#x2032;(0) = cos(0) = 1  "  class="math" > e
 <img 
-src="main2856x.png" alt="  &prime;
-f (2&pi;) = cos(2&pi; ) = 1  "  class="math" >.
-<!--l. 800--><p class="indent" >   Os coeficientes <img 
-src="main2857x.png" alt="c1   "  class="math" >, <img 
-src="main2858x.png" alt="c2   "  class="math" >, <img 
-src="main2859x.png" alt="c3   "  class="math" > e <img 
-src="main2860x.png" alt="c4   "  class="math" > resolvem o sistema <img 
-src="main2861x.png" alt="Ac =  z  "  class="math" >, onde:
+src="main2864x.png" alt="  &#x2032;
+f (2&#x03C0;) = cos(2&#x03C0; ) = 1  "  class="math" >.
+<!--l. 857--><p class="indent" >   Os coeficientes <img 
+src="main2865x.png" alt="c1   "  class="math" >, <img 
+src="main2866x.png" alt="c2   "  class="math" >, <img 
+src="main2867x.png" alt="c3   "  class="math" > e <img 
+src="main2868x.png" alt="c4   "  class="math" > resolvem o sistema <img 
+src="main2869x.png" alt="Ac =  z  "  class="math" >, onde:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2862x.png" alt="     &lfloor;                            &rfloor;
-     |   &pi;   &pi;&#x2215;2    0    0     0  |
+src="main2870x.png" alt="     &#x230A;                            &#x230B;
+     |   &#x03C0;   &#x03C0;&#x2215;2    0    0     0  |
      ||                            ||
-     || &pi; &#x2215;2  2 &pi;  &pi; &#x2215;2   0     0  ||
-     ||   0   &pi;&#x2215;2   2&pi;   &pi;&#x2215;2    0  ||
+     || &#x03C0; &#x2215;2  2 &#x03C0;  &#x03C0; &#x2215;2   0     0  ||
+     ||   0   &#x03C0;&#x2215;2   2&#x03C0;   &#x03C0;&#x2215;2    0  ||
 A  = ||                            ||
-     ||   0    0   &pi; &#x2215;2  2 &pi;  &pi; &#x2215;2 ||
+     ||   0    0   &#x03C0; &#x2215;2  2 &#x03C0;  &#x03C0; &#x2215;2 ||
      ||                            ||
-     ||   0    0     0   &pi;&#x2215;2   &pi;   ||
-     &lceil;                            &rceil;
+     ||   0    0     0   &#x03C0;&#x2215;2   &#x03C0;   ||
+     &#x2308;                            &#x2309;
 " class="math-display" ></center></td></tr></table>
-<!--l. 809--><p class="nopar" >
+<!--l. 866--><p class="nopar" >
    <table 
 class="equation-star"><tr><td>
                                                                           
@@ -725,37 +727,37 @@ class="equation-star"><tr><td>
                                                                           
    <center class="math-display" >
 <img 
-src="main2863x.png" alt="    &lfloor;    &rfloor;               &lfloor;                   &rfloor;   &lfloor;          &rfloor;
-                                1&minus;-0
-    ||  c1||               ||    3 &pi;&#x2215;2 &minus; 3 &sdot; 1   ||   ||  6&#x2215;&pi; &minus; 3 ||
-    ||  c ||               ||    30&minus;1 &minus; 31&minus;-0   ||   ||  &minus; 12&#x2215;&pi;  ||
-    ||   2||               ||     &pi;&#x2215;2     &pi;&#x2215;2    ||   ||          ||
-c = ||  c3||      e    z = ||   3 &minus;1&minus;0&minus;  30&minus;1   || = ||     0    ||
-    ||    ||               ||     &pi;&#x2215;2     &pi;&#x2215;2   ||   ||          ||
-    ||  c4||               || 3 0&minus;&pi;(&minus;&#x2215;21)-&minus; 3(&minus;1&pi;)&#x2215;&minus;20 ||   ||   12&#x2215;&pi;   ||
-    &lceil;    &rceil;               &lceil;           0&minus;(&minus;1)  &rceil;   &lceil;          &rceil;
-       c5                    3 &sdot; 1 &minus; 3-&pi;&#x2215;2-         3 &minus; 6 &#x2215;&pi;
+src="main2871x.png" alt="    &#x230A;    &#x230B;               &#x230A;                   &#x230B;   &#x230A;          &#x230B;
+                                1--0
+    ||  c1||               ||    3 &#x03C0;&#x2215;2 - 3 &#x22C5; 1   ||   ||  6&#x2215;&#x03C0; - 3 ||
+    ||  c ||               ||    30-1 - 31--0   ||   ||  - 12&#x2215;&#x03C0;  ||
+    ||   2||               ||     &#x03C0;&#x2215;2     &#x03C0;&#x2215;2    ||   ||          ||
+c = ||  c3||      e    z = ||   3 -1-0-  30-1   || = ||     0    ||
+    ||    ||               ||     &#x03C0;&#x2215;2     &#x03C0;&#x2215;2   ||   ||          ||
+    ||  c4||               || 3 0-&#x03C0;(-&#x2215;21)-- 3(-1&#x03C0;)&#x2215;-20 ||   ||   12&#x2215;&#x03C0;   ||
+    &#x2308;    &#x2309;               &#x2308;           0-(-1)  &#x2309;   &#x2308;          &#x2309;
+       c5                    3 &#x22C5; 1 - 3-&#x03C0;&#x2215;2-         3 - 6 &#x2215;&#x03C0;
 " class="math-display" ></center></td></tr></table>
-<!--l. 831--><p class="nopar" >
+<!--l. 888--><p class="nopar" >
 Aqui <img 
-src="main2864x.png" alt="c5   "  class="math" > é um coeficiente artificial para o problema. A solução é <img 
-src="main2865x.png" alt="c1 = &minus; 0,0491874  "  class="math" >,
+src="main2872x.png" alt="c5   "  class="math" > é um coeficiente artificial para o problema. A solução é <img 
+src="main2873x.png" alt="c1 = - 0,0491874  "  class="math" >,
 <img 
-src="main2866x.png" alt="c2 = &minus; 0,5956302  "  class="math" >, <img 
-src="main2867x.png" alt="c3 = 0  "  class="math" >, <img 
-src="main2868x.png" alt="c4 = 0,5956302  "  class="math" > e <img 
-src="main2869x.png" alt="c5 = 0,0491874  "  class="math" >. Calculamos os
+src="main2874x.png" alt="c2 = - 0,5956302  "  class="math" >, <img 
+src="main2875x.png" alt="c3 = 0  "  class="math" >, <img 
+src="main2876x.png" alt="c4 = 0,5956302  "  class="math" > e <img 
+src="main2877x.png" alt="c5 = 0,0491874  "  class="math" >. Calculamos os
 demais coeficientes usando as expressões (<a 
-href="#x58-98006r4">6.4<!--tex4ht:ref: eq_an_spline --></a>), (<a 
-href="#x58-98008r6">6.6<!--tex4ht:ref: eq_bn_spline --></a>) e (<a 
-href="#x58-98007r5">6.5<!--tex4ht:ref: eq_dn_spline --></a>): <div class="eqnarray">
+href="#x58-99006r4">6.4<!--tex4ht:ref: eq_an_spline --></a>), (<a 
+href="#x58-99008r6">6.6<!--tex4ht:ref: eq_bn_spline --></a>) e (<a 
+href="#x58-99007r5">6.5<!--tex4ht:ref: eq_dn_spline --></a>): <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2870x.png" alt="a1  =   y1 = 0
+src="main2878x.png" alt="a1  =   y1 = 0
 a   =   y  = 1
  2       2
 a3  =   y3 = 0
-a4  =   y3 = &minus; 1
+a4  =   y3 = - 1
 " class="math-display" ></center>
 </div><div class="eqnarray">
                                                                           
@@ -763,86 +765,86 @@ a4  =   y3 = &minus; 1
                                                                           
    <center class="math-display" >
 <img 
-src="main2871x.png" alt="        c2 &minus;-c1   &minus;-0,5956302-&minus;-(&minus;-0,0491874)-
-d1  =     3h1  =            3 &sdot; &pi; &#x2215;2          = &minus; 0,1159588
+src="main2879x.png" alt="        c2 --c1   --0,5956302---(--0,0491874)-
+d1  =     3h1  =            3 &#x22C5; &#x03C0; &#x2215;2          = - 0,1159588
 
-d2  =   c3 &minus;-c2=  0-&minus;-(&minus;-0,5956302-)-= 0,1263967
-          3h2          3 &sdot; &pi;&#x2215;2
-        c4 &minus; c3   0,5956302 &minus; 0
+d2  =   c3 --c2=  0---(--0,5956302-)-= 0,1263967
+          3h2          3 &#x22C5; &#x03C0;&#x2215;2
+        c4 - c3   0,5956302 - 0
 d3  =   -------=  --------------=  0,1263967
-          3h3         3 &sdot; &pi; &#x2215;2
-d   =   c5 &minus;-c4=  0,0491874-&minus;-0,5956302- = &minus; 0,1159588
- 4        3h4             3 &sdot; &pi;&#x2215;2
+          3h3         3 &#x22C5; &#x03C0; &#x2215;2
+d   =   c5 --c4=  0,0491874---0,5956302- = - 0,1159588
+ 4        3h4             3 &#x22C5; &#x03C0;&#x2215;2
 " class="math-display" ></center>
 </div><div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2872x.png" alt="        y2 &minus; y1   h1
-b1  =   --h----&minus;  3-(2c1 + c2)
+src="main2880x.png" alt="        y2 - y1   h1
+b1  =   --h-----  3-(2c1 + c2)
            1
-    =   1 &minus;-0&minus;  &pi;&#x2215;2-(2 &sdot; (&minus; 0,0491874 ) &minus; 0,5956302 ) = 1
-        &pi; &#x2215;2     3
-        y3 &minus; y2   h2
-b2  =   -------&minus;  --(2c2 + c3)
+    =   1 --0-  &#x03C0;&#x2215;2-(2 &#x22C5; (- 0,0491874 ) - 0,5956302 ) = 1
+        &#x03C0; &#x2215;2     3
+        y3 - y2   h2
+b2  =   --------  --(2c2 + c3)
           h2      3
-        0 &minus;-1-  &pi;&#x2215;2-
-    =   &pi; &#x2215;2 &minus;   3  (2 &sdot; (&minus; 0,5956302 ) + 0) = &minus; 0,0128772
+        0 --1-  &#x03C0;&#x2215;2-
+    =   &#x03C0; &#x2215;2 -   3  (2 &#x22C5; (- 0,5956302 ) + 0) = - 0,0128772
 
-b3  =   y4 &minus;-y3-&minus; h3(2c3 + c4)
+b3  =   y4 --y3-- h3(2c3 + c4)
           h3      3
-        &minus; 1 &minus; 0   &pi;&#x2215;2
-    =   -------&minus;  ----(2 &sdot; 0 + 0,5956302 ) = &minus; 0,9484910
-         &pi; &#x2215;2      3
-b   =   y5 &minus;-y4-&minus; h4(2c +  c )
+        - 1 - 0   &#x03C0;&#x2215;2
+    =   --------  ----(2 &#x22C5; 0 + 0,5956302 ) = - 0,9484910
+         &#x03C0; &#x2215;2      3
+b   =   y5 --y4-- h4(2c +  c )
  4        h4      3    4    5
-        0 &minus; (&minus; 1)   &pi; &#x2215;2
-    =   ---------&minus; ----(2 &sdot; 0,5956302 + 0,0491874 ) = &minus; 0,0128772
-          &pi;&#x2215;2        3
+        0 - (- 1)   &#x03C0; &#x2215;2
+    =   ---------- ----(2 &#x22C5; 0,5956302 + 0,0491874 ) = - 0,0128772
+          &#x03C0;&#x2215;2        3
 " class="math-display" ></center>
 </div>Portanto,
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2873x.png" alt="       (
-       || x &minus; 0,049x2 &minus; 0,12x3                            ,0 &le; x &#x003C; &pi;
+src="main2881x.png" alt="       (
+       || x - 0,049x2 - 0,12x3                            ,0 &#x2264; x &#x003C; &#x03C0;
        ||||                                                         2
-       |{ 1 + &minus; 0,01(x &minus; &pi;2) &minus; 0,6(x &minus; &pi;2)2 + 0,13(x &minus; &pi;2)3    , &pi;2 &le; x &#x003C; &pi;
-S(x) = |                          3                               3&pi;-
-       |||| &minus; 0,95(x&minus; &pi; )+ 0,13(x &minus; &pi;)                      ,&pi; &le; x &#x003C;  2
-       ||( &minus; 1 &minus; 0,01(x &minus; 3&pi;)+  0,6(x &minus; 3&pi;)2 &minus; 0,12(x&minus; 3&pi;)3 , 3&pi;-&le; x &le; 2&pi;
+       |{ 1 + - 0,01(x - &#x03C0;2) - 0,6(x - &#x03C0;2)2 + 0,13(x - &#x03C0;2)3    , &#x03C0;2 &#x2264; x &#x003C; &#x03C0;
+S(x) = |                          3                               3&#x03C0;-
+       |||| - 0,95(x- &#x03C0; )+ 0,13(x - &#x03C0;)                      ,&#x03C0; &#x2264; x &#x003C;  2
+       ||( - 1 - 0,01(x - 3&#x03C0;)+  0,6(x - 3&#x03C0;)2 - 0,12(x- 3&#x03C0;)3 , 3&#x03C0;-&#x2264; x &#x2264; 2&#x03C0;
                         2           2              2      2
 " class="math-display" ></center></td></tr></table>
                                                                           
 
                                                                           
-<!--l. 864--><p class="nopar" >
-<!--l. 872--><p class="noindent" >
+<!--l. 921--><p class="nopar" >
+<!--l. 929--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">6.6.3   </span> <a 
- id="x58-1010006.6.3"></a>Resumo sobre Splines</h4><hr class="section">
-<!--l. 874--><p class="noindent" >Dado um conjunto de pontos <img 
-src="main2874x.png" alt="(xi,yi)  "  class="math" >, <img 
-src="main2875x.png" alt="i = 1,2,...,n  "  class="math" >, um spline cúbico é a
+ id="x58-1020006.6.3"></a>Resumo sobre Splines</h4><hr class="section">
+<!--l. 931--><p class="noindent" >Dado um conjunto de pontos <img 
+src="main2882x.png" alt="(xi,yi)  "  class="math" >, <img 
+src="main2883x.png" alt="i = 1,2,...,n  "  class="math" >, um spline cúbico é a
 seguinte função interpoladora definida por partes:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2876x.png" alt="       (|                           2            3
-       ||||  a1 + b1(x &minus; x1)+ c1(x&minus; x1) + d1(x&minus; x1 )                  ,x1 &le; x &#x003C; x2
-       ||{  a + b (x &minus; x )+ c (x&minus;  x )2 + d (x&minus; x  )3                  ,x &le;  x &#x003C; x
+src="main2884x.png" alt="       (|                           2            3
+       ||||  a1 + b1(x - x1)+ c1(x- x1) + d1(x- x1 )                  ,x1 &#x2264; x &#x003C; x2
+       ||{  a + b (x - x )+ c (x-  x )2 + d (x- x  )3                  ,x &#x2264;  x &#x003C; x
 S(x) =     2   2  .   2    2      2     2      2                     2 .      3
        ||||          ..                                                    ..
        |||(
-          an&minus;1 + bn&minus; 1(x &minus; xn&minus; 1)+ cn&minus;1(x&minus;  xn&minus;1)2 + dn&minus;1(x &minus; xn&minus;1)3 ,xn&minus;1 &le; x &le; xn
+          an-1 + bn- 1(x - xn- 1)+ cn-1(x-  xn-1)2 + dn-1(x - xn-1)3 ,xn-1 &#x2264; x &#x2264; xn
 " class="math-display" ></center></td></tr></table>
-<!--l. 882--><p class="nopar" >
-<!--l. 885--><p class="indent" >   Definindo-se <img 
-src="main2877x.png" alt="hj = xj+1 &minus; xj  "  class="math" >, os coeficientes <img 
-src="main2878x.png" alt="cj  "  class="math" >, <img 
-src="main2879x.png" alt="j = 1,2,...,n  "  class="math" >, são solução
+<!--l. 939--><p class="nopar" >
+<!--l. 942--><p class="indent" >   Definindo-se <img 
+src="main2885x.png" alt="hj = xj+1 - xj  "  class="math" >, os coeficientes <img 
+src="main2886x.png" alt="cj  "  class="math" >, <img 
+src="main2887x.png" alt="j = 1,2,...,n  "  class="math" >, são solução
 do sistema linear <img 
-src="main2880x.png" alt="Ac = z  "  class="math" >, onde:
+src="main2888x.png" alt="Ac = z  "  class="math" >, onde:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
@@ -850,42 +852,42 @@ class="equation-star"><tr><td>
 
                                                                           
 <img 
-src="main2881x.png" alt="|--------------------------------------|--------------------------------------|
+src="main2889x.png" alt="|--------------------------------------|--------------------------------------|
 |Spline Natural                         |Spline Fixado                         |
-|s&prime;&prime;(x ) = 0 e s&prime;&prime; (x ) = 0              |s&prime;(x ) = f &prime;(x ) e s&prime; (x ) = f&prime;(x )    |
-|-1--1-(------n&minus;1--n-------------------|-1--1-(-----1----n&minus;1--n--------n------|
+|s&#x2032;&#x2032;(x ) = 0 e s&#x2032;&#x2032; (x ) = 0              |s&#x2032;(x ) = f &#x2032;(x ) e s&#x2032; (x ) = f&#x2032;(x )    |
+|-1--1-(------n-1--n-------------------|-1--1-(-----1----n-1--n--------n------|
 |      ||| 1            ,j = i = 1       |      ||| 2h1          ,j = i = 1       |
 |      ||||                               |      ||||                               |
-|      |||| hi&minus;1         ,j = i&minus; 1,i &#x003C; n  |      |||| hi&minus;1         ,j = i&minus; 1        |
+|      |||| hi-1         ,j = i- 1,i &#x003C; n  |      |||| hi-1         ,j = i- 1        |
 |      |||{                               |      |||{                               |
-|ai,j =   2(hi + hi&minus;1) ,j = i,1 &#x003C; i &#x003C; n  |ai,j =   2(hi + hi&minus; 1) ,j = i,1 &#x003C; i &#x003C; n |
+|ai,j =   2(hi + hi-1) ,j = i,1 &#x003C; i &#x003C; n  |ai,j =   2(hi + hi- 1) ,j = i,1 &#x003C; i &#x003C; n |
 |      ||| hi           ,j = i+ 1,i &#x003E; 1  |      ||| hi           ,j = i+ 1        |
 |      ||||                               |      ||||                               |
-|      |||| 1            ,j = i = n       |      |||| 2hn &minus;1       ,j = i = n       |
+|      |||| 1            ,j = i = n       |      |||| 2hn -1       ,j = i = n       |
 |      |||(                               |      |||(                               |
 |        0            ,caso contrário. |        0            ,caso contrário.  |
 |                                      |                                      |
 |    (                                 |    (                                 |
-|    ||||  0                  ,i = 1      |    ||||  3y2&minus;hy1&minus;  3f&prime;(x1)    ,i = 1      |
-|    {   yi+1&minus; yi    yi&minus; yi&minus;1              |    {   yi+11&minus;yi   yi&minus;yi&minus;1              |
-|zi = || 3--hi-- &minus; 3-hi&minus;1-  ,1 &#x003C; i &#x003C; n  |zi = || 3--hi-- &minus; 3-hi&minus;1-  ,1 &#x003C; i &#x003C; n  |
-|    ||(  0                  ,i = n      |    ||(  3f&prime;(x )&minus; 3 yn&minus;-yn&minus;1- ,i = n      |
-----------------------------------------------------n------hn&minus;1----------------
+|    ||||  0                  ,i = 1      |    ||||  3y2-hy1-  3f&#x2032;(x1)    ,i = 1      |
+|    {   yi+1- yi    yi- yi-1              |    {   yi+11-yi   yi-yi-1              |
+|zi = || 3--hi-- - 3-hi-1-  ,1 &#x003C; i &#x003C; n  |zi = || 3--hi-- - 3-hi-1-  ,1 &#x003C; i &#x003C; n  |
+|    ||(  0                  ,i = n      |    ||(  3f&#x2032;(x )- 3 yn--yn-1- ,i = n      |
+----------------------------------------------------n------hn-1----------------
 " class="math-display" ></center></td></tr></table>
-<!--l. 926--><p class="nopar" >
+<!--l. 983--><p class="nopar" >
 os coeficientes <img 
-src="main2882x.png" alt="aj  "  class="math" >, <img 
-src="main2883x.png" alt="bj  "  class="math" > e <img 
-src="main2884x.png" alt="dj  "  class="math" >, <img 
-src="main2885x.png" alt="j = 1,2,...,n &minus; 1  "  class="math" >, são calculados conforme segue:
+src="main2890x.png" alt="aj  "  class="math" >, <img 
+src="main2891x.png" alt="bj  "  class="math" > e <img 
+src="main2892x.png" alt="dj  "  class="math" >, <img 
+src="main2893x.png" alt="j = 1,2,...,n - 1  "  class="math" >, são calculados conforme segue:
 <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2886x.png" alt="aj  =   yj
-        3yj+1-&minus;-3yj &minus;-2cjh2j &minus;-cj+1h2j
+src="main2894x.png" alt="aj  =   yj
+        3yj+1---3yj --2cjh2j --cj+1h2j
 bj  =               3h
                        j
-dj  =   cj+1 &minus;-cj
+dj  =   cj+1 --cj
            3hj
 " class="math-display" ></center>
 </div>

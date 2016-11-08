@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Sistema de numeração e mudança de base'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Sistema de numeração e mudança de base, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -143,7 +145,7 @@ src="main11x.png" alt="b &#x003E; 1  "  class="math" > <span
 class="ec-lmri-12">e o conjunto de s</span><span 
 class="ec-lmri-12">ímbolos</span>
 <img 
-src="main12x.png" alt="{,,,,&minus;&minus;&minus; ,000,111,222,...,bbb &minus;&minus;&minus; 111} "  class="math" ><span class="footnote-mark"><a 
+src="main12x.png" alt="{,,,,--- ,000,111,222,...,bbb --- 111} "  class="math" ><span class="footnote-mark"><a 
 href="main9.html#fn1x3"><sup class="textsuperscript">1</sup></a></span><a 
  id="x8-7005f1"></a><span 
 class="ec-lmri-12">,</span>
@@ -158,7 +160,7 @@ class="equation-star"><tr><td>
 
                                                                           
 <img 
-src="main14x.png" alt="(dndn&minus; 1&sdot;&sdot;&sdot;d1d0,d&minus;1d&minus; 2&sdot;&sdot;&sdot;)b
+src="main14x.png" alt="(dndn- 1&#x22C5;&#x22C5;&#x22C5;d1d0,d-1d- 2&#x22C5;&#x22C5;&#x22C5;)b
 " class="math-display" ></center></td></tr></table>
 <!--l. 43--><p class="nopar" >
 <span 
@@ -168,15 +170,15 @@ class="ec-lmri-12">úmero positivo</span>
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main15x.png" alt="d  &sdot; bn + d   &sdot; bn&minus;1 + &sdot;&sdot;&sdot; + d &sdot; b0 + d &sdot; b&minus; 1 + d &sdot; b&minus;2 + &sdot;&sdot;&sdot;
- n        n&minus;1               0       &minus; 1        &minus; 2
+src="main15x.png" alt="d  &#x22C5; bn + d   &#x22C5; bn-1 + &#x22C5;&#x22C5;&#x22C5; + d &#x22C5; b0 + d &#x22C5; b- 1 + d &#x22C5; b-2 + &#x22C5;&#x22C5;&#x22C5;
+ n        n-1               0       - 1        - 2
 " class="math-display" ></center></td></tr></table>
 <!--l. 47--><p class="nopar" >
 <span 
 class="ec-lmri-12">Para representar n</span><span 
 class="ec-lmri-12">úmeros negativos usamos o s</span><span 
 class="ec-lmri-12">ímbolo</span> <img 
-src="main16x.png" alt="&minus; "  class="math" > <span 
+src="main16x.png" alt="- "  class="math" > <span 
 class="ec-lmri-12">a esquerda do</span>
 <span 
 class="ec-lmri-12">numeral.</span>
@@ -189,9 +191,9 @@ class="ec-lmri-12">numeral.</span>
 class="ec-lmbx-12">Observa</span><span 
 class="ec-lmbx-12">ç</span><span 
 class="ec-lmbx-12">ão 2.1.1 </span>(<img 
-src="main17x.png" alt="b &ge; 10  "  class="math" >)<span 
+src="main17x.png" alt="b &#x2265; 10  "  class="math" >)<span 
 class="ec-lmbx-12">.</span>  </span> Para sistemas de numeração com base <img 
-src="main18x.png" alt="b &ge; 10  "  class="math" > é
+src="main18x.png" alt="b &#x2265; 10  "  class="math" > é
 usual utilizar as seguintes notações:
       <ul class="itemize1">
       <li class="itemize">No sistema de numeração decimal (<img 
@@ -204,13 +206,13 @@ class="equation-star"><tr><td>
                                                                           
       <center class="math-display" >
       <img 
-src="main20x.png" alt="±dndn &minus;1 ...d1d0,d &minus;1d&minus;2...:=  ±(dndn &minus;1...d1d0,d&minus;1d &minus;2...)10
+src="main20x.png" alt="±dndn -1 ...d1d0,d -1d-2...:=  ±(dndn -1...d1d0,d-1d -2...)10
       " class="math-display" ></center></td></tr></table>
       <!--l. 57--><p class="nopar" >
       </li>
       <li class="itemize">Se <img 
 src="main21x.png" alt="b &#x003E; 10  "  class="math" >, usamos as letras <img 
-src="main22x.png" alt="A,B, C, &sdot;&sdot;&sdot; "  class="math" > para completar os símbolos:
+src="main22x.png" alt="A,B, C, &#x22C5;&#x22C5;&#x22C5; "  class="math" > para completar os símbolos:
       <img 
 src="main23x.png" alt="A =  10  "  class="math" >, <img 
 src="main24x.png" alt="B = 11  "  class="math" >, <img 
@@ -239,8 +241,8 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main31x.png" alt="x = (1001,101 )2
-        3       2      1       0      &minus; 1      &minus;2       &minus;3
-  = 1 &sdot; 2 + 0 &sdot; 2 + 0 &sdot; 2 + 1 &sdot; 2 + 1 &sdot; 2 + 0 &sdot; 2 + 1 &sdot; 2
+        3       2      1       0      - 1      -2       -3
+  = 1 &#x22C5; 2 + 0 &#x22C5; 2 + 0 &#x22C5; 2 + 1 &#x22C5; 2 + 1 &#x22C5; 2 + 0 &#x22C5; 2 + 1 &#x22C5; 2
   = 8 + 0 + 0 + 1 + 0,5 + 0 + 0,125 = 9,625
                                                                           
 
@@ -265,8 +267,8 @@ src="main35x.png" alt="4  "  class="math" >. Por exemplo:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main36x.png" alt="              2       1       0      &minus;1
-(301,2)4 = 3 &sdot; 4 + 0 &sdot; 4 + 1 &sdot; 4 + 2 &sdot; 4 = 49,5
+src="main36x.png" alt="              2       1       0      -1
+(301,2)4 = 3 &#x22C5; 4 + 0 &#x22C5; 4 + 1 &#x22C5; 4 + 2 &#x22C5; 4 = 49,5
 " class="math-display" ></center></td></tr></table>
 <!--l. 79--><p class="nopar" >
    </div>
@@ -287,7 +289,7 @@ class="equation-star"><tr><td>
                                                                           
    <center class="math-display" >
 <img 
-src="main39x.png" alt="(1357,24) =  1 &sdot; 83 + 3 &sdot; 82 + 5 &sdot; 81 + 7 &sdot; 80 + 2 &sdot; 8&minus;1 + 4 &sdot; 8&minus;2
+src="main39x.png" alt="(1357,24) =  1 &#x22C5; 83 + 3 &#x22C5; 82 + 5 &#x22C5; 81 + 7 &#x22C5; 80 + 2 &#x22C5; 8-1 + 4 &#x22C5; 8-2
          8
           =  512 + 192 + 40 + 7 + 0,25 + 0,0625 =  751,3125
 " class="math-display" ></center></td></tr></table>
@@ -303,7 +305,7 @@ class="ec-lmbx-12">.</span>  </span>O sistema de numeração cuja a base é
 <img 
 src="main40x.png" alt="b = 16  "  class="math" > é chamado de sistema hexadecimal. O conjunto de símbolos necessários é
 <img 
-src="main41x.png" alt="S =  {&#8220;,&#8221;,&minus; ,0, 1,2,3,4,5,6,7,8, 9,A,B, C, D, E, F} "  class="math" >. Convertendo o número
+src="main41x.png" alt="S =  {&#8220;,&#8221;,- ,0, 1,2,3,4,5,6,7,8, 9,A,B, C, D, E, F} "  class="math" >. Convertendo o número
 <img 
 src="main42x.png" alt="(E2AC  )16   "  class="math" > para a base <img 
 src="main43x.png" alt="10  "  class="math" > temos
@@ -312,7 +314,7 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main44x.png" alt="                   3        2        1         0
-(E2AC  )16 = 14 &sdot; 16 + 2 &sdot; 16 + 10 &sdot; 16 + 12 &sdot; 16
+(E2AC  )16 = 14 &#x22C5; 16 + 2 &#x22C5; 16 + 10 &#x22C5; 16 + 12 &#x22C5; 16
           =  57344 + 512 + 160 + 12 =  58028
 " class="math-display" ></center></td></tr></table>
 <!--l. 98--><p class="nopar" >
@@ -333,9 +335,9 @@ seguinte representação:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main48x.png" alt="(X )10 = (dndn &minus;1&sdot;&sdot;&sdot;d0,d&minus;1 &sdot;&sdot;&sdot;)b
-      = d  &sdot; bn + d   &sdot; bn&minus;1 + &sdot;&sdot;&sdot; + d &sdot; b0 + d &sdot; b&minus; 1 + d &sdot; b&minus; 2 + &sdot;&sdot;&sdot;
-         n        n&minus;1               0        &minus;1         &minus;2
+src="main48x.png" alt="(X )10 = (dndn -1&#x22C5;&#x22C5;&#x22C5;d0,d-1 &#x22C5;&#x22C5;&#x22C5;)b
+      = d  &#x22C5; bn + d   &#x22C5; bn-1 + &#x22C5;&#x22C5;&#x22C5; + d &#x22C5; b0 + d &#x22C5; b- 1 + d &#x22C5; b- 2 + &#x22C5;&#x22C5;&#x22C5;
+         n        n-1               0        -1         -2
 " class="math-display" ></center></td></tr></table>
 <!--l. 127--><p class="nopar" >
 <!--l. 129--><p class="indent" >   Separando as partes inteira e fracionária de <img 
@@ -346,8 +348,8 @@ temos:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main51x.png" alt="  i        n             n&minus; 1        1       0
-X   = dn &sdot; b + &sdot;&sdot;&sdot; + dn&minus;1b   &sdot; +d1 &sdot; b + d0 &sdot; b
+src="main51x.png" alt="  i        n             n- 1        1       0
+X   = dn &#x22C5; b + &#x22C5;&#x22C5;&#x22C5; + dn-1b   &#x22C5; +d1 &#x22C5; b + d0 &#x22C5; b
 " class="math-display" ></center></td></tr></table>
 <!--l. 132--><p class="nopar" >
 e
@@ -358,13 +360,13 @@ class="equation-star"><tr><td>
                                                                           
    <center class="math-display" >
 <img 
-src="main52x.png" alt="  f   d&minus; 1   d&minus;2
-X  =  --1-+  -2--+ &sdot;&sdot;&sdot;
+src="main52x.png" alt="  f   d- 1   d-2
+X  =  --1-+  -2--+ &#x22C5;&#x22C5;&#x22C5;
        b     b
 " class="math-display" ></center></td></tr></table>
 <!--l. 136--><p class="nopar" >
 Nosso objetivo é determinar os algarismos <img 
-src="main53x.png" alt="{dn, dn&minus;1,...} "  class="math" >.
+src="main53x.png" alt="{dn, dn-1,...} "  class="math" >.
 <!--l. 139--><p class="indent" >   Primeiramente, vejamos como tratar a parte inteira <img 
 src="main54x.png" alt="Xi  "  class="math" >. Calculando sua
 divisão por <img 
@@ -374,7 +376,7 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main56x.png" alt="Xi    d0
----=  ---+ d1 + d2b1&sdot;&sdot;&sdot; + dn&minus; 1 &sdot; bn&minus;2 + dn &sdot; bn&minus;1.
+---=  ---+ d1 + d2b1&#x22C5;&#x22C5;&#x22C5; + dn- 1 &#x22C5; bn-2 + dn &#x22C5; bn-1.
 b     b
 " class="math-display" ></center></td></tr></table>
 <!--l. 142--><p class="nopar" >
@@ -384,12 +386,12 @@ src="main58x.png" alt="  i
 X  "  class="math" > por <img 
 src="main59x.png" alt="b  "  class="math" >, pois
 <img 
-src="main60x.png" alt="d1 + d2b1&sdot;&sdot;&sdot; + dn&minus;1 &sdot; bn&minus;2 + dn &sdot; bn&minus; 1   "  class="math" > é inteiro e <img 
+src="main60x.png" alt="d1 + d2b1&#x22C5;&#x22C5;&#x22C5; + dn-1 &#x22C5; bn-2 + dn &#x22C5; bn- 1   "  class="math" > é inteiro e <img 
 src="main61x.png" alt="d0b  "  class="math" > é uma fração
 (lembramos que <img 
 src="main62x.png" alt="d0 &#x003C; b  "  class="math" >). Da mesma forma, o resto da divisão de
 <img 
-src="main63x.png" alt="d1 + d2b1&sdot;&sdot;&sdot; + dn&minus;1 &sdot; bn&minus;2 + dn &sdot; bn&minus; 1   "  class="math" > por <img 
+src="main63x.png" alt="d1 + d2b1&#x22C5;&#x22C5;&#x22C5; + dn-1 &#x22C5; bn-2 + dn &#x22C5; bn- 1   "  class="math" > por <img 
 src="main64x.png" alt="b  "  class="math" > é <img 
 src="main65x.png" alt="d1   "  class="math" >. Repetimos o processo até
 encontrar os símbolos <img 
@@ -413,9 +415,9 @@ segue:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main70x.png" alt="125 = 20 &sdot; 6 + 5 (125 dividido por 6 é igual a 20 e resta 5)
+src="main70x.png" alt="125 = 20 &#x22C5; 6 + 5 (125 dividido por 6 é igual a 20 e resta 5)
                              2
-    = (3 &sdot; 6 + 2) &sdot; 6 + 5 = 3 &sdot; 6 + 2 &sdot; 6 + 5,
+    = (3 &#x22C5; 6 + 2) &#x22C5; 6 + 5 = 3 &#x22C5; 6 + 2 &#x22C5; 6 + 5,
 " class="math-display" ></center></td></tr></table>
 <!--l. 151--><p class="nopar" >
 logo <img 
@@ -447,21 +449,21 @@ respectivamente, temos:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main74x.png" alt="   f         d&minus;2   d&minus; 3
-bX   = d&minus; 1 + ----+ --2-+ &sdot;&sdot;&sdot;
+src="main74x.png" alt="   f         d-2   d- 3
+bX   = d- 1 + ----+ --2-+ &#x22C5;&#x22C5;&#x22C5;
               b     b
 " class="math-display" ></center></td></tr></table>
 <!--l. 205--><p class="nopar" >
 Observe que a parte inteira desse produto é <img 
-src="main75x.png" alt="d &minus;1   "  class="math" > e <img 
-src="main76x.png" alt="d&minus;2   d&minus;3
- b  +  b2 +  &sdot;&sdot;&sdot; "  class="math" >
+src="main75x.png" alt="d -1   "  class="math" > e <img 
+src="main76x.png" alt="d-2   d-3
+ b  +  b2 +  &#x22C5;&#x22C5;&#x22C5; "  class="math" >
 é a parte fracionária. Quando multiplicamos <img 
 src="main77x.png" alt="d     d
--&minus;b2 + -&minus;b23 + &sdot;&sdot;&sdot; "  class="math" > por <img 
+--b2 + --b23 + &#x22C5;&#x22C5;&#x22C5; "  class="math" > por <img 
 src="main78x.png" alt="b  "  class="math" >
 novamente, encontramos <img 
-src="main79x.png" alt="d&minus;2   "  class="math" >. Repetimos o processo até encontrar todos os
+src="main79x.png" alt="d-2   "  class="math" >. Repetimos o processo até encontrar todos os
 símbolos.
    <div class="newtheorem">
 <!--l. 208--><p class="noindent" ><span class="head">
@@ -484,12 +486,12 @@ src="main83x.png" alt="6  "  class="math" > como segue:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main84x.png" alt="    --        &minus;1       --
-0,583 = 3,5 &sdot; 6   (0,583 multiplicado  por 6 é igual a 3,5)
-      = 3 &sdot; 6&minus;1 + 0,5 &sdot; 6&minus; 1
-            &minus;1       &minus; 1   &minus; 1
-      = 3 &sdot; 6 +  (3 &sdot; 6 ) &sdot; 6
-      = 3 &sdot; 6&minus;1 + 3 &sdot; 6 &minus;2,
+src="main84x.png" alt="    --        -1       --
+0,583 = 3,5 &#x22C5; 6   (0,583 multiplicado  por 6 é igual a 3,5)
+      = 3 &#x22C5; 6-1 + 0,5 &#x22C5; 6- 1
+            -1       - 1   - 1
+      = 3 &#x22C5; 6 +  (3 &#x22C5; 6 ) &#x22C5; 6
+      = 3 &#x22C5; 6-1 + 3 &#x22C5; 6 -2,
 " class="math-display" ></center></td></tr></table>
 <!--l. 216--><p class="nopar" >
 logo <img 

@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Método das secantes, Interpretação geométrica, Análise de convergência'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Método das secantes, Interpretação geométrica, Análise de convergência, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -110,9 +112,9 @@ src="main1430x.png" alt="f (x )  "  class="math" >, a ideia é aproximar sua der
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1431x.png" alt="        f(x) &minus; f(x )
-f&prime;(x ) &asymp; ----------0-,  x &asymp;  x0.
-           x &minus; x0
+src="main1431x.png" alt="        f(x) - f(x )
+f&#x2032;(x ) &#x2248; ----------0-,  x &#x2248;  x0.
+           x - x0
 " class="math-display" ></center></td></tr></table>
 <!--l. 1404--><p class="nopar" >
 <!--l. 1406--><p class="indent" >   Mais precisamente, o método de Newton é uma iteração de ponto fixo da
@@ -122,7 +124,7 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main1432x.png" alt=" (n+1)    (n)      (n)    (n)
-x     =  x   &minus; &alpha; (x   )f(x   ), n &ge;  1,
+x     =  x   - &#x03B1; (x   )f(x   ), n &#x2265;  1,
                                                                           
 
                                                                           
@@ -131,18 +133,18 @@ x     =  x   &minus; &alpha; (x   )f(x   ), n &ge;  1,
 onde <img 
 src="main1433x.png" alt=" (1)
 x   "  class="math" > é uma aproximação inicial dada e <img 
-src="main1434x.png" alt="    (n)        &prime; (n)
-&alpha; (x   ) = 1&#x2215;f (x   )  "  class="math" >. Usando a
+src="main1434x.png" alt="    (n)        &#x2032; (n)
+&#x03B1; (x   ) = 1&#x2215;f (x   )  "  class="math" >. Usando a
 aproximação da derivada acima, com <img 
 src="main1435x.png" alt="x =  x(n)   "  class="math" > e <img 
-src="main1436x.png" alt="x0 =  x(n&minus; 1)   "  class="math" >, temos:
+src="main1436x.png" alt="x0 =  x(n- 1)   "  class="math" >, temos:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1437x.png" alt="    (n)       1          x(n) &minus; x (n&minus;1)
-&alpha; (x   ) = -&prime;--(n)-&asymp;  ---(n)-------(n&minus;-1).
-          f (x  )    f(x   ) &minus; f (x   )
+src="main1437x.png" alt="    (n)       1          x(n) - x (n-1)
+&#x03B1; (x   ) = -&#x2032;--(n)-&#x2248;  ---(n)-------(n--1).
+          f (x  )    f(x   ) - f (x   )
 " class="math-display" ></center></td></tr></table>
 <!--l. 1413--><p class="nopar" >
 Isto nos motiva a introduzir a <span 
@@ -155,9 +157,9 @@ por:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1438x.png" alt="                         x (n) &minus; x(n&minus;1)
-x (n+1) = x(n) &minus; f (x(n))---(n)-------(n&minus;1)-,  n &ge; 2.
-                      f (x  ) &minus; f(x     )
+src="main1438x.png" alt="                         x (n) - x(n-1)
+x (n+1) = x(n) - f (x(n))---(n)-------(n-1)-,  n &#x2265; 2.
+                      f (x  ) - f(x     )
 " class="math-display" ></center></td></tr></table>
 <!--l. 1417--><p class="nopar" >
 Observe que para inicializarmos a iteração acima precisamos de duas
@@ -175,7 +177,7 @@ método.
  id="x27-44002r1"></a>
 <span 
 class="ec-lmbx-12">Exemplo 3.5.1.</span>  </span>Encontre as raízes de <img 
-src="main1441x.png" alt="f(x) = cos(x) &minus; x  "  class="math" >.
+src="main1441x.png" alt="f(x) = cos(x) - x  "  class="math" >.
    </div>
 <!--l. 1422--><p class="indent" >   <span 
 class="ec-lmbx-12">Solu</span><span 
@@ -201,7 +203,7 @@ id="TBL-5-4"></colgroup><tr
 class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
  style="vertical-align:baseline;" id="TBL-5-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-5-1-1"  
 class="td11"> <img 
-src="main1447x.png" alt="x(n&minus;1)   "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-1-2"  
+src="main1447x.png" alt="x(n-1)   "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-1-2"  
 class="td11">   <img 
 src="main1448x.png" alt="x(n)   "  class="math" >      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-1-3"  
 class="td11">     <img 
@@ -214,9 +216,9 @@ class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr
 class="td11">         </td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-2-2"  
 class="td11">         </td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-2-3"  
 class="td11"><img 
-src="main1451x.png" alt="f(0,08),8&minus;&minus;f0(,70,7)=  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-2-4"  
+src="main1451x.png" alt="f(0,08),8--f0(,70,7)=  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-2-4"  
 class="td11"><img 
-src="main1452x.png" alt="0,8 &minus; &minus;1f,6(08,18)3548-=  "  class="math" ></td>
+src="main1452x.png" alt="0,8 - -1f,6(08,18)3548-=  "  class="math" ></td>
 </tr><tr  
  style="vertical-align:baseline;" id="TBL-5-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-5-3-1"  
 class="td11">   <img 
@@ -224,7 +226,7 @@ src="main1453x.png" alt="0,7  "  class="math" >     </td><td  style="white-space
 class="td11">   <img 
 src="main1454x.png" alt="0,8  "  class="math" >     </td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-3-3"  
 class="td11"><img 
-src="main1455x.png" alt="&minus; 1,6813548  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-3-4"  
+src="main1455x.png" alt="- 1,6813548  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-3-4"  
 class="td11">   <img 
 src="main1456x.png" alt="0,7385654  "  class="math" >     </td>
 </tr><tr 
@@ -235,7 +237,7 @@ src="main1457x.png" alt="0,8  "  class="math" >     </td><td  style="white-space
 class="td11"><img 
 src="main1458x.png" alt="0,7385654  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-4-3"  
 class="td11"><img 
-src="main1459x.png" alt="&minus; 1,6955107  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-4-4"  
+src="main1459x.png" alt="- 1,6955107  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-4-4"  
 class="td11">   <img 
 src="main1460x.png" alt="0,7390784  "  class="math" >     </td>
 </tr><tr 
@@ -246,7 +248,7 @@ src="main1461x.png" alt="0,7385654  "  class="math" ></td><td  style="white-spac
 class="td11"><img 
 src="main1462x.png" alt="0,7390784  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-5-3"  
 class="td11"><img 
-src="main1463x.png" alt="&minus; 1,6734174  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-5-4"  
+src="main1463x.png" alt="- 1,6734174  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-5-4"  
 class="td11">   <img 
 src="main1464x.png" alt="0,7390851  "  class="math" >     </td>
 </tr><tr 
@@ -257,7 +259,7 @@ src="main1465x.png" alt="0,7390784  "  class="math" ></td><td  style="white-spac
 class="td11"><img 
 src="main1466x.png" alt="0,7390851  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-6-3"  
 class="td11"><img 
-src="main1467x.png" alt="&minus; 1,6736095  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-6-4"  
+src="main1467x.png" alt="- 1,6736095  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-5-6-4"  
 class="td11">   <img 
 src="main1468x.png" alt="0,7390851  "  class="math" >     </td>
 </tr><tr 
@@ -303,7 +305,7 @@ src="main1473x.png" alt="  (1)
 x   "  class="math" > e <img 
 src="main1474x.png" alt=" (2)
 x   "  class="math" > do zero <img 
-src="main1475x.png" alt=" &lowast;
+src="main1475x.png" alt=" *
 x  "  class="math" > desta função (veja
 Figura&#x00A0;<a 
 href="#x27-450016">3.6<!--tex4ht:ref: fig:metodo_das_secantes --></a>). A iteração do método das secantes fornece:
@@ -312,8 +314,8 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main1476x.png" alt="                        (2)    (1)
-x(3) = x (2) &minus; f(x(2))--x---&minus;--x-----.
-                   f (x(2)) &minus; f(x(1))
+x(3) = x (2) - f(x(2))--x------x-----.
+                   f (x(2)) - f(x(1))
 " class="math-display" ></center></td></tr></table>
 <!--l. 1450--><p class="nopar" >
 De fato, <img 
@@ -330,8 +332,8 @@ secante é:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1481x.png" alt="     f(x(2))-&minus;-f(x(1))      (2)       (2)
-y =     x(2) &minus; x(1)   (x &minus; x  ) + f(x  ).
+src="main1481x.png" alt="     f(x(2))---f(x(1))      (2)       (2)
+y =     x(2) - x(1)   (x - x  ) + f(x  ).
 " class="math-display" ></center></td></tr></table>
 <!--l. 1454--><p class="nopar" >
 Esta reta intercepta o eixo das abscissas no ponto <img 
@@ -346,8 +348,8 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main1484x.png" alt="    (2)       (1)                                             (2)    (1)
-f(x---) &minus;-f-(x-)(x &minus; x(2)) + f(x (2)) &rArr; x = x(2) &minus; f(x(2))----x---&minus;-x----- .
-   x(2) &minus; x (1)                                         f (x(2)) &minus; f(x(1))
+f(x---) --f-(x-)(x - x(2)) + f(x (2)) &#x21D2; x = x(2) - f(x(2))----x-----x----- .
+   x(2) - x (1)                                         f (x(2)) - f(x(1))
 " class="math-display" ></center></td></tr></table>
 <!--l. 1458--><p class="nopar" >
    <h4 class="subsectionHead"><span class="titlemark">3.5.2   </span> <a 
@@ -362,13 +364,13 @@ método da secante satisfazem:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1486x.png" alt="|x(n+1) &minus; x &lowast;| &asymp; C |x(n) &minus; x&lowast;||x (n&minus; 1) &minus; x&lowast;|,
+src="main1486x.png" alt="|x(n+1) - x *| &#x2248; C |x(n) - x*||x (n- 1) - x*|,
 " class="math-display" ></center></td></tr></table>
 <!--l. 1466--><p class="nopar" >
 para aproximações iniciais suficientemente próximas de <img 
-src="main1487x.png" alt=" &lowast;
+src="main1487x.png" alt=" *
 x  "  class="math" >, onde <img 
-src="main1488x.png" alt="   &lowast;
+src="main1488x.png" alt="   *
 f(x ) = 0  "  class="math" >.
 Além disso, veremos que:
    <table 
@@ -378,8 +380,8 @@ class="equation-star"><tr><td>
                                                                           
    <center class="math-display" >
 <img 
-src="main1489x.png" alt="  (n+1)    &lowast;       (n)    &lowast;1,6
-|x     &minus;  x | &le; C|x   &minus; x  |
+src="main1489x.png" alt="  (n+1)    *       (n)    *1,6
+|x     -  x | &#x2264; C|x   - x  |
 " class="math-display" ></center></td></tr></table>
 <!--l. 1470--><p class="nopar" >
 sob certas condições. Ou seja, o método das secantes tem <span 
@@ -395,28 +397,28 @@ class="ec-lmbx-12">superlinear</span>.
 class="ec-lmbx-12">Teorema 3.5.1 </span>(Método das secantes)<span 
 class="ec-lmbx-12">.</span>  </span> <span 
 class="ec-lmri-12">Seja</span> <img 
-src="main1490x.png" alt="f &isin; C2 ([a,b])  "  class="math" > <span 
+src="main1490x.png" alt="f &#x2208; C2 ([a,b])  "  class="math" > <span 
 class="ec-lmri-12">uma fun</span><span 
 class="ec-lmri-12">ç</span><span 
 class="ec-lmri-12">ão com</span>
 <img 
-src="main1491x.png" alt="x &lowast; &isin; (a,b)  "  class="math" > <span 
+src="main1491x.png" alt="x * &#x2208; (a,b)  "  class="math" > <span 
 class="ec-lmri-12">tal que</span> <img 
-src="main1492x.png" alt="f(x&lowast;) = 0  "  class="math" ><span 
+src="main1492x.png" alt="f(x*) = 0  "  class="math" ><span 
 class="ec-lmri-12">. Sejam, tamb</span><span 
 class="ec-lmri-12">ém:</span>
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1493x.png" alt="m :=  min  |f &prime;(x)| &#x003E; 0  e   M  :=  max  |f &prime;&prime;(x)| &#x003C; &infin;.
-     x&isin;[a,b]                      x&isin; [a,b]
+src="main1493x.png" alt="m :=  min  |f &#x2032;(x)| &#x003E; 0  e   M  :=  max  |f &#x2032;&#x2032;(x)| &#x003C; &#x221E;.
+     x&#x2208;[a,b]                      x&#x2208; [a,b]
 " class="math-display" ></center></td></tr></table>
 <!--l. 1477--><p class="nopar" >
 <span 
 class="ec-lmri-12">Al</span><span 
 class="ec-lmri-12">ém disso, seja</span> <img 
-src="main1494x.png" alt="&rho; &#x003E; 0  "  class="math" > <span 
+src="main1494x.png" alt="&#x03C1; &#x003E; 0  "  class="math" > <span 
 class="ec-lmri-12">tal que:</span>
    <table 
 class="equation-star"><tr><td>
@@ -426,7 +428,7 @@ class="equation-star"><tr><td>
                                                                           
 <img 
 src="main1495x.png" alt="     M
-q :=  ---&rho; &#x003C; 1,  K &rho;(x&lowast;) :=  {x &isin; &#x211D;; |x &minus; x&lowast;| &le; &rho;} &sub; [a,b].
+q :=  ---&#x03C1; &#x003C; 1,  K &#x03C1;(x*) :=  {x &#x2208; &#x211D;; |x - x*| &#x2264; &#x03C1;} &#x2282; [a,b].
      2m
 " class="math-display" ></center></td></tr></table>
 <!--l. 1481--><p class="nopar" >
@@ -435,26 +437,26 @@ class="ec-lmri-12">Ent</span><span
 class="ec-lmri-12">ão, para aproxima</span><span 
 class="ec-lmri-12">ç</span><span 
 class="ec-lmri-12">ões iniciais</span> <img 
-src="main1496x.png" alt=" (1)  (2)        &lowast;
-x  ,x   &isin;  K&rho;(x )  "  class="math" ><span 
+src="main1496x.png" alt=" (1)  (2)        *
+x  ,x   &#x2208;  K&#x03C1;(x )  "  class="math" ><span 
 class="ec-lmri-12">, com</span> <img 
 src="main1497x.png" alt=" (1)    (2)
-x   &frasl;=  x   "  class="math" ><span 
+x   &#x2044;=  x   "  class="math" ><span 
 class="ec-lmri-12">, temos</span>
 <span 
 class="ec-lmri-12">que as itera</span><span 
 class="ec-lmri-12">ç</span><span 
 class="ec-lmri-12">ões do m</span><span 
 class="ec-lmri-12">étodo das secantes</span> <img 
-src="main1498x.png" alt="x(n) &isin; K &rho;(x&lowast;)  "  class="math" ><span 
+src="main1498x.png" alt="x(n) &#x2208; K &#x03C1;(x*)  "  class="math" ><span 
 class="ec-lmri-12">,</span> <img 
-src="main1499x.png" alt="n &ge; 1  "  class="math" ><span 
+src="main1499x.png" alt="n &#x2265; 1  "  class="math" ><span 
 class="ec-lmri-12">, e</span> <img 
-src="main1500x.png" alt="x (n) &rarr; x &lowast;  "  class="math" ><span 
+src="main1500x.png" alt="x (n) &#x2192; x *  "  class="math" ><span 
 class="ec-lmri-12">,</span>
 <span 
 class="ec-lmri-12">quando</span> <img 
-src="main1501x.png" alt="n &rarr;  &infin; "  class="math" ><span 
+src="main1501x.png" alt="n &#x2192;  &#x221E; "  class="math" ><span 
 class="ec-lmri-12">. Al</span><span 
 class="ec-lmri-12">ém disso, vale a seguinte estimativa de converg</span><span 
 class="ec-lmri-12">ência </span><span 
@@ -466,14 +468,14 @@ class="ec-lmri-12">:</span>
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1502x.png" alt="  (n)    &lowast;    2m  &gamma;
-|x    &minus; x | &le; ---q n&minus;1,  n &ge; 1,
+src="main1502x.png" alt="  (n)    *    2m  &#x03B3;
+|x    - x | &#x2264; ---q n-1,  n &#x2265; 1,
              M
 " class="math-display" ></center></td></tr></table>
 <!--l. 1485--><p class="nopar" >
 <span 
 class="ec-lmri-12">onde</span> <img 
-src="main1503x.png" alt="{&gamma;n}n &isin;&#x2115;   "  class="math" >   <span 
+src="main1503x.png" alt="{&#x03B3;n}n &#x2208;&#x2115;   "  class="math" >   <span 
 class="ec-lmri-12">é a sequ</span><span 
 class="ec-lmri-12">ência de</span>
 <span 
@@ -491,8 +493,8 @@ class="ec-lmri-12">:</span>
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1508x.png" alt="  (n)    &lowast;    M--- (n)    (n&minus; 1)   (n&minus; 1)    (n&minus;2)
-|x   &minus; x | &le; 2m |x   &minus; x     ||x      &minus; x     |,  n &ge; 3.
+src="main1508x.png" alt="  (n)    *    M--- (n)    (n- 1)   (n- 1)    (n-2)
+|x   - x | &#x2264; 2m |x   - x     ||x      - x     |,  n &#x2265; 3.
 " class="math-display" ></center></td></tr></table>
                                                                           
 
@@ -506,31 +508,31 @@ src="main1508x.png" alt="  (n)    &lowast;    M--- (n)    (n&minus; 1)   (n&minu
 class="ec-lmbx-12">Demonstra</span><span 
 class="ec-lmbx-12">ç</span><span 
 class="ec-lmbx-12">ão. </span>Sejam <img 
-src="main1509x.png" alt="n &isin; &#x2115;  "  class="math" >, <img 
-src="main1510x.png" alt="n &ge; 2  "  class="math" >, e <img 
-src="main1511x.png" alt="x(n),x (n&minus;1) &isin; K &rho;(x&lowast;)  "  class="math" >, tal que
+src="main1509x.png" alt="n &#x2208; &#x2115;  "  class="math" >, <img 
+src="main1510x.png" alt="n &#x2265; 2  "  class="math" >, e <img 
+src="main1511x.png" alt="x(n),x (n-1) &#x2208; K &#x03C1;(x*)  "  class="math" >, tal que
 <img 
-src="main1512x.png" alt="x (n) &frasl;= x(n&minus;1)   "  class="math" >, <img 
-src="main1513x.png" alt="x (n) &frasl;= x&lowast;  "  class="math" > e <img 
-src="main1514x.png" alt="x(n&minus;1) &frasl;= x&lowast;  "  class="math" >. Seja, também:
+src="main1512x.png" alt="x (n) &#x2044;= x(n-1)   "  class="math" >, <img 
+src="main1513x.png" alt="x (n) &#x2044;= x*  "  class="math" > e <img 
+src="main1514x.png" alt="x(n-1) &#x2044;= x*  "  class="math" >. Seja, também:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1515x.png" alt="                                  (n)    (n&minus;1)
-g(x(n),x(n&minus;1)) := x(n) &minus; f (x(n))-x----&minus;-x--------.
-                             f (x(n)) &minus; f(x(n&minus;1))
+src="main1515x.png" alt="                                  (n)    (n-1)
+g(x(n),x(n-1)) := x(n) - f (x(n))-x------x--------.
+                             f (x(n)) - f(x(n-1))
 " class="math-display" ></center></td></tr></table>
 <!--l. 1495--><p class="nopar" >
 Com isso, temos: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main1516x.png" alt="                                         x(n) &minus; x(n&minus;1)
-   g (x (n),x(n&minus;1)) &minus; x&lowast; = x(n) &minus; f(x(n)) ---(n)-------(n&minus;1)--&minus; x&lowast;
-                       {              f(x  ) &minus; f(x     )               }
-       x(n) &minus; x(n&minus;1)      (n)    &lowast; f(x(n)) &minus; f(x (n&minus;1))      (n)       &lowast;
-=   ---(n)-------(n&minus;-1)-- (x   &minus; x ) ----(n)---(n&minus;1)----&minus; f(x   ) + f (x ) .
-    f(x  ) &minus; f(x     )                x   &minus; x
+src="main1516x.png" alt="                                         x(n) - x(n-1)
+   g (x (n),x(n-1)) - x* = x(n) - f(x(n)) ---(n)-------(n-1)--- x*
+                       {              f(x  ) - f(x     )               }
+       x(n) - x(n-1)      (n)    * f(x(n)) - f(x (n-1))      (n)       *
+=   ---(n)-------(n--1)-- (x   - x ) ----(n)---(n-1)----- f(x   ) + f (x ) .
+    f(x  ) - f(x     )                x   - x
 " class="math-display" ></center>
 </div>Então, da cota assumida para primeira derivada de <img 
 src="main1517x.png" alt="f(x)  "  class="math" > e do Teorema do valor
@@ -543,9 +545,9 @@ class="equation"><tr><td><a
                                                                           
    <center class="math-display" >
 <img 
-src="main1518x.png" alt="                        (n)    &lowast; |   (n)       (n&minus; 1)        (n)       &lowast; |
-    (n) (n&minus;1)     &lowast;   |x---&minus;-x--|||f(x---) &minus;-f-(x----)-  f-(x---) &minus;-f(x-)||
-|g(x  ,x     ) &minus; x | &le;    m      ||   x(n) &minus; x (n&minus;1)   &minus;    x (n) &minus; x&lowast;   ||.
+src="main1518x.png" alt="                        (n)    * |   (n)       (n- 1)        (n)       * |
+    (n) (n-1)     *   |x-----x--|||f(x---) --f-(x----)-  f-(x---) --f(x-)||
+|g(x  ,x     ) - x | &#x2264;    m      ||   x(n) - x (n-1)   -    x (n) - x*   ||.
 " class="math-display" ></center></td><td class="equation-label">(3.5)</td></tr></table>
 <!--l. 1504--><p class="nopar" >
 Agora, iremos estimar este último termo a direita. Para tanto, começamos
@@ -555,19 +557,19 @@ src="main1519x.png" alt="0  "  class="math" > da função
 src="main1520x.png" alt="f (x )  "  class="math" > com resto na forma integral, temos: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main1521x.png" alt="f-(x(n))-&minus;-f(x(n&minus;1))      &int; 1-d    (n)      (n&minus; 1)   (n)  ---dr-----
-    x(n) &minus; x(n&minus;1)     = &minus;  0 drf(x   +  r(x     &minus; x   ))x(n)&minus;x(n&minus;1)
-                             &int;1  &prime; (n)      (n&minus;1)    (n)
-                          =   0 f (x  + r(x      &minus; x  ))dr
+src="main1521x.png" alt="f-(x(n))---f(x(n-1))      &#x222B; 1-d    (n)      (n- 1)   (n)  ---dr-----
+    x(n) - x(n-1)     = -  0 drf(x   +  r(x     - x   ))x(n)-x(n-1)
+                             &#x222B;1  &#x2032; (n)      (n-1)    (n)
+                          =   0 f (x  + r(x      - x  ))dr
 " class="math-display" ></center>
 </div>De forma análogo, temos:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1522x.png" alt="f(x(n)) &minus; f (x &lowast;)  &int; 1
-----(n)---&lowast;----=     f&prime;(x(n) + r(x&lowast; &minus; x(n)))dr
-   x   &minus; x         0
+src="main1522x.png" alt="f(x(n)) - f (x *)  &#x222B; 1
+----(n)---*----=     f&#x2032;(x(n) + r(x* - x(n)))dr
+   x   - x         0
 " class="math-display" ></center></td></tr></table>
 <!--l. 1513--><p class="nopar" >
 Logo, temos:
@@ -576,10 +578,10 @@ class="equation"><tr><td><a
  id="x27-46008r6"></a>
    <center class="math-display" >
 <img 
-src="main1523x.png" alt="f-(x(n))-&minus;-f(x(n&minus;1))   f(x(n)) &minus;-f-(x&lowast;)
-    x(n) &minus; x(n&minus;1)   &minus;     x(n) &minus; x &lowast;   =
- &int; 1[                                                 ]
-     f&prime;(x (n) + r(x(n&minus;1) &minus; x (n))) &minus; f &prime;(x(n) + r(x &lowast; &minus; x (n))) dr.
+src="main1523x.png" alt="f-(x(n))---f(x(n-1))   f(x(n)) --f-(x*)
+    x(n) - x(n-1)   -     x(n) - x *   =
+ &#x222B; 1[                                                 ]
+     f&#x2032;(x (n) + r(x(n-1) - x (n))) - f &#x2032;(x(n) + r(x * - x (n))) dr.
   0
 " class="math-display" ></center></td><td class="equation-label">(3.6)</td></tr></table>
 <!--l. 1520--><p class="nopar" >
@@ -588,12 +590,12 @@ Agora, novamente temos:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1524x.png" alt="f&prime;(x (n) + r(x(n&minus;1) &minus; x(n))) &minus; f &prime;(x(n) + r(x &lowast; &minus; x (n)))
-   &int; r
-=     d-f &prime;(x(n) + r(x (n&minus; 1) &minus; x(n)) + s(x&lowast; &minus; x(n&minus;1)))ds
-   &int;0 ds
-    r  &prime;&prime; (n)     (n&minus;1)    (n)      &lowast;    (n&minus;1)      &lowast;    (n&minus;1)
-=   0 f (x   + r(x     &minus;  x  ) + s(x  &minus; x     ))ds(x  &minus; x     ).
+src="main1524x.png" alt="f&#x2032;(x (n) + r(x(n-1) - x(n))) - f &#x2032;(x(n) + r(x * - x (n)))
+   &#x222B; r
+=     d-f &#x2032;(x(n) + r(x (n- 1) - x(n)) + s(x* - x(n-1)))ds
+   &#x222B;0 ds
+    r  &#x2032;&#x2032; (n)     (n-1)    (n)      *    (n-1)      *    (n-1)
+=   0 f (x   + r(x     -  x  ) + s(x  - x     ))ds(x  - x     ).
 " class="math-display" ></center></td></tr></table>
 <!--l. 1528--><p class="nopar" >
 Então, retornando à Equação&#x00A0;(<a 
@@ -603,9 +605,9 @@ derivada, obtemos:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1525x.png" alt="||   (n)       (n&minus; 1)        (n)       &lowast; ||
-||f(x--)-&minus;-f(x-----)-&minus; f-(x---) &minus;-f(x-)||&le;  M--|x (n&minus;1) &minus; x&lowast;|.
-|   x(n) &minus; x(n&minus;1)        x (n) &minus; x&lowast;   |    2
+src="main1525x.png" alt="||   (n)       (n- 1)        (n)       * ||
+||f(x--)---f(x-----)-- f-(x---) --f(x-)||&#x2264;  M--|x (n-1) - x*|.
+|   x(n) - x(n-1)        x (n) - x*   |    2
 " class="math-display" ></center></td></tr></table>
 <!--l. 1532--><p class="nopar" >
 Agora, retornando à Equação&#x00A0;(<a 
@@ -614,7 +616,7 @@ href="#x27-46006r5">3.5<!--tex4ht:ref: eq:secantes-est0 --></a>), obtemos:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1526x.png" alt="|g(x (n),x (n&minus; 1)) &minus; x&lowast;| &le; M--|x(n) &minus; x &lowast;||x(n&minus;1) &minus; x&lowast;| &le;-M-&rho;2 &#x003C; &rho;.
+src="main1526x.png" alt="|g(x (n),x (n- 1)) - x*| &#x2264; M--|x(n) - x *||x(n-1) - x*| &#x2264;-M-&#x03C1;2 &#x003C; &#x03C1;.
                       2m                          2m
 " class="math-display" ></center></td></tr></table>
                                                                           
@@ -625,14 +627,14 @@ Portanto, concluímos que as iterações do método da secantes <img
 src="main1527x.png" alt="  (n)
 x   "  class="math" > permanecem
 no conjunto <img 
-src="main1528x.png" alt="     &lowast;
-K&rho;(x )  "  class="math" >, se começarem nele. Além disso, temos demonstrado
+src="main1528x.png" alt="     *
+K&#x03C1;(x )  "  class="math" >, se começarem nele. Além disso, temos demonstrado
 que:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1529x.png" alt="|x(n+1) &minus; x&lowast;| &le; M--|x(n) &minus; x&lowast;||x(n&minus; 1) &minus; x&lowast;|.
+src="main1529x.png" alt="|x(n+1) - x*| &#x2264; M--|x(n) - x*||x(n- 1) - x*|.
                2m
 " class="math-display" ></center></td></tr></table>
 <!--l. 1540--><p class="nopar" >
@@ -641,18 +643,18 @@ Com isso, temos:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1530x.png" alt="      -M-- (n)    &lowast;
-&rho;n := 2m  |x   &minus;  x | &rArr; &rho;n+1 &le; &rho;n &rho;n&minus;1,  n &ge; 2.
+src="main1530x.png" alt="      -M-- (n)    *
+&#x03C1;n := 2m  |x   -  x | &#x21D2; &#x03C1;n+1 &#x2264; &#x03C1;n &#x03C1;n-1,  n &#x2265; 2.
 " class="math-display" ></center></td></tr></table>
 <!--l. 1544--><p class="nopar" >
 Como <img 
-src="main1531x.png" alt="&rho; &le;  q
+src="main1531x.png" alt="&#x03C1; &#x2264;  q
  1  "  class="math" > e <img 
-src="main1532x.png" alt="&rho; &le;  q
+src="main1532x.png" alt="&#x03C1; &#x2264;  q
  2  "  class="math" >, temos <img 
-src="main1533x.png" alt="&rho;  &le; q &gamma;n&minus;1
+src="main1533x.png" alt="&#x03C1;  &#x2264; q &#x03B3;n-1
  n   "  class="math" >, <img 
-src="main1534x.png" alt="n &ge; 1  "  class="math" >. Isto mostra a estimativa de
+src="main1534x.png" alt="n &#x2265; 1  "  class="math" >. Isto mostra a estimativa de
 convergência <span 
 class="ec-lmbx-12">a priori</span>:
    <table 
@@ -662,33 +664,33 @@ class="equation-star"><tr><td>
                                                                           
    <center class="math-display" >
 <img 
-src="main1535x.png" alt="  n    &lowast;    2m--&gamma;n&minus;1
-|x  &minus;  x | &le; M  q    .
+src="main1535x.png" alt="  n    *    2m--&#x03B3;n-1
+|x  -  x | &#x2264; M  q    .
 " class="math-display" ></center></td></tr></table>
 <!--l. 1548--><p class="nopar" >
 Além disso, como <img 
-src="main1536x.png" alt="&gamma;n &rarr;  &infin; "  class="math" > quando <img 
-src="main1537x.png" alt="n &rarr;  &infin; "  class="math" > e <img 
+src="main1536x.png" alt="&#x03B3;n &#x2192;  &#x221E; "  class="math" > quando <img 
+src="main1537x.png" alt="n &#x2192;  &#x221E; "  class="math" > e <img 
 src="main1538x.png" alt="q &#x003C; 1  "  class="math" >, temos que as iterações do
 método das secantes <img 
-src="main1539x.png" alt=" (n)     &lowast;
-x   &rarr;  x  "  class="math" > quando <img 
-src="main1540x.png" alt="n &rarr; &infin; "  class="math" >.
+src="main1539x.png" alt=" (n)     *
+x   &#x2192;  x  "  class="math" > quando <img 
+src="main1540x.png" alt="n &#x2192; &#x221E; "  class="math" >.
 <!--l. 1551--><p class="indent" >   Por fim, mostramos a estimativa de convergência <span 
 class="ec-lmbx-12">a posteriori</span>. Para tanto, da
 cota assumida para a primeira derivada e do Teorema do valor médio, temos, para
 <img 
-src="main1541x.png" alt="n &ge;  3  "  class="math" >: <div class="eqnarray">
+src="main1541x.png" alt="n &#x2265;  3  "  class="math" >: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main1542x.png" alt="  (n)    &lowast;       1-    (n)      &lowast;
-|x   &minus; x |  &le;   m |f (x   &minus; f(x )|
-                  ||                             (n)       (n&minus;1) ||
-            =   1-||f(x(n&minus;1)) + (x(n) &minus; x(n&minus; 1))f-(x-)-&minus;-f(x-----)||
-                m |                            x (n) &minus; x(n&minus;1)   |
-                1 |            |||f(x(n)) &minus; f (x (n&minus; 1))    f(x(n&minus;1)) ||
-            =   --||x(n) &minus; x(n&minus;1)||||------------------+ ------------|| .
-                m               |   x(n) &minus; x(n&minus;1)     x(n) &minus; x(n&minus; 1)|
+src="main1542x.png" alt="  (n)    *       1-    (n)      *
+|x   - x |  &#x2264;   m |f (x   - f(x )|
+                  ||                             (n)       (n-1) ||
+            =   1-||f(x(n-1)) + (x(n) - x(n- 1))f-(x-)---f(x-----)||
+                m |                            x (n) - x(n-1)   |
+                1 |            |||f(x(n)) - f (x (n- 1))    f(x(n-1)) ||
+            =   --||x(n) - x(n-1)||||------------------+ ------------|| .
+                m               |   x(n) - x(n-1)     x(n) - x(n- 1)|
 " class="math-display" ></center>
 </div>Agora, da iteração do método das secantes:
    <table 
@@ -698,9 +700,9 @@ class="equation-star"><tr><td>
                                                                           
    <center class="math-display" >
 <img 
-src="main1543x.png" alt="                             (n&minus; 1)    (n&minus;2)
-x(n) = x(n&minus;1) &minus; f (x(n&minus; 1))--x------&minus;-x--------,
-                        f (x (n&minus; 1)) &minus; f(x(n&minus;2))
+src="main1543x.png" alt="                             (n- 1)    (n-2)
+x(n) = x(n-1) - f (x(n- 1))--x--------x--------,
+                        f (x (n- 1)) - f(x(n-2))
 " class="math-display" ></center></td></tr></table>
 <!--l. 1560--><p class="nopar" >
 temos:
@@ -708,9 +710,9 @@ temos:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1544x.png" alt="     (n&minus;1)           (n&minus; 1)       (n&minus;2)
---f(x----)---= &minus; f-(x-----) &minus;-f(x-----).
-x(n) &minus; x (n&minus;1)       x (n&minus;1) &minus; x(n&minus;2)
+src="main1544x.png" alt="     (n-1)           (n- 1)       (n-2)
+--f(x----)---= - f-(x-----) --f(x-----).
+x(n) - x (n-1)       x (n-1) - x(n-2)
 " class="math-display" ></center></td></tr></table>
 <!--l. 1564--><p class="nopar" >
 Logo:
@@ -718,9 +720,9 @@ Logo:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1545x.png" alt="                             ||   (n&minus;1)      (n)       (n&minus;1)       (n&minus;2)||
-|x(n) &minus; x&lowast;| &le; 1-|x (n) &minus; x(n&minus;1)|||f-(x----)-&minus;-f(x---)&minus;  f(x-----) &minus;-f-(x---)||
-             m               |   x(n&minus; 1) &minus; x(n)         x(n&minus;1) &minus; x (n&minus; 2)  |
+src="main1545x.png" alt="                             ||   (n-1)      (n)       (n-1)       (n-2)||
+|x(n) - x*| &#x2264; 1-|x (n) - x(n-1)|||f-(x----)---f(x---)-  f(x-----) --f-(x---)||
+             m               |   x(n- 1) - x(n)         x(n-1) - x (n- 2)  |
 " class="math-display" ></center></td></tr></table>
 <!--l. 1568--><p class="nopar" >
 Observamos que o último termo pode ser estimado como feito acima para
@@ -734,8 +736,8 @@ desejada:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1546x.png" alt="  (n)   &lowast;    -M-- (n)    (n&minus; 1)  (n)    (n&minus;2)
-|x   &minus; x | &le; 2m  |x   &minus;  x    ||x   &minus; x     |.
+src="main1546x.png" alt="  (n)   *    -M-- (n)    (n- 1)  (n)    (n-2)
+|x   - x | &#x2264; 2m  |x   -  x    ||x   - x     |.
 " class="math-display" ></center></td></tr></table>
 <!--l. 1572--><p class="nopar" >
                                                                           <div class="flushright" 
@@ -758,24 +760,24 @@ class="ec-lmbx-12">.</span>  </span><a
 class="ec-lmri-12">A sequ</span><span 
 class="ec-lmri-12">ência de Fibonacci</span>
 <img 
-src="main1548x.png" alt="{&gamma;  }
-   n n&isin;&#x2115;   "  class="math" > <span 
+src="main1548x.png" alt="{&#x03B3;  }
+   n n&#x2208;&#x2115;   "  class="math" > <span 
 class="ec-lmri-12">é assint</span><span 
 class="ec-lmri-12">ótica a</span> <img 
-src="main1549x.png" alt="&gamma;  &sim; &lambda;n+1 &#x2215;&radic;5--
+src="main1549x.png" alt="&#x03B3;  ~ &#x03BB;n+1 &#x2215;&#x221A;5--
  n     1  "  class="math" > <span 
 class="ec-lmri-12">e:</span>
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1550x.png" alt="     &gamma;n+1-
-nli&rarr;m&infin;  &gamma;n  =  &lambda;1,
+src="main1550x.png" alt="     &#x03B3;n+1-
+nli&#x2192;m&#x221E;  &#x03B3;n  =  &#x03BB;1,
 " class="math-display" ></center></td></tr></table>
 <!--l. 1579--><p class="nopar" >
 <span 
 class="ec-lmri-12">onde</span> <img 
-src="main1551x.png" alt="&lambda; =  (1 + &radic;5-)&#x2215;2 &asymp;  1,618
+src="main1551x.png" alt="&#x03BB; =  (1 + &#x221A;5-)&#x2215;2 &#x2248;  1,618
  1  "  class="math" > <span 
 class="ec-lmri-12">é a por</span><span 
 class="ec-lmri-12">ç</span><span 
@@ -791,35 +793,35 @@ class="ec-lmri-12">.</span>
 class="ec-lmbx-12">Demonstra</span><span 
 class="ec-lmbx-12">ç</span><span 
 class="ec-lmbx-12">ão. </span>A sequência de Fibonacci <img 
-src="main1552x.png" alt="{ &gamma;n}n&isin;&#x2115;   "  class="math" >  é definida por
+src="main1552x.png" alt="{ &#x03B3;n}n&#x2208;&#x2115;   "  class="math" >  é definida por
 <img 
-src="main1553x.png" alt="&gamma;0 = &gamma;1 = 1  "  class="math" > e <img 
-src="main1554x.png" alt="&gamma;n+1 =  &gamma;n + &gamma;n&minus;1   "  class="math" >, <img 
-src="main1555x.png" alt="n &ge; 1  "  class="math" >. Logo, satisfaz a seguinte equação de
+src="main1553x.png" alt="&#x03B3;0 = &#x03B3;1 = 1  "  class="math" > e <img 
+src="main1554x.png" alt="&#x03B3;n+1 =  &#x03B3;n + &#x03B3;n-1   "  class="math" >, <img 
+src="main1555x.png" alt="n &#x2265; 1  "  class="math" >. Logo, satisfaz a seguinte equação de
 diferenças:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1556x.png" alt="&gamma;n+2 &minus; &gamma;n+1 &minus; &gamma;n =  0,  n &isin; &#x2115;.
+src="main1556x.png" alt="&#x03B3;n+2 - &#x03B3;n+1 - &#x03B3;n =  0,  n &#x2208; &#x2115;.
 " class="math-display" ></center></td></tr></table>
 <!--l. 1586--><p class="nopar" >
 Tomando <img 
-src="main1557x.png" alt="&gamma;n = &lambda;n  "  class="math" >, <img 
-src="main1558x.png" alt="&lambda; &frasl;= 0  "  class="math" > temos:
+src="main1557x.png" alt="&#x03B3;n = &#x03BB;n  "  class="math" >, <img 
+src="main1558x.png" alt="&#x03BB; &#x2044;= 0  "  class="math" > temos:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1559x.png" alt="   (          )                                 1 ± &radic;5--
-&lambda;n  &lambda;2 &minus; &lambda; &minus; 1  =  0 &rArr; &lambda;2 &minus; &lambda; &minus; 1 =  0 &rArr; &lambda;1,2 = -------.
+src="main1559x.png" alt="   (          )                                 1 ± &#x221A;5--
+&#x03BB;n  &#x03BB;2 - &#x03BB; - 1  =  0 &#x21D2; &#x03BB;2 - &#x03BB; - 1 =  0 &#x21D2; &#x03BB;1,2 = -------.
                                                    2
 " class="math-display" ></center></td></tr></table>
 <!--l. 1590--><p class="nopar" >
 Portanto, <img 
 src="main1560x.png" alt="         n      n
-&gamma;n = c1&lambda; 1 + c2&lambda; 2   "  class="math" >. Como <img 
-src="main1561x.png" alt="&gamma;0 = &gamma;1 = 1  "  class="math" >, as constantes satisfazem:
+&#x03B3;n = c1&#x03BB; 1 + c2&#x03BB; 2   "  class="math" >. Como <img 
+src="main1561x.png" alt="&#x03B3;0 = &#x03B3;1 = 1  "  class="math" >, as constantes satisfazem:
    <table 
 class="equation-star"><tr><td>
                                                                           
@@ -827,9 +829,9 @@ class="equation-star"><tr><td>
                                                                           
    <center class="math-display" >
 <img 
-src="main1562x.png" alt="c1 + c2 = 1             1 + &radic;5--         1 &minus; &radic;5--
-                &rArr;  c1 = ---&radic;--- , c2 = &minus; ---&radic;--- .
-c1&lambda;1 + c2&lambda;2 = 1           2  5             2  5
+src="main1562x.png" alt="c1 + c2 = 1             1 + &#x221A;5--         1 - &#x221A;5--
+                &#x21D2;  c1 = ---&#x221A;--- , c2 = - ---&#x221A;--- .
+c1&#x03BB;1 + c2&#x03BB;2 = 1           2  5             2  5
 " class="math-display" ></center></td></tr></table>
 <!--l. 1599--><p class="nopar" >
 Ou seja, obtemos a seguinte forma explícita para os números de Fibonacci:
@@ -837,9 +839,9 @@ Ou seja, obtemos a seguinte forma explícita para os números de Fibonacci:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1563x.png" alt="         &lfloor;(     &radic; -)n+1   (     &radic; -)n+1 &rfloor;
-     -1--&lceil;  1 +---5         1-&minus;---5     &rceil;
-&gamma;n = &radic;5--      2        &minus;      2          .
+src="main1563x.png" alt="         &#x230A;(     &#x221A; -)n+1   (     &#x221A; -)n+1 &#x230B;
+     -1--&#x2308;  1 +---5         1-----5     &#x2309;
+&#x03B3;n = &#x221A;5--      2        -      2          .
 " class="math-display" ></center></td></tr></table>
 <!--l. 1603--><p class="nopar" >
 Daí, segue imediatamente o enunciado.
@@ -866,16 +868,16 @@ href="#x27-46010r1">3.5.1<!--tex4ht:ref: prop:sequencia_de_Fibonacci --></a>,
 temos: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main1565x.png" alt="       (n+1)    &lowast;
-lim  |x-----&minus;--x-|  &le;   lim  -M--|x(n) &minus; x&lowast;|1&minus;&lambda;1|x(n&minus;1) &minus; x &lowast;|
-n&rarr;&infin;  |x (n) &minus; x&lowast;|&lambda;1     n&rarr; &infin; 2m
-                           ( 2m )1&minus;&lambda;1        n&radic; -
-                   &le;  nl&rarr;im&infin;   ----     q(2&minus;&lambda;1)&lambda;1&#x2215; 5 = 0.
+src="main1565x.png" alt="       (n+1)    *
+lim  |x--------x-|  &#x2264;   lim  -M--|x(n) - x*|1-&#x03BB;1|x(n-1) - x *|
+n&#x2192;&#x221E;  |x (n) - x*|&#x03BB;1     n&#x2192; &#x221E; 2m
+                           ( 2m )1-&#x03BB;1        n&#x221A; -
+                   &#x2264;  nl&#x2192;im&#x221E;   ----     q(2-&#x03BB;1)&#x03BB;1&#x2215; 5 = 0.
                              M
 " class="math-display" ></center>
 </div>Isto mostra que o método das secantes (nestas hipóteses) tem taxa de
 convergência superlinear (<img 
-src="main1566x.png" alt="&lambda;1 &asymp; 1,6  "  class="math" >).
+src="main1566x.png" alt="&#x03BB;1 &#x2248; 1,6  "  class="math" >).
    </div>
                                                                           
 

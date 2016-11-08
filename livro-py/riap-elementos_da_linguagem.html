@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Elementos da linguagem, Operações matemáticas elementares, Funções e constantes elementares, Operadores lógicos'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Elementos da linguagem, Operações matemáticas elementares, Funções e constantes elementares, Operadores lógicos, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -96,27 +98,27 @@
 </div>
    <!--l. 84-->
    <h3 class="sectionHead"><span class="titlemark">A.2   </span> <a 
- id="x99-168000A.2"></a>Elementos da linguagem</h3><hr class="section">
+ id="x99-169000A.2"></a>Elementos da linguagem</h3><hr class="section">
 <a 
- id="dx99-168001"></a>
+ id="dx99-169001"></a>
 <!--l. 86--><p class="noindent" ><span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">Python</span></span></span> é uma linguagem de alto nível, interpretada e dinâmica. Uma variável é
 criada quando um valor é atribuído a ela. Por exemplo:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-34">
+   <div class="verbatim" id="verbatim-46">
 &#x003E;&#x003E;&#x003E;&#x00A0;x=1
 &#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;y&#x00A0;=&#x00A0;x&#x00A0;*&#x00A0;2.0
 </div>
 <!--l. 90--><p class="nopar" >a variável <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">x</span></span></span> recebe o valor <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">int</span></span></span> <img 
-src="main4287x.png" alt="1  "  class="math" > e, logo após, na segunda linha de comando, a
+src="main4310x.png" alt="1  "  class="math" > e, logo após, na segunda linha de comando, a
 variável <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">y</span></span></span> recebe o valor <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">double</span></span></span> <img 
-src="main4288x.png" alt="2  "  class="math" >. Observamos que o símbolo <span class="obeylines-h"><span class="verb"><span 
+src="main4311x.png" alt="2  "  class="math" >. Observamos que o símbolo <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">=</span></span></span> significa o
 operador de atribuição não o de igualdade. O operador lógico de igualdade no
 <span class="obeylines-h"><span class="verb"><span 
@@ -125,7 +127,7 @@ class="ec-lmtt-12">==</span></span></span>. Veja os seguintes comandos:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-35">
+   <div class="verbatim" id="verbatim-47">
 &#x003E;&#x003E;&#x003E;&#x00A0;print(x,y)
 &#x00A0;<br />(1,&#x00A0;2.0)
 &#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;type(x),&#x00A0;type(y)
@@ -137,7 +139,7 @@ exemplo:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-36">
+   <div class="verbatim" id="verbatim-48">
 &#x003E;&#x003E;&#x003E;&#x00A0;#isto&#x00A0;é&#x00A0;um&#x00A0;comentário
 &#x00A0;<br />...
 &#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;x&#x00A0;=&#x00A0;1&#x00A0;\
@@ -148,15 +150,15 @@ exemplo:
 <!--l. 107--><p class="nopar" >
 <!--l. 109--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">A.2.1   </span> <a 
- id="x99-169000A.2.1"></a>Operações matemáticas elementares</h4><hr class="section">
+ id="x99-170000A.2.1"></a>Operações matemáticas elementares</h4><hr class="section">
 <a 
- id="dx99-169001"></a>
+ id="dx99-170001"></a>
 <!--l. 111--><p class="noindent" >Em <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">Python</span></span></span>, os operadores matemáticos elementares são os seguintes:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-37">
+   <div class="verbatim" id="verbatim-49">
 &#x00A0;&#x00A0;+&#x00A0;adição
 &#x00A0;<br />&#x00A0;&#x00A0;-&#x00A0;subtração
 &#x00A0;<br />&#x00A0;&#x00A0;*&#x00A0;multiplicação
@@ -175,7 +177,7 @@ class="ec-lmtt-12">&#x00A0;3</span></span></span>, temos:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-38">
+   <div class="verbatim" id="verbatim-50">
 &#x003E;&#x003E;&#x003E;&#x00A0;1/2
 &#x00A0;<br />0.5
 </div>
@@ -185,7 +187,7 @@ class="ec-lmtt-12">&#x00A0;2.7</span></span></span>:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-39">
+   <div class="verbatim" id="verbatim-51">
 &#x003E;&#x003E;&#x003E;&#x00A0;1/2
 &#x00A0;<br />0
 &#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;from&#x00A0;__future__&#x00A0;import&#x00A0;division
@@ -195,16 +197,16 @@ class="ec-lmtt-12">&#x00A0;2.7</span></span></span>:
 <!--l. 132--><p class="nopar" >
 <!--l. 134--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">A.2.2   </span> <a 
- id="x99-170000A.2.2"></a>Funções e constantes elementares</h4><hr class="section">
+ id="x99-171000A.2.2"></a>Funções e constantes elementares</h4><hr class="section">
 <a 
- id="dx99-170001"></a>
+ id="dx99-171001"></a>
 <!--l. 136--><p class="noindent" >Várias funções e constantes elementares estão disponíveis no pacote módulo
 Python <a 
 href="https://docs.python.org/3/library/math.html?highlight=math#module-math" >math</a>. Por exemplo:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-40">
+   <div class="verbatim" id="verbatim-52">
 &#x003E;&#x003E;&#x003E;&#x00A0;import&#x00A0;math&#x00A0;as&#x00A0;math
 &#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;math.cos(pi)
 &#x00A0;<br />-1.0
@@ -216,13 +218,13 @@ href="https://docs.python.org/3/library/math.html?highlight=math#module-math" >m
 <!--l. 145--><p class="nopar" >
 <!--l. 147--><p class="indent" >   Observamos que <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">math.log</span></span></span> é a função logarítmo natural, i.e. <img 
-src="main4289x.png" alt="f(x ) = ln(x)  "  class="math" >,
+src="main4312x.png" alt="f(x ) = ln(x)  "  class="math" >,
 enquanto que a implementação Python de <img 
-src="main4290x.png" alt="f (x) = log (x)  "  class="math" > é:
+src="main4313x.png" alt="f (x) = log (x)  "  class="math" > é:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-41">
+   <div class="verbatim" id="verbatim-53">
 &#x003E;&#x003E;&#x003E;&#x00A0;math.log10(10)
 &#x00A0;<br />1.0
 </div>
@@ -231,15 +233,15 @@ href="https://docs.python.org/3/library/math.html?highlight=math#module-math" >m
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-42">
+   <div class="verbatim" id="verbatim-54">
 &#x003E;&#x003E;&#x003E;&#x00A0;help(math)
 </div>
 <!--l. 155--><p class="nopar" >
 <!--l. 157--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">A.2.3   </span> <a 
- id="x99-171000A.2.3"></a>Operadores lógicos</h4><hr class="section">
+ id="x99-172000A.2.3"></a>Operadores lógicos</h4><hr class="section">
 <a 
- id="dx99-171001"></a>
+ id="dx99-172001"></a>
 <!--l. 159--><p class="noindent" >Em <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">Python</span></span></span>, o valor lógico verdadeiro é escrito como <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">True</span></span></span> e o valor lógico falso
@@ -248,7 +250,7 @@ class="ec-lmtt-12">False</span></span></span>. Temos os seguintes operadores ló
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-43">
+   <div class="verbatim" id="verbatim-55">
 and&#x00A0;&#x00A0;e&#x00A0;lógico
 &#x00A0;<br />or&#x00A0;&#x00A0;ou&#x00A0;lógico
 &#x00A0;<br />not&#x00A0;&#x00A0;negação
@@ -263,11 +265,11 @@ and&#x00A0;&#x00A0;e&#x00A0;lógico
    <div class="newtheorem">
 <!--l. 172--><p class="noindent" ><span class="head">
 <a 
- id="x99-171002r1"></a>
+ id="x99-172002r1"></a>
 <span 
 class="ec-lmbx-12">Exemplo A.2.1.</span>  </span>Se <img 
-src="main4291x.png" alt="x =  2  "  class="math" >, então <img 
-src="main4292x.png" alt="x  "  class="math" > é maior ou igual a 1 e menor que 3?
+src="main4314x.png" alt="x =  2  "  class="math" >, então <img 
+src="main4315x.png" alt="x  "  class="math" > é maior ou igual a 1 e menor que 3?
    </div>
 <!--l. 175--><p class="indent" >   <span 
 class="ec-lmbx-12">Solu</span><span 
@@ -277,7 +279,7 @@ class="ec-lmtt-12">Python</span></span></span>, temos:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-44">
+   <div class="verbatim" id="verbatim-56">
 &#x003E;&#x003E;&#x003E;&#x00A0;x=2
 &#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;(x&#x00A0;&#x003E;=&#x00A0;1)&#x00A0;and&#x00A0;(x&#x00A0;&#x003C;&#x00A0;3)
 &#x00A0;<br />True
@@ -287,7 +289,7 @@ class="ec-lmtt-12">Python</span></span></span>, temos:
 >
 <!--l. 182--><p class="noindent" >
  <img 
-src="main4293x.png" alt="&#x2662; "  class="math" ></div>
+src="main4316x.png" alt="&#x2662; "  class="math" ></div>
                                                                           
 
                                                                           

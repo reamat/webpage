@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Polinômios de Lagrange'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Polinômios de Lagrange, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -94,68 +96,68 @@
   		</ul>
 	</nav>
 </div>
-   <!--l. 289-->
+   <!--l. 310-->
    <h3 class="sectionHead"><span class="titlemark">6.3   </span> <a 
- id="x55-940006.3"></a>Polinômios de Lagrange</h3><hr class="section">
+ id="x55-950006.3"></a>Polinômios de Lagrange</h3><hr class="section">
 <a 
- id="dx55-94001"></a>
-<!--l. 290--><p class="noindent" >Outra maneira clássica de resolver o problema da interpolação polinomial é
+ id="dx55-95001"></a>
+<!--l. 311--><p class="noindent" >Outra maneira clássica de resolver o problema da interpolação polinomial é
 através dos polinômios de Lagrange. Dado um conjunto de pontos <img 
-src="main2650x.png" alt="{x }n
+src="main2651x.png" alt="{x }n
   j j=1   "  class="math" >
 distintos dois a dois, definimos os polinômios de Lagrange como os polinômios de
 grau <img 
-src="main2651x.png" alt="n &minus; 1  "  class="math" > que satisfazem
+src="main2652x.png" alt="n - 1  "  class="math" > que satisfazem
    <center class="math-display" >
 <img 
-src="main2652x.png" alt="         (
+src="main2653x.png" alt="         (
          |{
 Lk(xj) =    1, se k = j
-         |(  0, se k &frasl;= j  " class="math-display" ></center>
+         |(  0, se k &#x2044;= j  " class="math-display" ></center>
 Assim, o polinômio de grau <img 
-src="main2653x.png" alt="n &minus; 1  "  class="math" > que interpola os pontos dados, tais
+src="main2654x.png" alt="n - 1  "  class="math" > que interpola os pontos dados, tais
 <img 
-src="main2654x.png" alt="p(x ) = y ,j = 1,...,n
+src="main2655x.png" alt="p(x ) = y ,j = 1,...,n
     j    j  "  class="math" > é dado por
    <center class="math-display" >
 <img 
-src="main2655x.png" alt="                                            n&sum;
-p(x) = y1L1(x) + y2L2(x ) + &sdot;&sdot;&sdot; + ynLn(x ) =   ykLk(x)
+src="main2656x.png" alt="                                            n&#x2211;
+p(x) = y1L1(x) + y2L2(x ) + &#x22C5;&#x22C5;&#x22C5; + ynLn(x ) =   ykLk(x)
                                            k=1
 " class="math-display" ></center>
                                                                           
 
                                                                           
-<!--l. 301--><p class="indent" >   Para construir os polinômios de Lagrange, podemos analisar a sua forma
+<!--l. 322--><p class="indent" >   Para construir os polinômios de Lagrange, podemos analisar a sua forma
 fatorada, ou seja:
    <center class="math-display" >
 <img 
-src="main2656x.png" alt="            n
-Lk (x) = ck&prod;  (x &minus; xj)
+src="main2657x.png" alt="            n
+Lk (x) = ck&#x220F;  (x - xj)
            j=1
-           j&frasl;=i  " class="math-display" ></center>
+           j&#x2044;=i  " class="math-display" ></center>
 onde o coeficiente <img 
-src="main2657x.png" alt="ck  "  class="math" > é obtido da condição <img 
-src="main2658x.png" alt="Lk(xk ) = 1  "  class="math" >:
+src="main2658x.png" alt="ck  "  class="math" > é obtido da condição <img 
+src="main2659x.png" alt="Lk(xk ) = 1  "  class="math" >:
    <center class="math-display" >
 <img 
-src="main2659x.png" alt="             n
-L  (x ) = c &prod;  (x &minus;  x ) = &rArr; c =  -----1------
-  k  k     kj=1  k    j       k   &prod;n
-            j&frasl;=i                      (xk &minus; xj)
-                                  jj=&frasl;=1i  " class="math-display" ></center>
+src="main2660x.png" alt="             n
+L  (x ) = c &#x220F;  (x -  x ) = &#x21D2; c =  -----1------
+  k  k     kj=1  k    j       k   &#x220F;n
+            j&#x2044;=i                      (xk - xj)
+                                  jj=&#x2044;=1i  " class="math-display" ></center>
 Portanto,
    <center class="math-display" >
 <img 
-src="main2660x.png" alt="         &prod;n  (x &minus; xj)
+src="main2661x.png" alt="         &#x220F;n  (x - xj)
 Lk (x) =    ---------
-         j=1(xk &minus; xj)
-         j&frasl;=i
+         j=1(xk - xj)
+         j&#x2044;=i
 " class="math-display" ></center>
    <div class="newtheorem">
-<!--l. 308--><p class="noindent" ><span class="head">
+<!--l. 329--><p class="noindent" ><span class="head">
 <a 
- id="x55-94002r1"></a>
+ id="x55-95002r1"></a>
 <span 
 class="ec-lmbx-12">Observa</span><span 
 class="ec-lmbx-12">ç</span><span 
@@ -163,63 +165,114 @@ class="ec-lmbx-12">ão 6.3.1.</span>  </span>O  problema  de  interpolação  qu
 como base os polinômios de Lagrange produz um sistema linear diagonal.
    </div>
    <div class="newtheorem">
-<!--l. 311--><p class="noindent" ><span class="head">
+<!--l. 332--><p class="noindent" ><span class="head">
 <a 
- id="x55-94003r1"></a>
+ id="x55-95003r1"></a>
 <span 
-class="ec-lmbx-12">Exemplo 6.3.1.</span>  </span>Encontre          o          polinômio          da          forma
-<img 
-src="main2661x.png" alt="                      2      3
-p(x ) = a1 + a2x + a3x + a4x   "  class="math" > que passa pelos pontos
+class="ec-lmbx-12">Exemplo 6.3.1.</span>  </span>Encontre o polinômio da forma <img 
+src="main2662x.png" alt="p(x) = a1 + a2x + a3x2 + a4x3   "  class="math" >
+que passa pelos pontos <img 
+src="main2663x.png" alt="(0,0)  "  class="math" >, <img 
+src="main2664x.png" alt="(1,1)  "  class="math" >, <img 
+src="main2665x.png" alt="(2,4)  "  class="math" >, <img 
+src="main2666x.png" alt="(3,9)  "  class="math" >. Escrevemos: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main2662x.png" alt="(0,0 ),(1,1),(2,4),(3,9)  " class="math-display" ></center>
-Escrevemos: <div class="eqnarray">
-   <center class="math-display" >
-<img 
-src="main2663x.png" alt="           (x &minus; 1)(x &minus; 2)(x &minus; 3)     1  3    2   11
-L1(x)  =   --------------------- = &minus; -x  + x  &minus;  --x + 1
-           (0 &minus; 1)(0 &minus; 2)(0 &minus; 3)     6           6
-           x(x-&minus;-2)(x-&minus;-3)-   1-3   5- 2
-L2(x)  =   1(1 &minus; 2)(1 &minus; 3) =  2x  &minus; 2 x + 3x
+src="main2667x.png" alt="           (x---1)(x---2)(x---3)     1- 3    2   11-
+L1(x)  =   (0 - 1)(0 - 2)(0 - 3) = - 6x  + x  -  6 x + 1
 
-L3(x)  =   x(x-&minus;-1)(x-&minus;-3)-= &minus; 1-x3 + 2x2 &minus; 3x
-           2(2 &minus; 1)(2 &minus; 3)     2            2
-           x(x &minus; 1)(x &minus; 2)    1     1      1
-L4(x)  =   ----------------=  -x3 &minus; --x2 + -x
-           3(3 &minus; 1)(3 &minus; 2)    6     2      3
+L2(x)  =   x(x---2)(x---3)-=  1x3 - 5-x2 + 3x
+           1(1 - 2)(1 - 3)    2     2
+           x(x - 1)(x - 3)     1  3     2   3
+L3(x)  =   ----------------= - --x +  2x  - -x
+           2(2 - 1)(2 - 3)     2            2
+           x(x---1)(x---2)-   1-3   1- 2   1-
+L4(x)  =   3(3 - 1)(3 - 2) =  6x  - 2 x +  3x
+                                                                          
+
+                                                                          
 " class="math-display" ></center>
 </div>Assim temos:
+   <table 
+class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main2664x.png" alt="P (x) = 0 &sdot; L1(x) + 1 &sdot; L2 (x) + 4 &sdot; L3 (x) + 9 &sdot; L4 (x) = x2
-" class="math-display" ></center>
-   </div>
-   <div class="newtheorem">
-<!--l. 324--><p class="noindent" ><span class="head">
-<a 
- id="x55-94005r2"></a>
-<span 
-class="ec-lmbx-12">Exemplo 6.3.2.</span>  </span>Encontre          o          polinômio          da          forma
-<img 
-src="main2665x.png" alt="p(x ) = a + a x + a x2 + a x3
-         1   2      3      4   "  class="math" > que passa pelos pontos
-   <center class="math-display" >
-<img 
-src="main2666x.png" alt="(0,0 ),(1,1),(2,0),(3,1)
-" class="math-display" ></center> Como as abscissas são as mesmas do exemplo anterior, podemos utilizar os
-mesmos polinômios de Lagrange, assim temos:
-   <center class="math-display" >
-<img 
-src="main2667x.png" alt="                                                    2-3     2   10-
-p(x) = 0 &sdot; L1(x ) + 1 &sdot; L2(x ) + 0 &sdot; L3(x ) + 1 &sdot; L4(x) = 3x &minus; 3x + 3 x
-" class="math-display" ></center>
-   </div>
+src="main2668x.png" alt="                                                     2
+P (x) = 0 &#x22C5; L1(x) + 1 &#x22C5; L2 (x) + 4 &#x22C5; L3 (x) + 9 &#x22C5; L4 (x) = x
+" class="math-display" ></center></td></tr></table>
+<!--l. 343--><p class="nopar" >
+<!--l. 349--><p class="indent" >   Em <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">Python</span></span></span>, podemos usar a função <a 
+href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.poly.html" >numpy.poly</a>, por exemplo:
                                                                           
 
                                                                           
-   <!--l. 330-->
-<!--l. 330--><p class="indent" >   <a 
+   <div class="verbatim" id="verbatim-27">
+&#x003E;&#x003E;&#x003E;&#x00A0;xi&#x00A0;=&#x00A0;np.array([0,1,2,3],&#x00A0;dtype=&#8217;double&#8217;)
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;yi&#x00A0;=&#x00A0;np.array([0,1,4,9],&#x00A0;dtype=&#8217;double&#8217;)
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;L1&#x00A0;=&#x00A0;np.poly([xi[1],xi[2],xi[3]]);L1=L1/np.polyval(L1,xi[0]);L1
+&#x00A0;<br />array([-0.16666667,&#x00A0;&#x00A0;1.&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;,&#x00A0;-1.83333333,&#x00A0;&#x00A0;1.&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;])
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;L2&#x00A0;=&#x00A0;np.poly([xi[0],xi[2],xi[3]]);L2=L2/np.polyval(L2,xi[1]);L2
+&#x00A0;<br />array([&#x00A0;0.5,&#x00A0;-2.5,&#x00A0;&#x00A0;3.&#x00A0;,&#x00A0;&#x00A0;0.&#x00A0;])
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;L3&#x00A0;=&#x00A0;np.poly([xi[0],xi[1],xi[3]]);L3=L3/np.polyval(L3,xi[2]);L3
+&#x00A0;<br />array([-0.5,&#x00A0;&#x00A0;2.&#x00A0;,&#x00A0;-1.5,&#x00A0;-0.&#x00A0;])
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;L4&#x00A0;=&#x00A0;np.poly([xi[0],xi[1],xi[2]]);L4=L4/np.polyval(L4,xi[3]);L4
+&#x00A0;<br />array([&#x00A0;0.16666667,&#x00A0;-0.5&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;,&#x00A0;&#x00A0;0.33333333,&#x00A0;&#x00A0;0.&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;])
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;a&#x00A0;=&#x00A0;yi[0]*L1&#x00A0;+&#x00A0;yi[1]*L2&#x00A0;+&#x00A0;yi[2]*L3&#x00A0;+&#x00A0;yi[3]*L4;a
+&#x00A0;<br />array([&#x00A0;0.,&#x00A0;&#x00A0;1.,&#x00A0;&#x00A0;0.,&#x00A0;&#x00A0;0.])
+</div>
+<!--l. 363--><p class="nopar" >Para plotar os pontos e o polinômio interpolador, podemos usar:
+                                                                          
+
+                                                                          
+   <div class="verbatim" id="verbatim-28">
+&#x003E;&#x003E;&#x003E;&#x00A0;xx&#x00A0;=&#x00A0;np.linspace(-0.25,3.25)
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;plt.plot(xi,yi,&#8217;ro&#8217;,xx,np.polyval(a,xx),&#8217;b-&#8217;)
+&#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;plt.grid();plt.show()
+</div>
+<!--l. 369--><p class="nopar" >
+   </div>
+   <div class="newtheorem">
+<!--l. 374--><p class="noindent" ><span class="head">
+<a 
+ id="x55-95005r2"></a>
+<span 
+class="ec-lmbx-12">Exemplo 6.3.2.</span>  </span>Encontre                                                               o
+polinômio da forma <img 
+src="main2669x.png" alt="                      2      3
+p (x ) = a1 + a2x + a3x + a4x   "  class="math" > que passa pelos pontos
+<img 
+src="main2670x.png" alt="(0,0)  "  class="math" >, <img 
+src="main2671x.png" alt="(1,1)  "  class="math" >, <img 
+src="main2672x.png" alt="(2,0)  "  class="math" >, <img 
+src="main2673x.png" alt="(3,1)  "  class="math" >.
+   </div>
+<!--l. 376--><p class="indent" >   <span 
+class="ec-lmbx-12">Solu</span><span 
+class="ec-lmbx-12">ç</span><span 
+class="ec-lmbx-12">ão. </span>Como as abscissas são as mesmas do exemplo anterior, podemos
+utilizar os mesmos polinômios de Lagrange, assim temos:
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main2674x.png" alt="                                                   2  3     2   10
+p(x) = 0 &#x22C5; L1(x) + 1 &#x22C5; L2(x) + 0 &#x22C5; L3(x) + 1 &#x22C5; L4(x) = 3-x - 3x + 3-x.
+" class="math-display" ></center></td></tr></table>
+<!--l. 380--><p class="nopar" >
+                                                                          
+
+                                                                          
+                                                                          <div class="flushright" 
+>
+<!--l. 381--><p class="noindent" >
+ <img 
+src="main2675x.png" alt="&#x2662; "  class="math" ></div>
+                                                                          
+
+                                                                          
+   <!--l. 383-->
+<!--l. 383--><p class="indent" >   <a 
  id="taili1-polinomios_de_lagrange.html"></a>  
 <div class="text-center">
 		<nav class="nav-links" aria-label="Page navigation">

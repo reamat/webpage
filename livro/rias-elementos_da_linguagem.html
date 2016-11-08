@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:03:00"> 
+<meta name="date" content="2016-11-07 23:12:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Elementos da linguagem, Operações matemáticas elementares, Funções e constantes elementares, Operadores lógicos'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Elementos da linguagem, Operações matemáticas elementares, Funções e constantes elementares, Operadores lógicos, Scilab'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro/main.pdf">Formato PDF</a></li>
             <li><a href="../livro/main.epub">Formato EPUB</a></li>
             <li><a href="../livro/slide.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro-py/main.html">Versão Python</a></li>
           </ul>
         </li>		
@@ -104,7 +106,7 @@ variável é criada quando um valor é atribuído a ela. Por exemplo:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-66">
+   <div class="verbatim" id="verbatim-70">
 --&#x003E;x=1
 &#x00A0;<br />&#x00A0;x&#x00A0;&#x00A0;=
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;1.
@@ -115,11 +117,11 @@ variável é criada quando um valor é atribuído a ela. Por exemplo:
 <!--l. 87--><p class="nopar" >a variável <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">x</span></span></span> recebe o valor <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">double</span></span></span> <img 
-src="main4495x.png" alt="1  "  class="math" > e, logo após, na segunda linha de comando,
+src="main4514x.png" alt="1  "  class="math" > e, logo após, na segunda linha de comando,
 a variável <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">y</span></span></span> recebe o valor <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">double</span></span></span> <img 
-src="main4496x.png" alt="2  "  class="math" >. Observamos que o símbolo <span class="obeylines-h"><span class="verb"><span 
+src="main4515x.png" alt="2  "  class="math" >. Observamos que o símbolo <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">=</span></span></span> significa o
 operador de atribuição não o de igualdade. O operador lógico de igualdade no
 Scilab é <span class="obeylines-h"><span class="verb"><span 
@@ -129,7 +131,7 @@ exemplo:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-67">
+   <div class="verbatim" id="verbatim-71">
 --&#x003E;//Isto&#x00A0;é&#x00A0;um&#x00A0;comentário
 &#x00A0;<br />--&#x003E;x&#x00A0;=&#x00A0;1&#x00A0;..
 &#x00A0;<br />--&#x003E;+&#x00A0;2
@@ -146,7 +148,7 @@ exemplo:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-68">
+   <div class="verbatim" id="verbatim-72">
 &#x00A0;&#x00A0;+&#x00A0;adição
 &#x00A0;<br />&#x00A0;&#x00A0;-&#x00A0;subtração
 &#x00A0;<br />&#x00A0;&#x00A0;*&#x00A0;multiplicação
@@ -165,7 +167,7 @@ exemplo:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-69">
+   <div class="verbatim" id="verbatim-73">
 --&#x003E;cos(%pi)&#x00A0;//cosseno&#x00A0;de&#x00A0;pi
 &#x00A0;<br />&#x00A0;ans&#x00A0;&#x00A0;=
 &#x00A0;<br />&#x00A0;&#x00A0;-&#x00A0;1.
@@ -193,7 +195,7 @@ class="ec-lmtt-12">%F</span></span></span>. Temos os seguintes operadores lógic
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-70">
+   <div class="verbatim" id="verbatim-74">
 &amp;&#x00A0;&#x00A0;e&#x00A0;lógico
 &#x00A0;<br />|&#x00A0;&#x00A0;ou&#x00A0;lógico
 &#x00A0;<br />~&#x00A0;&#x00A0;negação
@@ -211,8 +213,8 @@ class="ec-lmtt-12">%F</span></span></span>. Temos os seguintes operadores lógic
  id="x101-178002r1"></a>
 <span 
 class="ec-lmbx-12">Exemplo A.2.1.</span>  </span>Se <img 
-src="main4497x.png" alt="x =  2  "  class="math" >, então <img 
-src="main4498x.png" alt="x  "  class="math" > é maior ou igual a 1 e menor que 3?
+src="main4516x.png" alt="x =  2  "  class="math" >, então <img 
+src="main4517x.png" alt="x  "  class="math" > é maior ou igual a 1 e menor que 3?
    </div>
 <!--l. 147--><p class="indent" >   <span 
 class="ec-lmbx-12">Solu</span><span 
@@ -221,7 +223,7 @@ class="ec-lmbx-12">ão. </span>No Scilab, temos:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-71">
+   <div class="verbatim" id="verbatim-75">
 --&#x003E;x=2;
 &#x00A0;<br />
 &#x00A0;<br />--&#x003E;(x&#x00A0;&#x003E;=&#x00A0;1)&#x00A0;&amp;&#x00A0;(x&#x00A0;&#x003C;&#x00A0;3)
@@ -234,7 +236,7 @@ class="ec-lmbx-12">ão. </span>No Scilab, temos:
 >
 <!--l. 157--><p class="noindent" >
  <img 
-src="main4499x.png" alt="&#x2662; "  class="math" ></div>
+src="main4518x.png" alt="&#x2662; "  class="math" ></div>
                                                                           
 
                                                                           

@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:03:00"> 
+<meta name="date" content="2016-11-07 23:12:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Estabilidade'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Estabilidade, Scilab'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro/main.pdf">Formato PDF</a></li>
             <li><a href="../livro/main.epub">Formato EPUB</a></li>
             <li><a href="../livro/slide.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro-py/main.html">Versão Python</a></li>
           </ul>
         </li>		
@@ -102,19 +104,19 @@
 <!--l. 517--><p class="noindent" >Consideremos o seguinte problema de teste:
    <center class="math-display" >
 <img 
-src="main4334x.png" alt="(
-|{    y&prime;  =  &minus; &alpha;y
+src="main4353x.png" alt="(
+|{    y&#x2032;  =  - &#x03B1;y
 
 |(  y(0)  =  1  " class="math-display" ></center>
 cuja solução exata é dada por <img 
-src="main4335x.png" alt="y(t) = e&minus; &alpha;t  "  class="math" >.
+src="main4354x.png" alt="y(t) = e- &#x03B1;t  "  class="math" >.
 <!--l. 521--><p class="indent" >   Considere agora o método de Euler aplicado a este problema com passa
 <img 
-src="main4336x.png" alt="h  "  class="math" >:
+src="main4355x.png" alt="h  "  class="math" >:
    <center class="math-display" >
 <img 
-src="main4337x.png" alt="(
-|{  y(k+1) =   y(k) &minus; &alpha;hy (k)
+src="main4356x.png" alt="(
+|{  y(k+1) =   y(k) - &#x03B1;hy (k)
 
 |(    y(1) =   1  " class="math-display" ></center> A
 solução exata do esquema de Euler é dada por
@@ -123,25 +125,25 @@ solução exata do esquema de Euler é dada por
                                                                           
    <center class="math-display" >
 <img 
-src="main4338x.png" alt=" (k+1)           k
-y     =  (1 &minus; &alpha;h )  " class="math-display" ></center> e,
+src="main4357x.png" alt=" (k+1)           k
+y     =  (1 - &#x03B1;h )  " class="math-display" ></center> e,
 portanto,
    <center class="math-display" >
 <img 
-src="main4339x.png" alt="&#x02DC;y(t) = y(k+1) = (1 &minus; &alpha;h )t&#x2215;h
+src="main4358x.png" alt="&#x02DC;y(t) = y(k+1) = (1 - &#x03B1;h )t&#x2215;h
 " class="math-display" ></center>
 <!--l. 528--><p class="indent" >   Fixamos um <img 
-src="main4340x.png" alt="&alpha; &#x003E; 0  "  class="math" >, de forma que <img 
-src="main4341x.png" alt="y(t) &rarr; 0  "  class="math" >. Mas observamos que
+src="main4359x.png" alt="&#x03B1; &#x003E; 0  "  class="math" >, de forma que <img 
+src="main4360x.png" alt="y(t) &#x2192; 0  "  class="math" >. Mas observamos que
 <img 
-src="main4342x.png" alt="&#x02DC;y(t) &rarr;  0  "  class="math" > somente quando <img 
-src="main4343x.png" alt="|1 &minus; &alpha;h | &#x003C; 1  "  class="math" > e solução positivas somente quando
+src="main4361x.png" alt="&#x02DC;y(t) &#x2192;  0  "  class="math" > somente quando <img 
+src="main4362x.png" alt="|1 - &#x03B1;h | &#x003C; 1  "  class="math" > e solução positivas somente quando
 <img 
-src="main4344x.png" alt="&alpha;h  &#x003C; 1  "  class="math" >.
+src="main4363x.png" alt="&#x03B1;h  &#x003C; 1  "  class="math" >.
 <!--l. 530--><p class="indent" >   <span 
 class="ec-lmbx-12">Conclus</span><span 
 class="ec-lmbx-12">ão: </span>Se o passo <img 
-src="main4345x.png" alt="h  "  class="math" > for muito grande, o método pode se tornar
+src="main4364x.png" alt="h  "  class="math" > for muito grande, o método pode se tornar
 instável, produzindo solução espúrias.
 <!--l. 532--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
@@ -153,7 +155,7 @@ instável, produzindo solução espúrias.
 <span 
 class="ec-lmbx-12">E 10.8.1.</span>  </span>Resolva  o  problema  1  pelos  diversos  métodos  e  verifique
 heuristicamente a estabilidade para diversos valores de <img 
-src="main4346x.png" alt="h  "  class="math" >.
+src="main4365x.png" alt="h  "  class="math" >.
    </div>
                                                                           
 

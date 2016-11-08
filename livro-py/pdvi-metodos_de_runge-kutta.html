@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Métodos de Runge-Kutta, Métodos de Runge-Kutta - Quarta ordem'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Métodos de Runge-Kutta, Métodos de Runge-Kutta - Quarta ordem, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -96,68 +98,68 @@
 </div>
    <!--l. 437-->
    <h3 class="sectionHead"><span class="titlemark">10.5   </span> <a 
- id="x89-15400010.5"></a>Métodos de Runge-Kutta</h3><hr class="section">
+ id="x89-15500010.5"></a>Métodos de Runge-Kutta</h3><hr class="section">
 <a 
- id="dx89-154001"></a>
+ id="dx89-155001"></a>
 <!--l. 439--><p class="noindent" >Os métodos de Runge-Kutta consistem em iterações do tipo:
    <center class="math-display" >
 <img 
-src="main4104x.png" alt="y(k+1) = y (k) + w k + ...+ w  k
+src="main4127x.png" alt="y(k+1) = y (k) + w k + ...+ w  k
                 1 1          n n  " class="math-display" ></center>
 onde <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4105x.png" alt="k1  =  hf (y(k),t(k))
+src="main4128x.png" alt="k1  =  hf (y(k),t(k))
             (k)         (k)
-k2  =  hf (y   + &alpha;2,1k1,t   + &beta;2h )
-k3  =  hf (y(k) + &alpha;3,1k1 + &alpha;3,2k2,t(k) + &beta;3h)
+k2  =  hf (y   + &#x03B1;2,1k1,t   + &#x03B2;2h )
+k3  =  hf (y(k) + &#x03B1;3,1k1 + &#x03B1;3,2k2,t(k) + &#x03B2;3h)
     .
     ..
-k   =  hf (y(k) + &alpha;  k +  &alpha;  k  + ...&alpha;     k    ,t(k) + &beta; h )
- n                n,1 1    n,2  2       n,n&minus;1 n&minus; 1       n
+k   =  hf (y(k) + &#x03B1;  k +  &#x03B1;  k  + ...&#x03B1;     k    ,t(k) + &#x03B2; h )
+ n                n,1 1    n,2  2       n,n-1 n- 1       n
 " class="math-display" ></center>
                                                                           
 
                                                                           
 </div>
 <!--l. 450--><p class="indent" >   Os coeficientes são escolhidos de forma que a expansão em Taylor de <img 
-src="main4106x.png" alt="  (k+1)
+src="main4129x.png" alt="  (k+1)
 y   "  class="math" > e
 <img 
-src="main4107x.png" alt=" (k)
+src="main4130x.png" alt=" (k)
 y   + w1k1 +  ...+ wnkn  "  class="math" > coincidam até ordem <img 
-src="main4108x.png" alt="n + 1  "  class="math" >.
+src="main4131x.png" alt="n + 1  "  class="math" >.
    <div class="newtheorem">
 <!--l. 452--><p class="noindent" ><span class="head">
 <a 
- id="x89-154003r1"></a>
+ id="x89-155003r1"></a>
 <span 
 class="ec-lmbx-12">Exemplo 10.5.1.</span>  </span>O  método  de  Euler  melhorado  é  um  exemplo  de
 Runge-Kutta de segunda ordem
    <center class="math-display" >
 <img 
-src="main4109x.png" alt="y(n+1) = y(n) + k1-+-k2
+src="main4132x.png" alt="y(n+1) = y(n) + k1-+-k2
                   2
 " class="math-display" ></center> onde <img 
-src="main4110x.png" alt="          (n) (n)
+src="main4133x.png" alt="          (n) (n)
 k1 = hf (y  ,t  )  "  class="math" > e <img 
-src="main4111x.png" alt="          (n)      (n)
+src="main4134x.png" alt="          (n)      (n)
 k2 = hf (y   + k1,t  + h )  "  class="math" >
    </div>
 <!--l. 457--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">10.5.1   </span> <a 
- id="x89-15500010.5.1"></a>Métodos de Runge-Kutta - Quarta ordem</h4><hr class="section">
+ id="x89-15600010.5.1"></a>Métodos de Runge-Kutta - Quarta ordem</h4><hr class="section">
 <a 
- id="dx89-155001"></a>
+ id="dx89-156001"></a>
 <!--l. 459--><p class="noindent" >
    <center class="math-display" >
 <img 
-src="main4112x.png" alt=" (n+1)    (n)   k1 + 2k2 + 2k3 + k4
+src="main4135x.png" alt=" (n+1)    (n)   k1 + 2k2 + 2k3 + k4
 y     =  y   + ---------6---------  " class="math-display" ></center>
 onde <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4113x.png" alt="            (n) (n)
+src="main4136x.png" alt="            (n) (n)
 k1  =  hf (y  ,t  )
 k2  =  hf (y(n) + k1&#x2215;2,t(n) + h&#x2215;2)
             (n)        (n)
@@ -169,21 +171,21 @@ método de Simpson pode ajudar a compreender os estranhos coeficientes:
 <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4114x.png" alt="                      &int; t(n+1)
-y(t(n+1)) &minus; y(t(n))  =    (n)  f (y (s),s)ds
+src="main4137x.png" alt="                      &#x222B; t(n+1)
+y(t(n+1)) - y(t(n))  =    (n)  f (y (s),s)ds
                        t [ (          )      (                      )
-                   &asymp;   h-f  y(t(n)),t(n)  + 4f  y(t(n) + h&#x2215;2),t(n) + h&#x2215;2
+                   &#x2248;   h-f  y(t(n)),t(n)  + 4f  y(t(n) + h&#x2215;2),t(n) + h&#x2215;2
                        6(                  ) ]
                    +   f  y(t(n) + h ),t(n) + h
 
                        k1 + 4 (k2+k23) + k4
-                   &asymp;   --------6---------
+                   &#x2248;   --------6---------
 " class="math-display" ></center>
 </div>onde <img 
-src="main4115x.png" alt="k1   "  class="math" > e <img 
-src="main4116x.png" alt="k4   "  class="math" > representam as inclinações nos extremos e <img 
-src="main4117x.png" alt="k2   "  class="math" > e <img 
-src="main4118x.png" alt="k3   "  class="math" > são duas
+src="main4138x.png" alt="k1   "  class="math" > e <img 
+src="main4139x.png" alt="k4   "  class="math" > representam as inclinações nos extremos e <img 
+src="main4140x.png" alt="k2   "  class="math" > e <img 
+src="main4141x.png" alt="k3   "  class="math" > são duas
 aproximações diferentes para a inclinação no meio do intervalo.
                                                                           
 

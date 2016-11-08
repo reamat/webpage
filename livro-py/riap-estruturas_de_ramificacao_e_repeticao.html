@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Estruturas de ramificação e repetição, A instrução de ramificação &#8220;if&#8221;, A instrução de repetição &#8220;for&#8221;, A instrução de repetição &#8220;while&#8221;'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Estruturas de ramificação e repetição, A instrução de ramificação &#8220;if&#8221;, A instrução de repetição &#8220;for&#8221;, A instrução de repetição &#8220;while&#8221;, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -96,29 +98,29 @@
 </div>
    <!--l. 356-->
    <h3 class="sectionHead"><span class="titlemark">A.4   </span> <a 
- id="x101-175000A.4"></a>Estruturas de ramificação e repetição</h3><hr class="section">
+ id="x101-176000A.4"></a>Estruturas de ramificação e repetição</h3><hr class="section">
 <a 
- id="dx101-175001"></a>
+ id="dx101-176001"></a>
 <!--l. 358--><p class="noindent" >A linguagem <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">Python</span></span></span> contém estruturas de repetição e ramificação padrões de
 linguagens estruturadas.
 <!--l. 360--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">A.4.1   </span> <a 
- id="x101-176000A.4.1"></a>A instrução de ramificação &#8220;if&#8221;</h4><hr class="section">
+ id="x101-177000A.4.1"></a>A instrução de ramificação &#8220;if&#8221;</h4><hr class="section">
 <a 
- id="dx101-176001"></a>
+ id="dx101-177001"></a>
 <!--l. 362--><p class="noindent" >A instrução &#8220;if&#8221; permite executar um pedaço do código somente se uma dada
 condição for satisfeita.
    <div class="newtheorem">
 <!--l. 364--><p class="noindent" ><span class="head">
 <a 
- id="x101-176002r1"></a>
+ id="x101-177002r1"></a>
 <span 
 class="ec-lmbx-12">Exemplo A.4.1.</span>  </span>Veja o seguinte código Scilab:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-59">
+   <div class="verbatim" id="verbatim-71">
 #!/usr/bin/env&#x00A0;python
 &#x00A0;<br />#&#x00A0;-*-&#x00A0;coding:&#x00A0;utf-8&#x00A0;-*-
 &#x00A0;<br />
@@ -139,21 +141,21 @@ class="ec-lmtt-12">Python</span></span></span>, a identação é obrigatória, p
 escopo da instrução.
 <!--l. 385--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">A.4.2   </span> <a 
- id="x101-177000A.4.2"></a>A instrução de repetição &#8220;for&#8221;</h4><hr class="section">
+ id="x101-178000A.4.2"></a>A instrução de repetição &#8220;for&#8221;</h4><hr class="section">
 <a 
- id="dx101-177001"></a>
+ id="dx101-178001"></a>
 <!--l. 387--><p class="noindent" >A instrução <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">for</span></span></span> permite que um pedaço de código seja executado repetidamente.
    <div class="newtheorem">
 <!--l. 389--><p class="noindent" ><span class="head">
 <a 
- id="x101-177002r2"></a>
+ id="x101-178002r2"></a>
 <span 
 class="ec-lmbx-12">Exemplo A.4.2.</span>  </span>Veja o seguinte código:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-60">
+   <div class="verbatim" id="verbatim-72">
 for&#x00A0;i&#x00A0;in&#x00A0;range(6):
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;print(i)
 </div>
@@ -162,13 +164,13 @@ for&#x00A0;i&#x00A0;in&#x00A0;range(6):
    <div class="newtheorem">
 <!--l. 398--><p class="noindent" ><span class="head">
 <a 
- id="x101-177003r3"></a>
+ id="x101-178003r3"></a>
 <span 
 class="ec-lmbx-12">Exemplo A.4.3.</span>  </span>Veja o seguinte código:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-61">
+   <div class="verbatim" id="verbatim-73">
 import&#x00A0;numpy&#x00A0;as&#x00A0;np
 &#x00A0;<br />for&#x00A0;i&#x00A0;in&#x00A0;np.arange(1,8,2):
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;print(i)
@@ -178,13 +180,13 @@ import&#x00A0;numpy&#x00A0;as&#x00A0;np
    <div class="newtheorem">
 <!--l. 408--><p class="noindent" ><span class="head">
 <a 
- id="x101-177004r4"></a>
+ id="x101-178004r4"></a>
 <span 
 class="ec-lmbx-12">Exemplo A.4.4.</span>  </span>Veja o seguinte código:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-62">
+   <div class="verbatim" id="verbatim-74">
 for&#x00A0;k&#x00A0;=&#x00A0;10:-3:1
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;disp(k)
 &#x00A0;<br />end
@@ -194,13 +196,13 @@ for&#x00A0;k&#x00A0;=&#x00A0;10:-3:1
    <div class="newtheorem">
 <!--l. 418--><p class="noindent" ><span class="head">
 <a 
- id="x101-177005r5"></a>
+ id="x101-178005r5"></a>
 <span 
 class="ec-lmbx-12">Exemplo A.4.5.</span>  </span>Veja o seguinte código:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-63">
+   <div class="verbatim" id="verbatim-75">
 import&#x00A0;numpy&#x00A0;as&#x00A0;np
 &#x00A0;<br />for&#x00A0;i&#x00A0;in&#x00A0;np.arange(10,1,-3):
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;print(i)
@@ -209,22 +211,22 @@ import&#x00A0;numpy&#x00A0;as&#x00A0;np
    </div>
 <!--l. 428--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">A.4.3   </span> <a 
- id="x101-178000A.4.3"></a>A instrução de repetição &#8220;while&#8221;</h4><hr class="section">
+ id="x101-179000A.4.3"></a>A instrução de repetição &#8220;while&#8221;</h4><hr class="section">
 <a 
- id="dx101-178001"></a>
+ id="dx101-179001"></a>
 <!--l. 430--><p class="noindent" >A instrução <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">while</span></span></span> permite que um pedaço de código seja executado repetidamente
 até que uma dada condição seja satisfeita.
    <div class="newtheorem">
 <!--l. 432--><p class="noindent" ><span class="head">
 <a 
- id="x101-178002r6"></a>
+ id="x101-179002r6"></a>
 <span 
 class="ec-lmbx-12">Exemplo A.4.6.</span>  </span>Veja o seguinte código Scilab:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-64">
+   <div class="verbatim" id="verbatim-76">
 s&#x00A0;=&#x00A0;0
 &#x00A0;<br />i&#x00A0;=&#x00A0;1
 &#x00A0;<br />while&#x00A0;(i&#x00A0;&#x003C;=&#x00A0;10):

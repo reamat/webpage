@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Eliminação gaussiana, Eliminação gaussiana com pivotamento parcial'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Eliminação gaussiana, Eliminação gaussiana com pivotamento parcial, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -134,7 +136,7 @@ class="ec-lmbx-12">.</span>  </span>Resolva o sistema
    <center class="math-display" >
 <img 
 src="main1706x.png" alt="    x + y + z  =  1
-   2x + y &minus; z  =  0
+   2x + y - z  =  0
 
 4x +  4y + 2z  =  2
 " class="math-display" ></center>
@@ -151,11 +153,11 @@ class="ec-lmbx-12">ão. </span>A matriz completa do sistema é escrita como
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1707x.png" alt="&lfloor;           |  &rfloor;
+src="main1707x.png" alt="&#x230A;           |  &#x230B;
 || 1  1   1  |1 ||
 ||           |  ||
 | 4  4   2  |2 |
-&lceil; 2  1  &minus; 1 |0 &rceil;
+&#x2308; 2  1  - 1 |0 &#x2309;
 " class="math-display" ></center></td></tr></table>
 <!--l. 99--><p class="nopar" >
 No primeiro passo, subtraímos da segunda linha o quádruplo da primeira e
@@ -164,12 +166,12 @@ subtraímos da terceira linha o dobro da primeira linha:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1708x.png" alt="&lfloor;            |    &rfloor;
+src="main1708x.png" alt="&#x230A;            |    &#x230B;
              |
 || 1   1   1  | 1  ||
-|| 0   0   &minus; 2|&minus; 2 || .
-|&lceil;            |    |&rceil;
-  0  &minus; 1  &minus; 3|&minus; 1
+|| 0   0   - 2|- 2 || .
+|&#x2308;            |    |&#x2309;
+  0  - 1  - 3|- 1
 " class="math-display" ></center></td></tr></table>
 <!--l. 107--><p class="nopar" >
 No segundo passo, permutamos a segunda linha com a terceira:
@@ -180,21 +182,21 @@ class="equation-star"><tr><td>
                                                                           
    <center class="math-display" >
 <img 
-src="main1709x.png" alt="&lfloor;            |    &rfloor;
+src="main1709x.png" alt="&#x230A;            |    &#x230B;
              |
 || 1   1   1  | 1  ||
 ||            |    || .
-|&lceil; 0  &minus; 1  &minus; 3|&minus; 1 |&rceil;
-  0   0   &minus; 2|&minus; 2
+|&#x2308; 0  - 1  - 3|- 1 |&#x2309;
+  0   0   - 2|- 2
 " class="math-display" ></center></td></tr></table>
 <!--l. 115--><p class="nopar" >
 Neste momento, a matriz já se encontra na forma triangular. Da terceira linha,
 encontramos <img 
-src="main1710x.png" alt="&minus; 2z = &minus; 21  "  class="math" >, ou seja, <img 
+src="main1710x.png" alt="- 2z = - 21  "  class="math" >, ou seja, <img 
 src="main1711x.png" alt="z = 1  "  class="math" >. Substituindo na segunda equação,
 temos <img 
-src="main1712x.png" alt="&minus;  y &minus; 3z = &minus; 2  "  class="math" >, ou seja, <img 
-src="main1713x.png" alt="y = &minus; 1  "  class="math" > e finalmente, da primeira linha,
+src="main1712x.png" alt="-  y - 3z = - 2  "  class="math" >, ou seja, <img 
+src="main1713x.png" alt="y = - 1  "  class="math" > e finalmente, da primeira linha,
 <img 
 src="main1714x.png" alt="x + y + z = 1  "  class="math" >, resultando em <img 
 src="main1715x.png" alt="x = 1  "  class="math" >.
@@ -224,7 +226,7 @@ sistema <div class="eqnarray">
    <center class="math-display" >
 <img 
 src="main1717x.png" alt="  x + y + z  =   1
- 2x + y &minus; z  =   0
+ 2x + y - z  =   0
 
 2x + 2z + z  =   1
 " class="math-display" ></center>
@@ -238,29 +240,29 @@ class="ec-lmbx-12">ão. </span>A matriz completa do sistema é
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1718x.png" alt="&lfloor;             &rfloor;   &lfloor;             &rfloor;
+src="main1718x.png" alt="&#x230A;             &#x230B;   &#x230A;             &#x230B;
 
-|| 1  1   1   1||   || 2  1  &minus; 1 0 ||
-||             || &sim; ||             ||
-|&lceil; 2  1  &minus; 1  0|&rceil;   |&lceil; 1  1   1  1 |&rceil;
+|| 1  1   1   1||   || 2  1  - 1 0 ||
+||             || ~ ||             ||
+|&#x2308; 2  1  - 1  0|&#x2309;   |&#x2308; 1  1   1  1 |&#x2309;
   2  2   1   1      2  2   1  1
-                  &lfloor;               &rfloor;
+                  &#x230A;               &#x230B;
 
-                  || 2   1   &minus; 1  0||
-                &sim; || 0  1&#x2215;2  3&#x2215;2  1||
-                  |&lceil;               |&rceil;
+                  || 2   1   - 1  0||
+                ~ || 0  1&#x2215;2  3&#x2215;2  1||
+                  |&#x2308;               |&#x2309;
                     0   1    2   1
-                  &lfloor;               &rfloor;
-                    2   1   &minus; 1  0
+                  &#x230A;               &#x230B;
+                    2   1   - 1  0
                   ||               ||
-                &sim; || 0   1    2   1||
-                  |&lceil;               |&rceil;
+                ~ || 0   1    2   1||
+                  |&#x2308;               |&#x2309;
                     0  1&#x2215;2  3&#x2215;2  1
-                  &lfloor;               &rfloor;
-                  | 2  1  &minus; 1   0 |
+                  &#x230A;               &#x230B;
+                  | 2  1  - 1   0 |
                   ||               ||
-                &sim; || 0  1   2    1 ||
-                  &lceil;               &rceil;
+                ~ || 0  1   2    1 ||
+                  &#x2308;               &#x2309;
                     0  0  1&#x2215;2  1&#x2215;2
 " class="math-display" ></center></td></tr></table>
 <!--l. 164--><p class="nopar" >
@@ -269,8 +271,8 @@ src="main1719x.png" alt="1&#x2215;2z =  1&#x2215;2  "  class="math" >, ou seja, 
 src="main1720x.png" alt="z = 1  "  class="math" >. Substituímos na segunda equação
 e temos <img 
 src="main1721x.png" alt="y + 2z =  1  "  class="math" >, ou seja, <img 
-src="main1722x.png" alt="y = &minus; 1  "  class="math" > e, finalmente <img 
-src="main1723x.png" alt="2x + y &minus; z = 0  "  class="math" >, resultando
+src="main1722x.png" alt="y = - 1  "  class="math" > e, finalmente <img 
+src="main1723x.png" alt="2x + y - z = 0  "  class="math" >, resultando
 em <img 
 src="main1724x.png" alt="x = 1  "  class="math" >.
                                                                           <div class="flushright" 
@@ -292,11 +294,11 @@ parcial.
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1726x.png" alt="&lfloor;         &rfloor; &lfloor;   &rfloor;   &lfloor;    &rfloor;
+src="main1726x.png" alt="&#x230A;         &#x230B; &#x230A;   &#x230B;   &#x230A;    &#x230B;
 
 || 0  2  2 || || x ||   ||  8 ||
 ||         || ||   || = ||    ||
-|&lceil; 1  2  1 |&rceil; |&lceil; y |&rceil;   |&lceil;  9 |&rceil;
+|&#x2308; 1  2  1 |&#x2309; |&#x2308; y |&#x2309;   |&#x2308;  9 |&#x2309;
   1  1  1     z        6
 " class="math-display" ></center></td></tr></table>
 <!--l. 193--><p class="nopar" >
@@ -307,35 +309,35 @@ class="ec-lmbx-12">ç</span><span
 class="ec-lmbx-12">ão. </span>Construímos a matriz completa: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main1727x.png" alt="&lfloor;         |  &rfloor;      &lfloor;         |  &rfloor;
+src="main1727x.png" alt="&#x230A;         |  &#x230B;      &#x230A;         |  &#x230B;
           |                   |
 || 0  2  2 |8 ||      || 1  2  1 |9 ||
-||         |  ||  &sim;   ||         |  ||
-|&lceil; 1  2  1 |9 |&rceil;      |&lceil; 0  2  2 |8 |&rceil;
+||         |  ||  ~   ||         |  ||
+|&#x2308; 1  2  1 |9 |&#x2309;      |&#x2308; 0  2  2 |8 |&#x2309;
   1  1  1 |6          1  1  1 |6
-                    &lfloor;           |    &rfloor;
+                    &#x230A;           |    &#x230B;
                                 |
                     || 1   2   1 | 9  ||
-                &sim;   || 0   2   2 | 8  ||
-                    |&lceil;           |    |&rceil;
-                      0  &minus; 1  0 |&minus; 3
-                    &lfloor;         |  &rfloor;
+                ~   || 0   2   2 | 8  ||
+                    |&#x2308;           |    |&#x2309;
+                      0  - 1  0 |- 3
+                    &#x230A;         |  &#x230B;
                       1  2  1 |9
                     ||         |  ||
-                &sim;   || 0  2  2 |8 ||
-                    |&lceil;         |  |&rceil;
+                ~   || 0  2  2 |8 ||
+                    |&#x2308;         |  |&#x2309;
                       0  0  1 |1
-                    &lfloor;         |  &rfloor;
+                    &#x230A;         |  &#x230B;
                     | 1  2  0 |8 |
                     ||         |  ||
-                &sim;   || 0  2  0 |6 ||
-                    &lceil;         |  &rceil;
+                ~   || 0  2  0 |6 ||
+                    &#x2308;         |  &#x2309;
                       0  0  1 |1
-                    &lfloor;         |  &rfloor;
+                    &#x230A;         |  &#x230B;
                     | 1  0  0 |2 |
                     ||         |  ||
-                &sim;   || 0  2  0 |6 ||
-                    &lceil;         |  &rceil;
+                ~   || 0  2  0 |6 ||
+                    &#x2308;         |  &#x2309;
                       0  0  1  1
 " class="math-display" ></center>
 </div>Portanto <img 
@@ -360,34 +362,34 @@ class="ec-lmbx-12">.</span>
                                                                           
    <center class="math-display" >
 <img 
-src="main1732x.png" alt="&lfloor;       &rfloor;&lfloor;    &rfloor;   &lfloor;   &rfloor;
+src="main1732x.png" alt="&#x230A;       &#x230B;&#x230A;    &#x230B;   &#x230A;   &#x230B;
 
-|&lceil;  &#x03B5;  2 |&rceil;|&lceil;  x |&rceil; = |&lceil; 4 |&rceil;
+|&#x2308;  &#x03B5;  2 |&#x2309;|&#x2308;  x |&#x2309; = |&#x2308; 4 |&#x2309;
    1  &#x03B5;     y       3
 " class="math-display" ></center> Executamos a eliminação gaussiana sem pivotamento parcial para <img 
-src="main1733x.png" alt="&#x03B5; &frasl;= 0  "  class="math" > e
+src="main1733x.png" alt="&#x03B5; &#x2044;= 0  "  class="math" > e
 <img 
 src="main1734x.png" alt="|&#x03B5;| &#x003C; &#x003C; 1  "  class="math" >:
    <center class="math-display" >
 <img 
-src="main1735x.png" alt="&lfloor;      |  &rfloor;    &lfloor;          |      &rfloor;
+src="main1735x.png" alt="&#x230A;      |  &#x230B;    &#x230A;          |      &#x230B;
 | &#x03B5;  2 |4 |    | &#x03B5;    2   |  4   |
-&lceil;      |  &rceil; &sim;  &lceil;        2 |    4 &rceil;
-  1  &#x03B5; |3        0  &#x03B5; &minus; &#x03B5; |3 &minus; &#x03B5;
+&#x2308;      |  &#x2309; ~  &#x2308;        2 |    4 &#x2309;
+  1  &#x03B5; |3        0  &#x03B5; - &#x03B5; |3 - &#x03B5;
 " class="math-display" ></center>
 <!--l. 276--><p class="indent" >   Temos
    <center class="math-display" >
 <img 
-src="main1736x.png" alt="     3 &minus; 4 &#x2215;&#x03B5;
+src="main1736x.png" alt="     3 - 4 &#x2215;&#x03B5;
 y =  --------
-     &#x03B5; &minus; 2 &#x2215;&#x03B5;
+     &#x03B5; - 2 &#x2215;&#x03B5;
 " class="math-display" ></center>e
                                                                           
 
                                                                           
    <center class="math-display" >
 <img 
-src="main1737x.png" alt="x = 4-&minus;-2y-
+src="main1737x.png" alt="x = 4---2y-
        &#x03B5;
 " class="math-display" ></center>
 <!--l. 281--><p class="indent" >   Observe que a expressão obtida para <img 
@@ -397,15 +399,15 @@ src="main1740x.png" alt="&#x03B5;  "  class="math" >
 é pequeno:
    <center class="math-display" >
 <img 
-src="main1741x.png" alt="y = 3-&minus;-4&#x2215;&#x03B5;-=  3&#x03B5; &minus;-4-&minus;&rarr;  &minus;-4 = 2,  quando  &#x03B5; &rarr;  0.
-    &#x03B5; &minus; 2&#x2215;&#x03B5;    &#x03B5;2 &minus; 2     &minus; 2
+src="main1741x.png" alt="y = 3---4&#x2215;&#x03B5;-=  3&#x03B5; --4--&#x2192;  --4 = 2,  quando  &#x03B5; &#x2192;  0.
+    &#x03B5; - 2&#x2215;&#x03B5;    &#x03B5;2 - 2     - 2
 " class="math-display" ></center> Já expressão obtida para <img 
 src="main1742x.png" alt="x  "  class="math" > depende justamente da diferença <img 
-src="main1743x.png" alt="2 &minus; y  "  class="math" >:
+src="main1743x.png" alt="2 - y  "  class="math" >:
    <center class="math-display" >
 <img 
-src="main1744x.png" alt="    4 &minus; 2y    2
-x = -------=  -(2 &minus; y)
+src="main1744x.png" alt="    4 - 2y    2
+x = -------=  -(2 - y)
        &#x03B5;      &#x03B5;
 " class="math-display" ></center>
 <!--l. 286--><p class="indent" >   Assim,  quando  <img 
@@ -425,21 +427,21 @@ passo:
 <!--l. 290--><p class="indent" >
    <center class="math-display" >
 <img 
-src="main1749x.png" alt="&lfloor;      |  &rfloor;   &lfloor;       |  &rfloor;   &lfloor;           |       &rfloor;
+src="main1749x.png" alt="&#x230A;      |  &#x230B;   &#x230A;       |  &#x230B;   &#x230A;           |       &#x230B;
   &#x03B5;  2 |4        1  &#x03B5; |3       1     &#x03B5;   |   3
-|&lceil;      |  |&rceil; &sim; |&lceil;       |  |&rceil; &sim; |&lceil;           |       |&rceil;
-  1  &#x03B5; |3        &#x03B5;  2 |4       0  2 &minus; &#x03B5;2 |4 &minus; 3&#x03B5;
+|&#x2308;      |  |&#x2309; ~ |&#x2308;       |  |&#x2309; ~ |&#x2308;           |       |&#x2309;
+  1  &#x03B5; |3        &#x03B5;  2 |4       0  2 - &#x03B5;2 |4 - 3&#x03B5;
 " class="math-display" ></center>
 <!--l. 307--><p class="indent" >   Continuando o procedimento, temos:
    <center class="math-display" >
 <img 
-src="main1750x.png" alt="    4 &minus; 4&#x03B5;
+src="main1750x.png" alt="    4 - 4&#x03B5;
 y = -----2-
-    2 &minus; &#x03B5;
+    2 - &#x03B5;
 " class="math-display" ></center> e
    <center class="math-display" >
 <img 
-src="main1751x.png" alt="x = 3 &minus; &#x03B5;y
+src="main1751x.png" alt="x = 3 - &#x03B5;y
 " class="math-display" ></center>
                                                                           
 
@@ -453,10 +455,10 @@ converge a <img
 src="main1754x.png" alt="2  "  class="math" >, como no caso anterior. No entanto, mesmo que <img 
 src="main1755x.png" alt="y = 2  "  class="math" >, a segunda
 expressão produz <img 
-src="main1756x.png" alt="x = 3 &minus; &#x03B5;y  "  class="math" >, isto é, a aproximação <img 
-src="main1757x.png" alt="x &asymp; 3  "  class="math" > não depende mais de
+src="main1756x.png" alt="x = 3 - &#x03B5;y  "  class="math" >, isto é, a aproximação <img 
+src="main1757x.png" alt="x &#x2248; 3  "  class="math" > não depende mais de
 obter <img 
-src="main1758x.png" alt="2 &minus; y  "  class="math" > com precisão.
+src="main1758x.png" alt="2 - y  "  class="math" > com precisão.
 <!--l. 314--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
  id="x33-530004.1.1"></a>Exercícios</h4><hr class="section">
@@ -470,7 +472,7 @@ class="ec-lmbx-12">E 4.1.1.</span>  </span> Resolva o seguinte sistema de equaç
 <img 
 src="main1759x.png" alt="x + y + z  =  0
 
- x + 10z   =  &minus; 48
+ x + 10z   =  - 48
  10y +  z  =  25
 " class="math-display" ></center>
 </div>Usando eliminação gaussiana com pivotamento parcial (não use o computador
@@ -485,17 +487,17 @@ class="ec-lmr-6">Escrevemos o sistema na forma matricial e resolvemos: </span><d
    <center class="math-display" >
 <img 
 src="main1760x.png" alt="[         |   ]     [         |    ]  [         |   ]
-  11  10  110 |&minus;048   &sim;    10  &minus;11  19|&minus;048  &sim;   10  110  11 |205   &sim;
-  0 10  1 |25         0  10  1| 25      0 &minus; 1 9 |&minus;48
+  11  10  110 |-048   ~    10  -11  19|-048  ~   10  110  11 |205   ~
+  0 10  1 |25         0  10  1| 25      0 - 1 9 |-48
                     [ 1  1   1 |  0  ]  [ 1  1  1| 0 ]
-                 &sim;    0  10  1 | 25   &sim;   0 10  1|25  &sim;
-                      0  0  9.1 |&minus;45.5      0  0  1|&minus;5
+                 ~    0  10  1 | 25   ~   0 10  1|25  ~
+                      0  0  9.1 |-45.5      0  0  1|-5
                     [ 1  1  0 |5  ]  [ 1 1  0 |5 ]
-                 &sim;    0  10 0 |30  &sim;   0 1  0 |3   &sim;
-                      0  0  1 |&minus;5      0 0  1 |&minus;5
+                 ~    0  10 0 |30  ~   0 1  0 |3   ~
+                      0  0  1 |-5      0 0  1 |-5
                     [ 1  0  0| 2 ]
-                 &sim;    0  1  0| 3
-                      0  0  1|&minus;5
+                 ~    0  1  0| 3
+                      0  0  1|-5
 " class="math-display" ></center>
 </div><span 
 class="ec-lmr-6">Portanto</span> <img 
@@ -503,7 +505,7 @@ src="main1761x.png" alt="x= 2  "  class="math" ><span
 class="ec-lmr-6">,</span> <img 
 src="main1762x.png" alt="y= 3  "  class="math" ><span 
 class="ec-lmr-6">,</span> <img 
-src="main1763x.png" alt="z =&minus;5  "  class="math" >
+src="main1763x.png" alt="z =-5  "  class="math" >
    <div class="newtheorem">
 <!--l. 380--><p class="noindent" ><span class="head">
 <a 
@@ -513,7 +515,7 @@ class="ec-lmbx-12">E 4.1.2.</span>  </span>Resolva o seguinte sistema de equaç�
    <center class="math-display" >
 <img 
 src="main1764x.png" alt="x + y + z  =  0
- x + 10z   =  &minus; 48
+ x + 10z   =  - 48
  10y +  z  =  25
 " class="math-display" ></center>
 </div>Usando eliminação gaussiana com pivotamento parcial (não use o computador
@@ -529,12 +531,12 @@ class="ec-lmbx-12">E 4.1.3.</span>  </span>Calcule a inversa da matriz
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1765x.png" alt="     &lfloor;           &rfloor;
-     | 1   2  &minus; 1|
+src="main1765x.png" alt="     &#x230A;           &#x230B;
+     | 1   2  - 1|
      ||           ||
-A =  ||&minus; 1  2   0 ||
-     &lceil;           &rceil;
-       2   1  &minus; 1
+A =  ||- 1  2   0 ||
+     &#x2308;           &#x2309;
+       2   1  - 1
 " class="math-display" ></center></td></tr></table>
 <!--l. 395--><p class="nopar" >
 usando eliminação gaussiana com pivotamento parcial.
@@ -548,21 +550,21 @@ usando eliminação gaussiana com pivotamento parcial.
                                                                           
 <span 
 class="ec-lmbx-12">E 4.1.4.</span>  </span> Demonstre que se <img 
-src="main1766x.png" alt="ad &frasl;= bc  "  class="math" >, então a matriz <img 
+src="main1766x.png" alt="ad &#x2044;= bc  "  class="math" >, então a matriz <img 
 src="main1767x.png" alt="A  "  class="math" > dada por:
    <center class="math-display" >
 <img 
-src="main1768x.png" alt="     &lfloor;      &rfloor;
+src="main1768x.png" alt="     &#x230A;      &#x230B;
      | a  b |
-A  = &lceil;      &rceil;
+A  = &#x2308;      &#x2309;
        c  d
 " class="math-display" ></center> é inversível e sua inversa é dada por:
    <center class="math-display" >
 <img 
-src="main1769x.png" alt="               &lfloor;          &rfloor;
+src="main1769x.png" alt="               &#x230A;          &#x230B;
 
-A &minus;1 = ---1----|&lceil;  d   &minus; b |&rceil;.
-       ad &minus; bc   &minus; c   a
+A -1 = ---1----|&#x2308;  d   - b |&#x2309;.
+       ad - bc   - c   a
 " class="math-display" ></center>
    </div>
                                                                           

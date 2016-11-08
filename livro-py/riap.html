@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Rápida Introdução à Python'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Rápida Introdução à Python, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -96,46 +98,46 @@
 </div>
    <!--l. 3-->
    <h2 class="appendixHead"><span class="titlemark">Apêndice&#x00A0;A</span><br /><a 
- id="x96-164000A"></a>Rápida Introdução à Python</h2>
+ id="x96-165000A"></a>Rápida Introdução à Python</h2>
 <a 
- id="dx96-164001"></a>
+ id="dx96-165001"></a>
 <!--l. 5--><p class="noindent" >Neste apêndice, discutiremos os principais aspectos da linguagem computacional
 <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">Python</span></span></span> que são excenciais para uma boa leitura desta versão do livro. O material
 aqui apresetado, é uma adaptação livre do Apêndice A de [10].
    <div class="sectionTOCS">
    &#x00A0;<span class="sectionToc" >A.1 <a 
-href="riap-sobre_a_linguagem_python.html#x97-165000A.1">Sobre a linguagem Python</a></span>
+href="riap-sobre_a_linguagem_python.html#x97-166000A.1">Sobre a linguagem Python</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >A.1.1 <a 
-href="riap-sobre_a_linguagem_python.html#x97-166000A.1.1" id="QQ2-97-194">Instalação e Execução</a></span>
+href="riap-sobre_a_linguagem_python.html#x97-167000A.1.1" id="QQ2-97-196">Instalação e Execução</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >A.1.2 <a 
-href="riap-sobre_a_linguagem_python.html#x97-167000A.1.2" id="QQ2-97-195">Usando Python</a></span>
+href="riap-sobre_a_linguagem_python.html#x97-168000A.1.2" id="QQ2-97-197">Usando Python</a></span>
 <br />   &#x00A0;<span class="sectionToc" >A.2 <a 
-href="riap-elementos_da_linguagem.html#x99-168000A.2">Elementos da linguagem</a></span>
+href="riap-elementos_da_linguagem.html#x99-169000A.2">Elementos da linguagem</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >A.2.1 <a 
-href="riap-elementos_da_linguagem.html#x99-169000A.2.1" id="QQ2-99-197">Operações matemáticas elementares</a></span>
+href="riap-elementos_da_linguagem.html#x99-170000A.2.1" id="QQ2-99-199">Operações matemáticas elementares</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >A.2.2 <a 
-href="riap-elementos_da_linguagem.html#x99-170000A.2.2" id="QQ2-99-198">Funções e constantes elementares</a></span>
+href="riap-elementos_da_linguagem.html#x99-171000A.2.2" id="QQ2-99-200">Funções e constantes elementares</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >A.2.3 <a 
-href="riap-elementos_da_linguagem.html#x99-171000A.2.3" id="QQ2-99-199">Operadores lógicos</a></span>
+href="riap-elementos_da_linguagem.html#x99-172000A.2.3" id="QQ2-99-201">Operadores lógicos</a></span>
 <br />   &#x00A0;<span class="sectionToc" >A.3 <a 
-href="riap-matrizes.html#x100-172000A.3">Matrizes</a></span>
+href="riap-matrizes.html#x100-173000A.3">Matrizes</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >A.3.1 <a 
-href="riap-matrizes.html#x100-173000A.3.1" id="QQ2-100-201">Obtendo dados de uma matriz</a></span>
+href="riap-matrizes.html#x100-174000A.3.1" id="QQ2-100-203">Obtendo dados de uma matriz</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >A.3.2 <a 
-href="riap-matrizes.html#x100-174000A.3.2" id="QQ2-100-202">Operações matriciais e elemento-a-elemento</a></span>
+href="riap-matrizes.html#x100-175000A.3.2" id="QQ2-100-204">Operações matriciais e elemento-a-elemento</a></span>
 <br />   &#x00A0;<span class="sectionToc" >A.4 <a 
-href="riap-estruturas_de_ramificacao_e_repeticao.html#x101-175000A.4">Estruturas de ramificação e repetição</a></span>
+href="riap-estruturas_de_ramificacao_e_repeticao.html#x101-176000A.4">Estruturas de ramificação e repetição</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >A.4.1 <a 
-href="riap-estruturas_de_ramificacao_e_repeticao.html#x101-176000A.4.1" id="QQ2-101-204">A instrução de ramificação &#8220;if&#8221;</a></span>
+href="riap-estruturas_de_ramificacao_e_repeticao.html#x101-177000A.4.1" id="QQ2-101-206">A instrução de ramificação &#8220;if&#8221;</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >A.4.2 <a 
-href="riap-estruturas_de_ramificacao_e_repeticao.html#x101-177000A.4.2" id="QQ2-101-205">A instrução de repetição &#8220;for&#8221;</a></span>
+href="riap-estruturas_de_ramificacao_e_repeticao.html#x101-178000A.4.2" id="QQ2-101-207">A instrução de repetição &#8220;for&#8221;</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >A.4.3 <a 
-href="riap-estruturas_de_ramificacao_e_repeticao.html#x101-178000A.4.3" id="QQ2-101-206">A instrução de repetição &#8220;while&#8221;</a></span>
+href="riap-estruturas_de_ramificacao_e_repeticao.html#x101-179000A.4.3" id="QQ2-101-208">A instrução de repetição &#8220;while&#8221;</a></span>
 <br />   &#x00A0;<span class="sectionToc" >A.5 <a 
-href="riap-funcoes.html#x102-179000A.5">Funções</a></span>
+href="riap-funcoes.html#x102-180000A.5">Funções</a></span>
 <br />   &#x00A0;<span class="sectionToc" >A.6 <a 
-href="riap-graficos.html#x103-180000A.6">Gráficos</a></span>
+href="riap-graficos.html#x103-181000A.6">Gráficos</a></span>
    </div>
 
 

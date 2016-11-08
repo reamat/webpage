@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Regras compostas, Método composto dos trapézios, Método composto de Simpson'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Regras compostas, Método composto dos trapézios, Método composto de Simpson, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -94,12 +96,12 @@
   		</ul>
 	</nav>
 </div>
-   <!--l. 569-->
+   <!--l. 556-->
    <h3 class="sectionHead"><span class="titlemark">9.2   </span> <a 
- id="x79-1320009.2"></a>Regras compostas</h3><hr class="section">
+ id="x79-1330009.2"></a>Regras compostas</h3><hr class="section">
 <a 
- id="dx79-132001"></a>
-<!--l. 571--><p class="noindent" >Vimos que em todas as estimativas de erro que derivamos, o erro depende do
+ id="dx79-133001"></a>
+<!--l. 558--><p class="noindent" >Vimos que em todas as estimativas de erro que derivamos, o erro depende do
 tamanho do intervalo de integração. Uma estratégia para reduzir o erro consiste
 em particionar o intervalo de integração em diversos subintervalos menores tal
 que
@@ -107,208 +109,173 @@ que
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main3579x.png" alt="&int; b           n &int; x
-   f(x)dx =  &sum;     i+1f (x)dx
+src="main3599x.png" alt="&#x222B; b          &#x2211;n &#x222B; xi+1
+   f(x)dx =          f (x)dx
  a           i=1  xi
 " class="math-display" ></center></td></tr></table>
-<!--l. 574--><p class="nopar" >
+<!--l. 561--><p class="nopar" >
 onde <img 
-src="main3580x.png" alt="a = x1 &#x003C; ... &#x003C; xn+1 = b  "  class="math" >, sendo <img 
-src="main3581x.png" alt="n  "  class="math" > o número de subintervalos da
+src="main3600x.png" alt="a = x1 &#x003C; ... &#x003C; xn+1 = b  "  class="math" >, sendo <img 
+src="main3601x.png" alt="n  "  class="math" > o número de subintervalos da
 partição do intervalo de integração. No caso uniforme <img 
-src="main3582x.png" alt="xi = a + (i &minus; 1)h  "  class="math" >,
+src="main3602x.png" alt="xi = a + (i - 1)h  "  class="math" >,
 <img 
-src="main3583x.png" alt="h =  (b &minus; a)&#x2215;n  "  class="math" >.
-<!--l. 577--><p class="indent" >   Depois, aplica-se um método simples de integração em cada subintervalo,
+src="main3603x.png" alt="h =  (b - a)&#x2215;n  "  class="math" >.
+<!--l. 564--><p class="indent" >   Depois, aplica-se um método simples de integração em cada subintervalo,
    <center class="math-display" >
 <img 
-src="main3584x.png" alt="&int; xi+1
-      f(x)dx &asymp;  &Delta;Si
+src="main3604x.png" alt="&#x222B; xi+1
+      f(x)dx &#x2248;  &#x0394;Si
  xi  " class="math-display" ></center> e a
 integral será aproximada por
+   <center class="math-display" >
+<img 
+src="main3605x.png" alt="&#x222B; b               n
+   f(x)dx &#x2248;  S = &#x2211;  &#x0394;Si
+ a               i=1
+" class="math-display" ></center>
+<!--l. 588--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">9.2.1   </span> <a 
+ id="x79-1340009.2.1"></a>Método composto dos trapézios</h4><hr class="section">
+<a 
+ id="dx79-134001"></a>
+<!--l. 589--><p class="noindent" >A <span 
+class="ec-lmbx-12">regra composta dos trap</span><span 
+class="ec-lmbx-12">ézios </span>assume a seguinte forma: <div class="eqnarray">
                                                                           
 
                                                                           
    <center class="math-display" >
 <img 
-src="main3585x.png" alt="&int; b              &sum;n
-   f(x)dx &asymp;  S =    &Delta;Si
- a               i=1
-" class="math-display" ></center>
-<!--l. 601--><p class="noindent" >
-   <h4 class="subsectionHead"><span class="titlemark">9.2.1   </span> <a 
- id="x79-1330009.2.1"></a>Método composto dos trapézios</h4><hr class="section">
-<a 
- id="dx79-133001"></a>
-<!--l. 602--><p class="noindent" >A <span 
-class="ec-lmbx-12">regra composta dos trap</span><span 
-class="ec-lmbx-12">ézios </span>assume a seguinte forma: <div class="eqnarray">
-   <center class="math-display" >
-<img 
-src="main3586x.png" alt="&int; b            &sum;n &int; xi+1
+src="main3606x.png" alt="&#x222B; b            &#x2211;n &#x222B; xi+1
    f(x)dx   =           f(x)dx
  a             i=1 xi
-               &sum;n  xi+1 &minus; xi
-           &asymp;       ---------[f (xi) + f (xi+1)]
+               &#x2211;n  x   - x
+           &#x2248;       -i+1-----i[f (xi) + f (xi+1)]
                i=1    2
 " class="math-display" ></center>
 </div>Como <img 
-src="main3587x.png" alt="h = xi+1 &minus; xi  "  class="math" >, temos: <div class="eqnarray">
+src="main3607x.png" alt="h = x    - x
+     i+1    i  "  class="math" >, temos: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main3588x.png" alt="&int; b             h N&sum;i
-   f (x)dx  &asymp;   --   [f(xk) + f(xk+1)]
+src="main3608x.png" alt="&#x222B; b               N&#x2211;i
+   f (x)dx  &#x2248;   h-   [f(xk) + f(xk+1)]
  a              2 k=1
                 h
-            =   --[f (x1) + 2f (x2) + 2f(x3) + &sdot;&sdot;&sdot; + 2f (xNi) + f (xNi+1)]
-                2                       N
-                h-                      &sum; i
-            =   2 [f (x1) + f (xNi+1)] + h  f(xi)
+            =   --[f (x1) + 2f (x2) + 2f(x3) + &#x22C5;&#x22C5;&#x22C5; + 2f (xNi) + f (xNi+1)]
+                2
+                h                       N&#x2211;i
+            =   2-[f (x1) + f (xNi+1)] + h  f(xi)
                                         i=2
 " class="math-display" ></center>
 </div>
-<!--l. 625--><p class="noindent" >
+<!--l. 612--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">9.2.2   </span> <a 
- id="x79-1340009.2.2"></a>Método composto de Simpson</h4><hr class="section">
+ id="x79-1350009.2.2"></a>Método composto de Simpson</h4><hr class="section">
 <a 
- id="dx79-134001"></a>
-<!--l. 626--><p class="noindent" >Já a regra composta de Simpson assume a seguinte forma: <div class="eqnarray">
-   <center class="math-display" >
-<img 
-src="main3589x.png" alt="&int; b             &sum;n &int; xk+1
-    f(x)dx  =            f (x )dx
-  a             k=1 xk
-                &sum;n xx+1 &minus;  xk[           ( xk+1 + xk )          ]
-            &asymp;      ---------- f (xk) + 4f  ----------  + f(xk+1)
-                k=1     6                      2
-" class="math-display" ></center>
-</div>onde, como anteriormente, <img 
-src="main3590x.png" alt="xk = a + (k &minus; 1)h  "  class="math" >, <img 
-src="main3591x.png" alt="h = (b &minus; a)&#x2215;n  "  class="math" > e <img 
-src="main3592x.png" alt="i = 1,2,...,n + 1  "  class="math" >,
-sendo <img 
-src="main3593x.png" alt="n  "  class="math" > o número de subintervalos da partição do intervalo de integração.
-Podemos simplificar o somatório acima, escrevendo:
-   <table 
-class="equation-star"><tr><td>
+ id="dx79-135001"></a>
+<!--l. 613--><p class="noindent" >Já a regra composta de Simpson assume a seguinte forma: <div class="eqnarray">
                                                                           
 
                                                                           
    <center class="math-display" >
 <img 
-src="main3594x.png" alt="&int; b          h [         n&sum;&minus; 1            &sum;n                  ]
-   f(x)dx &asymp;  -- f(x1) + 2    f(x2i+1) + 4   f(x2i) + f(x2n+1) +  O (h5 )
- a           3           i=1             i=1
-" class="math-display" ></center></td></tr></table>
-<!--l. 634--><p class="nopar" >
-onde, agora, <img 
-src="main3595x.png" alt="h = (b &minus; a)&#x2215;(2n)  "  class="math" >, <img 
-src="main3596x.png" alt="xi = a + (i &minus; 1)h  "  class="math" >, <img 
-src="main3597x.png" alt="i = 1,2,...,2n + 1  "  class="math" >.
-   <div class="newtheorem">
-<!--l. 647--><p class="noindent" ><span class="head">
-<a 
- id="x79-134003r1"></a>
-<span 
-class="ec-lmbx-12">Exemplo 9.2.1.</span>  </span>Calcule numericamente a integral
+src="main3609x.png" alt="&#x222B;                n &#x222B;
+  b f(x)dx  =   &#x2211;    xk+1f (x )dx
+  a             k=1 xk
+                &#x2211;n           [           (           )          ]
+            &#x2248;      xx+1----xk f (xk) + 4f  xk+1-+-xk-  + f(xk+1)
+                k=1     6                      2
+" class="math-display" ></center>
+</div>onde, como anteriormente, <img 
+src="main3610x.png" alt="xk = a + (k - 1)h  "  class="math" >, <img 
+src="main3611x.png" alt="h = (b - a)&#x2215;n  "  class="math" > e <img 
+src="main3612x.png" alt="i = 1,2,...,n + 1  "  class="math" >,
+sendo <img 
+src="main3613x.png" alt="n  "  class="math" > o número de subintervalos da partição do intervalo de integração.
+Podemos simplificar o somatório acima, escrevendo:
+   <table 
+class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main3598x.png" alt="&int; 2 2 x2
+src="main3614x.png" alt="               [                                             ]
+&#x222B; b          h-          n&#x2211;- 1            &#x2211;n                          5
+ a f(x)dx &#x2248;  3  f(x1) + 2    f(x2i+1) + 4   f(x2i) + f(x2n+1) +  O (h  )
+                         i=1             i=1
+" class="math-display" ></center></td></tr></table>
+<!--l. 621--><p class="nopar" >
+onde, agora, <img 
+src="main3615x.png" alt="h = (b - a)&#x2215;(2n)  "  class="math" >, <img 
+src="main3616x.png" alt="xi = a + (i - 1)h  "  class="math" >, <img 
+src="main3617x.png" alt="i = 1,2,...,2n + 1  "  class="math" >.
+   <div class="newtheorem">
+<!--l. 634--><p class="noindent" ><span class="head">
+<a 
+ id="x79-135003r1"></a>
+<span 
+class="ec-lmbx-12">Exemplo 9.2.1.</span>  </span>Calcule numericamente a integral
+                                                                          
+
+                                                                          
+   <center class="math-display" >
+<img 
+src="main3618x.png" alt="&#x222B; 2 2 x2
    x e  dx
  0
 " class="math-display" ></center> pelas regras compostas do ponto médio, trapézio e Simpson variando o
 número de intervalos <br 
 class="newline" /><img 
-src="main3599x.png" alt="Ni =  1, 2, 3, 6, 12, 24, 48, 96  "  class="math" >.
+src="main3619x.png" alt="Ni =  1, 2, 3, 6, 12, 24, 48, 96  "  class="math" >.
    </div>
-<!--l. 653--><p class="indent" >   <span 
+<!--l. 640--><p class="indent" >   <span 
 class="ec-lmbx-12">Solu</span><span 
 class="ec-lmbx-12">ç</span><span 
-class="ec-lmbx-12">ão. </span><!--tex4ht:inline--><div class="tabular"> <table id="TBL-16" class="tabular" 
-cellspacing="0" cellpadding="0" rules="groups" 
-><colgroup id="TBL-16-1g"><col 
-id="TBL-16-1"></colgroup><colgroup id="TBL-16-2g"><col 
-id="TBL-16-2"><col 
-id="TBL-16-3"><col 
-id="TBL-16-4"></colgroup><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-16-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-16-1-1"  
-class="td11"><img 
-src="main3600x.png" alt="n  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-1-2"  
-class="td11">Ponto Médio</td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-1-3"  
-class="td11">Trapézios</td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-1-4"  
-class="td11"> Simpson </td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-16-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-16-2-1"  
-class="td11"> 1  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-2-2"  
-class="td11"> 5,4365637  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-2-3"  
-class="td11"> 218,3926 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-2-4"  
-class="td11">76,421909</td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-16-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-16-3-1"  
-class="td11"> 2  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-3-2"  
-class="td11"> 21,668412  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-3-3"  
-class="td11">111,91458</td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-3-4"  
-class="td11">51,750469</td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-16-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-16-4-1"  
-class="td11"> 3  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-4-2"  
-class="td11"> 31,678746  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-4-3"  
-class="td11">80,272022</td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-4-4"  
-class="td11">47,876505</td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-16-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-16-5-1"  
-class="td11"> 6  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-5-2"  
-class="td11"> 41,755985  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-5-3"  
-class="td11">55,975384</td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-5-4"  
-class="td11">46,495785</td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-16-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-16-6-1"  
-class="td11"> 12 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-6-2"  
-class="td11"> 45,137529  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-6-3"  
-class="td11">48,865685</td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-6-4"  
-class="td11">46,380248</td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-16-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-16-7-1"  
-class="td11"> 24 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-7-2"  
-class="td11"> 46,057757  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-7-3"  
-class="td11">47,001607</td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-7-4"  
-class="td11">46,372373</td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-16-8-"><td  style="white-space:nowrap; text-align:center;" id="TBL-16-8-1"  
-class="td11"> 48 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-8-2"  
-class="td11"> 46,292964  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-8-3"  
-class="td11">46,529682</td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-8-4"  
-class="td11"> 46,37187 </td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-16-9-"><td  style="white-space:nowrap; text-align:center;" id="TBL-16-9-1"  
-class="td11"> 96 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-9-2"  
-class="td11"> 46,352096  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-9-3"  
-class="td11">46,411323</td><td  style="white-space:nowrap; text-align:center;" id="TBL-16-9-4"  
-class="td11">46,371838</td> </tr></table>
+class="ec-lmbx-12">ão.</span>
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main3620x.png" alt="----|-------------------------------------
+  n |Ponto  M édio  Trap ézios   Simpson
+----|-------------------------------------
+  1 |  5,4365637    218,3926   76,421909
+    |
+  2 |  21,668412    111,91458  51,750469
+    |
+  3 |  31,678746    80,272022  47,876505
+  6 |  41,755985    55,975384  46,495785
+    |
+ 12 |  45,137529    48,865685  46,380248
+    |
+ 24 |  46,057757    47,001607  46,372373
+    |
+ 48 |  46,292964    46,529682   46,37187
+    |
+-96----46,352096----46,411323--46,371838--
                                                                           
 
                                                                           
-</div>
+" class="math-display" ></center></td></tr></table>
+<!--l. 654--><p class="nopar" >
                                                                           <div class="flushright" 
 >
-<!--l. 665--><p class="noindent" >
+<!--l. 655--><p class="noindent" >
  <img 
-src="main3601x.png" alt="&#x2662; "  class="math" ></div>
-<!--l. 667--><p class="noindent" >
+src="main3621x.png" alt="&#x2662; "  class="math" ></div>
+<!--l. 657--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
- id="x79-1350009.2.2"></a>Exercícios</h4><hr class="section">
-<!--l. 669--><p class="noindent" >Em construção ... Gostaria de colaborar na escrita deste livro? Veja como
+ id="x79-1360009.2.2"></a>Exercícios</h4><hr class="section">
+<!--l. 659--><p class="noindent" >Em construção ... Gostaria de colaborar na escrita deste livro? Veja como
 em:
 <div class="center" 
 >
-<!--l. 669--><p class="noindent" >
-<!--l. 669--><p class="noindent" ><a 
+<!--l. 659--><p class="noindent" >
+<!--l. 659--><p class="noindent" ><a 
 href="http://www.ufrgs.br/numerico" class="url" ><span 
 class="ec-lmtt-12">http://www.ufrgs.br/numerico</span></a></div>
-   <!--l. 671-->
-<!--l. 671--><p class="indent" >   <a 
+   <!--l. 661-->
+<!--l. 661--><p class="indent" >   <a 
  id="tailin-regras_compostas.html"></a>   
 <div class="text-center">
 		<nav class="nav-links" aria-label="Page navigation">

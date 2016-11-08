@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:03:00"> 
+<meta name="date" content="2016-11-07 23:12:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Critérios de parada'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Critérios de parada, Scilab'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro/main.pdf">Formato PDF</a></li>
             <li><a href="../livro/main.epub">Formato EPUB</a></li>
             <li><a href="../livro/slide.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro-py/main.html">Versão Python</a></li>
           </ul>
         </li>		
@@ -150,7 +152,7 @@ src="main1719x.png" alt="&#x03F5;n+1 =  1&#x03F5;
        2  "  class="math" ></div>         </td><td  style="white-space:nowrap; text-align:center;" id="TBL-6-2-4"  
 class="td11"> <div class="multirow"><!-- rows=2 -->
 <img 
-src="main1720x.png" alt="bn-&minus;-an &#x003C; erro
+src="main1720x.png" alt="bn---an &#x003C; erro
    2  "  class="math" ></div> </td>
 </tr><tr  
  style="vertical-align:baseline;" id="TBL-6-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-6-3-1"  
@@ -176,13 +178,13 @@ class="td11"> <span
 class="ec-lmr-10x-x-109">Linear </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-6-5-3"  
 class="td11"> <div class="multirow"><!-- rows=2 -->
 <img 
-src="main1722x.png" alt="&#x03F5;n+1 &asymp; |&#x03D5;&prime;(x &lowast;)|&#x03B5;n  "  class="math" ></div>       </td><td  style="white-space:nowrap; text-align:center;" id="TBL-6-5-4"  
+src="main1722x.png" alt="&#x03F5;n+1 &#x2248; |&#x03D5;&#x2032;(x *)|&#x03B5;n  "  class="math" ></div>       </td><td  style="white-space:nowrap; text-align:center;" id="TBL-6-5-4"  
 class="td11"><div class="multirow"><!-- rows=2 -->
 <img 
-src="main1723x.png" alt="--|&Delta;n&Delta;-|- &#x003C; erro
-1&minus; &Delta;nn&minus;1
- &Delta;   &#x003C; &Delta;
-   n     n&minus;1   "  class="math" ></div></td>
+src="main1723x.png" alt="--|&#x0394;n&#x0394;-|- &#x003C; erro
+1- &#x0394;nn-1
+ &#x0394;   &#x003C; &#x0394;
+   n     n-1   "  class="math" ></div></td>
 </tr><tr  
  style="vertical-align:baseline;" id="TBL-6-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-6-6-1"  
 class="td11"> <span 
@@ -210,11 +212,11 @@ class="ec-lmr-10x-x-109">ática    </span></td><td  style="white-space:nowrap; t
 class="td11">   <div class="multirow"><!-- rows=2 -->
 <img 
 src="main1725x.png" alt="        |      |
-       1||f-&prime;&prime;(x&lowast;)|| 2
-&#x03F5;n+1 &asymp; 2|f &prime;(x&lowast;)|&#x03B5;n  "  class="math" ></div>    </td><td  style="white-space:nowrap; text-align:center;" id="TBL-6-8-4"  
+       1||f-&#x2032;&#x2032;(x*)|| 2
+&#x03F5;n+1 &#x2248; 2|f &#x2032;(x*)|&#x03B5;n  "  class="math" ></div>    </td><td  style="white-space:nowrap; text-align:center;" id="TBL-6-8-4"  
 class="td11">  <div class="multirow"><!-- rows=2 -->
 <img 
-src="main1726x.png" alt="|&Delta;n | &#x003C; erro  "  class="math" ></div>    </td>
+src="main1726x.png" alt="|&#x0394;n | &#x003C; erro  "  class="math" ></div>    </td>
 </tr><tr  
  style="vertical-align:baseline;" id="TBL-6-9-"><td  style="white-space:nowrap; text-align:center;" id="TBL-6-9-1"  
 class="td11">       </td><td  style="white-space:nowrap; text-align:center;" id="TBL-6-9-2"  
@@ -237,21 +239,21 @@ class="td11"><div class="multirow"><!-- rows=3 -->
 class="ec-lmr-10x-x-109">Secante</span></div> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-6-11-2"  
 class="td11"><div class="multirow"><!-- rows=3 -->
 <img 
-src="main1728x.png" alt="      &radic; --
+src="main1728x.png" alt="      &#x221A; --
         5+ 1
 p  =  ---2---
 
-   &asymp;  1,618  "  class="math" ></div></td><td  style="white-space:nowrap; text-align:center;" id="TBL-6-11-3"  
+   &#x2248;  1,618  "  class="math" ></div></td><td  style="white-space:nowrap; text-align:center;" id="TBL-6-11-3"  
 class="td11"><div class="multirow"><!-- rows=3 -->
 <img 
 src="main1729x.png" alt="        |      |
-        ||f&prime;&prime;(x&lowast;)||
-&#x03B5;n+1  &asymp; |f&prime;(x&lowast;)|&#x03B5;n&#x03B5;n&minus;1
+        ||f&#x2032;&#x2032;(x*)||
+&#x03B5;n+1  &#x2248; |f&#x2032;(x*)|&#x03B5;n&#x03B5;n-1
            &#x03D5;
-      &asymp; M &#x03B5;n  "  class="math" ></div></td><td  style="white-space:nowrap; text-align:center;" id="TBL-6-11-4"  
+      &#x2248; M &#x03B5;n  "  class="math" ></div></td><td  style="white-space:nowrap; text-align:center;" id="TBL-6-11-4"  
 class="td11">  <div class="multirow"><!-- rows=3 -->
 <img 
-src="main1730x.png" alt="|&Delta;n | &#x003C; erro  "  class="math" ></div>    </td>
+src="main1730x.png" alt="|&#x0394;n | &#x003C; erro  "  class="math" ></div>    </td>
 </tr><tr  
  style="vertical-align:baseline;" id="TBL-6-12-"><td  style="white-space:nowrap; text-align:center;" id="TBL-6-12-1"  
 class="td11">       </td><td  style="white-space:nowrap; text-align:center;" id="TBL-6-12-2"  
@@ -291,7 +293,7 @@ esperado. Nos três últimos métodos, é comum que se exija como critério de
 parada que a condição seja satisfeita por alguns poucos passos consecutivos.
 Outros critérios podem ser usados. No métodos das secantes, deve-se ter o
 cuidado de evitar divisões por zero quando <img 
-src="main1731x.png" alt="xn+1 &minus; xn  "  class="math" > muito pequeno em
+src="main1731x.png" alt="xn+1 - xn  "  class="math" > muito pequeno em
 relação à resolução do sistema de numeração.
    </div>
    <h4 class="likesubsectionHead"><a 
@@ -329,7 +331,7 @@ class="ec-lmbx-12">E 3.6.3.</span>  </span>Aplique o método das secantes para r
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1732x.png" alt=" &minus; x2
+src="main1732x.png" alt=" - x2
 e    = 2x
 " class="math-display" ></center></td></tr></table>
 <!--l. 1663--><p class="nopar" >
@@ -359,7 +361,7 @@ class="equation-star"><tr><td>
                                                                           
    <center class="math-display" >
 <img 
-src="main1734x.png" alt="|x(n+1) &minus; x &lowast;| &asymp; C |x(n) &minus; x&lowast;||x (n&minus; 1) &minus; x&lowast;|,
+src="main1734x.png" alt="|x(n+1) - x *| &#x2248; C |x(n) - x*||x (n- 1) - x*|,
 " class="math-display" ></center></td></tr></table>
 <!--l. 1673--><p class="nopar" >
 para aproximações iniciais <img 
@@ -367,22 +369,22 @@ src="main1735x.png" alt=" (1)
 x   "  class="math" > e <img 
 src="main1736x.png" alt=" (2)
 x   "  class="math" > suficientemente próximas de <img 
-src="main1737x.png" alt=" &lowast;
+src="main1737x.png" alt=" *
 x  "  class="math" >, onde
 <img 
-src="main1738x.png" alt="    &lowast;
+src="main1738x.png" alt="    *
 f (x  ) = 0  "  class="math" >.
    </div>
 <!--l. 1676--><p class="noindent" ><span 
 class="ec-lmbx-6">Resposta.  </span><span 
 class="ec-lmr-6">Seja</span> <img 
-src="main1739x.png" alt="f(x)&isin; C2  "  class="math" > <span 
+src="main1739x.png" alt="f(x)&#x2208; C2  "  class="math" > <span 
 class="ec-lmr-6">um fun</span><span 
 class="ec-lmr-6">ç</span><span 
 class="ec-lmr-6">ão tal que</span> <img 
-src="main1740x.png" alt="f(x&lowast;)=0  "  class="math" > <span 
+src="main1740x.png" alt="f(x*)=0  "  class="math" > <span 
 class="ec-lmr-6">e</span> <img 
-src="main1741x.png" alt="f&prime;(x&lowast;)&frasl;=0  "  class="math" ><span 
+src="main1741x.png" alt="f&#x2032;(x*)&#x2044;=0  "  class="math" ><span 
 class="ec-lmr-6">. Considere o processo iterativo do m</span><span 
 class="ec-lmr-6">étodo das</span>
 <span 
@@ -390,50 +392,50 @@ class="ec-lmr-6">secantes:</span>
    <center class="math-display" >
 <img 
 src="main1742x.png" alt="               f(x(n))
-x(n+1) =x(n)&minus; f(x(n))&minus; f(x(n&minus;1))(x(n)&minus; x(n&minus;1))  " class="math-display" ></center> <span 
+x(n+1) =x(n)- f(x(n))- f(x(n-1))(x(n)- x(n-1))  " class="math-display" ></center> <span 
 class="ec-lmr-6">Esta</span>
 <span 
 class="ec-lmr-6">express</span><span 
 class="ec-lmr-6">ão pode ser escrita como: </span><div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main1743x.png" alt="              f(x(n))(x(n)&minus; x(n&minus;1))
-x(n+1) =  x(n)&minus; -f(x(n))&minus; f(x(n&minus;1))
-          (n)(  (n)    (n&minus;1))    (n)  (n)  (n&minus;1)
-      =  x---f(x-)&minus;-f(x----)&minus;-f(x--)(x--&minus; x---)
-                    f(x(n))&minus; f(x(n&minus;1))
-      =  x(n)f(x(n(&minus;n1)))&minus; x(n&minus;(n1&minus;)1f)(x(n))
-             f(x  )&minus; f(x  )
+src="main1743x.png" alt="              f(x(n))(x(n)- x(n-1))
+x(n+1) =  x(n)- -f(x(n))- f(x(n-1))
+          (n)(  (n)    (n-1))    (n)  (n)  (n-1)
+      =  x---f(x-)--f(x----)--f(x--)(x--- x---)
+                    f(x(n))- f(x(n-1))
+      =  x(n)f(x(n(-n1)))- x(n-(n1-)1f)(x(n))
+             f(x  )- f(x  )
 " class="math-display" ></center>
 </div>
 <!--l. 1687--><p class="indent" >   <span 
 class="ec-lmr-6">Subtraindo</span> <img 
-src="main1744x.png" alt="x&lowast; "  class="math" > <span 
+src="main1744x.png" alt="x* "  class="math" > <span 
 class="ec-lmr-6">de ambos os lados temos: </span><div class="eqnarray">
                                                                           
 
                                                                           
    <center class="math-display" >
 <img 
-src="main1745x.png" alt="             x(n)f(x(n&minus;1))&minus; x(n&minus;1)f(x(n))
-x(n+1)&minus; x&lowast; =  ----f(x(n))&minus; f(x(n&minus;1))-- &minus; x&lowast;
-             x(n)f(x(n&minus;1))&minus; x(n&minus;1)f(x(n))&minus; x&lowast;(f(x(n))&minus; f(x(n&minus;1)))
-          =  -------------f(x(n))&minus; f(x(n&minus;1))------------
-             (x(n)&minus; x&lowast;)f(x(n&minus;1))&minus; (x(n&minus;1)&minus; x&lowast;)f(x(n))
-          =  --------f(x(n))&minus;-f(x(n&minus;1))--------
+src="main1745x.png" alt="             x(n)f(x(n-1))- x(n-1)f(x(n))
+x(n+1)- x* =  ----f(x(n))- f(x(n-1))-- - x*
+             x(n)f(x(n-1))- x(n-1)f(x(n))- x*(f(x(n))- f(x(n-1)))
+          =  -------------f(x(n))- f(x(n-1))------------
+             (x(n)- x*)f(x(n-1))- (x(n-1)- x*)f(x(n))
+          =  --------f(x(n))--f(x(n-1))--------
 " class="math-display" ></center>
 </div>
 <!--l. 1695--><p class="indent" >   <span 
 class="ec-lmr-6">Definimos</span> <img 
-src="main1746x.png" alt="        &lowast;
-&#x03F5;n = xn &minus; x "  class="math" ><span 
+src="main1746x.png" alt="        *
+&#x03F5;n = xn - x "  class="math" ><span 
 class="ec-lmr-6">, equivalente a</span> <img 
-src="main1747x.png" alt="    &lowast;
+src="main1747x.png" alt="    *
 xn = x+ &#x03F5;n  "  class="math" > <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main1748x.png" alt="&#x03F5;n+1  =  &#x03F5;nf(x&lowast;+&lowast;&#x03F5;n&minus;1)&minus;-&#x03F5;n&minus;&lowast;1f(x&lowast;+-&#x03F5;n)
-          f(x +&#x03F5;n)&minus; f(x + &#x03F5;n&minus;1)
+src="main1748x.png" alt="&#x03F5;n+1  =  &#x03F5;nf(x*+*&#x03F5;n-1)--&#x03F5;n-*1f(x*+-&#x03F5;n)
+          f(x +&#x03F5;n)- f(x + &#x03F5;n-1)
 " class="math-display" ></center>
 </div>
 <!--l. 1701--><p class="indent" >   <span 
@@ -444,9 +446,9 @@ src="main1749x.png" alt="f(x)  "  class="math" > <span
 class="ec-lmr-6">no numerador por </span><div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main1750x.png" alt="  &lowast;         &lowast;    &prime; &lowast;  2f&prime;&prime;(x&lowast;)
-f(x +&#x03F5;) &asymp;  f(x)+&#x03F5;f(x )+ &#x03F5;  2
-f(x&lowast;+&#x03F5;) &asymp;  &#x03F5;f&prime;(x&lowast;)+ &#x03F5;2f&prime;&prime;(x&lowast;)
+src="main1750x.png" alt="  *         *    &#x2032; *  2f&#x2032;&#x2032;(x*)
+f(x +&#x03F5;) &#x2248;  f(x)+&#x03F5;f(x )+ &#x03F5;  2
+f(x*+&#x03F5;) &#x2248;  &#x03F5;f&#x2032;(x*)+ &#x03F5;2f&#x2032;&#x2032;(x*)
                     2
 " class="math-display" ></center>
 </div>
@@ -456,13 +458,13 @@ f(x&lowast;+&#x03F5;) &asymp;  &#x03F5;f&prime;(x&lowast;)+ &#x03F5;2f&prime;&pr
                                                                           
    <center class="math-display" >
 <img 
-src="main1751x.png" alt="         &#x03F5;n[&#x03F5;n&minus;1f&prime;(x&lowast;)+&#x03F5;2n&minus; 1f&prime;&prime;(2x&lowast;)]&minus; &#x03F5;n&minus;1[&#x03F5;nf&prime;(x&lowast;)+&#x03F5;2nf&prime;&prime;(x2&lowast;)]
-&#x03F5;n+1 &asymp;   -----------f(x&lowast;+&#x03F5;n)&minus;-f(x&lowast;+-&#x03F5;n&minus;1)------------
-         f&prime;&prime;(x&lowast;)(&#x03F5; &#x03F5;2 &minus; &#x03F5;  &#x03F5;2)
-     =   --2&lowast;---n-n&minus;1-&lowast;n&minus;1-n-
-         f(x + &#x03F5;n)&minus; f(x +(&#x03F5;n&minus;1)  )
-     =   1f&prime;&prime;(x&lowast;)--&#x03F5;n&#x03F5;n&minus;1-&#x03F5;n&minus;1&minus;-&#x03F5;n---
-         2    f(x&lowast;+ &#x03F5;n)&minus; f(x&lowast;+&#x03F5;n&minus;1)
+src="main1751x.png" alt="         &#x03F5;n[&#x03F5;n-1f&#x2032;(x*)+&#x03F5;2n- 1f&#x2032;&#x2032;(2x*)]- &#x03F5;n-1[&#x03F5;nf&#x2032;(x*)+&#x03F5;2nf&#x2032;&#x2032;(x2*)]
+&#x03F5;n+1 &#x2248;   -----------f(x*+&#x03F5;n)--f(x*+-&#x03F5;n-1)------------
+         f&#x2032;&#x2032;(x*)(&#x03F5; &#x03F5;2 - &#x03F5;  &#x03F5;2)
+     =   --2*---n-n-1-*n-1-n-
+         f(x + &#x03F5;n)- f(x +(&#x03F5;n-1)  )
+     =   1f&#x2032;&#x2032;(x*)--&#x03F5;n&#x03F5;n-1-&#x03F5;n-1--&#x03F5;n---
+         2    f(x*+ &#x03F5;n)- f(x*+&#x03F5;n-1)
 " class="math-display" ></center>
 </div>
 <!--l. 1713--><p class="indent" >   <span 
@@ -472,9 +474,9 @@ class="equation"><tr><td><a
  id="x33-51011r7"></a>
    <center class="math-display" >
 <img 
-src="main1752x.png" alt="  &lowast;        &lowast;       [  &lowast;   &prime; &lowast;  ] [  &lowast;   &prime; &lowast;    ]
-f(x +&#x03F5;n)&minus; f(x +&#x03F5;n&minus;1)&asymp; f(x )+f(x )&#x03F5;n &minus; f(x )+f (x )&#x03F5;n&minus;1
-                  =f&prime;(x&lowast;)(&#x03F5;n &minus; &#x03F5;n&minus;1)
+src="main1752x.png" alt="  *        *       [  *   &#x2032; *  ] [  *   &#x2032; *    ]
+f(x +&#x03F5;n)- f(x +&#x03F5;n-1)&#x2248; f(x )+f(x )&#x03F5;n - f(x )+f (x )&#x03F5;n-1
+                  =f&#x2032;(x*)(&#x03F5;n - &#x03F5;n-1)
 " class="math-display" ></center></td><td class="equation-label"><span 
 class="ec-lmr-6">(3.7)</span></td></tr></table>
 <!--l. 1719--><p class="nopar" >
@@ -485,8 +487,8 @@ class="equation"><tr><td><a
  id="x33-51012r8"></a>
    <center class="math-display" >
 <img 
-src="main1753x.png" alt="       &prime;&prime;&lowast;
-&#x03F5;n+1 &asymp; 1f&prime;(x&lowast;)&#x03F5;n&#x03F5;n&minus;1
+src="main1753x.png" alt="       &#x2032;&#x2032;*
+&#x03F5;n+1 &#x2248; 1f&#x2032;(x*)&#x03F5;n&#x03F5;n-1
      2 f(x )
 " class="math-display" ></center></td><td class="equation-label"><span 
 class="ec-lmr-6">(3.8)</span></td></tr></table>
@@ -501,8 +503,8 @@ class="equation"><tr><td><a
                                                                           
    <center class="math-display" >
 <img 
-src="main1754x.png" alt=" (n+1)  &lowast;  1f&prime;&prime;(x&lowast;)( (n)  &lowast;)( (n&minus;1)  &lowast;)
-x    &minus; x &asymp; 2f&prime;(x&lowast;) x &minus; x  x    &minus; x
+src="main1754x.png" alt=" (n+1)  *  1f&#x2032;&#x2032;(x*)( (n)  *)( (n-1)  *)
+x    - x &#x2248; 2f&#x2032;(x*) x - x  x    - x
 " class="math-display" ></center></td><td class="equation-label"><span 
 class="ec-lmr-6">(3.9)</span></td></tr></table>
 <!--l. 1728--><p class="nopar" >

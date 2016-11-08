@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:03:00"> 
+<meta name="date" content="2016-11-07 23:12:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Funções'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Funções, Scilab'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro/main.pdf">Formato PDF</a></li>
             <li><a href="../livro/main.epub">Formato EPUB</a></li>
             <li><a href="../livro/slide.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro-py/main.html">Versão Python</a></li>
           </ul>
         </li>		
@@ -122,17 +124,17 @@ class="ec-lmbx-12">Exemplo A.5.1.</span>  </span>O seguinte código:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-92">
+   <div class="verbatim" id="verbatim-96">
 --&#x003E;deff(&#8217;y&#x00A0;=&#x00A0;f(x)&#8217;,&#x00A0;&#8217;y&#x00A0;=&#x00A0;x&#x00A0;+&#x00A0;sin(x)&#8217;)
 </div>
 <!--l. 466--><p class="nopar" >define, no Scilab, a função <img 
-src="main4513x.png" alt="f(x) = x + sen x  "  class="math" >.
+src="main4532x.png" alt="f(x) = x + sen x  "  class="math" >.
 <!--l. 469--><p class="indent" >   Observe que <img 
-src="main4514x.png" alt="f (&pi;) = &pi;  "  class="math" >. Confirme isso computando:
+src="main4533x.png" alt="f (&#x03C0;) = &#x03C0;  "  class="math" >. Confirme isso computando:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-93">
+   <div class="verbatim" id="verbatim-97">
 --&#x003E;f(%pi)
 </div>
 <!--l. 472--><p class="nopar" >no Scilab.
@@ -140,7 +142,7 @@ src="main4514x.png" alt="f (&pi;) = &pi;  "  class="math" >. Confirme isso compu
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-94">
+   <div class="verbatim" id="verbatim-98">
 function&#x00A0;[y]&#x00A0;=&#x00A0;f(x)
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;y&#x00A0;=&#x00A0;x&#x00A0;+&#x00A0;sin(x)
 &#x00A0;<br />endfunction
@@ -156,7 +158,7 @@ class="ec-lmbx-12">Exemplo A.5.2.</span>  </span>O seguinte código Scilab:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-95">
+   <div class="verbatim" id="verbatim-99">
 function&#x00A0;[z]&#x00A0;=&#x00A0;h(x,y)
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;if&#x00A0;(x&#x00A0;&#x003C;&#x00A0;y)&#x00A0;then
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;z&#x00A0;=&#x00A0;y&#x00A0;-&#x00A0;x
@@ -170,10 +172,10 @@ function&#x00A0;[z]&#x00A0;=&#x00A0;h(x,y)
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main4515x.png" alt="         (
-         |{ y &minus; x  ,x &#x003C;  y
+src="main4534x.png" alt="         (
+         |{ y - x  ,x &#x003C;  y
 h(x,y) =
-         |( x &minus; y  ,x &ge;  y
+         |( x - y  ,x &#x2265;  y
 " class="math-display" ></center></td></tr></table>
 <!--l. 503--><p class="nopar" >
    </div>
@@ -186,7 +188,7 @@ class="ec-lmbx-12">Exemplo A.5.3.</span>  </span>O seguinte código:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-96">
+   <div class="verbatim" id="verbatim-100">
 function&#x00A0;[y]&#x00A0;=&#x00A0;J(x)
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;y(1,1)&#x00A0;=&#x00A0;2*x(1)
 &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;y(1,2)&#x00A0;=&#x00A0;2*x(2)
@@ -196,13 +198,13 @@ function&#x00A0;[y]&#x00A0;=&#x00A0;J(x)
 &#x00A0;<br />endfunction
 </div>
 <!--l. 516--><p class="nopar" >define a matriz jacobiana <img 
-src="main4516x.png" alt="J(x1,x2) := &part;&part;(f(x1,f,x2))-
+src="main4535x.png" alt="J(x1,x2) := &#x2202;&#x2202;(f(x1,f,x2))-
               1 2   "  class="math" > da função:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main4517x.png" alt="fff (x1,x2 ) = (x2 + x2, cos(x1x2)).
+src="main4536x.png" alt="fff (x1,x2 ) = (x2 + x2, cos(x1x2)).
               1   2
 " class="math-display" ></center></td></tr></table>
 <!--l. 520--><p class="nopar" >

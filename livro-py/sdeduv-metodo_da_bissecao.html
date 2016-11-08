@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Método da bisseção, Código Python: método da bisseção'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Método da bisseção, Código Python: método da bisseção, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -105,8 +107,8 @@ class="ec-lmbx-12">étodo da bisse</span><span
 class="ec-lmbx-12">ç</span><span 
 class="ec-lmbx-12">ão </span>explora o fato de que uma função contínua
 <img 
-src="main746x.png" alt="f : [a,b] &rarr; &#x211D;  "  class="math" > com <img 
-src="main747x.png" alt="f(a) &sdot; f(b) &#x003C; 0  "  class="math" > tem um zero no intervalo <img 
+src="main746x.png" alt="f : [a,b] &#x2192; &#x211D;  "  class="math" > com <img 
+src="main747x.png" alt="f(a) &#x22C5; f(b) &#x003C; 0  "  class="math" > tem um zero no intervalo <img 
 src="main748x.png" alt="(a,b)  "  class="math" > (veja o
 teorema de Bolzano&#x00A0;<a 
 href="sdeduv-existencia_e_unicidade.html#x19-29006r1">3.1.1<!--tex4ht:ref: teo:teorema_de_Bolzano --></a>). Assim, a ideia para aproximar o zero de uma tal
@@ -125,10 +127,10 @@ src="main751x.png" alt="x(0) = (a-+-b).
 Pode ocorrer de <img 
 src="main752x.png" alt="f (x(0)) = 0  "  class="math" > e, neste caso, o zero de <img 
 src="main753x.png" alt="f (x)  "  class="math" > é <img 
-src="main754x.png" alt="x&lowast; = x(0)   "  class="math" >. Caso
+src="main754x.png" alt="x* = x(0)   "  class="math" >. Caso
 contrário, se <img 
-src="main755x.png" alt="f(a) &sdot; f(x(0)) &#x003C; 0  "  class="math" >, então <img 
-src="main756x.png" alt="x &lowast; &isin; (a,x (0))  "  class="math" >. Neste caso, tomamos como
+src="main755x.png" alt="f(a) &#x22C5; f(x(0)) &#x003C; 0  "  class="math" >, então <img 
+src="main756x.png" alt="x * &#x2208; (a,x (0))  "  class="math" >. Neste caso, tomamos como
 segunda aproximação do zero de <img 
 src="main757x.png" alt="f(x)  "  class="math" > o ponto médio do intervalo <img 
 src="main758x.png" alt="[a,x (0)]  "  class="math" >, i.e.
@@ -136,7 +138,7 @@ src="main758x.png" alt="[a,x (0)]  "  class="math" >, i.e.
 src="main759x.png" alt="  (1)         (0)
 x   =  (a + x  )&#x2215;2  "  class="math" >. Noutro caso, temos <img 
 src="main760x.png" alt="    (0)
-f (x  ) &sdot; f(b) &#x003C; 0  "  class="math" > e, então, tomamos
+f (x  ) &#x22C5; f(b) &#x003C; 0  "  class="math" > e, então, tomamos
 <img 
 src="main761x.png" alt="  (1)     (0)
 x   =  (x   + b)&#x2215;2  "  class="math" >. Repetimos este procedimento até obtermos a aproximação
@@ -166,11 +168,11 @@ class="content">Método da bisseção.</span></div><!--tex4ht:label?: x21-310022
 <!--l. 232--><p class="indent" >   De forma mais precisa, suponha que queiramos calcular uma aproximação
 com uma certa precisão <img 
 src="main763x.png" alt="T OL  "  class="math" > para um zero <img 
-src="main764x.png" alt="  &lowast;
+src="main764x.png" alt="  *
 x  "  class="math" > de uma dada função
 contínua <img 
-src="main765x.png" alt="f : [a,b] &rarr; &#x211D;  "  class="math" > tal que <img 
-src="main766x.png" alt="f (a) &sdot; f (b) &#x003C; 0  "  class="math" >. Iniciamos, tomando <img 
+src="main765x.png" alt="f : [a,b] &#x2192; &#x211D;  "  class="math" > tal que <img 
+src="main766x.png" alt="f (a) &#x22C5; f (b) &#x003C; 0  "  class="math" >. Iniciamos, tomando <img 
 src="main767x.png" alt="n =  0  "  class="math" >
 e:
    <table 
@@ -192,7 +194,7 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main770x.png" alt="  (n)    (n)
-|b---&minus;-a--| &#x003C; T OL,
+|b-----a--| &#x003C; T OL,
      2
 " class="math-display" ></center></td></tr></table>
 <!--l. 239--><p class="nopar" >
@@ -200,11 +202,11 @@ então <img
 src="main771x.png" alt="x (n)   "  class="math" > é a aproximação desejada. Caso contrário, preparamos a próxima
 iteração <img 
 src="main772x.png" alt="n + 1  "  class="math" > da seguinte forma: se <img 
-src="main773x.png" alt="f(a(n)) &sdot; f(x (n)) &#x003C; 0  "  class="math" >, então setamos
+src="main773x.png" alt="f(a(n)) &#x22C5; f(x (n)) &#x003C; 0  "  class="math" >, então setamos
 <img 
 src="main774x.png" alt="a(n+1) = a(n)   "  class="math" > e <img 
 src="main775x.png" alt="b(n+1) = x(n)   "  class="math" >; noutro caso, se <img 
-src="main776x.png" alt="f(x(n)) &sdot; f(b(n)) &#x003C; 0  "  class="math" >, então
+src="main776x.png" alt="f(x(n)) &#x22C5; f(b(n)) &#x003C; 0  "  class="math" >, então
 setamos <img 
 src="main777x.png" alt=" (n+1 )    (n)
 a     = x   "  class="math" > e <img 
@@ -237,25 +239,25 @@ de iterações ter sido atingido.
 class="ec-lmbx-12">Exemplo 3.2.1.</span>  </span>Use o método da bisseção para calcular uma solução de
 <img 
 src="main783x.png" alt="ex = x + 2  "  class="math" > no intervalo <img 
-src="main784x.png" alt="[&minus; 2, 0]  "  class="math" > com precisão <img 
-src="main785x.png" alt="T OL =  10&minus;1   "  class="math" >.
+src="main784x.png" alt="[- 2, 0]  "  class="math" > com precisão <img 
+src="main785x.png" alt="T OL =  10-1   "  class="math" >.
    </div>
 <!--l. 248--><p class="indent" >   <span 
 class="ec-lmbx-12">Solu</span><span 
 class="ec-lmbx-12">ç</span><span 
 class="ec-lmbx-12">ão. </span>Primeiramente, observamos que resolver a equação dada é
 equivalente a calcular o zero de <img 
-src="main786x.png" alt="f(x) = ex &minus; x &minus; 2  "  class="math" >. Além disso, temos
+src="main786x.png" alt="f(x) = ex - x - 2  "  class="math" >. Além disso, temos
 <img 
-src="main787x.png" alt="f (&minus; 2) &sdot; f(0) &#x003C; 0  "  class="math" >. Desta forma, podemos iniciar o método da bisseção tomando o
+src="main787x.png" alt="f (- 2) &#x22C5; f(0) &#x003C; 0  "  class="math" >. Desta forma, podemos iniciar o método da bisseção tomando o
 intervalo inicial <img 
-src="main788x.png" alt="[a(0),b(0)] = [&minus; 2,0]  "  class="math" > e:
+src="main788x.png" alt="[a(0),b(0)] = [- 2,0]  "  class="math" > e:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main789x.png" alt=" (0)   a-(0) +-b(0)
-x   =     2     =  &minus; 1.
+x   =     2     =  - 1.
 " class="math-display" ></center></td></tr></table>
                                                                           
 
@@ -264,7 +266,7 @@ x   =     2     =  &minus; 1.
 Apresentamos as iterações na Tabela&#x00A0;<a 
 href="#x21-310051">3.1<!--tex4ht:ref: tab:metodo_da_bissecao --></a>. Observamos que a precisão
 <img 
-src="main790x.png" alt="          &minus; 1
+src="main790x.png" alt="          - 1
 T OL  = 10   "  class="math" > foi obtida na quarta iteração com o zero de <img 
 src="main791x.png" alt="f(x)  "  class="math" > sendo
 aproximado por <img 
@@ -304,7 +306,7 @@ src="main796x.png" alt="x(n)   "  class="math" >     </td><td  style="white-spac
 class="td11"><img 
 src="main797x.png" alt="f(a(n))f (x(n))  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-6"  
 class="td11"><img 
-src="main798x.png" alt="|b(n) &minus; a(n)|
+src="main798x.png" alt="|b(n) - a(n)|
 -----------
      2  "  class="math" ></td>
 </tr><tr 
@@ -313,11 +315,11 @@ class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><
 class="td11"><img 
 src="main799x.png" alt="0  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-2"  
 class="td11">  <img 
-src="main800x.png" alt="&minus; 2  "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-3"  
+src="main800x.png" alt="- 2  "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-3"  
 class="td11">  <img 
 src="main801x.png" alt="0  "  class="math" >    </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-4"  
 class="td11">  <img 
-src="main802x.png" alt="&minus; 1  "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-5"  
+src="main802x.png" alt="- 1  "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-5"  
 class="td11">    <img 
 src="main803x.png" alt="&#x003C; 0  "  class="math" >      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-6"  
 class="td11">    <img 
@@ -326,11 +328,11 @@ src="main804x.png" alt="1  "  class="math" >       </td></tr><tr
 class="td11"><img 
 src="main805x.png" alt="1 "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-2"  
 class="td11"> <img 
-src="main806x.png" alt="&minus; 2 "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-3"  
+src="main806x.png" alt="- 2 "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-3"  
 class="td11"> <img 
-src="main807x.png" alt="&minus; 1 "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-4"  
+src="main807x.png" alt="- 1 "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-4"  
 class="td11"> <img 
-src="main808x.png" alt="&minus; 1,5 "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-5"  
+src="main808x.png" alt="- 1,5 "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-5"  
 class="td11"> <img 
 src="main809x.png" alt="&#x003C; 0 "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-6"  
 class="td11"> <img 
@@ -340,11 +342,11 @@ src="main810x.png" alt="0,5 "  class="math" ></td>
 class="td11"><img 
 src="main811x.png" alt="2  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-2"  
 class="td11">  <img 
-src="main812x.png" alt="&minus; 2  "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-3"  
+src="main812x.png" alt="- 2  "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-3"  
 class="td11"><img 
-src="main813x.png" alt="&minus;  1,5  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-4"  
+src="main813x.png" alt="-  1,5  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-4"  
 class="td11"> <img 
-src="main814x.png" alt="&minus; 1,75  "  class="math" >  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-5"  
+src="main814x.png" alt="- 1,75  "  class="math" >  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-5"  
 class="td11">    <img 
 src="main815x.png" alt="&#x003C; 0  "  class="math" >      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-6"  
 class="td11">   <img 
@@ -354,11 +356,11 @@ src="main816x.png" alt="0,25  "  class="math" >     </td>
 class="td11"><img 
 src="main817x.png" alt="3  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-2"  
 class="td11">  <img 
-src="main818x.png" alt="&minus; 2  "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-3"  
+src="main818x.png" alt="- 2  "  class="math" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-3"  
 class="td11"><img 
-src="main819x.png" alt="&minus; 1,75  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-4"  
+src="main819x.png" alt="- 1,75  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-4"  
 class="td11"><img 
-src="main820x.png" alt="&minus; 1,875  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-5"  
+src="main820x.png" alt="- 1,875  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-5"  
 class="td11">    <img 
 src="main821x.png" alt="&#x003E; 0  "  class="math" >      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-6"  
 class="td11">   <img 
@@ -368,11 +370,11 @@ src="main822x.png" alt="0,125  "  class="math" >    </td>
 class="td11"><img 
 src="main823x.png" alt="4  "  class="math" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-2"  
 class="td11"><img 
-src="main824x.png" alt="&minus; 1,875  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-3"  
+src="main824x.png" alt="- 1,875  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-3"  
 class="td11"><img 
-src="main825x.png" alt="&minus; 1,75  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-4"  
+src="main825x.png" alt="- 1,75  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-4"  
 class="td11"><img 
-src="main826x.png" alt="&minus;  1,8125  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-5"  
+src="main826x.png" alt="-  1,8125  "  class="math" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-5"  
 class="td11">    <img 
 src="main827x.png" alt="&#x003C; 0  "  class="math" >      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-6"  
 class="td11">  <img 
@@ -422,15 +424,15 @@ href="#x21-31006r1">3.2.1<!--tex4ht:ref: teo:convergencia_bissecao --></a> nos g
 class="ec-lmbx-12">Teorema 3.2.1 </span>(Convergência do método da bisseção)<span 
 class="ec-lmbx-12">.</span>  </span> <span 
 class="ec-lmri-12">Sejam</span> <img 
-src="main830x.png" alt="f : [a,b] &rarr; &#x211D;  "  class="math" >
+src="main830x.png" alt="f : [a,b] &#x2192; &#x211D;  "  class="math" >
 <span 
 class="ec-lmri-12">uma fun</span><span 
 class="ec-lmri-12">ç</span><span 
 class="ec-lmri-12">ão cont</span><span 
 class="ec-lmri-12">ínua tal que</span> <img 
-src="main831x.png" alt="f(a) &sdot; f(b) &#x003C; 0  "  class="math" > <span 
+src="main831x.png" alt="f(a) &#x22C5; f(b) &#x003C; 0  "  class="math" > <span 
 class="ec-lmri-12">e</span> <img 
-src="main832x.png" alt="  &lowast;
+src="main832x.png" alt="  *
 x  "  class="math" > <span 
 class="ec-lmri-12">o </span><span 
 class="ec-lmri-12">único zero de</span> <img 
@@ -453,16 +455,16 @@ class="ec-lmri-12">satisfaz:</span>
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main836x.png" alt="  (n)    &lowast;    b &minus; a
-|x   &minus;  x | &#x003C; 2n+1-,  &forall;n &ge; 0,
+src="main836x.png" alt="  (n)    *    b - a
+|x   -  x | &#x003C; 2n+1-,  &#x2200;n &#x2265; 0,
 " class="math-display" ></center></td></tr></table>
 <!--l. 307--><p class="nopar" >
 <span 
 class="ec-lmri-12">i.e.,</span> <img 
-src="main837x.png" alt=" (n)    &lowast;
-x   &rarr;  x  "  class="math" > <span 
+src="main837x.png" alt=" (n)    *
+x   &#x2192;  x  "  class="math" > <span 
 class="ec-lmri-12">quando</span> <img 
-src="main838x.png" alt="n &rarr;  &infin; "  class="math" ><span 
+src="main838x.png" alt="n &#x2192;  &#x221E; "  class="math" ><span 
 class="ec-lmri-12">.</span>
    </div>
 <!--l. 310--><p class="indent" >   <div class="container-fluid">
@@ -475,7 +477,7 @@ class="ec-lmbx-12">ão. </span>Notemos que, a cada iteração, a distância entr
 aproximação <img 
 src="main839x.png" alt=" (n)
 x   "  class="math" > e o zero <img 
-src="main840x.png" alt=" &lowast;
+src="main840x.png" alt=" *
 x  "  class="math" > da função é menor que a metade do tamanho do
 intervalo <img 
 src="main841x.png" alt="[a(n),b(n)]  "  class="math" > (veja Figura&#x00A0;<a 
@@ -484,18 +486,18 @@ href="#x21-310022">3.2<!--tex4ht:ref: fig:metodo_da_bissecao --></a>), i.e.:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main842x.png" alt="  (n)    &lowast;   b(n) &minus;-a-(n)
-|x   &minus; x | &#x003C;      2    .
+src="main842x.png" alt="  (n)    *   b(n) --a-(n)
+|x   - x | &#x003C;      2    .
 " class="math-display" ></center></td></tr></table>
 <!--l. 314--><p class="nopar" >
 Por construção do método, temos <img 
-src="main843x.png" alt="[a(n),b(n)] &sub; [a(n&minus;1),b(n&minus;1)]  "  class="math" > e:
+src="main843x.png" alt="[a(n),b(n)] &#x2282; [a(n-1),b(n-1)]  "  class="math" > e:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main844x.png" alt="             b(n&minus;1) &minus; a(n&minus;1)
-b(n) &minus; a (n) =--------------.
+src="main844x.png" alt="             b(n-1) - a(n-1)
+b(n) - a (n) =--------------.
                    2
 " class="math-display" ></center></td></tr></table>
 <!--l. 318--><p class="nopar" >
@@ -507,8 +509,8 @@ class="equation-star"><tr><td>
                                                                           
    <center class="math-display" >
 <img 
-src="main845x.png" alt="             b(n) &minus; a(n)   b(n&minus; 1) &minus; a(n&minus;1)         b(0) &minus; a(0)
-|x (n) &minus; x&lowast;| &#x003C; ----------=  -------2------=  &sdot;&sdot;&sdot; = ---n+1---,  &forall;n &ge;  1.
+src="main845x.png" alt="             b(n) - a(n)   b(n- 1) - a(n-1)         b(0) - a(0)
+|x (n) - x*| &#x003C; ----------=  -------2------=  &#x22C5;&#x22C5;&#x22C5; = ---n+1---,  &#x2200;n &#x2265;  1.
                  2              2                  2
 " class="math-display" ></center></td></tr></table>
 <!--l. 322--><p class="nopar" >
@@ -517,8 +519,8 @@ Logo, vemos que:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main846x.png" alt="  (n)    &lowast;    b &minus;-a
-|x    &minus; x | &#x003C; 2n+1 ,  &forall;n &ge;  0.
+src="main846x.png" alt="  (n)    *    b --a
+|x    - x | &#x003C; 2n+1 ,  &#x2200;n &#x2265;  0.
 " class="math-display" ></center></td></tr></table>
 <!--l. 326--><p class="nopar" >
                                                                           <div class="flushright" 
@@ -550,8 +552,8 @@ convergência do método da bisseção. Aproximadamente, temos:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main849x.png" alt="  (n+1)    &lowast;    1- (n+1)   &lowast;
-|x     &minus;  x | &#x2272; 2|x     &minus; x |.
+src="main849x.png" alt="  (n+1)    *    1- (n+1)   *
+|x     -  x | &#x2272; 2|x     - x |.
 " class="math-display" ></center></td></tr></table>
 <!--l. 335--><p class="nopar" >
 Isto nos leva a concluir que o método da bisseção tem <span 
@@ -568,10 +570,10 @@ class="ec-lmbx-12">Exemplo 3.2.2.</span>  </span>No Exemplo&#x00A0;<a
 href="#x21-31004r1">3.2.1<!--tex4ht:ref: ex:metodo_da_bissecao --></a>, precisamos de <img 
 src="main850x.png" alt="4  "  class="math" > iterações do método da
 bisseção para computar uma aproximação com precisão de <img 
-src="main851x.png" alt="10&minus; 1   "  class="math" > do zero
+src="main851x.png" alt="10- 1   "  class="math" > do zero
 de <img 
-src="main852x.png" alt="f (x ) = ex &minus; x &minus; 2  "  class="math" > tomando como intervalo inicial <img 
-src="main853x.png" alt="[a,b] = [&minus; 2,0]  "  class="math" >.
+src="main852x.png" alt="f (x ) = ex - x - 2  "  class="math" > tomando como intervalo inicial <img 
+src="main853x.png" alt="[a,b] = [- 2,0]  "  class="math" >.
 Poderíamos ter estimado o número de iterações <span 
 class="ec-lmbx-12">a priori</span>, pois, como vimos
 acima:
@@ -579,17 +581,17 @@ acima:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main854x.png" alt="  (n)    &lowast;    b &minus; a
-|x   &minus; x  | &le; 2n+1-,  n &ge; 0.
+src="main854x.png" alt="  (n)    *    b - a
+|x   - x  | &#x2264; 2n+1-,  n &#x2265; 0.
 " class="math-display" ></center></td></tr></table>
 <!--l. 342--><p class="nopar" >
 Logo, temos: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main855x.png" alt="               b &minus; a     2
-|x (n) &minus; x&lowast;| &#x003C;   --n+1 =  -n+1-
-                2&minus; n     2&minus;1                &minus; 1
-           =   2   &#x003C;  10   &rArr;  n &#x003E; &minus; log210   &asymp;  3,32.
+src="main855x.png" alt="               b - a     2
+|x (n) - x*| &#x003C;   --n+1 =  -n+1-
+                2- n     2-1                - 1
+           =   2   &#x003C;  10   &#x21D2;  n &#x003E; - log210   &#x2248;  3,32.
 " class="math-display" ></center>
 </div>O que está de acordo com o experimento numérico realizado naquele
 exemplo.
@@ -629,7 +631,7 @@ class="ec-lmtt-12">N</span></span></span> - número máximo de iterações</li><
       <li class="itemize"><span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">p</span></span></span> - aproximação da raiz de <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">f</span></span></span>, i.e. <img 
-src="main858x.png" alt="f (p) &asymp; 0  "  class="math" >.</li></ul>
+src="main858x.png" alt="f (p) &#x2248; 0  "  class="math" >.</li></ul>
    <div class="verbatiminput">
 <span 
 class="ec-lmtt-12">from</span><span 
@@ -879,7 +881,7 @@ class="ec-lmtt-12">);</span>
  id="x21-33001r1"></a>
 <span 
 class="ec-lmbx-12">E 3.2.1.</span>  </span>Considere  a  equação  <img 
-src="main859x.png" alt="&radic; --
+src="main859x.png" alt="&#x221A; --
   x = cos(x)  "  class="math" >.  Use  o  método  da  bisseção
 com  intervalo  inicial  <img 
 src="main860x.png" alt="[a,b] = [0,1]  "  class="math" >  e  <img 
@@ -898,14 +900,14 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main863x.png" alt="                      ( x )
-f(x) = 5 sin (x2) &minus; exp  ---
+f(x) = 5 sin (x2) - exp  ---
                         10
 " class="math-display" ></center></td></tr></table>
 <!--l. 405--><p class="nopar" >
 em intervalos de comprimento <img 
 src="main864x.png" alt="0,1  "  class="math" >. Então, use o método da bisseção para obter
 aproximações dos zeros desta função com precisão de <img 
-src="main865x.png" alt="10&minus;5   "  class="math" >.
+src="main865x.png" alt="10-5   "  class="math" >.
    </div>
 <!--l. 408--><p class="noindent" ><span 
 class="ec-lmbx-6">Resposta.  </span><span 
@@ -928,7 +930,7 @@ class="ec-lmr-6">.</span>
 <span 
 class="ec-lmbx-12">Exemplo 3.2.3.</span>  </span> O polinômio <img 
 src="main869x.png" alt="                     2    3
-p (x ) = &minus; 4 + 8x &minus; 5x + x   "  class="math" > tem raízes <img 
+p (x ) = - 4 + 8x - 5x + x   "  class="math" > tem raízes <img 
 src="main870x.png" alt="x1 = 1  "  class="math" > e
 <img 
 src="main871x.png" alt="x2 = x3 =  2  "  class="math" > no intervalo <img 
@@ -952,15 +954,15 @@ href="sdeduv-existencia_e_unicidade.html#x19-30007r7">3.1.7<!--tex4ht:ref: exist
 intervalo <img 
 src="main875x.png" alt="[1,v + 1]  "  class="math" > para todo <img 
 src="main876x.png" alt="v  "  class="math" > positivo. Dica: defina <img 
-src="main877x.png" alt="f(x) = ln(x) + x &minus; 1 &minus; v
+src="main877x.png" alt="f(x) = ln(x) + x - 1 - v
                    x  "  class="math" >
 e considere a seguinte estimativa:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main878x.png" alt="                  &int; v+1  &prime;              &int; v+1
-f(v + 1) = f (1 ) + 1   f (x)dx &ge;  &minus; v +  1   dx = 0.
+src="main878x.png" alt="                  &#x222B; v+1  &#x2032;              &#x222B; v+1
+f(v + 1) = f (1 ) + 1   f (x)dx &#x2265;  - v +  1   dx = 0.
 " class="math-display" ></center></td></tr></table>
                                                                           
 
@@ -996,7 +998,7 @@ por:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main886x.png" alt="&tau; = k &#x03B8;,
+src="main886x.png" alt="&#x03C4; = k &#x03B8;,
 " class="math-display" ></center></td></tr></table>
 <!--l. 437--><p class="nopar" >
 onde <img 
@@ -1024,7 +1026,7 @@ class="ec-lmbx-6">Resposta.</span>  <img
 src="main897x.png" alt="k&#x03B8;= lP-cos(&#x03B8;)
     2  "  class="math" > <span 
 class="ec-lmr-6">com</span> <img 
-src="main898x.png" alt="&#x03B8;&isin;(0,&pi;&#x2215;2)  "  class="math" ><span 
+src="main898x.png" alt="&#x03B8;&#x2208;(0,&#x03C0;&#x2215;2)  "  class="math" ><span 
 class="ec-lmr-6">;</span> <img 
 src="main899x.png" alt="1,030  "  class="math" ><span 
 class="ec-lmr-6">.</span>
@@ -1045,12 +1047,12 @@ xe  = t,
 onde <img 
 src="main901x.png" alt="t  "  class="math" > é um número real positivo. Mostre que esta equação possui uma única
 solução <img 
-src="main902x.png" alt="x &lowast;  "  class="math" > que pertence ao intervalo <img 
+src="main902x.png" alt="x *  "  class="math" > que pertence ao intervalo <img 
 src="main903x.png" alt="[0,t]  "  class="math" >. Usando esta estimativa como
 intervalo inicial, quantos passos são necessário para obter o valor numérico de <img 
-src="main904x.png" alt="x&lowast;  "  class="math" >
+src="main904x.png" alt="x*  "  class="math" >
 com erro absoluto inferior a <img 
-src="main905x.png" alt="10&minus;6   "  class="math" > quando <img 
+src="main905x.png" alt="10-6   "  class="math" > quando <img 
 src="main906x.png" alt="t = 1  "  class="math" >, <img 
 src="main907x.png" alt="t = 10  "  class="math" > e <img 
 src="main908x.png" alt="t = 100  "  class="math" > através do
@@ -1076,12 +1078,12 @@ src="main914x.png" alt="3,385630  "  class="math" >
 <span 
 class="ec-lmbx-12">E 3.2.6.</span>  </span> O polinômio <img 
 src="main915x.png" alt="        4     2
-f(x) = x  &minus; 4x  + 4  "  class="math" > possui raízes duplas em <img 
-src="main916x.png" alt="&radic; --
+f(x) = x  - 4x  + 4  "  class="math" > possui raízes duplas em <img 
+src="main916x.png" alt="&#x221A; --
   2  "  class="math" >
 e <img 
-src="main917x.png" alt="   &radic; --
-&minus;    2  "  class="math" >. O método da bisseção pode ser aplicados a <img 
+src="main917x.png" alt="   &#x221A; --
+-    2  "  class="math" >. O método da bisseção pode ser aplicados a <img 
 src="main918x.png" alt="f  "  class="math" >? Explique.
                                                                           
 
@@ -1104,7 +1106,7 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main921x.png" alt="       (    (   )     )
-I =  I   exp  vd- &minus;  1 ,
+I =  I   exp  vd- -  1 ,
  d    R       vt
 " class="math-display" ></center></td></tr></table>
 <!--l. 465--><p class="nopar" >
@@ -1118,7 +1120,7 @@ src="main925x.png" alt="k  "  class="math" >, a constante de Boltzmann, <img
 src="main926x.png" alt="T  "  class="math" > a temperatura de operação e
 <img 
 src="main927x.png" alt="q  "  class="math" >, a carga do elétron. Aqui <img 
-src="main928x.png" alt="IR = 1pA  = 10&minus; 12 A  "  class="math" >, <img 
+src="main928x.png" alt="IR = 1pA  = 10- 12 A  "  class="math" >, <img 
 src="main929x.png" alt="T = 300 K  "  class="math" >. Escreva o
 problema como uma equação na incógnita <img 
 src="main930x.png" alt="v
@@ -1132,31 +1134,31 @@ casos:
    <div class="minipage">        <ul class="itemize1">
         <li class="itemize"><img 
 src="main931x.png" alt="V  = 30 V  "  class="math" > e <img 
-src="main932x.png" alt="R = 1 k&Omega;  "  class="math" >.
+src="main932x.png" alt="R = 1 k&#x03A9;  "  class="math" >.
         </li>
         <li class="itemize"><img 
 src="main933x.png" alt="V  = 3 V  "  class="math" > e <img 
-src="main934x.png" alt="R = 1 k&Omega;  "  class="math" >.
+src="main934x.png" alt="R = 1 k&#x03A9;  "  class="math" >.
         </li>
         <li class="itemize"><img 
 src="main935x.png" alt="V  = 3 V  "  class="math" > e <img 
-src="main936x.png" alt="R = 10 k&Omega;  "  class="math" >.
+src="main936x.png" alt="R = 10 k&#x03A9;  "  class="math" >.
         </li>
         <li class="itemize"><img 
 src="main937x.png" alt="V  = 300 mV  "  class="math" > e <img 
-src="main938x.png" alt="R  = 1 k&Omega;  "  class="math" >.
+src="main938x.png" alt="R  = 1 k&#x03A9;  "  class="math" >.
         </li>
         <li class="itemize"><img 
-src="main939x.png" alt="V  = &minus; 300 mV  "  class="math" > e <img 
-src="main940x.png" alt="R  = 1 k&Omega;  "  class="math" >.
+src="main939x.png" alt="V  = - 300 mV  "  class="math" > e <img 
+src="main940x.png" alt="R  = 1 k&#x03A9;  "  class="math" >.
         </li>
         <li class="itemize"><img 
-src="main941x.png" alt="V  = &minus; 30 V  "  class="math" > e <img 
-src="main942x.png" alt="R  = 1 k&Omega;  "  class="math" >.
+src="main941x.png" alt="V  = - 30 V  "  class="math" > e <img 
+src="main942x.png" alt="R  = 1 k&#x03A9;  "  class="math" >.
         </li>
         <li class="itemize"><img 
-src="main943x.png" alt="V  = &minus; 30 V  "  class="math" > e <img 
-src="main944x.png" alt="R  = 10 k&Omega;  "  class="math" >.</li></ul>
+src="main943x.png" alt="V  = - 30 V  "  class="math" > e <img 
+src="main944x.png" alt="R  = 10 k&#x03A9;  "  class="math" >.</li></ul>
 </div><div class="minipage">
 <img 
 src="main945x.png" alt="PIC" class="graphics" width="140.3969pt" height="215.38823pt" ><!--tex4ht:graphics  
@@ -1174,11 +1176,11 @@ src="main949x.png" alt="0,500  "  class="math" ><span
 class="ec-lmr-6">; d)</span> <img 
 src="main950x.png" alt="0,300  "  class="math" ><span 
 class="ec-lmr-6">; e)</span> <img 
-src="main951x.png" alt="&minus; 0,3  "  class="math" ><span 
+src="main951x.png" alt="- 0,3  "  class="math" ><span 
 class="ec-lmr-6">; f)</span> <img 
-src="main952x.png" alt="&minus; 30  "  class="math" ><span 
+src="main952x.png" alt="- 30  "  class="math" ><span 
 class="ec-lmr-6">; g)</span> <img 
-src="main953x.png" alt="&minus; 30  "  class="math" >
+src="main953x.png" alt="- 30  "  class="math" >
                                                                           
 
                                                                           
@@ -1197,7 +1199,7 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main955x.png" alt="        (    ( vd)    )
-Id = IR  exp   --- &minus; 1
+Id = IR  exp   --- - 1
                vt
 " class="math-display" ></center></td></tr></table>
 <!--l. 490--><p class="nopar" >
@@ -1206,7 +1208,7 @@ e
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main956x.png" alt="     v &minus; vd
+src="main956x.png" alt="     v - vd
 Id = ------
         R
 " class="math-display" ></center></td></tr></table>
@@ -1222,17 +1224,17 @@ class="ec-lmbx-6">Resposta.  </span><span
 class="ec-lmr-6">a)</span> <img 
 src="main957x.png" alt="0,0294  "  class="math" ><span 
 class="ec-lmr-6">; b)</span> <img 
-src="main958x.png" alt="2.44e&minus; 3  "  class="math" ><span 
+src="main958x.png" alt="2.44e- 3  "  class="math" ><span 
 class="ec-lmr-6">; c)</span> <img 
-src="main959x.png" alt="2.50e&minus; 4  "  class="math" ><span 
+src="main959x.png" alt="2.50e- 4  "  class="math" ><span 
 class="ec-lmr-6">; d)</span> <img 
-src="main960x.png" alt="1.09&sdot;10&minus;7  "  class="math" ><span 
+src="main960x.png" alt="1.09&#x22C5;10-7  "  class="math" ><span 
 class="ec-lmr-6">; e)</span> <img 
-src="main961x.png" alt="&minus; 10&minus;12  "  class="math" ><span 
+src="main961x.png" alt="- 10-12  "  class="math" ><span 
 class="ec-lmr-6">; f)</span> <img 
-src="main962x.png" alt="&minus; 10&minus; 12  "  class="math" ><span 
+src="main962x.png" alt="- 10- 12  "  class="math" ><span 
 class="ec-lmr-6">; g)</span> <img 
-src="main963x.png" alt="&minus; 10&minus;12  "  class="math" >
+src="main963x.png" alt="- 10-12  "  class="math" >
                                                                           
 
                                                                           

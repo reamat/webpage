@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:03:00"> 
+<meta name="date" content="2016-11-07 23:12:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Solução de sistemas lineares'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Solução de sistemas lineares, Scilab'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro/main.pdf">Formato PDF</a></li>
             <li><a href="../livro/main.epub">Formato EPUB</a></li>
             <li><a href="../livro/slide.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro-py/main.html">Versão Python</a></li>
           </ul>
         </li>		
@@ -111,12 +113,12 @@ métodos de Jacobi e Gauss-Seidel.
 <!--l. 12--><p class="indent" >   Considere o sistema de equações lineares: <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main1848x.png" alt="  a11x1 + a12x2 + &sdot;&sdot;&sdot; + a1nxn  =   b1
+src="main1848x.png" alt="  a11x1 + a12x2 + &#x22C5;&#x22C5;&#x22C5; + a1nxn  =   b1
 
-  a21x1 + a22x2 + &sdot;&sdot;&sdot; + a2nxn  =   b2
+  a21x1 + a22x2 + &#x22C5;&#x22C5;&#x22C5; + a2nxn  =   b2
                                ...
 
-am1x1 + am2x2 +  &sdot;&sdot;&sdot; + amnxn  =   bm
+am1x1 + am2x2 +  &#x22C5;&#x22C5;&#x22C5; + amnxn  =   bm
 " class="math-display" ></center>
 </div>onde <img 
 src="main1849x.png" alt="m  "  class="math" > é o número de equações e <img 
@@ -137,13 +139,13 @@ onde:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main1852x.png" alt="     &lfloor;                    &rfloor;      &lfloor;  &rfloor;        &lfloor;   &rfloor;
-     |a11   a12  &sdot;&sdot;&sdot;  a1n |      |x1|        | b1 |
+src="main1852x.png" alt="     &#x230A;                    &#x230B;      &#x230A;  &#x230B;        &#x230A;   &#x230B;
+     |a11   a12  &#x22C5;&#x22C5;&#x22C5;  a1n |      |x1|        | b1 |
      ||                    ||      ||  ||        ||   ||
-     ||a21   a22  &sdot;&sdot;&sdot;  a2n ||      ||x2||        || b2 ||
+     ||a21   a22  &#x22C5;&#x22C5;&#x22C5;  a2n ||      ||x2||        || b2 ||
 A =  || ..     ..   ...   ..  ||,x =  || ..||  e b = || .. ||
-     |&lceil; .     .         .  |&rceil;      |&lceil; .|&rceil;        |&lceil; . |&rceil;
-      am1  am2   &sdot;&sdot;&sdot;  amn         xn          bm
+     |&#x2308; .     .         .  |&#x2309;      |&#x2308; .|&#x2309;        |&#x2308; . |&#x2309;
+      am1  am2   &#x22C5;&#x22C5;&#x22C5;  amn         xn          bm
 " class="math-display" ></center></td></tr></table>
 <!--l. 43--><p class="nopar" >
 <!--l. 45--><p class="indent" >   Definimos também a matriz completa de uma sistema como <img 
@@ -155,13 +157,13 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main1855x.png" alt="                              |
-       &lfloor;                      |   &rfloor;
-       |  a11  a12  &sdot; &sdot;&sdot;  a1n |b1 |
-       ||  a    a    &sdot; &sdot;&sdot;  a   |b  ||
+       &#x230A;                      |   &#x230B;
+       |  a11  a12  &#x22C5; &#x22C5;&#x22C5;  a1n |b1 |
+       ||  a    a    &#x22C5; &#x22C5;&#x22C5;  a   |b  ||
 [A|b] = ||  21    22         2n | 2 ||
        ||   ...     ...   ...   ...  | ... ||
-       |&lceil;                      |   |&rceil;
-          am1  am2  &sdot; &sdot;&sdot; amn  |bm
+       |&#x2308;                      |   |&#x2309;
+          am1  am2  &#x22C5; &#x22C5;&#x22C5; amn  |bm
 " class="math-display" ></center></td></tr></table>
 <!--l. 53--><p class="nopar" >
 <!--l. 56--><p class="indent" >   Salvo especificado ao contrário, assumiremos ao longo deste capítulo que a

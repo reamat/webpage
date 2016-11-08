@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Matrizes, Obtendo dados de uma matriz, Operações matriciais e elemento-a-elemento'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Matrizes, Obtendo dados de uma matriz, Operações matriciais e elemento-a-elemento, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -96,19 +98,19 @@
 </div>
    <!--l. 184-->
    <h3 class="sectionHead"><span class="titlemark">A.3   </span> <a 
- id="x100-172000A.3"></a>Matrizes</h3><hr class="section">
+ id="x100-173000A.3"></a>Matrizes</h3><hr class="section">
 <a 
- id="dx100-172001"></a>
+ id="dx100-173001"></a>
 <!--l. 186--><p class="noindent" >Em <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">Python</span></span></span>, temos um ótimo suporte para computação científica com o pacote
 <a 
 href="http://www.numpy.org/" >numpy</a>. Uma matriz <img 
-src="main4294x.png" alt="A = [ai,j]mi,,j=n1   "  class="math" > em Python é definida usando-se a seguinte
+src="main4317x.png" alt="A = [ai,j]mi,,j=n1   "  class="math" > em Python é definida usando-se a seguinte
 sintaxe:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-45">
+   <div class="verbatim" id="verbatim-57">
 &#x003E;&#x003E;&#x003E;&#x00A0;import&#x00A0;numpy&#x00A0;as&#x00A0;np
 &#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A&#x00A0;=&#x00A0;np.array([[&#x00A0;a11&#x00A0;,&#x00A0;a12&#x00A0;,&#x00A0;...&#x00A0;,&#x00A0;a1n],&#x00A0;[...].&#x00A0;[am1&#x00A0;,&#x00A0;am2&#x00A0;,&#x00A0;...&#x00A0;,&#x00A0;amn]])
 </div>
@@ -116,16 +118,16 @@ sintaxe:
    <div class="newtheorem">
 <!--l. 192--><p class="noindent" ><span class="head">
 <a 
- id="x100-172002r1"></a>
+ id="x100-173002r1"></a>
 <span 
 class="ec-lmbx-12">Exemplo A.3.1.</span>  </span>Defina a matriz:
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main4295x.png" alt="    &lfloor;          &rfloor;
+src="main4318x.png" alt="    &#x230A;          &#x230B;
     |  1  2  3 |
-A = &lceil;          &rceil;
+A = &#x2308;          &#x2309;
        4  5  6
 " class="math-display" ></center></td></tr></table>
 <!--l. 201--><p class="nopar" >
@@ -138,7 +140,7 @@ class="ec-lmtt-12">Python</span></span></span>, digitamos:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-46">
+   <div class="verbatim" id="verbatim-58">
 &#x003E;&#x003E;&#x003E;&#x00A0;import&#x00A0;numpy&#x00A0;as&#x00A0;np
 &#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A&#x00A0;=&#x00A0;np.array([[1,2,3],
 &#x00A0;<br />...&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;[4,5,6]])
@@ -151,13 +153,13 @@ class="ec-lmtt-12">Python</span></span></span>, digitamos:
 >
 <!--l. 213--><p class="noindent" >
  <img 
-src="main4296x.png" alt="&#x2662; "  class="math" ></div>
+src="main4319x.png" alt="&#x2662; "  class="math" ></div>
 <!--l. 215--><p class="indent" >   A seguinte lista contém uma série de funções que geram matrizes
 particulares:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-47">
+   <div class="verbatim" id="verbatim-59">
 numpy.eye&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;matrix&#x00A0;identidade
 &#x00A0;<br />numpy.linspace&#x00A0;vetor&#x00A0;de&#x00A0;elementos&#x00A0;linearmente&#x00A0;espaçados
 &#x00A0;<br />numpy.ones&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;matriz&#x00A0;cheia&#x00A0;de&#x00A0;uns
@@ -166,13 +168,13 @@ numpy.eye&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;matrix&#x00A0;identidad
 <!--l. 221--><p class="nopar" >
 <!--l. 223--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">A.3.1   </span> <a 
- id="x100-173000A.3.1"></a>Obtendo dados de uma matriz</h4><hr class="section">
+ id="x100-174000A.3.1"></a>Obtendo dados de uma matriz</h4><hr class="section">
 <!--l. 225--><p class="noindent" >A função <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">numpy.shape</span></span></span> retorna o tamanho de uma matriz, por exemplo:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-48">
+   <div class="verbatim" id="verbatim-60">
 &#x003E;&#x003E;&#x003E;&#x00A0;A&#x00A0;=&#x00A0;np.ones((3,2))
 &#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;print(A)
 &#x00A0;<br />[[&#x00A0;1.&#x00A0;&#x00A0;1.]
@@ -192,46 +194,46 @@ class="ec-lmtt-12">A</span></span></span>:
                                                                           
 
                                                                           
-      <div class="verbatim" id="verbatim-49">
+      <div class="verbatim" id="verbatim-61">
       A
 </div>
       <!--l. 243--><p class="nopar" >
       </li>
       <li class="itemize">o elemento da <img 
-src="main4297x.png" alt="i  "  class="math" >-ésima linha e <img 
-src="main4298x.png" alt="j  "  class="math" >-ésima coluna acessa-se usando a
+src="main4320x.png" alt="i  "  class="math" >-ésima linha e <img 
+src="main4321x.png" alt="j  "  class="math" >-ésima coluna acessa-se usando a
       sintaxe:
                                                                           
 
                                                                           
-      <div class="verbatim" id="verbatim-50">
+      <div class="verbatim" id="verbatim-62">
       A[i,j]
 </div>
       <!--l. 247--><p class="nopar" >
       </li>
       <li class="itemize">o bloco formado pelas linhas <img 
-src="main4299x.png" alt="i1   "  class="math" >, <img 
-src="main4300x.png" alt="i2   "  class="math" > e pelas colunas <img 
-src="main4301x.png" alt="j1   "  class="math" >, <img 
-src="main4302x.png" alt="j2   "  class="math" > obtém-se
+src="main4322x.png" alt="i1   "  class="math" >, <img 
+src="main4323x.png" alt="i2   "  class="math" > e pelas colunas <img 
+src="main4324x.png" alt="j1   "  class="math" >, <img 
+src="main4325x.png" alt="j2   "  class="math" > obtém-se
       usando a sintaxe:
                                                                           
 
                                                                           
-      <div class="verbatim" id="verbatim-51">
+      <div class="verbatim" id="verbatim-63">
       A[i1:i2,&#x00A0;j1:j2]
 </div>
       <!--l. 251--><p class="nopar" ></li></ul>
    <div class="newtheorem">
 <!--l. 254--><p class="noindent" ><span class="head">
 <a 
- id="x100-173001r2"></a>
+ id="x100-174001r2"></a>
 <span 
 class="ec-lmbx-12">Exemplo A.3.2.</span>  </span>Veja as seguintes linhas de comando:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-52">
+   <div class="verbatim" id="verbatim-64">
 &#x003E;&#x003E;&#x003E;&#x00A0;from&#x00A0;numpy&#x00A0;import&#x00A0;random
 &#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A&#x00A0;=&#x00A0;np.random.random((3,4))
 &#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A
@@ -247,12 +249,12 @@ class="ec-lmbx-12">Exemplo A.3.2.</span>  </span>Veja as seguintes linhas de com
 <!--l. 268--><p class="nopar" >
    </div>
 <!--l. 271--><p class="indent" >   Definida uma matriz <img 
-src="main4303x.png" alt="A  "  class="math" > em Python, as seguintes sintaxes são bastante
+src="main4326x.png" alt="A  "  class="math" > em Python, as seguintes sintaxes são bastante
 úteis:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-53">
+   <div class="verbatim" id="verbatim-65">
 A[:,:]&#x00A0;&#x00A0;&#x00A0;toda&#x00A0;a&#x00A0;matriz
 &#x00A0;<br />A[i:j,k]&#x00A0;os&#x00A0;elementos&#x00A0;das&#x00A0;linhas&#x00A0;i&#x00A0;até&#x00A0;j&#x00A0;(exclusive)&#x00A0;da&#x00A0;k-ésima&#x00A0;coluna
 &#x00A0;<br />A[i,j:k]&#x00A0;os&#x00A0;elementos&#x00A0;da&#x00A0;i-ésina&#x00A0;linha&#x00A0;das&#x00A0;colunas&#x00A0;j&#x00A0;até&#x00A0;k&#x00A0;(exclusive)
@@ -262,21 +264,21 @@ A[:,:]&#x00A0;&#x00A0;&#x00A0;toda&#x00A0;a&#x00A0;matriz
 <!--l. 278--><p class="nopar" >
 <!--l. 280--><p class="indent" >   Atenção, os índices em <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">Python</span></span></span> iniciam-se em <img 
-src="main4304x.png" alt="0  "  class="math" >. Assim, o comando
+src="main4327x.png" alt="0  "  class="math" >. Assim, o comando
 <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">A[1:3,1:4]</span></span></span> retorna o bloco da matriz <img 
-src="main4305x.png" alt="A  "  class="math" > compreendido da segunda à terceira
+src="main4328x.png" alt="A  "  class="math" > compreendido da segunda à terceira
 linha e da segunda a quarta coluna desta matriz.
    <div class="newtheorem">
 <!--l. 282--><p class="noindent" ><span class="head">
 <a 
- id="x100-173002r3"></a>
+ id="x100-174002r3"></a>
 <span 
 class="ec-lmbx-12">Exemplo A.3.3.</span>  </span>Veja as seguintes linhas de comando:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-54">
+   <div class="verbatim" id="verbatim-66">
 &#x003E;&#x003E;&#x003E;&#x00A0;B&#x00A0;=&#x00A0;np.random.random((4,4))
 &#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;B
 &#x00A0;<br />array([[&#x00A0;0.94313432,&#x00A0;&#x00A0;0.72650883,&#x00A0;&#x00A0;0.55487089,&#x00A0;&#x00A0;0.18753526],
@@ -296,7 +298,7 @@ class="ec-lmbx-12">Exemplo A.3.3.</span>  </span>Veja as seguintes linhas de com
    </div>
 <!--l. 302--><p class="noindent" >
    <h4 class="subsectionHead"><span class="titlemark">A.3.2   </span> <a 
- id="x100-174000A.3.2"></a>Operações matriciais e elemento-a-elemento</h4><hr class="section">
+ id="x100-175000A.3.2"></a>Operações matriciais e elemento-a-elemento</h4><hr class="section">
 <!--l. 304--><p class="noindent" >Em <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">Python</span></span></span> com <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">numpy</span></span></span>, o operador <span class="obeylines-h"><span class="verb"><span 
@@ -305,7 +307,7 @@ exemplo:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-55">
+   <div class="verbatim" id="verbatim-67">
 &#x003E;&#x003E;&#x003E;&#x00A0;A&#x00A0;=&#x00A0;np.array([[1,2],[2,1]]);&#x00A0;print(A)
 &#x00A0;<br />[[1&#x00A0;2]
 &#x00A0;<br />&#x00A0;[2&#x00A0;1]]
@@ -320,7 +322,7 @@ exemplo:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-56">
+   <div class="verbatim" id="verbatim-68">
 &#x003E;&#x003E;&#x003E;&#x00A0;C&#x00A0;=&#x00A0;A.dot(B)
 &#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;print(C)
 &#x00A0;<br />[[6&#x00A0;3]
@@ -331,7 +333,7 @@ exemplo:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-57">
+   <div class="verbatim" id="verbatim-69">
 +&#x00A0;adição
 &#x00A0;<br />-&#x00A0;subtração
 &#x00A0;<br />*&#x00A0;multiplicação
@@ -342,13 +344,13 @@ exemplo:
    <div class="newtheorem">
 <!--l. 333--><p class="noindent" ><span class="head">
 <a 
- id="x100-174001r4"></a>
+ id="x100-175001r4"></a>
 <span 
 class="ec-lmbx-12">Exemplo A.3.4.</span>  </span>Veja as seguintes linhas de comando:
                                                                           
 
                                                                           
-   <div class="verbatim" id="verbatim-58">
+   <div class="verbatim" id="verbatim-70">
 &#x003E;&#x003E;&#x003E;&#x00A0;A&#x00A0;=&#x00A0;np.ones((2,2))
 &#x00A0;<br />&#x003E;&#x003E;&#x003E;&#x00A0;A
 &#x00A0;<br />array([[&#x00A0;1.,&#x00A0;&#x00A0;1.],

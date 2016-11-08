@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Existência e unicidade'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Existência e unicidade, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -122,7 +124,7 @@ class="ec-lmbx-12">ário</span><a
 class="ec-lmbx-12">Teorema 3.1.1 </span>(Teorema de Bolzano)<span 
 class="ec-lmbx-12">.</span>  </span> <span 
 class="ec-lmri-12">Se</span>  <img 
-src="main655x.png" alt="f : [a,b] &rarr; &#x211D;  "  class="math" ><span 
+src="main655x.png" alt="f : [a,b] &#x2192; &#x211D;  "  class="math" ><span 
 class="ec-lmri-12">,</span>  <img 
 src="main656x.png" alt="y =  f(x)  "  class="math" ><span 
 class="ec-lmri-12">,  </span><span 
@@ -132,14 +134,14 @@ class="ec-lmri-12">uma fun</span><span
 class="ec-lmri-12">ç</span><span 
 class="ec-lmri-12">ão cont</span><span 
 class="ec-lmri-12">ínua tal que</span> <img 
-src="main657x.png" alt="f(a) &sdot; f(b) &#x003C; 0  "  class="math" ><span 
+src="main657x.png" alt="f(a) &#x22C5; f(b) &#x003C; 0  "  class="math" ><span 
 class="ec-lmri-12">, ent</span><span 
 class="ec-lmri-12">ão existe</span> <img 
-src="main658x.png" alt="x&lowast; &isin; (a,b)  "  class="math" > <span 
+src="main658x.png" alt="x* &#x2208; (a,b)  "  class="math" > <span 
 class="ec-lmri-12">tal</span>
 <span 
 class="ec-lmri-12">que</span> <img 
-src="main659x.png" alt="f (x&lowast;) = 0  "  class="math" ><span 
+src="main659x.png" alt="f (x*) = 0  "  class="math" ><span 
 class="ec-lmri-12">.</span>
    </div>
 <!--l. 32--><p class="indent" >   <div class="container-fluid">
@@ -150,26 +152,26 @@ class="ec-lmbx-12">Demonstra</span><span
 class="ec-lmbx-12">ç</span><span 
 class="ec-lmbx-12">ão. </span>O resultado é uma consequência imediata do teorema do
 valor intermediário que estabelece que dada uma função contínua <img 
-src="main660x.png" alt="f : [a, b] &rarr; &#x211D;  "  class="math" >,
+src="main660x.png" alt="f : [a, b] &#x2192; &#x211D;  "  class="math" >,
 <img 
 src="main661x.png" alt="y = f (x)  "  class="math" >, tal que <img 
 src="main662x.png" alt="f (a ) &#x003C; f(b)  "  class="math" > (ou <img 
 src="main663x.png" alt="f(b) &#x003C; f(a)  "  class="math" >), então para qualquer
 <img 
-src="main664x.png" alt="d &isin; (f(a),f (b))  "  class="math" > (ou <img 
-src="main665x.png" alt="k &isin; (f (b),f (a))  "  class="math" >) existe <img 
-src="main666x.png" alt="x&lowast; &isin; (a,b)  "  class="math" > tal que <img 
-src="main667x.png" alt="f (x &lowast;) = k  "  class="math" >. Ou
+src="main664x.png" alt="d &#x2208; (f(a),f (b))  "  class="math" > (ou <img 
+src="main665x.png" alt="k &#x2208; (f (b),f (a))  "  class="math" >) existe <img 
+src="main666x.png" alt="x* &#x2208; (a,b)  "  class="math" > tal que <img 
+src="main667x.png" alt="f (x *) = k  "  class="math" >. Ou
 seja, nestas notações, se <img 
-src="main668x.png" alt="f(a) &sdot; f(b) &#x003C; 0  "  class="math" >, então <img 
+src="main668x.png" alt="f(a) &#x22C5; f(b) &#x003C; 0  "  class="math" >, então <img 
 src="main669x.png" alt="f(a) &#x003C; 0 &#x003C; f (b)  "  class="math" > (ou
 <img 
 src="main670x.png" alt="f (b) &#x003C; 0 &#x003C; f (a)  "  class="math" >). Logo, tomando <img 
 src="main671x.png" alt="k = 0  "  class="math" >, temos que existe <img 
-src="main672x.png" alt=" &lowast;
-x  &isin; (a,b)  "  class="math" > tal que
+src="main672x.png" alt=" *
+x  &#x2208; (a,b)  "  class="math" > tal que
 <img 
-src="main673x.png" alt="f (x &lowast;) = k = 0  "  class="math" >.
+src="main673x.png" alt="f (x *) = k = 0  "  class="math" >.
                                                                           <div class="flushright" 
 >
 <!--l. 34--><p class="noindent" >
@@ -212,7 +214,7 @@ class="ec-lmbx-12">Exemplo 3.1.1.</span>  </span> Mostre que existe pelo menos u
 <img 
 src="main677x.png" alt=" x
 e  = x + 2  "  class="math" > no intervalo <img 
-src="main678x.png" alt="(&minus; 2,0 )  "  class="math" >.
+src="main678x.png" alt="(- 2,0 )  "  class="math" >.
    </div>
 <!--l. 61--><p class="indent" >   <span 
 class="ec-lmbx-12">Solu</span><span 
@@ -221,15 +223,15 @@ class="ec-lmbx-12">ão. </span>Primeiramente, observamos que resolver a equaçã
 src="main679x.png" alt="ex = x +  2  "  class="math" > é
 equivalente a resolver <img 
 src="main680x.png" alt="f(x ) = 0  "  class="math" > com <img 
-src="main681x.png" alt="f(x) = ex &minus; x &minus; 2  "  class="math" >. Agora, como
+src="main681x.png" alt="f(x) = ex - x - 2  "  class="math" >. Agora, como
 <img 
-src="main682x.png" alt="f (&minus; 2) = e&minus; 2 &#x003E; 0  "  class="math" > e <img 
-src="main683x.png" alt="f(0) = &minus; 2 &#x003C; 0  "  class="math" >, temos do teorema de Bolzano que existe
+src="main682x.png" alt="f (- 2) = e- 2 &#x003E; 0  "  class="math" > e <img 
+src="main683x.png" alt="f(0) = - 2 &#x003C; 0  "  class="math" >, temos do teorema de Bolzano que existe
 pelo menos um zero de <img 
 src="main684x.png" alt="f (x)  "  class="math" > no intervalo <img 
-src="main685x.png" alt="(&minus; 2,0)  "  class="math" >. E, portanto, existe pelo
+src="main685x.png" alt="(- 2,0)  "  class="math" >. E, portanto, existe pelo
 menos uma solução da equação dada no intervalo <img 
-src="main686x.png" alt="(&minus; 2, 0)  "  class="math" >.
+src="main686x.png" alt="(- 2, 0)  "  class="math" >.
 <!--l. 91--><p class="indent" >   Podemos usar <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">Python</span></span></span> para estudarmos esta função. Por exemplo, podemos
 definir a função <img 
@@ -274,28 +276,28 @@ class="ec-lmbx-12">ç</span><span
 class="ec-lmbx-12">ão 3.1.1.</span>  </span>                                                            <span 
 class="ec-lmri-12">Se</span>
 <img 
-src="main689x.png" alt="f : [a,b] &rarr; &#x211D;  "  class="math" > <span 
+src="main689x.png" alt="f : [a,b] &#x2192; &#x211D;  "  class="math" > <span 
 class="ec-lmri-12">é um fun</span><span 
 class="ec-lmri-12">ç</span><span 
 class="ec-lmri-12">ão diferenci</span><span 
 class="ec-lmri-12">ável,</span> <img 
-src="main690x.png" alt="f(a) &sdot; f(b) &#x003C; 0  "  class="math" > <span 
+src="main690x.png" alt="f(a) &#x22C5; f(b) &#x003C; 0  "  class="math" > <span 
 class="ec-lmri-12">e</span> <img 
-src="main691x.png" alt="f&prime;(x) &#x003E; 0  "  class="math" > <span 
+src="main691x.png" alt="f&#x2032;(x) &#x003E; 0  "  class="math" > <span 
 class="ec-lmri-12">(ou</span>
 <img 
-src="main692x.png" alt="  &prime;
+src="main692x.png" alt="  &#x2032;
 f (x) &#x003C; 0  "  class="math" ><span 
 class="ec-lmri-12">) para todo</span> <img 
-src="main693x.png" alt="x &isin; (a,b)  "  class="math" ><span 
+src="main693x.png" alt="x &#x2208; (a,b)  "  class="math" ><span 
 class="ec-lmri-12">, ent</span><span 
 class="ec-lmri-12">ão existe um </span><span 
 class="ec-lmri-12">único</span> <img 
-src="main694x.png" alt=" &lowast;
-x  &isin; (a,b)  "  class="math" > <span 
+src="main694x.png" alt=" *
+x  &#x2208; (a,b)  "  class="math" > <span 
 class="ec-lmri-12">tal que</span>
 <img 
-src="main695x.png" alt="    &lowast;
+src="main695x.png" alt="    *
 f (x  ) = 0  "  class="math" ><span 
 class="ec-lmri-12">.</span>
    </div>
@@ -310,24 +312,24 @@ monótona neste intervalo.
 class="ec-lmbx-12">Exemplo 3.1.2.</span>  </span>No Exemplo&#x00A0;<a 
 href="#x19-29008r1">3.1.1<!--tex4ht:ref: ex:teorema_de_Bolzano --></a>, mostramos que existe pelo menos um
 zero de <img 
-src="main696x.png" alt="f(x) = ex &minus; x &minus; 2  "  class="math" > no intervalo <img 
-src="main697x.png" alt="(&minus; 2,0)  "  class="math" >, pois <img 
+src="main696x.png" alt="f(x) = ex - x - 2  "  class="math" > no intervalo <img 
+src="main697x.png" alt="(- 2,0)  "  class="math" >, pois <img 
 src="main698x.png" alt="f (x)  "  class="math" > é contínua
 e  <img 
-src="main699x.png" alt="f (&minus; 2) &sdot; f(0) &#x003C; 0  "  class="math" >.  Agora,  observamos  que,  além  disso,  <img 
-src="main700x.png" alt="  &prime;      x
-f (x) = e  &minus; 1  "  class="math" >
+src="main699x.png" alt="f (- 2) &#x22C5; f(0) &#x003C; 0  "  class="math" >.  Agora,  observamos  que,  além  disso,  <img 
+src="main700x.png" alt="  &#x2032;      x
+f (x) = e  - 1  "  class="math" >
 e, portanto, <img 
-src="main701x.png" alt=" &prime;
+src="main701x.png" alt=" &#x2032;
 f(x ) &#x003C; 0  "  class="math" > para todo <img 
-src="main702x.png" alt="x &isin; (&minus; 2,0)  "  class="math" >. Logo, da Proposição&#x00A0;<a 
+src="main702x.png" alt="x &#x2208; (- 2,0)  "  class="math" >. Logo, da Proposição&#x00A0;<a 
 href="#x19-29009r1">3.1.1<!--tex4ht:ref: prop:existencia_e_unicidade --></a>,
 temos garantida a existência de um único zero no intervalo dado.
                                                                           
 
                                                                           
 <!--l. 137--><p class="indent" >   Podemos inspecionar o comportamento da função <img 
-src="main703x.png" alt="f(x ) = ex &minus; x &minus; 2  "  class="math" > e de sua
+src="main703x.png" alt="f(x ) = ex - x - 2  "  class="math" > e de sua
 derivada fazendo seus gráficos no Scilab. Para tanto, podemos usar o seguinte
 código <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">Python</span></span></span>:
@@ -360,7 +362,7 @@ seção.
 <span 
 class="ec-lmbx-12">E 3.1.1.</span>  </span> Mostre que <img 
 src="main704x.png" alt="cosx = x  "  class="math" > tem solução no intervalo <img 
-src="main705x.png" alt="[0,&pi; &#x2215;2]  "  class="math" >.
+src="main705x.png" alt="[0,&#x03C0; &#x2215;2]  "  class="math" >.
    </div>
 <!--l. 161--><p class="noindent" ><span 
 class="ec-lmbx-6">Resposta.  </span><span 
@@ -368,21 +370,21 @@ class="ec-lmr-6">Observamos que a equa</span><span
 class="ec-lmr-6">ç</span><span 
 class="ec-lmr-6">ão </span><span 
 class="ec-lmr-6">é equivalente a</span> <img 
-src="main706x.png" alt="cos(x)&minus; x =0  "  class="math" ><span 
+src="main706x.png" alt="cos(x)- x =0  "  class="math" ><span 
 class="ec-lmr-6">. Tomando, ent</span><span 
 class="ec-lmr-6">ão,</span> <img 
-src="main707x.png" alt="f(x)= cos(x)&minus; x  "  class="math" ><span 
+src="main707x.png" alt="f(x)= cos(x)- x  "  class="math" ><span 
 class="ec-lmr-6">, temos que</span> <img 
 src="main708x.png" alt="f(x)  "  class="math" > <span 
 class="ec-lmr-6">é</span>
 <span 
 class="ec-lmr-6">cont</span><span 
 class="ec-lmr-6">ínua em</span> <img 
-src="main709x.png" alt="[0,&pi;&#x2215;2]  "  class="math" ><span 
+src="main709x.png" alt="[0,&#x03C0;&#x2215;2]  "  class="math" ><span 
 class="ec-lmr-6">,</span> <img 
 src="main710x.png" alt="f(0)=1  "  class="math" > <span 
 class="ec-lmr-6">e</span> <img 
-src="main711x.png" alt="f(&pi;&#x2215;2)= &minus;&pi;&#x2215;2&#x003C; 0  "  class="math" ><span 
+src="main711x.png" alt="f(&#x03C0;&#x2215;2)= -&#x03C0;&#x2215;2&#x003C; 0  "  class="math" ><span 
 class="ec-lmr-6">. Logo, do teorema de Bolzano</span><span 
 class="ec-lmr-6">&#x00A0;</span><a 
 href="#x19-29006r1"><span 
@@ -395,7 +397,7 @@ class="ec-lmr-6">ão dada</span>
 class="ec-lmr-6">tem pelo menos uma solu</span><span 
 class="ec-lmr-6">ç</span><span 
 class="ec-lmr-6">ão no intervalo</span> <img 
-src="main712x.png" alt="(0,&pi;&#x2215;2)  "  class="math" ><span 
+src="main712x.png" alt="(0,&#x03C0;&#x2215;2)  "  class="math" ><span 
 class="ec-lmr-6">.</span>
    <div class="newtheorem">
 <!--l. 167--><p class="noindent" ><span class="head">
@@ -408,7 +410,7 @@ class="ec-lmr-6">.</span>
 class="ec-lmbx-12">E 3.1.2.</span>  </span>Mostre  que  <img 
 src="main713x.png" alt="cos x = x  "  class="math" >  tem  uma  única  solução  no  intervalo
 <img 
-src="main714x.png" alt="[0,&pi;&#x2215;2 ]  "  class="math" >.
+src="main714x.png" alt="[0,&#x03C0;&#x2215;2 ]  "  class="math" >.
    </div>
 <!--l. 170--><p class="noindent" ><span 
 class="ec-lmbx-6">Resposta.  </span><span 
@@ -420,21 +422,21 @@ class="ec-lmr-6">3.1.1</span><!--tex4ht:ref: exer:existencia_sol1 --></a><span
 class="ec-lmr-6">, mostramos que a fun</span><span 
 class="ec-lmr-6">ç</span><span 
 class="ec-lmr-6">ão</span> <img 
-src="main715x.png" alt="f(x)= cos(x)&minus; x  "  class="math" > <span 
+src="main715x.png" alt="f(x)= cos(x)- x  "  class="math" > <span 
 class="ec-lmr-6">tem um zero no intervalo</span> <img 
-src="main716x.png" alt="[0,&pi;&#x2215;2]  "  class="math" ><span 
+src="main716x.png" alt="[0,&#x03C0;&#x2215;2]  "  class="math" ><span 
 class="ec-lmr-6">. Agora,</span>
 <span 
 class="ec-lmr-6">observamos que</span> <img 
-src="main717x.png" alt="f&prime;(x)=&minus; sen(x)&minus; 1  "  class="math" ><span 
+src="main717x.png" alt="f&#x2032;(x)=- sen(x)- 1  "  class="math" ><span 
 class="ec-lmr-6">. Como</span> <img 
 src="main718x.png" alt="0&#x003C; senx&#x003C; 1  "  class="math" > <span 
 class="ec-lmr-6">para todo</span> <img 
-src="main719x.png" alt="x&isin; (0,&pi;&#x2215;2)  "  class="math" ><span 
+src="main719x.png" alt="x&#x2208; (0,&#x03C0;&#x2215;2)  "  class="math" ><span 
 class="ec-lmr-6">, temos que</span> <img 
-src="main720x.png" alt="f&prime;(x)&#x003C;0  "  class="math" > <span 
+src="main720x.png" alt="f&#x2032;(x)&#x003C;0  "  class="math" > <span 
 class="ec-lmr-6">em</span> <img 
-src="main721x.png" alt="(0,&pi;&#x2215;2)  "  class="math" ><span 
+src="main721x.png" alt="(0,&#x03C0;&#x2215;2)  "  class="math" ><span 
 class="ec-lmr-6">, i.e.</span>
 <img 
 src="main722x.png" alt="f(x)  "  class="math" > <span 
@@ -465,7 +467,7 @@ para o qual essa equação admite exatamente duas raízes positivas distintas.
    </div>
 <!--l. 178--><p class="noindent" ><span 
 class="ec-lmbx-6">Resposta.</span>  <img 
-src="main727x.png" alt="k&asymp; 0,161228  "  class="math" >
+src="main727x.png" alt="k&#x2248; 0,161228  "  class="math" >
    <div class="newtheorem">
 <!--l. 185--><p class="noindent" ><span class="head">
 <a 
@@ -477,7 +479,7 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main728x.png" alt="         3   1-
-ln(x) + x  &minus; x =  10
+ln(x) + x  - x =  10
 " class="math-display" ></center></td></tr></table>
 <!--l. 188--><p class="nopar" >
 possui uma única solução positiva.
@@ -489,26 +491,26 @@ possui uma única solução positiva.
 <span 
 class="ec-lmbx-12">E 3.1.5.</span>  </span> Use o teorema de Bolzano para mostrar que o erro absoluto ao
 aproximar o zero da função <img 
-src="main729x.png" alt="f(x) = ex &minus; x &minus; 2  "  class="math" > por <img 
-src="main730x.png" alt="x-= &minus; 1,841  "  class="math" > é menor
+src="main729x.png" alt="f(x) = ex - x - 2  "  class="math" > por <img 
+src="main730x.png" alt="x-= - 1,841  "  class="math" > é menor
 que <img 
-src="main731x.png" alt="   &minus;3
+src="main731x.png" alt="   -3
 10   "  class="math" >.
    </div>
 <!--l. 194--><p class="noindent" ><span 
 class="ec-lmbx-6">Resposta.  </span><span 
 class="ec-lmr-6">Escolhendo o intervalo</span> <img 
-src="main732x.png" alt="[a,b]=[&minus;1,841 &minus; 10&minus;3,&minus;1,841+ 10&minus;3]  "  class="math" ><span 
+src="main732x.png" alt="[a,b]=[-1,841 - 10-3,-1,841+ 10-3]  "  class="math" ><span 
 class="ec-lmr-6">, temos</span> <img 
-src="main733x.png" alt="f(a)&asymp; 5&#x00D7;10&minus;4 &#x003E;0  "  class="math" > <span 
+src="main733x.png" alt="f(a)&#x2248; 5&#x00D7;10-4 &#x003E;0  "  class="math" > <span 
 class="ec-lmr-6">e</span>
 <img 
-src="main734x.png" alt="f(b)&asymp; &minus;1,2&#x00D7;10&minus;3 &#x003C;0  "  class="math" ><span 
+src="main734x.png" alt="f(b)&#x2248; -1,2&#x00D7;10-3 &#x003C;0  "  class="math" ><span 
 class="ec-lmr-6">, i.e.</span> <img 
-src="main735x.png" alt="f(a)&sdot;f(b)&#x003C;0  "  class="math" ><span 
+src="main735x.png" alt="f(a)&#x22C5;f(b)&#x003C;0  "  class="math" ><span 
 class="ec-lmr-6">. Ent</span><span 
 class="ec-lmr-6">ão, o teorema de Bolzano nos garante que o zero exato</span> <img 
-src="main736x.png" alt="x&lowast; "  class="math" > <span 
+src="main736x.png" alt="x* "  class="math" > <span 
 class="ec-lmr-6">de</span> <img 
 src="main737x.png" alt="f(x)  "  class="math" > <span 
 class="ec-lmr-6">est</span><span 
@@ -517,7 +519,7 @@ class="ec-lmr-6">á no</span>
 class="ec-lmr-6">intervalo</span> <img 
 src="main738x.png" alt="(a,b)  "  class="math" ><span 
 class="ec-lmr-6">. Logo, da escolha feita,</span> <img 
-src="main739x.png" alt="|&minus; 1,841&minus; x&lowast;|&#x003C;10&minus;3  "  class="math" ><span 
+src="main739x.png" alt="|- 1,841- x*|&#x003C;10-3  "  class="math" ><span 
 class="ec-lmr-6">.</span>
    <div class="newtheorem">
 <!--l. 200--><p class="noindent" ><span class="head">
@@ -527,7 +529,7 @@ class="ec-lmr-6">.</span>
 class="ec-lmbx-12">E 3.1.6.</span>  </span>Mostre que o erro absoluto associado à aproximação <img 
 src="main740x.png" alt="x-= 1,962  "  class="math" > para a
 solução exata <img 
-src="main741x.png" alt="  &lowast;
+src="main741x.png" alt="  *
 x  "  class="math" > de:
    <table 
 class="equation-star"><tr><td>
@@ -538,7 +540,7 @@ e  + sin (x) + x = 10
 " class="math-display" ></center></td></tr></table>
 <!--l. 203--><p class="nopar" >
 é menor que <img 
-src="main743x.png" alt="  &minus; 4
+src="main743x.png" alt="  - 4
 10   "  class="math" >.
    </div>
 <!--l. 206--><p class="noindent" ><span 
@@ -555,7 +557,7 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main744x.png" alt="            1
-ln(x) + x &minus; --=  v
+ln(x) + x - --=  v
             x
 " class="math-display" ></center></td></tr></table>
 <!--l. 213--><p class="nopar" >

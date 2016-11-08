@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:03:00"> 
+<meta name="date" content="2016-11-07 23:12:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Tipos de Erros, Erros de arredondamento'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Tipos de Erros, Erros de arredondamento, Scilab'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro/main.pdf">Formato PDF</a></li>
             <li><a href="../livro/main.epub">Formato EPUB</a></li>
             <li><a href="../livro/slide.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro-py/main.html">Versão Python</a></li>
           </ul>
         </li>		
@@ -170,7 +172,7 @@ class="ec-lmri-12">como</span>
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main290x.png" alt="|x &minus; x|.
+src="main290x.png" alt="|x - x|.
 " class="math-display" ></center></td></tr></table>
 <!--l. 746--><p class="nopar" >
 <span 
@@ -185,8 +187,8 @@ class="ec-lmri-12">é definido como</span>
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main292x.png" alt="|x &minus; x|
--------,  x &frasl;= 0.
+src="main292x.png" alt="|x - x|
+-------,  x &#x2044;= 0.
   |x|
 " class="math-display" ></center></td></tr></table>
 <!--l. 750--><p class="nopar" >
@@ -210,7 +212,7 @@ x  "  class="math" > é dado por
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main294x.png" alt="|x &minus; ¯x|
+src="main294x.png" alt="|x - ¯x|
 ------- &#x00D7; 100%.
   |x|
 " class="math-display" ></center></td></tr></table>
@@ -227,15 +229,15 @@ src="main296x.png" alt="x¯=  123000  "  class="math" >.
 O erro absoluto é
    <center class="math-display" >
 <img 
-src="main297x.png" alt="|x &minus; ¯x| = |123456,789 &minus; 123000 | = 456,789
+src="main297x.png" alt="|x - ¯x| = |123456,789 - 123000 | = 456,789
 " class="math-display" ></center> e o erro relativo é
                                                                           
 
                                                                           
    <center class="math-display" >
 <img 
-src="main298x.png" alt="|x &minus; ¯x|     456,789
--------=  ----------- &asymp; 0,00369999 ou  0,36%
+src="main298x.png" alt="|x - ¯x|     456,789
+-------=  ----------- &#x2248; 0,00369999 ou  0,36%
   |x|     123456,789
 " class="math-display" ></center>
    </div>
@@ -249,13 +251,13 @@ src="main299x.png" alt="y = 1,23456789  "  class="math" > e <img
 src="main300x.png" alt="y¯=  1,13  "  class="math" >. O erro absoluto é
    <center class="math-display" >
 <img 
-src="main301x.png" alt="|y &minus; ¯y| = |1,23456789 &minus;  1,13 | = 0,10456789
+src="main301x.png" alt="|y - ¯y| = |1,23456789 -  1,13 | = 0,10456789
 " class="math-display" ></center> que parece pequeno se compararmos com o exemplo anterior. Entretanto o
 erro relativo é
    <center class="math-display" >
 <img 
-src="main302x.png" alt="|y &minus; ¯y|   0,10456789
--------= ----------- &asymp; 0,08469999  ou 8,4%
+src="main302x.png" alt="|y - ¯y|   0,10456789
+-------= ----------- &#x2248; 0,08469999  ou 8,4%
   |y|     1,23456789
                                                                           
 
@@ -275,11 +277,11 @@ class="equation-star"><tr><td>
 src="main303x.png" alt="-----------|----------|--------------|----------------------
      x     |    ¯x     |Erro absoluto |    Erro relativo
 -----------|----------|--------------|----------------------
- 0,3 &sdot; 10&minus;2|0,3 &sdot; 10 &minus;2  0,3 &sdot; 10 &minus;3 |0,3&sdot;10&minus;&minus;32-= 10 &minus;1 = 10%
-      --   |          |    --        |0,3&sdot;10&minus;1
-    0,3    |   0,3    |  0,3 &sdot; 10 &minus;1 |0,3&sdot;01,30--= 10 &minus;1 = 10%
-   --      |          |    --        | 0,3&sdot;101
--0,3-&sdot; 102---0,3-&sdot; 102-----0,3-&sdot; 101-----0,3&sdot;102-=-10&minus;1-=-10%---
+ 0,3 &#x22C5; 10-2|0,3 &#x22C5; 10 -2  0,3 &#x22C5; 10 -3 |0,3&#x22C5;10--32-= 10 -1 = 10%
+      --   |          |    --        |0,3&#x22C5;10-1
+    0,3    |   0,3    |  0,3 &#x22C5; 10 -1 |0,3&#x22C5;01,30--= 10 -1 = 10%
+   --      |          |    --        | 0,3&#x22C5;101
+-0,3-&#x22C5; 102---0,3-&#x22C5; 102-----0,3-&#x22C5; 101-----0,3&#x22C5;102-=-10-1-=-10%---
 " class="math-display" ></center></td></tr></table>
 <!--l. 795--><p class="nopar" >
    </div>
@@ -320,7 +322,7 @@ href="main14.html#fn4x3"><sup class="textsuperscript">4</sup></a></span><a
    <center class="math-display" >
 <img 
 src="main309x.png" alt="     --
-|x-&minus;--x|&#x003C;  5 &#x00D7; 10&minus;s.
+|x----x|&#x003C;  5 &#x00D7; 10-s.
   |x |
 " class="math-display" ></center>
    </div>
@@ -345,7 +347,7 @@ class="equation-star"><tr><td>
       <center class="math-display" >
       <img 
 src="main313x.png" alt="    --
-|x-&minus;-x-|=  0,000333--&asymp; 0,000999 &le;  5 &#x00D7; 10&minus;333.
+|x---x-|=  0,000333--&#x2248; 0,000999 &#x2264;  5 &#x00D7; 10-333.
   |x |     0,333333
       " class="math-display" ></center></td></tr></table>
       <!--l. 816--><p class="nopar" >
@@ -357,7 +359,7 @@ src="main316x.png" alt="x =  0,666888  "  class="math" >. Os
       erros relativos são
       <center class="math-display" >
       <img 
-src="main317x.png" alt="|x-&minus;-¯x1| = |0,666888-&minus;-0,666| &asymp; 0,00133...&#x003C; 5 &#x00D7; 10&minus; 3.
+src="main317x.png" alt="|x---¯x1| = |0,666888---0,666| &#x2248; 0,00133...&#x003C; 5 &#x00D7; 10- 3.
    |x |          0,666888
       " class="math-display" ></center>
                                                                           
@@ -365,7 +367,7 @@ src="main317x.png" alt="|x-&minus;-¯x1| = |0,666888-&minus;-0,666| &asymp; 0,00
                                                                           
       <center class="math-display" >
       <img 
-src="main318x.png" alt="|x-&minus;-¯x2-|=  |0,666888-&minus;--0,667-|&asymp;  0,000167...&#x003C;  5 &#x00D7; 10&minus;4.
+src="main318x.png" alt="|x---¯x2-|=  |0,666888----0,667-|&#x2248;  0,000167...&#x003C;  5 &#x00D7; 10-4.
   |x|          0,666888
       " class="math-display" ></center> Note que <img 
 src="main319x.png" alt="¯x1   "  class="math" > possui <img 
@@ -395,8 +397,8 @@ class="equation-star"><tr><td>
       <center class="math-display" >
       <img 
 src="main332x.png" alt="    --
-|x-&minus;-x-|   |10-&minus;-9,999|-                       &minus;4
-  |x |  =      10      &asymp; 0,0000999...&#x003C;  5 &#x00D7; 10  .
+|x---x-|   |10---9,999|-                       -4
+  |x |  =      10      &#x2248; 0,0000999...&#x003C;  5 &#x00D7; 10  .
       " class="math-display" ></center></td></tr></table>
       <!--l. 829--><p class="nopar" >
       </li>
@@ -419,8 +421,8 @@ src="main338x.png" alt="1,5  "  class="math" > tem zero dígito significativo co
 class="equation-star"><tr><td>
       <center class="math-display" >
       <img 
-src="main339x.png" alt="|1 &minus; 1,5|
---------=  5 &#x00D7; 10&minus;1 &#x003C; 5 &#x00D7; 100.
+src="main339x.png" alt="|1 - 1,5|
+--------=  5 &#x00D7; 10-1 &#x003C; 5 &#x00D7; 100.
   |1|
       " class="math-display" ></center></td></tr></table>
       <!--l. 833--><p class="nopar" >
@@ -439,7 +441,7 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main340x.png" alt="                                     e
-x = ±d0,d1d2 ...dk&minus;1dkdk+1 ...dn &#x00D7; 10
+x = ±d0,d1d2 ...dk-1dkdk+1 ...dn &#x00D7; 10
 " class="math-display" ></center></td></tr></table>
 <!--l. 843--><p class="nopar" >
 usando <img 
@@ -479,7 +481,7 @@ href="main15.html#fn5x3"><sup class="textsuperscript">5</sup></a></span><a
  id="x13-23006f5"></a>
       <center class="math-display" >
       <img 
-src="main352x.png" alt="¯x = ± (d ,d d ...d  + 10&minus; k) &#x00D7; 10e
+src="main352x.png" alt="¯x = ± (d ,d d ...d  + 10- k) &#x00D7; 10e
         0  1 2    k
       " class="math-display" ></center></li></ol>
 <div class="newtheorem">
@@ -505,7 +507,7 @@ class="ec-lmbx-12">Exemplo 2.3.5.</span>  </span>Represente                     
 <img 
 src="main353x.png" alt="x1 = 0,567  "  class="math" >, <img 
 src="main354x.png" alt="x2 =  0,233  "  class="math" >, <img 
-src="main355x.png" alt="x3 =  &minus; 0,675  "  class="math" > e <img 
+src="main355x.png" alt="x3 =  - 0,675  "  class="math" > e <img 
 src="main356x.png" alt="                         1
 x4 =  0,314159265  ...&#x00D7; 10   "  class="math" > com
 dois dígitos significativos por truncamento e arredondamento.
@@ -520,12 +522,12 @@ class="ec-lmbx-12">ão. </span>Vejamos cada caso:
 class="equation-star"><tr><td>
       <center class="math-display" >
       <img 
-src="main357x.png" alt="x1 = 0,56,  x2 = 0,23,  x3 = &minus; 0,67  e   x4 = 3,1.
+src="main357x.png" alt="x1 = 0,56,  x2 = 0,23,  x3 = - 0,67  e   x4 = 3,1.
       " class="math-display" ></center></td></tr></table>
       <!--l. 873--><p class="nopar" >
       No <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">Scilab</span></span></span>, podemos obter a representação de <img 
-src="main358x.png" alt="x3 = &minus; 0,675  "  class="math" > fazendo
+src="main358x.png" alt="x3 = - 0,675  "  class="math" > fazendo
       (verifique):
                                                                           
 
@@ -541,7 +543,7 @@ src="main358x.png" alt="x3 = &minus; 0,675  "  class="math" > fazendo
 class="equation-star"><tr><td>
       <center class="math-display" >
       <img 
-src="main359x.png" alt="x1 = 0,57;  x2 = 0,23;  x3 =  &minus; 0,68  e  x4 = 3,1.
+src="main359x.png" alt="x1 = 0,57;  x2 = 0,23;  x3 =  - 0,68  e  x4 = 3,1.
       " class="math-display" ></center></td></tr></table>
       <!--l. 898--><p class="nopar" >
       No <span class="obeylines-h"><span class="verb"><span 
@@ -569,7 +571,7 @@ src="main361x.png" alt="&#x2662; "  class="math" ></div>
  id="x13-23009r6"></a>
 <span 
 class="ec-lmbx-12">Exemplo 2.3.6.</span>  </span>O  arredondamento  de  <img 
-src="main362x.png" alt="0,9999 &#x00D7; 10&minus;1   "  class="math" >   com  <img 
+src="main362x.png" alt="0,9999 &#x00D7; 10-1   "  class="math" >   com  <img 
 src="main363x.png" alt="3  "  class="math" >  dígitos
 significativos é <img 
 src="main364x.png" alt="0,1 &#x00D7; 100   "  class="math" >.
@@ -588,7 +590,7 @@ src="main365x.png" alt="¯x  "  class="math" > para
 src="main366x.png" alt="x  "  class="math" >.
       <ul class="itemize1">
       <li class="itemize"><img 
-src="main367x.png" alt="x = &pi; = 3,14159265358979  &sdot;&sdot;&sdot; "  class="math" > e <img 
+src="main367x.png" alt="x = &#x03C0; = 3,14159265358979  &#x22C5;&#x22C5;&#x22C5; "  class="math" > e <img 
 src="main368x.png" alt="¯x =  3,141  "  class="math" >
       </li>
       <li class="itemize"><img 
@@ -624,7 +626,7 @@ src="main375x.png" alt="0,0017888544  "  class="math" >
 src="main376x.png" alt="0,004596632  "  class="math" >
       </li>
       <li class="itemize"><img 
-src="main377x.png" alt="              &minus; 10
+src="main377x.png" alt="              - 10
 2,1754999 &#x00D7; 10   "  class="math" >
       </li>
       <li class="itemize"><img 
@@ -647,7 +649,7 @@ class="ec-lmr-6">&#x00A0;</span><img
 src="main382x.png" alt="0,0045966  "  class="math" ><span 
 class="ec-lmr-6">; e)</span><span 
 class="ec-lmr-6">&#x00A0;</span><img 
-src="main383x.png" alt="2,1755&#x00D7;10&minus;10  "  class="math" ><span 
+src="main383x.png" alt="2,1755&#x00D7;10-10  "  class="math" ><span 
 class="ec-lmr-6">; f)</span><span 
 class="ec-lmr-6">&#x00A0;</span><img 
 src="main384x.png" alt="2,1755&#x00D7;1010  "  class="math" >
@@ -689,7 +691,7 @@ dígitos significativos por truncamento e arredondamento.
  id="x13-24005r5"></a>
 <span 
 class="ec-lmbx-12">E 2.3.5.</span>  </span>Resolva a equação <img 
-src="main394x.png" alt="0,1x &minus; 0,01 = 12  "  class="math" > usando arredondamento com
+src="main394x.png" alt="0,1x - 0,01 = 12  "  class="math" > usando arredondamento com
 três dígitos significativos em cada passo e compare com o resultado analítico
    </div>
    <div class="newtheorem">
@@ -710,25 +712,25 @@ src="main396x.png" alt="x&#x02DC;=  3,141593  "  class="math" >
       <li class="itemize"><img 
 src="main397x.png" alt="    1
 x = 7   "  class="math" > e <img 
-src="main398x.png" alt="              &minus;1
+src="main398x.png" alt="              -1
 x&#x02DC;=  1,43 &#x00D7; 10   "  class="math" ></li></ul>
    </div>
 <!--l. 979--><p class="noindent" ><span 
 class="ec-lmbx-6">Resposta.  </span><span 
 class="ec-lmr-6">a)</span><span 
 class="ec-lmr-6">&#x00A0;</span><img 
-src="main399x.png" alt="          &minus; 7
-&delta;abs = 3,46&#x00D7;10  "  class="math" ><span 
+src="main399x.png" alt="          - 7
+&#x03B4;abs = 3,46&#x00D7;10  "  class="math" ><span 
 class="ec-lmr-6">,</span> <img 
-src="main400x.png" alt="          &minus;7
-&delta;rel =1,10&#x00D7; 10  "  class="math" ><span 
+src="main400x.png" alt="          -7
+&#x03B4;rel =1,10&#x00D7; 10  "  class="math" ><span 
 class="ec-lmr-6">; b)</span><span 
 class="ec-lmr-6">&#x00A0;</span><img 
-src="main401x.png" alt="          &minus;4
-&delta;abs =1,43&#x00D7; 10  "  class="math" ><span 
+src="main401x.png" alt="          -4
+&#x03B4;abs =1,43&#x00D7; 10  "  class="math" ><span 
 class="ec-lmr-6">,</span> <img 
-src="main402x.png" alt="         &minus;3
-&delta;rel = 1,00&#x00D7;10  "  class="math" >
+src="main402x.png" alt="         -3
+&#x03B4;rel = 1,00&#x00D7;10  "  class="math" >
                                                                           
 
                                                                           

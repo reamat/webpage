@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Método da potência para cálculo de autovalores'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Método da potência para cálculo de autovalores, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -94,33 +96,33 @@
   		</ul>
 	</nav>
 </div>
-   <!--l. 1948-->
+   <!--l. 1950-->
    <h3 class="sectionHead"><span class="titlemark">4.7   </span> <a 
  id="x47-810004.7"></a>Método da potência para cálculo de autovalores</h3><hr class="section">
 <a 
  id="dx47-81001"></a>
 <a 
  id="dx47-81002"></a>
-<!--l. 1949--><p class="noindent" >Consideremos uma matriz <img 
-src="main2291x.png" alt="A  &isin; &#x211D;n,n  "  class="math" > diagonalizável, isto é, existe um conjunto
+<!--l. 1951--><p class="noindent" >Consideremos uma matriz <img 
+src="main2291x.png" alt="A  &#x2208; &#x211D;n,n  "  class="math" > diagonalizável, isto é, existe um conjunto
 <img 
 src="main2292x.png" alt="    n
 {vj}j=1   "  class="math" > de autovetores de <img 
 src="main2293x.png" alt="A  "  class="math" > tais que qualquer elemento <img 
 src="main2294x.png" alt="      n
-x &isin; &#x211D;  "  class="math" > pode ser
+x &#x2208; &#x211D;  "  class="math" > pode ser
 escrito como uma combinação linear dos <img 
 src="main2295x.png" alt="vj  "  class="math" >. Sejam <img 
 src="main2296x.png" alt="     n
-{&lambda;j} j=1   "  class="math" > o conjunto de
+{&#x03BB;j} j=1   "  class="math" > o conjunto de
 autovalores associados aos autovetores tal que um deles seja dominante, ou
 seja,
    <center class="math-display" >
 <img 
-src="main2297x.png" alt="|&lambda;  | &#x003E; |&lambda; | &ge; |&lambda; | &ge; &sdot;&sdot;&sdot;|&lambda; | &#x003E; 0
+src="main2297x.png" alt="|&#x03BB;  | &#x003E; |&#x03BB; | &#x2265; |&#x03BB; | &#x2265; &#x22C5;&#x22C5;&#x22C5;|&#x03BB; | &#x003E; 0
   1     2      3        n  " class="math-display" ></center>
 Como os autovetores são l.i., todo vetor <img 
-src="main2298x.png" alt="x &isin; &#x211D;n  "  class="math" >, <img 
+src="main2298x.png" alt="x &#x2208; &#x211D;n  "  class="math" >, <img 
 src="main2299x.png" alt="x = (x1,x2,...,xn)  "  class="math" >, pode ser
 escrito com combinação linear dos autovetores da seguinte forma:
    <table 
@@ -128,21 +130,21 @@ class="equation"><tr><td><a
  id="x47-81003r26"></a>
    <center class="math-display" >
 <img 
-src="main2300x.png" alt="    &sum;n
-x =    &beta;jvj.
+src="main2300x.png" alt="    &#x2211;n
+x =    &#x03B2;jvj.
     j=1
                                                                           
 
                                                                           
 " class="math-display" ></center></td><td class="equation-label">(4.26)</td></tr></table>
-<!--l. 1956--><p class="nopar" >
-<!--l. 1958--><p class="indent" >   O método da potência permite o cálculo do autovetor dominante com base no
+<!--l. 1958--><p class="nopar" >
+<!--l. 1960--><p class="indent" >   O método da potência permite o cálculo do autovetor dominante com base no
 comportamento assintótico (i.e. "no infinito") da sequência
    <center class="math-display" >
 <img 
 src="main2301x.png" alt="x,Ax, A2x, A3x, ...
 " class="math-display" ></center>.
-<!--l. 1961--><p class="indent" >   Por questões de convergência, consideramos a seguinte sequência semelhante à
+<!--l. 1963--><p class="indent" >   Por questões de convergência, consideramos a seguinte sequência semelhante à
 anterior, porém normalizada:
    <center class="math-display" >
 <img 
@@ -163,17 +165,17 @@ como
    <center class="math-display" >
 <img 
 src="main2306x.png" alt="        n            n               (      n     (   )k   )
-Akx =  &sum;  &beta; Akv  =  &sum;  &beta; &lambda;kv  = &beta; &lambda;k (v  + &sum;   &beta;j- &lambda;j-   v )
-       j=1  j    j   j=1  j j j    1  1   1  j=2 &beta;1  &lambda;1     j " class="math-display" ></center>
+Akx =  &#x2211;  &#x03B2; Akv  =  &#x2211;  &#x03B2; &#x03BB;kv  = &#x03B2; &#x03BB;k (v  + &#x2211;   &#x03B2;j- &#x03BB;j-   v )
+       j=1  j    j   j=1  j j j    1  1   1  j=2 &#x03B2;1  &#x03BB;1     j " class="math-display" ></center>
 Como <img 
-src="main2307x.png" alt="||&lambda;j||
-|&lambda;1| &#x003C; 1  "  class="math" > para todo <img 
-src="main2308x.png" alt="j &ge; 2  "  class="math" >, temos
+src="main2307x.png" alt="||&#x03BB;j||
+|&#x03BB;1| &#x003C; 1  "  class="math" > para todo <img 
+src="main2308x.png" alt="j &#x2265; 2  "  class="math" >, temos
    <center class="math-display" >
 <img 
 src="main2309x.png" alt="      (   )k
-&sum;n &beta;j-  &lambda;j-
-   &beta;1   &lambda;1   vj &rarr;  0.
+&#x2211;n &#x03B2;j-  &#x03BB;j-
+   &#x03B2;1   &#x03BB;1   vj &#x2192;  0.
 j=2  " class="math-display" ></center>
 Assim
    <table 
@@ -185,42 +187,42 @@ class="equation"><tr><td><a
                                                                           
 <img 
 src="main2310x.png" alt="   k          k  (       ( ||  ||k) )
--A--x--=  -&beta;1&lambda;1--(v  + O ( ||&lambda;2|| )))
-&#x2225;Akx &#x2225;    &#x2225;Akx &#x2225;   1       |&lambda;1|
+-A--x--=  -&#x03B2;1&#x03BB;1--(v  + O ( ||&#x03BB;2|| )))
+&#x2225;Akx &#x2225;    &#x2225;Akx &#x2225;   1       |&#x03BB;1|
 " class="math-display" ></center></td><td class="equation-label">(4.27)</td></tr></table>
-<!--l. 1972--><p class="nopar" >
+<!--l. 1974--><p class="nopar" >
 Como a norma de <img 
 src="main2311x.png" alt="  k
 &#x2225;AAkxx&#x2225;  "  class="math" > é igual a um, temos
    <center class="math-display" >
 <img 
 src="main2312x.png" alt="&#x2225;         &#x2225;
-&#x2225;&#x2225; &beta;1-&lambda;k1-- &#x2225;&#x2225;
-&#x2225;&#x2225; &#x2225;Akx &#x2225;v1&#x2225;&#x2225; &rarr;  1  " class="math-display" ></center> e,
+&#x2225;&#x2225; &#x03B2;1-&#x03BB;k1-- &#x2225;&#x2225;
+&#x2225;&#x2225; &#x2225;Akx &#x2225;v1&#x2225;&#x2225; &#x2192;  1  " class="math-display" ></center> e,
 portanto,
    <center class="math-display" >
 <img 
 src="main2313x.png" alt="||    k ||
-||-&beta;1&lambda;1-||&rarr;   -1---
+||-&#x03B2;1&#x03BB;1-||&#x2192;   -1---
 |&#x2225;Akx &#x2225;|    &#x2225;v1&#x2225; " class="math-display" ></center> Ou
 seja, se definimos <img 
 src="main2314x.png" alt="          k
-&alpha;(k) = &beta;1&lambda;k1-
+&#x03B1;(k) = &#x03B2;1&#x03BB;k1-
        &#x2225;A x&#x2225;  "  class="math" >, então
    <center class="math-display" >
 <img 
 src="main2315x.png" alt="  (k)
-|&alpha;   | &rarr; 1  " class="math-display" ></center>
+|&#x03B1;   | &#x2192; 1  " class="math-display" ></center>
 Retornando a (<a 
 href="#x47-81004r27">4.27<!--tex4ht:ref: met_pot_assim --></a>), temos:
-<!--l. 1983--><p class="indent" >
+<!--l. 1985--><p class="indent" >
    <center class="math-display" >
 <img 
 src="main2316x.png" alt=" Akx
----k---&minus;  &alpha;(k)v1 &rarr;  0
+---k----  &#x03B1;(k)v1 &#x2192;  0
 &#x2225;A  x&#x2225;
 " class="math-display" ></center>
-<!--l. 1985--><p class="indent" >   Observe que um múltiplo de autovetor também é um autovetor e,
+<!--l. 1987--><p class="indent" >   Observe que um múltiplo de autovetor também é um autovetor e,
 portanto,
    <center class="math-display" >
 <img 
@@ -229,11 +231,11 @@ src="main2317x.png" alt="-Akx---
 um esquema que oscila entre os autovetores ou converge para o autovetor
 <img 
 src="main2318x.png" alt="v1   "  class="math" >.
-<!--l. 1992--><p class="indent" >   Uma vez que temos o autovetor <img 
+<!--l. 1994--><p class="indent" >   Uma vez que temos o autovetor <img 
 src="main2319x.png" alt="v
  1   "  class="math" > de <img 
 src="main2320x.png" alt="A  "  class="math" >, podemos calcular <img 
-src="main2321x.png" alt="&lambda;
+src="main2321x.png" alt="&#x03BB;
   1   "  class="math" > da seguinte
 forma:
    <table 
@@ -244,57 +246,57 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main2322x.png" alt="                                              T
-Av   = &lambda; v   =&rArr;   vTAv  =  vT&lambda; v   =&rArr;   &lambda;  = v1-Av1-
+Av   = &#x03BB; v   =&#x21D2;   vTAv  =  vT&#x03BB; v   =&#x21D2;   &#x03BB;  = v1-Av1-
    1    1 1        1   1    1  1 1       1    vT1 v1
 " class="math-display" ></center></td></tr></table>
-<!--l. 1995--><p class="nopar" >
+<!--l. 1997--><p class="nopar" >
 Observe que a última identidade é válida, pois <img 
 src="main2323x.png" alt="&#x2225;v1&#x2225; = 1  "  class="math" > por construção.
-<!--l. 1998--><p class="noindent" >
+<!--l. 2000--><p class="noindent" >
    <h4 class="likesubsectionHead"><a 
  id="x47-820004.7"></a>Exercícios</h4><hr class="section">
    <div class="newtheorem">
-<!--l. 2000--><p class="noindent" ><span class="head">
+<!--l. 2002--><p class="noindent" ><span class="head">
 <a 
  id="x47-82001r1"></a>
 <span 
 class="ec-lmbx-12">E 4.7.1.</span>  </span>Calcule o autovalor dominante e o autovetor associado da matriz
    <center class="math-display" >
 <img 
-src="main2324x.png" alt="&lfloor;            &rfloor;
+src="main2324x.png" alt="&#x230A;            &#x230B;
   4   41  78
 ||            ||
 || 48  28  21 ||
-|&lceil;            |&rceil;
+|&#x2308;            |&#x2309;
   26  13  11
 " class="math-display" ></center> Expresse sua resposta com seis dígitos significativos
    </div>
                                                                           
 
                                                                           
-<!--l. 2009--><p class="noindent" ><span 
+<!--l. 2011--><p class="noindent" ><span 
 class="ec-lmbx-6">Resposta.</span>  <img 
-src="main2325x.png" alt="&lambda;= 86.1785  "  class="math" > <span 
+src="main2325x.png" alt="&#x03BB;= 86.1785  "  class="math" > <span 
 class="ec-lmr-6">associado ao autovetor dado por</span> <img 
 src="main2326x.png" alt="v1 = [0.65968 0.66834 0.34372]T  "  class="math" ><span 
 class="ec-lmr-6">.</span>
    <div class="newtheorem">
-<!--l. 2015--><p class="noindent" ><span class="head">
+<!--l. 2017--><p class="noindent" ><span class="head">
 <a 
  id="x47-82002r2"></a>
 <span 
 class="ec-lmbx-12">E 4.7.2.</span>  </span>Calcule o autovalor dominante e o autovetor associado da matriz
    <center class="math-display" >
 <img 
-src="main2327x.png" alt="&lfloor;        &rfloor;
+src="main2327x.png" alt="&#x230A;        &#x230B;
 
-|&lceil; 3   4  |&rceil;
-  2  &minus; 1
+|&#x2308; 3   4  |&#x2309;
+  2  - 1
 " class="math-display" ></center> usando o método da potência inciando com o vetor <img 
 src="main2328x.png" alt="x =  [1  1]T  "  class="math" >
    </div>
    <div class="newtheorem">
-<!--l. 2024--><p class="noindent" ><span class="head">
+<!--l. 2026--><p class="noindent" ><span class="head">
 <a 
  id="x47-82003r3"></a>
 <span 
@@ -302,28 +304,28 @@ class="ec-lmbx-12">E 4.7.3.</span>  </span>A norma <img
 src="main2329x.png" alt="L2   "  class="math" >  de um matriz <img 
 src="main2330x.png" alt="A  "  class="math" > é dada pela raiz quadrada do
 autovalor dominante da matriz <img 
-src="main2331x.png" alt="A &lowast;A  "  class="math" >, isto é:
+src="main2331x.png" alt="A *A  "  class="math" >, isto é:
    <center class="math-display" >
 <img 
 src="main2332x.png" alt="        &#x2218; -----------------------
-                            &lowast;
-&#x2225;A &#x2225;2 =   max {|&lambda;| : &lambda; &isin; &sigma;(A A)} :
+                            *
+&#x2225;A &#x2225;2 =   max {|&#x03BB;| : &#x03BB; &#x2208; &#x03C3;(A A)} :
 " class="math-display" ></center> Use o método da potência para obter a norma <img 
 src="main2333x.png" alt="L2   "  class="math" > da seguinte matriz:
    <center class="math-display" >
 <img 
-src="main2334x.png" alt="     &lfloor;              &rfloor;
+src="main2334x.png" alt="     &#x230A;              &#x230B;
      | 69   84   88 |
      ||              ||
-A  = || 15  &minus; 40  11 ||
-     &lceil; 70   41   20 &rceil;
+A  = || 15  - 40  11 ||
+     &#x2308; 70   41   20 &#x2309;
 " class="math-display" ></center> Expresse sua resposta com seis dígitos significativos
    </div>
-<!--l. 2035--><p class="noindent" ><span 
+<!--l. 2037--><p class="noindent" ><span 
 class="ec-lmbx-6">Resposta.</span>  <img 
 src="main2335x.png" alt="158,726  "  class="math" >
    <div class="newtheorem">
-<!--l. 2042--><p class="noindent" ><span class="head">
+<!--l. 2044--><p class="noindent" ><span class="head">
 <a 
  id="x47-82004r4"></a>
 <span 
@@ -332,19 +334,19 @@ diagonal  principal.  Verifique  o  método  da  potência  aplicada  à  seguin
 matriz:
    <center class="math-display" >
 <img 
-src="main2336x.png" alt="&lfloor;           &rfloor;
+src="main2336x.png" alt="&#x230A;           &#x230B;
 
 || 2  3   1  ||
 ||           || .
-|&lceil; 0  3  &minus; 1 |&rceil;
+|&#x2308; 0  3  - 1 |&#x2309;
   0  0   1
 " class="math-display" ></center>
    </div>
                                                                           
 
                                                                           
-   <!--l. 2052-->
-<!--l. 2052--><p class="indent" >   <a 
+   <!--l. 2054-->
+<!--l. 2054--><p class="indent" >   <a 
  id="tailsdsl-metodo_da_potencia_para_calculo_de_autovalores.html"></a>   
 <div class="text-center">
 		<nav class="nav-links" aria-label="Page navigation">

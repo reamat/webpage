@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:03:00"> 
+<meta name="date" content="2016-11-07 23:12:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Complexidade de Algoritmos em Álgebra Linear'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Complexidade de Algoritmos em Álgebra Linear, Scilab'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro/main.pdf">Formato PDF</a></li>
             <li><a href="../livro/main.epub">Formato EPUB</a></li>
             <li><a href="../livro/slide.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro-py/main.html">Versão Python</a></li>
           </ul>
         </li>		
@@ -154,8 +156,8 @@ escalar por um vetor?
 class="ec-lmbx-12">Solu</span><span 
 class="ec-lmbx-12">ç</span><span 
 class="ec-lmbx-12">ão. </span>Seja <img 
-src="main1948x.png" alt="a &isin; R  "  class="math" > e <img 
-src="main1949x.png" alt="&#x20D7;x &isin; Rn  "  class="math" >, temos que
+src="main1948x.png" alt="a &#x2208; R  "  class="math" > e <img 
+src="main1949x.png" alt="&#x20D7;x &#x2208; Rn  "  class="math" >, temos que
    <table 
 class="equation"><tr><td><a 
  id="x37-57002r1"></a>
@@ -191,26 +193,26 @@ src="main1954x.png" alt="&#x2662; "  class="math" ></div>
 class="ec-lmbx-12">Exemplo 4.2.2 </span>(Produto vetor-vetor)<span 
 class="ec-lmbx-12">.</span>  </span>Qual   o   custo   para   calcular   o
 produto interno <img 
-src="main1955x.png" alt="&#x20D7;x &sdot;&#x20D7;y  "  class="math" >?
+src="main1955x.png" alt="&#x20D7;x &#x22C5;&#x20D7;y  "  class="math" >?
    </div>
 <!--l. 541--><p class="indent" >   <span 
 class="ec-lmbx-12">Solu</span><span 
 class="ec-lmbx-12">ç</span><span 
 class="ec-lmbx-12">ão. </span>Sejam <img 
-src="main1956x.png" alt="&#x20D7;x,&#x20D7;y &isin; Rn  "  class="math" >, temos que
+src="main1956x.png" alt="&#x20D7;x,&#x20D7;y &#x2208; Rn  "  class="math" >, temos que
    <table 
 class="equation"><tr><td><a 
  id="x37-57005r3"></a>
    <center class="math-display" >
 <img 
-src="main1957x.png" alt="&#x20D7;x &sdot;&#x20D7;y = x1 &#x00D7; y1 + x2 &#x00D7; y2 + ...+ xn &#x00D7; yn
+src="main1957x.png" alt="&#x20D7;x &#x22C5;&#x20D7;y = x1 &#x00D7; y1 + x2 &#x00D7; y2 + ...+ xn &#x00D7; yn
 " class="math-display" ></center></td><td class="equation-label">(4.3)</td></tr></table>
 <!--l. 545--><p class="nopar" >
 <!--l. 547--><p class="indent" >   São realizadas <img 
 src="main1958x.png" alt="n  "  class="math" > multiplicações (cada produto <img 
 src="main1959x.png" alt="xi  "  class="math" > por <img 
 src="main1960x.png" alt="yi  "  class="math" >) e <img 
-src="main1961x.png" alt="n &minus; 1  "  class="math" > somas,
+src="main1961x.png" alt="n - 1  "  class="math" > somas,
 ou seja, o custo total de operações é de
    <table 
 class="equation"><tr><td><a 
@@ -220,7 +222,7 @@ class="equation"><tr><td><a
 
                                                                           
 <img 
-src="main1962x.png" alt="C := (n) + (n &minus; 1) = 2n &minus; 1 flops
+src="main1962x.png" alt="C := (n) + (n - 1) = 2n - 1 flops
 " class="math-display" ></center></td><td class="equation-label">(4.4)</td></tr></table>
 <!--l. 550--><p class="nopar" >
                                                                           <div class="flushright" 
@@ -242,19 +244,19 @@ src="main1964x.png" alt="A&#x20D7;x  "  class="math" >?
 class="ec-lmbx-12">Solu</span><span 
 class="ec-lmbx-12">ç</span><span 
 class="ec-lmbx-12">ão. </span>Sejam <img 
-src="main1965x.png" alt="A &isin; Rn &#x00D7;n  "  class="math" > e <img 
-src="main1966x.png" alt="&#x20D7;x &isin; Rn  "  class="math" >, temos que
+src="main1965x.png" alt="A &#x2208; Rn &#x00D7;n  "  class="math" > e <img 
+src="main1966x.png" alt="&#x20D7;x &#x2208; Rn  "  class="math" >, temos que
    <table 
 class="equation"><tr><td><a 
  id="x37-57008r5"></a>
    <center class="math-display" >
 <img 
-src="main1967x.png" alt="&lfloor;                &rfloor; &lfloor;   &rfloor;    &lfloor;                                &rfloor;
- a    a    &sdot;&sdot;&sdot;a      x       a   &#x00D7; x  + a  x +  ...+ a   &#x00D7; x
+src="main1967x.png" alt="&#x230A;                &#x230B; &#x230A;   &#x230B;    &#x230A;                                &#x230B;
+ a    a    &#x22C5;&#x22C5;&#x22C5;a      x       a   &#x00D7; x  + a  x +  ...+ a   &#x00D7; x
 ||  11   12      1n|| ||  1||    || 11    1    12 2        1n    n ||
 ||  ...          ...  || ||  ...|| =  ||                ...               ||
-|&lceil;                |&rceil; |&lceil;   |&rceil;    |&lceil;                                |&rceil;
- an1       &sdot;&sdot;&sdot;ann    xn      an1 &#x00D7; x1 + an2x2 + ...+ ann &#x00D7; xn
+|&#x2308;                |&#x2309; |&#x2308;   |&#x2309;    |&#x2308;                                |&#x2309;
+ an1       &#x22C5;&#x22C5;&#x22C5;ann    xn      an1 &#x00D7; x1 + an2x2 + ...+ ann &#x00D7; xn
 " class="math-display" ></center></td><td class="equation-label">(4.5)</td></tr></table>
 <!--l. 562--><p class="nopar" >
                                                                           
@@ -276,11 +278,11 @@ class="equation"><tr><td><a
  id="x37-57011r7"></a>
    <center class="math-display" >
 <img 
-src="main1972x.png" alt="C := n &sdot; (2n &minus; 1) = 2n2 &minus; n flops.
+src="main1972x.png" alt="C := n &#x22C5; (2n - 1) = 2n2 - n flops.
 " class="math-display" ></center></td><td class="equation-label">(4.7)</td></tr></table>
 <!--l. 571--><p class="nopar" >
 <!--l. 573--><p class="indent" >   A medida que <img 
-src="main1973x.png" alt="n &rarr;  &infin; "  class="math" >, temos
+src="main1973x.png" alt="n &#x2192;  &#x221E; "  class="math" >, temos
    <table 
 class="equation"><tr><td><a 
  id="x37-57012r8"></a>
@@ -290,7 +292,7 @@ class="equation"><tr><td><a
    <center class="math-display" >
 <img 
 src="main1974x.png" alt="     2             2        2
-O (2n  &minus; n) = O (2n ) = O (n ) flops.
+O (2n  - n) = O (2n ) = O (n ) flops.
 " class="math-display" ></center></td><td class="equation-label">(4.8)</td></tr></table>
 <!--l. 576--><p class="nopar" >
                                                                           <div class="flushright" 
@@ -313,18 +315,18 @@ class="ec-lmbx-12">Solu</span><span
 class="ec-lmbx-12">ç</span><span 
 class="ec-lmbx-12">ão. </span>Sejam <img 
 src="main1977x.png" alt="         n&#x00D7;n
-A,B  &isin; R  "  class="math" > temos que
+A,B  &#x2208; R  "  class="math" > temos que
    <table 
 class="equation"><tr><td><a 
  id="x37-57014r9"></a>
    <center class="math-display" >
 <img 
-src="main1978x.png" alt="&lfloor;                &rfloor; &lfloor;                &rfloor;   &lfloor;                &rfloor;
-|a11  a12  &sdot;&sdot;&sdot;a1n| |b11  b12  &sdot;&sdot;&sdot;a1n|   | c11 c12  &sdot;&sdot;&sdot;c1n|
+src="main1978x.png" alt="&#x230A;                &#x230B; &#x230A;                &#x230B;   &#x230A;                &#x230B;
+|a11  a12  &#x22C5;&#x22C5;&#x22C5;a1n| |b11  b12  &#x22C5;&#x22C5;&#x22C5;a1n|   | c11 c12  &#x22C5;&#x22C5;&#x22C5;c1n|
 || .           .  || || .          .   ||   ||  .          .  ||
 || ..           ..  || || ..          ..   || = ||  ..          ..  ||
-&lceil;                &rceil; &lceil;                &rceil;   &lceil;                &rceil;
- an1       &sdot;&sdot;&sdot;ann   bn1       &sdot;&sdot;&sdot;bnn      cn1      &sdot;&sdot;&sdot;cnn
+&#x2308;                &#x2309; &#x2308;                &#x2309;   &#x2308;                &#x2309;
+ an1       &#x22C5;&#x22C5;&#x22C5;ann   bn1       &#x22C5;&#x22C5;&#x22C5;bnn      cn1      &#x22C5;&#x22C5;&#x22C5;cnn
                                                                           
 
                                                                           
@@ -346,7 +348,7 @@ src="main1984x.png" alt="dij = ai1 &#x00D7; b1j + ai2 &#x00D7; b2j + ...+ ai2 &#
 " class="math-display" ></center></td><td class="equation-label">(4.10)</td></tr></table>
 <!--l. 593--><p class="nopar" >
 Note que esse produto tem o custo do produto vetor-vetor, ou seja, <img 
-src="main1985x.png" alt="2n &minus;  1  "  class="math" >. Como
+src="main1985x.png" alt="2n -  1  "  class="math" >. Como
 temos <img 
 src="main1986x.png" alt="n &#x00D7; n  "  class="math" > elementos em <img 
 src="main1987x.png" alt="D  "  class="math" >, o custo total para multiplicar duas matrizes
@@ -362,7 +364,7 @@ class="equation"><tr><td><a
    <center class="math-display" >
 <img 
 src="main1991x.png" alt="                          3    2
-C =  n &#x00D7; n &#x00D7; (2n &minus; 1) = 2n  &minus; n  flops.
+C =  n &#x00D7; n &#x00D7; (2n - 1) = 2n  - n  flops.
 " class="math-display" ></center></td><td class="equation-label">(4.12)</td></tr></table>
 <!--l. 601--><p class="nopar" >
                                                                           <div class="flushright" 

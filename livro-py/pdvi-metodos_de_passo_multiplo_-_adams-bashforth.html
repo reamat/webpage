@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Métodos de passo múltiplo - Adams-Bashforth'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Métodos de passo múltiplo - Adams-Bashforth, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -96,27 +98,27 @@
 </div>
    <!--l. 477-->
    <h3 class="sectionHead"><span class="titlemark">10.6   </span> <a 
- id="x90-15600010.6"></a>Métodos de passo múltiplo - Adams-Bashforth</h3><hr class="section">
+ id="x90-15700010.6"></a>Métodos de passo múltiplo - Adams-Bashforth</h3><hr class="section">
 <a 
- id="dx90-156001"></a>
+ id="dx90-157001"></a>
 <!--l. 479--><p class="noindent" >O método de Adams-Bashforth consiste de um esquema recursivo do
 tipo:
    <center class="math-display" >
 <img 
-src="main4119x.png" alt=" (n+1)    (n)  &sum;k       (n&minus;j) (n&minus;j)
+src="main4142x.png" alt=" (n+1)    (n)  &#x2211;k       (n-j) (n-j)
 y     = y   +     wjf(y     ,t     )
               j=0
 " class="math-display" ></center>
    <div class="newtheorem">
 <!--l. 482--><p class="noindent" ><span class="head">
 <a 
- id="x90-156002r1"></a>
+ id="x90-157002r1"></a>
 <span 
 class="ec-lmbx-12">Exemplo 10.6.1.</span>  </span>Adams-Bashforth de segunda ordem
    <center class="math-display" >
 <img 
-src="main4120x.png" alt=" (n+1)    (n)  h-[   ( (n) (n))     ( (n&minus;1) (n&minus;1))]
-y      = y   + 2  3f  y   ,t    &minus; f  y     ,t
+src="main4143x.png" alt=" (n+1)    (n)  h-[   ( (n) (n))     ( (n-1) (n-1))]
+y      = y   + 2  3f  y   ,t    - f  y     ,t
 " class="math-display" ></center>
                                                                           
 
@@ -125,30 +127,30 @@ y      = y   + 2  3f  y   ,t    &minus; f  y     ,t
    <div class="newtheorem">
 <!--l. 486--><p class="noindent" ><span class="head">
 <a 
- id="x90-156003r2"></a>
+ id="x90-157003r2"></a>
 <span 
 class="ec-lmbx-12">Exemplo 10.6.2.</span>  </span>Adams-Bashforth de terceira ordem
    <center class="math-display" >
 <img 
-src="main4121x.png" alt=" (n+1)    (n)   h [    (  (n) (n))       ( (n&minus;1) (n&minus; 1))      ( (n&minus;2) (n&minus;2)) ]
-y     = y   +  ---23f  y   ,t   &minus;  16f  y    ,t      + 5f  y     ,t
+src="main4144x.png" alt=" (n+1)    (n)   h [    (  (n) (n))       ( (n-1) (n- 1))      ( (n-2) (n-2)) ]
+y     = y   +  ---23f  y   ,t   -  16f  y    ,t      + 5f  y     ,t
                12
 " class="math-display" ></center>
    </div>
    <div class="newtheorem">
 <!--l. 490--><p class="noindent" ><span class="head">
 <a 
- id="x90-156004r3"></a>
+ id="x90-157004r3"></a>
 <span 
 class="ec-lmbx-12">Exemplo 10.6.3.</span>  </span>Adams-Bashforth de quarta ordem
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main4122x.png" alt=" (n+1)    (n)   h [    (  (n) (n))       ( (n&minus;1) (n&minus; 1))
-y     = y   +  24-55f  y   ,t   &minus;  59f  y    ,t
-            ( (n&minus;2) (n&minus;2))     (  (n&minus; 3)  (n&minus;3))]
-      + 37f  y     ,t      &minus;  9f y     ,t
+src="main4145x.png" alt=" (n+1)    (n)   h [    (  (n) (n))       ( (n-1) (n- 1))
+y     = y   +  24-55f  y   ,t   -  59f  y    ,t
+            ( (n-2) (n-2))     (  (n- 3)  (n-3))]
+      + 37f  y     ,t      -  9f y     ,t
 " class="math-display" ></center></td></tr></table>
 <!--l. 496--><p class="nopar" >
    </div>

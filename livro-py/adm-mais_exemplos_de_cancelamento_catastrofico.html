@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Mais exemplos de Cancelamento Catastrófico'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Mais exemplos de Cancelamento Catastrófico, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -108,12 +110,12 @@ class="ec-lmbx-12">Exemplo 2.6.1.</span>  </span>Considere o seguinte processo i
 src="main470x.png" alt="(
 |{ x0 =  13
 |                             .
-( xn+1 =  4xn &minus; 1,    n &isin; &#x2115;  " class="math-display" ></center>
+( xn+1 =  4xn - 1,    n &#x2208; &#x2115;  " class="math-display" ></center>
 Observe que <img 
 src="main471x.png" alt="     1
 x0 = 3   "  class="math" >, <img 
 src="main472x.png" alt="        1        1
-x1 = 4 &sdot;3 &minus; 1 =  3   "  class="math" >, <img 
+x1 = 4 &#x22C5;3 - 1 =  3   "  class="math" >, <img 
 src="main473x.png" alt="      1
 x2 =  3   "  class="math" >, ou seja, temos uma sequência
 constante igual a <img 
@@ -152,10 +154,10 @@ calculada no computador é: <div class="eqnarray">
 src="main479x.png" alt="        1
 &#x02DC;x0  =   --+ &#x03F5;
         3          (      )
-&#x02DC;x1  =  4x0 &minus;  1 = 4  1-+ &#x03F5;  &minus; 1 = 1-+ 4 &#x03F5;
+&#x02DC;x1  =  4x0 -  1 = 4  1-+ &#x03F5;  - 1 = 1-+ 4 &#x03F5;
                    ( 3     )      3
                      1-            1-    2
-&#x02DC;x2  =  4x1 &minus;  1 = 4  3 + 4&#x03F5;  &minus; 1 = 3 +  4 &#x03F5;
+&#x02DC;x2  =  4x1 -  1 = 4  3 + 4&#x03F5;  - 1 = 3 +  4 &#x03F5;
     .
     ..
         1-   n
@@ -169,7 +171,7 @@ class="equation-star"><tr><td>
                                                                           
    <center class="math-display" >
 <img 
-src="main480x.png" alt="xli&rarr;m&infin; |x&#x02DC;n | = &infin;
+src="main480x.png" alt="xli&#x2192;m&#x221E; |x&#x02DC;n | = &#x221E;
 " class="math-display" ></center></td></tr></table>
 <!--l. 1369--><p class="nopar" >
 Qual o número de condicionamento desse problema?
@@ -182,17 +184,17 @@ Qual o número de condicionamento desse problema?
 class="ec-lmbx-12">Exemplo 2.6.2.</span>  </span>Observe a seguinte identidade
    <center class="math-display" >
 <img 
-src="main481x.png" alt="       (1 + x) &minus; 1
+src="main481x.png" alt="       (1 + x) - 1
 f(x) = ----------- = 1
             x
 " class="math-display" ></center> Calcule o valor da expressão à esquerda para <img 
-src="main482x.png" alt="x = 10&minus;12   "  class="math" >, <img 
-src="main483x.png" alt="x = 10&minus; 13   "  class="math" >, <img 
-src="main484x.png" alt="x = 10&minus; 14   "  class="math" >,
+src="main482x.png" alt="x = 10-12   "  class="math" >, <img 
+src="main483x.png" alt="x = 10- 13   "  class="math" >, <img 
+src="main484x.png" alt="x = 10- 14   "  class="math" >,
 <img 
-src="main485x.png" alt="x =  10&minus;15   "  class="math" >, <img 
-src="main486x.png" alt="x = 10&minus;16   "  class="math" > e <img 
-src="main487x.png" alt="x = 10 &minus;17   "  class="math" >. Observe que quando <img 
+src="main485x.png" alt="x =  10-15   "  class="math" >, <img 
+src="main486x.png" alt="x = 10-16   "  class="math" > e <img 
+src="main487x.png" alt="x = 10 -17   "  class="math" >. Observe que quando <img 
 src="main488x.png" alt="x  "  class="math" > se aproxima
 do <img 
 src="main489x.png" alt="&#x03F5;  "  class="math" > de máquina a expressão perde o significado. Veja a Figura&#x00A0;<a 
@@ -282,7 +284,7 @@ class="equation-star"><tr><td>
 <img 
 src="main500x.png" alt="    (       )n
 lim   1 + 1-   = e = 2,718281828459...
-n&rarr;&infin;       n
+n&#x2192;&#x221E;       n
 " class="math-display" ></center></td></tr></table>
 <!--l. 1403--><p class="nopar" >
                                                                           
@@ -294,7 +296,7 @@ href="#x16-26006r3">2.6.3<!--tex4ht:ref: def_lim --></a>) é crescente, isto
    <center class="math-display" >
 <img 
 src="main501x.png" alt="(     1)1   (     1)2    (    1)3
-  1 + 1   &#x003C;   1 + 2   &#x003C;   1 + 3   &#x003C;  &sdot;&sdot;&sdot;
+  1 + 1   &#x003C;   1 + 2   &#x003C;   1 + 3   &#x003C;  &#x22C5;&#x22C5;&#x22C5;
 " class="math-display" ></center>
 <!--l. 1408--><p class="indent" >   No entanto, quando calculamos essa expressão no <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">Scilab</span></span></span>, nos defrontamos
@@ -370,7 +372,7 @@ class="equation"><tr><td><a
  id="x16-26007r1"></a>
    <center class="math-display" >
 <img 
-src="main513x.png" alt="n  &rarr;   1&#x2215;n &rarr;   1 + 1&#x2215;n  &rarr;   (1 + 1&#x2215;n )n
+src="main513x.png" alt="n  &#x2192;   1&#x2215;n &#x2192;   1 + 1&#x2215;n  &#x2192;   (1 + 1&#x2215;n )n
 " class="math-display" ></center></td><td class="equation-label">(2.1)</td></tr></table>
 <!--l. 1433--><p class="nopar" >
 Devido ao limite de precisão da representação de números em ponto flutuante,
@@ -385,7 +387,7 @@ somado a 1 produz um resultado superior a 1 no sistema de numeração usado. O
 épsilon de máquina no sistema de numeração <span 
 class="ec-lmbx-12">double </span>vale aproximadamente
 <img 
-src="main515x.png" alt="2,22 &#x00D7; 10&minus; 16   "  class="math" >. Em <span class="obeylines-h"><span class="verb"><span 
+src="main515x.png" alt="2,22 &#x00D7; 10- 16   "  class="math" >. Em <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">Python</span></span></span> podemos obter o epsilon de máquina com o seguinte
 comando <span class="obeylines-h"><span class="verb"><span 
 class="ec-lmtt-12">numpy</span></span></span>:
@@ -406,7 +408,7 @@ src="main516x.png" alt="1  "  class="math" > um número positivo inferior ao ép
 obtemos o número 1. Dessa forma, o resultado obtido pela operação de ponto
 flutuante <img 
 src="main517x.png" alt="1 + n  "  class="math" > para <img 
-src="main518x.png" alt="0 &#x003C; n &#x003C;  2,22 &#x00D7; 10&minus;16   "  class="math" > é 1.
+src="main518x.png" alt="0 &#x003C; n &#x003C;  2,22 &#x00D7; 10-16   "  class="math" > é 1.
 <!--l. 1465--><p class="indent" >   Portanto, quando realizamos a sequência de operações dada em (<a 
 href="#x16-26007r1">2.1<!--tex4ht:ref: seq_oper --></a>), toda
 informação contida no número <img 
@@ -436,7 +438,7 @@ class="equation"><tr><td><a
  id="x16-26008r2"></a>
    <center class="math-display" >
 <img 
-src="main530x.png" alt="n &rarr;   1&#x2215;n  &rarr;   1&#x2215;(1&#x2215;n)
+src="main530x.png" alt="n &#x2192;   1&#x2215;n  &#x2192;   1&#x2215;(1&#x2215;n)
 " class="math-display" ></center></td><td class="equation-label">(2.2)</td></tr></table>
                                                                           
 
@@ -450,7 +452,7 @@ class="equation"><tr><td><a
  id="x16-26009r3"></a>
    <center class="math-display" >
 <img 
-src="main532x.png" alt="n  &rarr;  1 + n  &rarr;   (1 + n ) &minus; 1.
+src="main532x.png" alt="n  &#x2192;  1 + n  &#x2192;   (1 + n ) - 1.
 " class="math-display" ></center></td><td class="equation-label">(2.3)</td></tr></table>
 <!--l. 1474--><p class="nopar" >
 Finalmente, notamos que quando tentamos calcular <img 
@@ -528,8 +530,8 @@ class="ec-lmbx-12">E 2.6.1.</span>  </span>Considere as expressões:
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main558x.png" alt="  exp(1&#x2215;&mu; )
-1 +-exp(1&#x2215;&mu;)-
+src="main558x.png" alt="  exp(1&#x2215;&#x03BC; )
+1 +-exp(1&#x2215;&#x03BC;)-
 " class="math-display" ></center></td></tr></table>
 <!--l. 1539--><p class="nopar" >
 e
@@ -542,23 +544,23 @@ class="equation-star"><tr><td>
 <img 
 src="main559x.png" alt="      1
 ---------------
-exp(&minus; 1&#x2215;&mu;) + 1
+exp(- 1&#x2215;&#x03BC;) + 1
 " class="math-display" ></center></td></tr></table>
 <!--l. 1543--><p class="nopar" >
 com <img 
-src="main560x.png" alt="&mu; &#x003E; 0  "  class="math" >. Verifique que elas são idênticas como funções reais. Teste no
+src="main560x.png" alt="&#x03BC; &#x003E; 0  "  class="math" >. Verifique que elas são idênticas como funções reais. Teste no
 computador cada uma delas para <img 
-src="main561x.png" alt="&mu; = 0,1  "  class="math" >, <img 
-src="main562x.png" alt="&mu; = 0,01  "  class="math" > e <img 
-src="main563x.png" alt="&mu; = 0,001  "  class="math" >. Qual
+src="main561x.png" alt="&#x03BC; = 0,1  "  class="math" >, <img 
+src="main562x.png" alt="&#x03BC; = 0,01  "  class="math" > e <img 
+src="main563x.png" alt="&#x03BC; = 0,001  "  class="math" >. Qual
 dessas expressões é mais adequada quando <img 
-src="main564x.png" alt="&mu;  "  class="math" > é um número pequeno? Por
+src="main564x.png" alt="&#x03BC;  "  class="math" > é um número pequeno? Por
 quê?
    </div>
 <!--l. 1546--><p class="noindent" ><span 
 class="ec-lmbx-6">Resposta.  </span><span 
 class="ec-lmr-6">Quando</span> <img 
-src="main565x.png" alt="&mu;  "  class="math" > <span 
+src="main565x.png" alt="&#x03BC;  "  class="math" > <span 
 class="ec-lmr-6">é pequeno,</span> <img 
 src="main566x.png" alt="1&#x2215;mu
 e  "  class="math" > <span 
@@ -570,12 +572,12 @@ class="ec-lmr-6">úmero maior que</span>
 class="ec-lmr-6">o m</span><span 
 class="ec-lmr-6">áximo represent</span><span 
 class="ec-lmr-6">ável) quando</span> <img 
-src="main567x.png" alt="&mu;  "  class="math" > <span 
+src="main567x.png" alt="&#x03BC;  "  class="math" > <span 
 class="ec-lmr-6">é pequeno. A segunda express</span><span 
 class="ec-lmr-6">ão, no entanto, reproduz o limite</span> <img 
 src="main568x.png" alt="1  "  class="math" > <span 
 class="ec-lmr-6">quando</span> <img 
-src="main569x.png" alt="&mu; &rarr;0+  "  class="math" ><span 
+src="main569x.png" alt="&#x03BC; &#x2192;0+  "  class="math" ><span 
 class="ec-lmr-6">.</span>
    <div class="newtheorem">
 <!--l. 1552--><p class="noindent" ><span class="head">
@@ -587,21 +589,21 @@ funções quando <img
 src="main570x.png" alt="x  "  class="math" > é próximo de zero.
       <ul class="itemize1">
       <li class="itemize"><img 
-src="main571x.png" alt="f(x) = 1&minus;-cos2(x)
+src="main571x.png" alt="f(x) = 1--cos2(x)
           x   "  class="math" >
       </li>
       <li class="itemize"><img 
-src="main572x.png" alt="       &radic; ------
-g(x) =   1 + x &minus; 1  "  class="math" >
+src="main572x.png" alt="       &#x221A; ------
+g(x) =   1 + x - 1  "  class="math" >
       </li>
       <li class="itemize"><img 
-src="main573x.png" alt="       &radic; ------6-    3
-h(x) =   x + 10  &minus; 10   "  class="math" >
+src="main573x.png" alt="       &#x221A; ------6-    3
+h(x) =   x + 10  - 10   "  class="math" >
       </li>
       <li class="itemize"><img 
-src="main574x.png" alt="       &radic; ------  &radic; --
-i(x ) =   1 + ex &minus;  2  "  class="math" > &#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0; Dica: Faça <img 
-src="main575x.png" alt="y = ex &minus; 1  "  class="math" ></li></ul>
+src="main574x.png" alt="       &#x221A; ------  &#x221A; --
+i(x ) =   1 + ex -  2  "  class="math" > &#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0; Dica: Faça <img 
+src="main575x.png" alt="y = ex - 1  "  class="math" ></li></ul>
                                                                           
 
                                                                           
@@ -618,11 +620,11 @@ src="main577x.png" alt="       2
 x&#x2215;2+O(x )  "  class="math" ><span 
 class="ec-lmr-6">; c)</span><span 
 class="ec-lmr-6">&#x00A0;</span><img 
-src="main578x.png" alt="   &minus;4     2
-5&sdot;10  x+O(x)  "  class="math" ><span 
+src="main578x.png" alt="   -4     2
+5&#x22C5;10  x+O(x)  "  class="math" ><span 
 class="ec-lmr-6">; d)</span><span 
 class="ec-lmr-6">&#x00A0;</span><img 
-src="main579x.png" alt="&radic;2     2  &radic;2     2
+src="main579x.png" alt="&#x221A;2     2  &#x221A;2     2
  4 y+ O(y )= 4 x+ O(x)  "  class="math" >
    <div class="newtheorem">
 <!--l. 1566--><p class="noindent" ><span class="head">
@@ -636,33 +638,33 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main580x.png" alt="               (         )2
-1-&minus;-cos(x)   1-  sin(x-&#x2215;2)-
+1---cos(x)   1-  sin(x-&#x2215;2)-
     x2     = 2     x&#x2215;2      .
 " class="math-display" ></center></td></tr></table>
 <!--l. 1569--><p class="nopar" >
 Analise o desempenho destas duas expressões no computador quando <img 
 src="main581x.png" alt="x  "  class="math" > vale
 <img 
-src="main582x.png" alt="  &minus; 5
+src="main582x.png" alt="  - 5
 10   "  class="math" >, <img 
-src="main583x.png" alt="   &minus;6
+src="main583x.png" alt="   -6
 10   "  class="math" >, <img 
-src="main584x.png" alt="  &minus;7
+src="main584x.png" alt="  -7
 10   "  class="math" >, <img 
-src="main585x.png" alt="  &minus;8
+src="main585x.png" alt="  -8
 10   "  class="math" >, <img 
-src="main586x.png" alt="  &minus; 9
+src="main586x.png" alt="  - 9
 10   "  class="math" >, <img 
-src="main587x.png" alt="   &minus;200
+src="main587x.png" alt="   -200
 10   "  class="math" > e <img 
 src="main588x.png" alt="0  "  class="math" >. Discuta o resultado. <span 
 class="ec-lmbx-12">Dica:</span>
 Para <img 
-src="main589x.png" alt="|x| &#x003C; 10&minus; 5   "  class="math" >, <img 
+src="main589x.png" alt="|x| &#x003C; 10- 5   "  class="math" >, <img 
 src="main590x.png" alt="f (x)  "  class="math" > pode ser aproximada por <img 
-src="main591x.png" alt="1&#x2215;2 &minus; x2&#x2215;24  "  class="math" > com erro de
+src="main591x.png" alt="1&#x2215;2 - x2&#x2215;24  "  class="math" > com erro de
 truncamento inferior a <img 
-src="main592x.png" alt="10&minus; 22   "  class="math" >.
+src="main592x.png" alt="10- 22   "  class="math" >.
    </div>
    <div class="newtheorem">
 <!--l. 1587--><p class="noindent" ><span class="head">
@@ -676,8 +678,8 @@ class="ec-lmbx-12">.</span>  </span>Reescreva as expressões:
                                                                           
    <center class="math-display" >
 <img 
-src="main593x.png" alt="&radic; -2x----    x         &radic; -2x----2    x
-  e  +  1 &minus; e     e      e   + x  &minus; e
+src="main593x.png" alt="&#x221A; -2x----    x         &#x221A; -2x----2    x
+  e  +  1 - e     e      e   + x  - e
 " class="math-display" ></center> de modo que seja possível calcular seus valores para <img 
 src="main594x.png" alt="x = 100  "  class="math" > utilizando a
 aritmética de ponto flutuante ("Double") no computador.
@@ -694,8 +696,8 @@ class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
 src="main595x.png" alt="         (                 )
-E  = mc2 ( &#x2218;----1------&minus;  1) ,
-             1 &minus; (v&#x2215;c)2
+E  = mc2 ( &#x2218;----1-------  1) ,
+             1 - (v&#x2215;c)2
 " class="math-display" ></center></td></tr></table>
 <!--l. 1595--><p class="nopar" >
 onde <img 
@@ -706,9 +708,9 @@ da velocidade e <img
 src="main599x.png" alt="c  "  class="math" > a velocidade da luz no vácuo dada por <img 
 src="main600x.png" alt="c = 299792458m  &#x2215;s  "  class="math" >.
 Considere que a massa de repouso <img 
-src="main601x.png" alt="m  = 9,10938291  &#x00D7; 10&minus;31Kg  "  class="math" > do elétron seja
+src="main601x.png" alt="m  = 9,10938291  &#x00D7; 10-31Kg  "  class="math" > do elétron seja
 conhecida com erro relativo de <img 
-src="main602x.png" alt="10&minus;9   "  class="math" >. Qual é o valor da energia e o erro relativo
+src="main602x.png" alt="10-9   "  class="math" >. Qual é o valor da energia e o erro relativo
 associado a essa grandeza quando <img 
 src="main603x.png" alt="v = 0,1c  "  class="math" >, <img 
 src="main604x.png" alt="v = 0,5c  "  class="math" >, <img 
@@ -716,30 +718,30 @@ src="main605x.png" alt="v = 0,99c  "  class="math" > e
 <img 
 src="main606x.png" alt="v = 0,999c  "  class="math" > sendo que a incerteza relativa na medida da velocidade é
 <img 
-src="main607x.png" alt="10&minus; 5   "  class="math" >?
+src="main607x.png" alt="10- 5   "  class="math" >?
                                                                           
 
                                                                           
    </div>
 <!--l. 1598--><p class="noindent" ><span 
 class="ec-lmbx-6">Resposta.</span>  <img 
-src="main608x.png" alt="          &minus;16
+src="main608x.png" alt="          -16
 4,12451228&#x00D7; 10  "  class="math" ><span 
 class="ec-lmr-6">&#x00A0;J;</span> <img 
 src="main609x.png" alt="0,002%  "  class="math" ><span 
 class="ec-lmr-6">;</span> <img 
-src="main610x.png" alt="          &minus;14
+src="main610x.png" alt="          -14
 0,26654956&#x00D7;10  "  class="math" ><span 
 class="ec-lmr-6">&#x00A0;J;</span> <img 
 src="main611x.png" alt="0,002%  "  class="math" ><span 
 class="ec-lmr-6">;</span> <img 
-src="main612x.png" alt="          &minus;13
+src="main612x.png" alt="          -13
 4,98497440&#x00D7;10  "  class="math" ><span 
 class="ec-lmr-6">&#x00A0;J;</span> <img 
 src="main613x.png" alt="0,057%  "  class="math" ><span 
 class="ec-lmr-6">;</span>
 <img 
-src="main614x.png" alt="1,74927914&#x00D7; 10&minus;12  "  class="math" ><span 
+src="main614x.png" alt="1,74927914&#x00D7; 10-12  "  class="math" ><span 
 class="ec-lmr-6">&#x00A0;J;</span> <img 
 src="main615x.png" alt="0,522%  "  class="math" ><span 
 class="ec-lmr-6">.</span>
@@ -770,21 +772,21 @@ src="main624x.png" alt="v1   "  class="math" > e <img
 src="main625x.png" alt="v2   "  class="math" > e, depois, em termos de <img 
 src="main626x.png" alt="v1   "  class="math" > e <img 
 src="main627x.png" alt="v3   "  class="math" >. Dica: Se <img 
-src="main628x.png" alt="ad &frasl;= bc  "  class="math" >, então
+src="main628x.png" alt="ad &#x2044;= bc  "  class="math" >, então
       a matriz <img 
 src="main629x.png" alt="A  "  class="math" > dada por
       <center class="math-display" >
       <img 
-src="main630x.png" alt="     &lfloor;      &rfloor;
+src="main630x.png" alt="     &#x230A;      &#x230B;
 A =  | a  b |
-     &lceil; c  d &rceil;
+     &#x2308; c  d &#x2309;
       " class="math-display" ></center> é inversível e sua inversa é dada por
       <center class="math-display" >
       <img 
-src="main631x.png" alt="               &lfloor;         &rfloor;
-A &minus;1 = ---1----|  d  &minus; b | .
-       ad &minus; bc &lceil;         &rceil;
-                 &minus; c  a
+src="main631x.png" alt="               &#x230A;         &#x230B;
+A -1 = ---1----|  d  - b | .
+       ad - bc &#x2308;         &#x2309;
+                 - c  a
       " class="math-display" ></center>
       </li>
       <li class="itemize">Sabendo que incerteza relativa associada às sensibilidades dos sensores
@@ -793,8 +795,8 @@ src="main632x.png" alt="2%  "  class="math" > e que a incerteza relativa associa
       sensor 3 é <img 
 src="main633x.png" alt="10%  "  class="math" >, verifique a incerteza associada à medida feita com o
       par <img 
-src="main634x.png" alt="1 &minus; 2  "  class="math" > e o par <img 
-src="main635x.png" alt="1 &minus; 3  "  class="math" >. Use <img 
+src="main634x.png" alt="1 - 2  "  class="math" > e o par <img 
+src="main635x.png" alt="1 - 3  "  class="math" >. Use <img 
 src="main636x.png" alt="[A] = [B] = 10milimol &#x2215;l  "  class="math" >. Dica: Você
       deve diferenciar as grandezas <img 
 src="main637x.png" alt="[A ]  "  class="math" > e <img 
@@ -817,16 +819,16 @@ class="ec-lmr-6">forma que</span>
                                                                           
    <center class="math-display" >
 <img 
-src="main640x.png" alt="[ [A]]  [ S   S  ]&minus; 1[ v ]       1     [  S   &minus; S  ][ v ]
-  [B]  =  S1211 S1222     v12  = S11S22&minus; S12S21 &minus;S2221  S1121    v12 " class="math-display" ></center>
+src="main640x.png" alt="[ [A]]  [ S   S  ]- 1[ v ]       1     [  S   - S  ][ v ]
+  [B]  =  S1211 S1222     v12  = S11S22- S12S21 -S2221  S1121    v12 " class="math-display" ></center>
 <span 
 class="ec-lmr-6">Portanto </span><div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main641x.png" alt="        S v &minus; S v
-[A]  =  S2112S212&minus; S1122S221
-[B]  =  &minus;S21v1+-S11v2
-       S11S22&minus; S12S21
+src="main641x.png" alt="        S v - S v
+[A]  =  S2112S212- S1122S221
+[B]  =  -S21v1+-S11v2
+       S11S22- S12S21
 " class="math-display" ></center>
 </div>
 <!--l. 1663--><p class="indent" >   <span 
@@ -837,25 +839,25 @@ class="ec-lmr-6">ítmica, temos</span>
 <!--l. 1665--><p class="indent" >   <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main642x.png" alt="[A1] &part;&part;[SA] = &minus; S-S-S2&minus;2 S-S--
- 1&part;[1A1]       11 22v2  1221    S21       [A]     S22
-[A]&part;S12  = &minus; S22v1&minus; S12v2-+S11S22&minus; S12S21 =&minus;[B] &sdot;S11S22&minus; S12S21
--1&part;[A]  =  ----S12-----
-[A]&part;S21     S11S22 &minus; S12S21
-[A1] &part;&part;[SA] =  S-v-v1&minus; S-v-&minus; S-S-S1&minus;1 S-S- = [[AB]] &sdot;S-S-S12&minus; S-S
+src="main642x.png" alt="[A1] &#x2202;&#x2202;[SA] = - S-S-S2-2 S-S--
+ 1&#x2202;[1A1]       11 22v2  1221    S21       [A]     S22
+[A]&#x2202;S12  = - S22v1- S12v2-+S11S22- S12S21 =-[B] &#x22C5;S11S22- S12S21
+-1&#x2202;[A]  =  ----S12-----
+[A]&#x2202;S21     S11S22 - S12S21
+[A1] &#x2202;&#x2202;[SA] =  S-v-v1- S-v-- S-S-S1-1 S-S- = [[AB]] &#x22C5;S-S-S12- S-S
     22      22 1  122   1122  1221       11 22   12 21
 " class="math-display" ></center>
 </div><span 
 class="ec-lmr-6">e </span><div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main643x.png" alt="-1&part;[B]  =  ----v2-----&minus;----S22---- = [B]---S21-----
-[B]1&part;&part;S[1B1]     &minus;S21v1S+S11v2  S11S22&minus; S12S21 [A]S11S22 &minus; S12S21
-[B]&part;S12  =  S11S222&minus;1 S12S21
--1&part;[B]      ----v1----- -----S21----   [B]----S11----
-[B]&part;S21  =  &minus;&minus;S21v1+S11v2 +S11S22&minus; S12S21 =&minus; [A]S11S22&minus; S12S21
--1&part;[B]  =  &minus;----S11----
-[B]&part;S22      S11S22&minus; S12S21
+src="main643x.png" alt="-1&#x2202;[B]  =  ----v2----------S22---- = [B]---S21-----
+[B]1&#x2202;&#x2202;S[1B1]     -S21v1S+S11v2  S11S22- S12S21 [A]S11S22 - S12S21
+[B]&#x2202;S12  =  S11S222-1 S12S21
+-1&#x2202;[B]      ----v1----- -----S21----   [B]----S11----
+[B]&#x2202;S21  =  --S21v1+S11v2 +S11S22- S12S21 =- [A]S11S22- S12S21
+-1&#x2202;[B]  =  -----S11----
+[B]&#x2202;S22      S11S22- S12S21
 " class="math-display" ></center>
 </div>
 <!--l. 1680--><p class="indent" >   <span 
@@ -864,16 +866,16 @@ class="ec-lmr-6">às medidas pode ser aproximado por </span><div class="eqnarray
    <center class="math-display" >
 <img 
 src="main644x.png" alt="         |      |    |      |     |     |     |     |
-[A1]&delta;[A] =  ||[1A] &part;&part;S[A]||&delta;S11 +||[1A] &part;&part;S[A]||&delta;S12 + ||[ 1A] &part;&part;[AS]||&delta;S21 + ||[ 1A] &part;&part;[AS]||&delta;S22
+[A1]&#x03B4;[A] =  ||[1A] &#x2202;&#x2202;S[A]||&#x03B4;S11 +||[1A] &#x2202;&#x2202;S[A]||&#x03B4;S12 + ||[ 1A] &#x2202;&#x2202;[AS]||&#x03B4;S21 + ||[ 1A] &#x2202;&#x2202;[AS]||&#x03B4;S22
            1  1[1      [A] 12          2[1A]     ]   22
-      =   |detS| S22&delta;S11 +[B]S22&delta;S12 +S12&delta;S21 +[B]S12&delta;S22
+      =   |detS| S22&#x03B4;S11 +[B]S22&#x03B4;S12 +S12&#x03B4;S21 +[B]S12&#x03B4;S22
 " class="math-display" ></center>
 </div><span 
 class="ec-lmr-6">Analogamente, temos: </span><div class="eqnarray">
    <center class="math-display" >
 <img 
 src="main645x.png" alt=" 1          1  [[B]              [B ]           ]
-[B]&delta;[B] =  |detS| [A]S21&delta;S11 + S21&delta;S11 + [A]S11&delta;S21 +S11&delta;S22
+[B]&#x03B4;[B] =  |detS| [A]S21&#x03B4;S11 + S21&#x03B4;S11 + [A]S11&#x03B4;S21 +S11&#x03B4;S22
 " class="math-display" ></center>
 </div>
 <!--l. 1690--><p class="indent" >   <span 
@@ -899,10 +901,10 @@ detS= |140 20 |=1200  " class="math-display" ></center>
 <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main649x.png" alt="-1&delta;[A]  =  -1-[20&#x00D7; 270&#x00D7;2% +20&#x00D7;30&#x00D7;2%+ 30 &#x00D7;140&#x00D7; 2% +30&#x00D7;20&#x00D7; 2%]
+src="main649x.png" alt="-1&#x03B4;[A]  =  -1-[20&#x00D7; 270&#x00D7;2% +20&#x00D7;30&#x00D7;2%+ 30 &#x00D7;140&#x00D7; 2% +30&#x00D7;20&#x00D7; 2%]
 [A]        1220160
        =  1200 = 0.18 =18%
--1&delta;[B]  =  -1-[140&#x00D7;270&#x00D7;2%+ 140&#x00D7;30&#x00D7; 2% +270&#x00D7;140&#x00D7; 2%+270&#x00D7;20&#x00D7;2%]
+-1&#x03B4;[B]  =  -1-[140&#x00D7;270&#x00D7;2%+ 140&#x00D7;30&#x00D7; 2% +270&#x00D7;140&#x00D7; 2%+270&#x00D7;20&#x00D7;2%]
 [B]        1200
        =  4122600 = 0.355= 35.5%
 " class="math-display" ></center>
@@ -918,12 +920,12 @@ detS= || 270  30 ||=53550
    <center class="math-display" >
 <img 
 src="main651x.png" alt="1          1
-[A]&delta;[A] =  53550[200&#x00D7; 270&#x00D7;2% +200&#x00D7; 30&#x00D7;2%+ 30&#x00D7; 15&#x00D7; 10% +30&#x00D7;200&#x00D7;10% ]
-      =  1804,6&asymp;0.0337=3.37%
+[A]&#x03B4;[A] =  53550[200&#x00D7; 270&#x00D7;2% +200&#x00D7; 30&#x00D7;2%+ 30&#x00D7; 15&#x00D7; 10% +30&#x00D7;200&#x00D7;10% ]
+      =  1804,6&#x2248;0.0337=3.37%
 1         525150
-[B]&delta;[B] =  53550[15&#x00D7; 270&#x00D7; 2% +15&#x00D7;30&#x00D7; 2% +270&#x00D7;15&#x00D7;10%+270&#x00D7;200&#x00D7;10% ]
+[B]&#x03B4;[B] =  53550[15&#x00D7; 270&#x00D7; 2% +15&#x00D7;30&#x00D7; 2% +270&#x00D7;15&#x00D7;10%+270&#x00D7;200&#x00D7;10% ]
          -5895
-      =  53550 &asymp; 0.11=11%
+      =  53550 &#x2248; 0.11=11%
 " class="math-display" ></center>
                                                                           
 

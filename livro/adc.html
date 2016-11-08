@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:03:00"> 
+<meta name="date" content="2016-11-07 23:12:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Ajuste de curvas'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Ajuste de curvas, Scilab'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro/main.pdf">Formato PDF</a></li>
             <li><a href="../livro/main.epub">Formato EPUB</a></li>
             <li><a href="../livro/slide.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro-py/main.html">Versão Python</a></li>
           </ul>
         </li>		
@@ -110,14 +112,14 @@ class="ec-lmbx-12">étodo</span>
 class="ec-lmbx-12">dos m</span><span 
 class="ec-lmbx-12">ínimos quadrados</span><a 
  id="dx62-106004"></a>. Mais precisamente, dado um conjunto de <img 
-src="main3067x.png" alt="N  "  class="math" > pontos
+src="main3075x.png" alt="N  "  class="math" > pontos
 <img 
-src="main3068x.png" alt="            2 N
-{(xj,yj) &isin; &#x211D; }j=1 "  class="math" > e uma família de funções <img 
-src="main3069x.png" alt="F =  {f : &#x211D; &rarr; &#x211D;; y = f (x )} "  class="math" >, o
+src="main3076x.png" alt="            2 N
+{(xj,yj) &#x2208; &#x211D; }j=1 "  class="math" > e uma família de funções <img 
+src="main3077x.png" alt="F =  {f : &#x211D; &#x2192; &#x211D;; y = f (x )} "  class="math" >, o
 problema de ajuste de curvas consiste em encontrar uma função da família
 <img 
-src="main3070x.png" alt="F "  class="math" > que melhor se ajusta aos pontos dados, não necessariamente que os
+src="main3078x.png" alt="F "  class="math" > que melhor se ajusta aos pontos dados, não necessariamente que os
 interpola.
 <!--l. 10--><p class="indent" >   <hr class="figure"><div class="figure" 
 >
@@ -130,8 +132,8 @@ interpola.
 
                                                                           
 <!--l. 12--><p class="noindent" ><img 
-src="main3071x.png" alt="PIC" class="graphics" width="163.50975pt" height="168.92998pt" ><!--tex4ht:graphics  
-name="main3071x.png" src="./cap_ajuste/pics/ex_intro_ajuste/ex_intro_ajuste.eps"  
+src="main3079x.png" alt="PIC" class="graphics" width="163.50975pt" height="168.92998pt" ><!--tex4ht:graphics  
+name="main3079x.png" src="./cap_ajuste/pics/ex_intro_ajuste/ex_intro_ajuste.eps"  
 -->
 <br /> <div class="caption" 
 ><span class="id">Figura&#x00A0;7.1: </span><span  
@@ -144,34 +146,34 @@ href="#x62-106007r3">7.0.3<!--tex4ht:ref: ex:intro_ajuste --></a>.</span></div><
 <!--l. 15--><p class="indent" >   </div><hr class="endfigure">
 <!--l. 17--><p class="indent" >   Aqui, o termo &#8220;melhor se ajusta&#8221; é entendido no sentido de mínimos
 quadrados, i.e. buscamos encontrar uma função <img 
-src="main3072x.png" alt="f &isin; F "  class="math" > tal que <img 
-src="main3073x.png" alt="f (x )  "  class="math" > resolve o
+src="main3080x.png" alt="f &#x2208; F "  class="math" > tal que <img 
+src="main3081x.png" alt="f (x )  "  class="math" > resolve o
 seguinte problema de minimização
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main3074x.png" alt="     N&sum;             2
-mifn&isin;F    (f(xj) &minus; yj)  ,
+src="main3082x.png" alt="     N&#x2211;             2
+mifn&#x2208;F    (f(xj) - yj)  ,
      j=1
 " class="math-display" ></center></td></tr></table>
 <!--l. 20--><p class="nopar" >
 ou seja, <img 
-src="main3075x.png" alt="f (x)  "  class="math" > é a função da família <img 
-src="main3076x.png" alt="F "  class="math" > cujo erro quadrático entre <img 
-src="main3077x.png" alt="yj  "  class="math" > e <img 
-src="main3078x.png" alt="f(xj)  "  class="math" >,
+src="main3083x.png" alt="f (x)  "  class="math" > é a função da família <img 
+src="main3084x.png" alt="F "  class="math" > cujo erro quadrático entre <img 
+src="main3085x.png" alt="yj  "  class="math" > e <img 
+src="main3086x.png" alt="f(xj)  "  class="math" >,
 <img 
-src="main3079x.png" alt="j = 1,2, ...,N  "  class="math" >, é mínimo. A expressão
+src="main3087x.png" alt="j = 1,2, ...,N  "  class="math" >, é mínimo. A expressão
    <table 
 class="equation-star"><tr><td>
    <center class="math-display" >
 <img 
-src="main3080x.png" alt="      N&sum;
-R  :=     (f(xj) &minus; yj)2
+src="main3088x.png" alt="      N&#x2211;
+R  :=     (f(xj) - yj)2
       j=1
                  2              2                     2
-   = (f(x1) &minus; y1) + (f (x2) &minus; y2) + &sdot;&sdot;&sdot; + (f (xN ) &minus; yN )
+   = (f(x1) - y1) + (f (x2) - y2) + &#x22C5;&#x22C5;&#x22C5; + (f (xN ) - yN )
 " class="math-display" ></center></td></tr></table>
 <!--l. 27--><p class="nopar" >
 é chamada de <span 
@@ -179,8 +181,8 @@ class="ec-lmbx-12">res</span><span
 class="ec-lmbx-12">íduo</span><a 
  id="dx62-106006"></a> e consiste na soma dos quadrados das diferenças entre a
 ordenadas <img 
-src="main3081x.png" alt="yj  "  class="math" > e o valor da função procurada <img 
-src="main3082x.png" alt="f (xj )  "  class="math" >.
+src="main3089x.png" alt="yj  "  class="math" > e o valor da função procurada <img 
+src="main3090x.png" alt="f (xj )  "  class="math" >.
    <div class="newtheorem">
                                                                           
 
@@ -190,13 +192,13 @@ src="main3082x.png" alt="f (xj )  "  class="math" >.
  id="x62-106007r3"></a>
 <span 
 class="ec-lmbx-12">Exemplo 7.0.3.</span>  </span>  Dado  o  conjunto  de  pontos  <img 
-src="main3083x.png" alt="{(1,1,2)  "  class="math" >,  <img 
-src="main3084x.png" alt="(1,5,1,3 )  "  class="math" >,
+src="main3091x.png" alt="{(1,1,2)  "  class="math" >,  <img 
+src="main3092x.png" alt="(1,5,1,3 )  "  class="math" >,
 <img 
-src="main3085x.png" alt="(2,2,3)} "  class="math" > e  a  família  de  retas  <img 
-src="main3086x.png" alt="f(x) = a + bx  "  class="math" >,  podemos  mostrar  que
+src="main3093x.png" alt="(2,2,3)} "  class="math" > e  a  família  de  retas  <img 
+src="main3094x.png" alt="f(x) = a + bx  "  class="math" >,  podemos  mostrar  que
 <img 
-src="main3087x.png" alt="f (x ) = &minus; 0,05 + 1,1x  "  class="math" > é a reta que melhor aproxima os pontos dados no
+src="main3095x.png" alt="f (x ) = - 0,05 + 1,1x  "  class="math" > é a reta que melhor aproxima os pontos dados no
 sentido de mínimos quadrados. Os pontos e a reta ajustada e são esboçados
 na Figura&#x00A0;<a 
 href="#x62-1060051">7.1<!--tex4ht:ref: fig:ex_intro --></a>.

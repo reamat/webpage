@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Sistemas triangulares, Algoritmo para resolução de um sistema triangular superior, Algoritmo para resolução de um sistema triangular inferior'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Sistemas triangulares, Algoritmo para resolução de um sistema triangular superior, Algoritmo para resolução de um sistema triangular inferior, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -100,12 +102,12 @@
 <!--l. 607--><p class="noindent" >Considere um sistema linear onde a matriz é triangular superior, ou seja,
    <center class="math-display" >
 <img 
-src="main1818x.png" alt="&lfloor;                  &rfloor; &lfloor;   &rfloor;    &lfloor;  &rfloor;
-|a11  a12  &sdot;&sdot;&sdot;  a1n| | x1|    |b1|
+src="main1818x.png" alt="&#x230A;                  &#x230B; &#x230A;   &#x230B;    &#x230A;  &#x230B;
+|a11  a12  &#x22C5;&#x22C5;&#x22C5;  a1n| | x1|    |b1|
 ||                  || ||   ||    ||  ||
-|| 0   a22  &sdot;&sdot;&sdot;  a2n|| || x2||    ||b2||
+|| 0   a22  &#x22C5;&#x22C5;&#x22C5;  a2n|| || x2||    ||b2||
 ||  ..   ..   ..    .. || ||  ..|| =  || ..||
-|&lceil;  .   .     .   . |&rceil; |&lceil;  .|&rceil;    |&lceil; .|&rceil;
+|&#x2308;  .   .     .   . |&#x2309; |&#x2308;  .|&#x2309;    |&#x2308; .|&#x2309;
   0   ...   0   a      x       b
                  nn     n       n " class="math-display" ></center> tal
 que todos elementos abaixo da diagonal são iguais a zero.
@@ -131,17 +133,17 @@ class="equation"><tr><td><a
  id="x37-55002r14"></a>
    <center class="math-display" >
 <img 
-src="main1822x.png" alt="an&minus;1,n&minus;1xn&minus;1 + an&minus;1,nxn = bn&minus;1
+src="main1822x.png" alt="an-1,n-1xn-1 + an-1,nxn = bn-1
 " class="math-display" ></center></td><td class="equation-label">(4.14)</td></tr></table>
 <!--l. 637--><p class="nopar" >
 e isolando <img 
-src="main1823x.png" alt="xn&minus;1   "  class="math" > obtemos
+src="main1823x.png" alt="xn-1   "  class="math" > obtemos
    <table 
 class="equation"><tr><td><a 
  id="x37-55003r15"></a>
    <center class="math-display" >
 <img 
-src="main1824x.png" alt="xn &minus;1 = (bn&minus;1 &minus; an&minus;1,nxn )&#x2215;an&minus;1,n&minus; 1
+src="main1824x.png" alt="xn -1 = (bn-1 - an-1,nxn )&#x2215;an-1,n- 1
 " class="math-display" ></center></td><td class="equation-label">(4.15)</td></tr></table>
 <!--l. 641--><p class="nopar" >
 e continuando desta forma até a primeira equação obteremos
@@ -153,7 +155,7 @@ class="equation"><tr><td><a
 
                                                                           
 <img 
-src="main1825x.png" alt="x1 = (b1 &minus; a12x2 &sdot;&sdot;&sdot; &minus; a1nxn )&#x2215;a11.
+src="main1825x.png" alt="x1 = (b1 - a12x2 &#x22C5;&#x22C5;&#x22C5; - a1nxn )&#x2215;a11.
 " class="math-display" ></center></td><td class="equation-label">(4.16)</td></tr></table>
 <!--l. 645--><p class="nopar" >
 De forma geral, temos que
@@ -162,7 +164,7 @@ class="equation"><tr><td><a
  id="x37-55005r17"></a>
    <center class="math-display" >
 <img 
-src="main1826x.png" alt="x  = (b &minus; a    x   &sdot;&sdot;&sdot; &minus; a  x  )&#x2215;a  ,   i = 2,...,n.
+src="main1826x.png" alt="x  = (b - a    x   &#x22C5;&#x22C5;&#x22C5; - a  x  )&#x2215;a  ,   i = 2,...,n.
  i     i   i,i+1 i+1       i,n n    i,i
 " class="math-display" ></center></td><td class="equation-label">(4.17)</td></tr></table>
 <!--l. 649--><p class="nopar" >
@@ -245,11 +247,11 @@ class="ec-lmtt-12">&#x00A0;</span><span
 class="ec-lmtt-12">&#x00A0;x(n)=(b(n)-L(n,1:n-1)*x(1:n-1))/L(n,n)</span></span></span>,
 <!--l. 705--><p class="indent" >   com <img 
 src="main1834x.png" alt="1  "  class="math" > subtração+(<img 
-src="main1835x.png" alt="n &minus; 1  "  class="math" > multiplicações + <img 
-src="main1836x.png" alt="n &minus; 2  "  class="math" > somas) + <img 
+src="main1835x.png" alt="n - 1  "  class="math" > multiplicações + <img 
+src="main1836x.png" alt="n - 2  "  class="math" > somas) + <img 
 src="main1837x.png" alt="1  "  class="math" > divisão, ou
 seja, <img 
-src="main1838x.png" alt="1 + (n &minus; 1 + n &minus; 2) + 1 = 2n &minus; 1  "  class="math" > flops.
+src="main1838x.png" alt="1 + (n - 1 + n - 2) + 1 = 2n - 1  "  class="math" > flops.
                                                                           
 
                                                                           
@@ -262,8 +264,8 @@ class="equation"><tr><td><a
  id="x37-58003r19"></a>
    <center class="math-display" >
 <img 
-src="main1840x.png" alt="                             &sum;n              &sum;n     &sum;n
-1 + 3 + 5 + 7 + ...+ 2n &minus; 1 =    (2k &minus; 1) = 2    k &minus;    1
+src="main1840x.png" alt="                             &#x2211;n              &#x2211;n     &#x2211;n
+1 + 3 + 5 + 7 + ...+ 2n - 1 =    (2k - 1) = 2    k -    1
                              k=1             k=1     k=1
 " class="math-display" ></center></td><td class="equation-label">(4.19)</td></tr></table>
 <!--l. 713--><p class="nopar" >
@@ -281,7 +283,7 @@ class="equation"><tr><td><a
    <center class="math-display" >
 <img 
 src="main1843x.png" alt="                      2
-2(n(n + 1)&#x2215;2) &minus; n = n  flops.
+2(n(n + 1)&#x2215;2) - n = n  flops.
 " class="math-display" ></center></td><td class="equation-label">(4.20)</td></tr></table>
 <!--l. 717--><p class="nopar" >
                                                                           

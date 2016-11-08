@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:12:00"> 
+<meta name="date" content="2016-11-07 23:25:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Derivação Numérica'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Derivação Numérica, Python'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro-py/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro-py/main-py.pdf">Formato PDF</a></li>
             <li><a href="../livro-py/main-py.epub">Formato EPUB</a></li>
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro/main.html">Versão Scilab</a></li>
           </ul>
         </li>		
@@ -96,14 +98,14 @@
 </div>
    <!--l. 6-->
    <h2 class="chapterHead"><span class="titlemark">Capítulo&#x00A0;8</span><br /><a 
- id="x65-1090008"></a>Derivação Numérica</h2><hr class="section">
+ id="x65-1100008"></a>Derivação Numérica</h2><hr class="section">
 <a 
- id="dx65-109001"></a>
+ id="dx65-110001"></a>
 <!--l. 8--><p class="noindent" >Nesta seção, discutiremos sobre estratégias numéricas de aproximação de
 derivadas de funções reais. Com as técnicas que abordaremos é possível o cálculo
 aproximado da derivada de uma função a partir de um conjunto de pontos
 discretos <img 
-src="main3183x.png" alt="       n
+src="main3195x.png" alt="       n
 {xi, yi}i=1   "  class="math" >. Começamos discutindo sobre as chamadas <span 
 class="ec-lmbx-12">aproxima</span><span 
 class="ec-lmbx-12">ç</span><span 
@@ -111,23 +113,23 @@ class="ec-lmbx-12">ões</span>
 <span 
 class="ec-lmbx-12">por diferen</span><span 
 class="ec-lmbx-12">ças finitas</span><a 
- id="dx65-109002"></a> e, então, discutimos sobre aproximações de derivadas via
+ id="dx65-110002"></a> e, então, discutimos sobre aproximações de derivadas via
 ajuste ou interpolação.
    <div class="sectionTOCS"><h3 class="sectionHead">Sumário</h3><hr class="section">
    &#x00A0;<span class="sectionToc" >8.1 <a 
-href="dn-diferencas_finitas.html#x66-1100008.1">Diferenças finitas</a></span>
+href="dn-diferencas_finitas.html#x66-1110008.1">Diferenças finitas</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >8.1.1 <a 
-href="dn-diferencas_finitas.html#x66-1110008.1.1" id="QQ2-66-136">Obtenção de fórmulas de diferenças via série de Taylor</a></span>
+href="dn-diferencas_finitas.html#x66-1120008.1.1" id="QQ2-66-137">Obtenção de fórmulas de diferenças via série de Taylor</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >8.1.2 <a 
-href="dn-diferencas_finitas.html#x66-1150008.1.2" id="QQ2-66-141">Erros de arredondamento</a></span>
+href="dn-diferencas_finitas.html#x66-1160008.1.2" id="QQ2-66-142">Erros de arredondamento</a></span>
 <br />   &#x00A0;<span class="sectionToc" >8.2 <a 
-href="dn-diferencas_finitas_de_ordem_mais_alta.html#x72-1170008.2">Diferenças finitas de ordem mais alta</a></span>
+href="dn-diferencas_finitas_de_ordem_mais_alta.html#x72-1180008.2">Diferenças finitas de ordem mais alta</a></span>
 <br />   &#x00A0;<span class="sectionToc" >8.3 <a 
-href="dn-diferencas_finitas_para_derivadas_de_ordem_mais_alta.html#x73-1190008.3">Diferenças finitas para derivadas de ordem mais alta</a></span>
+href="dn-diferencas_finitas_para_derivadas_de_ordem_mais_alta.html#x73-1200008.3">Diferenças finitas para derivadas de ordem mais alta</a></span>
 <br />   &#x00A0;<span class="sectionToc" >8.4 <a 
-href="dn-derivada_via_ajuste_ou_interpolacao.html#x74-1210008.4">Derivada via ajuste ou interpolação</a></span>
+href="dn-derivada_via_ajuste_ou_interpolacao.html#x74-1220008.4">Derivada via ajuste ou interpolação</a></span>
 <br />   &#x00A0;<span class="sectionToc" >8.5 <a 
-href="dn-exercicios_finais.html#x75-1230008.5">Exercícios finais</a></span>
+href="dn-exercicios_finais.html#x75-1240008.5">Exercícios finais</a></span>
    </div>
 
 

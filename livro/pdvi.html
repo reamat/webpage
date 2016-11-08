@@ -7,9 +7,9 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html,3,notoc*,info --> 
 <meta name="src" content="main.tex"> 
-<meta name="date" content="2016-11-07 01:03:00"> 
+<meta name="date" content="2016-11-07 23:12:00"> 
 <link rel="stylesheet" type="text/css" href="main.css"> 
-<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Problemas de valor inicial'>
+<meta name='keywords' content='Livro, Cálculo Numérico, Métodos, Análise, Problemas de valor inicial, Scilab'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
@@ -56,10 +56,12 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
           	<li><a href="../livro/main.html">Sumário</a></li>
+          	<li class="dropdown-header">Para Baixar</li>
             <li><a href="../livro/main.pdf">Formato PDF</a></li>
             <li><a href="../livro/main.epub">Formato EPUB</a></li>
             <li><a href="../livro/slide.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Mudar Versão</li>
             <li><a href="../livro-py/main.html">Versão Python</a></li>
           </ul>
         </li>		
@@ -104,7 +106,7 @@ problemas de valor inical da forma <div class="subequations"><a
  id="x87-1500020"></a> <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4081x.png" alt=" y&prime;(t)  =   f(y(t),t)                           (10.1a)
+src="main4100x.png" alt=" y&#x2032;(t)  =   f(y(t),t)                           (10.1a)
 
 y (t0)  =   y0 (condição inicial).              (10.1b)
 " class="math-display" ><a 
@@ -125,17 +127,17 @@ class="ec-lmbx-12">Exemplo 10.0.1.</span>  </span>Considere o seguinte problema 
  id="x87-1500050"></a> <div class="eqnarray">
    <center class="math-display" >
 <img 
-src="main4082x.png" alt="  &prime;
+src="main4101x.png" alt="  &#x2032;
  y(t)  =  2y (t),                      (10.2a)
 y(t0)  =  1.                          (10.2b)
 " class="math-display" ></center>
 </div>
 </div>
 <!--l. 23--><p class="indent" >   A solução desta equação é dada pela função <img 
-src="main4083x.png" alt="y(t) = e2t  "  class="math" > pois <img 
-src="main4084x.png" alt="y&prime;(t) = 2e2t = 2y(t)  "  class="math" >
+src="main4102x.png" alt="y(t) = e2t  "  class="math" > pois <img 
+src="main4103x.png" alt="y&#x2032;(t) = 2e2t = 2y(t)  "  class="math" >
 e <img 
-src="main4085x.png" alt="y(0) = e0 = 1  "  class="math" >.
+src="main4104x.png" alt="y(0) = e0 = 1  "  class="math" >.
    </div>
 <!--l. 27--><p class="indent" >   Muitos problemas de valor inicial da forma (<a 
 href="#x87-1500020">10.1<!--tex4ht:ref: PVI --></a>) não podem ser resolvidos
@@ -145,14 +147,14 @@ aproximações numéricas. Diversos métodos completamente diferentes estão
 disponíveis para aproximar uma função real.
 <!--l. 29--><p class="indent" >   Aqui nos limitaremos a estudar métodos que se fundamentam em tentar
 calcular <img 
-src="main4086x.png" alt="y(t)  "  class="math" > em um conjunto finito de valores de <img 
-src="main4087x.png" alt="t  "  class="math" >. Esse conjunto de valores
+src="main4105x.png" alt="y(t)  "  class="math" > em um conjunto finito de valores de <img 
+src="main4106x.png" alt="t  "  class="math" >. Esse conjunto de valores
 para <img 
-src="main4088x.png" alt="t  "  class="math" > será denotado por <img 
-src="main4089x.png" alt="{ti}Ni=1   "  class="math" >, isto é <img 
-src="main4090x.png" alt="{t1,t2,t3,...,tN } "  class="math" > e calculamos o valor
+src="main4107x.png" alt="t  "  class="math" > será denotado por <img 
+src="main4108x.png" alt="{ti}Ni=1   "  class="math" >, isto é <img 
+src="main4109x.png" alt="{t1,t2,t3,...,tN } "  class="math" > e calculamos o valor
 aproximado da função solução <img 
-src="main4091x.png" alt="y(ti)  "  class="math" > em cada ponto da malha usando esquemas
+src="main4110x.png" alt="y(ti)  "  class="math" > em cada ponto da malha usando esquemas
 numéricos.
    <div class="sectionTOCS"><h3 class="sectionHead">Sumário</h3><hr class="section">
    &#x00A0;<span class="sectionToc" >10.1 <a 
@@ -162,19 +164,19 @@ href="pdvi-metodo_de_euler_melhorado.html#x89-15300010.2">Método de Euler melho
 <br />   &#x00A0;<span class="sectionToc" >10.3 <a 
 href="pdvi-ordem_de_precisao.html#x90-15500010.3">Ordem de precisão</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >10.3.1 <a 
-href="pdvi-ordem_de_precisao.html#x90-15600010.3.1" id="QQ2-90-184">Ordem de precisão do Método de Euler</a></span>
+href="pdvi-ordem_de_precisao.html#x90-15600010.3.1" id="QQ2-90-185">Ordem de precisão do Método de Euler</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >10.3.2 <a 
-href="pdvi-ordem_de_precisao.html#x90-15700010.3.2" id="QQ2-90-185">Ordem de precisão do Método de Euler Melhorado</a></span>
+href="pdvi-ordem_de_precisao.html#x90-15700010.3.2" id="QQ2-90-186">Ordem de precisão do Método de Euler Melhorado</a></span>
 <br />   &#x00A0;<span class="sectionToc" >10.4 <a 
 href="pdvi-convergencia.html#x91-15800010.4">Convergência</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >10.4.1 <a 
-href="pdvi-convergencia.html#x91-15900010.4.1" id="QQ2-91-187">Convergência do método de Euler</a></span>
+href="pdvi-convergencia.html#x91-15900010.4.1" id="QQ2-91-188">Convergência do método de Euler</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >10.4.2 <a 
-href="pdvi-convergencia.html#x91-16000010.4.2" id="QQ2-91-188">Convergência do método de Euler Melhorado</a></span>
+href="pdvi-convergencia.html#x91-16000010.4.2" id="QQ2-91-189">Convergência do método de Euler Melhorado</a></span>
 <br />   &#x00A0;<span class="sectionToc" >10.5 <a 
 href="pdvi-metodos_de_runge-kutta.html#x92-16100010.5">Métodos de Runge-Kutta</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsectionToc" >10.5.1 <a 
-href="pdvi-metodos_de_runge-kutta.html#x92-16200010.5.1" id="QQ2-92-190">Métodos de Runge-Kutta - Quarta ordem</a></span>
+href="pdvi-metodos_de_runge-kutta.html#x92-16200010.5.1" id="QQ2-92-191">Métodos de Runge-Kutta - Quarta ordem</a></span>
 <br />   &#x00A0;<span class="sectionToc" >10.6 <a 
 href="pdvi-metodos_de_passo_multiplo_-_adams-bashforth.html#x93-16300010.6">Métodos de passo múltiplo - Adams-Bashforth</a></span>
 <br />   &#x00A0;<span class="sectionToc" >10.7 <a 
