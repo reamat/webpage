@@ -29,4 +29,4 @@ cd ..
 #a nice final message
 echo "Congratulation! Book is in .book_in_repo now."
 echo "Finished."
-echo "Run updateBookInWeb to update livro."
+echo "Run updateBookInWeb2.sh to update livro."

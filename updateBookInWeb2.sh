@@ -100,6 +100,9 @@ cp ./$DIR_MASTER/main-py.epub ./livro-py/
 #getting Slide
 cp ./$DIR_MASTER/slide-py.pdf ./livro-py/
 
+#google validator
+cp googlee521115172992e66.html ./livro-py/
+
 ####################
 
 
