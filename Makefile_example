@@ -173,7 +173,7 @@ main-py.html: main.tex
 # FORMATO EPUB
 ########################################
 
-epub: html/main.html
+epub: main.tex
 	mkdir -p ./.tmp1
 	rm -rf ./.tmp1/*
 	echo "\isbookfalse \isslidefalse \ishtmltrue \isscilabtrue \isoctavefalse \ispythonfalse" > main.knd
@@ -188,9 +188,10 @@ epub: html/main.html
 
 	ebook-convert ./.tmp1/main.html main.epub \
 	      --authors="Todos os Colaboradores"\
+              --cover=./rosto/cover-scilab-epub.png\
 	      --comments="Para mais informações sobre este livro visite  http://www.ufrgs.br/numerico"
 
-epub-oct: ./html-oct/main.html
+epub-oct: main.tex
 	mkdir -p ./.tmp1
 	rm -rf ./.tmp1/*
 	echo "\isbookfalse \isslidefalse \ishtmltrue \isscilabfalse \isoctavetrue \ispythonfalse" > main.knd
@@ -207,7 +208,7 @@ epub-oct: ./html-oct/main.html
 	      --authors="Todos os Colaboradores"\
 	      --comments="Para mais informações sobre este livro visite  http://www.ufrgs.br/numerico"
 
-epub-py: ./html-py/main.html
+epub-py: main.tex
 	mkdir -p ./.tmp1
 	rm -rf ./.tmp1/*
 	echo "\isbookfalse \isslidefalse \ishtmltrue \isscilabfalse \isoctavefalse \ispythontrue" > main.knd
@@ -222,6 +223,7 @@ epub-py: ./html-py/main.html
 
 	ebook-convert ./.tmp1/main.html main-py.epub \
 	      --authors="Todos os Colaboradores"\
+              --cover=./rosto/cover-scilab-epub.png\
 	      --comments="Para mais informações sobre este livro visite  http://www.ufrgs.br/numerico"
 
 ########################################
