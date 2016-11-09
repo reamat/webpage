@@ -302,7 +302,7 @@ for index, f in enumerate (lfiles):
         sub += '<div id="demo' + str(count) + '" class="collapse out">\n'
         text = text.replace("<!--prova begin-->",sub,1)
         text = text.replace("<!--prova end-->",'</div></div>',1)
-        s = text.index("<!--prova begin-->")
+        s = text.find("<!--prova begin-->")
 
     #collapse resp's
     s = text.find("<!--resp begin-->")
@@ -311,24 +311,24 @@ for index, f in enumerate (lfiles):
         count += 1
         sub =  '<div class="container-fluid">\n'
         sub += '<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#resp'
-        sub += str(count) + '">Solução</button>\n'
+        sub += str(count) + '">Resposta</button>\n'
         sub += '<div id="resp' + str(count) + '" class="collapse out">\n'
         text = text.replace("<!--resp begin-->",sub,1)
         text = text.replace("<!--resp end-->",'</div></div>',1)
         s = text.find("<!--resp begin-->")
 
-        #collapse Answer's
-        s = text.find("<!--Answer begin-->")
+        #collapse resol's
+        s = text.find("<!--resol begin-->")
         count = 0
         while (s != -1):
             count += 1
             sub =  '<div class="container-fluid">\n'
-            sub += '<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Answer'
-            sub += str(count) + '">Resposta</button>\n'
-            sub += '<div id="Answer' + str(count) + '" class="collapse out">\n'
-            text = text.replace("<!--Answer begin-->",sub,1)
-            text = text.replace("<!--Answer end-->",'</div></div>',1)
-            s = text.find("<!--Answer begin-->")
+            sub += '<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#resol'
+            sub += str(count) + '">Solução</button>\n'
+            sub += '<div id="resol' + str(count) + '" class="collapse out">\n'
+            text = text.replace("<!--resol begin-->",sub,1)
+            text = text.replace("<!--resol end-->",'</div></div>',1)
+            s = text.find("<!--resol begin-->")
 
     #change title
     if (len(title) != 0):
