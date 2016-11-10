@@ -317,18 +317,18 @@ for index, f in enumerate (lfiles):
         text = text.replace("<!--resp end-->",'</div></div>',1)
         s = text.find("<!--resp begin-->")
 
-        #collapse resol's
+    #collapse resol's
+    s = text.find("<!--resol begin-->")
+    count = 0
+    while (s != -1):
+        count += 1
+        sub =  '<div class="container-fluid">\n'
+        sub += '<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#resol'
+        sub += str(count) + '">Solução</button>\n'
+        sub += '<div id="resol' + str(count) + '" class="collapse out">\n'
+        text = text.replace("<!--resol begin-->",sub,1)
+        text = text.replace("<!--resol end-->",'</div></div>',1)
         s = text.find("<!--resol begin-->")
-        count = 0
-        while (s != -1):
-            count += 1
-            sub =  '<div class="container-fluid">\n'
-            sub += '<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#resol'
-            sub += str(count) + '">Solução</button>\n'
-            sub += '<div id="resol' + str(count) + '" class="collapse out">\n'
-            text = text.replace("<!--resol begin-->",sub,1)
-            text = text.replace("<!--resol end-->",'</div></div>',1)
-            s = text.find("<!--resol begin-->")
 
     #change title
     if (len(title) != 0):

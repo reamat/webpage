@@ -3,6 +3,44 @@ body{
     max-width: 100%;
 }
 
+.livro
+{
+    font-family: "Computer Modern Serif";
+    font-size: 1.7rem;
+}
+
+.livro .prova span
+{
+    font-size: 1.7rem;
+}
+
+.livro .resp span
+{
+    font-size: 1.7rem;
+}
+
+.livro .resol span
+{
+    font-size: 1.7rem;
+}
+
+.livro span.verb
+{
+    font-size: 0.875em;
+}
+
+.livro .verbatim
+{
+    font-size: 0.875em;
+    margin-bottom: 10px;
+}
+
+.livro .verbatiminput
+{
+    font-size: 0.875em;
+    margin-bottom: 10px;
+}
+
 /*Navigation menu*/
 .nav a{
     color: #d6d6d6; /*f5f5f5;*/
@@ -28,6 +66,7 @@ center img.math-display
 {
 	max-width: 100%;
 }
+
 
 .float .caption
 {
