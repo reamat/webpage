@@ -342,6 +342,9 @@ for index, f in enumerate (lfiles):
         auxName = urllib2.quote(auxName)
         lFilesAndTitles.append((f,auxName))
 
+    #remove mathsize="big"
+    text = text.replace('mathsize="big"','mathsize="normal"')
+
     ofile.write(text)
     ifile.close ()
     ofile.close ()
