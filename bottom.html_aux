@@ -79,12 +79,30 @@ target="_blank">repositório GitHub oficial</a> do projeto.</p>
          var arrayLength = math.length;
          for (var i = 0; i < arrayLength; i++) {
          	math[i].style.display = "inline"; var w = math[i].offsetWidth; math[i].style.display = "";
-            if (w > window.innerWidth) {math[i].style.fontSize = Math.floor((window.innerWidth-50)/w * 100)+"%";}
+            if (w > window.innerWidth) {
+	       math[i].style.fontSize = Math.floor((window.innerWidth-75)/w * 100)+"%";
+	       }
+            MathJax.Hub.Queue(["Rerender",MathJax.Hub,math[i]]);
+         }
+         });
+  </script>
+
+  <script>
+         MathJax.Hub.Queue(function () {
+         var math = document.getElementsByClassName("verbatim");
+         var arrayLength = math.length;
+         for (var i = 0; i < arrayLength; i++) {
+         	math[i].style.display = "inline"; var w = math[i].offsetWidth; math[i].style.display = "";
+            if (w > window.innerWidth) {
+	       math[i].style.fontSize = Math.floor((window.innerWidth-75)/w * 100)+"%";
+	       }
             MathJax.Hub.Queue(["Rerender",MathJax.Hub,math[i]]);
          }
          });
   </script>
   
+<!--
+math[i].style.fontSize = Math.floor((window.innerWidth-100)/w * 100)+"%";
   <script>
   $(function(){
 	$('#demo1').on('shown.bs.collapse', function () {
@@ -93,11 +111,12 @@ target="_blank">repositório GitHub oficial</a> do projeto.</p>
         for (var i = 0; i < arrayLength; i++) {
            math[i].style.display = "inline"; var w = math[i].offsetWidth; math[i].style.display = "";
            if (w > window.innerWidth) {
-	      math[i].style.fontSize = Math.floor((window.innerWidth-50)/w * 100) + "%";}
+	      math[i].style.scale = Math.floor((window.innerWidth-100)/w * 100) + "%";}
            MathJax.Hub.Queue(["Rerender",MathJax.Hub,math[i]]);
 	 }
 	 });});
 </script>
+-->
 
 </body>
 </html>

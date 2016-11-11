@@ -358,7 +358,7 @@ for index, f in enumerate (lfiles):
 
     #rescale Math's to fit window.innerWidth
     for i, bid in enumerate(lbc):
-        sub = '<script> $(function(){$("#' + bid + '").on("shown.bs.collapse", function () {var math = document.getElementsByClassName("MathJax_SVG"); var arrayLength = math.length; for (var i = 0; i < arrayLength; i++) { math[i].style.display = "inline"; var w = math[i].offsetWidth; math[i].style.display = ""; if (w > window.innerWidth) { math[i].style.fontSize = Math.floor((window.innerWidth-50)/w * 100) + "%";} MathJax.Hub.Queue(["Rerender",MathJax.Hub,math[i]]); } });}); </script>'
+        sub = '<script> $(function(){$("#' + bid + '").on("shown.bs.collapse", function () {var math = document.getElementsByClassName("MathJax_SVG"); var arrayLength = math.length; for (var i = 0; i < arrayLength; i++) { math[i].style.display = "inline"; var w = math[i].offsetWidth; math[i].style.display = ""; if (w > window.innerWidth) { math[i].style.fontSize = Math.floor((window.innerWidth-75)/w * 100) + "%";} MathJax.Hub.Queue(["Rerender",MathJax.Hub,math[i]]); } });}); </script>'
         sub += "</body>" + "\n"
 
         text = text.replace("</body>", sub)
