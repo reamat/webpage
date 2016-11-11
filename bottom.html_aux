@@ -1,22 +1,23 @@
-<div class="text-center">
-		<nav class="nav-links" aria-label="Page navigation">
-		  <ul class="nav-justified">
-    		<li>
-      	<a href="#Previous#" aria-label="Previous">
-        	<span class="glyphicon glyphicon-chevron-left">
-      	</a>
-    		</li>
-    		<li class="meio"><a href="#TableOfContents#">
-    		<span class="glyphicon glyphicon-menu-hamburger">
-    		</a></li>
-    		<li>
+   	<ul class="nav">
+    	<li>
+    		<a href="#Previous#" aria-label="Previous">
+    		<span class="glyphicon glyphicon-chevron-left">
+     		</a>
+    	</li>	
+		<li><a href="#TableOfContents#">
+  			<span class="glyphicon glyphicon-menu-hamburger">
+  			</a>
+  		</li>
+		<li>
 	   	<a href="#Next#" aria-label="Next">
 	   	<span class="glyphicon glyphicon-chevron-right">
       	</a>
-    		</li>
-  		</ul>
-	</nav>
-</div>
+    	</li>
+		</ul>
+
+	</div>
+ </div>
+
 <p style="font-size: small; margin-top:10px;">* As versões do livro disponíveis no site podem estar desatualizadas, veja a 
 <a href="https://github.com/livroscolaborativos/CalculoNumerico/blob/master/main.pdf"
 target="_blank">versão PDF atual</a> no <a href="https://github.com/livroscolaborativos/CalculoNumerico"

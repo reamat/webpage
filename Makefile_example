@@ -144,7 +144,8 @@ main-sci.html: main.tex
 	bibtex main
 	latex main
 	latex main
-	mk4ht htlatex main "myconfig,html,3,notoc*,info" "" "-d./html/"
+	mk4ht htlatex main "myconfig,3,notoc*" "" "-d./html/"
+	#mk4ht htlatex main "myconfig,3,notoc*,info" "" "-d./html/"
 #	rm -f main.knd
 
 main-oct.html: main.tex
@@ -155,7 +156,8 @@ main-oct.html: main.tex
 	bibtex main
 	latex main
 	latex main
-	mk4ht htlatex main "myconfig,html,3,notoc*,info" "" "-d./html-oct/"
+	mk4ht htlatex main "myconfig,mathml,3,notoc*" "" "-d./html-oct/"
+	#mk4ht htlatex main "myconfig,html,3,notoc*,info" "" "-d./html-oct/"
 #	rm -f main.knd
 
 main-py.html: main.tex
@@ -166,14 +168,15 @@ main-py.html: main.tex
 	bibtex main
 	latex main
 	latex main
-	mk4ht htlatex main "myconfig,html,3,notoc*,info" "" "-d./html-py/"
+	mk4ht htlatex main "myconfig,mathml,3,notoc*" "" "-d./html-py/"
+	#mk4ht htlatex main "myconfig,html,3,notoc*,info" "" "-d./html-py/"
 #	rm -f main.knd
 
 ########################################
 # FORMATO EPUB
 ########################################
 
-epub: html/main.html
+epub: main.tex
 	mkdir -p ./.tmp1
 	rm -rf ./.tmp1/*
 	echo "\isbookfalse \isslidefalse \ishtmltrue \isscilabtrue \isoctavefalse \ispythonfalse" > main.knd
@@ -188,9 +191,10 @@ epub: html/main.html
 
 	ebook-convert ./.tmp1/main.html main.epub \
 	      --authors="Todos os Colaboradores"\
+              --cover=./rosto/cover-scilab-epub.png\
 	      --comments="Para mais informações sobre este livro visite  http://www.ufrgs.br/numerico"
 
-epub-oct: ./html-oct/main.html
+epub-oct: main.tex
 	mkdir -p ./.tmp1
 	rm -rf ./.tmp1/*
 	echo "\isbookfalse \isslidefalse \ishtmltrue \isscilabfalse \isoctavetrue \ispythonfalse" > main.knd
@@ -207,7 +211,7 @@ epub-oct: ./html-oct/main.html
 	      --authors="Todos os Colaboradores"\
 	      --comments="Para mais informações sobre este livro visite  http://www.ufrgs.br/numerico"
 
-epub-py: ./html-py/main.html
+epub-py: main.tex
 	mkdir -p ./.tmp1
 	rm -rf ./.tmp1/*
 	echo "\isbookfalse \isslidefalse \ishtmltrue \isscilabfalse \isoctavefalse \ispythontrue" > main.knd
@@ -222,6 +226,7 @@ epub-py: ./html-py/main.html
 
 	ebook-convert ./.tmp1/main.html main-py.epub \
 	      --authors="Todos os Colaboradores"\
+              --cover=./rosto/cover-python-epub.png\
 	      --comments="Para mais informações sobre este livro visite  http://www.ufrgs.br/numerico"
 
 ########################################

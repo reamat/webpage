@@ -5,6 +5,10 @@
   <link rel="stylesheet" type="text/css" href="new_main.css"> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../MathJax-master/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--  <script type="text/javascript" src="../MathJax-master/MathJax.js?config=TeX-AMS-MML_SVG"></script> -->
+<!--  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<link rel="stylesheet" href="../fonts/Serif/cmun-serif.css"></link>
 </head>
 <body>
 
@@ -64,23 +68,25 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="text-center">
-		<nav class="nav-links" aria-label="Page navigation">
-		  <ul class="nav-justified">
-    		<li>
-      	<a href="#Previous#" aria-label="Previous">
-        	<span class="glyphicon glyphicon-chevron-left">
-      	</a>
-    		</li>
-    		<li class="meio"><a href="#TableOfContents#">
-    		<span class="glyphicon glyphicon-menu-hamburger">
-    		</a></li>
-    		<li>
+
+<div class="livro">
+   <div class="container-fluid">
+
+   	<ul class="nav">
+    	<li>
+    		<a href="#Previous#" aria-label="Previous">
+    		<span class="glyphicon glyphicon-chevron-left">
+     		</a>
+    	</li>	
+		<li><a href="#TableOfContents#">
+  			<span class="glyphicon glyphicon-menu-hamburger">
+  			</a>
+  		</li>
+		<li>
 	   	<a href="#Next#" aria-label="Next">
 	   	<span class="glyphicon glyphicon-chevron-right">
-      	<!--<span aria-hidden="true">&raquo;</span>-->
       	</a>
-    		</li>
-  		</ul>
-	</nav>
-</div>
+    	</li>
+		</ul>
+   
+   
