@@ -40,7 +40,7 @@ for file in *.html; do
 done
 
 cd ..
-python tbinsert5.py livro
+python tbinsert6.py livro
 
 rm -rf ./.tmp
 rm -rf ./.book_in_html
@@ -86,7 +86,7 @@ for file in *.html; do
 done
 
 cd ..
-python ./tbinsert5.py livro-py
+python ./tbinsert6.py livro-py
 
 rm -rf ./.tmp
 rm -rf ./.book_in_html

@@ -292,6 +292,7 @@ for index, f in enumerate (lfiles):
         text = text.replace('<div class="sectionTOCS">', rep)
         
     #collapse demo's
+    lbc = [] #list of collapses buttoms
     s = text.find("<!--prova begin-->")
     count = 0
     while (s != -1):
@@ -300,6 +301,8 @@ for index, f in enumerate (lfiles):
         sub += '<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo'
         sub += str(count) + '">Demonstração</button>\n'
         sub += '<div id="demo' + str(count) + '" class="collapse out">\n'
+
+        lbc.append("demo"+str(count))
         
         text = text.replace("<!--prova begin-->",sub,1)
         text = text.replace("<!--prova end-->",'</div></div>',1)
@@ -314,6 +317,9 @@ for index, f in enumerate (lfiles):
         sub += '<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#resp'
         sub += str(count) + '">Resposta</button>\n'
         sub += '<div id="resp' + str(count) + '" class="collapse out">\n'
+
+        lbc.append("resp"+str(count))
+
         text = text.replace("<!--resp begin-->",sub,1)
         text = text.replace("<!--resp end-->",'</div></div>',1)
         s = text.find("<!--resp begin-->")
@@ -327,6 +333,9 @@ for index, f in enumerate (lfiles):
         sub += '<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#resol'
         sub += str(count) + '">Solução</button>\n'
         sub += '<div id="resol' + str(count) + '" class="collapse out">\n'
+
+        lbc.append("resol"+str(count))
+
         text = text.replace("<!--resol begin-->",sub,1)
         text = text.replace("<!--resol end-->",'</div></div>',1)
         s = text.find("<!--resol begin-->")
@@ -346,6 +355,15 @@ for index, f in enumerate (lfiles):
     #fixing the MathJax
     #remove mathsize="big"
     text = text.replace('mathsize="big"','mathsize="normal"')
+
+    #rescale Math's to fit window.innerWidth
+    for i, bid in enumerate(lbc):
+        sub = '<script> $(function(){$("#' + bid + '").on("shown.bs.collapse", function () {var math = document.getElementsByClassName("MathJax_SVG"); var arrayLength = math.length; for (var i = 0; i < arrayLength; i++) { math[i].style.display = "inline"; var w = math[i].offsetWidth; math[i].style.display = ""; if (w > window.innerWidth) { math[i].style.fontSize = Math.floor((window.innerWidth-75)/w * 100) + "%";} MathJax.Hub.Queue(["Rerender",MathJax.Hub,math[i]]); } });}); </script>'
+        sub += "</body>" + "\n"
+
+        text = text.replace("</body>", sub)
+
+
 
     ofile.write(text)
     ifile.close ()
