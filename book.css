@@ -7,7 +7,6 @@ body{
 {
 	max-width: 100%;
 	color: "blue";
-	
 }
 
 .livro
@@ -52,6 +51,11 @@ body{
 }
 
 /*Navigation menu*/
+.nav
+{
+	margin: 0px;
+}
+
 .nav a{
     color: #d6d6d6; /*f5f5f5;*/
 }
