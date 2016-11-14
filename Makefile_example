@@ -156,7 +156,7 @@ main-oct.html: main.tex
 	bibtex main
 	latex main
 	latex main
-	mk4ht htlatex main "myconfig,mathml,3,notoc*" "" "-d./html-oct/"
+	mk4ht htlatex main "myconfig,3,notoc*" "" "-d./html-oct/"
 	#mk4ht htlatex main "myconfig,html,3,notoc*,info" "" "-d./html-oct/"
 #	rm -f main.knd
 
@@ -168,7 +168,7 @@ main-py.html: main.tex
 	bibtex main
 	latex main
 	latex main
-	mk4ht htlatex main "myconfig,mathml,3,notoc*" "" "-d./html-py/"
+	mk4ht htlatex main "myconfig,3,notoc*" "" "-d./html-py/"
 	#mk4ht htlatex main "myconfig,html,3,notoc*,info" "" "-d./html-py/"
 #	rm -f main.knd
 
