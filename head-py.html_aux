@@ -12,7 +12,7 @@
   <script type="text/javascript" src="../MathJax-master/MathJax.js?config=TeX-AMS-MML_SVG"></script>
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
-         SVG: { scale: 95 },
+         SVG: { scale: 96 },
     });
    </script>
 
