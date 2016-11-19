@@ -66,6 +66,11 @@ body{
 	margin-bottom: 5px;
 }
 
+nav.navbar.navbar-default
+{
+    margin-bottom: 0px;
+}
+
 .panel {
     background-color: #f5f5f5;
 }
