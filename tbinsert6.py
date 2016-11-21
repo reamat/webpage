@@ -122,7 +122,20 @@ s = text.index('<div class="tableofcontents">')
 text = text.replace(text[s:],rtext)
 ifile.close()
 
-#change title
+#change titleHead and title
+#title
+title = "<title>Cálculo Numérico - Um Livro Colaborativo - Versão "
+if (sys.argv[1] == "livro"):
+    title += "Scilab"
+elif (sys.argv[1] == "livro-py"):
+    title += "Python"
+else:
+    raise NameError('This is not a valid option.')
+s = text.index('<title>')
+e = text.index('</title>')
+text = text.replace(text[s:e], title)
+
+#titleHead
 text = text.replace('<h2 class="titleHead">Cálculo Numérico<br />',
                     '<h2 class="titleHead">Cálculo Numérico<br /><small>')
 s = text.index('<h2 class="titleHead">')
