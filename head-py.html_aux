@@ -61,7 +61,8 @@
             <li><a href="../livro-py/slide-py.pdf">Formato Slides</a></li>
             <li role="separator" class="divider"></li>
             <li class="dropdown-header">Mudar Versão</li>
-            <li><a href="../livro/main.html">Versão Scilab</a></li>
+            <li><a href="../livro/#pagina">Versão Scilab</a></li>
+            <li><a href="../livro-oct/#pagina">Versão GNU Octave</a></li>
           </ul>
         </li>		
 			<li><a href="../participe.html">Participe</a></li>

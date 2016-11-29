@@ -127,6 +127,8 @@ ifile.close()
 title = "<title>Cálculo Numérico - Um Livro Colaborativo - Versão "
 if (sys.argv[1] == "livro"):
     title += "Scilab"
+elif (sys.argv[1] == "livro-oct"):
+    title += "GNU Octave"
 elif (sys.argv[1] == "livro-py"):
     title += "Python"
 else:
@@ -169,6 +171,8 @@ for index, f in enumerate (lfiles):
     headname = []
     if (sys.argv[1] == "livro"):
         headname = "./head.html_aux"
+    elif (sys.argv[1] == "livro-oct"):
+        headname = "./head-oct.html_aux"
     elif (sys.argv[1] == "livro-py"):
         headname = "./head-py.html_aux"
     else:
@@ -233,6 +237,8 @@ for index, f in enumerate (lfiles):
     codeIn = []
     if (sys.argv[1] == 'livro'):
         codeIn = 'Scilab'
+    elif (sys.argv[1] == 'livro-oct'):
+        codeIn = 'GNU Octave'
     elif (sys.argv[1] == 'livro-py'):
         codeIn = 'Python'
     else:
@@ -376,6 +382,18 @@ for index, f in enumerate (lfiles):
 
         text = text.replace("</body>", sub)
 
+    #set version change
+    if (sys.argv[1] == 'livro'):
+        text = text.replace("../livro-oct/#pagina","../livro-oct/"+f+".html")
+        text = text.replace("../livro-py/#pagina","../livro-py/"+f+".html")
+    elif (sys.argv[1] == 'livro-oct'):
+        text = text.replace("../livro/#pagina","../livro/"+f+".html")
+        text = text.replace("../livro-py/#pagina","../livro-py/"+f+".html")
+    elif (sys.argv[1] == 'livro-py'):
+        text = text.replace("../livro/#pagina","../livro/"+f+".html")
+        text = text.replace("../livro-oct/#pagina","../livro-oct/"+f+".html")
+    else:
+        raise NameError('opção inválida.')
 
 
     ofile.write(text)
