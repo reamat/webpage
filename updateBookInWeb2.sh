@@ -31,7 +31,7 @@ mv ./.book_in_html/*.png ./livro/
 mv ./.book_in_html/*.css ./livro/
 
 #google search validator
-#cp googlee521115172992e66.html ./livro/
+cp googlee521115172992e66.html ./livro/
 
 #change encoding to utf-8
 cd ./.book_in_html
@@ -77,7 +77,7 @@ mv ./.book_in_html/*.png ./livro-oct/
 mv ./.book_in_html/*.css ./livro-oct/
 
 #google search validator
-#cp googlee521115172992e66.html ./livro/
+cp googlee521115172992e66.html ./livro-oct/
 
 #change encoding to utf-8
 cd ./.book_in_html
@@ -101,7 +101,7 @@ cp ./$DIR_MASTER/main-oct.epub ./livro-oct/
 cp ./$DIR_MASTER/slide-oct.pdf ./livro-oct/
 
 #google validator
-#cp googlee521115172992e66.html ./livro-oct/
+cp googlee521115172992e66.html ./livro-oct/
 
 ####################
 
@@ -127,7 +127,7 @@ mv ./.book_in_html/*.png ./livro-py/
 mv ./.book_in_html/*.css ./livro-py/
 
 #google search validator
-#cp googlee521115172992e66.html ./livro/
+cp googlee521115172992e66.html ./livro-py/
 
 #change encoding to utf-8
 cd ./.book_in_html
