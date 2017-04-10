@@ -69,6 +69,8 @@ body{
 nav.navbar.navbar-default
 {
     margin-bottom: 0px;
+    position: fixed;
+    width: 100%;
 }
 
 .panel {

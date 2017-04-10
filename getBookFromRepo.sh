@@ -17,6 +17,7 @@ cp -rf $DIR_MASTER/* .book_in_repo/
 #copy local Makefile and config's for Tex4ht
 cp Makefile_example ./.book_in_repo/Makefile
 cp myconfig.cfg  ./.book_in_repo/myconfig.cfg
+cp pgfsys-tex4ht.def ./.book_in_repo/
 
 #enter dest and make all local versions of the book
 cd .book_in_repo
