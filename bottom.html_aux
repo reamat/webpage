@@ -73,7 +73,13 @@ target="_blank">repositório GitHub oficial</a> do projeto.</p>
       </div>
 </div>
 
+<div class="alert alert-warning alert-dismissable">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <a href="../participe.html">Participe</a> da escrita deste livro!
+</div>
+
 </div></div>
+
 
   <script>
          MathJax.Hub.Queue(function () {

@@ -4,11 +4,11 @@
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="../fonts/Serif/cmun-serif.css"></link>
 
-  <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="new_main.css"> 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../MathJax-master/MathJax.js?config=TeX-AMS-MML_SVG"></script>
   <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
@@ -31,6 +31,7 @@
 
 <div class="row">
   <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -75,11 +76,11 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<p style="text-align: right; margin: 0px; color: #777;">Versão Scilab</p>
+
+<p style="text-align: right; margin: 0px; padding-top:0px; color: #777;">Versão Scilab</p>
 
 <div class="livro">
    <div class="container-fluid">
-   
    	<ul class="nav">
     	<li>
     		<a href="#Previous#" aria-label="Previous">

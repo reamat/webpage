@@ -4,11 +4,11 @@
   <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="../fonts/Serif/cmun-serif.css"></link>
 
-  <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="new_main.css">
    
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../MathJax-master/MathJax.js?config=TeX-AMS-MML_SVG"></script>
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -65,12 +65,11 @@
             <li><a href="../livro-py/#pagina">Versão Python</a></li>
           </ul>
         </li>		
-			<li><a href="../participe.html">Participe</a></li>
-			<li><a
-				href="https://github.com/livroscolaborativos/CalculoNumerico"
-				target="_blank">Repositório</a></li>
-			<li><a href="../organizadores.html">Organizadores</a></li>
-			<li><a href="../derivados.html">Trabalhos Derivados</a></li>
+	   <li><a href="../participe.html">Participe</a></li>
+	   <li><a href="https://github.com/livroscolaborativos/CalculoNumerico"
+		target="_blank">Repositório</a></li>
+           <li><a href="../organizadores.html">Organizadores</a></li>
+	   <li><a href="../derivados.html">Trabalhos Derivados</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
