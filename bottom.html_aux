@@ -32,6 +32,8 @@ target="_blank">repositório GitHub oficial</a> do projeto.</p>
 				<ul class="list-unstyled">
 			<li><a
 			       href="../livro/main.html">Versão Scilab</a></li>
+			<li><a
+			       href="../livro-oct/main.html">Versão GNU Octave</a></li>
 			<li><a href="../livro-py/main.html">Versão Python</a></li>
 	  				<li><a href="https://github.com/livroscolaborativos/CalculoNumerico" target="_blank">Repositório</a></li>
 	  				<li><a href="https://groups.google.com/forum/#!forum/livro_colaborativo">Lista de Discussão</a></li>
@@ -71,7 +73,13 @@ target="_blank">repositório GitHub oficial</a> do projeto.</p>
       </div>
 </div>
 
+<div class="alert alert-warning alert-dismissable">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <a href="../participe.html">Participe</a> da escrita deste livro!
+</div>
+
 </div></div>
+
 
   <script>
          MathJax.Hub.Queue(function () {

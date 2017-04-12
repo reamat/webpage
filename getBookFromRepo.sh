@@ -6,7 +6,7 @@
 # Author: Pedro H A Konzen - UFRGS - 11/2016
 
 #master repo
-DIR_MASTER=../master
+DIR_MASTER=../CalculoNumerico
 
 #create dest and/or clean it up
 mkdir -p .book_in_repo
@@ -17,10 +17,12 @@ cp -rf $DIR_MASTER/* .book_in_repo/
 #copy local Makefile and config's for Tex4ht
 cp Makefile_example ./.book_in_repo/Makefile
 cp myconfig.cfg  ./.book_in_repo/myconfig.cfg
+cp pgfsys-tex4ht.def ./.book_in_repo/
 
 #enter dest and make all local versions of the book
 cd .book_in_repo
 make all
+make all-oct
 make all-py
 
 #back to origin folder

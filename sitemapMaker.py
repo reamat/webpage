@@ -18,6 +18,7 @@ import string
 ofile1 = open("sitemap.txt", "w")
 ofile2 = open("./livro/sitemap.txt", "w")
 ofile3 = open("./livro-py/sitemap.txt", "w")
+ofile4 = open("./livro-oct/sitemap.txt", "w")
 
 #find and get all html
 htmlFiles = []
@@ -41,9 +42,17 @@ for (dirpath, dirnames, filenames) in walk ("./livro-py"):
             ofile1.write("https://www.ufrgs.br/numerico/livro-py/"+filename+"\n")
             ofile3.write("https://www.ufrgs.br/numerico/livro-py/"+filename+"\n")
     break
+for (dirpath, dirnames, filenames) in walk ("./livro-oct"):
+    for filename in filenames:
+        ext = os.path.splitext(filename)[1]
+        if (ext == ".html"):
+            ofile1.write("https://www.ufrgs.br/numerico/livro-oct/"+filename+"\n")
+            ofile4.write("https://www.ufrgs.br/numerico/livro-oct/"+filename+"\n")
+    break
 ofile1.close()
 ofile2.close()
 ofile3.close()
+ofile4.close()
     
 
 
