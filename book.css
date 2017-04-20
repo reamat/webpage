@@ -211,7 +211,7 @@ hr.section
     color: #337ab7;
 }
 
-.alert.alert-warning{
+.alert {
     bottom:0px;
     position:fixed;
 }
