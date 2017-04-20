@@ -6,9 +6,6 @@
    $from = 'Informe de erros ou sugestões';
    $to = 'livroscolaborativos@gmail.com'; 
    $fromurl = $_POST["from_url"];
-   if ($fromurl == '') {
-   $fromurl = $_SERVER['HTTP_REFERER'];
-   }
    $subject .= 'Aviso sobre a página: ' . $fromurl;
 
    $ip = $_SERVER['REMOTE_ADDR'];
@@ -31,7 +28,7 @@
    }
    }
    }
-   ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,6 +46,8 @@
     <script src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
   </head>
   <body>
+    <?php $fromurl0 = $_SERVER['HTTP_REFERER']; ?>
+
 
     <div class="row">
       <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
@@ -116,7 +115,7 @@
 	  <div class="form-group">
 	    <label for="from_url" class="col-sm-2 control-label">Ref. à página</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="from_url" name="from_url" placeholder="<?php if (isset($_SERVER['HTTP_REFERER'])) { echo htmlspecialchars($_SERVER['HTTP_REFERER']);} else {echo 'Informe o link da página referente ao seu aviso';} ?>" value="<?php echo htmlspecialchars($_POST['from_url']); ?>">
+	      <input type="text" class="form-control" id="from_url" name="from_url" placeholder="<?php if (isset($_SERVER['HTTP_REFERER'])) { echo htmlspecialchars($_SERVER['HTTP_REFERER']);} else {echo 'Informe o link da página referente ao seu aviso';} ?>" value="<?php echo htmlspecialchars($_SERVER['HTTP_REFERER']); ?>">
 	    </div>
 	  </div>
 	  <div class="form-group">
