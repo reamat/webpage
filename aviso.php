@@ -31,23 +31,41 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Informe de erro ou sugestão para Cálculo Numérico - Um Livro Colaborativo.">
     <meta name="author" content="livroscolaborativos@gmail.com">
     <title>Informe de erros ou sugestões.</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700'
 	  rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="./bootstrap-3.3.5-dist/css/bootstrap.css">
-    <link href="aviso.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link href="aviso.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+      (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+      })(window, document, 'script',
+      'https://www.google-analytics.com/analytics.js', 'ga');
+      
+      ga('create', 'UA-61232881-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+
   </head>
   <body>
     <?php $fromurl0 = $_SERVER['HTTP_REFERER']; ?>
-
 
     <div class="row">
       <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
@@ -68,7 +86,7 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-		<li class="active"><a href="index.html">Projeto</a></li>
+		<li><a href="index.html">Projeto</a></li>
 		<li class="dropdown">
 		  <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
 		     role="button" aria-haspopup="true" aria-expanded="false">Livro
@@ -81,7 +99,7 @@
 		    <li><a href="./livro-py/main.html">Versão Python</a></li>
 		  </ul>
 		</li>		
-		<li><a href="participe.html">Participe</a></li>
+		<li class="active"><a href="participe.html"><strong>Participe</strong></a></li>
 		<li><a
 		       href="https://github.com/livroscolaborativos/CalculoNumerico"
 		       target="_blank">Repositório</a></li>
@@ -203,7 +221,6 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>
