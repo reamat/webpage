@@ -73,9 +73,9 @@ target="_blank">repositório GitHub oficial</a> do projeto.</p>
       </div>
 </div>
 
-<div class="alert alert-warning alert-dismissable">
-  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-  <a href="../participe.html">Participe</a> da escrita deste livro!
+<div class="alert alert-warning alert-dismissible fade in">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <a href="../aviso.php" target="_blak">Informe erros ou dê sugestões!</a>
 </div>
 
 </div></div>
