@@ -4,6 +4,7 @@
    $email = $_POST['email'];
    $message = $_POST['message'];
    $from = 'Informe de erros ou sugestões';
+   $to_group = 'livro_colaborativo@googlegroups.com'; 
    $to = 'livroscolaborativos@gmail.com'; 
    $fromurl = $_POST["from_url"];
    $subject .= 'Aviso sobre a página: ' . $fromurl;
@@ -11,7 +12,8 @@
    $ip = $_SERVER['REMOTE_ADDR'];
    $useragent = htmlspecialchars($_SERVER['HTTP_USER_AGENT']);
 
-   
+   $body_group ="\nDe: $name\nRef. a URL: $fromurl\n\nMensage:\n $message";
+
    $body ="Identificação:\n\nFrom: $name\nE-Mail:$email\nIP: $ip\nUser agent: $useragent\n\nInforme:\n\nRef. a URL: $fromurl\n\nMensage:\n $message";
 
    //Check if message has been entered
@@ -21,8 +23,8 @@
 
    // If there are no errors, send the email
    if (!$errMessage) {
-   if (mail ($to, $subject, $body, $from)) {
-   $result = '<div class="alert alert-success">Obrigado por sua colaboração! Participe diretamente da escrita do livro colaborativo. <a href="participe.html">Saiba mais aqui</a>!.</div>';
+   if ((mail ($to, $subject, $body, $from)) and (mail ($to_group, $subject, $body_group, $from))) {
+      $result = '<div class="alert alert-success">Obrigado por sua colaboração! Participe diretamente da escrita do livro colaborativo. <a href="participe.html">Saiba mais aqui</a>!.</div>';
    } else {
    $result ='<div class="alert alert-danger">Desculpe, houve um erro ao enviar sua mensagem. Caso o problema persista, considere entre em contato pelo e-mail: <a href="mailto:livroscolaborativos@gmail.com" target="_top">livroscolaborativos@gmail.com</a>.</div>';
    }
@@ -119,15 +121,16 @@
 	<form class="form-horizontal" role="form" method="post" action="aviso.php">
   	  <h4 class="text-center"> Por favor, forneça seu nome e e-mail para que possamos entrar em contato.</h4>
 	  <div class="form-group">
-	    <label for="name" class="col-sm-2 control-label">Nome</label>
+	    <label for="name" class="col-sm-2 control-label">Nome*</label>
 	    <div class="col-sm-10">
 	      <input type="text" class="form-control" id="name" name="name" placeholder="(opcional)" value="<?php echo htmlspecialchars($_POST['name']); ?>">
 	    </div>
 	  </div>
 	  <div class="form-group">
-	    <label for="email" class="col-sm-2 control-label">E-mail</label>
+	    <label for="email" class="col-sm-2 control-label">E-mail*</label>
 	    <div class="col-sm-10">
 	      <input type="email" class="form-control" id="email" name="email" placeholder="(opcional)" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+	    <p><small>*O e-mail informado não é publicado na lista de e-mails.</small></p>
 	    </div>
 	  </div>
 	  <div class="form-group">
