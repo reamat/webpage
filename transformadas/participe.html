@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt">
   <head>
+    
     <meta charset="utf-8">
     <meta name="Description"
-	  CONTENT="Recursos Educacionais Abertos de Matemática, 
+	  CONTENT="Recursos Educacionais Abertos de Matemática (REAMAT),
 		   Instituto de Matemática e Estatística (IME), 
 		   Universidade Federal do Rio Grande do Sul (UFRGS).">
-    <meta name="keywords" content="escrita colaborativa, 
-				   recursos educacionais abertos, 
-				   livros colaborativos">
-    <title>REAMAT - Participe</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" >
-    <link href="http://fonts.googleapis.com/css?family=Open Sans:400,700" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
-    <link href="index.css" rel="stylesheet">
+    <meta name="keywords" content="recursos educacionais abertos,
+				   matemática,
+                                   transformadas integrais">
+    <title>REAMAT - Transformadas Integrais</title>
+    <meta name="author" content="reamat@ufrgs.br">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700'
+	  rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link href="index.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <style>
+      .carousel-inner .item a img {
+      width: 200px;
+      margin: auto;
+      }
+    </style>
+
   </head>
   <body>
 
@@ -31,15 +41,17 @@
 
     <div class="row">
       <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
-	
+
+
 	<!-- ********** BEGIN: NAVBAR ********* -->
     	
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
-	      <a class="navbar-brand" href="index.html">REAMAT<br></a>
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	      <a class="navbar-brand" href="index.html">REAMAT<br><small>Transformadas Integrais</small></a>
+	      <button type="button" class="navbar-toggle collapsed"
+		      data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 		<span class="sr-only">Toggle navigation</span>
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
@@ -50,17 +62,28 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-		<li><a href="index.html">Início</a></li>
 		<li class="dropdown">
 		  <a href="#" class="dropdown-toggle"
 		     data-toggle="dropdown" 
 		     role="button" aria-haspopup="true"
-		     aria-expanded="false">Recursos
+		     aria-expanded="false">REAMAT
 		    <span class="caret"></span></a>
 		  <ul class="dropdown-menu">
-		    <li><a href="./linear/index.html">Álgebra Linear</a></li>
-		    <li><a href="./numerico/index.html">Cálculo Numérico</a></li>
-		    <li><a href="./transformadas/index.html">Transformadas Integrais</a></li>
+		    <li><a href="../index.html">Sobre</a></li>
+		    <li class="dropdown-header">Recursos</li> 
+		    <li><a href="../linear/index.html">Álgebra Linear</a></li>
+		    <li><a href="../numerico/index.html">Cálculo Numérico</a></li>
+		    <li><a href="../transformadas/index.html">Transformadas Integrais</a></li>
+		  </ul>
+		</li>		
+		<li class="dropdown">
+		  <a href="#" class="dropdown-toggle"
+		     data-toggle="dropdown" 
+		     role="button" aria-haspopup="true"
+		     aria-expanded="false">Transformadas Integrais
+		    <span class="caret"></span></a>
+		  <ul class="dropdown-menu">
+		    <li><a href="./livro/main.html">Livro Colaborativo</a></li>
 		  </ul>
 		</li>		
 		<li class="active"><a href="participe.html">Participe</a></li>
@@ -74,52 +97,50 @@
 
 	
 
-	<!-- A imagem de fundo do "jumbotron" foi obtida de woodleywonderworks
-	     e disponível no link https://www.flickr.com/photos/wwworks/5063710551/-->  
+	<!-- ********* BEGIN: JUMBOTRON ********* -->
+	
+	<!-- A imagem de fundo do "jumbotron" foi obtida de 
+	     woodleywonderworks e está disponível no link 
+	     https://www.flickr.com/photos/wwworks/5063710551/
+	  -->
 	<div class="imagem">
 	  <div class="container-fluid">
-
+	    
 	    <div class="jumbotron jumbotron-fluid">
 	      <h1>REAMAT</h1>
-	      <h3>Participe</h3>
+	      <h3>Transformadas Integrais - Participe</h3>
 	    </div>
-
 	    <p>
-	      Imagem: <a href="https://www.flickr.com/photos/wwworks/5063710551/" target="_blank">
-		woodleywonderworks</a></p>		
+	      Imagem: <a
+			 href="https://www.flickr.com/photos/wwworks/5063710551/"
+			 target="_blank"> woodleywonderworks</a>
+	    </p>
 	  </div>
 	</div>
+	
+	<!-- ********* END: JUMBOTRON ********* -->
 
-	<h4>Há várias maneiras de participar da escrita dos recursos educacionais abertos de matemática. Toda a colaboração é bem vinda, seja ela um aviso de erro ou sugestão, uma reformulação de uma parte do material, ou mesmo um novo recurso educacional.</h4>
+	<h4>Participe da escrita colaborativa dos recursos educacionais abertos de transformadas integrais. Toda a colaboração é bem vinda, seja ela um aviso de erro ou sugestão, uma reformulação de uma parte do material, ou mesmo um novo recurso educacional.</h4>
 
-	<h2>Acesse o repositório oficial dos recursos</h2>
-	<ul class="list-unstyled">
-	  <li>Álgebra linear
-	    <ul class="list-unstyled">
-	      <li><a href="https://github.com/reamat/AlgebraLinear">https://github.com/reamat/AlgebraLinear</a></li>
-	    </ul>
-	  </li>
-	  <li>Cálculo numérico
-	    <ul class="list-unstyled">
-	      <li><a href="https://github.com/reamat/CalculoNumerico">https://github.com/reamat/CalculoNumerico</a></li>
-	    </ul>
-	  </li>
-	  <li>Transformadas integrais
-	    <ul class="list-unstyled">
-	      <li><a href="https://github.com/reamat/TransformadasIntegrais">https://github.com/reamat/TransformadasIntegrais</a></li>
-	    </ul>
-	  </li>
-	</ul>
+	<h2>Edite você mesmo</h2>
+	<p><a href="https://github.com/reamat/TransformadasIntegrais"
+	      target="_blank"><i>Fork us on GitHub</i></a> e começe agora
+	  mesmo a editar os recursos disponíveis de transformadas integrais.
+	</p>
+	<p>Repositório GitHub: <a href="https://github.com/reamat/TransformadasIntegrais" target="_blank">https://github.com/reamat/TransformadasIntegrais</a>
 
-	<h2>Outras formas de colaboração</h2>
+	  <h2>Outras formas de colaboração</h2>
 	<p>Toda a colaração é bem vinda! Caso tenha encontrado algum erro, imprecisão ou tenha alguma sugestão a fazer, escreva para nosso e-mail:</p>
 	<p style="text-align: center;"><a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a></p>
 
 	<h2>Aviso de violação de <i>copyright</i></h2>
 	<p>Caso encontre qualquer violação de <i>copyright</i> em qualquer parte dos recursos disponibilizados, por favor, nos informe pelo e-mail:</p>
 	<p style="text-align: center;"><a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a></p>
-	<p>Iremos cuidar para analisar seu aviso o mais prontamente possível e removeremos o material que não esteja de acordo com a licença CC-BY-SA 3.0.</p>
+	<p>Iremos cuidar para analisar seu aviso o mais prontamente possível e removeremos o material que não esteja de acordo com a licença 		  <a href="https://creativecommons.org/licenses/by-sa/3.0/"
+		     target="_blank">CC-BY-SA 3.0
+		  </a>.</p>
 
+	
 
 	<!-- ************* BEGIN: BOTTOM PANEL ********** -->
 
@@ -168,7 +189,7 @@
 	  </div>
 	  <div class="panel-footer">
 	    <div class="container-fluid">
-	      <img src="./favicon.ico" alt="UFRGS">UFRGS - IME - Recursos Educacionais Abertos de Matemática. Contato: <a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a>.
+	      <img src="../favicon.ico" alt="UFRGS">UFRGS - IME - Recursos Educacionais Abertos de Matemática. Contato: <a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a>.
 	    </div>
 	  </div>
 	</div>

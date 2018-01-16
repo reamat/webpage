@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt">
   <head>
+    
     <meta charset="utf-8">
     <meta name="Description"
-	  CONTENT="Recursos Educacionais Abertos de Matemática (REAMAT), 
+	  CONTENT="Recursos Educacionais Abertos de Matemática (REAMAT),
 		   Instituto de Matemática e Estatística (IME), 
 		   Universidade Federal do Rio Grande do Sul (UFRGS).">
     <meta name="keywords" content="recursos educacionais abertos,
-				   matemática">
-    <title>Recursos educacionais abertos de matemática</title>
+				   matemática,
+                                   álgebra linear">
+    <title>REAMAT - Cálculo Numérico</title>
     <meta name="author" content="reamat@ufrgs.br">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700'
 	  rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <link href="index.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -37,18 +39,19 @@
 	
     <!-- ********** END: ALERT ********** -->
 
-
-    <!-- ********** BEGIN: NAVBAR ********* -->
-    
     <div class="row">
       <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
-	
+
+
+	<!-- ********** BEGIN: NAVBAR ********* -->
+    	
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
-	      <a class="navbar-brand" href="index.html">REAMAT<br></a>
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	      <a class="navbar-brand" href="index.html">REAMAT<br><small>Álgebra Linear</small></a>
+	      <button type="button" class="navbar-toggle collapsed"
+		      data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 		<span class="sr-only">Toggle navigation</span>
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
@@ -59,20 +62,31 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-		<li class="active"><a href="index.html">Início</a></li>
 		<li class="dropdown">
 		  <a href="#" class="dropdown-toggle"
 		     data-toggle="dropdown" 
 		     role="button" aria-haspopup="true"
-		     aria-expanded="false">Recursos
+		     aria-expanded="false">REAMAT
 		    <span class="caret"></span></a>
 		  <ul class="dropdown-menu">
-		    <li><a href="./linear/index.html">Álgebra Linear</a></li>
-		    <li><a href="./numerico/index.html">Cálculo Numérico</a></li>
-		    <li><a href="./transformadas/index.html">Transformadas Integrais</a></li>
+		    <li><a href="../index.html">Sobre</a></li>
+		    <li class="dropdown-header">Recursos</li> 
+		    <li><a href="../linear/index.html">Álgebra Linear</a></li>
+		    <li><a href="../numerico/index.html">Cálculo Numérico</a></li>
+		    <li><a href="../transformadas/index.html">Transformadas Integrais</a></li>
 		  </ul>
 		</li>		
-		<li><a href="participe.html">Participe</a></li>
+		<li class="active" class="dropdown">
+		  <a href="#" class="dropdown-toggle"
+		     data-toggle="dropdown" 
+		     role="button" aria-haspopup="true"
+		     aria-expanded="false">Álgebra Linear
+		    <span class="caret"></span></a>
+		  <ul class="dropdown-menu">
+		    <li><a href="livro/livro.html">Livro Colaborativo</a></li>
+		  </ul>
+		</li>		
+		<li><a href="participe.html"><strong>Participe</strong></a></li>
 		<li><a href="organizadores.html">Organizadores</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
@@ -94,7 +108,7 @@
 	    
 	    <div class="jumbotron jumbotron-fluid">
 	      <h1>REAMAT</h1>
-	      <h3>Recursos Educacionais Abertos de Matemática</h3>
+	      <h3>Álgebra Linear</h3>
 	    </div>
 	    <p>
 	      Imagem: <a
@@ -113,75 +127,46 @@
 	    <div class="row">
 	      <div class="col-md-6">
 		<h3>Sobre</h3>
-		<p>
-		  <a href="./livro/main.html"><strong>REAMAT</strong></a>
-		  é um projeto de escrita colaborativa de recursos
+		<p><strong>REAMAT - Álgebra Linear</strong>
+		  é uma realização do projeto <a href="../index.html">
+		    <strong>REAMAT</strong></a>
+		  de escrita colaborativa de recursos
 		  educacionais abertos sobre tópicos de matemática
 		  em nível de um curso de graduação nas áreas das
 		  ciências exatas e da terra.
 		</p>
 		<p>
-		  Nosso objetivo é de produzir um material de excelente
-		  qualidade e de acesso livre pela colaboração entre
-		  professores e alunos de universidades, institutos de
-		  educação e demais interessados no estudo, análise e
-		  aplicação da matemática nos mais diversos ramos da
-		  ciência e da tecnologia.</p>
-		<p>
-		  O sucesso do projeto depende da colaboração! Participe
-		  diretamenta da escrita dos recursos educacionais, dê
-		  sugestões ou nos avise de erros e imprecisões. Toda a
-		  colaboração é bem vinda. Veja mais
-		  <a href="participe.html">aqui</a>.
-		</p>
-		<p>
-		  Nós preparamos uma série de ações para ajudá-lo a
-		  participar. Em primeiro lugar, o acesso irrestrito aos
-		  materias pode se dar através deste site. Além disso, os códigos
-		  fontes e documentação dos recursos estão disponíveis em 
-		  <a href="https://github.com/reamat"
-		     target="_blank">repositório GitHub</a> público.
-		</p>
-		<p>
-		  Nada disso estaria completo sem uma licença apropriada à
-		  colaboração. Por isso, escolhemos disponilizar os
-		  materiais sob licença 
-		  <a href="https://creativecommons.org/licenses/by-sa/3.0/"
-		     target="_blank"> Creative Commons
-		    Atribuição-CompartilhaIgual 3.0 Não Adaptada
-		    (<strong>CC-BY-SA 3.0</strong>)
-		  </a>. Ou seja, você pode <strong>copiar</strong>,
-		  <strong>redistribuir</strong>,
-		  <strong>alterar</strong> e construir um novo material para
-		  qualquer uso, inclusive comercial. Leia a 
-		  <a href="https://creativecommons.org/licenses/by-sa/3.0/"
-		     target="_blank">licença</a> para maiores informações.
+		  Veja mais sobre o REAMAT <a href="../index.html">aqui</a>.
 		</p>
 	      </div>
+	      
 	      <div class="col-md-6">
 		<div class="container-fluid">
 		  <h3>Recursos disponíveis</h3>
 		  <ul class="list-unstyled">
-		    <li><a href="./linear/index.html">Álgebra Linear</a></li>
-		    <li><a href="./numerico/index.html">Cálculo Numérico</a></li>
-		    <li><a href="./transformadas/index.html">Transformadas Integrais</a></li>
+		    <li>
+		      <a href="./livro/livro.html"><h4>Livro Colaborativo</h4></a>
+		    </li>
 		  </ul>
 
-		  <h3>Repositórios GitHub</h3>
+		  <h3>Repositório GitHub</h3>
 		  <ul class="list-unstyled">
-		    <li><a href="https://github.com/reamat">https://github.com/reamat</a></li>
+		    <li><a href="https://github.com/reamat/AlgebraLinear"
+			   target="_blank">
+			https://github.com/reamat/AlgebraLinear</a></li>
 		  </ul>
 
 		  <h3>Contato</h3>
 		  <ul class="list-unstyled">
-		    <li><a href="mailto:reamat@ufrgs.br">reamat@ufrgs.br</a></li>
+		    <li><a href="mailto:reamat@ufrgs.br">
+			reamat@ufrgs.br</a></li>
 		  </ul>
 
 		</div>
 	      </div>
+	      
 	    </div>
 	  </div>
-	</div>
 
 	<!-- ************* BEGIN: BOTTOM PANEL ********** -->
 
@@ -224,12 +209,13 @@
 		    </li>
 		  </ul>
 		</div>
+		
 	      </div>
 	    </div>
 	  </div>
 	  <div class="panel-footer">
 	    <div class="container-fluid">
-	      <img src="./favicon.ico" alt="UFRGS">UFRGS - IME - Recursos Educacionais Abertos de Matemática. Contato: <a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a>.
+	      <img src="../favicon.ico" alt="UFRGS">UFRGS - IME - Recursos Educacionais Abertos de Matemática. Contato: <a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a>.
 	    </div>
 	  </div>
 	</div>
