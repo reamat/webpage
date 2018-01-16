@@ -3,22 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="Description"
-	  CONTENT="Recursos Educacionais Abertos de Matemática, 
+	  CONTENT="Recursos Educacionais Abertos de Matemática (REAMAT), 
 		   Instituto de Matemática e Estatística (IME), 
 		   Universidade Federal do Rio Grande do Sul (UFRGS).">
-    <meta name="keywords" content="recursos educacionais abertos, 
-				   livros colaborativos, 
-				   cálculo numérico, 
-				   álgebra linear, 
-				   transformadas integrais">
+    <meta name="keywords" content="recursos educacionais abertos,
+				   matemática">
     <title>Recursos educacionais abertos de matemática</title>
     <meta name="author" content="reamat@ufrgs.br">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700'
 	  rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="./bootstrap-3.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <link href="index.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -29,26 +26,19 @@
       }
     </style>
 
-    
-    <script>
-      (function(i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function() {
-      (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-      })(window, document, 'script',
-      'https://www.google-analytics.com/analytics.js', 'ga');
-      
-      ga('create', 'UA-61232881-2', 'auto');
-      ga('send', 'pageview');
-    </script>
-
   </head>
   <body>
+
+    <!-- ********** BEGIN: ALERT ********** -->
+
+    <div class="alert alert-danger" style="text-align:center">
+      Esta página está em desenvolvimento. Para reportar erros ou dar sugestões, abra um <i>issue</i> em <a href="https://github.com/reamat/webpage" target="_blank">https://github.com/reamat/webpage</a>.
+    </div>
+	
+    <!-- ********** BEGIN: ALERT ********** -->
+
+
+    <!-- ********** BEGIN: NAVBAR ********* -->
     
     <div class="row">
       <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
@@ -69,31 +59,36 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-		<li class="active"><a href="index.html">Projeto</a></li>
+		<li class="active"><a href="index.html">Início</a></li>
 		<li class="dropdown">
-		  <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
-		     role="button" aria-haspopup="true" aria-expanded="false">Livros
+		  <a href="#" class="dropdown-toggle"
+		     data-toggle="dropdown" 
+		     role="button" aria-haspopup="true"
+		     aria-expanded="false">Recursos
 		    <span class="caret"></span></a>
 		  <ul class="dropdown-menu">
-		    <li role="separator" class="divider"></li>
-		    <li class="dropdown-header">Livros</li>
-		    <li><a href="./linear/#pagina">Álgebra Linear</a></li>
-		    <li><a href="./numerico/octave/#pagina">Cálculo Numérico - Scilab</a></li>
-		    <li><a href="./numerico/python/#pagina">Cálculo Numérico - Python</a></li>
-		    <li><a href="./numerico/octave/#pagina">Cálculo Numérico - Octave</a></li>
-		    <li><a href="./linear/#pagina">Transformadas Integrais</a></li>
+		    <li><a href="./linear/index.html">Álgebra Linear</a></li>
+		    <li><a href="./numerico/index.html">Cálculo Numérico</a></li>
+		    <li><a href="./transformadas/index.html">Transformadas Integrais</a></li>
 		  </ul>
 		</li>		
 		<li><a href="participe.html">Participe</a></li>
 		<li><a href="organizadores.html">Organizadores</a></li>
-		<li><a href="derivados.html">Trabalhos Derivados</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
+
+	<!-- ********* END: NAVBAR ******** -->
+
 	
-	<!-- A imagem de fundo do "jumbotron" foi obtida de woodleywonderworks
-	     e disponível no link https://www.flickr.com/photos/wwworks/5063710551/-->
+
+	<!-- ********* BEGIN: JUMBOTRON ********* -->
+	
+	<!-- A imagem de fundo do "jumbotron" foi obtida de 
+	     woodleywonderworks e está disponível no link 
+	     https://www.flickr.com/photos/wwworks/5063710551/
+	  -->
 	<div class="imagem">
 	  <div class="container-fluid">
 	    
@@ -108,6 +103,8 @@
 	    </p>
 	  </div>
 	</div>
+	
+	<!-- ********* END: JUMBOTRON ********* -->
 	
 	
 	<!--presentation-->
@@ -140,10 +137,9 @@
 		<p>
 		  Nós preparamos uma série de ações para ajudá-lo a
 		  participar. Em primeiro lugar, o acesso irrestrito aos
-		  materias pode se dar através deste site. Disponibilizamos
-		  os recursos em formato PDF e HTML. Além disso, os códigos
-		  fontes dos rescursos recursos estão disponíveis em 
-		  <a href="https://github.com/livroscolaborativos"
+		  materias pode se dar através deste site. Além disso, os códigos
+		  fontes e documentação dos recursos estão disponíveis em 
+		  <a href="https://github.com/reamat"
 		     target="_blank">repositório GitHub</a> público.
 		</p>
 		<p>
@@ -165,55 +161,29 @@
 	      <div class="col-md-6">
 		<div class="container-fluid">
 		  <h3>Recursos disponíveis</h3>
-		  
-		  
-		  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-		    <!-- Indicators -->
-		    <ol class="carousel-indicators">
-		      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-		      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-		      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-		    </ol>
-		    
-		    <!-- Wrapper for slides -->
-		    <div class="carousel-inner" role="listbox">
-		      <div class="item active">
-		  	<a href="./livro/main.html">
-		    	  <img src="./pics/cover-sci.png" alt="Cálculo Numérico - Um Livro Colaborativo - Versão Scilab">
-			</a>
-			<!--
-			    <img src="./pics/cover-sci.png"
-				 alt="Cálculo Numérico - Um Livro Colaborativo - Versão Scilab">
-			    -->
-		      </div>
-		      <div class="item">
-			<a href="./livro-oct/main.html">
-		    	  <img src="./pics/cover-oct.png" alt="Cálculo Numérico - Um Livro Colaborativo - Versão GNU Octave">
-			</a>
-		      </div>
-		      <div class="item">
-			<a href="./livro-py/main.html">
-		    	  <img src="./pics/cover-py.png" alt="Cálculo Numérico - Um Livro Colaborativo - Versão Python">
-			</a>
-		      </div>
-		    </div>
-		    
-		    <!-- Controls -->
-		    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-		      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		      <span class="sr-only">Previous</span>
-		    </a>
-		    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-		      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-		      <span class="sr-only">Next</span>
-		    </a>
-		  </div>
+		  <ul class="list-unstyled">
+		    <li><a href="./linear/index.html">Álgebra Linear</a></li>
+		    <li><a href="./numerico/index.html">Cálculo Numérico</a></li>
+		    <li><a href="./transformadas/index.html">Transformadas Integrais</a></li>
+		  </ul>
+
+		  <h3>Repositórios GitHub</h3>
+		  <ul class="list-unstyled">
+		    <li><a href="https://github.com/reamat">https://github.com/reamat</a></li>
+		  </ul>
+
+		  <h3>Contato</h3>
+		  <ul class="list-unstyled">
+		    <li><a href="mailto:reamat@ufrgs.br">reamat@ufrgs.br</a></li>
+		  </ul>
+
 		</div>
 	      </div>
 	    </div>
 	  </div>
 	</div>
 
+	<!-- ************* BEGIN: BOTTOM PANEL ********** -->
 
 	<div class="panel panel-default">
 	  <div class="container-fluid">
@@ -221,16 +191,14 @@
 	      <div class="row">
 		<div class="col-md-4">
 		  <ul class="list-unstyled">
-		    <li>Livros
+		    <li>Recursos
 		      <ul class="list-unstyled">
-			<li><a href="./linear/main.html">Álgebra Linear</a></li>
-			<li><a href="./numerico/python/main.html">Cálculo Numérico - Python</a></li>
-			<li><a href="./numerico/octave/main.html">Cálculo Numérico - Octave</a></li>
-			<li><a href="./numerico/scilab/main.html">Cálculo Numérico - Scilab</a></li>
-			<li><a href="./transformadas/main.html">Transformadas Integrais</a></li>
+			<li><a href="./linear/index.html">Álgebra Linear</a></li>
+			<li><a href="./numerico/index.html">Cálculo Numérico</a></li>
+			<li><a href="./transformadas/index.html">Transformadas Integrais</a></li>
 			<li><a
-			       href="https://github.com/livroscolaborativos"
-			       target="_blank">Repositório</a></li>
+			       href="https://github.com/reamat"
+			       target="_blank">Repositórios</a></li>
 		      </ul>
 		    </li>
 		  </ul>
@@ -242,7 +210,6 @@
 			<li><a href="index.html">Página Inicial</a></li>
 			<li><a href="participe.html">Participe</a></li>
 			<li><a href="organizadores.html">Organizadores</a></li>
-			<li><a href="derivados.html">Trabalhos Derivados</a></li>
 		      </ul>
 		    </li>
 		  </ul>
@@ -257,7 +224,6 @@
 		    </li>
 		  </ul>
 		</div>
-		
 	      </div>
 	    </div>
 	  </div>
@@ -268,6 +234,7 @@
 	  </div>
 	</div>
 
+	<!-- ************* END: BOTTOM PANEL ********** -->
 
       </div>
     </div>
