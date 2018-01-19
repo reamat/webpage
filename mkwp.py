@@ -47,7 +47,7 @@ print("Preliminares ... feito!")
 #************************************************#
 print("Construindo index.htm ...")
     
-os.system("cp index_aux.html "+sdir+"//on_server//index.html")
+os.system("cp index.aux "+sdir+"//on_server//index.html")
 ifile = open(sdir+"//on_server//index.html", 'r')
 text = ifile.read()
 ifile.close()
@@ -156,7 +156,7 @@ print("Construindo index.html ... feito!")
 #************************************************#
 print("Construindo participe.htm ...")
     
-os.system("cp index_aux.html "+sdir+"//on_server//participe.html")
+os.system("cp index.aux "+sdir+"//on_server//participe.html")
 ifile = open(sdir+"//on_server//participe.html", 'r')
 text = ifile.read()
 ifile.close()
@@ -236,7 +236,7 @@ print("Construindo participe.html ... feito!")
 #************************************************#
 print("Construindo organizadores.htm ...")
     
-os.system("cp index_aux.html "+sdir+"//on_server//organizadores.html")
+os.system("cp index.aux "+sdir+"//on_server//organizadores.html")
 ifile = open(sdir+"//on_server//organizadores.html", 'r')
 text = ifile.read()
 ifile.close()
@@ -299,5 +299,4 @@ ofile.close()
 
 print("Construindo organizadores.html ... feito!")
 
-
-
+print("Congratulations! Program ended successfully. :)")
