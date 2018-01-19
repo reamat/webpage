@@ -34,9 +34,9 @@ if not(os.path.isdir(sdir+"//on_server//fonts")):
     os.system("cp -rf "+sdir+"//fonts "
                        +sdir+"//on_server//fonts")
 
-if not(os.path.isdir(sdir+"//on_server//pics")):
-    os.system("cp -rf "+sdir+"//pics "
-                       +sdir+"//on_server//pics")
+if not(os.path.isdir(sdir+"//on_server//figs")):
+    os.system("cp -rf "+sdir+"//figs "
+                       +sdir+"//on_server//figs")
 
 os.system("cp index.css "+sdir+"//on_server//index.css")
 
