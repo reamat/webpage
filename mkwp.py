@@ -8,11 +8,8 @@ Autor: Pedro H A Konzen - UFRGS - 01/2018
 
 import sys
 import os
-import shutil
-from os import walk
-import numpy as np
 import string
-import urllib.parse
+import datetime
 
 #parameters
 sdir = "."
@@ -138,6 +135,14 @@ text = text.replace("+++presentation:coluna2+++",
 </ul>\
 ')
 
+#bottom
+data = datetime.datetime.now()
+text = text.replace("+++atualizadoem+++",
+'<p style="text-align:right">Página gerada em ' +
+str(data.day) + '/' + str(data.month) + '/' + str(data.year) +
+' às ' + str(data.hour) + ':' + str(data.minute) + ':' + str(data.second) +
+'.</p>'\
+)
 
 ofile = open(sdir+"//on_server//index.html", 'w')
 ofile.write(text)
@@ -209,6 +214,14 @@ text = text.replace("+++presentation:coluna2+++",
 <p>Iremos cuidar para analisar seu aviso o mais prontamente possível e removeremos o material que não esteja de acordo com a licença CC-BY-SA 3.0.</p>\
 ')
 
+#bottom
+data = datetime.datetime.now()
+text = text.replace("+++atualizadoem+++",
+'<p style="text-align:right">Página gerada em ' +
+str(data.day) + '/' + str(data.month) + '/' + str(data.year) +
+' às ' + str(data.hour) + ':' + str(data.minute) + ':' + str(data.second) +
+'.</p>'\
+)
 
 ofile = open(sdir+"//on_server//participe.html", 'w')
 ofile.write(text)
@@ -271,6 +284,14 @@ text = text.replace("+++presentation:coluna2+++",
 </ul>\
 ')
 
+#bottom
+data = datetime.datetime.now()
+text = text.replace("+++atualizadoem+++",
+'<p style="text-align:right">Página gerada em ' +
+str(data.day) + '/' + str(data.month) + '/' + str(data.year) +
+' às ' + str(data.hour) + ':' + str(data.minute) + ':' + str(data.second) +
+'.</p>'\
+)
 
 ofile = open(sdir+"//on_server//organizadores.html", 'w')
 ofile.write(text)

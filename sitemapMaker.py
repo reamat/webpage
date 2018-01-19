@@ -1,13 +1,13 @@
-#/usr/bin/python
+#/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 '''
-Descricao:
-Gera um sitemap no formato texto do site do projeto
-Calculo Numerico - Um Livro Colaborativo
-http://www.ufrgs.br/numerico
+Gera um sitemap no formato texto do site
+do projeto REAMAT.
 
-Autor: Pedro H A Konzen - 10/2016
+http://www.ufrgs.br/reamat
+
+Autor: Pedro H A Konzen - 01/2018
 '''
 
 import os
@@ -15,44 +15,22 @@ from os import walk
 import numpy as np
 import string
 
-ofile1 = open("sitemap.txt", "w")
-ofile2 = open("./livro/sitemap.txt", "w")
-ofile3 = open("./livro-py/sitemap.txt", "w")
-ofile4 = open("./livro-oct/sitemap.txt", "w")
+ofile = open("./on_server/sitemap.txt", "w")
 
 #find and get all html
 htmlFiles = []
-for (dirpath, dirnames, filenames) in walk ("."):
-    for filename in filenames:
-        ext = os.path.splitext(filename)[1]
-        if (ext == ".html"):
-            ofile1.write("https://www.ufrgs.br/numerico/"+filename+"\n")
-    break
-for (dirpath, dirnames, filenames) in walk ("./livro"):
-    for filename in filenames:
-        ext = os.path.splitext(filename)[1]
-        if (ext == ".html"):
-            ofile1.write("https://www.ufrgs.br/numerico/livro/"+filename+"\n")
-            ofile2.write("https://www.ufrgs.br/numerico/livro/"+filename+"\n")
-    break
-for (dirpath, dirnames, filenames) in walk ("./livro-py"):
-    for filename in filenames:
-        ext = os.path.splitext(filename)[1]
-        if (ext == ".html"):
-            ofile1.write("https://www.ufrgs.br/numerico/livro-py/"+filename+"\n")
-            ofile3.write("https://www.ufrgs.br/numerico/livro-py/"+filename+"\n")
-    break
-for (dirpath, dirnames, filenames) in walk ("./livro-oct"):
-    for filename in filenames:
-        ext = os.path.splitext(filename)[1]
-        if (ext == ".html"):
-            ofile1.write("https://www.ufrgs.br/numerico/livro-oct/"+filename+"\n")
-            ofile4.write("https://www.ufrgs.br/numerico/livro-oct/"+filename+"\n")
-    break
-ofile1.close()
-ofile2.close()
-ofile3.close()
-ofile4.close()
+for (dirpath, dirnames, filenames) in walk ("./on_server"):
+    for (dirpath1, dirnames1, filenames1) in walk(dirpath):
+        if (dirpath1[:19] != "./on_server/MathJax"):
+            for filename in filenames1:
+                ext = os.path.splitext(filename)[1]
+                if (ext == ".html"):
+                    print("%s/%s" % (dirpath1,filename))
+                    ofile.write("https://www.ufrgs.br" +
+                                    dirpath[11:]+"/"+filename+"\n")
+            break
+
+ofile.close()
     
 
 
