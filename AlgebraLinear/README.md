@@ -1,6 +1,6 @@
-# webpage/CalculoNumerico
+# webpage/AlgebraLinear
 
-Hotsite dos recursos de Cálculo Numérico do projeto REAMAT.
+Hotsite dos recursos de Álgebra Linear do projeto REAMAT.
 
 ## Lista de scripts
 

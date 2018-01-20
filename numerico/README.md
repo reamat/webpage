@@ -1,2 +1,0 @@
-# reamat/numerico
-

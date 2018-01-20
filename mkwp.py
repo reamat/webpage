@@ -40,6 +40,8 @@ if not(os.path.isdir(sdir+"//on_server//figs")):
 
 os.system("cp index.css "+sdir+"//on_server//index.css")
 
+os.system("cp aviso.php "+sdir+"//on_server//aviso.php")
+
 print("Preliminares ... feito!")
     
 #************************************************#
@@ -121,9 +123,8 @@ text = text.replace("+++presentation:coluna2+++",
 '\
 <h3>Recursos disponíveis</h3>\
 <ul class="list-unstyled"> \
-  <li><a href=".//linear//index.html">Álgebra Linear</a></li>\
-  <li><a href="./numerico/index.html">Cálculo Numérico</a></li>\
-  <li><a href="./transformadas/index.html">Transformadas Integrais</a></li>\
+  <li><a href="./AlgebraLinear/index.html">Álgebra Linear</a></li>\
+  <li><a href="./CalculoNumerico/index.html">Cálculo Numérico</a></li>\
 </ul>\
 <h3>Repositórios GitHub</h3>\
 <ul class="list-unstyled">\
@@ -195,10 +196,6 @@ text = text.replace("+++presentation:coluna1+++",
 <li>Cálculo numérico</li>\
 <ul class="list-unstyled">\
 <li><a href="https://github.com/reamat/CalculoNumerico">https://github.com/reamat/CalculoNumerico</a></li>\
-</ul>\
-<li>Transformadas integrais</li>\
-<ul class="list-unstyled">\
-<li><a href="https://github.com/reamat/TransformadasIntegrais">https://github.com/reamat/TransformadasIntegrais</a></li>\
 </ul>\
 </ul>\
 ')
@@ -275,14 +272,7 @@ text = text.replace("+++presentation:coluna1+++",
 ')
 
 text = text.replace("+++presentation:coluna2+++",
-'\
-<h4>REAMAT - Tranformadas Integrais</h4>\
-<ul class="list-unstyled">\
-<li><a href="" target="_blank">Esequia Sauter - UFRGS</a></li>\
-<li><a href="http://www.mat.ufrgs.br/~fabio" target="_blank">Fabio Souto de Azevedo - UFRGS</a></li>\
-<li><a href="http://professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
-</ul>\
-')
+'')
 
 #bottom
 data = datetime.datetime.now()

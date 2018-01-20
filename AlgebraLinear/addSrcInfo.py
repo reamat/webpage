@@ -1,5 +1,4 @@
 #/usr/bin/python3
-# -*- coding: utf-8 -*-
 
 # Adiciona informação sobre o path do
 # código-fonte de cada capítulo e seção
@@ -19,7 +18,8 @@ for (dirpath, dirnames, filenames) in walk (sdirname):
         lfn = len(filename)
         if (filename[lfn-4:] == ".tex"):
             sfile = dirpath + "/" + filename
-            ifile = open(sfile, 'r')
+            print(sfile)
+            ifile = open(sfile, 'r', encoding = "ISO-8859-1")
             text = ifile.read()
             ifile.close()
 
@@ -58,6 +58,6 @@ for (dirpath, dirnames, filenames) in walk (sdirname):
                 text = text[s+e+1:]
                 s = text.find("\\section*{")
 
-            ofile = open(sfile, 'w')
+            ofile = open(sfile, 'w', encoding = "ISO-8859-1")
             ofile.write(otext+text)
             ofile.close()

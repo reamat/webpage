@@ -3,21 +3,21 @@
   <head>
     
     <meta charset="utf-8">
+    <title>REAMAT - Álgebra Linear+++title+++</title>
     <meta name="Description"
 	  CONTENT="Recursos Educacionais Abertos de Matemática (REAMAT),
 		   Instituto de Matemática e Estatística (IME), 
 		   Universidade Federal do Rio Grande do Sul (UFRGS).">
     <meta name="keywords" content="recursos educacionais abertos,
 				   matemática,
-                                   álgebra linear">
-    <title>REAMAT - Cálculo Numérico</title>
+                                   álgebra linear+++keywords+++">
     <meta name="author" content="reamat@ufrgs.br">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700'
 	  rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
     <link href="index.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -62,7 +62,7 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-		<li class="dropdown">
+		<li +++navbar:reamat:active+++ class="dropdown">
 		  <a href="#" class="dropdown-toggle"
 		     data-toggle="dropdown" 
 		     role="button" aria-haspopup="true"
@@ -71,30 +71,30 @@
 		  <ul class="dropdown-menu">
 		    <li><a href="../index.html">Sobre</a></li>
 		    <li class="dropdown-header">Recursos</li> 
-		    <li><a href="../linear/index.html">Álgebra Linear</a></li>
-		    <li><a href="../numerico/index.html">Cálculo Numérico</a></li>
-		    <li><a href="../transformadas/index.html">Transformadas Integrais</a></li>
+		    <li><a href="../AlgebraLinear/index.html">Álgebra Linear</a></li>
+		    <li><a href="../CalculoNumerico/index.html">Cálculo Numérico</a></li>
 		  </ul>
 		</li>		
-		<li class="active" class="dropdown">
+		<li +++navbar:projeto:active+++ class="dropdown">
 		  <a href="#" class="dropdown-toggle"
 		     data-toggle="dropdown" 
 		     role="button" aria-haspopup="true"
 		     aria-expanded="false">Álgebra Linear
 		    <span class="caret"></span></a>
 		  <ul class="dropdown-menu">
-		    <li><a href="livro/livro.html">Livro Colaborativo</a></li>
+		    <li><a href="livro/main.html">Livro Colaborativo</a></li>
 		  </ul>
 		</li>		
-		<li><a href="participe.html"><strong>Participe</strong></a></li>
-		<li><a href="organizadores.html">Organizadores</a></li>
+		<li><a href="../participar.html">Participar</a></li>
+		<li><a href="https://github.com/reamat/AlgebraLinear"
+                       target="blank">Repositório</a></li>
+		<li><a href="../organizadores.html">Organizadores</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
 
 	<!-- ********* END: NAVBAR ******** -->
-
 	
 
 	<!-- ********* BEGIN: JUMBOTRON ********* -->
@@ -108,7 +108,7 @@
 	    
 	    <div class="jumbotron jumbotron-fluid">
 	      <h1>REAMAT</h1>
-	      <h3>Álgebra Linear</h3>
+	      <h3>ÁlgebraLinear+++jumbotron:subtitle+++</h3>
 	    </div>
 	    <p>
 	      Imagem: <a
@@ -126,41 +126,15 @@
 	  <div class="container-fluid">
 	    <div class="row">
 	      <div class="col-md-6">
-		<h3>Sobre</h3>
-		<p><strong>REAMAT - Álgebra Linear</strong>
-		  é uma realização do projeto <a href="../index.html">
-		    <strong>REAMAT</strong></a>
-		  de escrita colaborativa de recursos
-		  educacionais abertos sobre tópicos de matemática
-		  em nível de um curso de graduação nas áreas das
-		  ciências exatas e da terra.
-		</p>
-		<p>
-		  Veja mais sobre o REAMAT <a href="../index.html">aqui</a>.
-		</p>
+
+		+++presentation:coluna1+++
+
 	      </div>
 	      
 	      <div class="col-md-6">
 		<div class="container-fluid">
-		  <h3>Recursos disponíveis</h3>
-		  <ul class="list-unstyled">
-		    <li>
-		      <a href="./livro/livro.html"><h4>Livro Colaborativo</h4></a>
-		    </li>
-		  </ul>
 
-		  <h3>Repositório GitHub</h3>
-		  <ul class="list-unstyled">
-		    <li><a href="https://github.com/reamat/AlgebraLinear"
-			   target="_blank">
-			https://github.com/reamat/AlgebraLinear</a></li>
-		  </ul>
-
-		  <h3>Contato</h3>
-		  <ul class="list-unstyled">
-		    <li><a href="mailto:reamat@ufrgs.br">
-			reamat@ufrgs.br</a></li>
-		  </ul>
+		  +++presentation:coluna2+++
 
 		</div>
 	      </div>
@@ -170,6 +144,8 @@
 
 	<!-- ************* BEGIN: BOTTOM PANEL ********** -->
 
+	+++atualizadoem+++
+
 	<div class="panel panel-default">
 	  <div class="container-fluid">
 	    <div class="panel-body">
@@ -178,9 +154,8 @@
 		  <ul class="list-unstyled">
 		    <li>Recursos
 		      <ul class="list-unstyled">
-			<li><a href="./linear/index.html">Álgebra Linear</a></li>
-			<li><a href="./numerico/index.html">Cálculo Numérico</a></li>
-			<li><a href="./transformadas/index.html">Transformadas Integrais</a></li>
+			<li><a href="../AlgebraLinear/index.html">Álgebra Linear</a></li>
+			<li><a href="../CalculoNumerico/index.html">Cálculo Numérico</a></li>
 			<li><a
 			       href="https://github.com/reamat"
 			       target="_blank">Repositórios</a></li>
@@ -192,9 +167,9 @@
 		  <ul class="list-unstyled">
 		    <li>Projeto
 		      <ul class="list-unstyled">
-			<li><a href="index.html">Página Inicial</a></li>
-			<li><a href="participe.html">Participe</a></li>
-			<li><a href="organizadores.html">Organizadores</a></li>
+			<li><a href="../index.html">Página Inicial</a></li>
+			<li><a href="../participe.html">Participe</a></li>
+			<li><a href="../organizadores.html">Organizadores</a></li>
 		      </ul>
 		    </li>
 		  </ul>
@@ -209,13 +184,12 @@
 		    </li>
 		  </ul>
 		</div>
-		
 	      </div>
 	    </div>
 	  </div>
 	  <div class="panel-footer">
 	    <div class="container-fluid">
-	      <img src="../favicon.ico" alt="UFRGS">UFRGS - IME - Recursos Educacionais Abertos de Matemática. Contato: <a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a>.
+	      <img src="../figs/favicon.ico" alt="UFRGS">UFRGS - IME - Recursos Educacionais Abertos de Matemática. Contato: <a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a>.
 	    </div>
 	  </div>
 	</div>
