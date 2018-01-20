@@ -23,7 +23,7 @@ if not(os.path.isdir(sdir+"//on_server//CalculoNumerico")):
     os.system("mkdir "+sdir+"//on_server//CalculoNumerico");
 
 if not(os.path.isdir(sdir+"//on_server//CalculoNumerico//figs")):
-    os.system("cp -rf "+sdir+"//figs "
+    os.system("cp -rf "+sdir+"//CalculoNumerico/figs "
                        +sdir+"//on_server//CalculoNumerico//figs")
 
 os.system("cp index.css "+sdir+"//on_server//CalculoNumerico//index.css")
