@@ -23,7 +23,7 @@ if not(os.path.isdir(sdir+"//on_server//AlgebraLinear")):
     os.system("mkdir "+sdir+"//on_server//AlgebraLinear");
 
 if not(os.path.isdir(sdir+"//on_server//AlgebraLinear//figs")):
-    os.system("cp -rf "+sdir+"//figs "
+    os.system("cp -rf "+sdir+"//AlgebraLinear//figs "
                        +sdir+"//on_server//AlgebraLinear//figs")
 
 os.system("cp index.css "+sdir+"//on_server//AlgebraLinear//index.css")
