@@ -126,6 +126,7 @@ text = text.replace("+++presentation:coluna2+++",
 <ul class="list-unstyled"> \
   <li><a href="./AlgebraLinear/index.html">Álgebra Linear</a></li>\
   <li><a href="./CalculoNumerico/index.html">Cálculo Numérico</a></li>\
+  <li><a href="./ComputacaoCientifica/index.html">Computação Científica</a></li>\
 </ul>\
 <h3>Repositórios GitHub</h3>\
 <ul class="list-unstyled">\
@@ -251,13 +252,17 @@ text = text.replace("+++presentation:coluna1+++",
 </p>\
 <h3>Acesse o repositório oficial dos recursos</h3>\
 <ul class="list-unstyled">\
-<li>Álgebra linear</li> \
+<li>Álgebra Linear</li> \
 <ul class="list-unstyled">\
 <li><a href="https://github.com/reamat/AlgebraLinear">https://github.com/reamat/AlgebraLinear</a></li>\
 </ul>\
-<li>Cálculo numérico</li>\
+<li>Cálculo Numérico</li>\
 <ul class="list-unstyled">\
 <li><a href="https://github.com/reamat/CalculoNumerico">https://github.com/reamat/CalculoNumerico</a></li>\
+</ul>\
+<li>Computação Científica</li>\
+<ul class="list-unstyled">\
+<li><a href="https://github.com/reamat/ComputacaoCientifica">https://github.com/reamat/ComputacaoCientifica</a></li>\
 </ul>\
 </ul>\
 ')
@@ -335,7 +340,14 @@ text = text.replace("+++presentation:coluna1+++",
 ')
 
 text = text.replace("+++presentation:coluna2+++",
-'')
+'\
+<h4>REAMAT - Computação Científica</h4>\
+<ul class="list-unstyled">\
+<li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
+<li><a href="http://www.mat.ufrgs.br/~fabio" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="http://professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
+</ul>\
+')
 
 #bottom
 data = datetime.datetime.now()
