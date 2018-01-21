@@ -381,7 +381,7 @@ for index, f in enumerate (lfiles):
 
     #set version change
     text = text.replace("+++urlsumario+++","../livro/main.html")
-    text = text.replace("+++urlpdf+++","../livro-sci/livro.pdf")
+    text = text.replace("+++urlpdf+++","../livro/livro.pdf")
 
     #add update date and time
     data = datetime.datetime.now()
