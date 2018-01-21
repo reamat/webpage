@@ -57,12 +57,12 @@ text = text.replace("+++jumbotron:subtitle+++","")
 text = text.replace("+++presentation:coluna1+++",
 '\
 <h3>Sobre</h3>\
-<p><strong>REAMAT - Cálculo Numérico</strong>\
+<p><strong>REAMAT - Cálculo Numérico</strong> \
 é uma realização do projeto <a href="../index.html">\
-<strong>REAMAT</strong></a>\
-de escrita colaborativa de recursos\
-educacionais abertos sobre tópicos de matemática\
-em nível de um curso de graduação nas áreas das\
+<strong>REAMAT</strong></a> \
+de escrita colaborativa de recursos \
+educacionais abertos sobre tópicos de matemática \
+em nível de um curso de graduação nas áreas das \
 ciências exatas e da terra.\
 </p>\
 <p>\

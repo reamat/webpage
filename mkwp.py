@@ -74,7 +74,7 @@ text = text.replace("+++presentation:coluna1+++",
 '\
 <h3>Sobre</h3>\
 <p>\
-  <a href="./livro/main.html"><strong>REAMAT</strong></a>\
+  <a href="./livro/main.html"><strong>REAMAT</strong></a> \
   é um projeto de escrita colaborativa de recursos \
   educacionais abertos sobre tópicos de matemática \
   em nível de um curso de graduação nas áreas das \
