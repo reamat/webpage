@@ -79,7 +79,7 @@ def text_to_initials(text):
     return ini
 
 sdirname = "./.tmp/"
-dest_dirname = "../on_server/AlgebraLinear/livro/"
+dest_dirname = "../on_server/ComputacaoCientifica/livro/"
 
 lfiles = []
 for (dirpath, dirnames, filenames) in walk (sdirname):
@@ -125,14 +125,14 @@ ifile.close()
 
 #change titleHead and title
 #title
-title = "<title>Álgebra Linear - Um Livro Colaborativo"
+title = "<title>Computação Científica - Um Livro Colaborativo"
 s = text.index('<title>')
 e = text.index('</title>')
 text = text.replace(text[s:e], title)
 
 #titleHead
-text = text.replace('<h2 class="titleHead">Álgebra Linear<br />',
-                    '<h2 class="titleHead">Álgebra Linear<br /><small>')
+text = text.replace('<h2 class="titleHead">Computação Científica<br />',
+                    '<h2 class="titleHead">Computação Científica<br /><small>')
 s = text.index('<h2 class="titleHead">')
 auxText = text[s:]
 e = s + auxText.index('</h2>')
@@ -219,7 +219,7 @@ for index, f in enumerate (lfiles):
                     kw = []
 
     head1 = "<meta name='keywords' content='"
-    head1 += "Livro, Álgebra Linear"
+    head1 += "Livro, Computação Científica"
     if (len(kw) != 0):
         head1 += ", " + kw
     head1 += "'>\n"
@@ -289,7 +289,7 @@ for index, f in enumerate (lfiles):
         e = auxText.find("#")
         auxText = text[s+9:s+9+e]
         text = text.replace("+++paginaNoGitHub+++",
-                            "https://github.com/reamat/AlgebraLinear/blob/master/"+auxText)
+                            "https://github.com/reamat/ComputacaoCientifica/blob/master/"+auxText)
         s = text.find("#srcPath:")
         auxText = text[s+9:]
         e = auxText.find("#")
@@ -297,7 +297,7 @@ for index, f in enumerate (lfiles):
         text = text.replace(auxText,"")
     else:
         text = text.replace("+++paginaNoGitHub+++",
-                            "https://github.com/reamat/AlgebraLinear")
+                            "https://github.com/reamat/ComputacaoCientifica")
         
         
 

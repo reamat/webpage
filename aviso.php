@@ -119,6 +119,7 @@
 		  <ul class="dropdown-menu">
 		    <li><a href="./AlgebraLinear/index.html">Álgebra Linear</a></li>
 		    <li><a href="./CalculoNumerico/index.html">Cálculo Numérico</a></li>
+		    <li><a href="./ComputacaoCientifica/index.html">Computação Científica</a></li>
 		  </ul>
 		</li>		
 		<li><a href="forum.html">Fórum</a></li>
@@ -189,6 +190,7 @@
 		      <ul class="list-unstyled">
 			<li><a href="./AlgebraLinear/index.html">Álgebra Linear</a></li>
 			<li><a href="./CalculoNumerico/index.html">Cálculo Numérico</a></li>
+			<li><a href="./ComputacaoCientifica/index.html">Computação Científica</a></li>
 			<li><a
 			       href="https://github.com/reamat"
 			       target="_blank">Repositórios</a></li>

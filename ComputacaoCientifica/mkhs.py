@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 '''
-Constroi o hotsite reamat/CalculoNumerico.
+Constroi o hotsite reamat/ComputacaoCientifica.
 
 Autor: Pedro H A Konzen - UFRGS - 01/2018
 '''
@@ -19,14 +19,14 @@ sdir = ".."
 #************************************************#
 print("Preliminares ...")
 
-if not(os.path.isdir(sdir+"//on_server//CalculoNumerico")):
-    os.system("mkdir "+sdir+"//on_server//CalculoNumerico");
+if not(os.path.isdir(sdir+"//on_server//ComputacaoCientifica")):
+    os.system("mkdir "+sdir+"//on_server//ComputacaoCientifica");
 
-if not(os.path.isdir(sdir+"//on_server//CalculoNumerico//figs")):
-    os.system("cp -rf "+sdir+"//CalculoNumerico/figs "
-                       +sdir+"//on_server//CalculoNumerico//figs")
+if not(os.path.isdir(sdir+"//on_server//ComputacaoCientifica//figs")):
+    os.system("cp -rf "+sdir+"//ComputacaoCientifica//figs "
+                       +sdir+"//on_server//ComputacaoCientifica//figs")
 
-os.system("cp index.css "+sdir+"//on_server//CalculoNumerico//index.css")
+os.system("cp index.css "+sdir+"//on_server//ComputacaoCientifica//index.css")
 
 print("Preliminares ... feito!")
     
@@ -35,8 +35,8 @@ print("Preliminares ... feito!")
 #************************************************#
 print("Construindo index.htm ...")
     
-os.system("cp index.aux "+sdir+"//on_server//CalculoNumerico//index.html")
-ifile = open(sdir+"//on_server//CalculoNumerico//index.html", 'r')
+os.system("cp index.aux "+sdir+"//on_server//ComputacaoCientifica//index.html")
+ifile = open(sdir+"//on_server//ComputacaoCientifica//index.html", 'r')
 text = ifile.read()
 ifile.close()
 
@@ -57,8 +57,8 @@ text = text.replace("+++jumbotron:subtitle+++","")
 text = text.replace("+++presentation:coluna1+++",
 '\
 <h3>Sobre</h3>\
-<p><strong>REAMAT - Cálculo Numérico</strong> \
-é uma realização do projeto <a href="../index.html">\
+<p><strong>REAMAT - Computação Científica</strong> \
+é uma realização do projeto <a href="../index.html"> \
 <strong>REAMAT</strong></a> \
 de escrita colaborativa de recursos \
 educacionais abertos sobre tópicos de matemática \
@@ -74,25 +74,14 @@ text = text.replace("+++presentation:coluna2+++",
 '\
 <h3>Recursos disponíveis</h3>\
 <ul class="list-unstyled">\
-<li><h4>Livros Colaborativos</h4>\
-<ul class="list-unstyled">\
-<li><a href="./livro-oct/main.html">\
-Cálculo Numérico - Versão GNU Octave</a>\
-</li>\
-<li><a href="./livro-sci/main.html">\
-Cálculo Numérico - Versão Scilab</a>\
-</li>\
-<li><a href="./livro-py/main.html">\
-Cálculo Numérico - Versão Python</a>\
-</li>\
-</ul>\
+<li><h4><a href="livro/main.html">Livro Colaborativo</a></h4>\
 </li>\
 </ul>\
 <h3>Repositório GitHub</h3>\
 <ul class="list-unstyled">\
-<li><a href="https://github.com/reamat/CalculoNumerico"\
+<li><a href="https://github.com/reamat/ComputacaoCientifica"\
 target="_blank">\
-https://github.com/reamat/CalculoNumerico</a></li>\
+https://github.com/reamat/ComputacaoCientifica</a></li>\
 </ul>\
 <h3>Contato</h3>\
 <ul class="list-unstyled">\
@@ -110,7 +99,7 @@ str(data.day) + '/' + str(data.month) + '/' + str(data.year) +
 '.</p>'\
 )
 
-ofile = open(sdir+"//on_server//CalculoNumerico//index.html", 'w')
+ofile = open(sdir+"//on_server//ComputacaoCientifica//index.html", 'w')
 ofile.write(text)
 ofile.close()
 
