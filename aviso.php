@@ -106,11 +106,11 @@
 		     aria-expanded="false">Recursos
 		    <span class="caret"></span></a>
 		  <ul class="dropdown-menu">
-		    <li><a href="./linear/index.html">Álgebra Linear</a></li>
-		    <li><a href="./numerico/index.html">Cálculo Numérico</a></li>
-		    <li><a href="./transformadas/index.html">Transformadas Integrais</a></li>
+		    <li><a href="./AlgebraLinear/index.html">Álgebra Linear</a></li>
+		    <li><a href="./CalculoNumerico/index.html">Cálculo Numérico</a></li>
 		  </ul>
 		</li>		
+		<li><a href="forum.html">Fórum</a></li>
 		<li class="active"><a href="participe.html">Participar</a></li>
 		<li><a href="organizadores.html">Organizadores</a></li>
 	      </ul>
@@ -150,7 +150,7 @@
 	    <label for="message" class="col-sm-2 control-label">Mensagem*</label>
 	    <div class="col-sm-10">
 	      <textarea class="form-control" rows="4" name="message" placeholder="Digite seu aviso de erro ou sugestão aqui."><?php echo htmlspecialchars($_POST['message']);?></textarea>
-	    <p><small>*Sua mensagem será publicada na lista de e-mails <a href="https://groups.google.com/forum/#!forum/reamat" target="blank">https://groups.google.com/forum/#!forum/reamat</a>. O endereço de e-mail informado não é publicado na lista.</small></p>
+	    <p><small>*Sua mensagem será publicada no <a href="forum.html">fórum REAMAT</a>. O endereço de e-mail informado não é publicado no mesmo.</small></p>
 	      <?php echo "<p class='text-danger'>$errMessage</p>";?>
 	    </div>
 	  </div>
@@ -176,9 +176,8 @@
 		  <ul class="list-unstyled">
 		    <li>Recursos
 		      <ul class="list-unstyled">
-			<li><a href="./linear/index.html">Álgebra Linear</a></li>
-			<li><a href="./numerico/index.html">Cálculo Numérico</a></li>
-			<li><a href="./transformadas/index.html">Transformadas Integrais</a></li>
+			<li><a href="./AlgebraLinear/index.html">Álgebra Linear</a></li>
+			<li><a href="./CalculoNumerico/index.html">Cálculo Numérico</a></li>
 			<li><a
 			       href="https://github.com/reamat"
 			       target="_blank">Repositórios</a></li>
@@ -191,6 +190,7 @@
 		    <li>Projeto
 		      <ul class="list-unstyled">
 			<li><a href="index.html">Página Inicial</a></li>
+			<li><a href="forum.html">Fórum</a></li>
 			<li><a href="participe.html">Participe</a></li>
 			<li><a href="organizadores.html">Organizadores</a></li>
 		      </ul>

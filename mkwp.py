@@ -61,6 +61,7 @@ text = text.replace("+++keywords+++","")
 #navbar
 text = text.replace("+++navbar:inicio:active+++",'class="active"')
 text = text.replace("+++navbar:recursos:active+++","")
+text = text.replace("+++navbar:forum:active+++","")
 text = text.replace("+++navbar:participe:active+++","")
 text = text.replace("+++navbar:organizadores:active+++","")
 
@@ -151,6 +152,66 @@ ofile.close()
 
 print("Construindo index.html ... feito!")
 
+#************************************************#
+# forum.html
+#************************************************#
+print("Construindo forum.htm ...")
+    
+os.system("cp index.aux "+sdir+"//on_server//forum.html")
+ifile = open(sdir+"//on_server//forum.html", 'r')
+text = ifile.read()
+ifile.close()
+
+#head
+text = text.replace("+++title+++"," - Fórum")
+text = text.replace("+++keywords+++",",fórum")
+
+#navbar
+text = text.replace("+++navbar:inicio:active+++","")
+text = text.replace("+++navbar:recursos:active+++","")
+text = text.replace("+++navbar:forum:active+++",'class="active"')
+text = text.replace("+++navbar:participe:active+++","")
+text = text.replace("+++navbar:organizadores:active+++","")
+
+#jumbotron
+text = text.replace("+++jumbotron:subtitle+++",
+                    "Fórum")
+
+#presentation
+s = text.index('<!-- ********* BEGIN: PRESENTATION *********** -->')
+e = text.rindex('<!-- ********* BEGIN: PRESENTATION *********** -->')
+text = text.replace(text[s:e],
+'\
+<iframe id="forum_embed"\
+src="javascript:void(0)"\
+scrolling="no"\
+frameborder="0"\
+width="900"\
+height="700">\
+</iframe>\
+<script type="text/javascript">\
+document.getElementById("forum_embed").src =\
+"https://groups.google.com/forum/embed/?place=forum/reamat"\
++ "&showsearch=true&showpopout=true&showtabs=false"\
++ "&parenturl=" + encodeURIComponent(window.location.href);\
+</script>\
+')
+
+#bottom
+data = datetime.datetime.now()
+text = text.replace("+++atualizadoem+++",
+'<p style="text-align:right">Página gerada em ' +
+str(data.day) + '/' + str(data.month) + '/' + str(data.year) +
+' às ' + str(data.hour) + ':' + str(data.minute) + ':' + str(data.second) +
+'.</p>'\
+)
+
+ofile = open(sdir+"//on_server//forum.html", 'w')
+ofile.write(text)
+ofile.close()
+
+print("Construindo forum.html ... feito!")
+
 
 #************************************************#
 # participe.html
@@ -169,6 +230,7 @@ text = text.replace("+++keywords+++","participe")
 #navbar
 text = text.replace("+++navbar:inicio:active+++","")
 text = text.replace("+++navbar:recursos:active+++","")
+text = text.replace("+++navbar:forum:active+++","")
 text = text.replace("+++navbar:participe:active+++",'class="active"')
 text = text.replace("+++navbar:organizadores:active+++","")
 
@@ -245,6 +307,7 @@ text = text.replace("+++keywords+++","organizadores")
 #navbar
 text = text.replace("+++navbar:inicio:active+++","")
 text = text.replace("+++navbar:recursos:active+++","")
+text = text.replace("+++navbar:forum:active+++","")
 text = text.replace("+++navbar:participe:active+++","")
 text = text.replace("+++navbar:organizadores:active+++",'class="active"')
 
