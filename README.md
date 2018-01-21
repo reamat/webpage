@@ -12,6 +12,10 @@ https://www.ufrgs.br/reamat
 
 ## Lista de _hotsites_
 
+* AlgebraLinear: REA de Álgebra Linear https://github.com/reamat/AlgebraLinear
+
 * CalculoNumerico: REA de Cálculo Numérico https://github.com/reamat/CalculoNumerico
 
-## Contato: reamat@ufrgs.br
+## Contato:
+
+reamat@ufrgs.br

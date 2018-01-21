@@ -455,22 +455,23 @@ for (dirpath, dirnames, filenames) in walk (sdirname):
     break
 
 for index, f in enumerate (lfiles):
-    file = open(dest_dirname + f, 'r')
-    text = file.read()
-    file.close()
+    if (os.path.splitext(f)[1] == ".html"):
+        file = open(dest_dirname + f, 'r')
+        text = file.read()
+        file.close()
 
-    for i, ft in enumerate(lFilesAndTitles):
-        text = text.replace(ft[0]+".html", ft[1]+".html")
-    file = open(dest_dirname + f, 'w')
-    file.write(text)
-    file.close()
+        for i, ft in enumerate(lFilesAndTitles):
+            text = text.replace(ft[0]+".html", ft[1]+".html")
+        file = open(dest_dirname + f, 'w')
+        file.write(text)
+        file.close()
 
-    fn = os.path.splitext(f)[0]
-    ii = -1
-    try:
-        ii = [y[0] for y in lFilesAndTitles].index(fn)
-    except:
-        pass
-    if (ii != -1):
-        print('mv %s/%s %s/%s%s' % (dest_dirname, f, dest_dirname, lFilesAndTitles[ii][1], ".html"))
-        os.system('mv %s/%s %s/%s%s' % (dest_dirname, f, dest_dirname, lFilesAndTitles[ii][1], ".html"))
+        fn = os.path.splitext(f)[0]
+        ii = -1
+        try:
+            ii = [y[0] for y in lFilesAndTitles].index(fn)
+        except:
+            pass
+        if (ii != -1):
+            print('mv %s/%s %s/%s%s' % (dest_dirname, f, dest_dirname, lFilesAndTitles[ii][1], ".html"))
+            os.system('mv %s/%s %s/%s%s' % (dest_dirname, f, dest_dirname, lFilesAndTitles[ii][1], ".html"))
