@@ -1,4 +1,4 @@
-#/usr/bin/bash
+#!/bin/bash
 
 #############################################
 # Finaliza a compilação dos recursos de

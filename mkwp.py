@@ -40,8 +40,6 @@ if not(os.path.isdir(sdir+"//on_server//figs")):
 
 os.system("cp index.css "+sdir+"//on_server//index.css")
 
-os.system("cp aviso.php "+sdir+"//on_server//aviso.php")
-
 #global alert
 ifile = open(sdir+"//globalAlert.aux",'r')
 globalAlert = ifile.read()
@@ -392,5 +390,36 @@ ofile.write(text)
 ofile.close()
 
 print("Construindo organizadores.html ... feito!")
+
+#************************************************#
+# aviso.php
+#************************************************#
+print("Construindo aviso.php ...")
+    
+os.system("cp aviso.php "+sdir+"//on_server//aviso.php")
+ifile = open(sdir+"//on_server//aviso.php", 'r')
+text = ifile.read()
+ifile.close()
+
+#global alert
+text = text.replace("+++alertaGeral+++",globalAlert)
+
+#navbar
+text = text.replace("+++listaDeHotsites+++",lisths)
+
+#bottom
+data = datetime.datetime.now()
+text = text.replace("+++atualizadoem+++",
+'<p style="text-align:right">Página gerada em ' +
+str(data.day) + '/' + str(data.month) + '/' + str(data.year) +
+' às ' + str(data.hour) + ':' + str(data.minute) + ':' + str(data.second) +
+'.</p>'\
+)
+
+ofile = open(sdir+"//on_server//aviso.php", 'w')
+ofile.write(text)
+ofile.close()
+
+print("Construindo aviso.php ... feito!")
 
 print("Congratulations! Program ended successfully. :)")
