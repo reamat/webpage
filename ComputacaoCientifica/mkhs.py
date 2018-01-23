@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 '''
-Constroi o hotsite reamat/ComputacaoCientifica.
+Constroi o hotsite reamat/AlgebraLinear.
 
 Autor: Pedro H A Konzen - UFRGS - 01/2018
 '''
@@ -11,6 +11,9 @@ import os
 import string
 import datetime
 
+nomeDoRecurso = "Computação Científica"
+nomeDoRepo = "ComputacaoCientifica"
+
 #parameters
 sdir = ".."
 
@@ -19,14 +22,14 @@ sdir = ".."
 #************************************************#
 print("Preliminares ...")
 
-if not(os.path.isdir(sdir+"//on_server//ComputacaoCientifica")):
-    os.system("mkdir "+sdir+"//on_server//ComputacaoCientifica");
+if not(os.path.isdir(sdir+"//on_server//"+nomeDoRepo)):
+    os.system("mkdir "+sdir+"//on_server//"+nomeDoRepo);
 
-if not(os.path.isdir(sdir+"//on_server//ComputacaoCientifica//figs")):
-    os.system("cp -rf "+sdir+"//ComputacaoCientifica//figs "
-                       +sdir+"//on_server//ComputacaoCientifica//figs")
+if not(os.path.isdir(sdir+"//on_server//"+nomeDoRepo+"//figs")):
+    os.system("cp -rf "+sdir+"//"+nomeDoRepo+"//figs "
+                       +sdir+"//on_server//"+nomeDoRepo+"//figs")
 
-os.system("cp index.css "+sdir+"//on_server//ComputacaoCientifica//index.css")
+os.system("cp index.css "+sdir+"//on_server//"+nomeDoRepo+"//index.css")
 
 print("Preliminares ... feito!")
     
@@ -35,10 +38,14 @@ print("Preliminares ... feito!")
 #************************************************#
 print("Construindo index.htm ...")
     
-os.system("cp index.aux "+sdir+"//on_server//ComputacaoCientifica//index.html")
-ifile = open(sdir+"//on_server//ComputacaoCientifica//index.html", 'r')
+os.system("cp index.aux "+sdir+"//on_server//"+nomeDoRepo+"//index.html")
+ifile = open(sdir+"//on_server//"+nomeDoRepo+"//index.html", 'r')
 text = ifile.read()
 ifile.close()
+
+#project names
+text = text.replace("+++nomeDoRecurso+++",nomeDoRecurso)
+text = text.replace("+++nomeDoRepo+++",nomeDoRepo)
 
 #head
 text = text.replace("+++title+++","")
@@ -58,15 +65,38 @@ text = text.replace("+++presentation:coluna1+++",
 '\
 <h3>Sobre</h3>\
 <p><strong>REAMAT - Computação Científica</strong> \
-é uma realização do projeto <a href="../index.html"> \
-<strong>REAMAT</strong></a> \
-de escrita colaborativa de recursos \
-educacionais abertos sobre tópicos de matemática \
-em nível de um curso de graduação nas áreas das \
-ciências exatas e da terra.\
+é um projeto de escrita colaborativa de recursos \
+educacionais abertos sobre computação científica.</p>\
+<p>Nosso objetivo é de fomentar o desenvolvimento \
+de materiais didáticos pela colaboração entre \
+professores e alunos de universidades, institutos de \
+educação e demais interessados no estudo e \
+aplicação da álgebra linear nos mais diversos ramos da \
+ciência e tecnologia.</p>\
+<p>Para tanto, disponibilizamos em repositório público \
+<a href="https://github.com/reamat/AlgebraLinear" target="blank">\
+GitHub</a> todo o código-fonte dos materiais \
+em desenvolvimento sob licença \
+<a href="https://creativecommons.org/licenses/by-sa/3.0/" \
+target="_blank"> Creative Commons \
+Atribuição-CompartilhaIgual 3.0 Não Adaptada \
+(<strong>CC-BY-SA 3.0</strong>)</a>. \
+Ou seja, você pode <strong>copiar</strong>, \
+<strong>redistribuir</strong>, \
+<strong>alterar</strong> e construir um novo material para \
+qualquer uso, inclusive comercial. Leia a \
+<a href="https://creativecommons.org/licenses/by-sa/3.0/" \
+target="_blank">licença</a> para maiores informações. \
 </p>\
 <p>\
-Veja mais sobre o REAMAT <a href="../index.html">aqui</a>.\
+O sucesso do projeto depende da colaboração! Participe \
+diretamenta da escrita dos recursos educacionais, dê \
+sugestões ou nos avise de erros e imprecisões. Toda a \
+colaboração é bem vinda. Veja como participar \
+<a href="../participe.html">aqui</a>. \
+</p>\
+<p>\
+Veja mais sobre o projeto REAMAT <a href="../index.html">aqui</a>.\
 </p>\
 ')
 
@@ -99,7 +129,7 @@ str(data.day) + '/' + str(data.month) + '/' + str(data.year) +
 '.</p>'\
 )
 
-ofile = open(sdir+"//on_server//ComputacaoCientifica//index.html", 'w')
+ofile = open(sdir+"//on_server//"+nomeDoRepo+"//index.html", 'w')
 ofile.write(text)
 ofile.close()
 

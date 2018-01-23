@@ -74,50 +74,44 @@ text = text.replace("+++presentation:coluna1+++",
 '\
 <h3>Sobre</h3>\
 <p>\
-  <a href="./livro/main.html"><strong>REAMAT</strong></a> \
-  é um projeto de escrita colaborativa de recursos \
-  educacionais abertos sobre tópicos de matemática \
-  em nível de um curso de graduação nas áreas das \
-  ciências exatas e da terra. \
-</p>\
+<a href="./livro/main.html"><strong>REAMAT</strong></a> \
+é um projeto de escrita colaborativa de recursos \
+educacionais abertos sobre tópicos de matemática \
+e suas aplicações.</p>\
 <p>\
-  Nosso objetivo é de produzir um material de excelente \
-  qualidade e de acesso livre pela colaboração entre \
-  professores e alunos de universidades, institutos de \
-  educação e demais interessados no estudo, análise e \
-  aplicação da matemática nos mais diversos ramos da \
-  ciência e da tecnologia.\
-</p>\
+Nosso objetivo é de fomentar o desenvolvimento \
+de materiais didáticos pela colaboração entre \
+professores e alunos de universidades, institutos de \
+educação e demais interessados no estudo e \
+aplicação da matemática nos mais diversos ramos da \
+ciência e tecnologia.</p>\
 <p>\
-  O sucesso do projeto depende da colaboração! Participe \
-  diretamenta da escrita dos recursos educacionais, dê \
-  sugestões ou nos avise de erros e imprecisões. Toda a \
-  colaboração é bem vinda. Veja mais \
-  <a href="participe.html">aqui</a>. \
-</p>\
+O sucesso do projeto depende da colaboração! Participe \
+diretamenta da escrita dos recursos educacionais, dê \
+sugestões ou nos avise de erros e imprecisões. Toda a \
+colaboração é bem vinda. Veja como participar \
+<a href="participe.html">aqui</a>.</p>\
 <p>\
-  Nós preparamos uma série de ações para ajudá-lo a \
-  participar. Em primeiro lugar, o acesso irrestrito aos \
-  materias pode se dar através deste site. Além disso, os códigos \
-  fontes e documentação dos recursos estão disponíveis em \
-  <a href="https://github.com/reamat" \
-  target="_blank">repositório GitHub</a> público. \
-</p>\
+Nós preparamos uma série de ações para ajudá-lo a \
+participar. Em primeiro lugar, o acesso irrestrito aos \
+materias pode se dar através deste site. Além disso, os códigos \
+fontes e a documentação dos recursos estão disponíveis em \
+<a href="https://github.com/reamat" \
+target="_blank">repositórios GitHub</a> públicos.</p>\
 <p>\
-  Nada disso estaria completo sem uma licença apropriada à \
-  colaboração. Por isso, escolhemos disponilizar os \
-  materiais sob licença \
-  <a href="https://creativecommons.org/licenses/by-sa/3.0/" \
-  target="_blank"> Creative Commons \
-  Atribuição-CompartilhaIgual 3.0 Não Adaptada \
-  (<strong>CC-BY-SA 3.0</strong>) \
-  </a>. Ou seja, você pode <strong>copiar</strong>, \
-  <strong>redistribuir</strong>, \
-  <strong>alterar</strong> e construir um novo material para \
-  qualquer uso, inclusive comercial. Leia a \
-  <a href="https://creativecommons.org/licenses/by-sa/3.0/" \
-  target="_blank">licença</a> para maiores informações. \
-</p>\
+Nada disso estaria completo sem uma licença apropriada à \
+colaboração. Por isso, escolhemos disponilizar os \
+materiais sob licença \
+<a href="https://creativecommons.org/licenses/by-sa/3.0/" \
+target="_blank"> Creative Commons \
+Atribuição-CompartilhaIgual 3.0 Não Adaptada \
+(<strong>CC-BY-SA 3.0</strong>) \
+</a>. Ou seja, você pode <strong>copiar</strong>, \
+<strong>redistribuir</strong>, \
+<strong>alterar</strong> e construir um novo material para \
+qualquer uso, inclusive comercial. Leia a \
+<a href="https://creativecommons.org/licenses/by-sa/3.0/" \
+target="_blank">licença</a> para maiores informações.</p>\
 ')
 
 text = text.replace("+++presentation:coluna2+++",
@@ -127,6 +121,7 @@ text = text.replace("+++presentation:coluna2+++",
   <li><a href="./AlgebraLinear/index.html">Álgebra Linear</a></li>\
   <li><a href="./CalculoNumerico/index.html">Cálculo Numérico</a></li>\
   <li><a href="./ComputacaoCientifica/index.html">Computação Científica</a></li>\
+  <li><a href="./TransformadasIntegrais/index.html">Transformadas Integrais</a></li>\
 </ul>\
 <h3>Repositórios GitHub</h3>\
 <ul class="list-unstyled">\
@@ -250,7 +245,16 @@ text = text.replace("+++presentation:coluna1+++",
    de erro ou sugestão, uma reformulação de uma parte \
    do material, ou mesmo um novo recurso educacional.\
 </p>\
-<h3>Acesse o repositório oficial dos recursos</h3>\
+<h3>Edite você mesmo</h3>\
+<p>\
+O código-fonte dos materiais em desenvolvimento estão \
+disponíveis em repositórios GitHub públicos \
+(veja <a href="https://github.com/reamat" target="blank">aqui</a>). \
+Faça um <i>fork</i> do repositório para o qual deseja colaborar, \
+edite e, então, faça seu <i>Pull request</i>. Em seguida, um dos organizadores \
+dará encaminhamento à sua colaboração.</p>\
+<ul class="list-unstyled">\
+<li><h4>Repositórios GitHub</h4></li> \
 <ul class="list-unstyled">\
 <li>Álgebra Linear</li> \
 <ul class="list-unstyled">\
@@ -264,11 +268,24 @@ text = text.replace("+++presentation:coluna1+++",
 <ul class="list-unstyled">\
 <li><a href="https://github.com/reamat/ComputacaoCientifica">https://github.com/reamat/ComputacaoCientifica</a></li>\
 </ul>\
+<li>Transformadas Integrais</li>\
+<ul class="list-unstyled">\
+<li><a href="https://github.com/reamat/TransformadasIntegrais">https://github.com/reamat/TransformadasIntegrais</a></li>\
 </ul>\
+</ul>\
+</ul>\
+<h3><span class="glyphicon glyphicon-edit"></span> Edição rápida</h3>\
+<p>\
+Utilize o botão <span class="glyphicon glyphicon-edit"></span> disponível nas páginas dos recursos para encaminhar edições rápidas. Ao clicar no botão, você será redirecionado ao código-fonte no GitHub do material referente à página que está consultando. Edite e registre seu <i>commit</i>. Um dos organizadores do projeto irá dar encaminhado à sua colaboração.</p>\
 ')
 
 text = text.replace("+++presentation:coluna2+++",
 '\
+<h3><span class="glyphicon glyphicon-warning-sign"></span> Informe de Erros e Sugestões</h3>\
+<p>\
+Utilize o botão <span class="glyphicon glyphicon-warning-sign"></span> disponível nas páginas dos recursos para nos informar sobre erros ou dar sugestões. Ao clicar no botão, você será redirecionado para um formulário. Complete-o e clique no botão enviar. Pronto, seu informe será encaminhado para nosso <a  href="./forum.html">fórum</a> e um dos colaboradores poderá dar encaminhamento.</p>\
+<h3>Fórum</h3>\
+<p>Participe de nosso <a href="./fórum.html">fórum</a>, opine e ajude-nos no desenvolvimento do projeto.</p>\
 <h3>Outras formas de colaboração</h3>\
 <p>Toda a colaração é bem vinda! Caso tenha encontrado algum erro, imprecisão ou tenha alguma sugestão a fazer, escreva para nosso e-mail:</p>\
 <p style="text-align: center;"><a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a></p>\
@@ -342,6 +359,12 @@ text = text.replace("+++presentation:coluna1+++",
 text = text.replace("+++presentation:coluna2+++",
 '\
 <h4>REAMAT - Computação Científica</h4>\
+<ul class="list-unstyled">\
+<li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
+<li><a href="http://www.mat.ufrgs.br/~fabio" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="http://professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
+</ul>\
+<h4>REAMAT - Transformadas Integrais</h4>\
 <ul class="list-unstyled">\
 <li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
 <li><a href="http://www.mat.ufrgs.br/~fabio" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
