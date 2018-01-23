@@ -81,9 +81,7 @@
 
     <!-- ********** BEGIN: ALERT ********** -->
 
-    <div class="alert alert-danger" style="text-align:center">
-      Esta página está em desenvolvimento. Para reportar erros ou dar sugestões, abra um <i>issue</i> em <a href="https://github.com/reamat/webpage" target="_blank">https://github.com/reamat/webpage</a>.
-    </div>
+    +++alertaGeral+++
 	
     <!-- ********** END: ALERT ********** -->
 
@@ -117,9 +115,7 @@
 		     aria-expanded="false">Recursos
 		    <span class="caret"></span></a>
 		  <ul class="dropdown-menu">
-		    <li><a href="./AlgebraLinear/index.html">Álgebra Linear</a></li>
-		    <li><a href="./CalculoNumerico/index.html">Cálculo Numérico</a></li>
-		    <li><a href="./ComputacaoCientifica/index.html">Computação Científica</a></li>
+		    +++listaDeHotsites+++
 		  </ul>
 		</li>		
 		<li><a href="forum.html">Fórum</a></li>
@@ -188,9 +184,7 @@
 		  <ul class="list-unstyled">
 		    <li>Recursos
 		      <ul class="list-unstyled">
-			<li><a href="./AlgebraLinear/index.html">Álgebra Linear</a></li>
-			<li><a href="./CalculoNumerico/index.html">Cálculo Numérico</a></li>
-			<li><a href="./ComputacaoCientifica/index.html">Computação Científica</a></li>
+			+++listaDeHotsites+++
 			<li><a
 			       href="https://github.com/reamat"
 			       target="_blank">Repositórios</a></li>

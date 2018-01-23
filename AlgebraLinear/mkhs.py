@@ -31,6 +31,19 @@ if not(os.path.isdir(sdir+"//on_server//"+nomeDoRepo+"//figs")):
 
 os.system("cp index.css "+sdir+"//on_server//"+nomeDoRepo+"//index.css")
 
+ifile = open(sdir+"//globalAlert.aux",'r')
+globalAlert = ifile.read()
+ifile.close()
+
+#list of hotsites
+ifile = open(sdir+"//lisths.aux",'r')
+lisths = ""
+for line in ifile:
+    hsname = line.split(";")
+    lisths += '<li><a href="../'+hsname[0]+'/index.html">'\
+           +hsname[1].strip("\n")+'</a></li>'
+ifile.close()
+
 print("Preliminares ... feito!")
     
 #************************************************#
@@ -51,11 +64,16 @@ text = text.replace("+++nomeDoRepo+++",nomeDoRepo)
 text = text.replace("+++title+++","")
 text = text.replace("+++keywords+++","")
 
+#global alert
+text = text.replace("+++alertaGeral+++",globalAlert)
+
 #navbar
 text = text.replace("+++navbar:reamat:active+++","")
 text = text.replace("+++navbar:projeto:active+++",'class="active"')
 text = text.replace("+++navbar:participe:active+++","")
 text = text.replace("+++navbar:organizadores:active+++","")
+text = text.replace("+++listaDeHotsites+++",lisths)
+
 
 #jumbotron
 text = text.replace("+++jumbotron:subtitle+++","")
