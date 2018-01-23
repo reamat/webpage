@@ -81,6 +81,15 @@ def text_to_initials(text):
 sdirname = "./.tmp-tl/"
 dest_dirname = "../on_server/TransformadasIntegrais/livro-tl/"
 
+#preliminar - list of hotsites
+ifhs = open("../lisths.aux",'r')
+lisths = ""
+for line in ifhs:
+    hsname = line.split(";")
+    lisths += '<li><a href="../../'+hsname[0]+'/index.html">'\
+           +hsname[1].strip("\n")+'</a></li>'
+ifhs.close()
+
 lfiles = []
 for (dirpath, dirnames, filenames) in walk (sdirname):
     lfiles.extend (filenames)
@@ -301,6 +310,16 @@ for index, f in enumerate (lfiles):
         
         
 
+    #global alert
+    ifalert = open("../globalAlert.aux",'r')
+    globalAlert = ifalert.read()
+    ifalert.close()
+    text = text.replace("+++alertaGeral+++",globalAlert)
+
+    #nabar - REAMAT - list of hotsites
+    text = text.replace("+++listaDeHotsites+++",lisths)
+
+        
     #sectionTOCS title
     if (f[0:6] == "mainch"):
         rep = '<div class="sectionTOCS">'

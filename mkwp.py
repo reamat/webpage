@@ -42,6 +42,20 @@ os.system("cp index.css "+sdir+"//on_server//index.css")
 
 os.system("cp aviso.php "+sdir+"//on_server//aviso.php")
 
+#global alert
+ifile = open(sdir+"//globalAlert.aux",'r')
+globalAlert = ifile.read()
+ifile.close()    
+
+#list of hotsites
+ifile = open(sdir+"//lisths.aux",'r')
+lisths = ""
+for line in ifile:
+    hsname = line.split(";")
+    lisths += '<li><a href="./'+hsname[0]+'/index.html">'\
+           +hsname[1].strip("\n")+'</a></li>'
+ifile.close()
+
 print("Preliminares ... feito!")
     
 #************************************************#
@@ -58,12 +72,16 @@ ifile.close()
 text = text.replace("+++title+++","")
 text = text.replace("+++keywords+++","")
 
+#global alert
+text = text.replace("+++alertaGeral+++",globalAlert)
+
 #navbar
 text = text.replace("+++navbar:inicio:active+++",'class="active"')
 text = text.replace("+++navbar:recursos:active+++","")
 text = text.replace("+++navbar:forum:active+++","")
 text = text.replace("+++navbar:participe:active+++","")
 text = text.replace("+++navbar:organizadores:active+++","")
+text = text.replace("+++listaDeHotsites+++",lisths)
 
 #jumbotron
 text = text.replace("+++jumbotron:subtitle+++",
@@ -117,12 +135,9 @@ target="_blank">licença</a> para maiores informações.</p>\
 text = text.replace("+++presentation:coluna2+++",
 '\
 <h3>Recursos disponíveis</h3>\
-<ul class="list-unstyled"> \
-  <li><a href="./AlgebraLinear/index.html">Álgebra Linear</a></li>\
-  <li><a href="./CalculoNumerico/index.html">Cálculo Numérico</a></li>\
-  <li><a href="./ComputacaoCientifica/index.html">Computação Científica</a></li>\
-  <li><a href="./TransformadasIntegrais/index.html">Transformadas Integrais</a></li>\
-</ul>\
+<ul class="list-unstyled"> '\
++lisths+\
+'</ul>\
 <h3>Repositórios GitHub</h3>\
 <ul class="list-unstyled">\
   <li><a href="https://github.com/reamat">https://github.com/reamat</a></li>\
@@ -162,12 +177,16 @@ ifile.close()
 text = text.replace("+++title+++"," - Fórum")
 text = text.replace("+++keywords+++",",fórum")
 
+#global alert
+text = text.replace("+++alertaGeral+++",globalAlert)
+
 #navbar
 text = text.replace("+++navbar:inicio:active+++","")
 text = text.replace("+++navbar:recursos:active+++","")
 text = text.replace("+++navbar:forum:active+++",'class="active"')
 text = text.replace("+++navbar:participe:active+++","")
 text = text.replace("+++navbar:organizadores:active+++","")
+text = text.replace("+++listaDeHotsites+++",lisths)
 
 #jumbotron
 text = text.replace("+++jumbotron:subtitle+++",
@@ -223,12 +242,16 @@ ifile.close()
 text = text.replace("+++title+++"," - Participe")
 text = text.replace("+++keywords+++","participe")
 
+#global alert
+text = text.replace("+++alertaGeral+++",globalAlert)
+
 #navbar
 text = text.replace("+++navbar:inicio:active+++","")
 text = text.replace("+++navbar:recursos:active+++","")
 text = text.replace("+++navbar:forum:active+++","")
 text = text.replace("+++navbar:participe:active+++",'class="active"')
 text = text.replace("+++navbar:organizadores:active+++","")
+text = text.replace("+++listaDeHotsites+++",lisths)
 
 #jumbotron
 text = text.replace("+++jumbotron:subtitle+++",
@@ -253,42 +276,21 @@ disponíveis em repositórios GitHub públicos \
 Faça um <i>fork</i> do repositório para o qual deseja colaborar, \
 edite e, então, faça seu <i>Pull request</i>. Em seguida, um dos organizadores \
 dará encaminhamento à sua colaboração.</p>\
-<ul class="list-unstyled">\
-<li><h4>Repositórios GitHub</h4></li> \
-<ul class="list-unstyled">\
-<li>Álgebra Linear</li> \
-<ul class="list-unstyled">\
-<li><a href="https://github.com/reamat/AlgebraLinear">https://github.com/reamat/AlgebraLinear</a></li>\
-</ul>\
-<li>Cálculo Numérico</li>\
-<ul class="list-unstyled">\
-<li><a href="https://github.com/reamat/CalculoNumerico">https://github.com/reamat/CalculoNumerico</a></li>\
-</ul>\
-<li>Computação Científica</li>\
-<ul class="list-unstyled">\
-<li><a href="https://github.com/reamat/ComputacaoCientifica">https://github.com/reamat/ComputacaoCientifica</a></li>\
-</ul>\
-<li>Transformadas Integrais</li>\
-<ul class="list-unstyled">\
-<li><a href="https://github.com/reamat/TransformadasIntegrais">https://github.com/reamat/TransformadasIntegrais</a></li>\
-</ul>\
-</ul>\
-</ul>\
-<h3><span class="glyphicon glyphicon-edit"></span> Edição rápida</h3>\
-<p>\
-Utilize o botão <span class="glyphicon glyphicon-edit"></span> disponível nas páginas dos recursos para encaminhar edições rápidas. Ao clicar no botão, você será redirecionado ao código-fonte no GitHub do material referente à página que está consultando. Edite e registre seu <i>commit</i>. Um dos organizadores do projeto irá dar encaminhado à sua colaboração.</p>\
-')
-
-text = text.replace("+++presentation:coluna2+++",
-'\
-<h3><span class="glyphicon glyphicon-warning-sign"></span> Informe de Erros e Sugestões</h3>\
-<p>\
-Utilize o botão <span class="glyphicon glyphicon-warning-sign"></span> disponível nas páginas dos recursos para nos informar sobre erros ou dar sugestões. Ao clicar no botão, você será redirecionado para um formulário. Complete-o e clique no botão enviar. Pronto, seu informe será encaminhado para nosso <a  href="./forum.html">fórum</a> e um dos colaboradores poderá dar encaminhamento.</p>\
 <h3>Fórum</h3>\
 <p>Participe de nosso <a href="./fórum.html">fórum</a>, opine e ajude-nos no desenvolvimento do projeto.</p>\
 <h3>Outras formas de colaboração</h3>\
 <p>Toda a colaração é bem vinda! Caso tenha encontrado algum erro, imprecisão ou tenha alguma sugestão a fazer, escreva para nosso e-mail:</p>\
 <p style="text-align: center;"><a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a></p>\
+')
+
+text = text.replace("+++presentation:coluna2+++",
+'\
+<h3><span class="glyphicon glyphicon-edit"></span> Edição rápida</h3>\
+<p>\
+Utilize o botão <span class="glyphicon glyphicon-edit"></span> disponível nas páginas dos recursos para encaminhar edições rápidas. Ao clicar no botão, você será redirecionado ao código-fonte no GitHub do material referente à página que está consultando. Edite e registre seu <i>commit</i>. Um dos organizadores do projeto irá dar encaminhado à sua colaboração.</p>\
+<h3><span class="glyphicon glyphicon-warning-sign"></span> Informe de Erros e Sugestões</h3>\
+<p>\
+Utilize o botão <span class="glyphicon glyphicon-warning-sign"></span> disponível nas páginas dos recursos para nos informar sobre erros ou dar sugestões. Ao clicar no botão, você será redirecionado para um formulário. Complete-o e clique no botão enviar. Pronto, seu informe será encaminhado para nosso <a  href="./forum.html">fórum</a> e um dos colaboradores poderá dar encaminhamento.</p>\
 <h3>Aviso de violação de <i>copyright</i></h3>\
 <p>Caso encontre qualquer violação de <i>copyright</i> em qualquer parte dos recursos disponibilizados, por favor, nos informe pelo e-mail:</p>\
 <p style="text-align: center;"><a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a></p>\
@@ -326,12 +328,16 @@ ifile.close()
 text = text.replace("+++title+++"," - Organizadores")
 text = text.replace("+++keywords+++","organizadores")
 
+#global alert
+text = text.replace("+++alertaGeral+++",globalAlert)
+
 #navbar
 text = text.replace("+++navbar:inicio:active+++","")
 text = text.replace("+++navbar:recursos:active+++","")
 text = text.replace("+++navbar:forum:active+++","")
 text = text.replace("+++navbar:participe:active+++","")
 text = text.replace("+++navbar:organizadores:active+++",'class="active"')
+text = text.replace("+++listaDeHotsites+++",lisths)
 
 #jumbotron
 text = text.replace("+++jumbotron:subtitle+++",
