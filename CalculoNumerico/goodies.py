@@ -174,26 +174,18 @@ for index, f in enumerate (lfiles):
 
     text = ifile.read()
 
+        ##############################################
+    # head
+    ##############################################
+
     #replace meta charset
     text = text.replace("iso-8859-1","utf-8")
-    
-    # #include head
-    # headname = []
-    # if (sys.argv[1] == "livro-sci"):
-    #     headname = "./head-sci.html_aux"
-    # elif (sys.argv[1] == "livro-oct"):
-    #     headname = "./head-oct.html_aux"
-    # elif (sys.argv[1] == "livro-py"):
-    #     headname = "./head-py.html_aux"
-    # else:
-    #     raise NameError('This is not a valid option.')
 
-    #include head
-    headname = "top.aux"
-    
-    head_aux_file = open(headname, "r")
-    head_include = head_aux_file.read()
-    
+    #include in head
+    hfaux = open("../livro_head.aux", "r")
+    head_include = hfaux.read()
+    hfaux.close()
+        
     #get chapterHead or sectionHead to include in <meta> keywords
     s=-1
     e=-1
@@ -260,9 +252,22 @@ for index, f in enumerate (lfiles):
     if (len(kw) != 0):
         head1 += ", " + kw + ", " + codeIn
     head1 += "'>\n"
-    head_include = head1 + head_include;
     
-    text = text.replace("</head><body \n>", head_include)
+    head_include = head1 + head_include + "\n";
+
+    text = text.replace("</head>", head_include)
+
+    ##############################################
+    # body
+    ##############################################
+
+    tbfaux = open("topBody.aux", "r")
+    body_include = tbfaux.read()
+    tbfaux.close()
+
+    text = text.replace("<body \n>", body_include)
+
+
 
     #hrule abaixo de h3, h4
     if ((f[0:6] == "mainse") or (f[0:6] == "mainli") or (f[0:6] == "mainch")):
@@ -424,19 +429,24 @@ for index, f in enumerate (lfiles):
 
         text = text.replace("</body>", sub)
 
+    tituloDoLivro = "Cálculo Numérico - Versão "
+
     #set version change
     if (sys.argv[1] == 'livro-sci'):
         text = text.replace("+++urlsumario+++","../livro-sci/main.html")
         text = text.replace("+++urlpdf+++","../livro-sci/livro-sci.pdf")
-        text = text.replace("+++versaoDoLivro+++","Versão Scilab")
+        tituloDoLivro += "Scilab"
+        text = text.replace("+++tituloDoLivro+++",tituloDoLivro)
     elif (sys.argv[1] == 'livro-oct'):
         text = text.replace("+++urlsumario+++","../livro-oct/main.html")
         text = text.replace("+++urlpdf+++","../livro-oct/livro-oct.pdf")
-        text = text.replace("+++versaoDoLivro+++","Versão GNU Octave")
+        tituloDoLivro += "GNU Octave"
+        text = text.replace("+++tituloDoLivro+++",tituloDoLivro)
     elif (sys.argv[1] == 'livro-py'):
         text = text.replace("+++urlsumario+++","../livro-py/main.html")
         text = text.replace("+++urlpdf+++","../livro-py/livro-py.pdf")
-        text = text.replace("+++versaoDoLivro+++","Versão Python")
+        tituloDoLivro += "Python"
+        text = text.replace("+++tituloDoLivro+++",tituloDoLivro)
     else:
         raise NameError('opção inválida.')
     
@@ -457,8 +467,6 @@ for index, f in enumerate (lfiles):
     ofile.write(text)
     ifile.close ()
     ofile.close ()
-    head_aux_file.close()
-    bottom_aux_file.close()
 
 #change main.css
 ifile = open(dest_dirname + "main.css",'r')

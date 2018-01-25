@@ -18,7 +18,7 @@ cp -rf $DIR_MASTER/* .in_repo-tl/
 
 #copy local Makefile and config's for Tex4ht
 cp Makefile_example ./.in_repo-tl/Makefile
-#cp myconfig.cfg  ./.in_repo/myconfig.cfg
+cp myconfig.cfg  ./.in_repo-tl/myconfig.cfg
 #cp pgfsys-tex4ht.def ./.in_repo/
 
 #add source infos
