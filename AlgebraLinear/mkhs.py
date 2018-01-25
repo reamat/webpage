@@ -25,9 +25,9 @@ print("Preliminares ...")
 if not(os.path.isdir(sdir+"//on_server//"+nomeDoRepo)):
     os.system("mkdir "+sdir+"//on_server//"+nomeDoRepo);
 
-if not(os.path.isdir(sdir+"//on_server//"+nomeDoRepo+"//figs")):
-    os.system("cp -rf "+sdir+"//"+nomeDoRepo+"//figs "
-                       +sdir+"//on_server//"+nomeDoRepo+"//figs")
+if not(os.path.isdir(sdir+"/on_server/"+nomeDoRepo+"/figs")):
+    os.system("cp -rf "+sdir+"/"+nomeDoRepo+"/figs "
+                       +sdir+"/on_server/"+nomeDoRepo+"/figs")
 
 os.system("cp index.css "+sdir+"//on_server//"+nomeDoRepo+"//index.css")
 
