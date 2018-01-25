@@ -166,14 +166,23 @@ for index, f in enumerate (lfiles):
 
     text = ifile.read()
 
+    ##############################################
+    # head
+    ##############################################
+
     #replace meta charset
     text = text.replace("iso-8859-1","utf-8")
+
+    #include in head
+    hfaux = open("../livro_head.aux", "r")
+    head_include = hfaux.read()
+    hfaux.close()
     
-    #include head
-    headname = "top.aux"
+    # #include head
+    # headname = "top.aux"
     
-    head_aux_file = open(headname, "r")
-    head_include = head_aux_file.read()
+    # head_aux_file = open(headname, "r")
+    # head_include = head_aux_file.read()
     
     #get chapterHead or sectionHead to include in <meta> keywords
     s=-1
@@ -232,9 +241,23 @@ for index, f in enumerate (lfiles):
     if (len(kw) != 0):
         head1 += ", " + kw
     head1 += "'>\n"
-    head_include = head1 + head_include;
     
-    text = text.replace("</head><body \n>", head_include)
+    head_include = head1 + head_include + "\n";
+
+    text = text.replace("</head>", head_include)
+
+    ##############################################
+    # body
+    ##############################################
+
+    tbfaux = open("topBody.aux", "r")
+    body_include = tbfaux.read()
+    tbfaux.close()
+
+    text = text.replace("<body \n>", body_include)
+
+    #book title
+    text = text.replace("+++tituloDoLivro+++","Álgebra Linear - Um Livro Colaborativo")
 
     #hrule abaixo de h3, h4
     if ((f[0:6] == "mainse") or (f[0:6] == "mainli") or (f[0:6] == "mainch")):
@@ -244,8 +267,10 @@ for index, f in enumerate (lfiles):
         text = text.replace("</h5>",'</h5><hr class="section">')
 
     #include on bottom
-    bottom_aux_file = open("./bottom.aux", "r")
+    bottom_aux_file = open("../livro_bottom.aux", "r")
     bottom_include = bottom_aux_file.read()
+    bottom_aux_file.close()
+    
     text = text.replace("</body></html>", bottom_include)
 
     #remove original crosslinks
@@ -413,8 +438,6 @@ for index, f in enumerate (lfiles):
     ofile.write(text)
     ifile.close ()
     ofile.close ()
-    head_aux_file.close()
-    bottom_aux_file.close()
 
 #change main.css
 ifile = open(dest_dirname + "main.css",'r')
