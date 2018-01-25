@@ -24,7 +24,7 @@ livro.html: livro.tex
 	latex main
 	latex main
 	latex main
-	mk4ht htlatex main "myconfig,3,notoc*" "" "-d./html/"
+	htlatex main "myconfig,3,notoc*" " -cunihtf" "-d./html/"
 	cp config-pdf.knd config.knd
 	rm main.tex
 

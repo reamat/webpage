@@ -19,7 +19,7 @@ for (dirpath, dirnames, filenames) in walk (sdirname):
         if (filename[lfn-4:] == ".tex"):
             sfile = dirpath + "/" + filename
             print(sfile)
-            ifile = open(sfile, 'r', encoding = "ISO-8859-1")
+            ifile = open(sfile, 'r')
             text = ifile.read()
             ifile.close()
 
@@ -58,6 +58,6 @@ for (dirpath, dirnames, filenames) in walk (sdirname):
                 text = text[s+e+1:]
                 s = text.find("\\section*{")
 
-            ofile = open(sfile, 'w', encoding = "ISO-8859-1")
+            ofile = open(sfile, 'w')
             ofile.write(otext+text)
             ofile.close()
