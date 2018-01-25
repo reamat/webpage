@@ -16,7 +16,7 @@ ldir = []
 for (dirpath, dirnames, filenames) in walk (sdirname):
     for i,filename in enumerate(filenames):
         lfn = len(filename)
-        if (filename[lfn-4:] == ".tex"):
+        if filename.endswith('.tex'):
             sfile = dirpath + "/" + filename
             print(sfile)
             ifile = open(sfile, 'r')

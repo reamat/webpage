@@ -16,7 +16,4 @@ python3 mkwp.py
 ./mkComputacaoCientifica.sh &
 ./mkTransformadasIntegrais.sh &
 
-#sitemap.txt
-python3 sitemapMaker.py
-
 echo "Congratulations! Program ended successfully. :)"

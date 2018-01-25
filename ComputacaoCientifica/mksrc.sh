@@ -22,9 +22,10 @@ cp myconfig.cfg  ./.in_repo/myconfig.cfg
 #cp pgfsys-tex4ht.def ./.in_repo/
 
 #add source infos
-echo "add source infos ..."
 python3 addSrcInfo.py
-echo "add source infos ... done."
+
+#more styled invitions
+python3 invitations.py
 
 #enter dest and make all local versions of the book
 cd .in_repo

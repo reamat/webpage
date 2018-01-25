@@ -348,7 +348,44 @@ for index, f in enumerate (lfiles):
         rep = '<div class="sectionTOCS">'
         rep += '<h3 class="sectionHead">Sumário</h3><hr class="section">'
         text = text.replace('<div class="sectionTOCS">', rep)
-        
+
+    #invitations
+    sfinvite = open("../emConstrucao.aux", "r")
+    inviteText = sfinvite.read()
+    sfinvite.close()
+    text = text.replace("+++emConstrucao+++",inviteText)
+
+    sfinvite = open("../foraDoEstilo.aux", "r")
+    inviteText = sfinvite.read()
+    sfinvite.close()
+    text = text.replace("+++foraDoEstilo+++",inviteText)
+
+    sfinvite = open("../construirSec.aux", "r")
+    inviteText = sfinvite.read()
+    sfinvite.close()
+    text = text.replace("+++construirSec+++",inviteText)
+
+    sfinvite = open("../construirExeresol.aux", "r")
+    inviteText = sfinvite.read()
+    sfinvite.close()
+    text = text.replace("+++construirExeresol+++",inviteText)
+
+    sfinvite = open("../construirResol.aux", "r")
+    inviteText = sfinvite.read()
+    sfinvite.close()
+    text = text.replace("+++construirResol+++",inviteText)
+
+    sfinvite = open("../construirExer.aux", "r")
+    inviteText = sfinvite.read()
+    sfinvite.close()
+    text = text.replace("+++construirExer+++",inviteText)
+
+    sfinvite = open("../construirResp.aux", "r")
+    inviteText = sfinvite.read()
+    sfinvite.close()
+    text = text.replace("+++construirResp+++",inviteText)
+
+
     #collapse demo's
     lbc = [] #list of collapses buttoms
     s = text.find("<!--prova begin-->")

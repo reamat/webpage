@@ -348,6 +348,43 @@ for index, f in enumerate (lfiles):
     ifalert.close()
     text = text.replace("+++alertaGeral+++",globalAlert)
 
+    #invitations
+    sfinvite = open("../emConstrucao.aux", "r")
+    inviteText = sfinvite.read()
+    sfinvite.close()
+    text = text.replace("+++emConstrucao+++",inviteText)
+
+    sfinvite = open("../foraDoEstilo.aux", "r")
+    inviteText = sfinvite.read()
+    sfinvite.close()
+    text = text.replace("+++foraDoEstilo+++",inviteText)
+
+    sfinvite = open("../construirSec.aux", "r")
+    inviteText = sfinvite.read()
+    sfinvite.close()
+    text = text.replace("+++construirSec+++",inviteText)
+
+    sfinvite = open("../construirExeresol.aux", "r")
+    inviteText = sfinvite.read()
+    sfinvite.close()
+    text = text.replace("+++construirExeresol+++",inviteText)
+
+    sfinvite = open("../construirResol.aux", "r")
+    inviteText = sfinvite.read()
+    sfinvite.close()
+    text = text.replace("+++construirResol+++",inviteText)
+
+    sfinvite = open("../construirExer.aux", "r")
+    inviteText = sfinvite.read()
+    sfinvite.close()
+    text = text.replace("+++construirExer+++",inviteText)
+
+    sfinvite = open("../construirResp.aux", "r")
+    inviteText = sfinvite.read()
+    sfinvite.close()
+    text = text.replace("+++construirResp+++",inviteText)
+
+
     #nabar - REAMAT - list of hotsites
     text = text.replace("+++listaDeHotsites+++",lisths)
     

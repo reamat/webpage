@@ -24,6 +24,9 @@ cp myconfig.cfg  ./.in_repo-tl/myconfig.cfg
 #add source infos
 python3 addSrcInfo.py tl
 
+#styled invitations
+python3 invitations.py tl
+
 #enter dest and make all local versions of the book
 cd .in_repo-tl
 make clean
