@@ -19,34 +19,33 @@ sdir = "."
 #************************************************#
 print("Preliminares ...")
 
-if not(os.path.isdir(sdir+"//on_server")):
-    os.system("mkdir "+sdir+"//on_server");
+if not(os.path.isdir(sdir+"/on_server")):
+    os.system("mkdir "+sdir+"/on_server");
 
-if not(os.path.isdir(sdir+"//on_server//bootstrap")):
-    os.system("cp -rf "+sdir+"//bootstrap-3.3.7-dist "
-                       +sdir+"//on_server//bootstrap")
+if not(os.path.isdir(sdir+"/on_server/bootstrap")):
+    os.system("cp -rf "+sdir+"/bootstrap-3.3.7-dist "
+                       +sdir+"/on_server/bootstrap")
 
-if not(os.path.isdir(sdir+"//on_server//MathJax")):
-    os.system("cp -rf "+sdir+"//MathJax-master "
-                       +sdir+"//on_server//MathJax")
+if not(os.path.isdir(sdir+"/on_server/MathJax")):
+    os.system("cp -rf "+sdir+"/MathJax-master "
+                       +sdir+"/on_server/MathJax")
 
-if not(os.path.isdir(sdir+"//on_server//fonts")):
-    os.system("cp -rf "+sdir+"//fonts "
-                       +sdir+"//on_server//fonts")
+if not(os.path.isdir(sdir+"/on_server/fonts")):
+    os.system("cp -rf "+sdir+"/fonts "
+                       +sdir+"/on_server/fonts")
 
-if not(os.path.isdir(sdir+"//on_server//figs")):
-    os.system("cp -rf "+sdir+"//figs "
-                       +sdir+"//on_server//figs")
+os.system("cp -rf "+sdir+"/figs "
+                       +sdir+"/on_server/")
 
-os.system("cp index.css "+sdir+"//on_server//index.css")
+os.system("cp index.css "+sdir+"/on_server/index.css")
 
 #global alert
-ifile = open(sdir+"//globalAlert.aux",'r')
+ifile = open(sdir+"/globalAlert.aux",'r')
 globalAlert = ifile.read()
 ifile.close()    
 
 #list of hotsites
-ifile = open(sdir+"//lisths.aux",'r')
+ifile = open(sdir+"/lisths.aux",'r')
 lisths = ""
 for line in ifile:
     hsname = line.split(";")
@@ -61,8 +60,8 @@ print("Preliminares ... feito!")
 #************************************************#
 print("Construindo index.htm ...")
     
-os.system("cp index.aux "+sdir+"//on_server//index.html")
-ifile = open(sdir+"//on_server//index.html", 'r')
+os.system("cp index.aux "+sdir+"/on_server/index.html")
+ifile = open(sdir+"/on_server/index.html", 'r')
 text = ifile.read()
 ifile.close()
 
@@ -155,7 +154,7 @@ str(data.day) + '/' + str(data.month) + '/' + str(data.year) +
 '.</p>'\
 )
 
-ofile = open(sdir+"//on_server//index.html", 'w')
+ofile = open(sdir+"/on_server/index.html", 'w')
 ofile.write(text)
 ofile.close()
 
@@ -166,8 +165,8 @@ print("Construindo index.html ... feito!")
 #************************************************#
 print("Construindo forum.htm ...")
     
-os.system("cp index.aux "+sdir+"//on_server//forum.html")
-ifile = open(sdir+"//on_server//forum.html", 'r')
+os.system("cp index.aux "+sdir+"/on_server/forum.html")
+ifile = open(sdir+"/on_server/forum.html", 'r')
 text = ifile.read()
 ifile.close()
 
@@ -219,7 +218,7 @@ str(data.day) + '/' + str(data.month) + '/' + str(data.year) +
 '.</p>'\
 )
 
-ofile = open(sdir+"//on_server//forum.html", 'w')
+ofile = open(sdir+"/on_server/forum.html", 'w')
 ofile.write(text)
 ofile.close()
 
@@ -231,8 +230,8 @@ print("Construindo forum.html ... feito!")
 #************************************************#
 print("Construindo participe.htm ...")
     
-os.system("cp index.aux "+sdir+"//on_server//participe.html")
-ifile = open(sdir+"//on_server//participe.html", 'r')
+os.system("cp index.aux "+sdir+"/on_server/participe.html")
+ifile = open(sdir+"/on_server/participe.html", 'r')
 text = ifile.read()
 ifile.close()
 
@@ -304,7 +303,7 @@ str(data.day) + '/' + str(data.month) + '/' + str(data.year) +
 '.</p>'\
 )
 
-ofile = open(sdir+"//on_server//participe.html", 'w')
+ofile = open(sdir+"/on_server/participe.html", 'w')
 ofile.write(text)
 ofile.close()
 
@@ -317,8 +316,8 @@ print("Construindo participe.html ... feito!")
 #************************************************#
 print("Construindo organizadores.htm ...")
     
-os.system("cp index.aux "+sdir+"//on_server//organizadores.html")
-ifile = open(sdir+"//on_server//organizadores.html", 'r')
+os.system("cp index.aux "+sdir+"/on_server/organizadores.html")
+ifile = open(sdir+"/on_server/organizadores.html", 'r')
 text = ifile.read()
 ifile.close()
 
@@ -347,16 +346,16 @@ text = text.replace("+++presentation:coluna1+++",
 <h4>REAMAT - Álgebra Linear</h4>\
 <ul class="list-unstyled">\
 <li><a href="https://chasqueweb.ufrgs.br/~dmarcon/" target="_blank">Diego Marcon Farias - UFRGS</a></li>\
-<li><a href="http://professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
+<li><a href="http:/professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 <li><a href="https://chasqueweb.ufrgs.br/~rafaelrigao/" target="_blank">Rafael Rigão Souza - UFRGS</a></li>\
 </ul>\
 <h4>REAMAT - Cálculo Numérico</h4>\
 <ul class="list-unstyled">\
 <li><a href="https://chasqueweb.ufrgs.br/~djusto/" target="_blank">Dagoberto Adriano Rizzotto Justo - UFRGS</a></li>\
 <li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
-<li><a href="http://www.mat.ufrgs.br/~fabio" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
-<li><a href="http://www.mat.ufrgs.br/~guidi/" target="_blank">Leonardo Fernandes Guidi - UFRGS</a></li>\
-<li><a href="http://professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
+<li><a href="http:/www.mat.ufrgs.br/~fabio" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="http:/www.mat.ufrgs.br/~guidi/" target="_blank">Leonardo Fernandes Guidi - UFRGS</a></li>\
+<li><a href="http:/professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 </ul>\
 ')
 
@@ -365,7 +364,7 @@ text = text.replace("+++presentation:coluna2+++",
 <h4>REAMAT - Computação Científica</h4>\
 <ul class="list-unstyled">\
 <li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
-<li><a href="http://www.mat.ufrgs.br/~fabio" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="http:/www.mat.ufrgs.br/~fabio" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
 <li><a href="http://professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 </ul>\
 <h4>REAMAT - Transformadas Integrais</h4>\
