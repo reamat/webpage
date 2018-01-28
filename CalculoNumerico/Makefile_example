@@ -28,8 +28,7 @@ CAP14=cap_python
 ########################################
 
 pdf-sci: main.tex
-#	echo "\isbooktrue \isslidefalse \ishtmlfalse \isscilabtrue \isoctavefalse \ispythonfalse" > main.knd
-	cp main-pdf-sci.knd main.knd
+	cp config-pdf-sci.knd config.knd
 	cp main.tex livro-sci.tex
 	pdflatex livro-sci
 	bibtex livro-sci
@@ -38,8 +37,7 @@ pdf-sci: main.tex
 	pdflatex livro-sci
 
 pdf-py: main.tex
-#	echo "\isbooktrue \isslidefalse \ishtmlfalse \isscilabfalse \isoctavefalse \ispythontrue" > main.knd
-	cp main-pdf-py.knd main.knd
+	cp config-pdf-py.knd config.knd
 	cp main.tex livro-py.tex
 	pdflatex livro-py
 	bibtex livro-py
@@ -48,8 +46,7 @@ pdf-py: main.tex
 	pdflatex livro-py
 
 pdf-oct: main.tex
-#	echo "\isbooktrue \isslidefalse \ishtmlfalse \isscilabfalse \isoctavetrue \ispythonfalse" > main.knd
-	cp main-pdf-oct.knd main.knd
+	cp config-pdf-oct.knd config.knd
 	cp main.tex livro-oct.tex
 	pdflatex livro-oct
 	bibtex livro-oct
@@ -68,8 +65,7 @@ html-oct: main-oct.html
 html-py: main-py.html
 
 main-sci.html: main.tex
-#	echo "\isbookfalse \isslidefalse \ishtmltrue \isscilabtrue \isoctavefalse \ispythonfalse" > main.knd
-	cp main-html-sci.knd main.knd
+	cp config-html-sci.knd config.knd
 	mkdir -p ./html
 	rm -f ./html/*
 	latex main
@@ -77,11 +73,9 @@ main-sci.html: main.tex
 	latex main
 	latex main
 	mk4ht htlatex main "myconfig,3,notoc*" "" "-d./html/"
-#	rm -f main.knd
 
 main-oct.html: main.tex
-#	echo "\isbookfalse \isslidefalse \ishtmltrue \isscilabfalse \isoctavetrue \ispythonfalse" > main.knd
-	cp main-html-oct.knd main.knd
+	cp config-html-oct.knd config.knd
 	mkdir -p ./html-oct
 	rm -f ./html-oct/*
 	latex main
@@ -89,11 +83,9 @@ main-oct.html: main.tex
 	latex main
 	latex main
 	mk4ht htlatex main "myconfig,3,notoc*" "" "-d./html-oct/"
-#	rm -f main.knd
 
 main-py.html: main.tex
-#	echo "\isbookfalse \isslidefalse \ishtmltrue \isscilabfalse \isoctavefalse \ispythontrue" > main.knd
-	cp main-html-py.knd main.knd
+	cp config-html-py.knd config.knd
 	mkdir -p ./html-py
 	rm -f ./html-py/*
 	latex main
@@ -101,7 +93,6 @@ main-py.html: main.tex
 	latex main
 	latex main
 	mk4ht htlatex main "myconfig,3,notoc*" "" "-d./html-py/"
-#	rm -f main.knd
 
 
 .PHONY: clean
