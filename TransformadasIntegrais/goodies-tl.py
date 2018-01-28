@@ -477,7 +477,7 @@ for index, f in enumerate (lfiles):
 
 #change main.css
 ifile = open(dest_dirname + "main.css",'r')
-bookfile = open("livro_aux.css",'r')
+bookfile = open("../livro_aux.css",'r')
 ofile = open(dest_dirname + "livro.css",'w')
 
 for line in ifile:
