@@ -194,6 +194,10 @@ s = text.index('<!-- ********* BEGIN: PRESENTATION *********** -->')
 e = text.rindex('<!-- ********* BEGIN: PRESENTATION *********** -->')
 text = text.replace(text[s:e],
 '\
+<p>O objetivo deste fórum é de servir como uma ferramenta \
+de comunicação entre usuários e colaboradores do projeto. \
+Deixe aqui qualquer dúvida, informe de erros ou sugestão \
+relacionada aos recursos disponíveis.</p>\
 <iframe id="forum_embed"\
 src="javascript:void(0)"\
 scrolling="no"\
