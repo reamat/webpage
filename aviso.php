@@ -9,12 +9,17 @@
    $fromurl = $_POST["from_url"];
    $subject .= 'Aviso sobre a página: ' . $fromurl;
 
+   $message = wordwrap($message, 70, "\r\n");
+
    $ip = $_SERVER['REMOTE_ADDR'];
    $useragent = htmlspecialchars($_SERVER['HTTP_USER_AGENT']);
 
    $body_group ="\nDe: $name\nRef. a URL: $fromurl\n\nMensagem:\n $message";
 
-   $body ="Identificação:\n\nFrom: $name\nE-Mail:$email\nIP: $ip\nUser agent: $useragent\n\nInforme:\n\nRef. a URL: $fromurl\n\nMensagem:\n $message";
+   $body ="Identificação:\n\nFrom: $name\nE-mail: $email\nIP: $ip\nUser agent: $useragent\n\nInforme:\n\nRef. a URL: $fromurl\n\nMensagem:\n $message";
+
+   $subject_congrats = '[REAMAT] Obrigado pelo informe.';
+   $body_congrats = "Olá $name,\n\nobrigado por participar do projeto REAMAT (https://www.ufrgs.br/reamat). Seu informe de erro ou sugestão foi encaminhado para nosso fórum (https://www.ufrgs.br/reamat/forum.html), visite-o para acompanhar o encaminhamento a ser dado. Caso ainda não tenha feito, considere inscrever-se no fórum de forma a acompanhar o projeto. Veja outras formas de participar em https://www.ufrgs.br/reamat/participe.html\n\nTenha ótimas colaborações!\n\nREAMAT - Recursos educacionais abertos de matemática.\nreamat@ufrgs.br\n\nInforme encaminhado:\n\n$body_group\n";
 
    //Check if message has been entered
    if (!$_POST['message']) {
@@ -24,6 +29,9 @@
    // If there are no errors, send the email
    if (!$errMessage) {
    if ((mail ($to, $subject, $body, $from)) and (mail ($to_group, $subject, $body_group, $from))) {
+   if ($email !== "") {
+   mail ($email, $subject_congrats, $body_congrats, 'reamat@ufrgs.br');
+   }
    $result = '<div class="alert alert-success">Obrigado por sua colaboração! Participe diretamente da escrita deste recurso educacional. <a href="participe.html">Saiba mais aqui</a>!.</div>';
    } else {
    $result ='<div class="alert alert-danger">Desculpe, houve um erro ao enviar sua mensagem. Caso o problema persista, considere entrar em contato pelo e-mail: <a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a>.</div>';
@@ -43,9 +51,8 @@
 		   Universidade Federal do Rio Grande do Sul (UFRGS).">
     <meta name="keywords" content="recursos educacionais abertos,
 				   matemática,
-                                   cálculo numérico,
-                                   avisar sobre erros e sugestões">
-    <title>REAMAT - Avisar</title>
+                                   informe de erro ou sugestão">
+    <title>REAMAT - Informe</title>
     <meta name="author" content="reamat@ufrgs.br">
     <link rel="shortcut icon" type="image/x-icon" href="./pics/favicon.ico" />
     <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700'
