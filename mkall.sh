@@ -12,6 +12,7 @@
 python3 mkwp.py
 
 ./mkAlgebraLinear.sh &
+./mkCalculo.sh &
 ./mkCalculoNumerico.sh &
 ./mkComputacaoCientifica.sh &
 ./mkTransformadasIntegrais.sh &

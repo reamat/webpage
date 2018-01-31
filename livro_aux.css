@@ -223,7 +223,7 @@ hr.section
     text-decoration: none;
 }
 
-.alert-info {
+.alerta-flutuante {
     bottom:0px;
     position:fixed;
 }

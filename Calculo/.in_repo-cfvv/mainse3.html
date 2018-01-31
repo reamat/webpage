@@ -1,0 +1,2562 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="pt" > 
+<head><title>O espa&#x00E7;o euclidiano tridimensional</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- 3,notoc*,html,mathml --> 
+<meta name="src" content="main.tex"> 
+<meta name="date" content="2018-01-31 15:19:00"> 
+<link rel="stylesheet" type="text/css" href="main.css"> 
+</head><body 
+>
+   <!--l. 71--><div class="crosslinks"><p class="noindent">&#x005B;<a 
+href="mainse5.html" >next</a>&#x005D; &#x005B;<a 
+href="mainse2.html" >prev</a>&#x005D; &#x005B;<a 
+href="mainse2.html#tailmainse2.html" >prev-tail</a>&#x005D; &#x005B;<a 
+href="#tailmainse3.html">tail</a>&#x005D; &#x005B;<a 
+href="mainch2.html#mainse3.html" >up</a>&#x005D; </p></div>
+   <h3 class="sectionHead"><span class="titlemark">2.2   </span> <a 
+ id="x10-130002.2"></a>O espa&#x00E7;o euclidiano tridimensional</h3>
+<!--l. 72--><p class="noindent" ><span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">#srcPath:cap_algvet/cap_algvet.tex#</span></span></span>
+<!--l. 74--><p class="indent" >   Nossa principal preocupa&#x00E7;&#x00E3;o neste curso &#x00E9; com o espa&#x00E7;o euclidiano de
+tr&#x00EA;s dimens&#x00F5;es, dada sua import&#x00E2;ncia para descri&#x00E7;&#x00E3;o do espa&#x00E7;o na f&#x00ED;sica
+cl&#x00E1;ssica.
+<!--l. 76--><p class="indent" >   O leitor j&#x00E1; tem familiaridade com o sistema de coordenadas cartesianas<a 
+ id="dx10-13001"></a>
+&#x0028;<!--l. 76--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi><mi 
+>y</mi><mi 
+>z</mi></math>&#x0029; para
+representar um ponto no espa&#x00E7;o euclidiano tridimensional. Neste sistema, tamb&#x00E9;m
+chamado referencial cartesiano, cada ponto &#x00E9; representado por um conjunto de tr&#x00EA;s
+coordenadas <!--l. 76--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi></math>,
+<!--l. 76--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi></math> e
+<!--l. 76--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi></math>.
+Observamos que existem duas maneiras distintas de orientar tal sistema: usando a
+regra da m&#x00E3;o direita e a regra da m&#x00E3;o esquerda, que recebem o nome de
+dextrogira e levogira, respectivamente. Neste texto, daremos prefer&#x00EA;ncia pela
+orienta&#x00E7;&#x00E3;o dextrogira, que convencionaremos como padr&#x00E3;o. Uma vez escolhido
+um sistema dextrogiro como base, um trio de vetores linearmente independentes
+<!--l. 76--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+<!--l. 76--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> e
+<!--l. 76--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> &#x00E9;
+dito dextrogiro<a 
+ id="dx10-13002"></a><a 
+ id="dx10-13003"></a><a 
+ id="dx10-13004"></a><a 
+ id="dx10-13005"></a> se o determinante <table class="equation"><tr><td> <a 
+ id="x10-13006r4"></a>
+<!--l. 77--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                             <mo class="qopname">det</mo> <mfenced separators="" 
+open="("  close=")" ><mrow><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo class="qopname">&#x2192;</mo></mover><mo 
+class="MathClass-punc">;</mo> <mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo class="qopname">&#x2192;</mo></mover><mo 
+class="MathClass-punc">;</mo> <mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo class="qopname">&#x2192;</mo></mover></mrow></mfenced>
+</math></td><td class="eq-no">&#x0028;2.4&#x0029;</td></tr></table>
+                                                                          
+
+                                                                          
+<!--l. 80--><p class="indent" >   &#x00E9; positivo. Reciprocamente, o trio
+<!--l. 80--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+<!--l. 80--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> e
+<!--l. 80--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> &#x00E9;
+dito levogiro se o determinando for negativo. Veja mais detalhes no exemplo
+&#x0028;<a 
+href="#x10-15021r8">2.2.8<!--tex4ht:ref: probdextro --></a>&#x0029;.
+<!--l. 82--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x10-130071"></a>
+                                                                          
+
+                                                                          
+<div class="center" 
+>
+<!--l. 82--><p class="noindent" >
+<!--l. 83--><p class="noindent" ><img 
+src="main0x.png" alt="PIC" class="graphics" width="286.06876pt" height="107.40126pt" ><!--tex4ht:graphics  
+name="main0x.png" src="./cap_algvet/figs/eixos_levo_destro.eps"  
+-->
+<br /> <div class="caption" 
+><span class="id">Figura&#x00A0;2.1: </span><span  
+class="content">&#x00C0; esquerda, um sistema dextrogiro &#x0028;regra da m&#x00E3;o direita&#x0029;. &#x00C0;
+direita, sistema levogiro &#x0028;regra da m&#x00E3;o esquerda&#x0029;.</span></div><!--tex4ht:label?: x10-130071 -->
+</div>
+                                                                          
+
+                                                                          
+<!--l. 88--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 90--><p class="indent" >   Um vetor &#x00E9; representado neste sistema como um trio
+de n&#x00FA;meros reais, denominados componentes do vetor
+<!--l. 90--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> e
+denotados por: <table class="equation"><tr><td> <a 
+ id="x10-13008r5"></a>
+<!--l. 91--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                              <mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mfenced separators="" 
+open="&#x003C;"  close="&#x003E;" ><mrow><msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mi 
+>,</mi><msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mi 
+>,</mi><msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+></mrow></mfenced> <mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">&#x0028;2.5&#x0029;</td></tr></table>
+<!--l. 93--><p class="indent" >   &#x00C9; natural neste momento de&#xFB01;nir os vetores
+<!--l. 93--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+<!--l. 93--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> e
+<!--l. 93--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> como
+<table class="equation"><tr><td> <a 
+ id="x10-13009r6"></a>
+<!--l. 94--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+ <mtable  style="text-align:axis;"  
+equalrows="false" columnlines="none none" equalcolumns="false" class="array"><mtr><mtd 
+class="array"  columnalign="right"> <mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> </mtd><mtd 
+class="array"  columnalign="center">  <mo 
+class="MathClass-rel">=</mo> </mtd><mtd 
+class="array"  columnalign="left">  <mfenced separators="" 
+open="&#x003C;"  close="&#x003E;" ><mrow><mn>1</mn><mi 
+>,</mi><mn>0</mn><mi 
+>,</mi><mn>0</mn></mrow></mfenced> </mtd>
+</mtr><mtr><mtd 
+class="array"  columnalign="right"> <mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> </mtd><mtd 
+class="array"  columnalign="center">  <mo 
+class="MathClass-rel">=</mo> </mtd><mtd 
+class="array"  columnalign="left">  <mfenced separators="" 
+open="&#x003C;"  close="&#x003E;" ><mrow><mn>0</mn><mi 
+>,</mi><mn>1</mn><mi 
+>,</mi><mn>0</mn></mrow></mfenced> </mtd>
+</mtr><mtr><mtd 
+class="array"  columnalign="right"> <mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> </mtd><mtd 
+class="array"  columnalign="center">  <mo 
+class="MathClass-rel">=</mo> </mtd><mtd 
+class="array"  columnalign="left">  <mfenced separators="" 
+open="&#x003C;"  close="&#x003E;" ><mrow><mn>0</mn><mi 
+>,</mi><mn>0</mn><mi 
+>,</mi><mn>1</mn></mrow></mfenced> </mtd></mtr><!--rcl--></mtable>
+</math></td><td class="eq-no">&#x0028;2.6&#x0029;</td></tr></table>
+<!--l. 101--><p class="indent" >   de forma que a express&#x00E3;o &#x0028;<a 
+href="#x10-13008r5">2.5<!--tex4ht:ref: defeucv --></a>&#x0029; pode ser escrita como <table class="equation"><tr><td> <a 
+ id="x10-13010r7"></a>
+                                                                          
+
+                                                                          
+<!--l. 102--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                        <mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">&#x0028;2.7&#x0029;</td></tr></table>
+<!--l. 103--><p class="indent" >   O vetor nulo &#x00E9; de&#xFB01;nido como vetor cujas tr&#x00EA;s coordenadas s&#x00E3;o nulas: <table class="equation"><tr><td>
+<a 
+ id="x10-13011r8"></a>
+<!--l. 104--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                     <mover 
+accent="true"><mrow 
+><mn>0</mn></mrow><mo 
+class="MathClass-op"> &#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mspace width="1em" class="nbsp" /><mspace width="0.3em" class="thinspace"/><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mn>0</mn><mspace width="1em" class="nbsp" /><mspace width="0.3em" class="thinspace"/><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mn>0</mn><mspace width="1em" class="nbsp" /><mspace width="0.3em" class="thinspace"/><mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mspace width="1em" class="nbsp" /><mspace width="0.3em" class="thinspace"/> <mfenced separators="" 
+open="&#x003C;"  close="&#x003E;" ><mrow><mn>0</mn><mi 
+>,</mi><mn>0</mn><mi 
+>,</mi><mn>0</mn></mrow></mfenced> <mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">&#x0028;2.8&#x0029;</td></tr></table>
+<!--l. 105--><p class="indent" >   A soma de dois vetores &#x00E9; dada pela soma componente a componente, ou seja,
+se <!--l. 105--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> e
+<!--l. 105--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+ent&#x00E3;o <table class="equation"><tr><td> <a 
+ id="x10-13012r9"></a>
+<!--l. 106--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+             <mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mfenced separators="" 
+open="("  close=")" ><mrow><msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow></mfenced> <mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mfenced separators="" 
+open="("  close=")" ><mrow><msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow></mfenced> <mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mfenced separators="" 
+open="("  close=")" ><mrow><msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+></mrow></mfenced> <mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">&#x0028;2.9&#x0029;</td></tr></table>
+<!--l. 107--><p class="indent" >   O produto de um vetor por um escalar &#x00E9; de&#xFB01;nido como a
+multiplica&#x00E7;&#x00E3;o componente a componente pelo escalar, ou seja, se
+<!--l. 107--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mspace width="1em" class="nbsp" /><mspace width="0.3em" class="thinspace"/><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mspace width="1em" class="nbsp" /><mspace width="0.3em" class="thinspace"/><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+><mspace width="1em" class="nbsp" /><mspace width="0.3em" class="thinspace"/><mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+                                                                          
+
+                                                                          
+ent&#x00E3;o <table class="equation"><tr><td> <a 
+ id="x10-13013r10"></a>
+<!--l. 108--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                  <mi 
+>&#x03B1;</mi><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">&#x0028;</mo><mrow><mi 
+>&#x03B1;</mi><msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">&#x0029;</mo></mrow><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mrow ><mo 
+class="MathClass-open">&#x0028;</mo><mrow><mi 
+>&#x03B1;</mi><msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">&#x0029;</mo></mrow><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mrow ><mo 
+class="MathClass-open">&#x0028;</mo><mrow><mi 
+>&#x03B1;</mi><msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">&#x0029;</mo></mrow><mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">&#x0028;2.10&#x0029;</td></tr></table>
+   <h4 class="likesubsectionHead"><a 
+ id="x10-140002.2"></a>Exerc&#x00ED;cios resolvidos</h4>
+<!--l. 112--><p class="noindent" >+++construirExeresol+++
+<!--l. 114--><p class="noindent" >
+   <h4 class="likesubsectionHead"><a 
+ id="x10-150002.2"></a>Exerc&#x00ED;cios</h4>
+   <div class="newtheorem">
+<!--l. 116--><p class="noindent" ><span class="head">
+<a 
+ id="x10-15001r1"></a>
+<span 
+class="ec-lmbx-12">E 2.2.1.</span>  </span>Mostre   que   o   espa&#x00E7;o   vetorial   assim   de&#xFB01;nido   satisfaz   as
+propriedades &#x0028;<a 
+href="mainse2.html#x9-100070">2.1<!--tex4ht:ref: defel --></a>&#x0029;.
+   </div>
+<!--l. 119--><p class="noindent" >De&#xFB01;nimos tamb&#x00E9;m a norma euclidiana<a 
+ id="dx10-15002"></a> de um vetor
+<!--l. 119--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> como
+a dist&#x00E2;ncia da origem at&#x00E9; o ponto que o vetor representa e a denotamos por
+<!--l. 119--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-rel">&#x2225;</mo><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-rel">&#x2225;</mo></math>. Pelo
+Teorema de Pit&#x00E1;goras, da geometria euclidiana, temos:
+   <table class="equation"><tr><td> <a 
+ id="x10-15003r11"></a>
+                                                                          
+
+                                                                          
+<!--l. 122--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                         <mo 
+class="MathClass-rel">&#x2225;</mo><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-rel">&#x2225;</mo> <mo 
+class="MathClass-rel">=</mo> <msqrt><mrow><msubsup><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>1</mn> </mrow> <mrow 
+>  <mn>2</mn> </mrow> </msubsup 
+> <mo 
+class="MathClass-bin">+</mo> <msubsup><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>2</mn> </mrow> <mrow 
+>  <mn>2</mn> </mrow> </msubsup 
+> <mo 
+class="MathClass-bin">+</mo> <msubsup><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>3</mn> </mrow> <mrow 
+>  <mn>2</mn></mrow></msubsup 
+></mrow></msqrt><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">&#x0028;2.11&#x0029;</td></tr></table>
+   <div class="newtheorem">
+<!--l. 123--><p class="noindent" ><span class="head">
+<a 
+ id="x10-15004r2"></a>
+<span 
+class="ec-lmbx-12">E 2.2.2.</span>  </span>Veri&#xFB01;que que a norma euclidiana satisfaz as seguintes propriedades:
+   <div class="subequations"><a 
+ id="x10-150050"></a>
+<!--tex4ht:inline--><!--l. 130--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" ><mtable 
+columnalign="left" class="align">
+       <mtr><mtd 
+columnalign="right" class="align-odd"><mo 
+class="MathClass-rel">&#x2225;</mo><mi 
+>&#x03B1;</mi><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-rel">&#x2225;</mo></mtd>           <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-rel">&#x007C;</mo><mi 
+>&#x03B1;</mi><mo 
+class="MathClass-rel">&#x007C;</mo><mspace width="1em" class="nbsp" /><mspace width="0.3em" class="thinspace"/><mo 
+class="MathClass-rel">&#x2225;</mo><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-rel">&#x2225;</mo><mi 
+>,</mi><mspace width="2em"/></mtd>            <mtd 
+columnalign="right" class="align-odd"><mstyle 
+class="text"><mtext  >&#x0028;Homogeneidade&#x0029;</mtext></mstyle></mtd>                             <mtd 
+class="align-even"><mspace width="2em"/></mtd>       <mtd 
+columnalign="right" class="align-label"><mstyle 
+   id="x10-15006r1"  class="label" ></mstyle><!--endlabel--><mstyle 
+class="maketag"><mtext  >&#x0028;2.12a&#x0029;</mtext></mstyle>
+       </mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"><mo 
+class="MathClass-rel">&#x2225;</mo><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-rel">&#x2225;</mo></mtd>       <mtd 
+class="align-even"><mo 
+class="MathClass-rel">&#x2264;</mo><mo 
+class="MathClass-rel">&#x2225;</mo><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-rel">&#x2225;</mo> <mo 
+class="MathClass-bin">+</mo> <mo 
+class="MathClass-rel">&#x2225;</mo><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-rel">&#x2225;</mo><mi 
+>,</mi><mspace width="2em"/></mtd>       <mtd 
+columnalign="right" class="align-odd"><mstyle 
+class="text"><mtext  >&#x0028;Desigualdade&#x00A0;triangular&#x0029;</mtext></mstyle></mtd>                     <mtd 
+class="align-even"><mspace width="2em"/></mtd>       <mtd 
+columnalign="right" class="align-label"><mstyle 
+   id="x10-15007r2"  class="label" ></mstyle><!--endlabel--><mstyle 
+class="maketag"><mtext  >&#x0028;2.12b&#x0029;</mtext></mstyle>
+       </mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"><mo 
+class="MathClass-rel">&#x2225;</mo><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-rel">&#x2225;</mo></mtd>            <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-rel">&#x21D2;</mo><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mover 
+accent="true"><mrow 
+><mn>0</mn></mrow><mo 
+class="MathClass-op"> &#x2192;</mo></mover><mi 
+>,</mi><mspace width="2em"/></mtd>         <mtd 
+columnalign="right" class="align-odd"><mstyle 
+class="text"><mtext  >&#x0028;Separa&#x00E7;&#x00E3;o&#x0029;</mtext></mstyle></mtd>                               <mtd 
+class="align-even"><mspace width="2em"/></mtd>       <mtd 
+columnalign="right" class="align-label"><mstyle 
+   id="x10-15008r3"  class="label" ></mstyle><!--endlabel--><mstyle 
+class="maketag"><mtext  >&#x0028;2.12c&#x0029;</mtext></mstyle>
+   </mtd></mtr></mtable></math>
+   </div>
+   </div>
+<!--l. 134--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x10-150092"></a>
+                                                                          
+
+                                                                          
+<div class="center" 
+>
+<!--l. 135--><p class="noindent" >
+<!--l. 136--><p class="noindent" ><img 
+src="main1x.png" alt="PIC" class="graphics" width="290.08376pt" height="159.59625pt" ><!--tex4ht:graphics  
+name="main1x.png" src="./cap_algvet/figs/desigualdade_triangulo.eps"  
+-->
+<br />  <div class="caption" 
+><span class="id">Figura&#x00A0;2.2:   </span><span  
+class="content">Representa&#x00E7;&#x00E3;o   gr&#x00E1;&#xFB01;ca   da   desigualdade   triangular:
+<!--l. 137--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-rel">&#x2225;</mo><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-rel">&#x2225;</mo><mo 
+class="MathClass-rel">&#x2264;</mo><mo 
+class="MathClass-rel">&#x2225;</mo><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-rel">&#x2225;</mo> <mo 
+class="MathClass-bin">+</mo> <mo 
+class="MathClass-rel">&#x2225;</mo><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-rel">&#x2225;</mo></math></span></div><!--tex4ht:label?: x10-150092 -->
+</div>
+                                                                          
+
+                                                                          
+<!--l. 141--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 143--><p class="indent" >   Dica: Para mostrar a desigualdade triangular<a 
+ id="dx10-15010"></a>, entenda seu signi&#xFB01;cado
+geom&#x00E9;trico. Uma demonstra&#x00E7;&#x00E3;o puramente alg&#x00E9;brica pode ser feita, embora
+seja mais laboriosa. Veremos mais adiante que o conceito de produto escalar<a 
+ id="dx10-15011"></a>
+permite simpli&#xFB01;car os c&#x00E1;lculos.
+<!--l. 145--><p class="indent" >   A &#xFB01;m de simpli&#xFB01;car a nota&#x00E7;&#x00E3;o, a norma de um vetor
+<!--l. 145--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> pode ser escrita
+simplesmente como <!--l. 145--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>v</mi></math>,
+ou seja
+<!--tex4ht:inline--><!--l. 146--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+                                 <mi 
+>v</mi> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-rel">&#x2225;</mo><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-rel">&#x2225;</mo>
+</math>
+<!--l. 146--><p class="nopar" >
+<!--l. 148--><p class="indent" >   Um vetor de norma 1 &#x00E9; chamado de vetor unit&#x00E1;rio<a 
+ id="dx10-15012"></a>. Todo vetor n&#x00E3;o nulo
+pode ser escrito na forma <table class="equation"><tr><td> <a 
+ id="x10-15013r13"></a>
+<!--l. 149--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                <mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mi 
+>v</mi><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x0302;</mo></mover>
+</math></td><td class="eq-no">&#x0028;2.13&#x0029;</td></tr></table>
+<!--l. 150--><p class="indent" >   onde <!--l. 150--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>v</mi></math> &#x00E9;
+a norma de <!--l. 150--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+e <!--l. 150--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x0302;</mo></mover></math> &#x00E9;
+um vetor unit&#x00E1;rio dado por <table class="equation"><tr><td> <a 
+ id="x10-15014r14"></a>
+                                                                          
+
+                                                                          
+<!--l. 151--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                <mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x0302;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></mrow> 
+ <mrow 
+><mi 
+>v</mi></mrow></mfrac> <mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">&#x0028;2.14&#x0029;</td></tr></table>
+<!--l. 152--><p class="indent" >   O vetor <!--l. 152--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x0302;</mo></mover></math> &#x00E9;
+chamado de versor<a 
+ id="dx10-15015"></a> de <!--l. 152--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>.
+<!--l. 152--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x0302;</mo></mover></math>
+&#x00E9; um vetor unit&#x00E1;rio que tem mesmo sentido e dire&#x00E7;&#x00E3;o de
+<!--l. 152--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>.
+<!--l. 154--><p class="indent" >   A identidade &#x0028;<a 
+href="#x10-15013r13">2.13<!--tex4ht:ref: decompversor --></a>&#x0029; tem uma importante interpreta&#x00E7;&#x00E3;o geom&#x00E9;trica:
+todo vetor n&#x00E3;o nulo pode ser representado pelo seu m&#x00F3;dulo e por seu
+versor, que traz a informa&#x00E7;&#x00E3;o de dire&#x00E7;&#x00E3;o e sentido. Os vetores
+<!--l. 154--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+<!--l. 154--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> e
+<!--l. 154--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> s&#x00E3;o
+exemplos de versores. O vetor nulo &#x00E9; o &#x00FA;nico vetor ao qual n&#x00E3;o se pode
+associar dire&#x00E7;&#x00E3;o e sentido &#x00FA;nicos.
+   <div class="newtheorem">
+<!--l. 157--><p class="noindent" ><span class="head">
+<a 
+ id="x10-15016r3"></a>
+<span 
+class="ec-lmbx-12">E 2.2.3.</span>  </span>Mostre que a norma de um versor conforme de&#xFB01;nido em &#x0028;<a 
+href="#x10-15014r14">2.14<!--tex4ht:ref: defversor --></a>&#x0029; &#x00E9;
+sempre unit&#x00E1;ria.
+   </div>
+   <div class="newtheorem">
+<!--l. 160--><p class="noindent" ><span class="head">
+<a 
+ id="x10-15017r4"></a>
+<span 
+class="ec-lmbx-12">E 2.2.4.</span>  </span> Considere os vetores dados por <!--l. 160--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+<!--l. 160--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+e <!--l. 160--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+><mn>3</mn></mrow></mfrac><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+><mn>2</mn></mrow></mfrac><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>.
+                                                                          
+
+                                                                          
+Represente estes vetores em um referencial euclidiano, calcule suas normas,
+calcule os versores associados <!--l. 160--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x00FB;</mi></math>,
+<!--l. 160--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x0302;</mo></mover></math>
+e <!--l. 160--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x0175;</mi></math>
+e represente-os no mesmo gr&#x00E1;&#xFB01;co.
+   </div>
+<!--l. 162--><p class="indent" >   Resp: <!--l. 162--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>u</mi> <mo 
+class="MathClass-rel">=</mo> <msqrt><mrow><mn>2</mn></mrow></msqrt></math>,
+&#x00A0;&#x00A0; <!--l. 162--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>v</mi> <mo 
+class="MathClass-rel">=</mo> <msqrt><mrow><mn>5</mn></mrow></msqrt></math>
+&#x00A0;e&#x00A0; <!--l. 162--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>w</mi> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><msqrt><mrow><mn>1</mn><mn>3</mn></mrow></msqrt></mrow> 
+  <mrow 
+><mn>6</mn></mrow></mfrac>  </math>.&#x00A0;
+<!--l. 162--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x00FB;</mi> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow> 
+ <mrow 
+><mn>2</mn></mrow></mfrac>  <mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mfrac><mrow 
+><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow> 
+ <mrow 
+><mn>2</mn></mrow></mfrac>  <mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,&#x00A0;&#x00A0;
+<!--l. 162--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x0302;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow> 
+ <mrow 
+><mn>5</mn></mrow></mfrac>  <mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mfrac><mrow 
+><mn>2</mn><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow> 
+  <mrow 
+><mn>5</mn></mrow></mfrac>  <mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,&#x00A0;&#x00A0;
+<!--l. 162--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x0175;</mi> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>2</mn><msqrt><mrow><mn>1</mn><mn>3</mn></mrow></msqrt></mrow> 
+  <mrow 
+><mn>1</mn><mn>3</mn></mrow></mfrac>  <mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mfrac><mrow 
+><mn>3</mn><msqrt><mrow><mn>1</mn><mn>3</mn></mrow></msqrt></mrow> 
+  <mrow 
+><mn>1</mn><mn>3</mn></mrow></mfrac>  <mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+   <div class="newtheorem">
+<!--l. 164--><p class="noindent" ><span class="head">
+<a 
+ id="x10-15018r5"></a>
+<span 
+class="ec-lmbx-12">E 2.2.5.</span>  </span>Considere o vetor <!--l. 164--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo><mo class="qopname"> cos</mo><!--nolimits--> <mi 
+>&#x1D703;</mi><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo class="qopname">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo><mo class="qopname"> sen</mo><!--nolimits--> <mspace width="0.3em" class="thinspace"/><mi 
+>&#x03C6;</mi><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo class="qopname">&#x2192;</mo></mover></math>.
+Mostre que este vetor &#x00E9; unit&#x00E1;rio e represente-o gra&#xFB01;camente quando <!--l. 164--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03C6;</mi> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math>,
+<!--l. 164--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03C6;</mi> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>&#x03C0;</mi></mrow> 
+<mrow 
+><mn>6</mn></mrow></mfrac> </math>,
+<!--l. 164--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03C6;</mi> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>&#x03C0;</mi></mrow> 
+<mrow 
+><mn>2</mn></mrow></mfrac> </math>
+e <!--l. 164--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03C6;</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x03C0;</mi></math>
+   </div>
+   <div class="newtheorem">
+<!--l. 167--><p class="noindent" ><span class="head">
+<a 
+ id="x10-15019r6"></a>
+<span 
+class="ec-lmbx-12">E 2.2.6.</span>  </span>Considere o vetor <!--l. 167--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo><mo class="qopname"> sen</mo><!--nolimits--> <mspace width="0.3em" class="thinspace"/><mi 
+>&#x1D703;</mi><mo class="qopname"> cos</mo><!--nolimits--> <mi 
+>&#x03C6;</mi><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo class="qopname">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo><mo class="qopname"> sen</mo><!--nolimits--> <mspace width="0.3em" class="thinspace"/><mi 
+>&#x1D703;</mi><mo class="qopname"> sen</mo><!--nolimits--> <mspace width="0.3em" class="thinspace"/><mi 
+>&#x03C6;</mi><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo class="qopname">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo><mo class="qopname"> cos</mo><!--nolimits--> <mi 
+>&#x1D703;</mi><mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo class="qopname">&#x2192;</mo></mover></math>.
+Veri&#xFB01;que que este vetor &#x00E9; unit&#x00E1;rio e represente-o gra&#xFB01;camente quando
+      <ul class="itemize1">
+      <li class="itemize"><!--l. 169--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x1D703;</mi> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math>
+      </li>
+      <li class="itemize"><!--l. 170--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x1D703;</mi> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>&#x03C0;</mi></mrow> 
+<mrow 
+><mn>4</mn></mrow></mfrac> </math>
+      e <!--l. 170--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03C6;</mi> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>&#x03C0;</mi></mrow> 
+<mrow 
+><mn>4</mn></mrow></mfrac> </math>
+                                                                          
+
+                                                                          
+      </li>
+      <li class="itemize"><!--l. 171--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x1D703;</mi> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>&#x03C0;</mi></mrow> 
+<mrow 
+><mn>2</mn></mrow></mfrac> </math>
+      e <!--l. 171--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03C6;</mi> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>&#x03C0;</mi></mrow> 
+<mrow 
+><mn>4</mn></mrow></mfrac> </math>
+      </li>
+      <li class="itemize"><!--l. 172--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x1D703;</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>&#x03C0;</mi></math>
+      </li></ul>
+   </div>
+   <div class="newtheorem">
+<!--l. 177--><p class="noindent" ><span class="head">
+<a 
+ id="x10-15020r7"></a>
+<span 
+class="ec-lmbx-12">E 2.2.7.</span>  </span> Seja <!--l. 177--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+um vetor n&#x00E3;o nulo &#xFB01;xo no plano <!--l. 177--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi><mi 
+>y</mi></math>
+e <!--l. 177--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mi 
+>v</mi> <mfenced separators="" 
+open="("  close=")" ><mrow><mo class="qopname">cos</mo><!--nolimits--> <mi 
+>&#x03C6;</mi><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo class="qopname">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo><mo class="qopname"> sen</mo><!--nolimits--> <mspace width="0.3em" class="thinspace"/><mi 
+>&#x03C6;</mi><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo class="qopname">&#x2192;</mo></mover></mrow></mfenced></math>
+um vetor de norma &#xFB01;xa no plano <!--l. 177--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi><mi 
+>y</mi></math>.
+Considere a fun&#x00E7;&#x00E3;o <!--l. 177--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>m</mi><mrow ><mo 
+class="MathClass-open">&#x0028;</mo><mrow><mi 
+>&#x03C6;</mi></mrow><mo 
+class="MathClass-close">&#x0029;</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-rel">&#x2225;</mo><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover><mo 
+class="MathClass-rel">&#x2225;</mo></math>
+e encontre o valor m&#x00E1;ximo e m&#x00ED;nimo de <!--l. 177--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>m</mi><mrow ><mo 
+class="MathClass-open">&#x0028;</mo><mrow><mi 
+>&#x03C6;</mi></mrow><mo 
+class="MathClass-close">&#x0029;</mo></mrow></math>.
+Interprete o resultado.
+   </div>
+   <div class="newtheorem">
+<!--l. 180--><p class="noindent" ><span class="head">
+<a 
+ id="x10-15021r8"></a>
+<span 
+class="ec-lmbx-12">E 2.2.8.</span>  </span> Conforme observado no texto, um trio de vetores
+<!--l. 180--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+<!--l. 180--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> e
+<!--l. 180--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> &#x00E9;
+dextrogiro se <table class="equation-star"><tr><td>
+                                                                          
+
+                                                                          
+<!--l. 181--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+<mo class="qopname">det</mo> <mfenced separators="" 
+open="("  close=")" ><mrow><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo class="qopname">&#x2192;</mo></mover><mo 
+class="MathClass-punc">;</mo> <mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo class="qopname">&#x2192;</mo></mover><mo 
+class="MathClass-punc">;</mo> <mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo class="qopname">&#x2192;</mo></mover></mrow></mfenced> <mo 
+class="MathClass-rel">=</mo> <mfenced separators="" 
+open="|"  close="|" ><mrow> <mtable  style="text-align:axis;"  
+equalrows="false" columnlines="none none" equalcolumns="false" class="array"><mtr><mtd 
+class="array"  columnalign="center"> <msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+>  </mtd><mtd 
+class="array"  columnalign="center">  <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+>  </mtd><mtd 
+class="array"  columnalign="center">  <msub><mrow 
+><mi 
+>w</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+>  </mtd>
+</mtr><mtr><mtd 
+class="array"  columnalign="center">  <msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+>  </mtd><mtd 
+class="array"  columnalign="center">  <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+>  </mtd><mtd 
+class="array"  columnalign="center">  <msub><mrow 
+><mi 
+>w</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+>  </mtd>
+</mtr><mtr><mtd 
+class="array"  columnalign="center">  <msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+>  </mtd><mtd 
+class="array"  columnalign="center">  <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+>  </mtd><mtd 
+class="array"  columnalign="center">  <msub><mrow 
+><mi 
+>w</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+>  </mtd></mtr> <!--ccc--></mtable>                                                                                                                 </mrow></mfenced> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo>
+</math></td></tr></table>
+<!--l. 189--><p class="indent" >   onde <!--l. 189--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>u</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+<!--l. 189--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>v</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math> e
+<!--l. 189--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>w</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>w</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>w</mi></mrow><mrow 
+><mn>3</mn></mrow></msub 
+><mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>.
+Fa&#x00E7;a o que se pede:
+      <ul class="itemize1">
+      <li class="itemize">Veri&#xFB01;que que se <!--l. 191--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+      <!--l. 191--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      e <!--l. 191--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      forma um sistema dextrogiro ent&#x00E3;o <!--l. 191--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+      <!--l. 191--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      e <!--l. 191--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      &#x00E9; levogiro.
+      </li>
+      <li class="itemize">Veri&#xFB01;que que se <!--l. 192--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+      <!--l. 192--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      e <!--l. 192--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      forma um sistema dextrogiro ent&#x00E3;o <!--l. 192--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+      <!--l. 192--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      e <!--l. 192--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      e <!--l. 192--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+      <!--l. 192--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      e <!--l. 192--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      s&#x00E3;o dextrogiros.
+      </li>
+      <li class="itemize">Veri&#xFB01;que que o trio <!--l. 193--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+      <!--l. 193--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+                                                                          
+
+                                                                          
+      e <!--l. 193--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      &#x00E9; dextrogiro quando <!--l. 193--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+      <!--l. 193--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-bin">&#x2212;</mo><mn>2</mn><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      e <!--l. 193--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>.
+      </li>
+      <li class="itemize">Veri&#xFB01;que que o trio <!--l. 194--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+      <!--l. 194--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      e <!--l. 194--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      &#x00E9; dextrogiro quando <!--l. 194--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>u</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>,
+      <!--l. 194--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>v</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-bin">&#x2212;</mo><mn>2</mn><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      e <!--l. 194--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>.
+      Interprete gra&#xFB01;camente.</li></ul>
+   </div>
+<!--l. 203--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x10-150223"></a>
+                                                                          
+
+                                                                          
+<div class="center" 
+>
+<!--l. 204--><p class="noindent" >
+<!--l. 205--><p class="noindent" ><img 
+src="main2x.png" alt="PIC" class="graphics" width="290.08376pt" height="290.08376pt" ><!--tex4ht:graphics  
+name="main2x.png" src="./cap_algvet/figs/latitude_longitude2.eps"  
+-->
+<br />  <div class="caption" 
+><span class="id">Figura&#x00A0;2.3:   </span><span  
+class="content">Representa&#x00E7;&#x00E3;o   gr&#x00E1;&#xFB01;ca   do   sistema   de   coordenadas
+geogr&#x00E1;&#xFB01;cas.</span></div><!--tex4ht:label?: x10-150223 -->
+</div>
+                                                                          
+
+                                                                          
+<!--l. 209--><p class="indent" >   </div><hr class="endfigure">
+   <div class="newtheorem">
+<!--l. 211--><p class="noindent" ><span class="head">
+<a 
+ id="x10-15023r9"></a>
+<span 
+class="ec-lmbx-12">E 2.2.9.</span>  </span>Considere  um  sistema  de  coordenadas  cartesianas  dextrogiro
+constru&#x00ED;do da seguinte forma:
+      <ul class="itemize1">
+      <li class="itemize">O centro da Terra coincide com a origem do sistema.
+      </li>
+      <li class="itemize">O extremo norte da Terra intercepta o eixo <!--l. 216--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi></math>
+      em valores positivos.
+      </li>
+      <li class="itemize">O observat&#x00F3;rio de Greenwich est&#x00E1; sob plano <!--l. 217--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi><mi 
+>z</mi></math>
+      com <!--l. 217--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>.</li></ul>
+<!--l. 219--><p class="noindent" >Considere a superf&#x00ED;cie terrestre com uma esfera de raio
+<!--l. 219--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2295;</mo></mrow></msub 
+></math>. Denote a
+longitude<a 
+ id="dx10-15024"></a> por <!--l. 219--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03BB;</mi></math> e
+a latitude<a 
+ id="dx10-15025"></a> por <!--l. 219--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03D5;</mi></math>.
+Convecione como positivas a longitude leste e a latitude norte. Veja &#xFB01;gura <a 
+href="#x10-150223">2.3<!--tex4ht:ref: fig:latlong --></a>.
+Seja <!--l. 219--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>r</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-rel">=</mo> <mi 
+>x</mi><mover 
+accent="true"><mrow 
+><mi 
+>i</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mi 
+>y</mi><mover 
+accent="true"><mrow 
+><mi 
+>j</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover> <mo 
+class="MathClass-bin">+</mo> <mi 
+>z</mi><mover 
+accent="true"><mrow 
+><mi 
+>k</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+o vetor que representa um ponto sobre a superf&#x00ED;cie da Terra. Responda:
+      <ul class="itemize1">
+      <li class="itemize">Qual a norma do vetor <!--l. 221--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>r</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>?
+      </li>
+      <li class="itemize">Qual &#x00E9; o valor da componentes <!--l. 222--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi></math>,
+      <!--l. 222--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi></math>
+      e <!--l. 222--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi></math>
+      de <!--l. 222--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>r</mi></mrow><mo 
+class="MathClass-op">&#x2192;</mo></mover></math>
+      em termos de <!--l. 222--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03BB;</mi></math>
+      e <!--l. 222--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03D5;</mi></math>?
+                                                                          
+
+                                                                          
+      </li>
+      <li class="itemize">Seja <!--l. 223--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi></math>
+      a dist&#x00E2;ncia entre dois pontos sobre a superf&#x00ED;cie terrestre. Use a lei dos
+      cossenos<span class="footnote-mark"><a 
+href="main11.html#fn1x3"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x10-15026f1"></a> 
+      para mostrar que dist&#x00E2;ncia <!--l. 223--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B4;</mi></math>
+      sobre a superf&#x00ED;cie esf&#x00E9;rica entre esses mesmos dois pontos &#x00E9; dada
+      por
+      <!--tex4ht:inline--><!--l. 224--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+                                  <mi 
+>&#x03B4;</mi> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2295;</mo></mrow></msub 
+><msup><mrow 
+><mo class="qopname"> cos</mo><!--nolimits--> </mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2212;</mo><mn>1</mn></mrow></msup 
+> <mfenced separators="" 
+open="("  close=")" ><mrow><mn>1</mn> <mo 
+class="MathClass-bin">&#x2212;</mo>  <mfrac><mrow 
+><msup><mrow 
+><mi 
+>d</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow> 
+<mrow 
+><mn>2</mn><msubsup><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2295;</mo></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow></mfrac></mrow></mfenced>
+</math>
+      <!--l. 224--><p class="nopar" > Interprete os casos particulares <!--l. 225--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math>
+      e <!--l. 225--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi> <mo 
+class="MathClass-rel">=</mo> <mn>2</mn><msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2295;</mo></mrow></msub 
+></math>.
+      </li>
+      <li class="itemize">Considerando <!--l. 226--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2295;</mo></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mn>6</mn><mn>3</mn><mn>7</mn><mn>8</mn><mi 
+>K</mi><mi 
+>m</mi></math>
+      e os seguintes valores para as coordenadas geogr&#x00E1;&#xFB01;cas de Porto
+      Alegre, Londres e T&#x00F3;quio, construa uma tabela com os valores de
+      <!--l. 226--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03BB;</mi></math> e
+      <!--l. 226--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03D5;</mi></math> e as
+      coordenadas <!--l. 226--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi><mi 
+>y</mi><mi 
+>z</mi></math>
+      em quil&#x00F4;metros de cada uma dessas cidades. <div class="table">
+                                                                          
+
+                                                                          
+      <!--l. 227--><p class="noindent" ><a 
+ id="x10-150271"></a><hr class="float"><div class="float" 
+>
+      <!--tex4ht:inline--><div class="tabular"> <table id="TBL-5" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-5-1g"><col 
+id="TBL-5-1"></colgroup><colgroup id="TBL-5-2g"><col 
+id="TBL-5-2"></colgroup><colgroup id="TBL-5-3g"><col 
+id="TBL-5-3"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-5-1-"><td  style="text-align:left; white-space:nowrap;" id="TBL-5-1-1"  
+class="td11"> Localidade   </td><td  style="text-align:left; white-space:nowrap;" id="TBL-5-1-2"  
+class="td11"> Latitude                                                                                            </td><td  style="text-align:left; white-space:nowrap;" id="TBL-5-1-3"  
+class="td11"> Longitude                                                                                          </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-5-2-"><td  style="text-align:left; white-space:nowrap;" id="TBL-5-2-1"  
+class="td11"> Porto Alegre  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-5-2-2"  
+class="td11"> <!--l. 233--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>3</mn><msup><mrow 
+><mn>0</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+><mspace width="1em" class="nbsp" /><mn>0</mn><msup><mrow 
+><mn>1</mn></mrow><mrow 
+><mi 
+>&#x2032;</mi></mrow></msup 
+><mspace width="1em" class="nbsp" /><mn>5</mn><msup><mrow 
+><mn>8</mn></mrow><mrow 
+><mo 
+class="MathClass-op">&#x2033;</mo></mrow></msup 
+></math>S  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-5-2-3"  
+class="td11"> <!--l. 233--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>5</mn><msup><mrow 
+><mn>1</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+><mn>1</mn><msup><mrow 
+><mn>3</mn></mrow><mrow 
+><mi 
+>&#x2032;</mi></mrow></msup 
+><mspace width="1em" class="nbsp" /><mn>4</mn><msup><mrow 
+><mn>8</mn></mrow><mrow 
+><mo 
+class="MathClass-op">&#x2033;</mo></mrow></msup 
+></math>O  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-5-3-"><td  style="text-align:left; white-space:nowrap;" id="TBL-5-3-1"  
+class="td11"> Londres        </td><td  style="text-align:left; white-space:nowrap;" id="TBL-5-3-2"  
+class="td11"> <!--l. 235--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>5</mn><msup><mrow 
+><mn>1</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+><mspace width="1em" class="nbsp" /><mn>3</mn><msup><mrow 
+><mn>0</mn></mrow><mrow 
+><mi 
+>&#x2032;</mi></mrow></msup 
+><mspace width="1em" class="nbsp" /><mn>2</mn><msup><mrow 
+><mn>8</mn></mrow><mrow 
+><mo 
+class="MathClass-op">&#x2033;</mo></mrow></msup 
+></math>N  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-5-3-3"  
+class="td11"> <!--l. 235--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mn>0</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+><mspace width="1em" class="nbsp" /><msup><mrow 
+><mn>7</mn></mrow><mrow 
+><mi 
+>&#x2032;</mi></mrow></msup 
+><mspace width="1em" class="nbsp" /><mn>4</mn><msup><mrow 
+><mn>1</mn></mrow><mrow 
+><mo 
+class="MathClass-op">&#x2033;</mo></mrow></msup 
+></math>O  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-5-4-"><td  style="text-align:left; white-space:nowrap;" id="TBL-5-4-1"  
+class="td11"> T&#x00F3;quio       </td><td  style="text-align:left; white-space:nowrap;" id="TBL-5-4-2"  
+class="td11"> <!--l. 237--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>3</mn><msup><mrow 
+><mn>5</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+><mspace width="1em" class="nbsp" /><mn>4</mn><msup><mrow 
+><mn>1</mn></mrow><mrow 
+><mi 
+>&#x2032;</mi></mrow></msup 
+><mspace width="1em" class="nbsp" /><mn>2</mn><msup><mrow 
+><mn>2</mn></mrow><mrow 
+><mo 
+class="MathClass-op">&#x2033;</mo></mrow></msup 
+></math>N  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-5-4-3"  
+class="td11"> <!--l. 237--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>1</mn><mn>3</mn><msup><mrow 
+><mn>9</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+><mspace width="1em" class="nbsp" /><mn>4</mn><msup><mrow 
+><mn>1</mn></mrow><mrow 
+><mi 
+>&#x2032;</mi></mrow></msup 
+><mspace width="1em" class="nbsp" /><mn>3</mn><msup><mrow 
+><mn>0</mn></mrow><mrow 
+><mo 
+class="MathClass-op">&#x2033;</mo></mrow></msup 
+></math>L  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-5-5-"><td  style="text-align:left; white-space:nowrap;" id="TBL-5-5-1"  
+class="td11">             </td></tr></table>
+      </div>
+<br /> <div class="caption" 
+><span class="id">Tabela&#x00A0;2.1: </span><span  
+class="content">Coordenadas geogr&#x00E1;&#xFB01;cas de algumas cidades.</span></div><!--tex4ht:label?: x10-150271 -->
+      </div><hr class="endfloat" />
+      </div>
+      </li>
+      <li class="itemize">Contrua uma tabela com as dist&#x00E2;ncias em linha reta e sobre a superf&#x00ED;cie
+      da Terra entre cada uma dessas cidades.
+      </li>
+      <li class="itemize">As seguintes coordenadas indicam locais de grande import&#x00E2;ncia cultural ou
+      tur&#x00ED;stica, identi&#xFB01;que-os: <div class="table">
+      <!--l. 245--><p class="noindent" ><a 
+ id="x10-150282"></a><hr class="float"><div class="float" 
+> <!--tex4ht:inline--><div class="tabular"> <table id="TBL-6" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-6-1g"><col 
+id="TBL-6-1"></colgroup><colgroup id="TBL-6-2g"><col 
+id="TBL-6-2"></colgroup><colgroup id="TBL-6-3g"><col 
+id="TBL-6-3"></colgroup><colgroup id="TBL-6-4g"><col 
+id="TBL-6-4"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-1-"><td  style="text-align:left; white-space:nowrap;" id="TBL-6-1-1"  
+class="td11"> Localidade  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-6-1-2"  
+class="td11"> x                </td><td  style="text-align:left; white-space:nowrap;" id="TBL-6-1-3"  
+class="td11"> y                </td><td  style="text-align:left; white-space:nowrap;" id="TBL-6-1-4"  
+class="td11"> z                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-2-"><td  style="text-align:left; white-space:nowrap;" id="TBL-6-2-1"  
+class="td11"> 1               </td><td  style="text-align:left; white-space:nowrap;" id="TBL-6-2-2"  
+class="td11"> 4192,872Km  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-6-2-3"  
+class="td11"> 168Km        </td><td  style="text-align:left; white-space:nowrap;" id="TBL-6-2-4"  
+class="td11"> 4803,175Km  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-3-"><td  style="text-align:left; white-space:nowrap;" id="TBL-6-3-1"  
+class="td11"> 2               </td><td  style="text-align:left; white-space:nowrap;" id="TBL-6-3-2"  
+class="td11"> 1175,603Km  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-6-3-3"  
+class="td11"> 5550,889Km  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-6-3-4"  
+class="td11"> 2912,813Km  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-4-"><td  style="text-align:left; white-space:nowrap;" id="TBL-6-4-1"  
+class="td11"> 3               </td><td  style="text-align:left; white-space:nowrap;" id="TBL-6-4-2"  
+class="td11"> 3996,282Km  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-6-4-3"  
+class="td11"> -127,418Km  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-6-4-4"  
+class="td11"> 4969,143Km  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-5-"><td  style="text-align:left; white-space:nowrap;" id="TBL-6-5-1"  
+class="td11">            </td></tr></table></div>
+<br /> <div class="caption" 
+><span class="id">Tabela&#x00A0;2.2: </span><span  
+class="content">Coordenadas geogr&#x00E1;&#xFB01;cas de tr&#x00EA;s localidades inc&#x00F3;gnitas.</span></div><!--tex4ht:label?: x10-150282 -->
+      </div><hr class="endfloat" />
+      </div>
+      </li></ul>
+   </div>
+   <div class="table">
+                                                                          
+
+                                                                          
+<!--l. 278--><p class="indent" >   <a 
+ id="x10-150293"></a><a 
+ id="x10-150304"></a><a 
+ id="x10-150315"></a><hr class="float"><div class="float" 
+>
+                                                                          
+
+                                                                          
+Resp: a&#x0029; <!--l. 279--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>r</mi> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2295;</mo></mrow></msub 
+></math>
+b&#x0029; <!--l. 280--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2295;</mo></mrow></msub 
+><mo class="qopname"> cos</mo><!--nolimits--> <mi 
+>&#x03D5;</mi><mo class="qopname"> cos</mo><!--nolimits--> <mi 
+>&#x03BB;</mi></math>,
+<!--l. 280--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2295;</mo></mrow></msub 
+><mo class="qopname"> cos</mo><!--nolimits--> <mi 
+>&#x03D5;</mi><mo class="qopname"> sen</mo><!--nolimits--> <mspace width="0.3em" class="thinspace"/><mi 
+>&#x03BB;</mi></math> e
+<!--l. 280--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>R</mi></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2295;</mo></mrow></msub 
+><mo class="qopname"> sen</mo><!--nolimits--> <mspace width="0.3em" class="thinspace"/><mi 
+>&#x03D5;</mi></math>
+<!--tex4ht:inline--><div class="tabular"> <table id="TBL-7" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-7-1g"><col 
+id="TBL-7-1"></colgroup><colgroup id="TBL-7-2g"><col 
+id="TBL-7-2"></colgroup><colgroup id="TBL-7-3g"><col 
+id="TBL-7-3"></colgroup><colgroup id="TBL-7-4g"><col 
+id="TBL-7-4"></colgroup><colgroup id="TBL-7-5g"><col 
+id="TBL-7-5"></colgroup><colgroup id="TBL-7-6g"><col 
+id="TBL-7-6"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-7-1-"><td  style="text-align:left; white-space:nowrap;" id="TBL-7-1-1"  
+class="td11"> Localidade   </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-1-2"  
+class="td11"> <!--l. 284--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03D5;</mi></math> </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-1-3"  
+class="td11"> <!--l. 284--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03BB;</mi></math> </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-1-4"  
+class="td11"> <!--l. 284--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi></math> </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-1-5"  
+class="td11"> <!--l. 284--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>y</mi></math> </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-1-6"  
+class="td11"> <!--l. 284--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi></math> </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-7-2-"><td  style="text-align:left; white-space:nowrap;" id="TBL-7-2-1"  
+class="td11"> Porto Alegre  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-2-2"  
+class="td11"> <!--l. 286--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-bin">&#x2212;</mo> <mn>3</mn><mn>0</mn><mi 
+>,</mi><mn>0</mn><mn>3</mn><mn>2</mn><msup><mrow 
+><mn>8</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+></math> </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-2-3"  
+class="td11"> <!--l. 286--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-bin">&#x2212;</mo> <mn>5</mn><mn>1</mn><mi 
+>,</mi><mn>2</mn><msup><mrow 
+><mn>3</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+></math> </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-2-4"  
+class="td11"> <!--l. 286--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>3</mn><mn>4</mn><mn>5</mn><mn>7</mn><mi 
+>,</mi><mn>6</mn><mn>5</mn></math>  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-2-5"  
+class="td11"> <!--l. 286--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-bin">&#x2212;</mo> <mn>4</mn><mn>3</mn><mn>0</mn><mn>5</mn><mi 
+>,</mi><mn>0</mn><mn>7</mn></math>  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-2-6"  
+class="td11"> <!--l. 286--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-bin">&#x2212;</mo> <mn>3</mn><mn>1</mn><mn>9</mn><mn>2</mn><mi 
+>,</mi><mn>1</mn><mn>6</mn></math>  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-7-3-"><td  style="text-align:left; white-space:nowrap;" id="TBL-7-3-1"  
+class="td11"> Londres        </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-3-2"  
+class="td11"> <!--l. 288--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>5</mn><mn>1</mn><mi 
+>,</mi><mn>5</mn><mn>0</mn><mn>7</mn><msup><mrow 
+><mn>8</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+></math> </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-3-3"  
+class="td11"> <!--l. 288--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-bin">&#x2212;</mo> <mn>0</mn><mi 
+>,</mi><mn>0</mn><mn>7</mn><mn>8</mn><msup><mrow 
+><mn>1</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+></math> </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-3-4"  
+class="td11"> 3969,71                                                                                           </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-3-5"  
+class="td11"> -5,41                                                                                               </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-3-6"  
+class="td11"> 4992,02                                                                                           </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-7-4-"><td  style="text-align:left; white-space:nowrap;" id="TBL-7-4-1"  
+class="td11"> T&#x00F3;quio       </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-4-2"  
+class="td11"> <!--l. 290--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>3</mn><mn>5</mn><mi 
+>,</mi><mn>6</mn><mn>8</mn><mn>9</mn><msup><mrow 
+><mn>4</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+></math> </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-4-3"  
+class="td11"> <!--l. 290--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>1</mn><mn>3</mn><mn>9</mn><mi 
+>,</mi><mn>6</mn><mn>9</mn><mn>1</mn><msup><mrow 
+><mn>7</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+></math> </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-4-4"  
+class="td11"> 3950,26                                                                                           </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-4-5"  
+class="td11"> 3351,05                                                                                           </td><td  style="text-align:left; white-space:nowrap;" id="TBL-7-4-6"  
+class="td11"> 3720,87                                                                                           </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-7-5-"><td  style="text-align:left; white-space:nowrap;" id="TBL-7-5-1"  
+class="td11">             </td></tr></table>
+</div>
+<br /> <div class="caption" 
+><span class="id">Tabela&#x00A0;2.3: </span><span  
+class="content">Coordenadas geogr&#x00E1;&#xFB01;cas e cartesianas de algumas cidades -
+solu&#x00E7;&#x00E3;o do item d.</span></div><!--tex4ht:label?: x10-150293 -->
+<div class="tabular"> <table id="TBL-8" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-8-1g"><col 
+id="TBL-8-1"></colgroup><colgroup id="TBL-8-2g"><col 
+id="TBL-8-2"></colgroup><colgroup id="TBL-8-3g"><col 
+id="TBL-8-3"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-8-1-"><td  style="text-align:left; white-space:nowrap;" id="TBL-8-1-1"  
+class="td11"> Localidades              </td><td  style="text-align:left; white-space:nowrap;" id="TBL-8-1-2"  
+class="td11"> Dist&#x00E2;ncia em linha reta  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-8-1-3"  
+class="td11"> Dist&#x00E2;ncia sobre a superf&#x00ED;cie esf&#x00E9;rica  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-8-2-"><td  style="text-align:left; white-space:nowrap;" id="TBL-8-2-1"  
+class="td11"> Porto Alegre-Londres  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-8-2-2"  
+class="td11"> 9260Km                       </td><td  style="text-align:left; white-space:nowrap;" id="TBL-8-2-3"  
+class="td11"> 10360Km                                          </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-8-3-"><td  style="text-align:left; white-space:nowrap;" id="TBL-8-3-1"  
+class="td11"> Porto Alegre-T&#x00F3;quio  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-8-3-2"  
+class="td11"> 12700Km                      </td><td  style="text-align:left; white-space:nowrap;" id="TBL-8-3-3"  
+class="td11"> 18840Km                                          </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-8-4-"><td  style="text-align:left; white-space:nowrap;" id="TBL-8-4-1"  
+class="td11"> T&#x00F3;quio-Londres        </td><td  style="text-align:left; white-space:nowrap;" id="TBL-8-4-2"  
+class="td11"> 8695Km                       </td><td  style="text-align:left; white-space:nowrap;" id="TBL-8-4-3"  
+class="td11"> 9570Km                                           </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-8-5-"><td  style="text-align:left; white-space:nowrap;" id="TBL-8-5-1"  
+class="td11">                    </td></tr></table></div>
+<br /> <div class="caption" 
+><span class="id">Tabela&#x00A0;2.4: </span><span  
+class="content">Dist&#x00E2;ncia entre as cidades - solu&#x00E7;&#x00E3;o do item e.</span></div><!--tex4ht:label?: x10-150304 -->
+<div class="tabular"> <table id="TBL-9" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-9-1g"><col 
+id="TBL-9-1"></colgroup><colgroup id="TBL-9-2g"><col 
+id="TBL-9-2"></colgroup><colgroup id="TBL-9-3g"><col 
+id="TBL-9-3"></colgroup><colgroup id="TBL-9-4g"><col 
+id="TBL-9-4"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-9-1-"><td  style="text-align:left; white-space:nowrap;" id="TBL-9-1-1"  
+class="td11"> Localidade  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-9-1-2"  
+class="td11"> <!--l. 311--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03BB;</mi></math>   </td><td  style="text-align:left; white-space:nowrap;" id="TBL-9-1-3"  
+class="td11"> <!--l. 311--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03D5;</mi></math>    </td><td  style="text-align:left; white-space:nowrap;" id="TBL-9-1-4"  
+class="td11"> Identi&#xFB01;ca&#x00E7;&#x00E3;o  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-9-2-"><td  style="text-align:left; white-space:nowrap;" id="TBL-9-2-1"  
+class="td11"> 1               </td><td  style="text-align:left; white-space:nowrap;" id="TBL-9-2-2"  
+class="td11"> <!--l. 313--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>4</mn><msup><mrow 
+><mn>8</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+><mn>5</mn><msup><mrow 
+><mn>1</mn></mrow><mrow 
+><mi 
+>&#x2032;</mi></mrow></msup 
+><mn>3</mn><msup><mrow 
+><mn>0</mn></mrow><mrow 
+><mo 
+class="MathClass-op">&#x2033;</mo></mrow></msup 
+></math>N  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-9-2-3"  
+class="td11"> <!--l. 313--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mn>0</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+><mn>0</mn><msup><mrow 
+><mn>2</mn></mrow><mrow 
+><mi 
+>&#x2032;</mi></mrow></msup 
+><mn>2</mn><msup><mrow 
+><mn>4</mn></mrow><mrow 
+><mo 
+class="MathClass-op">&#x2033;</mo></mrow></msup 
+></math>L   </td><td  style="text-align:left; white-space:nowrap;" id="TBL-9-2-4"  
+class="td11">               </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-9-3-"><td  style="text-align:left; white-space:nowrap;" id="TBL-9-3-1"  
+class="td11"> 2               </td><td  style="text-align:left; white-space:nowrap;" id="TBL-9-3-2"  
+class="td11"> <!--l. 315--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>2</mn><msup><mrow 
+><mn>7</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+><mn>1</mn><msup><mrow 
+><mn>0</mn></mrow><mrow 
+><mi 
+>&#x2032;</mi></mrow></msup 
+><mn>2</mn><msup><mrow 
+><mn>7</mn></mrow><mrow 
+><mo 
+class="MathClass-op">&#x2033;</mo></mrow></msup 
+></math>N  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-9-3-3"  
+class="td11"> <!--l. 315--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mn>0</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+><mn>5</mn><msup><mrow 
+><mn>8</mn></mrow><mrow 
+><mi 
+>&#x2032;</mi></mrow></msup 
+><mn>4</mn><msup><mrow 
+><mn>2</mn></mrow><mrow 
+><mo 
+class="MathClass-op">&#x2033;</mo></mrow></msup 
+></math>L   </td><td  style="text-align:left; white-space:nowrap;" id="TBL-9-3-4"  
+class="td11">               </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-9-4-"><td  style="text-align:left; white-space:nowrap;" id="TBL-9-4-1"  
+class="td11"> 3               </td><td  style="text-align:left; white-space:nowrap;" id="TBL-9-4-2"  
+class="td11"> <!--l. 317--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>5</mn><msup><mrow 
+><mn>1</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+><mn>1</mn><msup><mrow 
+><mn>0</mn></mrow><mrow 
+><mi 
+>&#x2032;</mi></mrow></msup 
+><mn>4</mn><msup><mrow 
+><mn>4</mn></mrow><mrow 
+><mo 
+class="MathClass-op">&#x2033;</mo></mrow></msup 
+></math>N  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-9-4-3"  
+class="td11"> <!--l. 317--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mn>0</mn></mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2218;</mo></mrow></msup 
+><mn>0</mn><msup><mrow 
+><mn>1</mn></mrow><mrow 
+><mi 
+>&#x2032;</mi></mrow></msup 
+><mn>5</mn><msup><mrow 
+><mn>5</mn></mrow><mrow 
+><mo 
+class="MathClass-op">&#x2033;</mo></mrow></msup 
+></math>W  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-9-4-4"  
+class="td11">               </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-9-5-"><td  style="text-align:left; white-space:nowrap;" id="TBL-9-5-1"  
+class="td11">            </td></tr></table>
+</div>
+<br /> <div class="caption" 
+><span class="id">Tabela&#x00A0;2.5: </span><span  
+class="content">Solu&#x00E7;&#x00E3;o do item f</span></div><!--tex4ht:label?: x10-150315 -->
+                                                                          
+
+                                                                          
+   </div><hr class="endfloat" />
+   </div>
+                                                                          
+
+                                                                          
+   <!--l. 325--><div class="crosslinks"><p class="noindent">&#x005B;<a 
+href="mainse5.html" >next</a>&#x005D; &#x005B;<a 
+href="mainse2.html" >prev</a>&#x005D; &#x005B;<a 
+href="mainse2.html#tailmainse2.html" >prev-tail</a>&#x005D; &#x005B;<a 
+href="mainse3.html" >front</a>&#x005D; &#x005B;<a 
+href="mainch2.html#mainse3.html" >up</a>&#x005D; </p></div>
+<!--l. 325--><p class="indent" >   <a 
+ id="tailmainse3.html"></a>   
+</body></html> 
