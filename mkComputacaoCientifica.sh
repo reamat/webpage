@@ -9,7 +9,9 @@
 ##################################################
 
 #REAMAT - Álgebra Linear
-cd ./ComputacaoCientifica
+cd ./repos/ComputacaoCientifica
+git pull
+cd ../../ComputacaoCientifica
 python3 mkhs.py
 ./mksrc.sh
 ./mkpub.sh

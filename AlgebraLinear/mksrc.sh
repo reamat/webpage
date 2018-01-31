@@ -8,7 +8,7 @@
 ####
 
 #master repo
-DIR_MASTER=../../AlgebraLinear
+DIR_MASTER=../repos/AlgebraLinear
 
 #create dest and/or clean it up
 mkdir -p .in_repo

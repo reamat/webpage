@@ -9,7 +9,9 @@
 ##################################################
 
 #REAMAT - Álgebra Linear
-cd ./AlgebraLinear
+cd ./repos/AlgebraLinear
+git pull
+cd ../../AlgebraLinear
 python3 mkhs.py
 ./mksrc.sh
 ./mkpub.sh
