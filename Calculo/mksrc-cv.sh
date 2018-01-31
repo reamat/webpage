@@ -8,7 +8,7 @@
 ####
 
 #master repo
-DIR_MASTER=../../Calculo/CV
+DIR_MASTER=../repos/Calculo/CV
 
 #create dest and/or clean it up
 mkdir -p .in_repo-cv

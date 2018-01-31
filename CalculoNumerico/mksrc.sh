@@ -8,7 +8,7 @@
 ####
 
 #master repo
-DIR_MASTER=../../CalculoNumerico
+DIR_MASTER=../repos/CalculoNumerico
 
 #create dest and/or clean it up
 mkdir -p .in_repo

@@ -8,7 +8,7 @@
 ####
 
 #master repo
-DIR_MASTER=../../TransformadasIntegrais/AnaliseFourier
+DIR_MASTER=../repos/TransformadasIntegrais/AnaliseFourier
 
 #create dest and/or clean it up
 mkdir -p .in_repo-af

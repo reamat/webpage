@@ -8,7 +8,7 @@
 ####
 
 #master repo
-DIR_MASTER=../../ComputacaoCientifica
+DIR_MASTER=../repos/ComputacaoCientifica
 
 #create dest and/or clean it up
 mkdir -p .in_repo

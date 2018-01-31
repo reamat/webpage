@@ -8,7 +8,7 @@
 ####
 
 #master repo
-DIR_MASTER=../../Calculo/CFVV
+DIR_MASTER=../repos/Calculo/CFVV
 
 #create dest and/or clean it up
 mkdir -p .in_repo-cfvv

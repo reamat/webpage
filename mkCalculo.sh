@@ -8,8 +8,10 @@
 #
 ##################################################
 
-#REAMAT - Transformadas Integrais
-cd ./Calculo
+#REAMAT - Cálculo
+cd ./repos/Calculo
+git pull
+cd ../../Calculo
 python3 mkhs.py
 ./mksrc-cfuv.sh
 ./mkpub-cfuv.sh

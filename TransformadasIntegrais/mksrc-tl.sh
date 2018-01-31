@@ -8,7 +8,7 @@
 ####
 
 #master repo
-DIR_MASTER=../../TransformadasIntegrais/TransformadaLaplace
+DIR_MASTER=../repos/TransformadasIntegrais/TransformadaLaplace
 
 #create dest and/or clean it up
 mkdir -p .in_repo-tl
