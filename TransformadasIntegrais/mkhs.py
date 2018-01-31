@@ -160,6 +160,6 @@ ofile.close()
 
 print("Construindo index.html ... feito!")
 
-print("Congratulations! Program ended successfully. :)")
+print("Congratulations! ./TransformadasIntegrais/mkhs.py ended successfully. :)")
 
 

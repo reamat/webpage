@@ -17,4 +17,4 @@ python3 mkwp.py
 ./mkComputacaoCientifica.sh &
 ./mkTransformadasIntegrais.sh &
 
-echo "Congratulations! Program ended successfully. :)"
+echo "Congratulations! You may now update the server. :)"

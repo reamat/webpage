@@ -21,4 +21,4 @@ python3 mkhs.py
 ./mkpub-cv.sh
 cd ..
 
-echo "Congratulations! ./TransformadasIntegrais is ready to be published. :)"
+echo "Congratulations! ./Calculo is ready to be published. :)"

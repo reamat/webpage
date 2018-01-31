@@ -38,6 +38,4 @@ make html
 cd ..
 
 #a nice final message
-echo "Finished."
-echo "INFO: You would problably like to run mkpub.sh now."
-echo "Congratulation! Program ended successfully. :)"
+echo "Congratulation! ./Calculo/mksrc-cfvv.py ended successfully. :)"
