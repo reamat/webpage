@@ -262,7 +262,7 @@ for index, f in enumerate (lfiles):
         text = text.replace("</h5>",'</h5><hr class="section">')
 
     #include on bottom
-    bottom_aux_file = open("./bottom.aux", "r")
+    bottom_aux_file = open("../livro_bottom.aux", "r")
     bottom_include = bottom_aux_file.read()
     text = text.replace("</body></html>", bottom_include)
 
@@ -309,24 +309,7 @@ for index, f in enumerate (lfiles):
         text = text.replace('<span class="glyphicon glyphicon-menu-right">', "")
 
 
-    #edit on GitHub
-    s = text.find("#srcPath:")
-    if (s!=-1):
-        auxText = text[s+9:]
-        e = auxText.find("#")
-        auxText = text[s+9:s+9+e]
-        text = text.replace("+++paginaNoGitHub+++",
-                            "https://github.com/reamat/TransformadasIntegrais/blob/master/AnaliseFourier/"+auxText)
-        s = text.find("#srcPath:")
-        auxText = text[s+9:]
-        e = auxText.find("#")
-        auxText = text[s:s+9+e+1]
-        text = text.replace(auxText,"")
-    else:
-        text = text.replace("+++paginaNoGitHub+++",
-                            "https://github.com/reamat/TransformadasIntegrais")
-        
-        
+     
     #global alert
     ifalert = open("../globalAlert.aux",'r')
     globalAlert = ifalert.read()
@@ -374,6 +357,24 @@ for index, f in enumerate (lfiles):
     inviteText = sfinvite.read()
     sfinvite.close()
     text = text.replace("+++construirResp+++",inviteText)
+
+
+    #edit on GitHub
+    s = text.find("#srcPath:")
+    if (s!=-1):
+        auxText = text[s+9:]
+        e = auxText.find("#")
+        auxText = text[s+9:s+9+e]
+        text = text.replace("+++paginaNoGitHub+++",
+                            "https://github.com/reamat/TransformadasIntegrais/blob/master/AnaliseFourier/"+auxText)
+        s = text.find("#srcPath:")
+        auxText = text[s+9:]
+        e = auxText.find("#")
+        auxText = text[s:s+9+e+1]
+        text = text.replace(auxText,"")
+    else:
+        text = text.replace("+++paginaNoGitHub+++",
+                            "https://github.com/reamat/TransformadasIntegrais")
 
 
     #nabar - REAMAT - list of hotsites

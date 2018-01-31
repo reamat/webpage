@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="pt" > 
+<head><title>Sistema de coordenadas esfericas</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- 3,notoc*,html,mathml --> 
+<meta name="src" content="main.tex"> 
+<meta name="date" content="2018-01-31 15:19:00"> 
+<link rel="stylesheet" type="text/css" href="main.css"> 
+</head><body 
+>
+   <!--l. 849--><div class="crosslinks"><p class="noindent">&#x005B;<a 
+href="mainse10.html" >next</a>&#x005D; &#x005B;<a 
+href="mainse7.html" >prev</a>&#x005D; &#x005B;<a 
+href="mainse7.html#tailmainse7.html" >prev-tail</a>&#x005D; &#x005B;<a 
+href="mainse7.html#tailmainse8.html">tail</a>&#x005D; &#x005B;<a 
+href="mainch2.html#mainse9.html" >up</a>&#x005D; </p></div>
+   <h3 class="sectionHead"><span class="titlemark">2.7   </span> <a 
+ id="x16-260002.7"></a>Sistema de coordenadas esf&#x00E9;ricas</h3>
+<!--l. 850--><p class="noindent" ><span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">#srcPath:cap_algvet/cap_algvet.tex#</span></span></span> <a 
+ id="dx16-26001"></a><hr class="figure"><div class="figure" 
+>
+                                                                          
+
+                                                                          
+<a 
+ id="x16-260029"></a>
+                                                                          
+
+                                                                          
+<div class="center" 
+>
+<!--l. 853--><p class="noindent" >
+<!--l. 854--><p class="noindent" ><img 
+src="main8x.png" alt="PIC" class="graphics" width="282.05374pt" height="282.05376pt" ><!--tex4ht:graphics  
+name="main8x.png" src="./cap_algvet/figs/coordenadas_esfericas.eps"  
+-->
+<br /> <div class="caption" 
+><span class="id">Figura&#x00A0;2.9: </span><span  
+class="content">Representa&#x00E7;&#x00E3;o de um ponto de coordenadas esf&#x00E9;ricas.</span></div><!--tex4ht:label?: x16-260029 -->
+</div>
+                                                                          
+
+                                                                          
+<!--l. 857--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 860--><p class="indent" >   No sistema de coordenadas cil&#x00ED;ndricas, um ponto
+<!--l. 860--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>P</mi></math> &#x00E9; representado
+pelas coordenadas<a 
+ id="dx16-26003"></a> <!--l. 860--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>r</mi></math>,
+<!--l. 860--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x1D703;</mi></math> e
+<!--l. 860--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03C6;</mi></math>. A coordenada
+<!--l. 860--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>r</mi></math> indica a dist&#x00E2;ncia
+do ponto <!--l. 860--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>P</mi></math> at&#x00E9;
+a origem, sendo consistente com a de&#xFB01;ni&#x00E7;&#x00E3;o de m&#x00F3;dulo de um vetor. A coordenada
+<!--l. 860--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x1D703;</mi></math> &#x00E9; o mesmo
+&#x00E2;ngulo do sistema de coordenadas cil&#x00ED;ndricas, ou seja, &#x00E9; o &#x00E2;ngulo entre o semi-eixo
+<!--l. 860--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math> e o ponto
+<!--l. 860--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>P</mi></mrow><mrow 
+><mi 
+>&#x2032;</mi></mrow></msup 
+></math> &#x0028;proje&#x00E7;&#x00E3;o de P no
+plano xy&#x0029;. O &#x00E2;ngulo <!--l. 860--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03C6;</mi></math>
+&#x00E9; o &#x00E2;ngulo entre a reta que liga a origem at&#x00E9; o ponto
+<!--l. 860--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>P</mi></math> e o
+semi-eixo <!--l. 860--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>z</mi> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn></math>.
+Ver &#xFB01;gura <a 
+href="#x16-260029">2.9<!--tex4ht:ref: fig:coordenadas_esfericas --></a>. A rela&#x00E7;&#x00E3;o entre a coordenadas no sistema de coordenadas
+esf&#x00E9;ricas e no sistema de coordenadas cil&#x00ED;ndricas &#x00E9; dada pelas proje&#x00E7;&#x00F5;es:
+<div class="subequations">
+<!--tex4ht:inline--><!--l. 862--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <mi 
+>z</mi></mtd><mtd 
+class="eqnarray-2">   <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">   <mi 
+>r</mi><mo class="qopname"> cos</mo><!--nolimits--> <mi 
+>&#x03C6;</mi></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray">&#x0028;2.34a&#x0029;</mtext><mtext 
+   id="x16-26005r2.34a"  class="label" ></mtext><mtext 
+class="endlabel"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mi 
+>&#x03C1;</mi></mtd><mtd 
+class="eqnarray-2">   <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">   <mi 
+>r</mi><mo class="qopname"> sen</mo><!--nolimits--> <mspace width="0.3em" class="thinspace"/><mi 
+>&#x03C6;</mi></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray">&#x0028;2.34b&#x0029;</mtext><mtext 
+   id="x16-26005r2.34b"  class="label" ></mtext><mtext 
+class="endlabel"></mtext></mtd>                                                          </mtr></mtable>
+</math>
+<!--l. 865--><p class="nopar" >
+                                                                          
+
+                                                                          
+   </div>
+<!--l. 867--><p class="indent" >   Usando &#x0028;<a 
+href="mainse7.html#x15-250040">2.31<!--tex4ht:ref: xphi --></a>&#x0029;, encontramos a rela&#x00E7;&#x00E3;o entre o sistema de coordenadas
+esf&#x00E9;ricas e cartesianas: <div class="subequations">
+<!--tex4ht:inline--><!--l. 869--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1"> <mi 
+>x</mi></mtd><mtd 
+class="eqnarray-2">   <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">   <mi 
+>r</mi><mo class="qopname"> sen</mo><!--nolimits--> <mspace width="0.3em" class="thinspace"/><mi 
+>&#x03C6;</mi><mo class="qopname"> cos</mo><!--nolimits--> <mi 
+>&#x1D703;</mi></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray">&#x0028;2.35a&#x0029;</mtext><mtext 
+   id="x16-26007r2.35a"  class="label" ></mtext><mtext 
+class="endlabel"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mi 
+>y</mi></mtd><mtd 
+class="eqnarray-2">   <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">   <mi 
+>r</mi><mo class="qopname"> sen</mo><!--nolimits--> <mspace width="0.3em" class="thinspace"/><mi 
+>&#x03C6;</mi><mo class="qopname"> sen</mo><!--nolimits--> <mspace width="0.3em" class="thinspace"/><mi 
+>&#x1D703;</mi></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray">&#x0028;2.35b&#x0029;</mtext><mtext 
+   id="x16-26007r2.35b"  class="label" ></mtext><mtext 
+class="endlabel"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mi 
+>z</mi></mtd><mtd 
+class="eqnarray-2">   <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">   <mi 
+>r</mi><mo class="qopname"> cos</mo><!--nolimits--> <mi 
+>&#x03C6;</mi>     </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray">&#x0028;2.35c&#x0029;</mtext><mtext 
+   id="x16-26007r2.35c"  class="label" ></mtext><mtext 
+class="endlabel"></mtext></mtd>                                                     </mtr></mtable>
+</math>
+<!--l. 873--><p class="nopar" >
+   </div>
+<!--l. 875--><p class="indent" >   Analogamente, pode-se escrever: <div class="subequations">
+                                                                          
+
+                                                                          
+<!--tex4ht:inline--><!--l. 877--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+<mtable 
+class="eqnarray" columnalign="right center left" >
+<mtr><mtd 
+class="eqnarray-1">     <mi 
+>r</mi></mtd><mtd 
+class="eqnarray-2">   <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">   <msqrt><mrow><msup><mrow 
+>
+<mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <msup><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow></msqrt>   </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray">&#x0028;2.36a&#x0029;</mtext><mtext 
+   id="x16-26009r2.36a"  class="label" ></mtext><mtext 
+class="endlabel"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mo class="qopname">cos</mo><!--nolimits--> <mi 
+>&#x03C6;</mi></mtd><mtd 
+class="eqnarray-2">   <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">   <mfrac><mrow 
+><mi 
+>z</mi></mrow>
+<mrow 
+><mi 
+>r</mi></mrow></mfrac> <mo 
+class="MathClass-rel">=</mo>        <mfrac><mrow 
+><mi 
+>z</mi></mrow> 
+<mrow 
+><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <msup><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <msup><mrow 
+><mi 
+>z</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow></mfrac></mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray">&#x0028;2.36b&#x0029;</mtext><mtext 
+   id="x16-26009r2.36b"  class="label" ></mtext><mtext 
+class="endlabel"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mo class="qopname">cos</mo><!--nolimits--> <mi 
+>&#x1D703;</mi></mtd><mtd 
+class="eqnarray-2">   <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">   <mfrac><mrow 
+><mi 
+>x</mi></mrow>
+<mrow 
+><mi 
+>&#x03C1;</mi></mrow></mfrac> <mo 
+class="MathClass-rel">=</mo>     <mfrac><mrow 
+><mi 
+>x</mi></mrow> 
+<mrow 
+><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <msup><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow></mfrac>     </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray">&#x0028;2.36c&#x0029;</mtext><mtext 
+   id="x16-26009r2.36c"  class="label" ></mtext><mtext 
+class="endlabel"></mtext></mtd>
+</mtr><mtr><mtd 
+class="eqnarray-1"> <mo class="qopname">sen</mo><!--nolimits--> <mspace width="0.3em" class="thinspace"/><mi 
+>&#x1D703;</mi></mtd><mtd 
+class="eqnarray-2">   <mo 
+class="MathClass-rel">=</mo></mtd><mtd 
+class="eqnarray-3">   <mfrac><mrow 
+><mi 
+>y</mi></mrow>
+<mrow 
+><mi 
+>&#x03C1;</mi></mrow></mfrac> <mo 
+class="MathClass-rel">=</mo>     <mfrac><mrow 
+><mi 
+>y</mi></mrow> 
+<mrow 
+><msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <msup><mrow 
+><mi 
+>y</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow></mfrac>     </mtd><mtd 
+class="eqnarray-4"> <mtext class="eqnarray">&#x0028;2.36d&#x0029;</mtext><mtext 
+   id="x16-26009r2.36d"  class="label" ></mtext><mtext 
+class="endlabel"></mtext></mtd>                                            </mtr></mtable>
+</math>
+<!--l. 882--><p class="nopar" >
+   </div>
+   <div class="newtheorem">
+<!--l. 886--><p class="noindent" ><span class="head">
+<a 
+ id="x16-26010r1"></a>
+<span 
+class="ec-lmbx-12">E 2.7.1.</span>  </span> Os seguintes pontos s&#x00E3;o dados em coordenadas cartesianas, encontre
+suas representa&#x00E7;&#x00F5;es em coordenas esf&#x00E9;ricas &#x0028;ver tamb&#x00E9;m exc&#x00ED;cio
+<a 
+href="mainse7.html#x15-25009r1">2.6.1<!--tex4ht:ref: rect_cin --></a>&#x0029;:
+      <ul class="itemize1">
+      <li class="itemize"><!--l. 888--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mfenced separators="" 
+open="&#x003C;"  close="&#x003E;" ><mrow><mn>1</mn><mi 
+>,</mi><mn>1</mn><mi 
+>,</mi><mn>1</mn></mrow></mfenced></math>
+      </li>
+      <li class="itemize"><!--l. 889--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mfenced separators="" 
+open="&#x003C;"  close="&#x003E;" ><mrow><mn>1</mn><mi 
+>,</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>1</mn><mi 
+>,</mi><mn>1</mn></mrow></mfenced></math>
+      </li>
+      <li class="itemize"><!--l. 890--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mfenced separators="" 
+open="&#x003C;"  close="&#x003E;" ><mrow><mo 
+class="MathClass-bin">&#x2212;</mo><mn>1</mn><mi 
+>,</mi><mn>1</mn><mi 
+>,</mi><mn>1</mn></mrow></mfenced></math>
+      </li>
+      <li class="itemize"><!--l. 891--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mfenced separators="" 
+open="&#x003C;"  close="&#x003E;" ><mrow><mo 
+class="MathClass-bin">&#x2212;</mo><mn>1</mn><mi 
+>,</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>1</mn><mi 
+>,</mi><mn>1</mn></mrow></mfenced></math></li></ul>
+                                                                          
+
+                                                                          
+   </div>
+<!--l. 894--><p class="indent" >   Resp: <!--l. 894--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mfenced separators="" 
+open="("  close=")" ><mrow><msqrt><mrow><mn>3</mn></mrow></msqrt><mi 
+>,</mi><mfrac><mrow 
+><mi 
+>&#x03C0;</mi></mrow>
+<mrow 
+><mn>4</mn></mrow></mfrac> <mi 
+>,</mi><mi 
+>&#x1D703;</mi></mrow></mfenced></math>,
+<!--l. 894--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mfenced separators="" 
+open="("  close=")" ><mrow><msqrt><mrow><mn>3</mn></mrow></msqrt><mi 
+>,</mi><mfrac><mrow 
+><mn>5</mn><mi 
+>&#x03C0;</mi></mrow>
+ <mrow 
+><mn>4</mn></mrow></mfrac> <mi 
+>,</mi><mi 
+>&#x1D703;</mi></mrow></mfenced></math>,
+<!--l. 894--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mfenced separators="" 
+open="("  close=")" ><mrow><msqrt><mrow><mn>3</mn></mrow></msqrt><mi 
+>,</mi><mfrac><mrow 
+><mn>3</mn><mi 
+>&#x03C0;</mi></mrow>
+ <mrow 
+><mn>4</mn></mrow></mfrac> <mi 
+>,</mi><mi 
+>&#x1D703;</mi></mrow></mfenced></math> e
+<!--l. 894--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mfenced separators="" 
+open="("  close=")" ><mrow><msqrt><mrow><mn>3</mn></mrow></msqrt><mi 
+>,</mi><mfrac><mrow 
+><mn>7</mn><mi 
+>&#x03C0;</mi></mrow>
+ <mrow 
+><mn>4</mn></mrow></mfrac> <mi 
+>,</mi><mi 
+>&#x1D703;</mi></mrow></mfenced></math>, onde
+<!--l. 894--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x1D703;</mi> <mo 
+class="MathClass-rel">=</mo><msup><mrow 
+><mo class="qopname"> cos</mo><!--nolimits--> </mrow><mrow 
+><mo 
+class="MathClass-bin">&#x2212;</mo><mn>1</mn></mrow></msup 
+> <mfenced separators="" 
+open="("  close=")" ><mrow><mfrac><mrow 
+><msqrt><mrow><mn>3</mn></mrow></msqrt></mrow>
+ <mrow 
+><mn>3</mn></mrow></mfrac>  </mrow></mfenced> <mo 
+class="MathClass-rel">&#x2248;</mo> <mn>0</mn><mi 
+>,</mi><mn>9</mn><mn>5</mn><mn>5</mn><mo 
+class="MathClass-punc">.</mo></math>
+                                                                          
+
+                                                                          
+   <!--l. 898--><div class="crosslinks"><p class="noindent">&#x005B;<a 
+href="mainse10.html" >next</a>&#x005D; &#x005B;<a 
+href="mainse7.html" >prev</a>&#x005D; &#x005B;<a 
+href="mainse7.html#tailmainse7.html" >prev-tail</a>&#x005D; &#x005B;<a 
+href="mainse8.html" >front</a>&#x005D; &#x005B;<a 
+href="mainch2.html#mainse9.html" >up</a>&#x005D; </p></div>
+<!--l. 898--><p class="indent" >   <a 
+ id="tailmainse8.html"></a>  
+</body></html> 
