@@ -9,7 +9,9 @@
 ##################################################
 
 #REAMAT - Transformadas Integrais
-cd ./TransformadasIntegrais
+cd ./repos/TransformadasIntegrais
+git pull
+cd ../../TransformadasIntegrais
 python3 mkhs.py
 ./mksrc-af.sh
 ./mkpub-af.sh

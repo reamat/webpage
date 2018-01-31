@@ -9,7 +9,9 @@
 ##################################################
 
 #REAMAT - Cálculo Numérico
-cd ./CalculoNumerico
+cd ./repos/CalculoNumerico
+git pull
+cd ../../CalculoNumerico
 python3 mkhs.py
 ./mksrc.sh
 ./mkpub.sh

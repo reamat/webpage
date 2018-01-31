@@ -288,7 +288,7 @@ text = text.replace("+++presentation:coluna2+++",
 '\
 <h3><span class="glyphicon glyphicon-edit"></span> Edição rápida</h3>\
 <p>\
-Utilize o botão <span class="glyphicon glyphicon-edit"></span> disponível nas páginas dos recursos para encaminhar edições rápidas. Ao clicar no botão, você será redirecionado ao código-fonte no GitHub do material referente à página que está consultando. Edite e registre seu <i>commit</i>. Um dos organizadores do projeto irá dar encaminhado à sua colaboração.</p>\
+Utilize o botão <span class="glyphicon glyphicon-edit"></span> disponível nas páginas dos recursos para encaminhar edições rápidas. Ao clicar no botão, você será redirecionado ao código-fonte no GitHub do material referente à página que está consultando. Edite e registre seu <i>commit</i>. Então, um dos organizadores dará encaminhameto à sua colaboração.</p>\
 <h3><span class="glyphicon glyphicon-warning-sign"></span> Informe de Erros e Sugestões</h3>\
 <p>\
 Utilize o botão <span class="glyphicon glyphicon-warning-sign"></span> disponível nas páginas dos recursos para nos informar sobre erros ou dar sugestões. Ao clicar no botão, você será redirecionado para um formulário. Complete-o e clique no botão enviar. Pronto, seu informe será encaminhado para nosso <a  href="./forum.html">fórum</a> e um dos colaboradores poderá dar encaminhamento.</p>\

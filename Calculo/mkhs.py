@@ -11,8 +11,8 @@ import os
 import string
 import datetime
 
-nomeDoRecurso = "Transformadas Integrais"
-nomeDoRepo = "TransformadasIntegrais"
+nomeDoRecurso = "Cálculo"
+nomeDoRepo = "Calculo"
 
 #parameters
 sdir = ".."
@@ -22,13 +22,13 @@ sdir = ".."
 #************************************************#
 print("Preliminares ...")
 
-if not(os.path.isdir(sdir+"//on_server//"+nomeDoRepo)):
-    os.system("mkdir "+sdir+"//on_server//"+nomeDoRepo);
+if not(os.path.isdir(sdir+"/on_server/"+nomeDoRepo)):
+    os.system("mkdir "+sdir+"/on_server/"+nomeDoRepo);
 
 os.system("cp -rf "+sdir+"/"+nomeDoRepo+"/figs "
               +sdir+"/on_server/"+nomeDoRepo+"/")
 
-os.system("cp index.css "+sdir+"//on_server//"+nomeDoRepo+"//index.css")
+os.system("cp index.css "+sdir+"/on_server/"+nomeDoRepo+"//index.css")
 
 ifile = open(sdir+"//globalAlert.aux",'r')
 globalAlert = ifile.read()
@@ -51,8 +51,8 @@ print("Preliminares ... feito!")
 #************************************************#
 print("Construindo index.htm ...")
     
-os.system("cp index.aux "+sdir+"//on_server//"+nomeDoRepo+"//index.html")
-ifile = open(sdir+"//on_server//"+nomeDoRepo+"//index.html", 'r')
+os.system("cp index.aux "+sdir+"/on_server/"+nomeDoRepo+"/index.html")
+ifile = open(sdir+"/on_server/"+nomeDoRepo+"/index.html", 'r')
 text = ifile.read()
 ifile.close()
 
@@ -81,17 +81,17 @@ text = text.replace("+++jumbotron:subtitle+++","")
 text = text.replace("+++presentation:coluna1+++",
 '\
 <h3>Sobre</h3>\
-<p><strong>REAMAT - Transformadas Integrais</strong> \
+<p><strong>REAMAT - Cálculo</strong> \
 é um projeto de escrita colaborativa de recursos \
-educacionais abertos sobre transformadas integrais.</p>\
+educacionais abertos sobre cálculo diferencial e integral.</p>\
 <p>Nosso objetivo é de fomentar o desenvolvimento \
 de materiais didáticos pela colaboração entre \
 professores e alunos de universidades, institutos de \
 educação e demais interessados no estudo e \
-aplicação de transformadas integrais nos mais diversos ramos da \
+aplicação do cálculo nos mais diversos ramos da \
 ciência e tecnologia.</p>\
 <p>Para tanto, disponibilizamos em repositório público \
-<a href="https://github.com/reamat/TransformadasIntegrais" target="blank">\
+<a href="https://github.com/reamat/Calculo" target="blank">\
 GitHub</a> todo o código-fonte dos materiais \
 em desenvolvimento sob licença \
 <a href="https://creativecommons.org/licenses/by-sa/3.0/" \
@@ -123,20 +123,23 @@ text = text.replace("+++presentation:coluna2+++",
 <ul class="list-unstyled">\
 <li><h4>Livros Colaborativos</h4>\
 <ul class="list-unstyled">\
-<li><a href="./livro-af/main.html">\
-Análise de Fourier</a>\
+<li><a href="./livro-cfuv/main.html">\
+Cálculo de funções de uma variável</a>\
 </li>\
-<li><a href="./livro-tl/main.html">\
-Transformada de Laplace</a>\
+<li><a href="./livro-cfvv/main.html">\
+Cálculo de funções de várias variáveis</a>\
+</li>\
+<li><a href="./livro-cv/main.html">\
+Cálculo vetorial</a>\
 </li>\
 </ul>\
 </li>\
 </ul>\
 <h3>Repositório GitHub</h3>\
 <ul class="list-unstyled">\
-<li><a href="https://github.com/reamat/TransformadasIntegrais"\
+<li><a href="https://github.com/reamat/Calculo"\
 target="_blank">\
-https://github.com/reamat/TransformadasIntegrais</a></li>\
+https://github.com/reamat/Calculo</a></li>\
 </ul>\
 <h3>Contato</h3>\
 <ul class="list-unstyled">\
@@ -160,6 +163,6 @@ ofile.close()
 
 print("Construindo index.html ... feito!")
 
-print("Congratulations! ./TransformadasIntegrais/mkhs.py ended successfully. :)")
+print("Congratulations! ./Calculo/mkhs.py ended successfully. :)")
 
 

@@ -8,7 +8,7 @@
 ####
 
 #master repo
-DIR_MASTER=../../CalculoNumerico
+DIR_MASTER=../repos/CalculoNumerico
 
 #create dest and/or clean it up
 mkdir -p .in_repo
@@ -48,6 +48,4 @@ make html-py
 cd ..
 
 #a nice final message
-echo "Finished."
-echo "INFO: bla bla bla ..."
-echo "Congratulation! Program ended successfully. :)"
+echo "Congratulation! ./CalculoNumerico/mksrc.py ended successfully. :)"

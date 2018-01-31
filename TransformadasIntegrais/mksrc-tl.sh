@@ -8,7 +8,7 @@
 ####
 
 #master repo
-DIR_MASTER=../../TransformadasIntegrais/TransformadaLaplace
+DIR_MASTER=../repos/TransformadasIntegrais/TransformadaLaplace
 
 #create dest and/or clean it up
 mkdir -p .in_repo-tl
@@ -38,6 +38,4 @@ make html
 cd ..
 
 #a nice final message
-echo "Finished."
-echo "INFO: You would problably like to run mkpub.sh now."
-echo "Congratulation! Program ended successfully. :)"
+echo "Congratulation! ./TransformadasIntegrais/mksrc-tf.sh ended successfully. :)"

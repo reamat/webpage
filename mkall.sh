@@ -12,8 +12,9 @@
 python3 mkwp.py
 
 ./mkAlgebraLinear.sh &
+./mkCalculo.sh &
 ./mkCalculoNumerico.sh &
 ./mkComputacaoCientifica.sh &
 ./mkTransformadasIntegrais.sh &
 
-echo "Congratulations! Program ended successfully. :)"
+echo "Congratulations! You may now update the server. :)"

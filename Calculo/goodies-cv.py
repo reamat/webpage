@@ -78,8 +78,8 @@ def text_to_initials(text):
             s += 1
     return ini
 
-sdirname = "./.tmp/"
-dest_dirname = "../on_server/AlgebraLinear/livro/"
+sdirname = "./.tmp-cv/"
+dest_dirname = "../on_server/Calculo/livro-cv/"
 
 #preliminar - list of hotsites
 ifhs = open("../lisths.aux",'r')
@@ -134,14 +134,14 @@ ifile.close()
 
 #change titleHead and title
 #title
-title = "<title>Álgebra Linear - Um Livro Colaborativo"
+title = "<title>Cálculo vetorial - Um Livro Colaborativo"
 s = text.index('<title>')
 e = text.index('</title>')
 text = text.replace(text[s:e], title)
 
 #titleHead
-text = text.replace('<h2 class="titleHead">Álgebra Linear<br />',
-                    '<h2 class="titleHead">Álgebra Linear<br /><small>')
+text = text.replace('<h2 class="titleHead">Cálculo vetorial<br />',
+                    '<h2 class="titleHead">Cálculo vetorial<br /><small>')
 s = text.index('<h2 class="titleHead">')
 auxText = text[s:]
 e = s + auxText.index('</h2>')
@@ -177,13 +177,7 @@ for index, f in enumerate (lfiles):
     hfaux = open("../livro_head.aux", "r")
     head_include = hfaux.read()
     hfaux.close()
-    
-    # #include head
-    # headname = "top.aux"
-    
-    # head_aux_file = open(headname, "r")
-    # head_include = head_aux_file.read()
-    
+        
     #get chapterHead or sectionHead to include in <meta> keywords
     s=-1
     e=-1
@@ -237,7 +231,7 @@ for index, f in enumerate (lfiles):
                     kw = []
 
     head1 = "<meta name='keywords' content='"
-    head1 += "Livro, Álgebra Linear"
+    head1 += "Livro, Cálculo vetorial, "
     if (len(kw) != 0):
         head1 += ", " + kw
     head1 += "'>\n"
@@ -257,7 +251,8 @@ for index, f in enumerate (lfiles):
     text = text.replace("<body \n>", body_include)
 
     #book title
-    text = text.replace("+++tituloDoLivro+++","Álgebra Linear - Um Livro Colaborativo")
+    text = text.replace("+++tituloDoLivro+++","Cálculo vetorial - Um Livro Colaborativo")
+
 
     #hrule abaixo de h3, h4
     if ((f[0:6] == "mainse") or (f[0:6] == "mainli") or (f[0:6] == "mainch")):
@@ -269,8 +264,6 @@ for index, f in enumerate (lfiles):
     #include on bottom
     bottom_aux_file = open("../livro_bottom.aux", "r")
     bottom_include = bottom_aux_file.read()
-    bottom_aux_file.close()
-    
     text = text.replace("</body></html>", bottom_include)
 
     #remove original crosslinks
@@ -314,22 +307,19 @@ for index, f in enumerate (lfiles):
         text = text.replace('<span class="glyphicon glyphicon-menu-left">', "")
         text = text.replace('<span class="glyphicon glyphicon-menu-hamburger">', "")
         text = text.replace('<span class="glyphicon glyphicon-menu-right">', "")
-
-
+        
+        
     #global alert
-    ifalert = open("../globalAlert.aux","r")
+    ifalert = open("../globalAlert.aux",'r')
     globalAlert = ifalert.read()
     ifalert.close()
     text = text.replace("+++alertaGeral+++",globalAlert)
 
-    #nabar - REAMAT - list of hotsites
-    text = text.replace("+++listaDeHotsites+++",lisths)
-
-    #sectionTOCS title
-    if (f[0:6] == "mainch"):
-        rep = '<div class="sectionTOCS">'
-        rep += '<h3 class="sectionHead">Sumário</h3><hr class="section">'
-        text = text.replace('<div class="sectionTOCS">', rep)
+        #global alert
+    ifalert = open("../globalAlert.aux","r")
+    globalAlert = ifalert.read()
+    ifalert.close()
+    text = text.replace("+++alertaGeral+++",globalAlert)
 
     #invitations
     sfinvite = open("../emConstrucao.aux", "r")
@@ -375,7 +365,7 @@ for index, f in enumerate (lfiles):
         e = auxText.find("#")
         auxText = text[s+9:s+9+e]
         text = text.replace("+++paginaNoGitHub+++",
-                            "https://github.com/reamat/AlgebraLinear/blob/master/"+auxText)
+                            "https://github.com/reamat/Calculo/blob/master/CV/"+auxText)
         s = text.find("#srcPath:")
         auxText = text[s+9:]
         e = auxText.find("#")
@@ -383,9 +373,18 @@ for index, f in enumerate (lfiles):
         text = text.replace(auxText,"")
     else:
         text = text.replace("+++paginaNoGitHub+++",
-                            "https://github.com/reamat/AlgebraLinear")
+                            "https://github.com/reamat/Calculo")
 
 
+    #nabar - REAMAT - list of hotsites
+    text = text.replace("+++listaDeHotsites+++",lisths)
+
+    #sectionTOCS title
+    if (f[0:6] == "mainch"):
+        rep = '<div class="sectionTOCS">'
+        rep += '<h3 class="sectionHead">Sumário</h3><hr class="section">'
+        text = text.replace('<div class="sectionTOCS">', rep)
+        
     #collapse demo's
     lbc = [] #list of collapses buttoms
     s = text.find("<!--prova begin-->")
@@ -459,8 +458,8 @@ for index, f in enumerate (lfiles):
         text = text.replace("</body>", sub)
 
     #set version change
-    text = text.replace("+++urlsumario+++","../livro/main.html")
-    text = text.replace("+++urlpdf+++","../livro/livro.pdf")
+    text = text.replace("+++urlsumario+++","../livro-cv/main.html")
+    text = text.replace("+++urlpdf+++","../livro-cv/livro.pdf")
 
     #add update date and time
     data = datetime.datetime.now()
