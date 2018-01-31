@@ -277,7 +277,7 @@ for index, f in enumerate (lfiles):
         text = text.replace("</h5>",'</h5><hr class="section">')
 
     #include on bottom
-    bottom_aux_file = open("./bottom.aux", "r")
+    bottom_aux_file = open("../livro_bottom.aux", "r")
     bottom_include = bottom_aux_file.read()
     text = text.replace("</body></html>", bottom_include)
 
