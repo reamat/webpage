@@ -89,7 +89,7 @@ text = text.replace("+++presentation:coluna1+++",
 '\
 <h3>Sobre</h3>\
 <p>\
-<a href="./livro/main.html"><strong>REAMAT</strong></a> \
+<strong>REAMAT</strong> \
 é um projeto de escrita colaborativa de recursos \
 educacionais abertos sobre tópicos de matemática \
 e suas aplicações.</p>\
@@ -278,7 +278,7 @@ Faça um <i>fork</i> do repositório para o qual deseja colaborar, \
 edite e, então, faça seu <i>Pull request</i>. Em seguida, um dos organizadores \
 dará encaminhamento à sua colaboração.</p>\
 <h3>Fórum</h3>\
-<p>Participe de nosso <a href="./fórum.html">fórum</a>, opine e ajude-nos no desenvolvimento do projeto.</p>\
+<p>Participe de nosso <a href="./forum.html">fórum</a>, opine e ajude-nos no desenvolvimento do projeto.</p>\
 <h3>Outras formas de colaboração</h3>\
 <p>Toda a colaração é bem vinda! Caso tenha encontrado algum erro, imprecisão ou tenha alguma sugestão a fazer, escreva para nosso e-mail:</p>\
 <p style="text-align: center;"><a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a></p>\
@@ -352,6 +352,12 @@ text = text.replace("+++presentation:coluna1+++",
 <li><a href="https://chasqueweb.ufrgs.br/~dmarcon/" target="_blank">Diego Marcon Farias - UFRGS</a></li>\
 <li><a href="http:/professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 <li><a href="https://chasqueweb.ufrgs.br/~rafaelrigao/" target="_blank">Rafael Rigão Souza - UFRGS</a></li>\
+</ul>\
+<h4>REAMAT - Cálculo</h4>\
+<ul class="list-unstyled">\
+<li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
+<li><a href="http:/www.mat.ufrgs.br/~fabio" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="http:/professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 </ul>\
 <h4>REAMAT - Cálculo Numérico</h4>\
 <ul class="list-unstyled">\
