@@ -34,6 +34,8 @@ https://www.ufrgs.br/reamat
 
 * AlgebraLinear: REA de Álgebra Linear https://github.com/reamat/AlgebraLinear
 
+* Calculo: REA de Cálculo https://github.com/reamat/Calculo
+
 * CalculoNumerico: REA de Cálculo Numérico https://github.com/reamat/CalculoNumerico
 
 * ComputacaoCientifica: REA de Computação Científica https://github.com/reamat/ComputacaoCientifica
