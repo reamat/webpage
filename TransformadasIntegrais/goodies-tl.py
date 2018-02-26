@@ -466,11 +466,11 @@ for index, f in enumerate (lfiles):
     #add update date and time
     data = datetime.datetime.now()
     text = text.replace("+++atualizadoem+++",
-            '<p style="text-align:right">Página gerada em ' +
+            'Página gerada em ' +
             str(data.day) + '/' + str(data.month) + '/' + str(data.year) +
             ' às ' + str(data.hour) + ':' + str(data.minute) +
             ':' + str(data.second) +
-            '.</p>')
+            '.')
 
 
     ofile.write(text)
