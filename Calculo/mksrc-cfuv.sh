@@ -21,20 +21,22 @@ cp Makefile_example ./.in_repo-cfuv/Makefile
 cp myconfig.cfg  ./.in_repo-cfuv/myconfig.cfg
 #cp pgfsys-tex4ht.def ./.in_repo/
 
+#make pdf version
+cd .in_repo-cfuv
+make clean
+make pdf
+cd ..
+
 #add source infos
 python3 addSrcInfo.py cfuv
 
 #add source infos
 python3 invitations.py cfuv
 
-#enter dest and make all local versions of the book
+#make html version
 cd .in_repo-cfuv
 make clean
-make pdf
-make clean
 make html
-
-#back to origin folder
 cd ..
 
 #a nice final message
