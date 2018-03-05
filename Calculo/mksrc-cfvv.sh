@@ -22,7 +22,7 @@ cp myconfig.cfg  ./.in_repo-cfvv/myconfig.cfg
 #cp pgfsys-tex4ht.def ./.in_repo/
 
 #make pdf version
-cd .in_repo-cfuv
+cd .in_repo-cfvv
 make clean
 make pdf
 cd ..
