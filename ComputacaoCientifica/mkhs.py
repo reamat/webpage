@@ -108,7 +108,7 @@ target="_blank">licença</a> para maiores informações. \
 </p>\
 <p>\
 O sucesso do projeto depende da colaboração! Participe \
-diretamenta da escrita dos recursos educacionais, dê \
+diretamente da escrita dos recursos educacionais, dê \
 sugestões ou nos avise de erros e imprecisões. Toda a \
 colaboração é bem vinda. Veja como participar \
 <a href="../participe.html">aqui</a>. \
