@@ -1,14 +1,16 @@
 # webpage
 
-Scripts de construção da site do projeto "REAMAT - Escrita colaborativa de recursos educacionais abertos de matemática":
+Scripts de construção do site do projeto "REAMAT - Escrita colaborativa de recursos educacionais abertos de matemática":
 
 https://www.ufrgs.br/reamat
 
 ## Lista de scripts
 
-* mkall.sh: compila e instala todo o _site_ (_sitemap_ não incluido)
+* mkall.sh: compila e instala todo o _site_ (_sitemap_ não incluído)
 
 	* mkAlgebraLinear.sh: compila e instala o _hotsite_ AlgebraLinear
+
+	* mkCalculo.sh: compila e instala o _hotsite_ Calculo
 
 	* mkCalculoNumerico.sh: compila e instala o _hotsite_ CalculoNumerico
 
@@ -16,7 +18,7 @@ https://www.ufrgs.br/reamat
 
 	* mkTransformadasIntegrais.sh: compila e instala o _hotsite_ TransformadasIntegrais
 
-* mkwp.py: constroi o portal reamat
+* mkwp.py: constrói o portal reamat
 
 	* lisths.aux: lista de _hotsites_
 
@@ -28,7 +30,7 @@ https://www.ufrgs.br/reamat
 
 	* aviso.php: página com formulário para informe de erros, sugestões ou dúvidas
 
-* sitemapMaker.py: constroi o _sitemap_ de todo o site
+* sitemapMaker.py: constrói o _sitemap_ de todo o site
 
 ## Lista de _hotsites_
 
