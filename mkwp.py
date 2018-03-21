@@ -91,7 +91,7 @@ text = text.replace("+++presentation:coluna1+++",
 <p>\
 <strong>REAMAT</strong> \
 é um projeto de escrita colaborativa de recursos \
-educacionais abertos sobre tópicos de matemática \
+educacionais abertos (REA) sobre tópicos de matemática \
 e suas aplicações.</p>\
 <p>\
 Nosso objetivo é de fomentar o desenvolvimento \
