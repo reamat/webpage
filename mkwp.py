@@ -91,7 +91,7 @@ text = text.replace("+++presentation:coluna1+++",
 <p>\
 <strong>REAMAT</strong> \
 é um projeto de escrita colaborativa de recursos \
-educacionais abertos sobre tópicos de matemática \
+educacionais abertos (REA) sobre tópicos de matemática \
 e suas aplicações.</p>\
 <p>\
 Nosso objetivo é de fomentar o desenvolvimento \
@@ -350,21 +350,21 @@ text = text.replace("+++presentation:coluna1+++",
 <h4>REAMAT - Álgebra Linear</h4>\
 <ul class="list-unstyled">\
 <li><a href="https://chasqueweb.ufrgs.br/~dmarcon/" target="_blank">Diego Marcon Farias - UFRGS</a></li>\
-<li><a href="http:/www.mat.ufrgs.br/~fabio" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="http://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
 <li><a href="http:/professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 <li><a href="https://chasqueweb.ufrgs.br/~rafaelrigao/" target="_blank">Rafael Rigão Souza - UFRGS</a></li>\
 </ul>\
 <h4>REAMAT - Cálculo</h4>\
 <ul class="list-unstyled">\
 <li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
-<li><a href="http:/www.mat.ufrgs.br/~fabio" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="http://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
 <li><a href="http:/professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 </ul>\
 <h4>REAMAT - Cálculo Numérico</h4>\
 <ul class="list-unstyled">\
 <li><a href="https://chasqueweb.ufrgs.br/~djusto/" target="_blank">Dagoberto Adriano Rizzotto Justo - UFRGS</a></li>\
 <li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
-<li><a href="http:/www.mat.ufrgs.br/~fabio" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="http://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
 <li><a href="http://www.joinville.udesc.br/portal/professores/helder/index.php" target="_blank">Helder Geovane Gomes de Lima - UDESC</a></li>\
 <li><a href="http:/www.mat.ufrgs.br/~guidi/" target="_blank">Leonardo Fernandes Guidi - UFRGS</a></li>\
 <li><a href="http:/professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
@@ -376,7 +376,7 @@ text = text.replace("+++presentation:coluna2+++",
 <h4>REAMAT - Computação Científica</h4>\
 <ul class="list-unstyled">\
 <li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
-<li><a href="http:/www.mat.ufrgs.br/~fabio" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="http://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
 <li><a href="http://professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 </ul>\
 <h4>REAMAT - Transformadas Integrais</h4>\
