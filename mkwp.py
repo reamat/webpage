@@ -382,7 +382,7 @@ text = text.replace("+++presentation:coluna2+++",
 <h4>REAMAT - Transformadas Integrais</h4>\
 <ul class="list-unstyled">\
 <li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
-<li><a href="http://www.mat.ufrgs.br/~fabio" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="http://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
 <li><a href="http://professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 </ul>\
 ')
@@ -401,6 +401,117 @@ ofile.write(text)
 ofile.close()
 
 print("Construindo organizadores.html ... feito!")
+
+
+
+
+#************************************************#
+# perguntas_frequentes.html
+#************************************************#
+print("Construindo perguntas_frequentes.htm ...")
+    
+os.system("cp index.aux "+sdir+"/on_server/perguntas_frequentes.html")
+ifile = open(sdir+"/on_server/perguntas_frequentes.html", 'r')
+text = ifile.read()
+ifile.close()
+
+#head
+text = text.replace("+++title+++"," - Perguntas frequentes")
+text = text.replace("+++keywords+++","perguntas-frequentes")
+
+#global alert
+text = text.replace("+++alertaGeral+++",globalAlert)
+
+#navbar
+text = text.replace("+++navbar:inicio:active+++","")
+text = text.replace("+++navbar:recursos:active+++","")
+text = text.replace("+++navbar:forum:active+++","")
+text = text.replace("+++navbar:participe:active+++","")
+text = text.replace("+++navbar:organizadores:active+++",'class="active"')
+text = text.replace("+++listaDeHotsites+++",lisths)
+
+#jumbotron
+text = text.replace("+++jumbotron:subtitle+++",
+                    "Perguntas frequentes")
+
+#presentation
+
+
+question=[]
+answer=[]
+
+
+#faq
+ifile = open(sdir+"/faq.txt",'r')
+rea_list = ifile.readlines()
+token=''
+k=0
+for line in rea_list:
+	if len(line)>2:
+		if line[0:2]=='P)':
+			token='P'
+			k=k+1
+			question.append(line[2:])
+
+		if line[0:2]=='R)':
+			token='R'
+			answer.append(line[2:])
+
+		if line[0:2]!='R)' and line[0:2]!='P)' and line[0]!='#':
+			if token == 'R':
+				answer[k-1]=answer[k-1]+line
+
+
+ifile.close()    
+
+
+
+n_cut_columns=6 ####You must do it by hand!
+
+###Columa da esquerda
+text_faq=""
+for k in range(0,n_cut_columns):
+	basic_text_faq = '<h3>+++question+++</h3><p>+++answer+++</p>'
+	basic_text_faq = basic_text_faq.replace("+++question+++", question[k])
+	basic_text_faq = basic_text_faq.replace("+++answer+++", answer[k])
+	text_faq=text_faq + basic_text_faq
+
+
+text_faq = text_faq.replace("+++indent+++","<br>&nbsp;&nbsp;&nbsp;")
+
+text = text.replace("+++presentation:coluna1+++",text_faq)
+
+
+###Columa da direita
+text_faq=""
+for k in range(n_cut_columns,len(question)):
+	basic_text_faq = '<h3>+++question+++</h3><p>+++answer+++</p>'
+	basic_text_faq = basic_text_faq.replace("+++question+++", question[k])
+	basic_text_faq = basic_text_faq.replace("+++answer+++", answer[k])
+	text_faq=text_faq + basic_text_faq
+
+
+text_faq = text_faq.replace("+++indent+++","<br>&nbsp;&nbsp;&nbsp;")
+
+text = text.replace("+++presentation:coluna2+++",text_faq)
+
+
+#bottom
+data = datetime.datetime.now()
+text = text.replace("+++atualizadoem+++",
+'<p style="text-align:right">Página gerada em ' +
+str(data.day) + '/' + str(data.month) + '/' + str(data.year) +
+' às ' + str(data.hour) + ':' + str(data.minute) + ':' + str(data.second) +
+'.</p>'\
+)
+
+ofile = open(sdir+"//on_server//perguntas_frequentes.html", 'w')
+ofile.write(text)
+ofile.close()
+
+print("Construindo perguntas_frequentes.html ... feito!")
+
+
 
 #************************************************#
 # aviso.php
