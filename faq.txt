@@ -43,6 +43,6 @@ P)A expressão "conteúdo livre" não é uma má tradução de "free content", a
 R)Não, conteúdo livre e gratuito não conceitos distintos, veja definição de recursos educacionais abertos.
 
 P)Tenho outra pergunta, sugestão ou aviso. Que faço?
-R)Considere entre em contato pelo nosso <a href="participe.html">fórum</a> ou escreva para <a href="mailto:reamat@ufrgs.br">reamat@ufrgs.br</a>.
+R)Considere entre em contato pelo nosso <a href="forum.html">fórum</a> ou escreva para <a href="mailto:reamat@ufrgs.br">reamat@ufrgs.br</a>.
 
 

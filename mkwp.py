@@ -4,6 +4,7 @@
 Construção do portal reamat.
 
 Autor: Pedro H A Konzen - UFRGS - 01/2018
+Alterações: Fabio Azevedo - UFRGS -04/2018
 '''
 
 import sys
@@ -138,6 +139,10 @@ text = text.replace("+++presentation:coluna2+++",
 <h3>Repositórios GitHub</h3>\
 <ul class="list-unstyled">\
   <li><a href="https://github.com/reamat">https://github.com/reamat</a></li>\
+</ul>\
+<h3>Outras informações</h3>\
+<ul class="list-unstyled">\
+<li><a href="perguntas_frequentes.html">Respostas a perguntas frequentes</a></li>\
 </ul>\
 <h3>Contato</h3>\
 <ul class="list-unstyled">\
@@ -407,6 +412,7 @@ print("Construindo organizadores.html ... feito!")
 
 #************************************************#
 # perguntas_frequentes.html
+# Incluído por Fabio dia 17 de abril de 2018
 #************************************************#
 print("Construindo perguntas_frequentes.htm ...")
     
