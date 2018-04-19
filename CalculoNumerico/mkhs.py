@@ -77,48 +77,12 @@ text = text.replace("+++listaDeHotsites+++",lisths)
 #jumbotron
 text = text.replace("+++jumbotron:subtitle+++","")
 
-#presentation
-text = text.replace("+++presentation:coluna1+++",
-'\
-<h3>Sobre</h3>\
-<p><strong>REAMAT - Cálculo Numérico</strong> \
-é um projeto de escrita colaborativa de recursos \
-educacionais abertos sobre cálculo numérico.</p>\
-<p>Nosso objetivo é de fomentar o desenvolvimento \
-de materiais didáticos pela colaboração entre \
-professores e alunos de universidades, institutos de \
-educação e demais interessados no estudo e \
-aplicação de cálculo numérico nos mais diversos ramos da \
-ciência e tecnologia.</p>\
-<p>Para tanto, disponibilizamos em repositório público \
-<a href="https://github.com/reamat/CalculoNumerico" target="blank">\
-GitHub</a> todo o código-fonte dos materiais \
-em desenvolvimento sob licença \
-<a href="https://creativecommons.org/licenses/by-sa/3.0/" \
-target="_blank"> Creative Commons \
-Atribuição-CompartilhaIgual 3.0 Não Adaptada \
-(<strong>CC-BY-SA 3.0</strong>)</a>. \
-Ou seja, você pode <strong>copiar</strong>, \
-<strong>redistribuir</strong>, \
-<strong>alterar</strong> e construir um novo material para \
-qualquer uso, inclusive comercial. Leia a \
-<a href="https://creativecommons.org/licenses/by-sa/3.0/" \
-target="_blank">licença</a> para maiores informações. \
-</p>\
-<p>\
-O sucesso do projeto depende da colaboração! Participe \
-diretamente da escrita dos recursos educacionais, dê \
-sugestões ou nos avise de erros e imprecisões. Toda a \
-colaboração é bem vinda. Veja como participar \
-<a href="../participe.html">aqui</a>. \
-</p>\
-<p>\
-Veja mais sobre o projeto REAMAT <a href="../index.html">aqui</a>.\
-</p>\
-')
+#presentation 			##substituí string no código por leitura de arquivo. (Fábio 19 de abril de 2018)
+ifile = open(sdir+"/sobre.aux",'r')
+text = text.replace("+++presentation:coluna1+++",ifile.read())
+ifile.close()
 
-text = text.replace("+++presentation:coluna2+++",
-'\
+textsc ='\
 <h3>Recursos disponíveis</h3>\
 <ul class="list-unstyled">\
 <li><h4>Livros Colaborativos</h4>\
@@ -140,13 +104,14 @@ Cálculo Numérico - Versão Python</a>\
 <li><a href="https://github.com/reamat/CalculoNumerico"\
 target="_blank">\
 https://github.com/reamat/CalculoNumerico</a></li>\
-</ul>\
-<h3>Contato</h3>\
-<ul class="list-unstyled">\
-<li><a href="mailto:reamat@ufrgs.br">\
-reamat@ufrgs.br</a></li>\
-</ul>\
-')
+</ul>'
+
+ifile = open(sdir+"/secondcolumn.aux",'r')
+textsc=textsc+ifile.read()
+ifile.close()
+
+text = text.replace("+++presentation:coluna2+++",textsc)
+
 
 #bottom
 data = datetime.datetime.now()
