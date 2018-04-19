@@ -246,7 +246,7 @@ ifile.close()
 
 #head
 text = text.replace("+++title+++"," - Participe")
-text = text.replace("+++keywords+++","participe")
+text = text.replace("+++keywords+++",",participe")
 
 #global alert
 text = text.replace("+++alertaGeral+++",globalAlert)
@@ -332,7 +332,7 @@ ifile.close()
 
 #head
 text = text.replace("+++title+++"," - Organizadores")
-text = text.replace("+++keywords+++","organizadores")
+text = text.replace("+++keywords+++",",organizadores")
 
 #global alert
 text = text.replace("+++alertaGeral+++",globalAlert)
@@ -423,7 +423,7 @@ ifile.close()
 
 #head
 text = text.replace("+++title+++"," - Perguntas frequentes")
-text = text.replace("+++keywords+++","perguntas-frequentes")
+text = text.replace("+++keywords+++",",perguntas-frequentes")
 
 #global alert
 text = text.replace("+++alertaGeral+++",globalAlert)

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 '''
-Constroi o hotsite reamat/AlgebraLinear.
+Constroi o hotsite reamat/Computação científica.
 
 Autor: Pedro H A Konzen - UFRGS - 01/2018
 '''
@@ -82,40 +82,45 @@ text = text.replace("+++jumbotron:subtitle+++","")
 text = text.replace("+++presentation:coluna1+++",
 '\
 <h3>Sobre</h3>\
-<p><strong>REAMAT - Computação Científica</strong> \
+<p>\
+<strong>REAMAT</strong> \
 é um projeto de escrita colaborativa de recursos \
-educacionais abertos sobre computação científica.</p>\
-<p>Nosso objetivo é de fomentar o desenvolvimento \
+educacionais abertos (REA) sobre tópicos de matemática \
+e suas aplicações.</p>\
+<p>\
+Nosso objetivo é de fomentar o desenvolvimento \
 de materiais didáticos pela colaboração entre \
 professores e alunos de universidades, institutos de \
 educação e demais interessados no estudo e \
-aplicação da álgebra linear nos mais diversos ramos da \
+aplicação da matemática nos mais diversos ramos da \
 ciência e tecnologia.</p>\
-<p>Para tanto, disponibilizamos em repositório público \
-<a href="https://github.com/reamat/AlgebraLinear" target="blank">\
-GitHub</a> todo o código-fonte dos materiais \
-em desenvolvimento sob licença \
-<a href="https://creativecommons.org/licenses/by-sa/3.0/" \
-target="_blank"> Creative Commons \
-Atribuição-CompartilhaIgual 3.0 Não Adaptada \
-(<strong>CC-BY-SA 3.0</strong>)</a>. \
-Ou seja, você pode <strong>copiar</strong>, \
-<strong>redistribuir</strong>, \
-<strong>alterar</strong> e construir um novo material para \
-qualquer uso, inclusive comercial. Leia a \
-<a href="https://creativecommons.org/licenses/by-sa/3.0/" \
-target="_blank">licença</a> para maiores informações. \
-</p>\
 <p>\
 O sucesso do projeto depende da colaboração! Participe \
 diretamente da escrita dos recursos educacionais, dê \
 sugestões ou nos avise de erros e imprecisões. Toda a \
 colaboração é bem vinda. Veja como participar \
-<a href="../participe.html">aqui</a>. \
-</p>\
+<a href="participe.html">aqui</a>.</p>\
 <p>\
-Veja mais sobre o projeto REAMAT <a href="../index.html">aqui</a>.\
-</p>\
+Nós preparamos uma série de ações para ajudá-lo a \
+participar. Em primeiro lugar, o acesso irrestrito aos \
+materias pode se dar através deste site. Além disso, os códigos \
+fontes e a documentação dos recursos estão disponíveis em \
+<a href="https://github.com/reamat" \
+target="_blank">repositórios GitHub</a> públicos.</p>\
+<p>\
+Nada disso estaria completo sem uma licença apropriada à \
+colaboração. Por isso, escolhemos disponilizar os \
+materiais sob licença \
+<a href="https://creativecommons.org/licenses/by-sa/3.0/" \
+target="_blank"> Creative Commons \
+Atribuição-CompartilhaIgual 3.0 Não Adaptada \
+(<strong>CC-BY-SA 3.0</strong>) \
+</a>. Ou seja, você pode <strong>copiar</strong>, \
+<strong>redistribuir</strong>, \
+<strong>alterar</strong> e construir um novo material para \
+qualquer uso, inclusive comercial. Leia a \
+<a href="https://creativecommons.org/licenses/by-sa/3.0/" \
+target="_blank">licença</a> para maiores informações.</p>\
 ')
 
 text = text.replace("+++presentation:coluna2+++",
@@ -130,6 +135,10 @@ text = text.replace("+++presentation:coluna2+++",
 <li><a href="https://github.com/reamat/ComputacaoCientifica"\
 target="_blank">\
 https://github.com/reamat/ComputacaoCientifica</a></li>\
+</ul>\
+<h3>Outras informações</h3>\
+<ul class="list-unstyled">\
+<li><a href="perguntas_frequentes.html">Respostas a perguntas frequentes</a></li>\
 </ul>\
 <h3>Contato</h3>\
 <ul class="list-unstyled">\
