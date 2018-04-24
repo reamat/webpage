@@ -36,7 +36,7 @@ for file in *.html; do
 done
 
 cd ..
-python3 goodies-af.py
+python3.5 goodies-af.py
 
 rm -rf ./.tmp-af
 rm -rf ./.book_in_html-af

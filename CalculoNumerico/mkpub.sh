@@ -40,7 +40,7 @@ for file in *.html; do
 done
 
 cd ..
-python3 goodies.py livro-sci
+python3.5 goodies.py livro-sci
 
 rm -rf ./.tmp
 rm -rf ./.book_in_html
@@ -77,7 +77,7 @@ for file in *.html; do
 done
 
 cd ..
-python3 ./goodies.py livro-oct
+python3.5 ./goodies.py livro-oct
 
 rm -rf ./.tmp
 rm -rf ./.book_in_html
@@ -115,7 +115,7 @@ for file in *.html; do
 done
 
 cd ..
-python3 ./goodies.py livro-py
+python3.5 ./goodies.py livro-py
 
 rm -rf ./.tmp
 rm -rf ./.book_in_html
