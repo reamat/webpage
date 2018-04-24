@@ -28,10 +28,10 @@ make pdf
 cd ..
 
 #add source infos
-python3 addSrcInfo.py cfvv
+python3.5 addSrcInfo.py cfvv
 
 #add source infos
-python3 invitations.py cfvv
+python3.5 invitations.py cfvv
 
 #make html version
 cd .in_repo-cfvv

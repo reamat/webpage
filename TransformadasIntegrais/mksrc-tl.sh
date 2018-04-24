@@ -28,10 +28,10 @@ make pdf
 cd ..
 
 #add source infos
-python3 addSrcInfo.py tl
+python3.5 addSrcInfo.py tl
 
 #styled invitations
-python3 invitations.py tl
+python3.5 invitations.py tl
 
 #make html version
 cd .in_repo-tl
