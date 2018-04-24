@@ -26,8 +26,8 @@ for (dirpath, dirnames, filenames) in walk ("./on_server"):
                 ext = os.path.splitext(filename)[1]
                 if (ext == ".html"):
                     print("%s/%s" % (dirpath1,filename))
-                    ofile.write("https://www.ufrgs.br" +
-                                    dirpath[11:]+"/"+filename+"\n")
+                    ofile.write("https://www.ufrgs.br/reamat" +
+                                    dirpath[11:]+"/"+filename+"\n") # acrescentei  'reamat' -- Fabio (24 de abril de 2018)
             break
 
 ofile.close()
