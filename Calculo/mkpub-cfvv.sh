@@ -36,7 +36,7 @@ for file in *.html; do
 done
 
 cd ..
-python3 goodies-cfvv.py
+python3.5 goodies-cfvv.py
 
 rm -rf ./.tmp-cfvv
 rm -rf ./.book_in_html-cfvv

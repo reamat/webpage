@@ -9,7 +9,7 @@
 ##################################################
 
 #portal REAMAT
-python3 mkwp.py
+python3.5 mkwp.py
 
 ./mkAlgebraLinear.sh &
 ./mkCalculo.sh &

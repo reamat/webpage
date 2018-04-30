@@ -32,7 +32,7 @@ R)Depende, você deve respeitar os direitos de autor das fontes consultadas e s�
 
 
 P)Possuo material que produzi para uso ao longo de meu trabalho como professor. Posso acrescentar aos conteúdos do REAMAT?
-R)Sim, no entanto você deve atentar ao fato de não incorporar material produzido por outrém cuja licença não é compatível com o projeto. Eventualmente, suas notam podem conter trechos ou exercícios copiados de livros cuja licença não é livre. Lembre também de adaptar seu material à folha de estilo do prejeto.
+R)Sim, no entanto você deve atentar ao fato de não incorporar material produzido por outrém cuja licença não é compatível com o projeto. Eventualmente, suas notam podem conter trechos ou exercícios copiados de livros cuja licença não é livre. Lembre também de adaptar seu material à folha de estilo do projeto.
 
 
 P)Os organizadores do projeto garantem que o conteúdo esteja correto?

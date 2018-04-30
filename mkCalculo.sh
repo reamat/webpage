@@ -12,7 +12,7 @@
 cd ./repos/Calculo
 git pull
 cd ../../Calculo
-python3 mkhs.py
+python3.5 mkhs.py
 ./mksrc-cfuv.sh
 ./mkpub-cfuv.sh
 ./mksrc-cfvv.sh

@@ -12,7 +12,7 @@
 cd ./repos/AlgebraLinear
 git pull
 cd ../../AlgebraLinear
-python3 mkhs.py
+python3.5 mkhs.py
 ./mksrc.sh
 ./mkpub.sh
 cd ..
