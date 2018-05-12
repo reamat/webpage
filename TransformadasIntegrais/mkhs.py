@@ -79,7 +79,7 @@ text = text.replace("+++jumbotron:subtitle+++","")
 
 #presentation 			##substituí string no código por leitura de arquivo. (Fábio 19 de abril de 2018)
 ifile = open(sdir+"/sobre.aux",'r')
-text = text.replace("+++presentation:coluna1+++",ifile.read())
+text = text.replace("+++presentation:coluna1+++",ifile.read().replace("+++SDIR+++",sdir ))
 ifile.close()
 
 textsc ='\
