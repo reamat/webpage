@@ -6,7 +6,7 @@ R)É um projeto de extensão organizado por docentes do Instituto de Matemática
 
 
 P)O que são recursos educacionais abertos (REA)?
-R)REA são materiais de ensino, aprendizado e pesquisa disponibilizados em qualquer suporte ou mídia, seja física ou digital licensidos de forma livre, isto é, que propiciem pelo menos as seguinte quatro liberdades:
+R)REA são materiais de ensino, aprendizado e pesquisa disponibilizados em qualquer suporte ou mídia, seja física ou digital licenciados de forma livre, isto é, que propiciem pelo menos as seguinte quatro liberdades:
 +++indent+++i. Usar: Uso do material para quaisquer fins, inclusive comercial.
 +++indent+++ii. Adaptar: Liberdade de adaptar e melhorar os REA para que melhor se adequem às suas necessidades.
 +++indent+++iii. Recombinar: Liberdade de combinar e fazer misturas e colagens de REA com outros REA para a produção de novos materiais.
