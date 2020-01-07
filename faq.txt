@@ -28,7 +28,7 @@ R)Não, todas as alterações devem ser aprovadas por um organizador do projeto.
 
 
 P)Posso melhorar o conteúdo do livro acrescentando material de outras fontes?
-R)Depende, você deve respeitar os direitos de autor das fontes consultadas e só pode usar material cuja licença seja compatível com a do REAMAT. A maioria dos livros e materiais didáticos disponíveis não são livres e seu uso no REAMAT constitui violação de direitos autorais. Atenção: material disponível na Internet não necessariamente é livre. 
+R)Depende, você deve respeitar os direitos de autor das fontes consultadas e só pode usar material cuja licença seja compatível com a do REAMAT. A maioria dos livros e materiais didáticos disponíveis não são livres e seu uso no REAMAT constitui violação de direitos autorais. Atenção: material disponível na Internet não necessariamente é livre.
 
 
 P)Possuo material que produzi para uso ao longo de meu trabalho como professor. Posso acrescentar aos conteúdos do REAMAT?
@@ -40,9 +40,7 @@ R)Não, como qualquer publicação, o material pode conter erros e imprecisões.
 
 
 P)A expressão "conteúdo livre" não é uma má tradução de "free content", a qual deveria ser vertida como "conteúdo gratuito"?
-R)Não, conteúdo livre e gratuito não conceitos distintos, veja definição de recursos educacionais abertos.
+R)Não, conteúdo livre e gratuito são conceitos distintos, veja definição de recursos educacionais abertos.
 
 P)Tenho outra pergunta, sugestão ou aviso. Que faço?
 R)Considere entre em contato pelo nosso <a href="forum.html">fórum</a> ou escreva para <a href="mailto:reamat@ufrgs.br">reamat@ufrgs.br</a>.
-
-
