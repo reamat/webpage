@@ -2,7 +2,7 @@
 ##Salvar em UTF-8 !!!!
 
 P)O que é o REAMAT?
-R)É um projeto de extensão organizado por docentes do Instituto de Matemática e Estatística da Univesidade Federal de Rio Grande do Sul cujo objetivo é produzir recursos educacionais abertos (REA) de matemática.
+R)É um projeto de extensão registrado no Instituto de Matemática e Estatística da Universidade Federal de Rio Grande do Sul cujo objetivo é produzir recursos educacionais abertos (REA) de matemática através de um processo colaborativo envolvendo toda a comunidade.
 
 
 P)O que são recursos educacionais abertos (REA)?
@@ -13,14 +13,14 @@ R)REA são materiais de ensino, aprendizado e pesquisa disponibilizados em qualq
 +++indent+++iv. Distribuir: Liberdade de fazer cópias e compartilhar o conteúdo original e a sua versão derivada ou combinada.
 
 P)Posso produzir material próprio derivado do conteúdo REAMAT?
-R)Sim, mas você deve respeitar a licença escolhida pelo REAMAT, (colocar link). Isto implica, entre outros, licenciar seu trabalho de forma livre. Assim, se você produzir um livro para comercializar, os leitores do livro terão o direito de copiá-lo e distrubuir cópias. Veja <a href="participe.html">como participar</a>.
+R)Sim, mas você deve respeitar a licença escolhida pelo REAMAT, <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada (CC-BY-SA 3.0)</a>. Isto implica, entre outros, licenciar seu trabalho de forma livre. Assim, se você produzir obra derivada para comercializar, os leitores do livro terão o direito de copiá-la e distribuir cópias. Veja <a href="participe.html">como participar</a>.
 
 P)Preciso de autorização para usar o material do REAMAT?
 R)Não. No entanto, ficamos felizes de ser notificados quando alguém gostou do material e o está utilizando.
 
 
 P)Posso editar o conteúdo se não sou professor ou se não sou da UFRGS?
-R)Sim, qualquer um pode participar da escrita. Veja <a href="participe.html">como participar</a>.
+R)Sim, qualquer um pode participar da escrita. Veja <a href="participe.html">como colaborar</a>.
 
 
 P)Qualquer um pode alterar livremente o conteúdo a qualquer momento?
@@ -28,7 +28,7 @@ R)Não, todas as alterações devem ser aprovadas por um organizador do projeto.
 
 
 P)Posso melhorar o conteúdo do livro acrescentando material de outras fontes?
-R)Depende, você deve respeitar os direitos de autor das fontes consultadas e só pode usar material cuja licença seja compatível com a do REAMAT. A maioria dos livros e materiais didáticos disponíveis não são livres e seu uso no REAMAT constitui violação de direitos autorais. Atenção: material disponível na Internet não necessariamente é livre.
+R)Depende, você deve respeitar os direitos de autor das fontes consultadas e só pode usar material cuja licença seja compatível com a do REAMAT. A maioria dos livros e materiais didáticos disponíveis não são livres e seu uso no REAMAT constitui violação de direitos autorais. Atenção: material disponível na internet não necessariamente é livre.
 
 
 P)Possuo material que produzi para uso ao longo de meu trabalho como professor. Posso acrescentar aos conteúdos do REAMAT?
@@ -36,11 +36,15 @@ R)Sim, no entanto você deve atentar ao fato de não incorporar material produzi
 
 
 P)Os organizadores do projeto garantem que o conteúdo esteja correto?
-R)Não, como qualquer publicação, o material pode conter erros e imprecisões. No entanto, fazemos todo o esforço de revisão para manter a correção do texto e deixamos diversos canais de comunicação abertos para a remoção de erros. O material provido pelo REAMAT tem fins educacionais, em caso de dúvidas, sempre consulte um professor qualificado.
+R)Não. Como em qualquer publicação, o material pode conter erros e imprecisões. No entanto, fazemos todo o esforço de revisão para manter a correção do texto e deixamos diversos canais de comunicação abertos para a remoção de erros. O material provido pelo REAMAT tem fins educacionais. Em caso de dúvidas, sempre consulte um professor qualificado.
 
 
 P)A expressão "conteúdo livre" não é uma má tradução de "free content", a qual deveria ser vertida como "conteúdo gratuito"?
-R)Não, conteúdo livre e gratuito são conceitos distintos, veja definição de recursos educacionais abertos.
+R)Não, conteúdo livre e gratuito são conceitos distintos. Veja a definição de recursos educacionais abertos.
+
+
+P)REA não é a mesma coisa que ensino à distância (EAD)?
+R)Não, embora recursos educacionais abertos sejam frequentemente disponíveis online, eles podem ser utilizados em atividades presenciais.
 
 P)Tenho outra pergunta, sugestão ou aviso. Que faço?
 R)Considere entre em contato pelo nosso <a href="forum.html">fórum</a> ou escreva para <a href="mailto:reamat@ufrgs.br">reamat@ufrgs.br</a>.
