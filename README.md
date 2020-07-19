@@ -42,6 +42,8 @@ https://www.ufrgs.br/reamat
 
 * ComputacaoCientifica: REA de Computação Científica https://github.com/reamat/ComputacaoCientifica
 
+* PreCalculo: REA de Pré-cálculo https://github.com/reamat/PreCalculo
+
 * TransformadasIntegrais: REA de Transformadas Integrais https://github.com/reamat/TransformadasIntegrais
 
 ## Contato:

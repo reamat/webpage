@@ -345,6 +345,11 @@ text = text.replace("+++presentation:coluna2+++",
 <li><a href="http://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
 <li><a href="http://professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 </ul>\
+<h4>REAMAT - Pré-cálculo</h4>\
+<ul class="list-unstyled">\
+<li><a href="https://sites.google.com/site/trecosmatematicos" target="_blank">Francieli Triches - UFSC</a></li>\
+<li><a href="http://mtm.ufsc.br/~helder/" target="_blank">Helder Geovane Gomes de Lima - UFSC</a></li>\
+</ul>\
 <h4>REAMAT - Transformadas Integrais</h4>\
 <ul class="list-unstyled">\
 <li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
