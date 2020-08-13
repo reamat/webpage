@@ -188,26 +188,26 @@ for index, f in enumerate (lfiles):
     s=-1
     e=-1
     title = []
-    #chapterHead
-    s = text.find('<h2 class="chapterHead">')
+    #partHead
+    s = text.find('<h1 class="partHead">')
     if (s != -1):
         auxText = text[s:]
         s = auxText.find('</a>')+4
-        e = auxText.index('</h2>')        
+        e = auxText.index('</h1>')
         kw = auxText[s:e]
         title = kw
     else:
-        #likechapterHead
-        s = text.find('<h2 class="likechapterHead">')
+        #chapterHead
+        s = text.find('<h2 class="chapterHead">')
         if (s != -1):
             auxText = text[s:]
             s = auxText.find('</a>')+4
-            e = auxText.index('</h2>')
+            e = auxText.index('</h2>')        
             kw = auxText[s:e]
             title = kw
         else:
-            #appendixHead
-            s = text.find('<h2 class="appendixHead">')
+            #likechapterHead
+            s = text.find('<h2 class="likechapterHead">')
             if (s != -1):
                 auxText = text[s:]
                 s = auxText.find('</a>')+4
@@ -215,26 +215,35 @@ for index, f in enumerate (lfiles):
                 kw = auxText[s:e]
                 title = kw
             else:
-                #sectionHead
-                s = text.find('<h3 class="sectionHead">')
+                #appendixHead
+                s = text.find('<h2 class="appendixHead">')
                 if (s != -1):
                     auxText = text[s:]
                     s = auxText.find('</a>')+4
-                    e = auxText.index('</h3>')
+                    e = auxText.index('</h2>')
                     kw = auxText[s:e]
                     title = kw
-                    #subsectionHead
-                    s=-1
-                    e=-1
-                    s = auxText.find('<h4 class="subsectionHead">')
-                    while (s != -1):
-                        auxText = auxText[s:]
-                        s = auxText.find('</a>')+4
-                        e = auxText.index('</h4>')
-                        kw += ", " + auxText[s:e]
-                        s = auxText.find('<h4 class="subsectionHead">',e)
                 else:
-                    kw = []
+                    #sectionHead
+                    s = text.find('<h3 class="sectionHead">')
+                    if (s != -1):
+                        auxText = text[s:]
+                        s = auxText.find('</a>')+4
+                        e = auxText.index('</h3>')
+                        kw = auxText[s:e]
+                        title = kw
+                        #subsectionHead
+                        s=-1
+                        e=-1
+                        s = auxText.find('<h4 class="subsectionHead">')
+                        while (s != -1):
+                            auxText = auxText[s:]
+                            s = auxText.find('</a>')+4
+                            e = auxText.index('</h4>')
+                            kw += ", " + auxText[s:e]
+                            s = auxText.find('<h4 class="subsectionHead">',e)
+                    else:
+                        kw = []
 
     head1 = "<meta name='keywords' content='"
     head1 += "Livro, Pré-calculo"
@@ -289,7 +298,8 @@ for index, f in enumerate (lfiles):
 
     #configure navigation links
     if ((f[0:6] == "mainch") or (f[0:6] == "mainse") or
-        (f[0:6] == "mainli") or (f[0:6] == "mainap")):
+        (f[0:6] == "mainli") or (f[0:6] == "mainap") or
+        (f[0:6] == "mainpa")):
 
         #find file at listOfContents
         pos = -1
