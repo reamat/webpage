@@ -15,6 +15,7 @@ python3.5 mkwp.py
 ./mkCalculo.sh &
 ./mkCalculoNumerico.sh &
 ./mkComputacaoCientifica.sh &
+./mkPreCalculo.sh &
 ./mkTransformadasIntegrais.sh &
 
 echo "Congratulations! You may now update the server. :)"

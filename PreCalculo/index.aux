@@ -2,20 +2,20 @@
 <html lang="pt">
   <head>
     <meta charset="utf-8">
-    <title>REAMAT+++title+++</title>
+    <title>REAMAT - +++nomeDoRecurso++++++title+++</title>
     <meta name="Description"
-	  CONTENT="Recursos Educacionais Abertos de Matemática (REAMAT), 
+	  CONTENT="Recursos Educacionais Abertos de Matemática (REAMAT),
 		   Instituto de Matemática e Estatística (IME), 
 		   Universidade Federal do Rio Grande do Sul (UFRGS).">
-    <meta name="keywords" content="recursos educacionais abertos, REA,
-				   matemática+++keywords+++">
+    <meta name="keywords" content="recursos educacionais abertos,
+				   matemática,pré-cálculo+++keywords+++">
     <meta name="author" content="reamat@ufrgs.br">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link href='http://fonts.googleapis.com/css?family=Open Sans:400,700'
 	  rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
     <link href="index.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -36,7 +36,7 @@
       gtag('config', 'UA-112747153-1');
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-
+ 
   </head>
   <body>
 
@@ -46,18 +46,19 @@
 	
     <!-- ********** END: ALERT ********** -->
 
-
-    <!-- ********** BEGIN: NAVBAR ********* -->
-    
     <div class="row">
       <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
-	
+
+
+	<!-- ********** BEGIN: NAVBAR ********* -->
+    	
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
-	      <a class="navbar-brand" href="index.html">REAMAT<br></a>
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	      <a class="navbar-brand" href="index.html">REAMAT<br><small>+++nomeDoRecurso+++</small></a>
+	      <button type="button" class="navbar-toggle collapsed"
+		      data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 		<span class="sr-only">Toggle navigation</span>
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
@@ -68,80 +69,85 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-		<li +++navbar:inicio:active+++><a href="index.html">Início</a></li>
-		<li class="dropdown">
+		<li +++navbar:reamat:active+++ class="dropdown">
 		  <a href="#" class="dropdown-toggle"
 		     data-toggle="dropdown" 
 		     role="button" aria-haspopup="true"
-		     aria-expanded="false">Recursos
+		     aria-expanded="false">REAMAT
 		    <span class="caret"></span></a>
 		  <ul class="dropdown-menu">
+		    <li><a href="../index.html">Sobre</a></li>
+		    <li class="dropdown-header">Recursos</li>
 		    +++listaDeHotsites+++
-<!--
-		    <li><a href="./AlgebraLinear/index.html">Álgebra Linear</a></li>
-		    <li><a href="./CalculoNumerico/index.html">Cálculo Numérico</a></li>
-		    <li><a href="./ComputacaoCientifica/index.html">Computação Científica</a></li>
-		    <li><a href="./PreCalculo/index.html">Pré-cálculo</a></li>
-		    <li><a href="./TransformadasIntegrais/index.html">Transformadas Integrais</a></li>
--->
 		  </ul>
 		</li>		
-		<li +++navbar:participe:active+++><a href="participe.html">Participar</a></li>
-		<li +++navbar:forum:active+++><a href="forum.html">Fórum</a></li>
-		<li +++navbar:organizadores:active+++><a href="organizadores.html">Organizadores</a></li>
-	      <li><a href="./aviso.php" target="_blank">Avisar <span class="glyphicon glyphicon-warning-sign"></span></a></li>  
+		<li +++navbar:projeto:active+++ class="dropdown">
+		  <a href="#" class="dropdown-toggle"
+		     data-toggle="dropdown" 
+		     role="button" aria-haspopup="true"
+		     aria-expanded="false">+++nomeDoRecurso+++
+		    <span class="caret"></span></a>
+		  <ul class="dropdown-menu">
+		    <li><a href="livro/main.html">Livro Colaborativo</a></li>
+		    <li><a href="https://github.com/reamat/+++nomeDoRepo+++"
+			   target="blank">Repositório</a></li>
+		  </ul>
+		</li>		
+		<li><a href="../participe.html">Participar</a></li>
+		<li><a href="../forum.html">Fórum</a></li>
+		<li><a href="../organizadores.html">Organizadores</a></li>
+		<li><a href="../aviso.php" target="_blank">Avisar <span class="glyphicon glyphicon-warning-sign"></span></a></li>  
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
 
 	<!-- ********* END: NAVBAR ******** -->
-
 	
 
 	<!-- ********* BEGIN: JUMBOTRON ********* -->
 	
-	<!-- A imagem de fundo do "jumbotron" foi obtida de 
-	     woodleywonderworks e está disponível no link 
-	     https://www.flickr.com/photos/wwworks/5063710551/
+	<!-- A imagem de fundo do "jumbotron" foi obtida de
+	     https://xkcd.com/1162/ e está sob CC BY-NC 2.5
 	  -->
 	<div class="imagem">
 	  <div class="container-fluid">
 	    
 	    <div class="jumbotron jumbotron-fluid">
 	      <h1>REAMAT</h1>
-	      <h3>+++jumbotron:subtitle+++</h3>
+	      <h3>+++nomeDoRecurso++++++jumbotron:subtitle+++</h3>
 	    </div>
 	    <p>
-	      Imagem: <a href="https://www.flickr.com/photos/wonderlane/2062184804/in/photolist-49eeGq-aZhtzF-5edEmH-aZhtG4-gtpvp8-Curwec-nvp6uv-8vBVVr-a9GaHB-8Ut2u7-8vEXcj-aZhtH8-gttD2c-7bd3g8-8yZZmV-gwmAC2-9nLGYu-8XTDcm-92gu5k-nxsLKt-gwmN7H-aguvb4-ntCBay-nvHJJs-8UxNG7-nvGccn-9LfGhe-g1EDcJ-9LiucQ-8UxP7J-nvoTXT-9id93S-aZbzuH-7be69Q-7aeJwV-9rnT2E-gtdqFJ-beXpQc-nebTTd-9b45YS-beXdnD-gtjK6g-Ue4ceK-8pHJNP-8vBVTe-bAFqqi-UmU89A-7KbCQT-eR7hdr-9rnT3J"
-			 target="_blank"> Wonderlane</a>
+	      Imagem: <a
+			 href="https://xkcd.com/1162/"
+			 target="_blank">xkcd</a>
 	    </p>
 	  </div>
 	</div>
 	
 	<!-- ********* END: JUMBOTRON ********* -->
-
-	<!-- ********* BEGIN: PRESENTATION *********** -->
-
+	
+	
+	<!--presentation-->
 	<div class="presentation">
 	  <div class="container-fluid">
 	    <div class="row">
 	      <div class="col-md-6">
+
 		+++presentation:coluna1+++
+
 	      </div>
+	      
 	      <div class="col-md-6">
-		<!--<div class="container-fluid">-->
+		<div class="container-fluid">
 
-		+++presentation:coluna2+++
+		  +++presentation:coluna2+++
 
-	      <!-- </div> -->
+		</div>
 	      </div>
+	      
 	    </div>
 	  </div>
-	</div>
-
-	<!-- ********* BEGIN: PRESENTATION *********** -->
-
 
 	<!-- ************* BEGIN: BOTTOM PANEL ********** -->
 
@@ -167,10 +173,10 @@
 		  <ul class="list-unstyled">
 		    <li>Projeto
 		      <ul class="list-unstyled">
-			<li><a href="index.html">Página Inicial</a></li>
-			<li><a href="forum.html">Fórum</a></li>
-			<li><a href="participe.html">Participar</a></li>
-			<li><a href="organizadores.html">Organizadores</a></li>
+			<li><a href="../index.html">Página Inicial</a></li>
+			<li><a href="../participe.html">Participar</a></li>
+			<li><a href="../forum.html">Fórum</a></li>
+			<li><a href="../organizadores.html">Organizadores</a></li>
 			<li><a href="perguntas_frequentes.html">Perguntas frequentes</a></li>
 		      </ul>
 		    </li>
@@ -191,7 +197,7 @@
 	  </div>
 	  <div class="panel-footer">
 	    <div class="container-fluid">
-	      <img src="./figs/favicon.ico" alt="UFRGS">UFRGS - IME - Recursos Educacionais Abertos de Matemática. Contato: <a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a>.
+	      <img src="../figs/favicon.ico" alt="UFRGS">UFRGS - IME - Recursos Educacionais Abertos de Matemática. Contato: <a href="mailto:reamat@ufrgs.br" target="_top">reamat@ufrgs.br</a>.
 	    </div>
 	  </div>
 	</div>
