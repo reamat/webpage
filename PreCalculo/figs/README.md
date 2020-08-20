@@ -6,4 +6,4 @@ https://www.ufrgs.br/reamat/PreCalculo
 
 ## Lista de figuras
 
-* jumbotron.png: https://xkcd.com/1162/ (CC BY-NC 2.5)
+* jumbotron.svg: Círculos de Ford (CC0 1.0)
