@@ -316,22 +316,22 @@ text = text.replace("+++presentation:coluna1+++",
 <h4>REAMAT - Álgebra Linear</h4>\
 <ul class="list-unstyled">\
 <li><a href="https://chasqueweb.ufrgs.br/~dmarcon/" target="_blank">Diego Marcon Farias - UFRGS</a></li>\
-<li><a href="http://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="https://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
 <li><a href="http:/professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 <li><a href="https://chasqueweb.ufrgs.br/~rafaelrigao/" target="_blank">Rafael Rigão Souza - UFRGS</a></li>\
 </ul>\
 <h4>REAMAT - Cálculo</h4>\
 <ul class="list-unstyled">\
 <li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
-<li><a href="http://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="https://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
 <li><a href="http:/professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 </ul>\
 <h4>REAMAT - Cálculo Numérico</h4>\
 <ul class="list-unstyled">\
 <li><a href="https://chasqueweb.ufrgs.br/~djusto/" target="_blank">Dagoberto Adriano Rizzotto Justo - UFRGS</a></li>\
 <li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
-<li><a href="http://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
-<li><a href="http://mtm.ufsc.br/~helder/" target="_blank">Helder Geovane Gomes de Lima - UFSC</a></li>\
+<li><a href="https://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="https://www.udesc.br/professor/helder.lima" target="_blank">Helder Geovane Gomes de Lima - UDESC</a></li>\
 <li><a href="http:/www.mat.ufrgs.br/~guidi/" target="_blank">Leonardo Fernandes Guidi - UFRGS</a></li>\
 <li><a href="http:/professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 </ul>\
@@ -342,19 +342,19 @@ text = text.replace("+++presentation:coluna2+++",
 <h4>REAMAT - Computação Científica</h4>\
 <ul class="list-unstyled">\
 <li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
-<li><a href="http://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
-<li><a href="http://professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
+<li><a href="https://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="https://professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 </ul>\
 <h4>REAMAT - Pré-cálculo</h4>\
 <ul class="list-unstyled">\
 <li><a href="https://sites.google.com/site/trecosmatematicos" target="_blank">Francieli Triches - UFSC</a></li>\
-<li><a href="http://mtm.ufsc.br/~helder/" target="_blank">Helder Geovane Gomes de Lima - UFSC</a></li>\
+<li><a href="https://www.udesc.br/professor/helder.lima" target="_blank">Helder Geovane Gomes de Lima - UDESC</a></li>\
 </ul>\
 <h4>REAMAT - Transformadas Integrais</h4>\
 <ul class="list-unstyled">\
 <li><a href="" target="_blank">Esequia Sauter - UFRGS</a></h4></li>\
-<li><a href="http://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
-<li><a href="http://professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
+<li><a href="https://professor.ufrgs.br/azevedo/" target="_blank">Fabio Souto de Azevedo - UFRGS</a></h4></li>\
+<li><a href="https://professor.ufrgs.br/pedro/" target="_blank">Pedro Henrique de Almeida Konzen - UFRGS</a></li>\
 </ul>\
 ')
 
